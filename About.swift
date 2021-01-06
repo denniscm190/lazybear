@@ -22,29 +22,34 @@ struct About: View {
                         AboutButton(image: "sparkles", name: "What's new")
                     }
                     Button(action: openUrl(url: "https://apps.apple.com/es/app/lazybear-insider-trading/id1534612943?l=en")) {
-                        AboutButton(image: "checkmark.circle.fill", name: "Rate Lazybear")
+                        AboutButton(image: "plus.circle.fill", name: "Rate Lazybear")
                     }
+                    /*
+                     
                     NavigationLink(destination: TipJar()) {
                         AboutButton(image: "gift.fill", name: "Tip jar")
                     }
+                     */
                     Button(action: openUrl(url: "https://twitter.com/LazybearApp")) {
                         AboutButton(image: "at.circle.fill", name: "@Lazybear")
                     }
                     Button(action: openUrl(url: "https://twitter.com/dennisconcep")) {
                         AboutButton(image: "at.circle.fill", name: "@DennisConcep")
                     }
-                    Button(action: openUrl(url: "https://lazybear.app")) {
-                        AboutButton(image: "link.circle.fill", name: "Website")
-                    }
                     Button(action: openUrl(url: "https://github.com/denniscm190/lazybear-iOS")) {
                         AboutButton(image: "star.fill", name: "Github")
                     }
+                    Button(action: openUrl(url: "https://lazybear.app")) {
+                        AboutButton(image: "link.circle.fill", name: "Website")
+                    }
+                    /*
                     Button(action: {   }) {
                         AboutButton(image: "filemenu.and.selection", name: "Terms & Privacy policy")
                     }
                     Button(action: {   }) {
                         AboutButton(image: "envelope.circle.fill", name: "Contact")
                     }
+                     */
                 }
             }
             .padding()

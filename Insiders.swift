@@ -26,42 +26,45 @@ struct Insiders: View {
     @State private var selectedDate = Date().addingTimeInterval(-6*30*24*60*60)  // month*days*hours*minutes*seconds
     
     var body: some View {
-        VStack {
-            if transaction.showingView {
-                // Graph
-                let cumBuys = cumSum(array: getTransactions(acquisitionOrDisposition: "A"))
-                let cumSells = cumSum(array: getTransactions(acquisitionOrDisposition: "D"))
-                let green = GradientColor(start: .green, end: .green)
-                let red = GradientColor(start: .red, end: .red)
+        GeometryReader { geo in
+            VStack {
+                if transaction.showingView {
+                    // Graph
+                    let cumBuys = cumSum(array: getTransactions(acquisitionOrDisposition: "A"))
+                    let cumSells = cumSum(array: getTransactions(acquisitionOrDisposition: "D"))
+                    let green = GradientColor(start: .green, end: .green)
+                    let red = GradientColor(start: .red, end: .red)
+                    
+                    let width = geo.size.height*0.6
+                    MultiLineChartView(data: [(cumBuys, green), (cumSells, red)], title: "Buys and sells", form: CGSize(width: width, height: width/2.3), rateValue: pct(buy: cumBuys.last!, sell: cumSells.last!))
+                        .padding()
                 
-                MultiLineChartView(data: [(cumBuys, green), (cumSells, red)], title: "Buys and sells", form: ChartForm.extraLarge, rateValue: pct(buy: cumBuys.last!, sell: cumSells.last!))
-                    .padding()
-            
-                DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date) { Text("Transactions since").font(.headline) }
-                    .padding([.leading, .top, .trailing])
-                    .onChange(of: self.selectedDate, perform: { date in
-                        transaction.request(cik: String(cik), date: dateFormatter.string(from: selectedDate))
-                    })
+                    DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date) { Text("Transactions since").font(.headline) }
+                        .padding([.leading, .top, .trailing])
+                        .onChange(of: self.selectedDate, perform: { date in
+                            transaction.request(cik: String(cik), date: dateFormatter.string(from: selectedDate))
+                        })
 
-                List {
-                    ForEach(transaction.result, id:\.self) { trans in
-                        TransactionRow(trans: trans)
+                    List {
+                        ForEach(transaction.result, id:\.self) { trans in
+                            TransactionRow(trans: trans)
+                        }
                     }
+                    .offset(y: 10)
                 }
-                .offset(y: 10)
-            }
-            else {
-                Spacer()
-                ProgressView()
-                Spacer()
-            }
-        }
-        .onAppear {
-            transaction.request(cik: String(cik), date: dateFormatter.string(from: selectedDate))
-        }
-        .alert(isPresented: $transaction.showingAlert) {
-                    Alert(title: Text("There is no data available"), message: Text("We have no data about this company. Try another one."), dismissButton: .default(Text("Got it!")))
+                else {
+                    Spacer()
+                    ProgressView()
+                    Spacer()
                 }
+            }
+            .onAppear {
+                transaction.request(cik: String(cik), date: dateFormatter.string(from: selectedDate))
+            }
+            .alert(isPresented: $transaction.showingAlert) {
+                        Alert(title: Text("There is no data available"), message: Text("We have no data about this company. Try another one."), dismissButton: .default(Text("Got it!")))
+                    }
+        }
     }
     // Function to sum an array and return a cumulative sum array
     func cumSum(array: [Double]) -> [Double] {
