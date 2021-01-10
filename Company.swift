@@ -21,9 +21,10 @@ struct Company: View {
             VStack {
                 if showingMain {
                     Stock(cik: cik, symbol: symbol, name: name)
-                } else {
+                }
+                else {
                     Insiders(cik: cik, symbol: symbol, name: name)
-                    }
+                }
                 
                 // Start bottom selection
                 Rectangle()

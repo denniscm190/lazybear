@@ -27,7 +27,7 @@ struct ContentView: View {
                     }
                     
                     Spacer()
-                    
+                    /*
                     Button(action: {self.showingUser.toggle()
                     }) {
                         Image(systemName: "person")
@@ -35,6 +35,7 @@ struct ContentView: View {
                     }.sheet(isPresented: $showingUser) {
                         User()
                     }
+                    */
                 }
                 .transition(.move(edge: .top))
                 .animation(.default)
