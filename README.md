@@ -6,8 +6,7 @@ Lazybear is a free, open source, minimalist stock market data app for finance en
 Visit our [Website](https://lazybear.app)
 
 # Contact us
-[Personal Twitter](https://twitter.com/dennisconcep)
-[Business Twitter](https://twitter.com/LazybearApp)
+Send me a DM [Twitter](https://twitter.com/dennisconcep)
 
 # License
 Repository under MIT LICENSE
