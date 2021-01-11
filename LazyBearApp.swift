@@ -10,10 +10,11 @@ import StoreKit
 
 @main
 struct LazyBearApp: App {
+
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                ContentView()
+                Env1()
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }

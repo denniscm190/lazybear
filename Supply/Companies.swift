@@ -23,7 +23,7 @@ struct Companies: View {
         ScrollView {
             LazyVGrid(columns: columns, spacing: 20) {  // Create ScrollView with two columns per row
                 ForEach((0...9), id: \.self) { index in
-                    NavigationLink(destination: Company(cik: ciks[index], symbol: symbols[index], name: names[index])
+                    NavigationLink(destination: Company(cik: 796343, symbol: symbols[index], name: names[index])
                                     .navigationBarTitle(names[index].capitalized)
                     ) {
                         VStack {

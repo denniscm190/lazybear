@@ -9,15 +9,13 @@ import SwiftUI
 import SwiftUICharts
 
 struct Stock: View {
-    @ObservedObject var price = Price()
-    @State var isFavourite = UserDefaults.standard  // Save favourite company in default settings
+    // Company arguments
+    var cik: Int
+    var symbol: String
+    var name: String
     
-    // Company
-    @State var cik: Int
-    @State var symbol: String
-    @State var name: String
-
-
+    @ObservedObject var price = Price()
+    
     var body: some View {
         if price.showingView {
         GeometryReader { geo in
@@ -33,11 +31,8 @@ struct Stock: View {
                         .foregroundColor(whichColor())
                     
                     Spacer()
-
-                    
-                    
-                    }
-                    .padding([.leading, .top, .trailing])
+                }
+                .padding([.leading, .top, .trailing])
                     
                 HStack {
                     Text(String(price.result.last!.date) + " last price")
@@ -71,6 +66,7 @@ struct Stock: View {
                 Spacer()
             }
             .onAppear {
+                print(symbol)
                 price.request(symbol: symbol)
             }
             .alert(isPresented: $price.showingAlert) {
@@ -89,17 +85,6 @@ struct Stock: View {
             return Color(.green)
         }
     }
-    
-    func favourite() {
-        if isFavourite.bool(forKey: String(cik)) {
-            isFavourite.set(false, forKey: String(cik))
-
-        }
-        else {
-            isFavourite.set(true, forKey: String(cik))
-
-        }
-    }
 }
 extension Image {
     func favouriteIcon() -> some View {
@@ -112,6 +97,6 @@ extension Image {
 
 struct Stock_Previews: PreviewProvider {
     static var previews: some View {
-        Stock(cik: 123, symbol: "Symbol", name: "Name")
+        Stock(cik: 320193, symbol: "aapl", name: "apple inc")
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Selection: View {
     @Binding var showingInsiders: Bool
-    @Binding var showingMain: Bool
+    @Binding var showingStocks: Bool
     
     var body: some View {
         // Buttons
@@ -30,7 +30,7 @@ struct Selection: View {
                 
                 // Stock
                 Button(action: {toggle(type: "stock")}) {
-                    if showingMain {
+                    if showingStocks {
                         Image(systemName: "dollarsign.square.fill")
                             .resizable()
                             .frame(width: 35, height: 35)
@@ -41,23 +41,24 @@ struct Selection: View {
                             .frame(width: 35, height: 35)
                     }
                 }
-            }.padding().padding().padding()
+            }
+            .padding().padding().padding()
         }
     }
     
     func toggle(type: String) {
         if type == "insider" {
-            self.showingMain = false
+            self.showingStocks = false
             self.showingInsiders = true
         }
         
         if type == "stock" {
-            self.showingMain = true
+            self.showingStocks = true
             self.showingInsiders = false
         }
         
         if type == "description" {
-            self.showingMain = false
+            self.showingStocks = false
             self.showingInsiders = false
         }
     }
@@ -65,7 +66,7 @@ struct Selection: View {
 
 struct Selection_Previews: PreviewProvider {
     static var previews: some View {
-        Selection(showingInsiders: .constant(false), showingMain: .constant(true))
+        Selection(showingInsiders: .constant(false), showingStocks: .constant(true))
     }
 }
 

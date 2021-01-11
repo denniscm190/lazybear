@@ -46,9 +46,8 @@ struct ContentView: View {
             
             if showingSearch == false {
                 Companies()
-                .transition(.move(edge: .bottom))
-                .animation(.default)
-                
+                    .transition(.move(edge: .bottom))
+                    .animation(.default)
                 
             } else {
                 if searchedCompany.count > 2 {

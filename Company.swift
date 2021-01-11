@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct Company: View {
-    @State public var showingInsiders: Bool = false
-    @State public var showingMain: Bool = true
+    // Company arguments
+    var cik: Int
+    var symbol: String
+    var name: String
     
-    // Company
-    @State var cik: Int
-    @State var symbol: String
-    @State var name: String
+    @State public var showingInsiders: Bool = false
+    @State public var showingStocks: Bool = true
     
     var body: some View {
         GeometryReader { geo in
             VStack {
-                if showingMain {
+                if showingStocks {
                     Stock(cik: cik, symbol: symbol, name: name)
                 }
                 else {
@@ -32,7 +32,7 @@ struct Company: View {
                     .edgesIgnoringSafeArea(.bottom)
                     .frame(height: geo.size.height * 0.1)
                     .overlay(
-                        Selection(showingInsiders: $showingInsiders, showingMain: $showingMain)
+                        Selection(showingInsiders: $showingInsiders, showingStocks: $showingStocks)
                     )
             }
             .background(Color(.systemGray6).edgesIgnoringSafeArea(.all))
@@ -42,6 +42,6 @@ struct Company: View {
 
 struct Company_Previews: PreviewProvider {
     static var previews: some View {
-        Company(cik: 123, symbol: "Symbol", name: "Name")
+        Company(cik: 320193, symbol: "aapl", name: "apple inc")
     }
 }

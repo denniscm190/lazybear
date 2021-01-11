@@ -9,12 +9,12 @@ import SwiftUI
 import SwiftUICharts
 
 struct Insiders: View {
-    @ObservedObject var transaction = Transaction()
+    // Company arguments
+    var cik: Int
+    var symbol: String
+    var name: String
     
-    // Company
-    @State var cik: Int
-    @State var symbol: String
-    @State var name: String
+    @ObservedObject var transaction = Transaction()
     
     // Picker
     var dateFormatter: DateFormatter {
@@ -104,6 +104,6 @@ struct Insiders: View {
 
 struct Insiders_Previews: PreviewProvider {
     static var previews: some View {
-        Insiders(cik: 123, symbol: "Symbol", name: "Name")
+        Insiders(cik: 320193, symbol: "aapl", name: "apple inc")
     }
 }
