@@ -1,6 +1,8 @@
 # Lazybear iOS 🐻🧸
 Lazybear is a free, open source, minimalist stock market data app for finance enthusiasts.  
 [Download it from the App Store](https://apps.apple.com/es/app/lazybear-datos-financieros/id1534612943)
+![GitHub Logo](/.images/us.png)
+Format: ![Alt Text](https://apps.apple.com/es/app/lazybear-datos-financieros/id1534612943)
 
 # Questions?
 Visit our [website](https://lazybear.app)
