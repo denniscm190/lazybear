@@ -6,15 +6,16 @@
 //
 
 import SwiftUI
-import StoreKit
 
 @main
 struct LazyBearApp: App {
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                Env1()
+                TestFavourites()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
             .navigationViewStyle(StackNavigationViewStyle())
         }

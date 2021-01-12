@@ -1,13 +1,13 @@
 //
-//  ContentView.swift
+//  Main.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 27/09/2020.
+//  Created by Dennis Concepción Martín on 12/1/21.
 //
 
 import SwiftUI
 
-struct ContentView: View {
+struct Main: View {
     @State var searchedCompany: String = ""
     @State var showingSettings = false
     @State var showingUser = false
@@ -75,13 +75,13 @@ extension Image {
             .frame(maxWidth: 30)
     }
 }
-     
 
-struct ContentView_Previews: PreviewProvider {
+
+struct Main_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ContentView()
+            Main()
+                .navigationViewStyle(StackNavigationViewStyle())
         }
-        .navigationViewStyle(StackNavigationViewStyle())
     }
 }

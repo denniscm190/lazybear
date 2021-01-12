@@ -1,9 +1,2 @@
 .DS_Store
-Tests
-Config.swift
-Assets.xcassets
-Configuration.storekit
-Info.plist
-Preview Content
-Data
-Config.xcconfig
+lazybear/Config.swift
