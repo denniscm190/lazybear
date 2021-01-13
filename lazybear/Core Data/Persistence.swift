@@ -14,9 +14,10 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let newItem = Favourite(context: viewContext)
+            let newItem = FavCompany(context: viewContext)
             newItem.cik = 123
-            newItem.isFavourite = true
+            newItem.symbol = "Symbol"
+            newItem.name = "Name"
             
         }
         do {

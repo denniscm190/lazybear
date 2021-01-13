@@ -27,7 +27,6 @@ struct Main: View {
                     }
                     
                     Spacer()
-                    /*
                     Button(action: {self.showingUser.toggle()
                     }) {
                         Image(systemName: "person")
@@ -35,14 +34,13 @@ struct Main: View {
                     }.sheet(isPresented: $showingUser) {
                         User()
                     }
-                    */
                 }
                 .transition(.move(edge: .top))
                 .animation(.default)
                 .padding()
             }
             
-            SearchBar(searchedText: $searchedCompany, placeholder: "Search ...", showingSearch: $showingSearch)
+            SearchBar(searchedText: $searchedCompany, placeholder: "Search ...", showingSearch: $showingSearch, exitButton: "Cancel")
             
             if showingSearch == false {
                 Companies()

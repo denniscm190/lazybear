@@ -10,8 +10,8 @@ import CoreData
 
 struct ContentView: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: Favourite.entity(), sortDescriptors: [])
-    var favourites: FetchedResults<Favourite>
+    @FetchRequest(entity: FavCompany.entity(), sortDescriptors: [])
+    var favourites: FetchedResults<FavCompany>
     
     var body: some View {
         Main()
