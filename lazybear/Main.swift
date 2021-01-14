@@ -12,6 +12,7 @@ struct Main: View {
     @State var showingSettings = false
     @State var showingUser = false
     @State public var showingSearch: Bool = false  // Search Bar
+    @Environment(\.managedObjectContext) private var viewContext
     
     var body: some View {
         VStack {
@@ -33,10 +34,9 @@ struct Main: View {
                             .imageIconModifier()
                     }.sheet(isPresented: $showingUser) {
                         User()
+                            .environment(\.managedObjectContext, self.viewContext)
                     }
                 }
-                .transition(.move(edge: .top))
-                .animation(.default)
                 .padding()
             }
             

@@ -25,8 +25,11 @@ struct User: View {
                     List {
                         ForEach(favCompanies) { favCompany in
                             HStack {
-                                Text(favCompany.name.capitalized)
-
+                                NavigationLink(destination: Company(cik: Int(favCompany.cik), symbol: favCompany.symbol, name: favCompany.name)
+                                                .navigationBarTitle(favCompany.name.capitalized)
+                                ) {
+                                    Text(favCompany.name.capitalized)
+                                }
                             }.padding()
                         }
                         // Delete from persistent storage
@@ -65,6 +68,7 @@ struct User: View {
                     Image(systemName: "multiply")
                         .resizable()
                         .frame(width: 25, height: 25)
+                    
                 }
             )
         }

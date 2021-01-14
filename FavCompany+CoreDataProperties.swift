@@ -16,7 +16,7 @@ extension FavCompany {
         return NSFetchRequest<FavCompany>(entityName: "FavCompany")
     }
 
-    @NSManaged public var cik: Int16
+    @NSManaged public var cik: Int32
     @NSManaged public var symbol: String
     @NSManaged public var name: String
 

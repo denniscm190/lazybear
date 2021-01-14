@@ -17,13 +17,13 @@ struct FavCompanyRow: View {
         let names = favCompanies.map { $0.name }
         HStack {
             if names.contains(company.name) {
-                Button(action: { deleteFavourite(symbol: company.symbol, name: company.name) }) {
+                Button(action: { deleteFavourite(symbol: company.symbol) }) {
                     Image(systemName: "minus.circle.fill")
                         .iconModifier()
                 }
             }
             else {
-                Button(action: { addFavourite(symbol: company.symbol, name: company.name) }) {
+                Button(action: { addFavourite(cik: company.cik, symbol: company.symbol, name: company.name) }) {
                     Image(systemName: "plus.circle.fill")
                         .iconModifier()
                 }
@@ -32,8 +32,9 @@ struct FavCompanyRow: View {
         }
     }
     
-    func addFavourite(symbol: String, name: String) {
+    func addFavourite(cik: Int, symbol: String, name: String) {
         let favCompany = FavCompany(context: viewContext)
+        favCompany.cik = Int32(cik)
         favCompany.symbol = symbol
         favCompany.name = name
         do {
@@ -44,8 +45,17 @@ struct FavCompanyRow: View {
         }
     }
     
-    func deleteFavourite(symbol: String, name: String) {
-        
+    func deleteFavourite(symbol: String) {
+        let symbols = favCompanies.map { $0.symbol }  // Get array of symbols
+        let index = symbols.firstIndex(of: symbol)  // Find index of the symbol to delete
+        viewContext.delete(favCompanies[index!])  // Delete it
+        // Save the deletion
+        do {
+            try viewContext.save()
+            print("Company deleted")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 extension Image {

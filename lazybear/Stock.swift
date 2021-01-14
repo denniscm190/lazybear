@@ -44,18 +44,17 @@ struct Stock: View {
                 }
                 
                 // Stock Price
-                let width = geo.size.height*0.6
+                let width = geo.size.width*0.9
                 let prices = price.result.map { $0.close }  // Get an array of a variable in the struct
-                LineChartView(data: prices, title: "Stock price", legend: "Last 20 days",  form: CGSize(width: width, height: width/1.8), rateValue: nil)
-                    .padding()
-                
-                Spacer()
-            
-                // Volume
-                let volume = price.result.map { $0.volume }
-                BarChartView(data: ChartData(points: volume), title: "Volume", form: CGSize(width: width, height: width/1.6))
+                ScrollView {
+                    LineChartView(data: prices, title: "Stock price", legend: "Last 20 days",  form: CGSize(width: width, height: width/2), rateValue: nil)  // It has a minimum height
                         .padding()
                     
+                    // Volume
+                    let volume = price.result.map { $0.volume }
+                    BarChartView(data: ChartData(points: volume), title: "Volume", form: CGSize(width: width, height: width/1.5))
+                            .padding()
+                    }
                 }
             }
         }
