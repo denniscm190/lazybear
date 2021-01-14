@@ -13,7 +13,7 @@ class Price: ObservableObject {
     @Published var showingAlert = false
     
     func request(symbol: String) {
-        guard let url = URL(string: priceUrl(symbol: symbol, sandbox: false)) else {  // Change sandbox when production
+        guard let url = URL(string: priceUrl(symbol: symbol, sandbox: true)) else {  // Change sandbox when production
             print("Invalid URL")
             return
         }
