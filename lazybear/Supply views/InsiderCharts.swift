@@ -14,7 +14,7 @@ struct InsiderCharts: View {
     
     var body: some View {
         VStack {
-            
+            // Add charts
             
         }
     }
