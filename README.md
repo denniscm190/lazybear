@@ -16,7 +16,7 @@ We use GitHub for bug tracking, questions, or anything realted. Please search th
 If you have something to say about our app or want to get involve in our community, feel free to post something in our [community forum](https://github.com/denniscm190/lazybear-iOS/discussions)
 
 ### Code
-We appreciate your intention to contribute. The only thing you should do in order to contribute is to fork the repository and create a pull request to the branch with the current working version when you have made the changes. 
+We appreciate your intention to contribute. Create a pull request with your changes and we will check it as soon as possible
 
 ## Contact us
 Send me a DM [Twitter](https://twitter.com/dennisconcep)
