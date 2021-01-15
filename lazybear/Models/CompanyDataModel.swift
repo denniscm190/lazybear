@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompanyData: Hashable, Codable {
+struct CompanyDataModel: Hashable, Codable {
     var cik: Int
     var symbol: String
     var name: String

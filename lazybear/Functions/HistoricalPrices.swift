@@ -1,26 +1,26 @@
 //
-//  Insiders.swift
+//  RequestPrices.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 4/1/21.
+//  Created by Dennis Concepción Martín on 3/1/21.
 //
 
 import SwiftUI
 
-class Transaction: ObservableObject {
-    @Published var result = [TransactionModel]()
+class HistoricalPrices: ObservableObject {
+    @Published var result = [HistoricalPricesModel]()
     @Published var showingView = false
     @Published var showingAlert = false
     
-    func request(cik: String, date: String) {
-        guard let url = URL(string: transactionUrl(cik: cik, date: date)) else {  // Change sandbox when production
+    func request(symbol: String) {
+        guard let url = URL(string: priceUrl(symbol: symbol, sandbox: true)) else {  // Change sandbox when production
             print("Invalid URL")
             return
         }
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
-                if let decodedResponse = try? JSONDecoder().decode([TransactionModel].self, from: data) {
+                if let decodedResponse = try? JSONDecoder().decode([HistoricalPricesModel].self, from: data) {
                     // we have good data – go back to the main thread
                     DispatchQueue.main.async {
                         // update our UI

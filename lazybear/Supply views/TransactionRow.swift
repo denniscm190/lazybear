@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TransactionRow: View {
-    var trans: TransactionModel
+    var trans: InsiderTransactionModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -39,6 +39,6 @@ struct TransactionRow: View {
 
 struct TransactionRow_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionRow(trans: TransactionModel(acquisition_disposition: "A", transaction_date: "2020-01-01", reporting_owner: "steve jobs", transaction_type: "F-SomeStuff", number_securities_transacted: 12345))
+        TransactionRow(trans: InsiderTransactionModel(acquisition_disposition: "A", transaction_date: "2020-01-01", reporting_owner: "steve jobs", transaction_type: "F-SomeStuff", number_securities_transacted: 12345))
     }
 }

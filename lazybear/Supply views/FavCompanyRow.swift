@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavCompanyRow: View {
-    var company: CompanyData
+    var company: CompanyDataModel
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: FavCompany.entity(), sortDescriptors: [])
     var favCompanies: FetchedResults<FavCompany>

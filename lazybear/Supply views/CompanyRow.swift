@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CompanyRow: View {
-    var company: CompanyData
+    var company: CompanyDataModel
     
     var body: some View {
         HStack {

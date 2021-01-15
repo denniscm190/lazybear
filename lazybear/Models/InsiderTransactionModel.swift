@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TransactionModel: Codable, Hashable {
+struct InsiderTransactionModel: Codable, Hashable {
     var acquisition_disposition: String
     var transaction_date: String
     var reporting_owner: String

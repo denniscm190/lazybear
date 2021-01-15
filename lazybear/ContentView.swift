@@ -9,9 +9,6 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: FavCompany.entity(), sortDescriptors: [])
-    var favourites: FetchedResults<FavCompany>
     
     var body: some View {
         Main()

@@ -9,12 +9,11 @@ import SwiftUI
 import SwiftUICharts
 
 struct Insiders: View {
-    // Company arguments
     var cik: Int
     var symbol: String
     var name: String
     
-    @ObservedObject var transaction = Transaction()
+    @ObservedObject var transaction = InsiderTransaction()
     
     // Picker
     var dateFormatter: DateFormatter {
@@ -29,28 +28,17 @@ struct Insiders: View {
         if transaction.showingView {
             GeometryReader { geo in
                 VStack {
-                    // Graph
-                    let cumBuys = cumSum(array: getTransactions(acquisitionOrDisposition: "A"))
-                    let cumSells = cumSum(array: getTransactions(acquisitionOrDisposition: "D"))
-                    let green = GradientColor(start: .green, end: .green)
-                    let red = GradientColor(start: .red, end: .red)
-                    
                     let width = geo.size.height*0.6
-                    MultiLineChartView(data: [(cumBuys, green), (cumSells, red)], title: "Buys and sells", form: CGSize(width: width, height: width/2.3), rateValue: pct(buy: cumBuys.last!, sell: cumSells.last!))
-                        .padding()
-                
+                    InsiderCharts(transaction: transaction, width: width)
+                    
                     DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date) { Text("Transactions since").font(.headline) }
                         .padding([.leading, .top, .trailing])
                         .onChange(of: self.selectedDate, perform: { date in
                             transaction.request(cik: String(cik), date: dateFormatter.string(from: selectedDate))
                         })
 
-                    List {
-                        ForEach(transaction.result, id:\.self) { trans in
-                            TransactionRow(trans: trans)
-                        }
-                    }
-                    .offset(y: 10)
+                    TransactionList(transaction: transaction)
+                        .offset(y: 10)
                 }
             }
         }
@@ -69,36 +57,6 @@ struct Insiders: View {
                               dismissButton: .default(Text("Got it!")))
             }
         }
-    }
-    // Function to sum an array and return a cumulative sum array
-    func cumSum(array: [Double]) -> [Double] {
-        var iterateArray = [Double]()
-        var cumSumArray = [Double]()
-        for value in array {
-            iterateArray.append(value)
-            cumSumArray.append(iterateArray.reduce(0, +))
-        }
-        return cumSumArray
-    }
-    // Return two arrays with buys and sells
-    func getTransactions(acquisitionOrDisposition: String) -> [Double] {
-        var result = [Double]()
-        
-        for trans in transaction.result {
-            if trans.acquisition_disposition == acquisitionOrDisposition {
-                result.append(Double(trans.number_securities_transacted))
-            }
-        }
-
-        return result
-    }
-    // Get pct of net buys over sells
-    func pct(buy: Double, sell: Double) -> Int {
-        let pctOfBuys = buy / (buy+sell)
-        let pctOfSells = sell / (buy+sell)
-        let pct = pctOfBuys - pctOfSells
-        
-        return Int(pct*100)
     }
 }
 

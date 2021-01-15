@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-struct PriceModel: Codable {
-    var close: Double
+struct HistoricalPricesModel: Codable {
     var date: String
-    var symbol: String
+    var close: Double
     var volume: Float
+    var change: Double
     var changePercent: Double
+    var changeOverTime: Double
 }
