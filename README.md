@@ -8,12 +8,16 @@ Lazybear is a free, open source, minimalist stock market data app for finance en
 - Flask API [repository](https://github.com/denniscm190/lazybear-api)   
 - Website [repository](https://github.com/denniscm190/lazybear-web)   
 
-# Questions?
-Visit our [website](https://lazybear.app)
+## Questions & bug reports
+We use GitHub for bug tracking, questions, or anything realted. Please search the [existing questions](https://github.com/denniscm190/lazybear-iOS/issues) and [create a new one](https://github.com/denniscm190/lazybear-iOS/issues) if the issue has not been resolved.
 
-# Contact us
+## Do you want to contribute?
+### New ideas
+If you have something to say about our app or want to get involve in our community, feel free to post something in our [community forum](https://github.com/denniscm190/lazybear-iOS/discussions)
+
+## Contact us
 Send me a DM [Twitter](https://twitter.com/dennisconcep)
 
-# License
+## License
 Repository under [MIT LICENSE](https://en.wikipedia.org/wiki/MIT_License). Check [LICENSE](LICENSE) for more details
 
