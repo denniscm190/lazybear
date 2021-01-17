@@ -12,7 +12,6 @@ struct CompanyList: View {
     @State var isCoreData: Bool
     
     var body: some View {
-        Spacer()
         List {
             ForEach(companiesData.filter({ searchedCompany.isEmpty ? true : $0.name.localizedStandardContains(searchedCompany) }), id: \.cik) { company in
                 if isCoreData {

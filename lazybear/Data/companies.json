@@ -43188,5 +43188,10 @@
     "cik": 320193,
     "symbol": "aapl",
     "name": "apple inc"
+  },
+  {
+    "cik": 1067983,
+    "symbol": "brk.b", 
+    "name": "berkshire hathaway inc"
   }
 ]

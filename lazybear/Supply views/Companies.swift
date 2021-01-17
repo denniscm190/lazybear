@@ -8,26 +8,23 @@
 import SwiftUI
 
 struct Companies: View {
-    var colours = [Color(.systemBlue), Color(.systemYellow), Color(.systemRed), Color(.systemGreen), Color(.systemIndigo), Color(.systemOrange), Color(.systemPink), Color(.systemPurple), Color(.systemTeal), Color(.systemRed)]
+    @Environment(\.verticalSizeClass) var verticalSizeClass: UserInterfaceSizeClass?
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
     
-    var names = ["adobe", "amazon", "apple", "facebook", "google", "jp", "netflix", "paypal", "salesforce", "tesla"]
-    var ciks = [796343, 1018724, 320193, 1326801, 1652044, 19617, 1065280, 1633917, 1108524, 1318605]
-    var symbols = ["adbe", "amzn", "aapl", "fb", "googl", "amj", "nflx", "pypl", "crm", "tsla"]
-    
-    let columns = [
-        GridItem(.flexible()),
-        GridItem(.flexible())
-    ]
+    var names = ["adobe", "amazon", "apple", "facebook", "google", "jp morgan", "netflix", "paypal", "salesforce", "tesla", "berkshire h.", "visa", "walt disney", "bofa", "pfizer", "intel"]
+    var ciks = [796343, 1018724, 320193, 1326801, 1652044, 19617, 1065280, 1633917, 1108524, 1318605, 1067983, 1403161, 1744489, 70858, 78003, 50863]
+    var symbols = ["adbe", "amzn", "aapl", "fb", "googl", "amj", "nflx", "pypl", "crm", "tsla", "brk.b", "v", "dis", "bac", "pfe", "intc"]
+    var colours = [Color(.systemBlue), Color(.systemGreen), Color(.systemIndigo), Color(.systemOrange), Color(.systemPink), Color(.systemPurple), Color(.systemRed), Color(.systemTeal), Color(.systemYellow), Color(.systemBlue), Color(.systemGreen), Color(.systemIndigo), Color(.systemOrange), Color(.systemPink), Color(.systemPurple), Color(.systemRed)]
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 20) {  // Create ScrollView with two columns per row
-                ForEach((0...9), id: \.self) { index in
-                    NavigationLink(destination: Company(cik: 796343, symbol: symbols[index], name: names[index])
+            LazyVGrid(columns: columns(), spacing: 20) {
+                ForEach((0...15), id: \.self) { index in
+                    NavigationLink(destination: Company(cik: ciks[index], symbol: symbols[index], name: names[index])
                                     .navigationBarTitle(names[index].capitalized)
                     ) {
                         VStack {
-                            Image(names[index])
+                            Image(symbols[index])
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                             
@@ -42,6 +39,22 @@ struct Companies: View {
             }
             .padding()
         }
+    }
+    
+    // Change number of columns depend on the device
+    func columns() -> [GridItem] {
+        var columns = [GridItem]()
+        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
+            print("Running on iPhone")
+            columns = Array(repeating: .init(.flexible()), count: 2)
+        }
+        else if horizontalSizeClass == .regular && verticalSizeClass == .regular {
+            print("Running on iPad")
+            columns = Array(repeating: .init(.flexible()), count: 4)
+        }
+        
+        return columns
+        
     }
 }
 
