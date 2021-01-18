@@ -18,7 +18,10 @@ struct Companies: View {
     
     var body: some View {
         ScrollView {
-            LazyVGrid(columns: columns(), spacing: 20) {
+            let columns = lazyColumns(verticalSizeClass: verticalSizeClass!, horizontalSizeClass: horizontalSizeClass!,
+                                      iphoneColumns: 2, ipadColumns: 4)
+            
+            LazyVGrid(columns: columns, spacing: 20) {
                 ForEach((0...15), id: \.self) { index in
                     NavigationLink(destination: Company(cik: ciks[index], symbol: symbols[index], name: names[index])
                                     .navigationBarTitle(names[index].capitalized)
@@ -39,22 +42,6 @@ struct Companies: View {
             }
             .padding()
         }
-    }
-    
-    // Change number of columns depend on the device
-    func columns() -> [GridItem] {
-        var columns = [GridItem]()
-        if horizontalSizeClass == .compact && verticalSizeClass == .regular {
-            print("Running on iPhone")
-            columns = Array(repeating: .init(.flexible()), count: 2)
-        }
-        else if horizontalSizeClass == .regular && verticalSizeClass == .regular {
-            print("Running on iPad")
-            columns = Array(repeating: .init(.flexible()), count: 4)
-        }
-        
-        return columns
-        
     }
 }
 
