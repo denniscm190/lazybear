@@ -26,5 +26,5 @@ Send me a DM [Twitter](https://twitter.com/dennisconcep)
 - [swiftui-charts](https://github.com/spacenation/swiftui-charts)   
 
 ## License
-Repository under [MIT LICENSE](https://en.wikipedia.org/wiki/MIT_License). Check [LICENSE](LICENSE) for more details
+Repository under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). Check [LICENSE](LICENSE.md) for more details
 
