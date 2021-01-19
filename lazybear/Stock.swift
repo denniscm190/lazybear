@@ -19,7 +19,7 @@ struct Stock: View {
                 VStack {
                     PriceOverview(historicalPrices: historicalPrices)
                     let width = geo.size.width*0.9
-                    StockCharts(historicalPrices: historicalPrices, width: width)
+                    StockCharts(historicalPrices: historicalPrices, geoWidth: width)
                 }
             }
         }
