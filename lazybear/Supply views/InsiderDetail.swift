@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InsiderDetail: View {
     @State var transaction: InsiderTransactionModel
+    @Environment(\.presentationMode) var detailPresentationMode
     
     var body: some View {
         NavigationView {
@@ -30,8 +31,26 @@ struct InsiderDetail: View {
                     SectionBody(image: "dollarsing.circle", data: data)
                     SectionBody(image: "info.circle", data: "Type: " + transaction.transaction_type)
                 }
-                
+                let transactionCode = transaction.transaction_type.components(separatedBy: "-")[0]
+                Section(header: Text("What is a (" + transactionCode + ") transaction type?")) {
+                    HStack {
+                        let transactionCodesArray = formDescription.map { $0.transactionCode }
+                        let index = transactionCodesArray.firstIndex(of: transactionCode)
+                        let description = formDescription[index!].description
+                        Text(description)
+                    }
+                }
             }
+            .navigationBarTitle("Transaction details")
+            .navigationBarItems(leading:
+                Button(action: { self.detailPresentationMode.wrappedValue.dismiss() }
+                ) {
+                    Image(systemName: "multiply")
+                        .resizable()
+                        .frame(width: 25, height: 25)
+                    
+                }
+            )
         }
     }
 }

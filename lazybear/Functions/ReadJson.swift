@@ -11,6 +11,7 @@ import SwiftUI
 
 // With this function I parse the local JSON file to read it and create a list with its items.
 let companiesData: [CompanyDataModel] = load("companies.json")
+let formDescription: [FormDescription] = load("formDescription.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
