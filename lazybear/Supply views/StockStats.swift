@@ -37,24 +37,27 @@ struct DataObject: View {
     @State var type: String
     
     var body: some View {
+        let units = unit()
         RoundedRectangle(cornerRadius: 25)
             .foregroundColor(.white)
             .overlay(
-                Text("\(unit()) \(data, specifier: "%.2f")")
+                Text("\(units.0) \(data, specifier: "%.2f") \(units.1)")
                     .foregroundColor(colour)
                     .dataModifier()
-                
-                //Text("TOTAL: $\(totalPrice, specifier: "%.2f")")
             )
     }
     
-    func unit() -> String {
+    func unit() -> (String, String) {
+        var dollar = ""
+        var pct = ""
         if type == "price" {
-            return "$ "
+            dollar = "$"
         }
-        else {
-            return ""
+        else if type == "daily percentage change" {
+            pct = "%"
         }
+        
+        return (dollar, pct)
     }
 }
 extension Text {
