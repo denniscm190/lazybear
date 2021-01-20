@@ -44,7 +44,6 @@
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
-		95D0012825B0C3A5007D45FD /* SizeClassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D0012725B0C3A5007D45FD /* SizeClassView.swift */; };
 		95D0013225B0CFAB007D45FD /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 95D0013125B0CFAB007D45FD /* Charts */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
 		95D1BF4C25ADD08500E5D063 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4B25ADD08500E5D063 /* Main.swift */; };
@@ -96,7 +95,6 @@
 		95B04EB425212369000AD27F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95B04EB62521236A000AD27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B04EBB2521236A000AD27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95D0012725B0C3A5007D45FD /* SizeClassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SizeClassView.swift; path = lazybear/Tests/SizeClassView.swift; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = "LazyBear/Core Data/Persistence.swift"; sourceTree = SOURCE_ROOT; };
 		95D1BF4B25ADD08500E5D063 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Main.swift; path = lazybear/Main.swift; sourceTree = SOURCE_ROOT; };
 		95DF5193259DDC45003790B2 /* AboutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutButton.swift; sourceTree = "<group>"; };
@@ -132,7 +130,6 @@
 		952F791C2598B1CD00FF929F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				95D0012725B0C3A5007D45FD /* SizeClassView.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -361,7 +358,6 @@
 				95DF5197259DDD68003790B2 /* AppInfo.swift in Sources */,
 				954D997125A253A9001F7F60 /* Config.swift in Sources */,
 				95A1ECAF25A36127001D4A21 /* InsiderTransaction.swift in Sources */,
-				95D0012825B0C3A5007D45FD /* SizeClassView.swift in Sources */,
 				95A06A0525B84CA900866C00 /* InsiderDetail.swift in Sources */,
 				9521A8BD259B93200000D417 /* Company.swift in Sources */,
 				9552A61F25B06580001CD0C8 /* SampleConfig.swift in Sources */,
