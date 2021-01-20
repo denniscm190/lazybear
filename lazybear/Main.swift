@@ -21,7 +21,7 @@ struct Main: View {
                 HStack {
                     Button(action: { self.showingSettings.toggle() }) {
                         Image(systemName: "gear")
-                            .imageIconModifier()
+                            .imageIconModifier(maxWidth: 30)
                         
                     }.sheet(isPresented: $showingSettings) {
                         About()
@@ -31,7 +31,7 @@ struct Main: View {
                     Spacer()
                     Button(action: { self.showingUser.toggle() }) {
                         Image(systemName: "person")
-                            .imageIconModifier()
+                            .imageIconModifier(maxWidth: 30)
                         
                     }
                     .sheet(isPresented: $showingUser) {
@@ -60,11 +60,11 @@ struct Main: View {
     }
 }
 extension Image {
-    func imageIconModifier() -> some View {
+    func imageIconModifier(maxWidth: CGFloat) -> some View {
         self
             .resizable()
             .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: 30)
+            .frame(maxWidth: maxWidth)
     }
 }
 

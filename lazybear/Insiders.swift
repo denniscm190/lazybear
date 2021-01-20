@@ -14,6 +14,7 @@ struct Insiders: View {
     var name: String
     
     @ObservedObject var transaction = InsiderTransaction()
+    @State private var chartsAreShowing = true
     
     // Picker
     var dateFormatter: DateFormatter {
@@ -29,14 +30,30 @@ struct Insiders: View {
             GeometryReader { geo in
                 VStack {
                     let width = geo.size.height*0.6
-                    InsiderCharts(transaction: transaction, width: width)
+                    if chartsAreShowing {
+                        InsiderCharts(transaction: transaction, width: width)
+                    }
+                    
+                    HStack {
+                        Button(action: { self.chartsAreShowing.toggle() }) {
+                            if chartsAreShowing {
+                                Text("Hide chart")
+                            }
+                            else {
+                                Text("Show chart")
+                            }
+                        }
+                            Spacer()
+                    }
+                    .padding([.leading, .top, .trailing])
+                    
                     
                     DatePicker(selection: $selectedDate, in: ...Date(), displayedComponents: .date) { Text("Transactions since").font(.headline) }
-                        .padding([.leading, .top, .trailing])
+                        .padding([.leading, .trailing])
                         .onChange(of: self.selectedDate, perform: { date in
                             transaction.request(cik: String(cik), date: dateFormatter.string(from: selectedDate))
                         })
-
+                    
                     TransactionList(transaction: transaction)
                         .offset(y: 10)
                 }
