@@ -51,7 +51,6 @@
 		95DF5194259DDC45003790B2 /* AboutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF5193259DDC45003790B2 /* AboutButton.swift */; };
 		95DF5197259DDD68003790B2 /* AppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF5196259DDD68003790B2 /* AppInfo.swift */; };
 		95DF519A259DE0E2003790B2 /* WhatsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF5199259DE0E2003790B2 /* WhatsNew.swift */; };
-		95DF519D259DE118003790B2 /* TipJar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DF519C259DE118003790B2 /* TipJar.swift */; };
 		95E0287825B88F0B00020CF2 /* formDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E0287725B88F0B00020CF2 /* formDescription.json */; };
 		95E0287B25B88F3C00020CF2 /* FormDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0287A25B88F3C00020CF2 /* FormDescription.swift */; };
 		95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */; };
@@ -103,7 +102,6 @@
 		95DF5193259DDC45003790B2 /* AboutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutButton.swift; sourceTree = "<group>"; };
 		95DF5196259DDD68003790B2 /* AppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfo.swift; sourceTree = "<group>"; };
 		95DF5199259DE0E2003790B2 /* WhatsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNew.swift; sourceTree = "<group>"; };
-		95DF519C259DE118003790B2 /* TipJar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipJar.swift; sourceTree = "<group>"; };
 		95E0287725B88F0B00020CF2 /* formDescription.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = formDescription.json; path = lazybear/Data/formDescription.json; sourceTree = SOURCE_ROOT; };
 		95E0287A25B88F3C00020CF2 /* FormDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormDescription.swift; path = lazybear/Models/FormDescription.swift; sourceTree = SOURCE_ROOT; };
 		95F7CAF525ADC7B7009E0E7C /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
@@ -150,7 +148,6 @@
 				95DF5193259DDC45003790B2 /* AboutButton.swift */,
 				95DF5196259DDD68003790B2 /* AppInfo.swift */,
 				95DF5199259DE0E2003790B2 /* WhatsNew.swift */,
-				95DF519C259DE118003790B2 /* TipJar.swift */,
 				95A1ECC425A37541001D4A21 /* TransactionRow.swift */,
 				95A8103725AF476F000FD1D6 /* FavCompanyRow.swift */,
 				950B79F525B1CB7A00E5DB5B /* CompanyList.swift */,
@@ -370,7 +367,6 @@
 				9552A61F25B06580001CD0C8 /* SampleConfig.swift in Sources */,
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,
-				95DF519D259DE118003790B2 /* TipJar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
