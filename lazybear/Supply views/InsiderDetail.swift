@@ -15,7 +15,7 @@ struct InsiderDetail: View {
         NavigationView {
             Form {
                 Section(header: Text("Owner")) {
-                    SectionBody(image: "person.fill", data: transaction.reporting_owner)
+                    SectionBody(image: "person.fill", data: transaction.reporting_owner.capitalized)
                 }
                 
                 Section(header: Text("Date YYYY/MM/DD")) {
@@ -28,7 +28,7 @@ struct InsiderDetail: View {
                 
                 Section(header: Text("Transaction type")) {
                     let data = transaction.transaction_type.components(separatedBy: "-")[1]
-                    SectionBody(image: "dollarsing.circle", data: data)
+                    SectionBody(image: "dollarsign.circle", data: data)
                     SectionBody(image: "info.circle", data: "Type: " + transaction.transaction_type)
                 }
                 let transactionCode = transaction.transaction_type.components(separatedBy: "-")[0]
