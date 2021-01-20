@@ -25,7 +25,7 @@ struct Company: View {
                 else {
                     Insiders(cik: cik, symbol: symbol, name: name)
                 }
-                
+                Spacer()
                 // Start bottom selection
                 Rectangle()
                     .foregroundColor(.white)

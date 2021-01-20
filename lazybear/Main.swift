@@ -34,7 +34,7 @@ struct Main: View {
                             .imageIconModifier(maxWidth: 30)
                         
                     }
-                    .sheet(isPresented: $showingUser) {
+                    .fullScreenCover(isPresented: $showingUser) {
                         User()
                             .environment(\.managedObjectContext, self.viewContext)
                         
