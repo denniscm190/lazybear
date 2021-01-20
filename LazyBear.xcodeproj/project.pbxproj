@@ -32,6 +32,7 @@
 		958E472B25B1CA8B0048E770 /* FavCompanies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E472A25B1CA8B0048E770 /* FavCompanies.swift */; };
 		959B940925B5F4BC00EEB802 /* LazyColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B940825B5F4BC00EEB802 /* LazyColumns.swift */; };
 		959B940C25B6058E00EEB802 /* StockStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B940B25B6058E00EEB802 /* StockStats.swift */; };
+		95A06A0125B8432200866C00 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A06A0025B8432200866C00 /* PieChart.swift */; };
 		95A1ECAF25A36127001D4A21 /* InsiderTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1ECAE25A36127001D4A21 /* InsiderTransaction.swift */; };
 		95A1ECB225A36230001D4A21 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1ECB125A36230001D4A21 /* InsiderTransactionModel.swift */; };
 		95A1ECC525A37541001D4A21 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1ECC425A37541001D4A21 /* TransactionRow.swift */; };
@@ -79,6 +80,7 @@
 		958E472A25B1CA8B0048E770 /* FavCompanies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavCompanies.swift; path = "lazybear/Supply views/FavCompanies.swift"; sourceTree = SOURCE_ROOT; };
 		959B940825B5F4BC00EEB802 /* LazyColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LazyColumns.swift; path = lazybear/Functions/LazyColumns.swift; sourceTree = SOURCE_ROOT; };
 		959B940B25B6058E00EEB802 /* StockStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockStats.swift; sourceTree = "<group>"; };
+		95A06A0025B8432200866C00 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
 		95A1ECAE25A36127001D4A21 /* InsiderTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsiderTransaction.swift; path = lazybear/Functions/InsiderTransaction.swift; sourceTree = SOURCE_ROOT; };
 		95A1ECB125A36230001D4A21 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsiderTransactionModel.swift; path = lazybear/Models/InsiderTransactionModel.swift; sourceTree = SOURCE_ROOT; };
 		95A1ECC425A37541001D4A21 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				950B79FE25B1E68D00E5DB5B /* InsiderCharts.swift */,
 				950B7A0325B1E7E100E5DB5B /* TransactionList.swift */,
 				959B940B25B6058E00EEB802 /* StockStats.swift */,
+				95A06A0025B8432200866C00 /* PieChart.swift */,
 			);
 			name = "Supply views";
 			path = "lazybear/Supply views";
@@ -325,6 +328,7 @@
 				95A1ECC525A37541001D4A21 /* TransactionRow.swift in Sources */,
 				950B79F625B1CB7A00E5DB5B /* CompanyList.swift in Sources */,
 				956FAF7C25AF421E0002B2C1 /* FavCompany+CoreDataProperties.swift in Sources */,
+				95A06A0125B8432200866C00 /* PieChart.swift in Sources */,
 				95B04EB525212369000AD27F /* ContentView.swift in Sources */,
 				95AB4A90259DD66D0064C9C1 /* CompanyRow.swift in Sources */,
 				95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */,

@@ -11,17 +11,42 @@ import Charts
 struct InsiderCharts: View {
     @State var transaction: InsiderTransaction
     @State var width: CGFloat
+
     
     var body: some View {
         VStack {
-            // Add charts
-            
+            PieChart(dataPoints: dataPoints())
+                .shadow(radius: 10)
         }
     }
     
-    func cumulativeSum() -> [Double] {
+    func dataPoints() -> [DataPoint] {
+        var buys = [Int]()
+        var sells = [Int]()
+        for trans in transaction.result {
+            if trans.acquisition_disposition == "A" {
+                // It's a buy
+                buys.append(trans.number_securities_transacted)
+            }
+            else {
+                // It's a sell
+                sells.append(trans.number_securities_transacted)
+            }
+        }
         
-        return [Double]()
+        // Now add up all the securities transacted
+        let totalBuys = buys.reduce(0, +)
+        let totalSells = sells.reduce(0, +)
+        
+        // Finally return DataPoint for PieChart
+        var PieData: [DataPoint] {
+            [
+                DataPoint(id: 1, value: Double(totalBuys), color: .red),
+                DataPoint(id: 1, value: Double(totalSells), color: .green),
+            ]
+        }
+        
+        return PieData
     }
 }
 

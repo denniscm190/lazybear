@@ -45,7 +45,7 @@ struct StockCharts: View {
                 
                 let maxChange = change.max()!
                 let minChange = change.min()!
-                StockStats(dataMax: maxChange, dataMin: minChange, width: normalSize.0, height: normalSize.1, title: "daily percentage change")
+                StockStats(dataMax: maxChange, dataMin: minChange, width: normalSize.0, height: normalSize.1, title: "daily change")
                 
             }
         }

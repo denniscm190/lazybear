@@ -53,7 +53,7 @@ struct DataObject: View {
         if type == "price" {
             dollar = "$"
         }
-        else if type == "daily percentage change" {
+        else if type == "daily change" {
             pct = "%"
         }
         
