@@ -35,7 +35,6 @@ struct Company: View {
                         Selection(showingInsiders: $showingInsiders, showingStocks: $showingStocks)
                     )
             }
-            .background(Color(.systemGray6).edgesIgnoringSafeArea(.all))
         }
     }
 }

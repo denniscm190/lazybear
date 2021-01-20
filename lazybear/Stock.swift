@@ -21,6 +21,10 @@ struct Stock: View {
                     let width = geo.size.width*0.9
                     StockCharts(historicalPrices: historicalPrices, geoWidth: width)
                 }
+                .background(
+                    Color(.systemGray6)
+                        .edgesIgnoringSafeArea(.all)
+                )
             }
         }
         else {
