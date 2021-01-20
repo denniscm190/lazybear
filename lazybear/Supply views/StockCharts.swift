@@ -27,24 +27,24 @@ struct StockCharts: View {
                 LineChartView(data: prices, title: "Stock price", legend: "Last month",  form: CGSize(width: normalSize.0, height: normalSize.1), rateValue: nil)
                     .padding()
                 
-                let maxPrice = String(prices.max()!)
-                let minPrice = String(prices.min()!)
+                let maxPrice = prices.max()!
+                let minPrice = prices.min()!
                 StockStats(dataMax: maxPrice, dataMin: minPrice, width: normalSize.0, height: normalSize.1, title: "price")
                 
                 let volume = historicalPrices.result.map { $0.volume }
                 BarChartView(data: ChartData(points: volume), title: "Volume", form: CGSize(width: specialSize.0, height: specialSize.1))
                         .padding()
                 
-                let maxVolume = String(volume.max()!)
-                let minVolume = String(volume.min()!)
-                StockStats(dataMax: maxVolume, dataMin: minVolume, width: normalSize.0, height: normalSize.1, title: "volume")
+                let maxVolume = volume.max()!
+                let minVolume = volume.min()!
+                StockStats(dataMax: Double(maxVolume), dataMin: Double(minVolume), width: normalSize.0, height: normalSize.1, title: "volume")
                 
                 let change = historicalPrices.result.map { $0.changePercent*100 }
                 LineChartView(data: change, title: "Daily percentage change", legend: "Last month",  form: CGSize(width: normalSize.0, height: normalSize.1), rateValue: nil)
                     .padding()
                 
-                let maxChange = String(change.max()!)
-                let minChange = String(change.min()!)
+                let maxChange = change.max()!
+                let minChange = change.min()!
                 StockStats(dataMax: maxChange, dataMin: minChange, width: normalSize.0, height: normalSize.1, title: "daily percentage change")
                 
             }

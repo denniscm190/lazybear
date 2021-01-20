@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct StockStats: View {
-    @State var dataMax: String
-    @State var dataMin: String
+    @State var dataMax: Double
+    @State var dataMin: Double
     @State var width: CGFloat
     @State var height: CGFloat
     @State var title: String
@@ -32,7 +32,7 @@ struct StockStats: View {
 }
 
 struct DataObject: View {
-    @State var data: String
+    @State var data: Double
     @State var colour: Color
     @State var type: String
     
@@ -40,9 +40,11 @@ struct DataObject: View {
         RoundedRectangle(cornerRadius: 25)
             .foregroundColor(.white)
             .overlay(
-                Text(unit() + " " + data)
+                Text("\(unit()) \(data, specifier: "%.2f")")
                     .foregroundColor(colour)
                     .dataModifier()
+                
+                //Text("TOTAL: $\(totalPrice, specifier: "%.2f")")
             )
     }
     
@@ -73,6 +75,6 @@ extension Text {
 
 struct StockStats_Previews: PreviewProvider {
     static var previews: some View {
-        StockStats(dataMax: "500.00", dataMin: "200.00", width: 360, height: 240, title: "price")
+        StockStats(dataMax: 500.00, dataMin: 200.00, width: 360, height: 240, title: "price")
     }
 }
