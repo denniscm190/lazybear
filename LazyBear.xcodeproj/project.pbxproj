@@ -33,6 +33,7 @@
 		959B940925B5F4BC00EEB802 /* LazyColumns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B940825B5F4BC00EEB802 /* LazyColumns.swift */; };
 		959B940C25B6058E00EEB802 /* StockStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959B940B25B6058E00EEB802 /* StockStats.swift */; };
 		95A06A0125B8432200866C00 /* PieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A06A0025B8432200866C00 /* PieChart.swift */; };
+		95A06A0525B84CA900866C00 /* InsiderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A06A0425B84CA900866C00 /* InsiderDetail.swift */; };
 		95A1ECAF25A36127001D4A21 /* InsiderTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1ECAE25A36127001D4A21 /* InsiderTransaction.swift */; };
 		95A1ECB225A36230001D4A21 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1ECB125A36230001D4A21 /* InsiderTransactionModel.swift */; };
 		95A1ECC525A37541001D4A21 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A1ECC425A37541001D4A21 /* TransactionRow.swift */; };
@@ -81,6 +82,7 @@
 		959B940825B5F4BC00EEB802 /* LazyColumns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LazyColumns.swift; path = lazybear/Functions/LazyColumns.swift; sourceTree = SOURCE_ROOT; };
 		959B940B25B6058E00EEB802 /* StockStats.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockStats.swift; sourceTree = "<group>"; };
 		95A06A0025B8432200866C00 /* PieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChart.swift; sourceTree = "<group>"; };
+		95A06A0425B84CA900866C00 /* InsiderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderDetail.swift; sourceTree = "<group>"; };
 		95A1ECAE25A36127001D4A21 /* InsiderTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsiderTransaction.swift; path = lazybear/Functions/InsiderTransaction.swift; sourceTree = SOURCE_ROOT; };
 		95A1ECB125A36230001D4A21 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsiderTransactionModel.swift; path = lazybear/Models/InsiderTransactionModel.swift; sourceTree = SOURCE_ROOT; };
 		95A1ECC425A37541001D4A21 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionRow.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				950B7A0325B1E7E100E5DB5B /* TransactionList.swift */,
 				959B940B25B6058E00EEB802 /* StockStats.swift */,
 				95A06A0025B8432200866C00 /* PieChart.swift */,
+				95A06A0425B84CA900866C00 /* InsiderDetail.swift */,
 			);
 			name = "Supply views";
 			path = "lazybear/Supply views";
@@ -354,6 +357,7 @@
 				954D997125A253A9001F7F60 /* Config.swift in Sources */,
 				95A1ECAF25A36127001D4A21 /* InsiderTransaction.swift in Sources */,
 				95D0012825B0C3A5007D45FD /* SizeClassView.swift in Sources */,
+				95A06A0525B84CA900866C00 /* InsiderDetail.swift in Sources */,
 				9521A8BD259B93200000D417 /* Company.swift in Sources */,
 				9552A61F25B06580001CD0C8 /* SampleConfig.swift in Sources */,
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,

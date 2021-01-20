@@ -8,23 +8,36 @@
 import SwiftUI
 
 struct TransactionRow: View {
-    var trans: InsiderTransactionModel
+    @State var transaction: InsiderTransactionModel
+    @State var showingDetails = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "person.fill")
-                Text(trans.reporting_owner.capitalized)
-                Spacer()
-                Text(String(trans.number_securities_transacted))
-                    .foregroundColor(colourShares(type: trans.acquisition_disposition))
+        Button(action: { self.showingDetails.toggle() }) {
+            VStack(alignment: .leading) {
+                HStack {
+                    Image(systemName: "person.fill")
+                    Text(transaction.reporting_owner.capitalized)
+                    Spacer()
+                    Text(String(transaction.number_securities_transacted))
+                        .foregroundColor(colourShares(type: transaction.acquisition_disposition))
+                }
+                HStack {
+                    Image(systemName: "calendar")
+                    Text(transaction.transaction_date)
+                }
             }
-            HStack {
-                Image(systemName: "calendar")
-                Text(trans.transaction_date)
-            }
+            .padding()
         }
-        .padding()
+        .sheet(isPresented: $showingDetails) {
+            InsiderDetail(transaction:
+                            InsiderTransactionModel(
+                                acquisition_disposition: transaction.acquisition_disposition,
+                                transaction_date: transaction.transaction_date,
+                                reporting_owner: transaction.reporting_owner,
+                                transaction_type: transaction.transaction_type,
+                                number_securities_transacted: transaction.number_securities_transacted)
+            )
+        }
     }
     
     func colourShares(type: String) -> Color {
@@ -39,6 +52,6 @@ struct TransactionRow: View {
 
 struct TransactionRow_Previews: PreviewProvider {
     static var previews: some View {
-        TransactionRow(trans: InsiderTransactionModel(acquisition_disposition: "A", transaction_date: "2020-01-01", reporting_owner: "steve jobs", transaction_type: "F-SomeStuff", number_securities_transacted: 12345))
+        TransactionRow(transaction: InsiderTransactionModel(acquisition_disposition: "A", transaction_date: "2020-01-01", reporting_owner: "steve jobs", transaction_type: "F-SomeStuff", number_securities_transacted: 12345))
     }
 }

@@ -13,7 +13,7 @@ struct TransactionList: View {
     var body: some View {
         List {
             ForEach(transaction.result, id:\.self) { trans in
-                TransactionRow(trans: trans)
+                TransactionRow(transaction: trans)
             }
         }
     }
