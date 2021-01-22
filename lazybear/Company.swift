@@ -2,38 +2,21 @@
 //  Company.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 29/12/20.
+//  Created by Dennis Concepción Martín on 22/1/21.
 //
 
 import SwiftUI
 
 struct Company: View {
-    // Company arguments
-    var cik: Int
-    var symbol: String
     var name: String
-    
-    @State public var showingInsiders: Bool = false
-    @State public var showingStocks: Bool = true
+    var symbol: String
     
     var body: some View {
-        GeometryReader { geo in
-            VStack {
-                if showingStocks {
-                    Stock(cik: cik, symbol: symbol, name: name)
-                }
-                else {
-                    Insiders(cik: cik, symbol: symbol, name: name)
-                }
+        CompanyHeader(name: self.name, symbol: self.symbol)
+        ScrollView {
+            VStack(alignment: .leading) {
+                Stock(name: self.name, symbol: self.symbol)
                 Spacer()
-                // Start bottom selection
-                Rectangle()
-                    .foregroundColor(.white)
-                    .edgesIgnoringSafeArea(.bottom)
-                    .frame(height: geo.size.height * 0.1)
-                    .overlay(
-                        Selection(showingInsiders: $showingInsiders, showingStocks: $showingStocks)
-                    )
             }
         }
     }
@@ -41,6 +24,6 @@ struct Company: View {
 
 struct Company_Previews: PreviewProvider {
     static var previews: some View {
-        Company(cik: 320193, symbol: "aapl", name: "apple inc")
+        Company(name: "Apple Inc", symbol: "AAPL")
     }
 }

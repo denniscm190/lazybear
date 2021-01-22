@@ -12,11 +12,12 @@ class HistoricalPrices: ObservableObject {
     @Published var showingView = false
     @Published var showingAlert = false
     
-    func request(symbol: String) {
-        guard let url = URL(string: priceUrl(symbol: symbol, sandbox: true)) else {  // Change sandbox when production
+    func request(symbol: String, period: String, sandbox: Bool) {
+        guard let url = URL(string: historicalPricesUrl(symbol: symbol, period: period, sandbox: sandbox)) else {  // Change sandbox when production
             print("Invalid URL")
             return
         }
+        print(url)
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {

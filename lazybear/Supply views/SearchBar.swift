@@ -8,22 +8,18 @@
 import SwiftUI
 
 struct SearchBar: View {
-    
-    // Text field
     @Binding var searchedText: String
     @State var searchBarIsEditing = false
-    @State var placeholder: String
-    @Binding var showingSearch: Bool  // Content View
-    @State var exitButton: String
+    @Binding var showingSearch: Bool  // Show search view in ContentView
     
     var body: some View {
         HStack {
-            TextField(placeholder, text: $searchedText)
+            TextField("Search ...", text: $searchedText)
                 .padding(10)
                 .padding(.horizontal, 45)
                 .overlay(
                     HStack {
-                        Image(systemName: "globe")
+                        Image(systemName: "magnifyingglass")
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading)
                             .foregroundColor(Color("placeholder"))
@@ -43,9 +39,8 @@ struct SearchBar: View {
                 .cornerRadius(10)
                 .onTapGesture {
                     self.searchBarIsEditing = true
-                    withAnimation {
                     self.showingSearch = true  // Content View
-                    }
+                    
                     
                 }
  
@@ -53,14 +48,13 @@ struct SearchBar: View {
                 Button(action: {
                     self.searchedText = ""
                     self.searchBarIsEditing = false
-                    withAnimation {
                     self.showingSearch = false  // Content View
-                    }
+                    
                     // Force hide keyboard
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
  
                 }) {
-                    Text(exitButton)
+                    Text("Cancel")
                 }
             }
         }
@@ -70,6 +64,6 @@ struct SearchBar: View {
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(searchedText: .constant(""), placeholder: "Placeholder", showingSearch: .constant(true), exitButton: "Cancel")
+        SearchBar(searchedText: .constant(""), showingSearch: .constant(true))
     }
 }
