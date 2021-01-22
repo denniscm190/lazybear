@@ -34,7 +34,7 @@ struct FavCompanyRow: View {
             }
         }
         .fullScreenCover(isPresented: $showingCompany.isShowing) {
-            Company()
+            Company(name: favCompany.name, symbol: favCompany.symbol)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
             
         }

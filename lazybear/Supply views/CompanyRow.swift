@@ -23,7 +23,7 @@ struct CompanyRow: View {
             }
         }
         .fullScreenCover(isPresented: $showingCompany.isShowing) {
-            Company()
+            Company(name: company.name, symbol: company.symbol)
         }
     }
 }

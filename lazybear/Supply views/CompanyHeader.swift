@@ -9,11 +9,13 @@ import SwiftUI
 
 struct CompanyHeader: View {
     @Environment(\.presentationMode) var presentationMode
+    var name: String
+    var symbol: String
     
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("AAPL")
+                Text(self.symbol.uppercased())
                     .font(.title)
                     .fontWeight(.semibold)
                 
@@ -24,7 +26,7 @@ struct CompanyHeader: View {
                 
             }
             
-            Text("Apple Inc")
+            Text(self.name.capitalized)
         }
         .padding([.leading, .trailing])
     }
@@ -32,6 +34,6 @@ struct CompanyHeader: View {
 
 struct CompanyHeader_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyHeader()
+        CompanyHeader(name: "Apple Inc", symbol: "AAPL")
     }
 }

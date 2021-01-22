@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct Company: View {
+    var name: String
+    var symbol: String
     
     var body: some View {
-        CompanyHeader()
+        CompanyHeader(name: self.name, symbol: self.symbol)
         ScrollView {
             VStack(alignment: .leading) {
-                Price()
+                Stock(name: self.name, symbol: self.symbol)
                 Spacer()
             }
         }
@@ -22,6 +24,6 @@ struct Company: View {
 
 struct Company_Previews: PreviewProvider {
     static var previews: some View {
-        Company()
+        Company(name: "Apple Inc", symbol: "AAPL")
     }
 }

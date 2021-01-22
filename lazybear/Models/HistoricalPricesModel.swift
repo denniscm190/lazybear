@@ -15,3 +15,4 @@ struct HistoricalPricesModel: Codable {
     var changePercent: Double
     var changeOverTime: Double
 }
+
