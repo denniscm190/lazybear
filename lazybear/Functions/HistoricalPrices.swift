@@ -43,6 +43,7 @@ class HistoricalPrices: ObservableObject {
                     // everything is good, so we can exit
                     return
                 }
+                
             }
 
             // if we're still here it means there was a problem

@@ -17,6 +17,7 @@ struct Company: View {
             VStack(alignment: .leading) {
                 Stock(name: self.name, symbol: self.symbol)
                 Spacer()
+                //Insiders()
             }
         }
     }

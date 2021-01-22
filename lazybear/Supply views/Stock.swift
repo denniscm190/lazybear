@@ -10,6 +10,8 @@ import SwiftUICharts
 
 struct Stock: View {
     @ObservedObject var historicalPrices = HistoricalPrices()
+    @ObservedObject var latestPrice = LatestPrice()
+    
     var periods = ["1D", "1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
     @State var selectedPeriod = 3
     var name: String
@@ -18,7 +20,20 @@ struct Stock: View {
     var body: some View {
         VStack {
             Divider()
-            CurrentPrice()
+            
+            let price = latestPrice.latestPrice
+            let change = latestPrice.changePercent*100
+            //let marketIsOpen = latestPrice.isUSMarketOpen
+            
+            if latestPrice.showingView {
+            CurrentPrice(price: price, change: change, marketIsOpen: false)
+            } else {
+                HStack {
+                ProgressView()
+                    .padding(.leading)
+                    Spacer()
+                }
+            }
             Divider()
             DateSelection(selectedperiod: $selectedPeriod)
                 .onChange(of: selectedPeriod, perform: { value in
@@ -32,13 +47,13 @@ struct Stock: View {
                 LineView(data: scalate(prices: prices), title: "", style: chartStyle())
                     .padding([.leading, .trailing])
                     .offset(y: -40)
-            }
-            else {
+            } else {
                 ProgressView()
             }
         }
         .onAppear {
             historicalPrices.request(symbol: self.symbol, period: periods[selectedPeriod], sandbox: true)
+            latestPrice.request(symbol: self.symbol, sandbox: true)
         }
     }
     

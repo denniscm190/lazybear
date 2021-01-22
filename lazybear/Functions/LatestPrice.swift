@@ -8,7 +8,10 @@
 import SwiftUI
 
 class LatestPrice: ObservableObject {
-    @Published var result = [LatestPriceModel]()
+    @Published var latestPrice = Double()
+    @Published var changePercent = Double()
+    //@Published var isUSMarketOpen = Bool()
+    
     @Published var showingView = false
     @Published var showingAlert = false
     
@@ -21,23 +24,16 @@ class LatestPrice: ObservableObject {
         let request = URLRequest(url: url)
         URLSession.shared.dataTask(with: request) { data, response, error in
             if let data = data {
-                if let decodedResponse = try? JSONDecoder().decode([LatestPriceModel].self, from: data) {
+                if let decodedResponse = try? JSONDecoder().decode(LatestPriceModel.self, from: data) {
                     // we have good data – go back to the main thread
                     DispatchQueue.main.async {
                         // update our UI
-                        self.result = decodedResponse
+                        self.latestPrice = decodedResponse.latestPrice
+                        self.changePercent = decodedResponse.changePercent
+                        //self.isUSMarketOpen = decodedResponse.isUSMarketOpen
+                        self.showingView = true
                         print("API request ok")
-                        
-                        // Check if data is empty
-                        if self.result.isEmpty || self.result.count <= 1 {
-                            print("Data is empty")
-                            self.showingView = false
-                            self.showingAlert = true
-                        } else {
-                            print("Showing view...")
-                            self.showingView = true
-                        }
-                        
+                        print("Showing view...")
                     }
 
                     // everything is good, so we can exit

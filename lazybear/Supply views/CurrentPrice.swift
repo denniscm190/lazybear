@@ -8,28 +8,28 @@
 import SwiftUI
 
 struct CurrentPrice: View {
-    @ObservedObject var latestPrice = LatestPrice()
+    @State var price: Double
+    @State var change: Double
+    @State var marketIsOpen: Bool
+    
     var body: some View {
         HStack {
-            Text("320.30")
+            Text("\(price, specifier: "%.2f")")
                 .font(.headline)
                 .padding(.trailing)
             
-            Text("+1.67%")
+            Text("\(change, specifier: "%.2f")%")
                 .foregroundColor(.green)
             
             Spacer()
             AddWatchlist()
         }
         .padding([.leading, .trailing])
-        .onAppear {
-            latestPrice.request(symbol: "AAPL", sandbox: true)
-        }
     }
 }
 
 struct CurrentPrice_Previews: PreviewProvider {
     static var previews: some View {
-        CurrentPrice()
+        CurrentPrice(price: 100.50, change: 1.35, marketIsOpen: true)
     }
 }

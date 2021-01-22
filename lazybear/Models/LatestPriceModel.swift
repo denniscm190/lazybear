@@ -8,5 +8,7 @@
 import SwiftUI
 
 struct LatestPriceModel: Codable {
-    var companyName: String
+    var latestPrice: Double
+    var changePercent: Double
+    //var isUSMarketOpen: String
 }
