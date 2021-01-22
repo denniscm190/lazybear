@@ -13,11 +13,8 @@ struct LazyBearApp: App {
 
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
-            .navigationViewStyle(StackNavigationViewStyle())
+            ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

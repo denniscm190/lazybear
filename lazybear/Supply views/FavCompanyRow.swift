@@ -2,73 +2,47 @@
 //  FavCompanyRow.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 13/1/21.
+//  Created by Dennis Concepción Martín on 22/1/21.
 //
 
 import SwiftUI
 
 struct FavCompanyRow: View {
-    var company: CompanyDataModel
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: FavCompany.entity(), sortDescriptors: [])
-    var favCompanies: FetchedResults<FavCompany>
+    var favCompany: FavCompany
+    var index: Int
+    @ObservedObject var showingCompany = ShowingCompany()
+    let persistenceController = PersistenceController.shared
     
     var body: some View {
-        let names = favCompanies.map { $0.name }
-        HStack {
-            if names.contains(company.name) {
-                Button(action: { deleteFavourite(symbol: company.symbol) }) {
-                    Image(systemName: "minus.circle.fill")
-                        .iconModifier()
+        Button(action: { showingCompany.isShowing.toggle() }) {
+            HStack {
+                Image(systemName: "building.2")
+                    .foregroundColor(.white)
+                    .padding(5)
+                    .background(
+                        randomColor(index: index)
+                            .cornerRadius(5)
+                    )
+                
+                VStack(alignment: .leading) {
+                    Text(favCompany.symbol.uppercased())
+                        .fontWeight(.semibold)
+                    
+                    Text(favCompany.name.capitalized)
+                        .font(.caption)
                 }
             }
-            else {
-                Button(action: { addFavourite(cik: company.cik, symbol: company.symbol, name: company.name) }) {
-                    Image(systemName: "plus.circle.fill")
-                        .iconModifier()
-                }
-            }
-            Text(company.name.capitalized)
         }
-    }
-    
-    func addFavourite(cik: Int, symbol: String, name: String) {
-        let favCompany = FavCompany(context: viewContext)
-        favCompany.cik = Int32(cik)
-        favCompany.symbol = symbol
-        favCompany.name = name
-        do {
-            try viewContext.save()
-            print("Company saved.")
-        } catch {
-            print(error.localizedDescription)
+        .fullScreenCover(isPresented: $showingCompany.isShowing) {
+            Company()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            
         }
-    }
-    
-    func deleteFavourite(symbol: String) {
-        let symbols = favCompanies.map { $0.symbol }  // Get array of symbols
-        let index = symbols.firstIndex(of: symbol)  // Find index of the symbol to delete
-        viewContext.delete(favCompanies[index!])  // Delete it
-        // Save the deletion
-        do {
-            try viewContext.save()
-            print("Company deleted")
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-}
-extension Image {
-    func iconModifier() -> some View {
-        self
-            .renderingMode(.original)
-            .resizable()
-            .frame(width: 25, height: 25)
     }
 }
 
 struct FavCompanyRow_Previews: PreviewProvider {
     static var previews: some View {
-        FavCompanyRow(company: companiesData[0])
+        FavCompanyRow(favCompany: FavCompany.init(), index: 0)
     }
 }

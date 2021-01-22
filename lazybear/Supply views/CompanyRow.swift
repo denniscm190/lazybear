@@ -8,15 +8,22 @@
 import SwiftUI
 
 struct CompanyRow: View {
+    @ObservedObject var showingCompany = ShowingCompany()
     var company: CompanyDataModel
     
     var body: some View {
-        HStack {
-            NavigationLink(destination: Company(cik: company.cik, symbol: company.symbol, name: company.name)
-                            .navigationBarTitle(company.name.capitalized)
-            ) {
+        Button(action: { showingCompany.isShowing.toggle() }) {
+            VStack(alignment: .leading) {
+                Text(company.symbol.uppercased())
+                    .fontWeight(.semibold)
+                
                 Text(company.name.capitalized)
+                    .font(.caption)
+                
             }
+        }
+        .fullScreenCover(isPresented: $showingCompany.isShowing) {
+            Company()
         }
     }
 }

@@ -21,8 +21,7 @@ We appreciate your intention to contribute. Create a pull request with your chan
 ## Contact us
 Send me a DM [Twitter](https://twitter.com/dennisconcep)
 
-## Open source frameworks used
-- [ChartView](https://github.com/AppPear/ChartView)   
+## Open source frameworks used 
 - [swiftui-charts](https://github.com/spacenation/swiftui-charts)   
 
 ## License

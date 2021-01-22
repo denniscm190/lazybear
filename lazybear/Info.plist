@@ -32,9 +32,9 @@
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>
-		<string>launch</string>
+		<string></string>
 		<key>UIImageName</key>
-		<string>launchLogo</string>
+		<string></string>
 		<key>UIImageRespectsSafeAreaInsets</key>
 		<false/>
 	</dict>
