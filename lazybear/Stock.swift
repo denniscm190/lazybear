@@ -7,7 +7,7 @@
 
 import SwiftUI
 import SwiftUICharts
-
+/*
 struct Stock: View {
     @ObservedObject var historicalPrices = HistoricalPrices()
     @ObservedObject var latestPrice = LatestPrice()
@@ -26,7 +26,7 @@ struct Stock: View {
             //let marketIsOpen = latestPrice.isUSMarketOpen
             
             if latestPrice.showingView {
-            CurrentPrice(price: price, change: change, marketIsOpen: false)
+                CurrentPrice(price: price, change: change, marketIsOpen: false)
             } else {
                 HStack {
                 ProgressView()
@@ -34,17 +34,18 @@ struct Stock: View {
                     Spacer()
                 }
             }
+            
             Divider()
             DateSelection(selectedperiod: $selectedPeriod)
+                .padding([.leading, .trailing])
                 .onChange(of: selectedPeriod, perform: { value in
                     historicalPrices.showingView.toggle()
                     historicalPrices.request(symbol: self.symbol, period: periods[selectedPeriod], sandbox: true)
                 })
-                .padding([.leading, .trailing])
             
             if historicalPrices.showingView {
                 let prices = historicalPrices.result.map { $0.close }
-                LineView(data: scalate(prices: prices), title: "", style: chartStyle())
+                LineView(data: scalateChart(prices: prices, selectedPeriod: selectedPeriod), title: "", style: chartStyle())
                     .padding([.leading, .trailing])
                     .offset(y: -40)
             } else {
@@ -56,36 +57,6 @@ struct Stock: View {
             latestPrice.request(symbol: self.symbol, sandbox: true)
         }
     }
-    
-    func chartStyle() -> ChartStyle {
-        let gradient = GradientColor(start: .green, end: .green)
-        let style = ChartStyle(
-            backgroundColor: .white,
-            accentColor: .green,
-            gradientColor: gradient,
-            textColor: .black,
-            legendTextColor: .black,
-            dropShadowColor: .white)
-        
-        return style
-    }
-    
-    func scalate(prices: [Double]) -> [Double] {
-        // Remove every two items to shorter the chart data points
-        var indexesToRemove = Set<Int>()
-
-        if selectedPeriod >= 5 {
-            for index in 0..<prices.count {
-                indexesToRemove.insert(index*2)
-            }
-        }
-        let prices = prices
-            .enumerated()
-            .filter { !indexesToRemove.contains($0.offset) }
-            .map { $0.element }
-        
-        return prices
-    }
 }
 
 struct Price_Previews: PreviewProvider {
@@ -93,3 +64,4 @@ struct Price_Previews: PreviewProvider {
         Stock(name: "Apple Inc", symbol: "AAPL")
     }
 }
+*/

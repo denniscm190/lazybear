@@ -15,9 +15,8 @@ struct Company: View {
         CompanyHeader(name: self.name, symbol: self.symbol)
         ScrollView {
             VStack(alignment: .leading) {
-                Stock(name: self.name, symbol: self.symbol)
+                //Stock(name: self.name, symbol: self.symbol)
                 Spacer()
-                //Insiders()
             }
         }
     }

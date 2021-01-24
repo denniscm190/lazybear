@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DateSelection: View {
-    var period = ["1D", "1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
+    var period = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
     @Binding var selectedperiod: Int
     
     var body: some View {

@@ -11,17 +11,16 @@
 		950B79F625B1CB7A00E5DB5B /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B79F525B1CB7A00E5DB5B /* CompanyList.swift */; };
 		952498B325BB381300B00E22 /* CurrentPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952498B225BB381300B00E22 /* CurrentPrice.swift */; };
 		952498B625BB47A700B00E22 /* LatestPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952498B525BB47A700B00E22 /* LatestPriceModel.swift */; };
-		952498B925BB481100B00E22 /* LatestPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952498B825BB481100B00E22 /* LatestPrice.swift */; };
-		95493BA425BB8C8100761301 /* IntradayPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95493BA325BB8C8100761301 /* IntradayPricesModel.swift */; };
 		954D992225A2105F001F7F60 /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 954D992125A2105F001F7F60 /* companies.json */; };
 		954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */; };
 		954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 954D996C25A2461B001F7F60 /* SwiftUICharts */; };
 		954D997125A253A9001F7F60 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D997025A253A9001F7F60 /* Config.swift */; };
-		954D998325A27571001F7F60 /* HistoricalPrices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D998225A27571001F7F60 /* HistoricalPrices.swift */; };
 		9552A61F25B06580001CD0C8 /* SampleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552A61E25B0657F001CD0C8 /* SampleConfig.swift */; };
 		95612C512598D48200F7698F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95612C4F2598D48200F7698F /* SearchBar.swift */; };
 		956FAF7B25AF421E0002B2C1 /* FavCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956FAF7925AF421E0002B2C1 /* FavCompany+CoreDataClass.swift */; };
 		956FAF7C25AF421E0002B2C1 /* FavCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956FAF7A25AF421E0002B2C1 /* FavCompany+CoreDataProperties.swift */; };
+		95700BC625BD9D12009CEEFE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95700BC525BD9D12009CEEFE /* API.swift */; };
+		95700BC925BDAF83009CEEFE /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95700BC825BDAF83009CEEFE /* Test2.swift */; };
 		958E472B25B1CA8B0048E770 /* FavCompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958E472A25B1CA8B0048E770 /* FavCompanyList.swift */; };
 		95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */; };
 		95AB4A7D259DCC0C0064C9C1 /* CompanyDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A7C259DCC0C0064C9C1 /* CompanyDataModel.swift */; };
@@ -29,9 +28,12 @@
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
+		95C28AB625BC45CF0033D16A /* ChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28AB525BC45CF0033D16A /* ChartStyle.swift */; };
+		95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28AB825BC46250033D16A /* ScalateChart.swift */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
 		95E0287825B88F0B00020CF2 /* formDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E0287725B88F0B00020CF2 /* formDescription.json */; };
 		95E0287B25B88F3C00020CF2 /* FormDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0287A25B88F3C00020CF2 /* FormDescription.swift */; };
+		95E68FD625BCC2E4006468EF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E68FD525BCC2E4006468EF /* Test.swift */; };
 		95F6C2DD25BAD394003CF389 /* FavCompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2DC25BAD394003CF389 /* FavCompanyRow.swift */; };
 		95F6C2E425BAD529003CF389 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2E325BAD529003CF389 /* RandomColor.swift */; };
 		95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2EF25BAE2ED003CF389 /* Company.swift */; };
@@ -40,7 +42,6 @@
 		95F6C30125BAEC8B003CF389 /* ShowingCompany.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C30025BAEC8B003CF389 /* ShowingCompany.swift */; };
 		95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C30425BAF599003CF389 /* CompanyHeader.swift */; };
 		95F6C30925BAF7C2003CF389 /* DateSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C30825BAF7C2003CF389 /* DateSelection.swift */; };
-		95F6C30C25BAFDF5003CF389 /* Insiders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C30B25BAFDF5003CF389 /* Insiders.swift */; };
 		95F6C31125BAFFB8003CF389 /* AddWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C31025BAFFB8003CF389 /* AddWatchlist.swift */; };
 		95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */; };
 /* End PBXBuildFile section */
@@ -51,16 +52,15 @@
 		950B79F525B1CB7A00E5DB5B /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		952498B225BB381300B00E22 /* CurrentPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPrice.swift; sourceTree = "<group>"; };
 		952498B525BB47A700B00E22 /* LatestPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LatestPriceModel.swift; path = lazybear/Models/LatestPriceModel.swift; sourceTree = SOURCE_ROOT; };
-		952498B825BB481100B00E22 /* LatestPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LatestPrice.swift; path = lazybear/Functions/LatestPrice.swift; sourceTree = SOURCE_ROOT; };
-		95493BA325BB8C8100761301 /* IntradayPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IntradayPricesModel.swift; path = lazybear/Models/IntradayPricesModel.swift; sourceTree = SOURCE_ROOT; };
 		954D992125A2105F001F7F60 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
 		954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalPricesModel.swift; path = lazybear/Models/HistoricalPricesModel.swift; sourceTree = SOURCE_ROOT; };
 		954D997025A253A9001F7F60 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Config.swift; path = lazybear/Config.swift; sourceTree = SOURCE_ROOT; };
-		954D998225A27571001F7F60 /* HistoricalPrices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalPrices.swift; path = lazybear/Functions/HistoricalPrices.swift; sourceTree = SOURCE_ROOT; };
 		9552A61E25B0657F001CD0C8 /* SampleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SampleConfig.swift; path = lazybear/SampleConfig.swift; sourceTree = SOURCE_ROOT; };
 		95612C4F2598D48200F7698F /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		956FAF7925AF421E0002B2C1 /* FavCompany+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavCompany+CoreDataClass.swift"; sourceTree = "<group>"; };
 		956FAF7A25AF421E0002B2C1 /* FavCompany+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavCompany+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		95700BC525BD9D12009CEEFE /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = lazybear/API.swift; sourceTree = SOURCE_ROOT; };
+		95700BC825BDAF83009CEEFE /* Test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Test2.swift; path = lazybear/Tests/Test2.swift; sourceTree = SOURCE_ROOT; };
 		958E472A25B1CA8B0048E770 /* FavCompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavCompanyList.swift; path = "lazybear/Supply views/FavCompanyList.swift"; sourceTree = SOURCE_ROOT; };
 		95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadJson.swift; path = lazybear/Functions/ReadJson.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A7C259DCC0C0064C9C1 /* CompanyDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyDataModel.swift; path = lazybear/Models/CompanyDataModel.swift; sourceTree = SOURCE_ROOT; };
@@ -70,18 +70,20 @@
 		95B04EB425212369000AD27F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95B04EB62521236A000AD27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B04EBB2521236A000AD27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95C28AB525BC45CF0033D16A /* ChartStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartStyle.swift; path = lazybear/Functions/ChartStyle.swift; sourceTree = SOURCE_ROOT; };
+		95C28AB825BC46250033D16A /* ScalateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScalateChart.swift; path = lazybear/Functions/ScalateChart.swift; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = "LazyBear/Core Data/Persistence.swift"; sourceTree = SOURCE_ROOT; };
 		95E0287725B88F0B00020CF2 /* formDescription.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = formDescription.json; path = lazybear/Data/formDescription.json; sourceTree = SOURCE_ROOT; };
 		95E0287A25B88F3C00020CF2 /* FormDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormDescription.swift; path = lazybear/Models/FormDescription.swift; sourceTree = SOURCE_ROOT; };
+		95E68FD525BCC2E4006468EF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Test.swift; path = lazybear/Tests/Test.swift; sourceTree = SOURCE_ROOT; };
 		95F6C2DC25BAD394003CF389 /* FavCompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCompanyRow.swift; sourceTree = "<group>"; };
 		95F6C2E325BAD529003CF389 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RandomColor.swift; path = lazybear/Functions/RandomColor.swift; sourceTree = SOURCE_ROOT; };
 		95F6C2EF25BAE2ED003CF389 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		95F6C2F225BAE3D1003CF389 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		95F6C2FD25BAEBBD003CF389 /* HeaderWatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderWatchList.swift; sourceTree = "<group>"; };
-		95F6C30025BAEC8B003CF389 /* ShowingCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShowingCompany.swift; path = lazybear/Models/ShowingCompany.swift; sourceTree = SOURCE_ROOT; };
+		95F6C30025BAEC8B003CF389 /* ShowingCompany.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShowingCompany.swift; path = "lazybear/Supply views/ShowingCompany.swift"; sourceTree = SOURCE_ROOT; };
 		95F6C30425BAF599003CF389 /* CompanyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyHeader.swift; sourceTree = "<group>"; };
 		95F6C30825BAF7C2003CF389 /* DateSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelection.swift; sourceTree = "<group>"; };
-		95F6C30B25BAFDF5003CF389 /* Insiders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insiders.swift; sourceTree = "<group>"; };
 		95F6C31025BAFFB8003CF389 /* AddWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWatchlist.swift; sourceTree = "<group>"; };
 		95F7CAF525ADC7B7009E0E7C /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,6 +112,8 @@
 		952F791C2598B1CD00FF929F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				95E68FD525BCC2E4006468EF /* Test.swift */,
+				95700BC825BDAF83009CEEFE /* Test2.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -117,6 +121,7 @@
 		95612C4D2598D48200F7698F /* Supply views */ = {
 			isa = PBXGroup;
 			children = (
+				95F6C30025BAEC8B003CF389 /* ShowingCompany.swift */,
 				95612C4F2598D48200F7698F /* SearchBar.swift */,
 				958E472A25B1CA8B0048E770 /* FavCompanyList.swift */,
 				95F6C2DC25BAD394003CF389 /* FavCompanyRow.swift */,
@@ -124,11 +129,9 @@
 				950B79F525B1CB7A00E5DB5B /* CompanyList.swift */,
 				95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */,
 				95F6C30425BAF599003CF389 /* CompanyHeader.swift */,
-				95F6C2F225BAE3D1003CF389 /* Stock.swift */,
 				952498B225BB381300B00E22 /* CurrentPrice.swift */,
 				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
 				95F6C31025BAFFB8003CF389 /* AddWatchlist.swift */,
-				95F6C30B25BAFDF5003CF389 /* Insiders.swift */,
 			);
 			name = "Supply views";
 			path = "lazybear/Supply views";
@@ -138,9 +141,9 @@
 			isa = PBXGroup;
 			children = (
 				95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */,
-				954D998225A27571001F7F60 /* HistoricalPrices.swift */,
 				95F6C2E325BAD529003CF389 /* RandomColor.swift */,
-				952498B825BB481100B00E22 /* LatestPrice.swift */,
+				95C28AB525BC45CF0033D16A /* ChartStyle.swift */,
+				95C28AB825BC46250033D16A /* ScalateChart.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -151,9 +154,7 @@
 				95AB4A7C259DCC0C0064C9C1 /* CompanyDataModel.swift */,
 				954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */,
 				95E0287A25B88F3C00020CF2 /* FormDescription.swift */,
-				95F6C30025BAEC8B003CF389 /* ShowingCompany.swift */,
 				952498B525BB47A700B00E22 /* LatestPriceModel.swift */,
-				95493BA325BB8C8100761301 /* IntradayPricesModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -195,10 +196,12 @@
 				95002578256D1564008FFD28 /* Configuration.storekit */,
 				95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */,
 				954D997025A253A9001F7F60 /* Config.swift */,
+				95700BC525BD9D12009CEEFE /* API.swift */,
 				9552A61E25B0657F001CD0C8 /* SampleConfig.swift */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
 				95F6C2EF25BAE2ED003CF389 /* Company.swift */,
+				95F6C2F225BAE3D1003CF389 /* Stock.swift */,
 				95612C4D2598D48200F7698F /* Supply views */,
 				95855384259CD9800081CF24 /* Functions */,
 				9592F496259D29F1005AB6F1 /* Models */,
@@ -293,7 +296,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */,
-				95493BA425BB8C8100761301 /* IntradayPricesModel.swift in Sources */,
 				95E0287B25B88F3C00020CF2 /* FormDescription.swift in Sources */,
 				952498B625BB47A700B00E22 /* LatestPriceModel.swift in Sources */,
 				95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */,
@@ -309,17 +311,19 @@
 				95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */,
 				95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */,
 				958E472B25B1CA8B0048E770 /* FavCompanyList.swift in Sources */,
-				952498B925BB481100B00E22 /* LatestPrice.swift in Sources */,
-				95F6C30C25BAFDF5003CF389 /* Insiders.swift in Sources */,
 				956FAF7B25AF421E0002B2C1 /* FavCompany+CoreDataClass.swift in Sources */,
+				95E68FD625BCC2E4006468EF /* Test.swift in Sources */,
 				95F6C31125BAFFB8003CF389 /* AddWatchlist.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
 				95F6C2F325BAE3D1003CF389 /* Stock.swift in Sources */,
-				954D998325A27571001F7F60 /* HistoricalPrices.swift in Sources */,
 				95AB4A7D259DCC0C0064C9C1 /* CompanyDataModel.swift in Sources */,
 				95F6C2DD25BAD394003CF389 /* FavCompanyRow.swift in Sources */,
+				95700BC625BD9D12009CEEFE /* API.swift in Sources */,
+				95700BC925BDAF83009CEEFE /* Test2.swift in Sources */,
 				95F6C2E425BAD529003CF389 /* RandomColor.swift in Sources */,
+				95C28AB625BC45CF0033D16A /* ChartStyle.swift in Sources */,
 				954D997125A253A9001F7F60 /* Config.swift in Sources */,
+				95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */,
 				9552A61F25B06580001CD0C8 /* SampleConfig.swift in Sources */,
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,

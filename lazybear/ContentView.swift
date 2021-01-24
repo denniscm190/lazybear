@@ -26,8 +26,8 @@ struct ContentView: View {
                 HeaderWatchlist()
                 FavCompanyList()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            }
-            else {
+                
+            } else {
                 if searchedCompany.count > 2 {
                     CompanyList(searchedCompany: $searchedCompany)
                 }
