@@ -26,10 +26,10 @@
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
+		95B395A525BDF42E009A7EB0 /* companies2.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B395A425BDF42E009A7EB0 /* companies2.json */; };
 		95C28AB625BC45CF0033D16A /* ChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28AB525BC45CF0033D16A /* ChartStyle.swift */; };
 		95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28AB825BC46250033D16A /* ScalateChart.swift */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
-		95E0287825B88F0B00020CF2 /* formDescription.json in Resources */ = {isa = PBXBuildFile; fileRef = 95E0287725B88F0B00020CF2 /* formDescription.json */; };
 		95E0287B25B88F3C00020CF2 /* FormDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0287A25B88F3C00020CF2 /* FormDescription.swift */; };
 		95F6C2DD25BAD394003CF389 /* FavCompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2DC25BAD394003CF389 /* FavCompanyRow.swift */; };
 		95F6C2E425BAD529003CF389 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2E325BAD529003CF389 /* RandomColor.swift */; };
@@ -65,10 +65,10 @@
 		95B04EB425212369000AD27F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95B04EB62521236A000AD27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B04EBB2521236A000AD27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95B395A425BDF42E009A7EB0 /* companies2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies2.json; path = lazybear/Data/companies2.json; sourceTree = SOURCE_ROOT; };
 		95C28AB525BC45CF0033D16A /* ChartStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartStyle.swift; path = lazybear/Functions/ChartStyle.swift; sourceTree = SOURCE_ROOT; };
 		95C28AB825BC46250033D16A /* ScalateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScalateChart.swift; path = lazybear/Functions/ScalateChart.swift; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = "LazyBear/Core Data/Persistence.swift"; sourceTree = SOURCE_ROOT; };
-		95E0287725B88F0B00020CF2 /* formDescription.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = formDescription.json; path = lazybear/Data/formDescription.json; sourceTree = SOURCE_ROOT; };
 		95E0287A25B88F3C00020CF2 /* FormDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormDescription.swift; path = lazybear/Models/FormDescription.swift; sourceTree = SOURCE_ROOT; };
 		95F6C2DC25BAD394003CF389 /* FavCompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCompanyRow.swift; sourceTree = "<group>"; };
 		95F6C2E325BAD529003CF389 /* RandomColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RandomColor.swift; path = lazybear/Functions/RandomColor.swift; sourceTree = SOURCE_ROOT; };
@@ -156,7 +156,7 @@
 		95AB4A71259DCAB20064C9C1 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				95E0287725B88F0B00020CF2 /* formDescription.json */,
+				95B395A425BDF42E009A7EB0 /* companies2.json */,
 				954D992125A2105F001F7F60 /* companies.json */,
 			);
 			path = Data;
@@ -273,8 +273,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95B395A525BDF42E009A7EB0 /* companies2.json in Resources */,
 				95B04EB72521236A000AD27F /* Assets.xcassets in Resources */,
-				95E0287825B88F0B00020CF2 /* formDescription.json in Resources */,
 				954D992225A2105F001F7F60 /* companies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
