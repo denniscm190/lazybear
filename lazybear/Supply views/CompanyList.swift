@@ -13,7 +13,7 @@ struct CompanyList: View {
     var body: some View {
         List {
             ForEach(companiesData.filter({ searchedCompany.isEmpty ? true : $0.name.localizedStandardContains(searchedCompany) })
-                    , id: \.cik) { company in
+                    , id: \.symbol) { company in
                 CompanyRow(company: company)
             }
         }

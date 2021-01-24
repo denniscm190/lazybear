@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct FavCompanyRow: View {
     var favCompany: FavCompany
     var index: Int
@@ -46,3 +46,4 @@ struct FavCompanyRow_Previews: PreviewProvider {
         FavCompanyRow(favCompany: FavCompany.init(), index: 0)
     }
 }
+*/

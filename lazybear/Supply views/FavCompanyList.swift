@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+/*
 struct FavCompanyList: View {
     @Environment(\.managedObjectContext) private var viewContext  // Core data
     @FetchRequest(entity: FavCompany.entity(), sortDescriptors: [])  // Core data
@@ -41,3 +41,4 @@ struct FavCompanies_Previews: PreviewProvider {
         FavCompanyList()
     }
 }
+*/

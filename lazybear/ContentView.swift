@@ -24,8 +24,8 @@ struct ContentView: View {
             
             if !showingSearch {
                 HeaderWatchlist()
-                FavCompanyList()
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                //FavCompanyList()
+                    //.environment(\.managedObjectContext, persistenceController.container.viewContext)
                 
             } else {
                 if searchedCompany.count > 2 {

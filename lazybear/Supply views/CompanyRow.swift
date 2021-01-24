@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CompanyRow: View {
     @ObservedObject var showingCompany = ShowingCompany()
-    var company: CompanyDataModel
+    var company: CompanyModel
     
     var body: some View {
         Button(action: { showingCompany.isShowing.toggle() }) {
