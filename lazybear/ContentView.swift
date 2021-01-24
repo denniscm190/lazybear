@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @State var searchedCompany: String = ""
+    @State var searchedCompany = String()
     @State public var showingSearch: Bool = false
     let persistenceController = PersistenceController.shared
 

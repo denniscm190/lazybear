@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct API {
+struct IexApi {
     enum BaseURL {
         case sandbox
         case production
