@@ -14,16 +14,17 @@ struct Watchlist: View {
     
     var body: some View {
         List {
+            EditButton()
             ForEach(companies) { company in
                 WatchlistRow(company: company)
                 
             }
             // Delete from persistent storage
-            .onDelete { indexSet in delete(indexSet: indexSet) }
+            .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }
         }
     }
     
-    func delete(indexSet: IndexSet) {
+    func deleteWatchlist(indexSet: IndexSet) {
         for index in indexSet {
             viewContext.delete(companies[index])
         }
