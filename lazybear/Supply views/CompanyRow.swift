@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct CompanyRow: View {
-    @ObservedObject var showingCompany = ShowingCompany()
+    @ObservedObject var companyView = CompanyView()
     var company: CompanyModel
+    var favCompany: FavCompany
     
     var body: some View {
-        Button(action: { showingCompany.isShowing.toggle() }) {
+        Button(action: { companyView.isShowing.toggle() }) {
             VStack(alignment: .leading) {
                 Text(company.symbol.uppercased())
                     .fontWeight(.semibold)
@@ -22,7 +23,7 @@ struct CompanyRow: View {
                 
             }
         }
-        .fullScreenCover(isPresented: $showingCompany.isShowing) {
+        .fullScreenCover(isPresented: $companyView.isShowing) {
             Company(name: company.name, symbol: company.symbol)
         }
     }
@@ -30,6 +31,6 @@ struct CompanyRow: View {
 
 struct CompanyRown_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyRow(company: companiesData[0])
+        CompanyRow(company: companiesData[0], favCompany: FavCompany.init())
     }
 }

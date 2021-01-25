@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class ShowingCompany: ObservableObject {
+class CompanyView: ObservableObject {
     @Published var isShowing: Bool = false {
         didSet {
             print("Company is showing -> " + String(isShowing))

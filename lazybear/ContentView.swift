@@ -15,28 +15,20 @@ struct ContentView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Home")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding()
-            
+            Header(name: "Home")
             SearchBar(searchedText: $searchedCompany, showingSearch: $showingSearch)
-            
-            if !showingSearch {
-                HeaderWatchlist()
-                //FavCompanyList()
-                    //.environment(\.managedObjectContext, persistenceController.container.viewContext)
-                
-            } else {
+
+            if showingSearch {
                 if searchedCompany.count > 2 {
                     CompanyList(searchedCompany: $searchedCompany)
                 }
-                
-                Spacer()
+            } else {
+                // Watchlist
             }
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
