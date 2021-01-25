@@ -13,7 +13,6 @@
 		952498B625BB47A700B00E22 /* LatestPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952498B525BB47A700B00E22 /* LatestPriceModel.swift */; };
 		9537923625BDF85D0001F82B /* GoogleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537923525BDF85D0001F82B /* GoogleApi.swift */; };
 		9537924A25BDFCD70001F82B /* LoadImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537924925BDFCD70001F82B /* LoadImageTest.swift */; };
-		9537924F25BDFD940001F82B /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 9537924E25BDFD940001F82B /* SDWebImageSwiftUI */; };
 		954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */; };
 		954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 954D996C25A2461B001F7F60 /* SwiftUICharts */; };
 		954D997125A253A9001F7F60 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D997025A253A9001F7F60 /* Config.swift */; };
@@ -33,6 +32,7 @@
 		95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28AB825BC46250033D16A /* ScalateChart.swift */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
 		95E0287B25B88F3C00020CF2 /* FormDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0287A25B88F3C00020CF2 /* FormDescription.swift */; };
+		95E4118F25BEC35D00A9C23F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */; };
 		95F6C2DD25BAD394003CF389 /* FavCompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2DC25BAD394003CF389 /* FavCompanyRow.swift */; };
 		95F6C2E425BAD529003CF389 /* RandomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2E325BAD529003CF389 /* RandomColor.swift */; };
 		95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2EF25BAE2ED003CF389 /* Company.swift */; };
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9537924F25BDFD940001F82B /* SDWebImageSwiftUI in Frameworks */,
+				95E4118F25BEC35D00A9C23F /* SDWebImageSwiftUI in Frameworks */,
 				95002580256D17D9008FFD28 /* StoreKit.framework in Frameworks */,
 				954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */,
 			);
@@ -233,7 +233,7 @@
 			name = LazyBear;
 			packageProductDependencies = (
 				954D996C25A2461B001F7F60 /* SwiftUICharts */,
-				9537924E25BDFD940001F82B /* SDWebImageSwiftUI */,
+				95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */,
 			);
 			productName = LazyBear;
 			productReference = 95B04EAF25212369000AD27F /* LazyBear.app */;
@@ -264,7 +264,7 @@
 			mainGroup = 95B04EA625212369000AD27F;
 			packageReferences = (
 				954D996B25A2461B001F7F60 /* XCRemoteSwiftPackageReference "ChartView" */,
-				9537924D25BDFD940001F82B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				95E4118D25BEC35C00A9C23F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 95B04EB025212369000AD27F /* Products */;
 			projectDirPath = "";
@@ -523,14 +523,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		9537924D25BDFD940001F82B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
-			};
-		};
 		954D996B25A2461B001F7F60 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView.git";
@@ -539,18 +531,26 @@
 				minimumVersion = 1.5.4;
 			};
 		};
+		95E4118D25BEC35C00A9C23F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		9537924E25BDFD940001F82B /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9537924D25BDFD940001F82B /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
-		};
 		954D996C25A2461B001F7F60 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 954D996B25A2461B001F7F60 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
+		};
+		95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95E4118D25BEC35C00A9C23F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 
