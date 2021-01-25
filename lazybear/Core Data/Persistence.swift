@@ -13,12 +13,22 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<10 {
-            let newItem = FavCompany(context: viewContext)
-            newItem.cik = 123
-            newItem.symbol = "Symbol"
-            newItem.name = "Name"
-            
+        for _ in 0..<13 {
+            let newItem = WatchlistCompany(context: viewContext)
+            newItem.symbol = String()
+            newItem.exchange = String()
+            newItem.exchangeSuffix = String()
+            newItem.exchangeName = String()
+            newItem.name = String()
+            newItem.date = String()
+            newItem.type = String()
+            newItem.iexId = String()
+            newItem.region = String()
+            newItem.currency = String()
+            newItem.isEnabled = Bool()
+            newItem.figi = String()
+            newItem.cik = String()
+            newItem.lei = String()
         }
         do {
             try viewContext.save()

@@ -10,7 +10,6 @@ import SwiftUI
 struct CompanyRow: View {
     @ObservedObject var companyView = CompanyView()
     var company: CompanyModel
-    var favCompany: FavCompany
     
     var body: some View {
         Button(action: { companyView.isShowing.toggle() }) {
@@ -31,6 +30,24 @@ struct CompanyRow: View {
 
 struct CompanyRown_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyRow(company: companiesData[0], favCompany: FavCompany.init())
+        CompanyRow(company: companiesData[0])
+    }
+}
+
+struct WatchlistRow: View {
+    @ObservedObject var companyView = CompanyView()
+    var company: WatchlistCompany
+    
+    var body: some View {
+        Button(action: { companyView.isShowing.toggle() }) {
+            VStack(alignment: .leading) {
+                Text(company.symbol!.uppercased())
+                    .fontWeight(.semibold)
+                
+                Text(company.name!.capitalized)
+                    .font(.caption)
+                
+            }
+        }
     }
 }

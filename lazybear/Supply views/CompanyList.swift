@@ -14,7 +14,7 @@ struct CompanyList: View {
         List {
             ForEach(companiesData.filter({ searchedCompany.isEmpty ? true : $0.name.localizedStandardContains(searchedCompany) })
                     , id: \.symbol) { company in
-                //CompanyRow(company: company)
+                CompanyRow(company: company)
             }
         }
         .edgesIgnoringSafeArea(.bottom)

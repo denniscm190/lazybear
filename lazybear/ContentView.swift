@@ -22,8 +22,9 @@ struct ContentView: View {
                 if searchedCompany.count > 2 {
                     CompanyList(searchedCompany: $searchedCompany)
                 }
+                Spacer()
             } else {
-                // Watchlist
+                Watchlist()
             }
         }
     }
