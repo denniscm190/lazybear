@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		95002580256D17D9008FFD28 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9500257F256D17D9008FFD28 /* StoreKit.framework */; };
+		95078FD125BF4E640004FA75 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95078FD025BF4E640004FA75 /* CloudKitManager.swift */; };
 		950B79F625B1CB7A00E5DB5B /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B79F525B1CB7A00E5DB5B /* CompanyList.swift */; };
 		952498B625BB47A700B00E22 /* LatestPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952498B525BB47A700B00E22 /* LatestPriceModel.swift */; };
 		9537923625BDF85D0001F82B /* GoogleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537923525BDF85D0001F82B /* GoogleApi.swift */; };
 		9537924A25BDFCD70001F82B /* LoadImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537924925BDFCD70001F82B /* LoadImageTest.swift */; };
 		954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */; };
 		954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 954D996C25A2461B001F7F60 /* SwiftUICharts */; };
-		954D997125A253A9001F7F60 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D997025A253A9001F7F60 /* Config.swift */; };
 		95612C512598D48200F7698F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95612C4F2598D48200F7698F /* SearchBar.swift */; };
+		95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95621AD825BF2EDB00BB17FC /* CloudKit.framework */; };
+		95621ADB25BF32E200BB17FC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95621ADA25BF32E200BB17FC /* Test.swift */; };
 		95700BC625BD9D12009CEEFE /* IexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95700BC525BD9D12009CEEFE /* IexApi.swift */; };
 		95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */; };
 		95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */; };
@@ -47,13 +49,16 @@
 /* Begin PBXFileReference section */
 		95002578256D1564008FFD28 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		9500257F256D17D9008FFD28 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		95078FD025BF4E640004FA75 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloudKitManager.swift; path = LazyBear/CloudKitManager.swift; sourceTree = SOURCE_ROOT; };
 		950B79F525B1CB7A00E5DB5B /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		952498B525BB47A700B00E22 /* LatestPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LatestPriceModel.swift; path = lazybear/Models/LatestPriceModel.swift; sourceTree = SOURCE_ROOT; };
 		9537923525BDF85D0001F82B /* GoogleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GoogleApi.swift; path = lazybear/GoogleApi.swift; sourceTree = SOURCE_ROOT; };
 		9537924925BDFCD70001F82B /* LoadImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadImageTest.swift; path = lazybear/Tests/LoadImageTest.swift; sourceTree = SOURCE_ROOT; };
 		954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalPricesModel.swift; path = lazybear/Models/HistoricalPricesModel.swift; sourceTree = SOURCE_ROOT; };
-		954D997025A253A9001F7F60 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Config.swift; path = lazybear/Config.swift; sourceTree = SOURCE_ROOT; };
 		95612C4F2598D48200F7698F /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		95621AD725BF2EC500BB17FC /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
+		95621AD825BF2EDB00BB17FC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		95621ADA25BF32E200BB17FC /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Test.swift; path = lazybear/Tests/Test.swift; sourceTree = SOURCE_ROOT; };
 		95700BC525BD9D12009CEEFE /* IexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IexApi.swift; path = lazybear/IexApi.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadJson.swift; path = lazybear/Functions/ReadJson.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyModel.swift; path = lazybear/Models/CompanyModel.swift; sourceTree = SOURCE_ROOT; };
@@ -66,7 +71,7 @@
 		95B395A425BDF42E009A7EB0 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
 		95C28AB525BC45CF0033D16A /* ChartStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartStyle.swift; path = lazybear/Functions/ChartStyle.swift; sourceTree = SOURCE_ROOT; };
 		95C28AB825BC46250033D16A /* ScalateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScalateChart.swift; path = lazybear/Functions/ScalateChart.swift; sourceTree = SOURCE_ROOT; };
-		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = "LazyBear/Core Data/Persistence.swift"; sourceTree = SOURCE_ROOT; };
+		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LazyBear/Persistence.swift; sourceTree = SOURCE_ROOT; };
 		95E0287A25B88F3C00020CF2 /* FormDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FormDescription.swift; path = lazybear/Models/FormDescription.swift; sourceTree = SOURCE_ROOT; };
 		95E4119125BEC56F00A9C23F /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		95E4119525BEC9DD00A9C23F /* TestViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestViewBuilder.swift; path = lazybear/Tests/TestViewBuilder.swift; sourceTree = SOURCE_ROOT; };
@@ -89,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95E4118F25BEC35D00A9C23F /* SDWebImageSwiftUI in Frameworks */,
+				95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */,
 				95002580256D17D9008FFD28 /* StoreKit.framework in Frameworks */,
 				954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */,
 			);
@@ -100,6 +106,7 @@
 		9500257E256D17D9008FFD28 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95621AD825BF2EDB00BB17FC /* CloudKit.framework */,
 				9500257F256D17D9008FFD28 /* StoreKit.framework */,
 			);
 			name = Frameworks;
@@ -110,6 +117,7 @@
 			children = (
 				9537924925BDFCD70001F82B /* LoadImageTest.swift */,
 				95E4119525BEC9DD00A9C23F /* TestViewBuilder.swift */,
+				95621ADA25BF32E200BB17FC /* Test.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -185,12 +193,13 @@
 		95B04EB125212369000AD27F /* LazyBear */ = {
 			isa = PBXGroup;
 			children = (
-				95D1BF4E25ADD2BA00E5D063 /* Core Data */,
+				95621AD725BF2EC500BB17FC /* LazyBear.entitlements */,
 				95B04EB62521236A000AD27F /* Assets.xcassets */,
 				95B04EBB2521236A000AD27F /* Info.plist */,
 				95002578256D1564008FFD28 /* Configuration.storekit */,
 				95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */,
-				954D997025A253A9001F7F60 /* Config.swift */,
+				95D1BF4825ADCF7700E5D063 /* Persistence.swift */,
+				95078FD025BF4E640004FA75 /* CloudKitManager.swift */,
 				95700BC525BD9D12009CEEFE /* IexApi.swift */,
 				9537923525BDF85D0001F82B /* GoogleApi.swift */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
@@ -202,14 +211,6 @@
 				952F791C2598B1CD00FF929F /* Tests */,
 			);
 			path = LazyBear;
-			sourceTree = "<group>";
-		};
-		95D1BF4E25ADD2BA00E5D063 /* Core Data */ = {
-			isa = PBXGroup;
-			children = (
-				95D1BF4825ADCF7700E5D063 /* Persistence.swift */,
-			);
-			path = "Core Data";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,6 +299,7 @@
 				95E411BE25BEEA6C00A9C23F /* WatchlistRow.swift in Sources */,
 				95E411A325BEDDC400A9C23F /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				950B79F625B1CB7A00E5DB5B /* CompanyList.swift in Sources */,
+				95078FD125BF4E640004FA75 /* CloudKitManager.swift in Sources */,
 				95B04EB525212369000AD27F /* ContentView.swift in Sources */,
 				95AB4A90259DD66D0064C9C1 /* CompanyRow.swift in Sources */,
 				95F6C30125BAEC8B003CF389 /* CompanyView.swift in Sources */,
@@ -311,12 +313,12 @@
 				9537923625BDF85D0001F82B /* GoogleApi.swift in Sources */,
 				95C28AB625BC45CF0033D16A /* ChartStyle.swift in Sources */,
 				9537924A25BDFCD70001F82B /* LoadImageTest.swift in Sources */,
-				954D997125A253A9001F7F60 /* Config.swift in Sources */,
 				95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */,
 				95E411B625BEE84E00A9C23F /* Stock.swift in Sources */,
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,
 				95E411A725BEE03000A9C23F /* Watchlist.swift in Sources */,
 				95E411BA25BEEA4400A9C23F /* Title.swift in Sources */,
+				95621ADB25BF32E200BB17FC /* Test.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,
 				95E4119625BEC9DD00A9C23F /* TestViewBuilder.swift in Sources */,
 			);
@@ -446,7 +448,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = LazyBear/Assets.xcassets;
@@ -473,7 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = "";
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_ASSET_PATHS = LazyBear/Assets.xcassets;

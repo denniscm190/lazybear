@@ -8,21 +8,6 @@
 import SwiftUI
 
 struct IexApi {
-    enum BaseURL {
-        case sandbox
-        case production
-        
-        var path: (String, String) {
-            let token = Token()
-            switch self {
-            case .sandbox:
-                return ("https://sandbox.iexapis.com", token.sandbox)
-            case .production:
-                return ("https://cloud.iexapis.com", token.production)
-            }
-        }
-    }
-
     enum Version {
         case stable
         
@@ -76,17 +61,16 @@ struct IexApi {
     
     
     // Create URL
-    func getURL(baseURL: BaseURL, version: Version, stock: Stock, endpoint: Endpoint, range: Range, parameters: Parameters) -> String {
-        let (baseURL, token) = baseURL.path
+    func getURL(version: Version, stock: Stock, endpoint: Endpoint, range: Range, parameters: Parameters) -> String {
         let version = version.path
         let stock = stock.path
         let endpoint = endpoint.path
         let range = range.path
         let parameters = parameters.path
         
-        let url = "\(baseURL)\(version)\(stock)\(endpoint)\(range)\(parameters)&token=\(token)"
+        let path = "\(version)\(stock)\(endpoint)\(range)\(parameters)&token="
         
-        return url
+        return path
         
     }
     
