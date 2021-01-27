@@ -15,7 +15,7 @@ struct ContentView: View {
 
     var body: some View {
         VStack(alignment: .leading) {
-            Header(name: "Home")
+            SuperTitle(name: "Home")
             SearchBar(searchedText: $searchedCompany, showingSearch: $showingSearch)
 
             if showingSearch {

@@ -1,5 +1,5 @@
 //
-//  TestStroke.swift
+//  Price.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 27/1/21.
@@ -7,15 +7,14 @@
 
 import SwiftUI
 
-struct TestStroke: View {
+struct Price: View {
     var body: some View {
-        Circle()
-            .stroke(Color(.blue))
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct TestStroke_Previews: PreviewProvider {
+struct Price_Previews: PreviewProvider {
     static var previews: some View {
-        TestStroke()
+        Price()
     }
 }

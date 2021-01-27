@@ -11,6 +11,7 @@ import SDWebImageSwiftUI
 
 struct WatchlistRow: View {
     @ObservedObject var companyView = CompanyView()
+    @Environment(\.editMode) var editMode  // EditButton list
     var company: WatchlistCompany
     var url: String
     
@@ -21,8 +22,8 @@ struct WatchlistRow: View {
                 let endpoint = url + path
                 WebImage(url: URL(string: endpoint))
                     .resizable()
-                    .placeholder { Rectangle().foregroundColor(.gray) }
-                    .indicator(.activity) // Activity Indicator
+                    .placeholder { LogoPlaceholder(placeholder: company.symbol!) }  // If there is no logo
+                    .indicator(.activity)
                     .modifier(LogoModifier())
                 
                 VStack(alignment: .leading) {
@@ -31,6 +32,11 @@ struct WatchlistRow: View {
                     
                     Text(company.name!.capitalized)
                         .font(.caption)
+                }
+                
+                Spacer()
+                if self.editMode?.wrappedValue.isEditing ?? true { } else { // If is not editing -> show prices
+                    Price()
                 }
             }
         }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Header: View {
+struct SuperTitle: View {
     @State var name: String
     
     var body: some View {
@@ -18,8 +18,8 @@ struct Header: View {
     }
 }
 
-struct Header_Previews: PreviewProvider {
+struct SuperTitle_Previews: PreviewProvider {
     static var previews: some View {
-        Header(name: "Home")
+        SuperTitle(name: "Home")
     }
 }

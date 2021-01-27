@@ -8,13 +8,25 @@
 import SwiftUI
 
 struct LogoPlaceholder: View {
+    var placeholder: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let customPlaceholder = placeholder[0]
+        Text(customPlaceholder)
+            .fontWeight(.bold)
+            .foregroundColor(Color(.systemGray))
+            .frame(width: 40, height: 40)
+            .background(Color(.systemGray5))
+    }
+}
+// Index string to access it
+extension String {
+    subscript(i: Int) -> String {
+        return String(self[index(startIndex, offsetBy: i)])
     }
 }
 
 struct LogoPlaceholder_Previews: PreviewProvider {
     static var previews: some View {
-        LogoPlaceholder()
+        LogoPlaceholder(placeholder: "appl")
     }
 }

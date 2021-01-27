@@ -21,18 +21,20 @@ struct Watchlist: View {
         }
     }
     
+    
     var body: some View {
         if self.showingView {
+            ListHeader(header: "Watchlist")
             List {
-                EditButton()
                 let url = cloudResults[0].object(forKey: "url") as! String
                 ForEach(companies) { company in
                     WatchlistRow(company: company, url: url)
                     
                 }
-                // Delete from persistent storage
-                .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }
+                .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }  // Delete from persistent storage
+                //.onMove { self.companies(from: $0, to: $1) }  // Sort
             }
+            
         } else {
             Spacer()
                 .onAppear {
