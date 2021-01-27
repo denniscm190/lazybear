@@ -14,7 +14,7 @@ struct GoogleApi {
         var path: String {
             switch self {
             case let .company(symbol):
-                return "https://storage.googleapis.com/iex/api/logos/\(symbol).png"
+                return "/iex/api/logos/\(symbol.uppercased()).png"
             }
         }
     }

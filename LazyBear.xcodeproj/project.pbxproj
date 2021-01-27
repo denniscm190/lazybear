@@ -17,8 +17,10 @@
 		954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 954D996C25A2461B001F7F60 /* SwiftUICharts */; };
 		95612C512598D48200F7698F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95612C4F2598D48200F7698F /* SearchBar.swift */; };
 		95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95621AD825BF2EDB00BB17FC /* CloudKit.framework */; };
-		95621ADB25BF32E200BB17FC /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95621ADA25BF32E200BB17FC /* Test.swift */; };
 		95700BC625BD9D12009CEEFE /* IexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95700BC525BD9D12009CEEFE /* IexApi.swift */; };
+		9597CDFE25C1D484004DDFED /* TestStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CDFD25C1D484004DDFED /* TestStroke.swift */; };
+		9597CE0125C1DC0A004DDFED /* LogoModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CE0025C1DC0A004DDFED /* LogoModifier.swift */; };
+		9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */; };
 		95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */; };
 		95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */; };
 		95AB4A90259DD66D0064C9C1 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */; };
@@ -37,7 +39,6 @@
 		95E411A325BEDDC400A9C23F /* WatchlistCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411A125BEDDC400A9C23F /* WatchlistCompany+CoreDataProperties.swift */; };
 		95E411A725BEE03000A9C23F /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411A625BEE03000A9C23F /* Watchlist.swift */; };
 		95E411B625BEE84E00A9C23F /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411B525BEE84E00A9C23F /* Stock.swift */; };
-		95E411BA25BEEA4400A9C23F /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411B925BEEA4400A9C23F /* Title.swift */; };
 		95E411BE25BEEA6C00A9C23F /* WatchlistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */; };
 		95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C2EF25BAE2ED003CF389 /* Company.swift */; };
 		95F6C30125BAEC8B003CF389 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6C30025BAEC8B003CF389 /* CompanyView.swift */; };
@@ -58,8 +59,10 @@
 		95612C4F2598D48200F7698F /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		95621AD725BF2EC500BB17FC /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		95621AD825BF2EDB00BB17FC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		95621ADA25BF32E200BB17FC /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Test.swift; path = lazybear/Tests/Test.swift; sourceTree = SOURCE_ROOT; };
 		95700BC525BD9D12009CEEFE /* IexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IexApi.swift; path = lazybear/IexApi.swift; sourceTree = SOURCE_ROOT; };
+		9597CDFD25C1D484004DDFED /* TestStroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestStroke.swift; path = lazybear/Tests/TestStroke.swift; sourceTree = SOURCE_ROOT; };
+		9597CE0025C1DC0A004DDFED /* LogoModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoModifier.swift; sourceTree = "<group>"; };
+		9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholder.swift; sourceTree = "<group>"; };
 		95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadJson.swift; path = lazybear/Functions/ReadJson.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyModel.swift; path = lazybear/Models/CompanyModel.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
@@ -79,7 +82,6 @@
 		95E411A125BEDDC400A9C23F /* WatchlistCompany+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95E411A625BEE03000A9C23F /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
 		95E411B525BEE84E00A9C23F /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
-		95E411B925BEEA4400A9C23F /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistRow.swift; sourceTree = "<group>"; };
 		95F6C2EF25BAE2ED003CF389 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		95F6C30025BAEC8B003CF389 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyView.swift; path = "lazybear/Supply views/CompanyView.swift"; sourceTree = SOURCE_ROOT; };
@@ -117,7 +119,7 @@
 			children = (
 				9537924925BDFCD70001F82B /* LoadImageTest.swift */,
 				95E4119525BEC9DD00A9C23F /* TestViewBuilder.swift */,
-				95621ADA25BF32E200BB17FC /* Test.swift */,
+				9597CDFD25C1D484004DDFED /* TestStroke.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -136,7 +138,8 @@
 				95E411B525BEE84E00A9C23F /* Stock.swift */,
 				95F6C30425BAF599003CF389 /* CompanyHeader.swift */,
 				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
-				95E411B925BEEA4400A9C23F /* Title.swift */,
+				9597CE0025C1DC0A004DDFED /* LogoModifier.swift */,
+				9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */,
 			);
 			name = "Supply views";
 			path = "lazybear/Supply views";
@@ -292,7 +295,9 @@
 			files = (
 				95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */,
 				95E0287B25B88F3C00020CF2 /* FormDescription.swift in Sources */,
+				9597CE0125C1DC0A004DDFED /* LogoModifier.swift in Sources */,
 				952498B625BB47A700B00E22 /* LatestPriceModel.swift in Sources */,
+				9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */,
 				95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */,
 				95E411A225BEDDC400A9C23F /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				95612C512598D48200F7698F /* SearchBar.swift in Sources */,
@@ -311,14 +316,13 @@
 				95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */,
 				95700BC625BD9D12009CEEFE /* IexApi.swift in Sources */,
 				9537923625BDF85D0001F82B /* GoogleApi.swift in Sources */,
+				9597CDFE25C1D484004DDFED /* TestStroke.swift in Sources */,
 				95C28AB625BC45CF0033D16A /* ChartStyle.swift in Sources */,
 				9537924A25BDFCD70001F82B /* LoadImageTest.swift in Sources */,
 				95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */,
 				95E411B625BEE84E00A9C23F /* Stock.swift in Sources */,
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,
 				95E411A725BEE03000A9C23F /* Watchlist.swift in Sources */,
-				95E411BA25BEEA4400A9C23F /* Title.swift in Sources */,
-				95621ADB25BF32E200BB17FC /* Test.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,
 				95E4119625BEC9DD00A9C23F /* TestViewBuilder.swift in Sources */,
 			);

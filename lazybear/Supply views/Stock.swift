@@ -9,9 +9,14 @@ import SwiftUI
 
 struct Stock: View {
     @Environment(\.managedObjectContext) private var viewContext
+    var name: String
+    var symbol: String
     
     var body: some View {
-        Text("Hello, World!")
+        Button(action: { addWatchlist(name: name, symbol: symbol) }) {
+            Text("Add to watchlist")
+        }
+
     }
     
     func addWatchlist(name: String, symbol: String) {
@@ -29,6 +34,6 @@ struct Stock: View {
 
 struct Stock_Previews: PreviewProvider {
     static var previews: some View {
-        Stock()
+        Stock(name: "apple inc", symbol: "aapl")
     }
 }

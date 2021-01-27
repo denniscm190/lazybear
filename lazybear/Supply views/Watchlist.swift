@@ -11,12 +11,14 @@ struct Watchlist: View {
     @Environment(\.managedObjectContext) private var viewContext  // Core data
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])  // Core data
     var companies: FetchedResults<WatchlistCompany>  // Fetch core data
+    let cloud = CloudKitManager()
     
     var body: some View {
         List {
             EditButton()
+            let url = cloud.query(recordType: "API", recordName: "iexLogo")
             ForEach(companies) { company in
-                WatchlistRow(company: company)
+                WatchlistRow(company: company, url: "")
                 
             }
             // Delete from persistent storage

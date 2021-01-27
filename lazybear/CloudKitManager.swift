@@ -9,11 +9,11 @@ import SwiftUI
 import CloudKit
 
 class CloudKitManager {
-    func query(recordType: String, recordName: String) {  // recordType = "Database", e.g "API"
-        let publicDatabase = CKContainer.default().privateCloudDatabase
+    func query(recordType: String, recordName: String) -> CKRecord {  // recordType = "Database", e.g "API" / recordName = "Name", e.g iexProduction
+        let publicDatabase = CKContainer.default().publicCloudDatabase
         
         // Query arguments
-        let recordID = CKRecord.ID(recordName: recordName)  // e.g iexApiProduction
+        let recordID = CKRecord.ID(recordName: recordName)
         let predicate = NSPredicate(format: "recordID = %@", recordID)
         let query = CKQuery(recordType: recordType, predicate: predicate)
         
@@ -21,19 +21,13 @@ class CloudKitManager {
         
         // Query begins
         publicDatabase.perform(query, inZoneWith: nil) { (results, error) in
-            if error != nil {
-                print("CloudKit query went wrong")
-                print(error!.localizedDescription)
+            guard error != nil else {  // If error is nil, then print results
+                print("Successfull CloudKit query")
 
-            } else {
-
-                if let results = results {
-                    print("Succesfull CloudKit query")
-                    
-                    // Results
-                    print(results as Array)
-                }
             }
+            
+            print("CloudKit query went wrong")
+            print(error!.localizedDescription)
         }
     }
 }
