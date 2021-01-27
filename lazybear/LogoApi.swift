@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GoogleApi {
+struct LogoApi {
     enum URL {
         case company(symbol: String)
         

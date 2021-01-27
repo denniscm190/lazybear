@@ -17,8 +17,9 @@ struct WatchlistRow: View {
     var body: some View {
         Button(action: { companyView.isShowing.toggle() }) {
             HStack {
-                let path = GoogleApi.URL.company(symbol: company.symbol!).path
-                WebImage(url: URL(string: url + path))
+                let path = LogoApi.URL.company(symbol: company.symbol!).path
+                let endpoint = url + path
+                WebImage(url: URL(string: endpoint))
                     .resizable()
                     .placeholder { Rectangle().foregroundColor(.gray) }
                     .indicator(.activity) // Activity Indicator

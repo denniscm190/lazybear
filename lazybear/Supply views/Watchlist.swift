@@ -6,23 +6,38 @@
 //
 
 import SwiftUI
+import CloudKit
 
 struct Watchlist: View {
     @Environment(\.managedObjectContext) private var viewContext  // Core data
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])  // Core data
     var companies: FetchedResults<WatchlistCompany>  // Fetch core data
+    
     let cloud = CloudKitManager()
+    @State private var showingView = false
+    @State var cloudResults = [CKRecord]() {
+        didSet {
+            self.showingView = true
+        }
+    }
     
     var body: some View {
-        List {
-            EditButton()
-            let url = cloud.query(recordType: "API", recordName: "iexLogo")
-            ForEach(companies) { company in
-                WatchlistRow(company: company, url: "")
-                
+        if self.showingView {
+            List {
+                EditButton()
+                let url = cloudResults[0].object(forKey: "url") as! String
+                ForEach(companies) { company in
+                    WatchlistRow(company: company, url: url)
+                    
+                }
+                // Delete from persistent storage
+                .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }
             }
-            // Delete from persistent storage
-            .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }
+        } else {
+            Spacer()
+                .onAppear {
+                    cloud.query(recordType: "API", recordName: "iexLogo") { self.cloudResults = $0 }
+                }
         }
     }
     

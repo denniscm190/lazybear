@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct LoadImageTest: View {
     var body: some View {
-        let url = GoogleApi.URL.company(symbol: "AMZN").path
+        let url = LogoApi.URL.company(symbol: "AMZN").path
         WebImage(url: URL(string: url))
             .indicator(.activity) // Activity Indicator
     }
