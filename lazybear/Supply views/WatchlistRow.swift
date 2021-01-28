@@ -18,19 +18,19 @@ struct WatchlistRow: View {
     var body: some View {
         Button(action: { companyView.isShowing.toggle() }) {
             HStack {
-                let path = LogoApi.URL.company(symbol: company.symbol!).path
+                let path = LogoApi.URL.company(symbol: company.symbol ?? "").path
                 let endpoint = url + path
                 WebImage(url: URL(string: endpoint))
                     .resizable()
-                    .placeholder { LogoPlaceholder(placeholder: company.symbol!) }  // If there is no logo
+                    .placeholder { LogoPlaceholder() }  // If there is no logo
                     .indicator(.activity)
                     .modifier(LogoModifier())
                 
                 VStack(alignment: .leading) {
-                    Text(company.symbol!.uppercased())
+                    Text(company.symbol ?? "".uppercased())
                         .fontWeight(.semibold)
                     
-                    Text(company.name!.capitalized)
+                    Text(company.name ?? "".capitalized)
                         .font(.caption)
                 }
                 
@@ -40,8 +40,12 @@ struct WatchlistRow: View {
                 }
             }
         }
+        .fullScreenCover(isPresented: $companyView.isShowing) {
+            Company(name: company.name ?? "", symbol: company.symbol ?? "")
+        }
     }
 }
+
 
 struct WatchlistRow_Previews: PreviewProvider {
     // Avoid preview crashing

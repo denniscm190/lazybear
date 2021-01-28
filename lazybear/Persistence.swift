@@ -13,7 +13,7 @@ struct PersistenceController {
     static var preview: PersistenceController = {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
-        for _ in 0..<13 {
+        for _ in 0..<14 {
             let newItem = WatchlistCompany(context: viewContext)
             newItem.symbol = String()
             newItem.exchange = String()
