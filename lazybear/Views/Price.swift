@@ -18,7 +18,7 @@ struct Price: View {
     @State var changePercent = Double() { didSet { self.showingView = true }}
     
     let iexApi = IexApi()  // Request api function
-    //let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()  // Set recurrent price request
+    let timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Set recurrent price request
     
     @EnvironmentObject var apiAccess: ApiAccess
     
@@ -26,9 +26,9 @@ struct Price: View {
         VStack {
             if self.showingView {
                 Text("\(latestPrice, specifier: "%.2f")")
+                    //.onReceive(timer) { _ in giveMePrices() }
             }
         }
-        //.onReceive(timer) { _ in giveMePrices() }
         .onAppear { getUrl() }
     }
     
