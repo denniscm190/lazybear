@@ -10,16 +10,17 @@ import CoreData
 import SDWebImageSwiftUI
 
 struct WatchlistRow: View {
+    @EnvironmentObject var apiAccess: ApiAccess
     @ObservedObject var companyView = CompanyView()
     @Environment(\.editMode) var editMode  // EditButton list
     var company: WatchlistCompany
-    var url: String
     
     var body: some View {
         Button(action: { companyView.isShowing.toggle() }) {
             HStack {
+                let url = apiAccess.results[0].url
                 let path = LogoApi.URL.company(symbol: company.symbol ?? "").path
-                let endpoint = url + path
+                let endpoint = url! + path
                 WebImage(url: URL(string: endpoint))
                     .resizable()
                     .placeholder { LogoPlaceholder() }  // If there is no logo
@@ -55,6 +56,6 @@ struct WatchlistRow_Previews: PreviewProvider {
         let watchlistCompany = WatchlistCompany(context: moc)
         watchlistCompany.name = "apple inc"
         watchlistCompany.symbol = "aapl"
-        return WatchlistRow(company: watchlistCompany, url: "")
+        return WatchlistRow(company: watchlistCompany)
     }
 }

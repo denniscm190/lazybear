@@ -28,13 +28,16 @@ struct IexApi {
             }
         }
     }
-    
+
     enum Endpoint {
         case historicalPrices
+        case quote
         var path: String {
             switch self {
             case .historicalPrices:
                 return "/chart"
+            case .quote:
+                return "/quote?"
             }
         }
     }
@@ -61,14 +64,14 @@ struct IexApi {
     
     
     // Create URL
-    func getURL(version: Version, stock: Stock, endpoint: Endpoint, range: Range, parameters: Parameters) -> String {
+    func getURL(version: Version, stock: Stock, endpoint: Endpoint, range: Range?, parameters: Parameters?) -> String {
         let version = version.path
         let stock = stock.path
         let endpoint = endpoint.path
-        let range = range.path
-        let parameters = parameters.path
+        let range = range?.path
+        let parameters = parameters?.path
         
-        let path = "\(version)\(stock)\(endpoint)\(range)\(parameters)&token="
+        let path = "\(version)\(stock)\(endpoint)\(range ?? "")\(parameters ?? "")token="
         
         return path
         
