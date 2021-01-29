@@ -12,6 +12,7 @@
 		950B79F625B1CB7A00E5DB5B /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B79F525B1CB7A00E5DB5B /* CompanyList.swift */; };
 		9537923625BDF85D0001F82B /* LogoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537923525BDF85D0001F82B /* LogoApi.swift */; };
 		954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */; };
+		954DDF0425C456E800848A4B /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954DDF0325C456E800848A4B /* QuoteModel.swift */; };
 		95612C512598D48200F7698F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95612C4F2598D48200F7698F /* SearchBar.swift */; };
 		95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95621AD825BF2EDB00BB17FC /* CloudKit.framework */; };
 		95700BC625BD9D12009CEEFE /* IexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95700BC525BD9D12009CEEFE /* IexApi.swift */; };
@@ -51,6 +52,7 @@
 		950B79F525B1CB7A00E5DB5B /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		9537923525BDF85D0001F82B /* LogoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoApi.swift; path = LazyBear/Network/LogoApi.swift; sourceTree = SOURCE_ROOT; };
 		954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalPricesModel.swift; path = lazybear/Models/HistoricalPricesModel.swift; sourceTree = SOURCE_ROOT; };
+		954DDF0325C456E800848A4B /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteModel.swift; path = lazybear/Models/QuoteModel.swift; sourceTree = SOURCE_ROOT; };
 		95612C4F2598D48200F7698F /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		95621AD725BF2EC500BB17FC /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		95621AD825BF2EDB00BB17FC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 				95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */,
 				954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */,
 				95FE646A25C30B880052832E /* ApiModel.swift */,
+				954DDF0325C456E800848A4B /* QuoteModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */,
 				95F6F45C25C20D8D002AC66A /* Price.swift in Sources */,
 				9597CE0125C1DC0A004DDFED /* LogoModifier.swift in Sources */,
+				954DDF0425C456E800848A4B /* QuoteModel.swift in Sources */,
 				9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */,
 				95FE646B25C30B880052832E /* ApiModel.swift in Sources */,
 				95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */,

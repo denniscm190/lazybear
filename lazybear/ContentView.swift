@@ -12,11 +12,12 @@ import CloudKit
 struct ContentView: View {
     @State var searchedCompany = String()
     @State public var showingSearch: Bool = false
-    let persistenceController = PersistenceController.shared
+    @State var cloudFetch = [CKRecord]() { didSet { cloudValues() }}   // CloudKit fetch arrives here
     
-    let cloud = CloudKitManager()
-    @State var cloudFetch = [CKRecord]() { didSet { cloudValues() }}  // On change, call function
-    @EnvironmentObject var apiAccess: ApiAccess
+    let persistenceController = PersistenceController.shared  // Core data
+    let cloud = CloudKitManager()  // CloudKit fetch function
+    
+    @EnvironmentObject var apiAccess: ApiAccess  // Env apis info
 
     var body: some View {
         VStack(alignment: .leading) {
@@ -34,10 +35,10 @@ struct ContentView: View {
                 }
             }
         }
-        .onAppear { cloud.query(recordType: "API") { self.cloudFetch = $0 } }  // Request CloudKit
+        .onAppear { cloud.query(recordType: "API") { cloudFetch = $0 } }  // Request CloudKit 
     }
     
-    // Assign values to the model
+    // Assign CloudKit fetch to model
     private func cloudValues() {
         var results = [ApiModel]()
         cloudFetch.forEach({ (result) in

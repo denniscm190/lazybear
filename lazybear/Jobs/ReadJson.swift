@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 // With this function I parse the local JSON file to read it and create a list with its items.
 let companiesData: [CompanyModel] = load("companies.json")
 

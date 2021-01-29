@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct IexApi {
+    @EnvironmentObject var apiAccess: ApiAccess  // Env apis info
+    
     enum Version {
         case stable
         
@@ -64,7 +66,7 @@ struct IexApi {
     
     
     // Create URL
-    func getURL(version: Version, stock: Stock, endpoint: Endpoint, range: Range?, parameters: Parameters?) -> String {
+    func getPath(version: Version, stock: Stock, endpoint: Endpoint, range: Range?, parameters: Parameters?) -> String {
         let version = version.path
         let stock = stock.path
         let endpoint = endpoint.path
@@ -78,7 +80,7 @@ struct IexApi {
     }
     
     // Request API
-    func request<T: Decodable>(url: String, model: T.Type, completion: @escaping (T) -> Void) {
+    func request<T: Decodable>(url: String, model: T.Type, completion: @escaping (_ result: T) -> Void) {
         // We take some model data T.Type
         guard let url = URL(string: url) else {
             print("Invalid URL")

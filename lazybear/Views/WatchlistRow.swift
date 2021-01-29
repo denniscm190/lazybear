@@ -37,7 +37,7 @@ struct WatchlistRow: View {
                 
                 Spacer()
                 if self.editMode?.wrappedValue.isEditing ?? true { } else { // If is not editing -> show prices
-                    Price()
+                    Price(symbol: company.symbol ?? "")
                 }
             }
         }
