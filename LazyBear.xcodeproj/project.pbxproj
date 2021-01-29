@@ -12,7 +12,6 @@
 		950B79F625B1CB7A00E5DB5B /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B79F525B1CB7A00E5DB5B /* CompanyList.swift */; };
 		9537923625BDF85D0001F82B /* LogoApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9537923525BDF85D0001F82B /* LogoApi.swift */; };
 		954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */; };
-		954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 954D996C25A2461B001F7F60 /* SwiftUICharts */; };
 		95612C512598D48200F7698F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95612C4F2598D48200F7698F /* SearchBar.swift */; };
 		95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95621AD825BF2EDB00BB17FC /* CloudKit.framework */; };
 		95700BC625BD9D12009CEEFE /* IexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95700BC525BD9D12009CEEFE /* IexApi.swift */; };
@@ -26,7 +25,6 @@
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
 		95B395A525BDF42E009A7EB0 /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B395A425BDF42E009A7EB0 /* companies.json */; };
-		95C28AB625BC45CF0033D16A /* ChartStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28AB525BC45CF0033D16A /* ChartStyle.swift */; };
 		95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C28AB825BC46250033D16A /* ScalateChart.swift */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
 		95E4118F25BEC35D00A9C23F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */; };
@@ -51,16 +49,16 @@
 		9500257F256D17D9008FFD28 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		95078FD025BF4E640004FA75 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CloudKitManager.swift; path = LazyBear/CloudKitManager.swift; sourceTree = SOURCE_ROOT; };
 		950B79F525B1CB7A00E5DB5B /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
-		9537923525BDF85D0001F82B /* LogoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoApi.swift; path = lazybear/LogoApi.swift; sourceTree = SOURCE_ROOT; };
+		9537923525BDF85D0001F82B /* LogoApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoApi.swift; path = LazyBear/Network/LogoApi.swift; sourceTree = SOURCE_ROOT; };
 		954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalPricesModel.swift; path = lazybear/Models/HistoricalPricesModel.swift; sourceTree = SOURCE_ROOT; };
 		95612C4F2598D48200F7698F /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		95621AD725BF2EC500BB17FC /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		95621AD825BF2EDB00BB17FC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		95700BC525BD9D12009CEEFE /* IexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IexApi.swift; path = lazybear/IexApi.swift; sourceTree = SOURCE_ROOT; };
+		95700BC525BD9D12009CEEFE /* IexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IexApi.swift; path = LazyBear/Network/IexApi.swift; sourceTree = SOURCE_ROOT; };
 		958B678425C42B2400BF9F89 /* ApiAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiAccess.swift; path = lazybear/ApiAccess.swift; sourceTree = SOURCE_ROOT; };
 		9597CE0025C1DC0A004DDFED /* LogoModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoModifier.swift; sourceTree = "<group>"; };
 		9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholder.swift; sourceTree = "<group>"; };
-		95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadJson.swift; path = lazybear/Functions/ReadJson.swift; sourceTree = SOURCE_ROOT; };
+		95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadJson.swift; path = LazyBear/Jobs/ReadJson.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyModel.swift; path = lazybear/Models/CompanyModel.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
 		95B04EAF25212369000AD27F /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,15 +67,14 @@
 		95B04EB62521236A000AD27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B04EBB2521236A000AD27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B395A425BDF42E009A7EB0 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
-		95C28AB525BC45CF0033D16A /* ChartStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChartStyle.swift; path = lazybear/Functions/ChartStyle.swift; sourceTree = SOURCE_ROOT; };
-		95C28AB825BC46250033D16A /* ScalateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScalateChart.swift; path = lazybear/Functions/ScalateChart.swift; sourceTree = SOURCE_ROOT; };
+		95C28AB825BC46250033D16A /* ScalateChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScalateChart.swift; path = LazyBear/Jobs/ScalateChart.swift; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LazyBear/Persistence.swift; sourceTree = SOURCE_ROOT; };
 		95E4119125BEC56F00A9C23F /* SuperTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTitle.swift; sourceTree = "<group>"; };
 		95E411A625BEE03000A9C23F /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
 		95E411B525BEE84E00A9C23F /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistRow.swift; sourceTree = "<group>"; };
 		95F6C2EF25BAE2ED003CF389 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		95F6C30025BAEC8B003CF389 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyView.swift; path = "lazybear/Supply views/CompanyView.swift"; sourceTree = SOURCE_ROOT; };
+		95F6C30025BAEC8B003CF389 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyView.swift; path = LazyBear/Views/CompanyView.swift; sourceTree = SOURCE_ROOT; };
 		95F6C30425BAF599003CF389 /* CompanyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyHeader.swift; sourceTree = "<group>"; };
 		95F6C30825BAF7C2003CF389 /* DateSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelection.swift; sourceTree = "<group>"; };
 		95F6F45B25C20D8D002AC66A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
@@ -96,7 +93,6 @@
 				95E4118F25BEC35D00A9C23F /* SDWebImageSwiftUI in Frameworks */,
 				95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */,
 				95002580256D17D9008FFD28 /* StoreKit.framework in Frameworks */,
-				954D996D25A2461B001F7F60 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +115,17 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		95612C4D2598D48200F7698F /* Supply views */ = {
+		9592F496259D29F1005AB6F1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */,
+				954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */,
+				95FE646A25C30B880052832E /* ApiModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95945FBE25C440FC00EEA1D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				95E4119125BEC56F00A9C23F /* SuperTitle.swift */,
@@ -138,28 +144,25 @@
 				95F6C30425BAF599003CF389 /* CompanyHeader.swift */,
 				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
 			);
-			name = "Supply views";
-			path = "lazybear/Supply views";
-			sourceTree = SOURCE_ROOT;
+			path = Views;
+			sourceTree = "<group>";
 		};
-		95855384259CD9800081CF24 /* Functions */ = {
+		95945FC025C4415B00EEA1D0 /* Jobs */ = {
 			isa = PBXGroup;
 			children = (
 				95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */,
-				95C28AB525BC45CF0033D16A /* ChartStyle.swift */,
 				95C28AB825BC46250033D16A /* ScalateChart.swift */,
 			);
-			path = Functions;
+			path = Jobs;
 			sourceTree = "<group>";
 		};
-		9592F496259D29F1005AB6F1 /* Models */ = {
+		95945FC325C441BA00EEA1D0 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */,
-				954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */,
-				95FE646A25C30B880052832E /* ApiModel.swift */,
+				95700BC525BD9D12009CEEFE /* IexApi.swift */,
+				9537923525BDF85D0001F82B /* LogoApi.swift */,
 			);
-			path = Models;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		95AB4A71259DCAB20064C9C1 /* Data */ = {
@@ -199,14 +202,13 @@
 				95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */,
 				95D1BF4825ADCF7700E5D063 /* Persistence.swift */,
 				95078FD025BF4E640004FA75 /* CloudKitManager.swift */,
-				95700BC525BD9D12009CEEFE /* IexApi.swift */,
-				9537923525BDF85D0001F82B /* LogoApi.swift */,
 				958B678425C42B2400BF9F89 /* ApiAccess.swift */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
-				95612C4D2598D48200F7698F /* Supply views */,
-				95855384259CD9800081CF24 /* Functions */,
+				95945FBE25C440FC00EEA1D0 /* Views */,
+				95945FC025C4415B00EEA1D0 /* Jobs */,
 				9592F496259D29F1005AB6F1 /* Models */,
+				95945FC325C441BA00EEA1D0 /* Network */,
 				95AB4A71259DCAB20064C9C1 /* Data */,
 				952F791C2598B1CD00FF929F /* Tests */,
 			);
@@ -230,7 +232,6 @@
 			);
 			name = LazyBear;
 			packageProductDependencies = (
-				954D996C25A2461B001F7F60 /* SwiftUICharts */,
 				95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */,
 			);
 			productName = LazyBear;
@@ -261,7 +262,6 @@
 			);
 			mainGroup = 95B04EA625212369000AD27F;
 			packageReferences = (
-				954D996B25A2461B001F7F60 /* XCRemoteSwiftPackageReference "ChartView" */,
 				95E4118D25BEC35C00A9C23F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 95B04EB025212369000AD27F /* Products */;
@@ -313,7 +313,6 @@
 				95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */,
 				95700BC625BD9D12009CEEFE /* IexApi.swift in Sources */,
 				9537923625BDF85D0001F82B /* LogoApi.swift in Sources */,
-				95C28AB625BC45CF0033D16A /* ChartStyle.swift in Sources */,
 				95C28AB925BC46250033D16A /* ScalateChart.swift in Sources */,
 				95E411B625BEE84E00A9C23F /* Stock.swift in Sources */,
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,
@@ -521,14 +520,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		954D996B25A2461B001F7F60 /* XCRemoteSwiftPackageReference "ChartView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/ChartView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.4;
-			};
-		};
 		95E4118D25BEC35C00A9C23F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -540,11 +531,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		954D996C25A2461B001F7F60 /* SwiftUICharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 954D996B25A2461B001F7F60 /* XCRemoteSwiftPackageReference "ChartView" */;
-			productName = SwiftUICharts;
-		};
 		95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95E4118D25BEC35C00A9C23F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
