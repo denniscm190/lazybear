@@ -32,6 +32,7 @@ struct Stock: View {
             
             Divider()
             DateSelection(selectedperiod: $selectedPeriod)
+            LineView(data: [50, 60, 40, 20, 30, 40, 30])
         }
         .padding([.leading, .trailing])
     }
