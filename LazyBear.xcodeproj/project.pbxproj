@@ -22,6 +22,7 @@
 		95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */; };
 		95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */; };
 		95AB4A90259DD66D0064C9C1 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */; };
+		95AD892425C5D8A200BCE8E4 /* AddWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD892325C5D8A200BCE8E4 /* AddWatchlist.swift */; };
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
@@ -63,6 +64,7 @@
 		95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadJson.swift; path = LazyBear/Jobs/ReadJson.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyModel.swift; path = lazybear/Models/CompanyModel.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
+		95AD892325C5D8A200BCE8E4 /* AddWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddWatchlist.swift; path = lazybear/Views/AddWatchlist.swift; sourceTree = SOURCE_ROOT; };
 		95B04EAF25212369000AD27F /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B04EB225212369000AD27F /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95B04EB425212369000AD27F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 				95F6C30025BAEC8B003CF389 /* CompanyView.swift */,
 				95F6C2EF25BAE2ED003CF389 /* Company.swift */,
 				95E411B525BEE84E00A9C23F /* Stock.swift */,
+				95AD892325C5D8A200BCE8E4 /* AddWatchlist.swift */,
 				95F6C30425BAF599003CF389 /* CompanyHeader.swift */,
 				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
 			);
@@ -302,6 +305,7 @@
 				95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */,
 				95612C512598D48200F7698F /* SearchBar.swift in Sources */,
 				95E411BE25BEEA6C00A9C23F /* WatchlistRow.swift in Sources */,
+				95AD892425C5D8A200BCE8E4 /* AddWatchlist.swift in Sources */,
 				950B79F625B1CB7A00E5DB5B /* CompanyList.swift in Sources */,
 				95078FD125BF4E640004FA75 /* CloudKitManager.swift in Sources */,
 				95B04EB525212369000AD27F /* ContentView.swift in Sources */,

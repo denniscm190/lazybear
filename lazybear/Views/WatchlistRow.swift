@@ -32,12 +32,12 @@ struct WatchlistRow: View {
                         .fontWeight(.semibold)
                     
                     Text(company.name ?? "".capitalized)
-                        .font(.caption)
+                        .font(.subheadline)
                 }
                 
                 Spacer()
                 if self.editMode?.wrappedValue.isEditing ?? true { } else { // If is not editing -> show prices
-                    Price(symbol: company.symbol ?? "")
+                    Price(symbol: company.symbol ?? "", showVertical: false)
                 }
             }
         }

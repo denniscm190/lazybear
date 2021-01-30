@@ -11,11 +11,14 @@ struct Company: View {
     var name: String
     var symbol: String
     
+    let persistenceController = PersistenceController.shared
+    
     var body: some View {
         CompanyHeader(name: self.name, symbol: self.symbol)
         ScrollView {
             VStack(alignment: .leading) {
                 Stock(name: name, symbol: symbol)
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
     }

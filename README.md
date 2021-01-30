@@ -18,7 +18,7 @@ Send me a DM [Twitter](https://twitter.com/dennisconcep)
 Check our [website](https://lazybear.app)
 
 ## Open source frameworks used 
-- [swiftui-charts](https://github.com/spacenation/swiftui-charts)   
+- [SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI)   
 
 ## License
 Repository under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). Check [LICENSE](LICENSE.md) for more details

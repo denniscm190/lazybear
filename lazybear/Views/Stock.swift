@@ -8,27 +8,32 @@
 import SwiftUI
 
 struct Stock: View {
-    @Environment(\.managedObjectContext) private var viewContext
     var name: String
     var symbol: String
     
-    var body: some View {
-        Button(action: { addWatchlist(name: name, symbol: symbol) }) {
-            Text("Add to watchlist")
-        }
-
-    }
+    @State var selectedPeriod = 2
     
-    func addWatchlist(name: String, symbol: String) {
-        let watchlistCompany = WatchlistCompany(context: viewContext)
-        watchlistCompany.name = name
-        watchlistCompany.symbol = symbol
-        do {
-            try viewContext.save()
-            print("Company saved.")
-        } catch {
-            print(error.localizedDescription)
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
+    var companies: FetchedResults<WatchlistCompany>  // Fetch core data
+    
+    var body: some View {
+        VStack {
+            Divider()
+            HStack {
+                let watchSymbols = companies.map { $0.symbol }
+                if !watchSymbols.contains(symbol) {
+                    AddWatchlist(name: name, symbol: symbol)
+                }
+                
+                Spacer()
+                Price(symbol: symbol, showVertical: true)
+            }
+            
+            Divider()
+            DateSelection(selectedperiod: $selectedPeriod)
         }
+        .padding([.leading, .trailing])
     }
 }
 
