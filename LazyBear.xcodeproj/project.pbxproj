@@ -23,8 +23,6 @@
 		95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */; };
 		95AB4A90259DD66D0064C9C1 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */; };
 		95AD892425C5D8A200BCE8E4 /* AddWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD892325C5D8A200BCE8E4 /* AddWatchlist.swift */; };
-		95AD892725C5DF2400BCE8E4 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD892625C5DF2400BCE8E4 /* LineView.swift */; };
-		95AD892A25C5DF5C00BCE8E4 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD892925C5DF5C00BCE8E4 /* Line.swift */; };
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
@@ -67,8 +65,6 @@
 		95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyModel.swift; path = lazybear/Models/CompanyModel.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
 		95AD892325C5D8A200BCE8E4 /* AddWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddWatchlist.swift; path = lazybear/Views/AddWatchlist.swift; sourceTree = SOURCE_ROOT; };
-		95AD892625C5DF2400BCE8E4 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineView.swift; path = lazybear/Views/LineView.swift; sourceTree = SOURCE_ROOT; };
-		95AD892925C5DF5C00BCE8E4 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Line.swift; path = lazybear/Views/Line.swift; sourceTree = SOURCE_ROOT; };
 		95B04EAF25212369000AD27F /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B04EB225212369000AD27F /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95B04EB425212369000AD27F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -153,8 +149,6 @@
 				95AD892325C5D8A200BCE8E4 /* AddWatchlist.swift */,
 				95F6C30425BAF599003CF389 /* CompanyHeader.swift */,
 				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
-				95AD892625C5DF2400BCE8E4 /* LineView.swift */,
-				95AD892925C5DF5C00BCE8E4 /* Line.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,7 +301,6 @@
 				9597CE0125C1DC0A004DDFED /* LogoModifier.swift in Sources */,
 				954DDF0425C456E800848A4B /* QuoteModel.swift in Sources */,
 				9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */,
-				95AD892725C5DF2400BCE8E4 /* LineView.swift in Sources */,
 				95FE646B25C30B880052832E /* ApiModel.swift in Sources */,
 				95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */,
 				95612C512598D48200F7698F /* SearchBar.swift in Sources */,
@@ -321,7 +314,6 @@
 				95F6C30925BAF7C2003CF389 /* DateSelection.swift in Sources */,
 				95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */,
 				95F6F46125C20E63002AC66A /* ListHeader.swift in Sources */,
-				95AD892A25C5DF5C00BCE8E4 /* Line.swift in Sources */,
 				95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */,
 				958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */,
 				95E4119225BEC56F00A9C23F /* SuperTitle.swift in Sources */,
