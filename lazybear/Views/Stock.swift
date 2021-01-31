@@ -45,9 +45,12 @@ struct Stock: View {
                     getUrl(range: period[selectedPeriod])
                 })
             
-            let prices = data.map { DataPoint(value: $0.close) }
-            LineChart(dataPoints: prices, lineColor: .green, lineWidth: 2)
-                .frame(height: 400)
+            let prices = data.map { $0.close }
+            if showingLineChart {
+                let normalPrices = normalize(prices)
+                LineChart(dataPoints: normalPrices, lineColor: .green, lineWidth: 2)
+                    .frame(width: 400, height: 300)
+            }
         }
         .padding([.leading, .trailing])
         .onAppear { getUrl(range: period[selectedPeriod]) }
