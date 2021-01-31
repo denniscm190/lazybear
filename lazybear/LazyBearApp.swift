@@ -19,14 +19,4 @@ struct LazyBearApp: App {
                 .environmentObject(apiAccess)  // Api info (url and token)
         }
     }
-    
-    // Line chart tutorial
-    func randomSample() -> [Double] {
-        var randomArray = [Double]()
-        for _ in 0..<100 {
-            randomArray.append(Double.random(in: 1...100))
-        }
-        
-        return randomArray
-    }
 }
