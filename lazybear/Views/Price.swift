@@ -12,12 +12,12 @@ struct Price: View {
     @State var symbol: String
     @State var showVertical: Bool
     
-    @State var url = String() { didSet { giveMePrices() }}
-    @State var showingView = false
+    @State private var url = String() { didSet { requestPrice() }}
+    @State private var showingView = false
     
     @State var latestPrice = Float()
     @State var changePercent = Double() { didSet { self.showingView = true }}
-    @State var negativeChange = false
+    @State private var negativeChange = false
     
     let iexApi = IexApi()  // Request api function
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()  // Set recurrent price request
@@ -46,14 +46,16 @@ struct Price: View {
         .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
     }
     
-    private func getUrl() {
+     private func getUrl() {
         let baseUrl = apiAccess.results[1].url ?? ""  // 1 -> Sandbox / 2 -> Production
         let token = apiAccess.results[1].key ?? ""
         let path = iexApi.getPath(version: .stable, stock: .symbol(company: symbol), endpoint: .quote, range: nil, parameters: nil)
+        
         self.url = baseUrl + path + token
+
     }
     
-    private func giveMePrices() {
+    private func requestPrice() {
         iexApi.request(url: url, model: QuoteModel.self) { result in
             self.latestPrice = result.latestPrice
             if self.changePercent >= 0 { self.negativeChange = true }

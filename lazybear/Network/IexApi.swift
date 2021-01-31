@@ -59,7 +59,7 @@ struct IexApi {
         var path: String {
             switch self {
             case .chartCloseOnly:
-                return "chartCloseOnly=true"
+                return "chartCloseOnly=true&"
             }
         }
     }
