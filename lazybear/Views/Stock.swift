@@ -48,7 +48,7 @@ struct Stock: View {
             let prices = data.map { $0.close }
             if showingLineChart {
                 let normalPrices = normalize(prices)
-                LineChart(dataPoints: normalPrices, lineColor: .green, lineWidth: 2)
+                LineChart(dataPoints: normalPrices, lineColor: colorLineChart(prices: prices) ? .green : .red, lineWidth: 2)
                     .frame(width: 400, height: 300)
             }
         }
@@ -66,6 +66,17 @@ struct Stock: View {
     
     private func requestHistorical() {
         iexApi.request(url: url, model: [HistoricalPricesModel].self) { self.data = $0 }
+    }
+    
+    private func colorLineChart(prices: [Double]) -> Bool {
+        let startPrice = prices.first ?? 0
+        let endPrice = prices.last ?? 1
+        
+        if startPrice < endPrice {
+            return true
+        } else {
+            return false
+        }
     }
 }
 

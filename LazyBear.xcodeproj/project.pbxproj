@@ -18,7 +18,7 @@
 		95612C512598D48200F7698F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95612C4F2598D48200F7698F /* SearchBar.swift */; };
 		95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95621AD825BF2EDB00BB17FC /* CloudKit.framework */; };
 		95700BC625BD9D12009CEEFE /* IexApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95700BC525BD9D12009CEEFE /* IexApi.swift */; };
-		95825AFC25C7255600465409 /* normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95825AFB25C7255600465409 /* normalize.swift */; };
+		95825AFC25C7255600465409 /* Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95825AFB25C7255600465409 /* Normalize.swift */; };
 		958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B678425C42B2400BF9F89 /* ApiAccess.swift */; };
 		9597CE0125C1DC0A004DDFED /* LogoModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CE0025C1DC0A004DDFED /* LogoModifier.swift */; };
 		9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */; };
@@ -62,7 +62,7 @@
 		95621AD725BF2EC500BB17FC /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		95621AD825BF2EDB00BB17FC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		95700BC525BD9D12009CEEFE /* IexApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IexApi.swift; path = LazyBear/Network/IexApi.swift; sourceTree = SOURCE_ROOT; };
-		95825AFB25C7255600465409 /* normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = normalize.swift; path = lazybear/Jobs/normalize.swift; sourceTree = SOURCE_ROOT; };
+		95825AFB25C7255600465409 /* Normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Normalize.swift; path = lazybear/Jobs/Normalize.swift; sourceTree = SOURCE_ROOT; };
 		958B678425C42B2400BF9F89 /* ApiAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiAccess.swift; path = lazybear/ApiAccess.swift; sourceTree = SOURCE_ROOT; };
 		9597CE0025C1DC0A004DDFED /* LogoModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoModifier.swift; sourceTree = "<group>"; };
 		9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholder.swift; sourceTree = "<group>"; };
@@ -163,7 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */,
-				95825AFB25C7255600465409 /* normalize.swift */,
+				95825AFB25C7255600465409 /* Normalize.swift */,
 			);
 			path = Jobs;
 			sourceTree = "<group>";
@@ -333,7 +333,7 @@
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,
 				95FE646725C2DC580052832E /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				95E411A725BEE03000A9C23F /* Watchlist.swift in Sources */,
-				95825AFC25C7255600465409 /* normalize.swift in Sources */,
+				95825AFC25C7255600465409 /* Normalize.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,
 				95FE646825C2DC580052832E /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 			);
