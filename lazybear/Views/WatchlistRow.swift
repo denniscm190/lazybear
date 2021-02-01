@@ -19,7 +19,7 @@ struct WatchlistRow: View {
         Button(action: { companyView.isShowing.toggle() }) {
             HStack {
                 let url = apiAccess.results[0].url
-                let path = LogoApi.URL.company(symbol: company.symbol ?? "").path
+                let path = "/iex/api/logos/\(company.symbol!).png"
                 let endpoint = url! + path
                 WebImage(url: URL(string: endpoint))
                     .resizable()
@@ -36,7 +36,7 @@ struct WatchlistRow: View {
                 }
                 
                 Spacer()
-                if self.editMode?.wrappedValue.isEditing ?? true { } else { // If is not editing -> show prices
+                if self.editMode?.wrappedValue.isEditing ?? true { } else { // If EditButton() is not clicked -> show prices
                     Price(symbol: company.symbol ?? "", showVertical: false)
                 }
             }

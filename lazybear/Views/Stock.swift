@@ -11,21 +11,26 @@ struct Stock: View {
     var name: String
     var symbol: String
     var lineChartHeight: CGFloat
-    
+    @EnvironmentObject var apiAccess: ApiAccess
+
+    // <--------- Picker --------->
     var period = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
     @State var selectedPeriod = 2
+    // <--------- Picker --------->
     
-    @State private var url = String() { didSet { requestHistorical() }}
+    // <--------- API Job --------->
+    @State private var url = String() {
+        didSet { request(url: url, model: [HistoricalPricesModel].self) { self.data = $0 } }}
+    
     @State private var data = [HistoricalPricesModel]() { didSet { self.showingLineChart = true }}
     @State private var showingLineChart = false
+    // <--------- API Job --------->
     
-    let iexApi = IexApi()  // Request api function
-    
-    @EnvironmentObject var apiAccess: ApiAccess
-    
+    // <--------- Core Data --------->
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var companies: FetchedResults<WatchlistCompany>  // Fetch core data
+    var companies: FetchedResults<WatchlistCompany>
+    // <--------- Core Data --------->
     
     var body: some View {
         VStack {
@@ -57,16 +62,14 @@ struct Stock: View {
     }
     
     private func getUrl(range: String) {
-        let baseUrl = apiAccess.results[1].url ?? ""  // 1 -> Sandbox / 2 -> Production
+        // 1 -> Sandbox / 2 -> Production
+        let baseUrl = apiAccess.results[1].url ?? ""
         let token = apiAccess.results[1].key ?? ""
-        let path = iexApi.getPath(version: .stable, stock: .symbol(company: symbol), endpoint: .historicalPrices, range: .period(range: range), parameters: .chartCloseOnly)
+        let path = "/stable/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&includeToday=false&token="
         
         self.url = baseUrl + path + token
+        print(self.url)
    }
-    
-    private func requestHistorical() {
-        iexApi.request(url: url, model: [HistoricalPricesModel].self) { self.data = $0 }
-    }
     
     private func colorLineChart(prices: [Double]) -> Bool {
         let startPrice = prices.first ?? 0

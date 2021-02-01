@@ -11,18 +11,18 @@ import CloudKit
 struct Price: View {
     @State var symbol: String
     @State var showVertical: Bool
+    @EnvironmentObject var apiAccess: ApiAccess
     
+    // <--------- API Job --------->
     @State private var url = String() { didSet { requestPrice() }}
     @State private var showingView = false
-    
     @State var latestPrice = Float()
     @State var changePercent = Double() { didSet { self.showingView = true }}
     @State private var negativeChange = false
+    // <--------- API Job --------->
     
-    let iexApi = IexApi()  // Request api function
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()  // Set recurrent price request
-    
-    @EnvironmentObject var apiAccess: ApiAccess
+    // Set recurrent price request. Real-time prices
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack(alignment: .trailing) {
@@ -42,27 +42,29 @@ struct Price: View {
             }
         }
         .onAppear { getUrl() }
-        //.onReceive(timer) { _ in giveMePrices() }
+        //.onReceive(timer) { _ in requestPrice() }
         .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
     }
     
      private func getUrl() {
-        let baseUrl = apiAccess.results[1].url ?? ""  // 1 -> Sandbox / 2 -> Production
+        // 1 -> Sandbox / 2 -> Production
+        let baseUrl = apiAccess.results[1].url ?? ""
         let token = apiAccess.results[1].key ?? ""
-        let path = iexApi.getPath(version: .stable, stock: .symbol(company: symbol), endpoint: .quote, range: nil, parameters: nil)
+        let path = "/stable/stock/\(symbol)/quote?token="
         
         self.url = baseUrl + path + token
 
     }
     
     private func requestPrice() {
-        iexApi.request(url: url, model: QuoteModel.self) { result in
+        request(url: url, model: QuoteModel.self) { result in
             self.latestPrice = result.latestPrice
             if self.changePercent >= 0 { self.negativeChange = true }
             self.changePercent = result.changePercent
         }
     }
 }
+
 // Wrap content if some condition is satisfied
 extension View {
    @ViewBuilder
