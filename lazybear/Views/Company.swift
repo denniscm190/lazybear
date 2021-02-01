@@ -15,10 +15,12 @@ struct Company: View {
     
     var body: some View {
         CompanyHeader(name: self.name, symbol: self.symbol)
-        ScrollView {
-            VStack(alignment: .leading) {
-                Stock(name: name, symbol: symbol)
-                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        GeometryReader { geo in
+            ScrollView {
+                VStack(alignment: .leading) {
+                    Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                }
             }
         }
     }

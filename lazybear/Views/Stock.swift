@@ -10,6 +10,7 @@ import SwiftUI
 struct Stock: View {
     var name: String
     var symbol: String
+    var lineChartHeight: CGFloat
     
     var period = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
     @State var selectedPeriod = 2
@@ -30,13 +31,12 @@ struct Stock: View {
         VStack {
             Divider()
             HStack {
+                Price(symbol: symbol, showVertical: true)
+                Spacer()
                 let watchSymbols = companies.map { $0.symbol }
                 if !watchSymbols.contains(symbol) {
                     AddWatchlist(name: name, symbol: symbol)
                 }
-                
-                Spacer()
-                Price(symbol: symbol, showVertical: true)
             }
             
             Divider()
@@ -49,7 +49,7 @@ struct Stock: View {
             if showingLineChart {
                 let normalPrices = normalize(prices)
                 LineChart(dataPoints: normalPrices, lineColor: colorLineChart(prices: prices) ? .green : .red, lineWidth: 2)
-                    .frame(width: 400, height: 300)
+                    .frame(height: lineChartHeight)
             }
         }
         .padding([.leading, .trailing])
@@ -82,6 +82,6 @@ struct Stock: View {
 
 struct Stock_Previews: PreviewProvider {
     static var previews: some View {
-        Stock(name: "apple inc", symbol: "aapl")
+        Stock(name: "apple inc", symbol: "aapl", lineChartHeight: 300)
     }
 }
