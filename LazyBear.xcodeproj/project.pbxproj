@@ -13,6 +13,9 @@
 		9520F0B225C712D000692610 /* LineChartShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520F0B125C712D000692610 /* LineChartShape.swift */; };
 		9520F0B525C7131300692610 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520F0B425C7131300692610 /* LineChart.swift */; };
 		95363CDC25C8741900B74131 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95363CDB25C8741900B74131 /* Request.swift */; };
+		95363CE225C87CF000B74131 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95363CE125C87CF000B74131 /* InsiderTransactionModel.swift */; };
+		95363CE625C87FEC00B74131 /* InsiderTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95363CE525C87FEC00B74131 /* InsiderTransactions.swift */; };
+		95363CEA25C8858800B74131 /* TransactionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95363CE925C8858800B74131 /* TransactionRow.swift */; };
 		954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */; };
 		954DDF0425C456E800848A4B /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954DDF0325C456E800848A4B /* QuoteModel.swift */; };
 		95612C512598D48200F7698F /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95612C4F2598D48200F7698F /* SearchBar.swift */; };
@@ -55,6 +58,9 @@
 		9520F0B125C712D000692610 /* LineChartShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineChartShape.swift; path = lazybear/Views/LineChartShape.swift; sourceTree = SOURCE_ROOT; };
 		9520F0B425C7131300692610 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LineChart.swift; path = lazybear/Views/LineChart.swift; sourceTree = SOURCE_ROOT; };
 		95363CDB25C8741900B74131 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Request.swift; path = lazybear/Network/Request.swift; sourceTree = SOURCE_ROOT; };
+		95363CE125C87CF000B74131 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsiderTransactionModel.swift; path = lazybear/Models/InsiderTransactionModel.swift; sourceTree = SOURCE_ROOT; };
+		95363CE525C87FEC00B74131 /* InsiderTransactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InsiderTransactions.swift; path = lazybear/Views/InsiderTransactions.swift; sourceTree = SOURCE_ROOT; };
+		95363CE925C8858800B74131 /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionRow.swift; path = lazybear/Views/TransactionRow.swift; sourceTree = SOURCE_ROOT; };
 		954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoricalPricesModel.swift; path = lazybear/Models/HistoricalPricesModel.swift; sourceTree = SOURCE_ROOT; };
 		954DDF0325C456E800848A4B /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = QuoteModel.swift; path = lazybear/Models/QuoteModel.swift; sourceTree = SOURCE_ROOT; };
 		95612C4F2598D48200F7698F /* SearchBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 				954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */,
 				95FE646A25C30B880052832E /* ApiModel.swift */,
 				954DDF0325C456E800848A4B /* QuoteModel.swift */,
+				95363CE125C87CF000B74131 /* InsiderTransactionModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -153,6 +160,8 @@
 				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
 				9520F0B125C712D000692610 /* LineChartShape.swift */,
 				9520F0B425C7131300692610 /* LineChart.swift */,
+				95363CE525C87FEC00B74131 /* InsiderTransactions.swift */,
+				95363CE925C8858800B74131 /* TransactionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,7 +315,9 @@
 				9520F0B525C7131300692610 /* LineChart.swift in Sources */,
 				9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */,
 				95FE646B25C30B880052832E /* ApiModel.swift in Sources */,
+				95363CE625C87FEC00B74131 /* InsiderTransactions.swift in Sources */,
 				95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */,
+				95363CEA25C8858800B74131 /* TransactionRow.swift in Sources */,
 				95612C512598D48200F7698F /* SearchBar.swift in Sources */,
 				95E411BE25BEEA6C00A9C23F /* WatchlistRow.swift in Sources */,
 				95AD892425C5D8A200BCE8E4 /* AddWatchlist.swift in Sources */,
@@ -330,6 +341,7 @@
 				95E411A725BEE03000A9C23F /* Watchlist.swift in Sources */,
 				95825AFC25C7255600465409 /* NormalizeData.swift in Sources */,
 				95363CDC25C8741900B74131 /* Request.swift in Sources */,
+				95363CE225C87CF000B74131 /* InsiderTransactionModel.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,
 				95FE646825C2DC580052832E /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 			);

@@ -19,8 +19,11 @@ struct Company: View {
             ScrollView {
                 VStack(alignment: .leading) {
                     Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                        .padding(.bottom)
+                    
+                    InsiderTransactions(symbol: symbol)
                 }
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
     }

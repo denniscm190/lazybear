@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 29/1/21.
 //
 
-import SwiftUI
+import Foundation
 
 struct QuoteModel: Codable {
     var latestPrice: Float

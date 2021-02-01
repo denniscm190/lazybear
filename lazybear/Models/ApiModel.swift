@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 28/1/21.
 //
 
-import SwiftUI
+import Foundation
 
 struct ApiModel {
     var key: String?

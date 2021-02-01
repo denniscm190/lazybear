@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 3/1/21.
 //
 
-import SwiftUI
+import Foundation
 
 struct HistoricalPricesModel: Codable {
     var date: String

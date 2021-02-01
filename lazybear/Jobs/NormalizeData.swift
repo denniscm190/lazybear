@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 31/1/21.
 //
 
-import SwiftUI
+import Foundation
 
 func normalize(_ data: [Double]) -> [DataPoint] {
     var normalData = [DataPoint]()

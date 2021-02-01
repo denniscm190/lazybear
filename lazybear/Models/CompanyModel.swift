@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 31/12/20.
 //
 
-import SwiftUI
+import Foundation
 
 struct CompanyModel: Hashable, Codable {
     var symbol: String

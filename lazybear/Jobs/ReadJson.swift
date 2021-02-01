@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 31/12/20.
 //
 
-import SwiftUI
+import Foundation
 
 // With this function I parse the local JSON file to read it and create a list with its items.
 let companiesData: [CompanyModel] = load("companies.json")

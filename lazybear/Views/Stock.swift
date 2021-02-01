@@ -72,7 +72,6 @@ struct Stock: View {
         let path = "/stable/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&includeToday=false&token="
         
         self.url = baseUrl + path + token
-        print(self.url)
    }
     
     private func colorLineChart(prices: [Double]) -> Bool {
