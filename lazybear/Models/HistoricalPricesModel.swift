@@ -10,9 +10,9 @@ import SwiftUI
 struct HistoricalPricesModel: Codable {
     var date: String
     var close: Double
-    var volume: Float
-    var change: Double
-    var changePercent: Double
-    var changeOverTime: Double
+    var volume: Float?
+    var change: Double?
+    var changePercent: Double?
+    var changeOverTime: Double?
 }
 
