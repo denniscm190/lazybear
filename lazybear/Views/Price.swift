@@ -14,8 +14,8 @@ struct Price: View {
     @EnvironmentObject var apiAccess: ApiAccess
     
     // <--------- API Job --------->
-    @State private var url = String() { didSet { requestPrice() }}
     @State private var showingView = false
+    @State private var url = String() { didSet { requestPrice() }}
     @State private var data = [QuoteModel]() { didSet { self.showingView = true }}
     // <--------- API Job --------->
     

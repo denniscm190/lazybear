@@ -13,9 +13,6 @@ struct Company: View {
     
     let persistenceController = PersistenceController.shared
     
-    var views = ["Stock", "Insiders"]
-    @State private var selectedView = 0
-    
     var body: some View {
         VStack {
             CompanyHeader(name: self.name, symbol: self.symbol)
@@ -27,14 +24,14 @@ struct Company: View {
                             Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
                                 .padding(.bottom)
                             
-                            
+                            News(symbol: symbol)
                         }
                         .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     }
                 }
                 .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("First")
+                    Image(systemName: "chart.bar.fill")
+                    Text("Stock")
                 }.tag(0)
                 
                 // Second view
@@ -42,8 +39,8 @@ struct Company: View {
                     InsiderTransactions(symbol: symbol)
                 }
                 .tabItem {
-                    Image(systemName: "2.circle")
-                    Text("Second")
+                    Image(systemName: "chart.pie.fill")
+                    Text("Insiders")
                 }.tag(1)
             }
         }
