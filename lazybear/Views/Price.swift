@@ -32,7 +32,7 @@ struct Price: View {
                     Text("\(data[0].changePercent ?? 0 * 100, specifier: "%.2f")%")
                         .font(.subheadline)
                         .foregroundColor(.white)
-                        //.background(Color(negativeChange ? .red : .green).cornerRadius(5))
+                        .background(percentageColor().cornerRadius(5))
                 }
                 .if(showVertical) { content in
                         HStack { content }
@@ -58,6 +58,15 @@ struct Price: View {
         request(url: url, model: QuoteModel.self) { result in
             self.data = [QuoteModel(latestPrice: result.latestPrice, changePercent: result.changePercent)]
         }
+    }
+    
+    private func percentageColor() -> Color {
+        var color: Color = .red
+        if data[0].changePercent ?? 0 >= 0 {
+            color = .green
+        }
+        
+        return color
     }
 }
 // Wrap content if some condition is satisfied

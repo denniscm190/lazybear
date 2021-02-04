@@ -13,17 +13,38 @@ struct Company: View {
     
     let persistenceController = PersistenceController.shared
     
+    var views = ["Stock", "Insiders"]
+    @State private var selectedView = 0
+    
     var body: some View {
-        CompanyHeader(name: self.name, symbol: self.symbol)
-        GeometryReader { geo in
-            ScrollView {
-                VStack(alignment: .leading) {
-                    Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
-                        .padding(.bottom)
-                    
+        VStack {
+            CompanyHeader(name: self.name, symbol: self.symbol)
+            TabView {
+                // First view
+                GeometryReader { geo in
+                    ScrollView {
+                        VStack(alignment: .leading) {
+                            Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
+                                .padding(.bottom)
+                            
+                            
+                        }
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    }
+                }
+                .tabItem {
+                    Image(systemName: "1.circle")
+                    Text("First")
+                }.tag(0)
+                
+                // Second view
+                ScrollView {
                     InsiderTransactions(symbol: symbol)
                 }
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .tabItem {
+                    Image(systemName: "2.circle")
+                    Text("Second")
+                }.tag(1)
             }
         }
     }
