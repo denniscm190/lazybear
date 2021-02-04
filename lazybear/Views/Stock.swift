@@ -50,7 +50,7 @@ struct Stock: View {
                     getUrl(range: period[selectedPeriod])
                 })
             
-            let prices = data.map { $0.close }
+            let prices = data.map { $0.close ?? 0 }
             if showingLineChart {
                 let normalPrices = normalize(prices)
                 LineChart(dataPoints: normalPrices, lineColor: colorLineChart(prices: prices) ? .green : .red, lineWidth: 2)

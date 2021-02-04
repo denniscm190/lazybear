@@ -39,7 +39,6 @@ struct InsiderTransactions: View {
         let path = "/stable/stock/\(symbol)/insider-transactions?token="
         
         self.url = baseUrl + path + token
-        print(url)
     }
 }
 

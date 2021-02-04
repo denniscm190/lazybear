@@ -8,7 +8,7 @@
 import Foundation
 
 struct QuoteModel: Codable {
-    var latestPrice: Float
-    var changePercent: Double
+    var latestPrice: Float?
+    var changePercent: Double?
 }
 

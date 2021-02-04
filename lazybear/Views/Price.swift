@@ -16,9 +16,7 @@ struct Price: View {
     // <--------- API Job --------->
     @State private var url = String() { didSet { requestPrice() }}
     @State private var showingView = false
-    @State var latestPrice = Float()
-    @State var changePercent = Double() { didSet { self.showingView = true }}
-    @State private var negativeChange = false
+    @State private var data = [QuoteModel]() { didSet { self.showingView = true }}
     // <--------- API Job --------->
     
     // Set recurrent price request. Real-time prices
@@ -28,13 +26,13 @@ struct Price: View {
         VStack(alignment: .trailing) {
             if self.showingView {
                 Group {
-                    Text("\(latestPrice, specifier: "%.2f")")
+                    Text("\(data[0].latestPrice ?? 0, specifier: "%.2f")")
                         .fontWeight(.semibold)
 
-                    Text("\(changePercent*100, specifier: "%.2f")%")
+                    Text("\(data[0].changePercent ?? 0 * 100, specifier: "%.2f")%")
                         .font(.subheadline)
                         .foregroundColor(.white)
-                        .background(Color(negativeChange ? .red : .green).cornerRadius(5))
+                        //.background(Color(negativeChange ? .red : .green).cornerRadius(5))
                 }
                 .if(showVertical) { content in
                         HStack { content }
@@ -58,13 +56,10 @@ struct Price: View {
     
     private func requestPrice() {
         request(url: url, model: QuoteModel.self) { result in
-            self.latestPrice = result.latestPrice
-            if self.changePercent >= 0 { self.negativeChange = true }
-            self.changePercent = result.changePercent
+            self.data = [QuoteModel(latestPrice: result.latestPrice, changePercent: result.changePercent)]
         }
     }
 }
-
 // Wrap content if some condition is satisfied
 extension View {
    @ViewBuilder
@@ -76,6 +71,7 @@ extension View {
         }
     }
 }
+
 
 struct Price_Previews: PreviewProvider {
     static var previews: some View {
