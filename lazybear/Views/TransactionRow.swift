@@ -13,31 +13,25 @@ struct TransactionRow: View {
     
     var body: some View {
         Button(action: { self.showingDetail.toggle() }) {
-            VStack {
-                HStack(alignment: .top) {
-                    VStack(alignment: .leading) {
-                        Text(data.fullName?.capitalized ?? "-")
-                            .fontWeight(.semibold)
-                        
-                        Text(data.transactionDate ?? "-")
-                            .font(.subheadline)
-                    }
-                    Spacer()
-                    VStack {
-                        Text("\(data.transactionShares ?? 0)")
-                            .fontWeight(.semibold)
-                            .foregroundColor(color())
-                        
-                        Text("Shares")
-                            .font(.subheadline)
-                    }
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(data.fullName?.capitalized ?? "-")
+                        .fontWeight(.semibold)
+                    
+                    Text(data.transactionDate ?? "-")
+                        .font(.subheadline)
                 }
-                .padding([.leading, .trailing])
-                
-                Divider()
+                Spacer()
+                VStack(alignment: .trailing) {
+                    Text("\(data.transactionShares ?? 0)")
+                        .fontWeight(.semibold)
+                        .foregroundColor(color())
+                    
+                    Text("Shares")
+                        .font(.subheadline)
+                }
             }
         }
-        .buttonStyle(PlainButtonStyle())
         .sheet(isPresented: $showingDetail) {
             TransactionDetail(data: self.data)
         }

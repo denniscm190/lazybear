@@ -14,21 +14,24 @@ struct CompanyHeader: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Text(self.symbol.uppercased())
-                    .font(.title)
-                    .fontWeight(.semibold)
-                
-                Spacer()
-                Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
-                    Image(systemName: "multiply.circle.fill")
+            Group {
+                HStack {
+                    Text(self.symbol.uppercased())
+                        .font(.title)
+                        .fontWeight(.semibold)
+                    
+                    Spacer()
+                    Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
+                        Image(systemName: "multiply.circle.fill")
+                    }
+                    
                 }
                 
+                Text(self.name.capitalized)
             }
-            
-            Text(self.name.capitalized)
+            .padding([.leading, .trailing])
+            Divider()
         }
-        .padding([.leading, .trailing])
     }
 }
 

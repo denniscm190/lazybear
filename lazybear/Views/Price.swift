@@ -20,7 +20,7 @@ struct Price: View {
     // <--------- API Job --------->
     
     // Set recurrent price request. Real-time prices
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
     
     var body: some View {
         VStack(alignment: .trailing) {
@@ -28,8 +28,9 @@ struct Price: View {
                 Group {
                     Text("\(data[0].latestPrice ?? 0, specifier: "%.2f")")
                         .fontWeight(.semibold)
-
-                    Text("\(data[0].changePercent ?? 0 * 100, specifier: "%.2f")%")
+                    
+                    let percent = (data[0].changePercent ?? 0) * 100
+                    Text("\(percent, specifier: "%.2f")%")
                         .padding(1)
                         .font(.subheadline)
                         .foregroundColor(.white)

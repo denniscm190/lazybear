@@ -38,10 +38,8 @@ struct Company: View {
                 }.tag(0)
                 
                 // Second view
-                ScrollView {
-                    InsiderTransactions(symbol: symbol)
-                        .environmentObject(self.apiAccess)
-                }
+                InsiderTransactions(symbol: symbol)
+                    .environmentObject(self.apiAccess)
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
                     Text("Insiders")

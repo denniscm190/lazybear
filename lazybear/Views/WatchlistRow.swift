@@ -19,7 +19,7 @@ struct WatchlistRow: View {
         Button(action: { companyView.isShowing.toggle() }) {
             HStack {
                 let url = apiAccess.results[0].url
-                let path = "/iex/api/logos/\(company.symbol!).png"
+                let path = "/iex/api/logos/\(company.symbol ?? "").png"
                 let endpoint = url! + path
                 WebImage(url: URL(string: endpoint))
                     .resizable()

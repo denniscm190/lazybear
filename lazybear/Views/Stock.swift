@@ -34,7 +34,6 @@ struct Stock: View {
     
     var body: some View {
         VStack {
-            Divider()
             HStack {
                 Price(symbol: symbol, showVertical: true)
                 Spacer()

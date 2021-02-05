@@ -21,7 +21,7 @@ func request<T: Decodable>(url: String, model: T.Type, completion: @escaping (_ 
                 // Decode response with the model passed
                 let decodedResponse = try JSONDecoder().decode(model, from: data)
                 DispatchQueue.main.async {
-                    //print(decodedResponse)
+                    print(decodedResponse)
                     completion(decodedResponse)
                 }
                 return

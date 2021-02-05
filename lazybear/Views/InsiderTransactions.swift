@@ -19,17 +19,21 @@ struct InsiderTransactions: View {
     // <--------- API Job --------->
     
     var body: some View {
-        HStack {
-            Text("Insider transactions")
-                .font(.title)
-                .fontWeight(.semibold)
-                .padding([.leading, .bottom])
-            Spacer()
-        }
-        .onAppear { getUrl() }
+        VStack {
+            HStack {
+                Text("Insider transactions")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                    .padding([.leading, .bottom])
+                Spacer()
+            }
+            .onAppear { getUrl() }
             
-        ForEach(data, id: \.self) { data in
-            TransactionRow(data: data)
+            List {
+                ForEach(data, id: \.self) { data in
+                    TransactionRow(data: data)
+                }
+            }
         }
     }
     
