@@ -9,25 +9,47 @@ import SwiftUI
 
 struct TransactionRow: View {
     @State var data: InsiderTransactionModel
+    @State private var showingDetail = false
     
     var body: some View {
-        VStack {
-            HStack(alignment: .top) {
-                VStack(alignment: .leading) {
-                    Text(data.fullName ?? "-".capitalized)
-                        .fontWeight(.semibold)
-                    
-                    Text(data.transactionDate ?? "-")
-                        .font(.subheadline)
+        Button(action: { self.showingDetail.toggle() }) {
+            VStack {
+                HStack(alignment: .top) {
+                    VStack(alignment: .leading) {
+                        Text(data.fullName?.capitalized ?? "-")
+                            .fontWeight(.semibold)
+                        
+                        Text(data.transactionDate ?? "-")
+                            .font(.subheadline)
+                    }
+                    Spacer()
+                    VStack {
+                        Text("\(data.transactionShares ?? 0)")
+                            .fontWeight(.semibold)
+                            .foregroundColor(color())
+                        
+                        Text("Shares")
+                            .font(.subheadline)
+                    }
                 }
-                Spacer()
-                Text("$\(data.transactionValue ?? 0, specifier: "%.2f")")
-                    .fontWeight(.semibold)
+                .padding([.leading, .trailing])
+                
+                Divider()
             }
-            .padding([.leading, .trailing])
-            
-            Divider()
         }
+        .buttonStyle(PlainButtonStyle())
+        .sheet(isPresented: $showingDetail) {
+            TransactionDetail(data: self.data)
+        }
+    }
+    
+    private func color() -> Color {
+        var color: Color = .red
+        if data.transactionShares ?? 0 >= 0 {
+            color = .green
+        }
+        
+        return color
     }
 }
 

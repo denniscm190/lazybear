@@ -12,7 +12,7 @@ struct InsiderTransactionModel: Codable, Hashable {
     var directIndirect: String?
     var filingDate: String?
     var fullName: String?
-    var postShares: Int?
+    var postShares: Float?
     var reportedTitle: String?
     var transactionCode: String?
     var transactionDate: String?

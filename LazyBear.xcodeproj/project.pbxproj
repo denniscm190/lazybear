@@ -35,6 +35,8 @@
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
 		95B3552825CD4A5600BCDE8E /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552725CD4A5600BCDE8E /* NewsDetail.swift */; };
+		95B3552C25CD5D7400BCDE8E /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552B25CD5D7400BCDE8E /* TransactionDetail.swift */; };
+		95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */; };
 		95B395A525BDF42E009A7EB0 /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B395A425BDF42E009A7EB0 /* companies.json */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
 		95E4118F25BEC35D00A9C23F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */; };
@@ -87,6 +89,8 @@
 		95B04EB62521236A000AD27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B04EBB2521236A000AD27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95B3552725CD4A5600BCDE8E /* NewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsDetail.swift; path = lazybear/Views/NewsDetail.swift; sourceTree = SOURCE_ROOT; };
+		95B3552B25CD5D7400BCDE8E /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionDetail.swift; path = lazybear/Views/TransactionDetail.swift; sourceTree = SOURCE_ROOT; };
+		95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionCodes.swift; path = lazybear/Data/TransactionCodes.swift; sourceTree = SOURCE_ROOT; };
 		95B395A425BDF42E009A7EB0 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LazyBear/Persistence.swift; sourceTree = SOURCE_ROOT; };
 		95E4119125BEC56F00A9C23F /* SuperTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTitle.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 				959D28DE25CC9A1A0029F689 /* News.swift */,
 				959D28E125CC9B370029F689 /* NewsRow.swift */,
 				95B3552725CD4A5600BCDE8E /* NewsDetail.swift */,
+				95B3552B25CD5D7400BCDE8E /* TransactionDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				95B395A425BDF42E009A7EB0 /* companies.json */,
+				95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 				959D28DF25CC9A1A0029F689 /* News.swift in Sources */,
 				95FE646B25C30B880052832E /* ApiModel.swift in Sources */,
 				95363CE625C87FEC00B74131 /* InsiderTransactions.swift in Sources */,
+				95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */,
 				95F6C30525BAF599003CF389 /* CompanyHeader.swift in Sources */,
 				95363CEA25C8858800B74131 /* TransactionRow.swift in Sources */,
 				95612C512598D48200F7698F /* SearchBar.swift in Sources */,
@@ -349,6 +356,7 @@
 				958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */,
 				95E4119225BEC56F00A9C23F /* SuperTitle.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
+				95B3552C25CD5D7400BCDE8E /* TransactionDetail.swift in Sources */,
 				95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */,
 				95E411B625BEE84E00A9C23F /* Stock.swift in Sources */,
 				9520F0B225C712D000692610 /* LineChartShape.swift in Sources */,

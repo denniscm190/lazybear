@@ -33,6 +33,7 @@ struct WatchlistRow: View {
                     
                     Text(company.name ?? "".capitalized)
                         .font(.subheadline)
+                        .padding(1)
                 }
                 
                 Spacer()

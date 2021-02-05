@@ -30,9 +30,11 @@ struct Price: View {
                         .fontWeight(.semibold)
 
                     Text("\(data[0].changePercent ?? 0 * 100, specifier: "%.2f")%")
+                        .padding(1)
                         .font(.subheadline)
                         .foregroundColor(.white)
-                        .background(percentageColor().cornerRadius(5))
+                        .background(percentageColor().cornerRadius(3))
+
                 }
                 .if(showVertical) { content in
                         HStack { content }

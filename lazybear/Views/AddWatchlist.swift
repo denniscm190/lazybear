@@ -15,12 +15,7 @@ struct AddWatchlist: View {
     
     var body: some View {
         Button(action: { addWatchlist(name: name, symbol: symbol) }) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                Text("Add to watchlist")
-                    .foregroundColor(.white)
-            }
-            .frame(width: 150)
+            Text("Add to watchlist")
         }
     }
     

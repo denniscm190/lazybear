@@ -12,6 +12,7 @@ struct Company: View {
     var symbol: String
     
     let persistenceController = PersistenceController.shared
+    @EnvironmentObject var apiAccess: ApiAccess
     
     var body: some View {
         VStack {
@@ -23,8 +24,10 @@ struct Company: View {
                         VStack(alignment: .leading) {
                             Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
                                 .padding(.bottom)
+                                .environmentObject(self.apiAccess)
                             
                             News(symbol: symbol)
+                                .environmentObject(self.apiAccess)
                         }
                         .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     }
@@ -37,6 +40,7 @@ struct Company: View {
                 // Second view
                 ScrollView {
                     InsiderTransactions(symbol: symbol)
+                        .environmentObject(self.apiAccess)
                 }
                 .tabItem {
                     Image(systemName: "chart.pie.fill")
