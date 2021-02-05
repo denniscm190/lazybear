@@ -9,34 +9,41 @@ import SwiftUI
 
 struct NewsRow: View {
     @State var new: NewsModel
+    @State private var showDetails = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(new.source ?? "-")
-                .font(.caption2)
-            
-            Text(new.headline ?? "-")
-                .font(.headline)
-                .fontWeight(.semibold)
-                .lineLimit(4)
-            
-            Text(new.summary ?? "-")
-                .lineLimit(3)
-                .font(.caption)
-                .padding(.top, 3)
-            
-            let (hours, minutes) = convertEpoch()
-            Text("\(hours) hours and \(minutes) minutes ago")
-                .font(.caption)
-                .fontWeight(.semibold)
-                .padding(.top, 3)
-            
-            Divider()
+        Button(action: { self.showDetails.toggle() }) {
+            VStack(alignment: .leading) {
+                Text(new.source ?? "-")
+                    .font(.caption2)
+                
+                Text(new.headline ?? "-")
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                    .lineLimit(4)
+                
+                Text(new.summary ?? "-")
+                    .lineLimit(3)
+                    .font(.caption)
+                    .padding(.top, 3)
+                
+                let (hours, minutes) = epochToHours()
+                Text("\(hours) hours and \(minutes) minutes ago")
+                    .font(.caption)
+                    .fontWeight(.semibold)
+                    .padding(.top, 3)
+                
+                Divider()
+            }
+            .padding([.leading, .trailing])
         }
-        .padding([.leading, .trailing])
+        .buttonStyle(PlainButtonStyle())
+        .sheet(isPresented: $showDetails) {
+            NewsDetail(new: self.new)
+        }
     }
     
-    private func convertEpoch() -> (String, String) {
+    private func epochToHours() -> (String, String) {
         let now = Date() // Current date
         let articlePublished = Date(timeIntervalSince1970: TimeInterval(new.datetime ?? 0)/1000)
         

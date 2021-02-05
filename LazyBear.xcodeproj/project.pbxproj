@@ -34,6 +34,7 @@
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
+		95B3552825CD4A5600BCDE8E /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552725CD4A5600BCDE8E /* NewsDetail.swift */; };
 		95B395A525BDF42E009A7EB0 /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B395A425BDF42E009A7EB0 /* companies.json */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
 		95E4118F25BEC35D00A9C23F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95E4118E25BEC35D00A9C23F /* SDWebImageSwiftUI */; };
@@ -85,6 +86,7 @@
 		95B04EB425212369000AD27F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95B04EB62521236A000AD27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B04EBB2521236A000AD27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95B3552725CD4A5600BCDE8E /* NewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsDetail.swift; path = lazybear/Views/NewsDetail.swift; sourceTree = SOURCE_ROOT; };
 		95B395A425BDF42E009A7EB0 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LazyBear/Persistence.swift; sourceTree = SOURCE_ROOT; };
 		95E4119125BEC56F00A9C23F /* SuperTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTitle.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 				95363CE925C8858800B74131 /* TransactionRow.swift */,
 				959D28DE25CC9A1A0029F689 /* News.swift */,
 				959D28E125CC9B370029F689 /* NewsRow.swift */,
+				95B3552725CD4A5600BCDE8E /* NewsDetail.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */,
 				95F6F45C25C20D8D002AC66A /* Price.swift in Sources */,
 				9597CE0125C1DC0A004DDFED /* LogoModifier.swift in Sources */,
+				95B3552825CD4A5600BCDE8E /* NewsDetail.swift in Sources */,
 				954DDF0425C456E800848A4B /* QuoteModel.swift in Sources */,
 				959D28E225CC9B370029F689 /* NewsRow.swift in Sources */,
 				9520F0B525C7131300692610 /* LineChart.swift in Sources */,
