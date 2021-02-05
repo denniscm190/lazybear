@@ -19,23 +19,24 @@ struct InsiderTransactions: View {
     // <--------- API Job --------->
     
     var body: some View {
-        VStack(alignment: .leading) {
+        HStack {
             Text("Insider transactions")
                 .font(.title)
                 .fontWeight(.semibold)
                 .padding([.leading, .bottom])
-            
-            ForEach(data, id: \.self) { data in
-                TransactionRow(data: data)
-            }
+            Spacer()
         }
         .onAppear { getUrl() }
+            
+        ForEach(data, id: \.self) { data in
+            TransactionRow(data: data)
+        }
     }
     
     private func getUrl() {
         // 1 -> Sandbox / 2 -> Production
         let baseUrl = apiAccess.results[2].url ?? ""
-        let token = apiAccess.results[1].key ?? ""
+        let token = apiAccess.results[2].key ?? ""
         let path = "/stable/stock/\(symbol)/insider-transactions?token="
         
         self.url = baseUrl + path + token

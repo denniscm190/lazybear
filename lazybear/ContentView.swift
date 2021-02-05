@@ -22,7 +22,10 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             if apiAccess.showingView {
+                if !showingSearch {
                 SuperTitle(name: "Home")
+                }
+                
                 SearchBar(searchedText: $searchedCompany, showingSearch: $showingSearch)
 
                 if showingSearch {
@@ -32,6 +35,7 @@ struct ContentView: View {
                     Spacer()
                 } else {
                     Watchlist()
+                        .transition(.opacity)
                 }
             }
         }

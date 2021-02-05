@@ -48,8 +48,8 @@ struct Price: View {
     
      private func getUrl() {
         // 1 -> Sandbox / 2 -> Production
-        let baseUrl = apiAccess.results[1].url ?? ""
-        let token = apiAccess.results[1].key ?? ""
+        let baseUrl = apiAccess.results[2].url ?? ""
+        let token = apiAccess.results[2].key ?? ""
         let path = "/stable/stock/\(symbol)/quote?token="
         
         self.url = baseUrl + path + token

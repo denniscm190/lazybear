@@ -65,8 +65,8 @@ struct Stock: View {
         var range = range
         
         // 1 -> Sandbox / 2 -> Production
-        let baseUrl = apiAccess.results[1].url ?? ""
-        let token = apiAccess.results[1].key ?? ""
+        let baseUrl = apiAccess.results[2].url ?? ""
+        let token = apiAccess.results[2].key ?? ""
         if period[selectedPeriod] == "1W" { range = "5dm" }
         if period[selectedPeriod] == "1M" { range = "1mm" }
         let path = "/stable/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&includeToday=false&token="

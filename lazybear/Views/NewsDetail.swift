@@ -10,18 +10,10 @@ import SDWebImageSwiftUI
 
 struct NewsDetail: View {
     @State var new: NewsModel
-    @Environment(\.presentationMode) var newDetailPresentation
     
     var body: some View {
         
         VStack(alignment: .leading) {
-            HStack {
-                Spacer()
-                Button(action: { self.newDetailPresentation.wrappedValue.dismiss() }) {
-                    Image(systemName: "multiply.circle.fill")
-                }
-            }
-        
             Text(new.source ?? "-")
                 .font(.caption2)
             

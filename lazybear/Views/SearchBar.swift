@@ -38,24 +38,26 @@ struct SearchBar: View {
                 .background(Color(.systemGray6))
                 .cornerRadius(10)
                 .onTapGesture {
-                    self.searchBarIsEditing = true
-                    self.showingSearch = true  // Content View
-                    
-                    
+                    withAnimation {
+                        self.searchBarIsEditing = true
+                        self.showingSearch = true  // Content View
+                    }
                 }
  
             if searchBarIsEditing {
                 Button(action: {
-                    self.searchedText = ""
-                    self.searchBarIsEditing = false
-                    self.showingSearch = false  // Content View
-                    
-                    // Force hide keyboard
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
- 
+                    withAnimation {
+                        self.searchedText = ""
+                        self.searchBarIsEditing = false
+                        self.showingSearch = false  // Content View
+                        
+                        // Force hide keyboard
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }
                 }) {
                     Text("Cancel")
                 }
+                .transition(.move(edge: .trailing))
             }
         }
         .padding()
