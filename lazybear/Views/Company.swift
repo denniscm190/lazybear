@@ -26,7 +26,7 @@ struct Company: View {
                 .onAppear { saveSearch(name: name, symbol: symbol) }
             }
         }
-        .navigationBarTitle(symbol, displayMode: .large)
+        .navigationBarTitle(symbol, displayMode: .inline)
         .navigationBarItems(trailing: AddWatchlist(symbol: symbol, name: name))
     }
     

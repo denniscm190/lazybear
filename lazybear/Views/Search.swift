@@ -22,6 +22,7 @@ struct Search: View {
         NavigationView {
             VStack {
                 SearchBar(searchedText: $searchedCompany)
+                // Searched companies
                 List {
                     if searchedCompany.count > 2 {
                     ForEach(companiesData.filter({ searchedCompany.isEmpty ? true : $0.name.localizedStandardContains(searchedCompany) }), id: \.symbol) { company in
@@ -30,6 +31,7 @@ struct Search: View {
                                 .environmentObject(apiAccess)  // Api info (url and token)
                         }
                     } else {
+                        // Historial
                         if searches.count > 0 {
                             Section(header: Text("History"),
                                     footer: Button(action: { delete() }) { Text("Clear history").foregroundColor(.blue)}

@@ -19,14 +19,13 @@ struct News: View {
     // <--------- API Job --------->
     
     var body: some View {
-        Text("Business news")
-            .font(.title)
-            .fontWeight(.semibold)
-            .padding([.leading, .top])
-        
-        Divider()
-        
         VStack {
+            Text("Business news")
+                .font(.title)
+                .fontWeight(.semibold)
+                .padding([.leading, .top])
+            
+            Divider()
             ForEach(news, id: \.self) { new in
                 NewsRow(new: new)
             }

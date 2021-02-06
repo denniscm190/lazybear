@@ -31,11 +31,11 @@ struct ContentView: View {
             }
         
         // Third view
-            //Settings()
-            //.tabItem {
-                //Image(systemName: "gear")
-                //Text("Settings")
-            //}
+            Settings()
+            .tabItem {
+                Image(systemName: "gear")
+                Text("Settings")
+            }
         }
     }
 }

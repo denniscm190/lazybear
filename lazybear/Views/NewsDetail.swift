@@ -10,33 +10,40 @@ import SDWebImageSwiftUI
 
 struct NewsDetail: View {
     @State var new: NewsModel
+    @Environment(\.presentationMode) var newsDetailMode
     
     var body: some View {
-        
-        VStack(alignment: .leading) {
-            Text(new.source ?? "-")
-                .font(.caption2)
-            
-            Text(new.headline ?? "-")
-                .font(.title)
-                .fontWeight(.semibold)
-            
-            ScrollView {
-                VStack(alignment: .leading) {
-                    WebImage(url: URL(string: new.image ?? ""))
-                        .resizable()
-                        .indicator(.activity)
-                        .scaledToFit()
-                    
-                    Divider()
-                    Text(new.summary ?? "-")
-                    Link("Read the full article", destination: URL(string: new.url ?? "")!)
-                        .padding(.top)
-                }
+        NavigationView {
+            VStack(alignment: .leading) {
+                Text(new.headline ?? "-")
+                    .font(.title)
+                    .fontWeight(.semibold)
+                
+                Divider()
+                
+                ScrollView {
+                    VStack(alignment: .leading) {
+                        WebImage(url: URL(string: new.image ?? ""))
+                            .resizable()
+                            .indicator(.activity)
+                            .scaledToFit()
+                        
+                        Divider()
+                        Text(new.summary ?? "-")
+                        Link("Read the full article", destination: URL(string: new.url ?? "")!)
+                            .padding(.top)
+                    }
 
+                }
+            }
+            .padding()
+            .navigationBarTitle(new.source ?? "-", displayMode: .inline)
+            .toolbar {
+                Button(action: { self.newsDetailMode.wrappedValue.dismiss() }) {
+                    Image(systemName: "multiply")
+                }
             }
         }
-        .padding()
     }
 }
 
