@@ -24,11 +24,11 @@ struct ContentView: View {
             }
         
         // Second view
-            //Watchlist()
-            //.tabItem {
-                //Image(systemName: "list.bullet")
-                //Text("Watchlist")
-            //}
+            Watchlist()
+            .tabItem {
+                Image(systemName: "list.bullet")
+                Text("Watchlist")
+            }
         
         // Third view
             //Settings()

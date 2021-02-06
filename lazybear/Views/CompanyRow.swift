@@ -8,26 +8,28 @@
 import SwiftUI
 
 struct CompanyRow: View {
-    var company: CompanyModel
+    var company: CompanyModel?
+    var history: RecentSearch?
     @State var showingCompany = false
     
     @EnvironmentObject var apiAccess: ApiAccess  // Env apis info
     let persistenceController = PersistenceController.shared // Core Data
     
     var body: some View {
-        Button(action: { self.showingCompany.toggle() }) {
+        let name = company?.name ?? history?.name ?? ""
+        let symbol = company?.symbol ?? history?.symbol ?? ""
+        
+        NavigationLink(destination: Company(name: name, symbol: symbol)
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                        .environmentObject(apiAccess)  // Api info (url and token)
+        ) {
             VStack(alignment: .leading) {
-                Text(company.symbol.uppercased())
+                Text(symbol.uppercased())
                     .fontWeight(.semibold)
                 
-                Text(company.name.capitalized)
+                Text(name.capitalized)
                     .font(.subheadline)
             }
-        }
-        .fullScreenCover(isPresented: $showingCompany) {
-            Company(name: company.name, symbol: company.symbol)
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(apiAccess)  // Api info (url and token)
         }
     }
 }

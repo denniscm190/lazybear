@@ -32,7 +32,7 @@ struct AddWatchlist: View {
         }
     }
     
-    func addWatchlist(name: String, symbol: String) {
+    private func addWatchlist(name: String, symbol: String) {
         let watchlistCompany = WatchlistCompany(context: viewContext)
         watchlistCompany.name = name
         watchlistCompany.symbol = symbol

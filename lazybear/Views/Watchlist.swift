@@ -16,17 +16,15 @@ struct Watchlist: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Watchlist")) {
-                    ForEach(companies) { company in
-                        WatchlistRow(company: company)
-                    }
-                    .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }  // Delete from persistent storage
+                ForEach(companies) { company in
+                    WatchlistRow(company: company)
                 }
+                .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }  // Delete from persistent storage
             }
             .navigationBarTitle("Watchlist", displayMode: .inline)
             .toolbar { EditButton() }
             
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
     
     func deleteWatchlist(indexSet: IndexSet) {

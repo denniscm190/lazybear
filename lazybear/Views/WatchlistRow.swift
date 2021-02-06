@@ -17,31 +17,40 @@ struct WatchlistRow: View {
     let persistenceController = PersistenceController.shared
     
     var body: some View {
-        HStack {
-            let url = apiAccess.results[0].url
-            let path = "/iex/api/logos/\(company.symbol ?? "").png"
-            let endpoint = url! + path
-            
-            WebImage(url: URL(string: endpoint))
-                .resizable()
-                .placeholder { LogoPlaceholder() }  // If there is no logo
-                .indicator(.activity)
-                .modifier(LogoModifier())
-            
-            VStack(alignment: .leading) {
-                Text(company.symbol ?? "".uppercased())
-                    .fontWeight(.semibold)
+        NavigationLink(destination: Company(name: company.name ?? "", symbol: company.symbol ?? "")
+                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                        .environmentObject(apiAccess)  // Api info (url and token)
+        ) {
+            HStack {
+                WebImage(url: URL(string: endpoint()))
+                    .resizable()
+                    .placeholder { LogoPlaceholder() }  // If there is no logo
+                    .indicator(.activity)
+                    .modifier(LogoModifier())
                 
-                Text(company.name ?? "".capitalized)
-                    .font(.subheadline)
+                VStack(alignment: .leading) {
+                    Text(company.symbol ?? "".uppercased())
+                        .fontWeight(.semibold)
+                    
+                    Text(company.name ?? "".capitalized)
+                        .font(.subheadline)
+                }
+                
+                Spacer()
+                if self.editMode?.wrappedValue.isEditing ?? true { } else { // If EditButton() is not clicked -> show prices
+                    Price(symbol: company.symbol ?? "", showHorizontal: false)
+                }
             }
-            
-            Spacer()
-            if self.editMode?.wrappedValue.isEditing ?? true { } else { // If EditButton() is not clicked -> show prices
-                Price(symbol: company.symbol ?? "", showHorizontal: false)
-            }
+            .padding([.top, .bottom], 6)
         }
-        .padding([.top, .bottom], 6)
+    }
+    
+    private func endpoint() -> String {
+        let url = apiAccess.results[0].url
+        let path = "/iex/api/logos/\(company.symbol ?? "").png"
+        let endpoint = url! + path
+        
+        return endpoint
     }
 }
 

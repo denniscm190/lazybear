@@ -30,6 +30,12 @@ struct PersistenceController {
             newItem.cik = String()
             newItem.lei = String()
         }
+        
+        for _ in 0..<1 {
+            let newItem = RecentSearch(context: viewContext)
+            newItem.name = String()
+            newItem.symbol = String()
+        }
         do {
             try viewContext.save()
         } catch {
