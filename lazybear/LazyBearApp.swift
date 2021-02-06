@@ -9,12 +9,12 @@ import SwiftUI
 
 @main
 struct LazyBearApp: App {
-    let persistenceController = PersistenceController.shared
-    var apiAccess = ApiAccess()
+    let persistenceController = PersistenceController.shared // Core Data
+    var apiAccess = ApiAccess() // Environment data
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(apiAccess)  // Api info (url and token)
         }

@@ -2,7 +2,7 @@
 //  TransactionDetail.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 5/2/21.
+//  Created by Dennis Concepción Martín on 6/2/21.
 //
 
 import SwiftUI

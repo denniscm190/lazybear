@@ -11,40 +11,36 @@ struct Company: View {
     var name: String
     var symbol: String
     
-    let persistenceController = PersistenceController.shared
-    @EnvironmentObject var apiAccess: ApiAccess
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        VStack {
-            CompanyHeader(name: self.name, symbol: self.symbol)
+        NavigationView {
             TabView {
-                // First view
                 GeometryReader { geo in
                     ScrollView {
                         VStack(alignment: .leading) {
                             Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
                                 .padding(.bottom)
-                                .environmentObject(self.apiAccess)
                             
                             News(symbol: symbol)
-                                .environmentObject(self.apiAccess)
                         }
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
                     }
                 }
-                .tabItem {
-                    Image(systemName: "chart.bar.fill")
-                    Text("Stock")
-                }.tag(0)
-                
-                // Second view
-                InsiderTransactions(symbol: symbol)
-                    .environmentObject(self.apiAccess)
-                .tabItem {
-                    Image(systemName: "chart.pie.fill")
-                    Text("Insiders")
-                }.tag(1)
+            .tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("Stock")
             }
+        }
+        .navigationBarTitle(symbol, displayMode: .inline)
+        .navigationBarItems(
+            leading:
+                Button(action: { self.presentationMode.wrappedValue.dismiss() }) {
+                    Image(systemName: "multiply")
+                }
+            ,
+            trailing:
+                AddWatchlist(symbol: symbol, name: name)
+        )
         }
     }
 }

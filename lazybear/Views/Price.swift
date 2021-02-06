@@ -10,7 +10,7 @@ import CloudKit
 
 struct Price: View {
     @State var symbol: String
-    @State var showVertical: Bool
+    @State var showHorizontal: Bool
     @EnvironmentObject var apiAccess: ApiAccess
     
     // <--------- API Job --------->
@@ -31,13 +31,10 @@ struct Price: View {
                     
                     let percent = (data[0].changePercent ?? 0) * 100
                     Text("\(percent, specifier: "%.2f")%")
-                        .padding(1)
                         .font(.subheadline)
-                        .foregroundColor(.white)
-                        .background(percentageColor().cornerRadius(3))
-
+                        .foregroundColor(percentageColor())
                 }
-                .if(showVertical) { content in
+                .if(showHorizontal) { content in
                         HStack { content }
                     }
             }
@@ -49,8 +46,8 @@ struct Price: View {
     
      private func getUrl() {
         // 1 -> Sandbox / 2 -> Production
-        let baseUrl = apiAccess.results[2].url ?? ""
-        let token = apiAccess.results[2].key ?? ""
+        let baseUrl = apiAccess.results[1].url ?? ""
+        let token = apiAccess.results[1].key ?? ""
         let path = "/stable/stock/\(symbol)/quote?token="
         
         self.url = baseUrl + path + token
@@ -87,6 +84,7 @@ extension View {
 
 struct Price_Previews: PreviewProvider {
     static var previews: some View {
-        Price(symbol: "AAPL", showVertical: false)
+        Price(symbol: "AAPL", showHorizontal: false)
+            .environmentObject(ApiAccess())
     }
 }

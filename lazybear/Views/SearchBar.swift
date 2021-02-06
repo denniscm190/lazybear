@@ -10,7 +10,6 @@ import SwiftUI
 struct SearchBar: View {
     @Binding var searchedText: String
     @State var searchBarIsEditing = false
-    @Binding var showingSearch: Bool  // Show search view in ContentView
     
     var body: some View {
         HStack {
@@ -40,7 +39,6 @@ struct SearchBar: View {
                 .onTapGesture {
                     withAnimation {
                         self.searchBarIsEditing = true
-                        self.showingSearch = true  // Content View
                     }
                 }
  
@@ -49,7 +47,6 @@ struct SearchBar: View {
                     withAnimation {
                         self.searchedText = ""
                         self.searchBarIsEditing = false
-                        self.showingSearch = false  // Content View
                         
                         // Force hide keyboard
                         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
@@ -66,6 +63,6 @@ struct SearchBar: View {
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(searchedText: .constant(""), showingSearch: .constant(true))
+        SearchBar(searchedText: .constant(""))
     }
 }

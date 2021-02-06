@@ -26,21 +26,12 @@ struct Stock: View {
     @State private var showingLineChart = false
     // <--------- API Job --------->
     
-    // <--------- Core Data --------->
-    @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var companies: FetchedResults<WatchlistCompany>
-    // <--------- Core Data --------->
-    
     var body: some View {
         VStack {
+            Divider()
             HStack {
-                Price(symbol: symbol, showVertical: true)
+                Price(symbol: symbol, showHorizontal: true)
                 Spacer()
-                let watchSymbols = companies.map { $0.symbol }
-                if !watchSymbols.contains(symbol) {
-                    AddWatchlist(name: name, symbol: symbol)
-                }
             }
             
             Divider()
@@ -64,8 +55,8 @@ struct Stock: View {
         var range = range
         
         // 1 -> Sandbox / 2 -> Production
-        let baseUrl = apiAccess.results[2].url ?? ""
-        let token = apiAccess.results[2].key ?? ""
+        let baseUrl = apiAccess.results[1].url ?? ""
+        let token = apiAccess.results[1].key ?? ""
         if period[selectedPeriod] == "1W" { range = "5dm" }
         if period[selectedPeriod] == "1M" { range = "1mm" }
         let path = "/stable/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&includeToday=false&token="

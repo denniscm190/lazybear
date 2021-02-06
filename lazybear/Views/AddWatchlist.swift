@@ -2,20 +2,33 @@
 //  AddWatchlist.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 30/1/21.
+//  Created by Dennis Concepción Martín on 6/2/21.
 //
 
 import SwiftUI
+import SPAlert
 
 struct AddWatchlist: View {
-    var name: String
     var symbol: String
+    var name: String
     
+    // <--------- Core Data --------->
     @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
+    var companies: FetchedResults<WatchlistCompany>
+    // <--------- Core Data --------->
     
     var body: some View {
-        Button(action: { addWatchlist(name: name, symbol: symbol) }) {
-            Text("Add to watchlist")
+        let watchSymbols = companies.map { $0.symbol }
+        let alertView = SPAlertView(title: "Company added", preset: .done)
+        
+        if !watchSymbols.contains(symbol) {
+            Button(action: {
+                addWatchlist(name: name, symbol: symbol)
+                alertView.present(haptic: .success)
+            }) {
+                Text("Add")
+            }
         }
     }
     
@@ -34,6 +47,6 @@ struct AddWatchlist: View {
 
 struct AddWatchlist_Previews: PreviewProvider {
     static var previews: some View {
-        AddWatchlist(name: "apple inc", symbol: "aapl")
+        AddWatchlist(symbol: "aapl", name: "apple")
     }
 }

@@ -14,12 +14,18 @@ struct Watchlist: View {
     var companies: FetchedResults<WatchlistCompany>  // Fetch core data
     
     var body: some View {
-        ListHeader(header: "Watchlist")
-        List {
-            ForEach(companies) { company in
-                WatchlistRow(company: company)
+        NavigationView {
+            List {
+                Section(header: Text("Watchlist")) {
+                    ForEach(companies) { company in
+                        WatchlistRow(company: company)
+                    }
+                    .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }  // Delete from persistent storage
+                }
             }
-            .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }  // Delete from persistent storage
+            .navigationBarTitle("Watchlist", displayMode: .inline)
+            .toolbar { EditButton() }
+            
         }
     }
     

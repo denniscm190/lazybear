@@ -37,8 +37,8 @@ struct News: View {
     
     private func getUrl() {
         // 1 -> Sandbox / 2 -> Production
-        let baseUrl = apiAccess.results[2].url ?? ""
-        let token = apiAccess.results[2].key ?? ""
+        let baseUrl = apiAccess.results[1].url ?? ""
+        let token = apiAccess.results[1].key ?? ""
         let path = "/stable/stock/\(symbol)/news/last/10?token="
         
         self.url = baseUrl + path + token
@@ -48,5 +48,6 @@ struct News: View {
 struct News_Previews: PreviewProvider {
     static var previews: some View {
         News(symbol: "aapl")
+            .environmentObject(ApiAccess())
     }
 }

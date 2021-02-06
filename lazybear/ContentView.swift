@@ -6,57 +6,36 @@
 //
 
 import SwiftUI
-import CoreData
-import CloudKit
 
 struct ContentView: View {
-    @State var searchedCompany = String()
-    @State public var showingSearch: Bool = false
-    @State var cloudFetch = [CKRecord]() { didSet { cloudValues() }}   // CloudKit fetch arrives here
-    
-    let persistenceController = PersistenceController.shared  // Core data
-    let cloud = CloudKitManager()  // CloudKit fetch function
-    
     @EnvironmentObject var apiAccess: ApiAccess  // Env apis info
+    let persistenceController = PersistenceController.shared // Core Data
 
     var body: some View {
-        VStack(alignment: .leading) {
-            if apiAccess.showingView {
-                if !showingSearch {
-                SuperTitle(name: "Home")
-                }
+        TabView {
+        // First view
+            Search()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(apiAccess)  // Api info (url and token)
                 
-                SearchBar(searchedText: $searchedCompany, showingSearch: $showingSearch)
-
-                if showingSearch {
-                    if searchedCompany.count > 2 {
-                        CompanyList(searchedCompany: $searchedCompany)
-                    }
-                    Spacer()
-                } else {
-                    Watchlist()
-                        .transition(.opacity)
-                }
+            .tabItem {
+                Image(systemName: "magnifyingglass")
+                Text("Search")
             }
-        }
-        .onAppear { cloud.query(recordType: "API") { cloudFetch = $0 } }  // Request CloudKit 
-    }
-    
-    // Assign CloudKit fetch to model
-    private func cloudValues() {
-        var results = [ApiModel]()
-        cloudFetch.forEach({ (result) in
-            let key = result.object(forKey: "key") as? String
-            let name = result.object(forKey: "name") as? String
-            let url = result.object(forKey: "url") as? String
-            
-            let value = ApiModel(key: key, name: name, url: url)
-            results.append(value)
-        })
-        // Main thread
-        DispatchQueue.main.async {
-            apiAccess.results = results
-            apiAccess.showingView = true
+        
+        // Second view
+            //Watchlist()
+            //.tabItem {
+                //Image(systemName: "list.bullet")
+                //Text("Watchlist")
+            //}
+        
+        // Third view
+            //Settings()
+            //.tabItem {
+                //Image(systemName: "gear")
+                //Text("Settings")
+            //}
         }
     }
 }
@@ -65,6 +44,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ApiAccess())
     }
 }
