@@ -35,7 +35,6 @@
 		95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */; };
 		95B395A525BDF42E009A7EB0 /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B395A425BDF42E009A7EB0 /* companies.json */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
-		95E07B6825CE92D4001718AB /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E07B6725CE92D4001718AB /* Test.swift */; };
 		95E07B6B25CE9398001718AB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E07B6A25CE9398001718AB /* AppView.swift */; };
 		95E07B6E25CE95A1001718AB /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E07B6D25CE95A1001718AB /* Search.swift */; };
 		95E07B7225CE95D9001718AB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E07B7125CE95D9001718AB /* Settings.swift */; };
@@ -90,13 +89,12 @@
 		95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionCodes.swift; path = lazybear/Data/TransactionCodes.swift; sourceTree = SOURCE_ROOT; };
 		95B395A425BDF42E009A7EB0 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LazyBear/Persistence.swift; sourceTree = SOURCE_ROOT; };
-		95E07B6725CE92D4001718AB /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Test.swift; path = lazybear/Tests/Test.swift; sourceTree = SOURCE_ROOT; };
 		95E07B6A25CE9398001718AB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppView.swift; path = lazybear/AppView.swift; sourceTree = SOURCE_ROOT; };
 		95E07B6D25CE95A1001718AB /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Search.swift; path = LazyBear/Views/Search.swift; sourceTree = SOURCE_ROOT; };
 		95E07B7125CE95D9001718AB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = LazyBear/Views/Settings.swift; sourceTree = SOURCE_ROOT; };
-		95E07B9C25CEAC46001718AB /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionDetail.swift; path = lazybear/Views/TransactionDetail.swift; sourceTree = SOURCE_ROOT; };
-		95E07B9F25CEAC61001718AB /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionRow.swift; path = lazybear/Views/TransactionRow.swift; sourceTree = SOURCE_ROOT; };
-		95E07BA225CEAC7D001718AB /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transactions.swift; path = lazybear/Views/Transactions.swift; sourceTree = SOURCE_ROOT; };
+		95E07B9C25CEAC46001718AB /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionDetail.swift; path = LazyBear/Views/TransactionDetail.swift; sourceTree = SOURCE_ROOT; };
+		95E07B9F25CEAC61001718AB /* TransactionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionRow.swift; path = LazyBear/Views/TransactionRow.swift; sourceTree = SOURCE_ROOT; };
+		95E07BA225CEAC7D001718AB /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Transactions.swift; path = LazyBear/Views/Transactions.swift; sourceTree = SOURCE_ROOT; };
 		95E411A625BEE03000A9C23F /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
 		95E411B525BEE84E00A9C23F /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistRow.swift; sourceTree = "<group>"; };
@@ -104,7 +102,7 @@
 		95ED176A25CEFE1B00AE34B3 /* RecentSearch+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearch+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95F6C2EF25BAE2ED003CF389 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		95F6C30825BAF7C2003CF389 /* DateSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelection.swift; sourceTree = "<group>"; };
-		95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewSelector.swift; path = lazybear/Views/ViewSelector.swift; sourceTree = SOURCE_ROOT; };
+		95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewSelector.swift; path = LazyBear/Views/ViewSelector.swift; sourceTree = SOURCE_ROOT; };
 		95F6F45B25C20D8D002AC66A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		95F7CAF525ADC7B7009E0E7C /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95FE646525C2DC570052832E /* WatchlistCompany+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 		952F791C2598B1CD00FF929F /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				95E07B6725CE92D4001718AB /* Test.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -160,10 +157,27 @@
 		95945FBE25C440FC00EEA1D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95E07B8125CEA8AB001718AB /* Search */,
-				95E07B8E25CEAB30001718AB /* Watchlist */,
-				95E07B8525CEA8C8001718AB /* Settings */,
-				95E07B9225CEAB6D001718AB /* Company */,
+				95E07B6D25CE95A1001718AB /* Search.swift */,
+				95612C4F2598D48200F7698F /* SearchBar.swift */,
+				95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */,
+				95E411A625BEE03000A9C23F /* Watchlist.swift */,
+				95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */,
+				95F6F45B25C20D8D002AC66A /* Price.swift */,
+				9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */,
+				95E07B7125CE95D9001718AB /* Settings.swift */,
+				95F6C2EF25BAE2ED003CF389 /* Company.swift */,
+				95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */,
+				95E411B525BEE84E00A9C23F /* Stock.swift */,
+				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
+				9520F0B125C712D000692610 /* LineChartShape.swift */,
+				9520F0B425C7131300692610 /* LineChart.swift */,
+				9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */,
+				959D28DE25CC9A1A0029F689 /* News.swift */,
+				959D28E125CC9B370029F689 /* NewsRow.swift */,
+				95B3552725CD4A5600BCDE8E /* NewsDetail.swift */,
+				95E07BA225CEAC7D001718AB /* Transactions.swift */,
+				95E07B9C25CEAC46001718AB /* TransactionDetail.swift */,
+				95E07B9F25CEAC61001718AB /* TransactionRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -237,79 +251,6 @@
 				952F791C2598B1CD00FF929F /* Tests */,
 			);
 			path = LazyBear;
-			sourceTree = "<group>";
-		};
-		95E07B8125CEA8AB001718AB /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				95E07B6D25CE95A1001718AB /* Search.swift */,
-				95612C4F2598D48200F7698F /* SearchBar.swift */,
-				95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */,
-			);
-			name = Search;
-			sourceTree = "<group>";
-		};
-		95E07B8525CEA8C8001718AB /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				95E07B7125CE95D9001718AB /* Settings.swift */,
-			);
-			name = Settings;
-			sourceTree = "<group>";
-		};
-		95E07B8E25CEAB30001718AB /* Watchlist */ = {
-			isa = PBXGroup;
-			children = (
-				95E411A625BEE03000A9C23F /* Watchlist.swift */,
-				95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */,
-				95F6F45B25C20D8D002AC66A /* Price.swift */,
-				9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */,
-			);
-			name = Watchlist;
-			sourceTree = "<group>";
-		};
-		95E07B9225CEAB6D001718AB /* Company */ = {
-			isa = PBXGroup;
-			children = (
-				95F6C2EF25BAE2ED003CF389 /* Company.swift */,
-				95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */,
-				95E07B9725CEABD4001718AB /* Stock */,
-				95E07B9525CEABC8001718AB /* News */,
-				95E07B9B25CEABFC001718AB /* Insiders */,
-			);
-			name = Company;
-			sourceTree = "<group>";
-		};
-		95E07B9525CEABC8001718AB /* News */ = {
-			isa = PBXGroup;
-			children = (
-				959D28DE25CC9A1A0029F689 /* News.swift */,
-				959D28E125CC9B370029F689 /* NewsRow.swift */,
-				95B3552725CD4A5600BCDE8E /* NewsDetail.swift */,
-			);
-			name = News;
-			sourceTree = "<group>";
-		};
-		95E07B9725CEABD4001718AB /* Stock */ = {
-			isa = PBXGroup;
-			children = (
-				95E411B525BEE84E00A9C23F /* Stock.swift */,
-				95F6C30825BAF7C2003CF389 /* DateSelection.swift */,
-				9520F0B125C712D000692610 /* LineChartShape.swift */,
-				9520F0B425C7131300692610 /* LineChart.swift */,
-				9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */,
-			);
-			name = Stock;
-			sourceTree = "<group>";
-		};
-		95E07B9B25CEABFC001718AB /* Insiders */ = {
-			isa = PBXGroup;
-			children = (
-				95E07BA225CEAC7D001718AB /* Transactions.swift */,
-				95E07B9C25CEAC46001718AB /* TransactionDetail.swift */,
-				95E07B9F25CEAC61001718AB /* TransactionRow.swift */,
-			);
-			name = Insiders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -412,7 +353,6 @@
 				95F6C30925BAF7C2003CF389 /* DateSelection.swift in Sources */,
 				95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */,
 				95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */,
-				95E07B6825CE92D4001718AB /* Test.swift in Sources */,
 				958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
 				95E07B6B25CE9398001718AB /* AppView.swift in Sources */,

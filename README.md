@@ -19,6 +19,7 @@ Check our [website](https://lazybear.app)
 
 ## Open source frameworks used 
 - [SDWebImageSwiftUI](https://github.com/SDWebImage/SDWebImageSwiftUI)   
+- [SPAlert](https://github.com/varabeis/SPAlert)
 
 ## License
 Repository under [GPLv3](https://www.gnu.org/licenses/gpl-3.0.html). Check [LICENSE](LICENSE.md) for more details
