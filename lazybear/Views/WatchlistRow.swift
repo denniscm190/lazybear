@@ -11,16 +11,11 @@ import SDWebImageSwiftUI
 
 struct WatchlistRow: View {
     var company: WatchlistCompany
-    
-    @EnvironmentObject var apiAccess: ApiAccess
     @Environment(\.editMode) var editMode  // EditButton list
-    let persistenceController = PersistenceController.shared
+    @EnvironmentObject var apiAccess: ApiAccess
     
     var body: some View {
-        NavigationLink(destination: Company(name: company.name ?? "", symbol: company.symbol ?? "")
-                        .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                        .environmentObject(apiAccess)  // Api info (url and token)
-        ) {
+        NavigationLink(destination: Company(name: company.name ?? "", symbol: company.symbol ?? "")) {
             HStack {
                 WebImage(url: URL(string: endpoint()))
                     .resizable()
@@ -51,15 +46,6 @@ struct WatchlistRow: View {
         let endpoint = url! + path
         
         return endpoint
-    }
-}
-
-struct LogoModifier: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .aspectRatio(contentMode: .fit)
-            .frame(maxWidth: 40, maxHeight: 40)
-            .clipShape(RoundedRectangle(cornerRadius: 3))
     }
 }
 

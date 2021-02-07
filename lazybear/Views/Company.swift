@@ -10,24 +10,29 @@ import SwiftUI
 struct Company: View {
     var name: String
     var symbol: String
+    @State var viewSelected = 0
     
     @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext  // Core data
     
     var body: some View {
-        GeometryReader { geo in
-            ScrollView {
-                VStack(alignment: .leading) {
-                    Stock(name: name, symbol: symbol, lineChartHeight: geo.size.height*0.2)
-                        .padding(.bottom)
-                    
-                    News(symbol: symbol)
-                }
-                .onAppear { saveSearch(name: name, symbol: symbol) }
+        VStack {
+            if viewSelected == 0 {
+                StockAndNews(name: name, symbol: symbol)
+            } else if viewSelected == 1 {
+                Transactions(symbol: symbol)
             }
-        }
+        } .onAppear { saveSearch(name: name, symbol: symbol) }
+        
         .navigationBarTitle(symbol, displayMode: .inline)
-        .navigationBarItems(trailing: AddWatchlist(symbol: symbol, name: name))
+        .navigationBarItems(trailing:
+            HStack {
+                AddWatchlist(symbol: symbol, name: name)
+                    .padding(.trailing)
+                
+                ViewSelector(viewSelected: $viewSelected)
+            }
+        )
     }
     
     private func saveSearch(name: String, symbol: String) {

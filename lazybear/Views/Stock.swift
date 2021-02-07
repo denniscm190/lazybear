@@ -14,7 +14,7 @@ struct Stock: View {
     @EnvironmentObject var apiAccess: ApiAccess
 
     // <--------- Picker --------->
-    var period = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
+    @State var periods = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
     @State var selectedPeriod = 2
     // <--------- Picker --------->
     
@@ -35,9 +35,9 @@ struct Stock: View {
             }
             
             Divider()
-            DateSelection(selectedperiod: $selectedPeriod)
+            Selection(items: periods, selected: $selectedPeriod)
                 .onChange(of: selectedPeriod, perform: { (value) in
-                    getUrl(range: period[selectedPeriod])
+                    getUrl(range: periods[selectedPeriod])
                 })
             
             let prices = data.map { $0.close ?? 0 }
@@ -48,17 +48,15 @@ struct Stock: View {
             }
         }
         .padding([.leading, .trailing])
-        .onAppear { getUrl(range: period[selectedPeriod]) }
+        .onAppear { getUrl(range: periods[selectedPeriod]) }
     }
     
     private func getUrl(range: String) {
         var range = range
-        
-        // 1 -> Sandbox / 2 -> Production
-        let baseUrl = apiAccess.results[1].url ?? ""
-        let token = apiAccess.results[1].key ?? ""
-        if period[selectedPeriod] == "1W" { range = "5dm" }
-        if period[selectedPeriod] == "1M" { range = "1mm" }
+        let baseUrl = apiAccess.results[apiAccess.option].url ?? ""
+        let token = apiAccess.results[apiAccess.option].key ?? ""
+        if periods[selectedPeriod] == "1W" { range = "5dm" }
+        if periods[selectedPeriod] == "1M" { range = "1mm" }
         let path = "/stable/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&includeToday=false&token="
         
         self.url = baseUrl + path + token

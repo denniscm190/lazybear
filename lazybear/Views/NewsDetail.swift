@@ -10,7 +10,6 @@ import SDWebImageSwiftUI
 
 struct NewsDetail: View {
     @State var new: NewsModel
-    @Environment(\.presentationMode) var newsDetailMode
     
     var body: some View {
         NavigationView {
@@ -38,11 +37,6 @@ struct NewsDetail: View {
             }
             .padding()
             .navigationBarTitle(new.source ?? "-", displayMode: .inline)
-            .toolbar {
-                Button(action: { self.newsDetailMode.wrappedValue.dismiss() }) {
-                    Image(systemName: "multiply")
-                }
-            }
         }
     }
 }

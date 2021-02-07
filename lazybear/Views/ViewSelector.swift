@@ -8,13 +8,33 @@
 import SwiftUI
 
 struct ViewSelector: View {
+    @State private var showingActionSheet = false
+    @Binding var viewSelected: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: { self.showingActionSheet = true; print(self.showingActionSheet) }) {
+            Image(systemName: "ellipsis")
+                .imageScale(.large)
+                .actionSheet(isPresented: $showingActionSheet) { alert() }
+                
+        }
+    }
+    
+    private func alert() -> ActionSheet {
+        let action = ActionSheet(
+            title: Text("Views"),
+            //message: Text("History will be claered from your device"),
+            buttons: [.cancel(Text("Cancel")) { self.showingActionSheet = false },
+                      .default(Text("Chart & news")) { self.viewSelected = 0 },
+                      .default(Text("Insider transactions")) { self.viewSelected = 1 }
+            ])
+        
+        return action
     }
 }
 
 struct ViewSelector_Previews: PreviewProvider {
     static var previews: some View {
-        ViewSelector()
+        ViewSelector(viewSelected: .constant(1))
     }
 }

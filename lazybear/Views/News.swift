@@ -19,7 +19,7 @@ struct News: View {
     // <--------- API Job --------->
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text("Business news")
                 .font(.title)
                 .fontWeight(.semibold)
@@ -35,9 +35,8 @@ struct News: View {
     
     
     private func getUrl() {
-        // 1 -> Sandbox / 2 -> Production
-        let baseUrl = apiAccess.results[1].url ?? ""
-        let token = apiAccess.results[1].key ?? ""
+        let baseUrl = apiAccess.results[apiAccess.option].url ?? ""
+        let token = apiAccess.results[apiAccess.option].key ?? ""
         let path = "/stable/stock/\(symbol)/news/last/10?token="
         
         self.url = baseUrl + path + token
