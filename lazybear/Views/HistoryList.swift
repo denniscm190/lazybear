@@ -25,7 +25,8 @@ struct HistoryList: View {
                             .actionSheet(isPresented: $showingActionSheet) { alert() }
                     }
             ) {
-                ForEach(history) { company in
+                let sorted = history.sorted { $0.date ?? Date() > $1.date ?? Date() }
+                ForEach(sorted) { company in
                     CompanyRow(history: company)
                 }
             }

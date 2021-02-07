@@ -17,14 +17,35 @@ struct CompanyRow: View {
         let symbol = company?.symbol ?? history?.symbol ?? ""
         
         NavigationLink(destination: Company(name: name, symbol: symbol)) {
-            VStack(alignment: .leading) {
-                Text(symbol.uppercased())
-                    .fontWeight(.semibold)
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(symbol.uppercased())
+                        .fontWeight(.semibold)
+                    
+                    Text(name.capitalized)
+                        .font(.subheadline)
+                }
                 
-                Text(name.capitalized)
-                    .font(.subheadline)
+                if history != nil {
+                    Spacer()
+                    let (day, month) = formatDate()
+                    Text("\(day) \(month)")
+                        .font(.caption)
+                }
             }
         }
+    }
+    
+    private func formatDate() -> (String, String) {
+        let date = history?.date ?? Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.day, .month], from: date)
+        
+        let day = components.day ?? 0  // Get day number
+        let month = components.month ?? 0  // Get month number
+        let monthString = calendar.monthSymbols[month]  // Get month with letters
+        
+        return (String(day), monthString)
     }
 }
 

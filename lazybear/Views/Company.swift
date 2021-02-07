@@ -22,7 +22,8 @@ struct Company: View {
             } else if viewSelected == 1 {
                 Transactions(symbol: symbol)
             }
-        } .onAppear { saveSearch(name: name, symbol: symbol) }
+        }
+        .onAppear { saveSearch(name: name, symbol: symbol) }
         
         .navigationBarTitle(symbol, displayMode: .inline)
         .navigationBarItems(trailing:
