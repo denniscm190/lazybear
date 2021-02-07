@@ -49,7 +49,7 @@ struct HistoryList: View {
     private func alert() -> ActionSheet {
         let action = ActionSheet(
             title: Text("Clear history"),
-            message: Text("History will be claered from your device"),
+            message: Text("History will be cleared from your device"),
             buttons: [.cancel(Text("Cancel")), .destructive(Text("Clear history")) { delete() }])
         
         return action

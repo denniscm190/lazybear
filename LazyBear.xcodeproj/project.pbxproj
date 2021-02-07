@@ -22,6 +22,7 @@
 		9589C94D25CE0B4C0045DFF3 /* AddWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */; };
 		958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B678425C42B2400BF9F89 /* ApiAccess.swift */; };
 		9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */; };
+		9598CFE325D06A6D00FA9E1B /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598CFE225D06A6C00FA9E1B /* CreateButton.swift */; };
 		959D28DC25CC99710029F689 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D28DB25CC99710029F689 /* NewsModel.swift */; };
 		959D28DF25CC9A1A0029F689 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D28DE25CC9A1A0029F689 /* News.swift */; };
 		959D28E225CC9B370029F689 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D28E125CC9B370029F689 /* NewsRow.swift */; };
@@ -78,6 +79,7 @@
 		9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddWatchlist.swift; path = LazyBear/Views/AddWatchlist.swift; sourceTree = SOURCE_ROOT; };
 		958B678425C42B2400BF9F89 /* ApiAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiAccess.swift; path = lazybear/ApiAccess.swift; sourceTree = SOURCE_ROOT; };
 		9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholder.swift; sourceTree = "<group>"; };
+		9598CFE225D06A6C00FA9E1B /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateButton.swift; path = lazybear/Views/CreateButton.swift; sourceTree = SOURCE_ROOT; };
 		959D28DB25CC99710029F689 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsModel.swift; path = lazybear/Models/NewsModel.swift; sourceTree = SOURCE_ROOT; };
 		959D28DE25CC9A1A0029F689 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = News.swift; path = LazyBear/Views/News.swift; sourceTree = SOURCE_ROOT; };
 		959D28E125CC9B370029F689 /* NewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsRow.swift; path = LazyBear/Views/NewsRow.swift; sourceTree = SOURCE_ROOT; };
@@ -177,6 +179,7 @@
 				95F6F45B25C20D8D002AC66A /* Price.swift */,
 				95E07B7125CE95D9001718AB /* Settings.swift */,
 				95F6C2EF25BAE2ED003CF389 /* Company.swift */,
+				9598CFE225D06A6C00FA9E1B /* CreateButton.swift */,
 				95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */,
 				95E411B525BEE84E00A9C23F /* Stock.swift */,
 				95F6C30825BAF7C2003CF389 /* Selection.swift */,
@@ -369,6 +372,7 @@
 				95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */,
 				958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
+				9598CFE325D06A6D00FA9E1B /* CreateButton.swift in Sources */,
 				95E07B6B25CE9398001718AB /* AppView.swift in Sources */,
 				95ED176C25CEFE1B00AE34B3 /* RecentSearch+CoreDataProperties.swift in Sources */,
 				95ED176B25CEFE1B00AE34B3 /* RecentSearch+CoreDataClass.swift in Sources */,

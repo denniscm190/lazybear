@@ -12,9 +12,10 @@ struct ViewSelector: View {
     @Binding var viewSelected: Int
     
     var body: some View {
-        Button(action: { self.showingActionSheet = true; print(self.showingActionSheet) }) {
+        Button(action: { self.showingActionSheet = true }) {
             Image(systemName: "ellipsis")
                 .imageScale(.large)
+                .frame(width: 30, height: 30)  // This frame change the tappable area
                 .actionSheet(isPresented: $showingActionSheet) { alert() }
                 
         }

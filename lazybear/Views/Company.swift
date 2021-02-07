@@ -28,9 +28,10 @@ struct Company: View {
         .navigationBarTitle(symbol, displayMode: .inline)
         .navigationBarItems(trailing:
             HStack {
-                AddWatchlist(symbol: symbol, name: name)
+                CreateButton(symbol: symbol, name: name)
                     .padding(.trailing)
                 
+                Spacer()
                 ViewSelector(viewSelected: $viewSelected)
             }
         )
