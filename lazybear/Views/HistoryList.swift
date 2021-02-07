@@ -25,6 +25,7 @@ struct HistoryList: View {
                             .actionSheet(isPresented: $showingActionSheet) { alert() }
                     }
             ) {
+                // Sorte array by Date. The new ones come first in the list
                 let sorted = history.sorted { $0.date ?? Date() > $1.date ?? Date() }
                 ForEach(sorted) { company in
                     CompanyRow(history: company)
