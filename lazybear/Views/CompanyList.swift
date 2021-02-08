@@ -23,7 +23,7 @@ struct CompanyList_Previews: PreviewProvider {
     static var previews: some View {
         //NavigationView {
             CompanyList(searchedCompany: "apple inc")
-                .environmentObject(ApiAccess())
+                .environmentObject(ApiManager())
         //}
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var apiAccess: ApiAccess  // Env apis info
+    @EnvironmentObject var apiManager: ApiManager  // Env apis info
     let persistenceController = PersistenceController.shared // Core Data
 
     var body: some View {
@@ -16,7 +16,7 @@ struct ContentView: View {
         // First view
             Search()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(apiAccess)  // Api info (url and token)
+                .environmentObject(apiManager)  // Api info (url and token)
                 
             .tabItem {
                 Image(systemName: "magnifyingglass")

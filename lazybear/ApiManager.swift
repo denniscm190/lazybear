@@ -8,7 +8,7 @@
 import SwiftUI
 import CloudKit
 
-class ApiAccess: ObservableObject {
+class ApiManager: ObservableObject {
     @Published var results = [ApiModel]()
     @Published var showingView = false
     @Published var option = 2  // 1 -> Sandbox / 2 -> Production

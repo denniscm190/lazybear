@@ -11,7 +11,7 @@ import CloudKit
 struct Price: View {
     @State var symbol: String
     @State var showHorizontal: Bool
-    @EnvironmentObject var apiAccess: ApiAccess
+    @EnvironmentObject var apiManager: ApiManager
     
     // <--------- API Job --------->
     @State private var showingView = false
@@ -45,8 +45,8 @@ struct Price: View {
     }
     
      private func getUrl() {
-        let baseUrl = apiAccess.results[apiAccess.option].url ?? ""
-        let token = apiAccess.results[apiAccess.option].key ?? ""
+        let baseUrl = apiManager.results[apiManager.option].url ?? ""
+        let token = apiManager.results[apiManager.option].key ?? ""
         let path = "/stable/stock/\(symbol)/quote?token="
         
         self.url = baseUrl + path + token
@@ -84,6 +84,6 @@ extension View {
 struct Price_Previews: PreviewProvider {
     static var previews: some View {
         Price(symbol: "AAPL", showHorizontal: false)
-            .environmentObject(ApiAccess())
+            .environmentObject(ApiManager())
     }
 }

@@ -13,16 +13,16 @@ struct AppView: View {
     
     // <--------- CloudKit --------->
     let cloud = CloudKitManager()
-    @EnvironmentObject var apiAccess: ApiAccess  // Env apis info
+    @EnvironmentObject var apiManager: ApiManager  // Env apis info
     @State var cloudFetch = [CKRecord]() { didSet { cloudValues() }}  // Fetch arrives here
     // <--------- CloudKit --------->
     
     var body: some View {
         VStack {
-            if apiAccess.showingView {
+            if apiManager.showingView {
                 ContentView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                    .environmentObject(apiAccess)  // Api info (url and token)
+                    .environmentObject(apiManager)  // Api info (url and token)
             }
         }.onAppear { cloud.query(recordType: "API") { cloudFetch = $0 } }  // Request CloudKit
     }
@@ -40,8 +40,8 @@ struct AppView: View {
         })
         // Main thread
         DispatchQueue.main.async {
-            apiAccess.results = results
-            apiAccess.showingView = true
+            apiManager.results = results
+            apiManager.showingView = true
         }
     }
 }

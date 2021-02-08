@@ -11,7 +11,7 @@ struct Stock: View {
     var name: String
     var symbol: String
     var lineChartHeight: CGFloat
-    @EnvironmentObject var apiAccess: ApiAccess
+    @EnvironmentObject var apiManager: ApiManager
 
     // <--------- Picker --------->
     @State var periods = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
@@ -53,8 +53,8 @@ struct Stock: View {
     
     private func getUrl(range: String) {
         var range = range
-        let baseUrl = apiAccess.results[apiAccess.option].url ?? ""
-        let token = apiAccess.results[apiAccess.option].key ?? ""
+        let baseUrl = apiManager.results[apiManager.option].url ?? ""
+        let token = apiManager.results[apiManager.option].key ?? ""
         if periods[selectedPeriod] == "1W" { range = "5dm" }
         if periods[selectedPeriod] == "1M" { range = "1mm" }
         let path = "/stable/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&includeToday=false&token="

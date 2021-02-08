@@ -20,7 +20,7 @@
 		95825AFC25C7255600465409 /* NormalizeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95825AFB25C7255600465409 /* NormalizeData.swift */; };
 		9589C94525CE03B20045DFF3 /* SPAlert in Frameworks */ = {isa = PBXBuildFile; productRef = 9589C94425CE03B20045DFF3 /* SPAlert */; };
 		9589C94D25CE0B4C0045DFF3 /* AddWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */; };
-		958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B678425C42B2400BF9F89 /* ApiAccess.swift */; };
+		958B678525C42B2400BF9F89 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B678425C42B2400BF9F89 /* ApiManager.swift */; };
 		9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */; };
 		9598CFE325D06A6D00FA9E1B /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598CFE225D06A6C00FA9E1B /* CreateButton.swift */; };
 		959D28DC25CC99710029F689 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D28DB25CC99710029F689 /* NewsModel.swift */; };
@@ -77,7 +77,7 @@
 		95621AD825BF2EDB00BB17FC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		95825AFB25C7255600465409 /* NormalizeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NormalizeData.swift; path = lazybear/Jobs/NormalizeData.swift; sourceTree = SOURCE_ROOT; };
 		9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddWatchlist.swift; path = LazyBear/Views/AddWatchlist.swift; sourceTree = SOURCE_ROOT; };
-		958B678425C42B2400BF9F89 /* ApiAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiAccess.swift; path = lazybear/ApiAccess.swift; sourceTree = SOURCE_ROOT; };
+		958B678425C42B2400BF9F89 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = lazybear/ApiManager.swift; sourceTree = SOURCE_ROOT; };
 		9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholder.swift; sourceTree = "<group>"; };
 		9598CFE225D06A6C00FA9E1B /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateButton.swift; path = lazybear/Views/CreateButton.swift; sourceTree = SOURCE_ROOT; };
 		959D28DB25CC99710029F689 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsModel.swift; path = lazybear/Models/NewsModel.swift; sourceTree = SOURCE_ROOT; };
@@ -254,7 +254,7 @@
 				95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */,
 				95D1BF4825ADCF7700E5D063 /* Persistence.swift */,
 				95078FD025BF4E640004FA75 /* CloudKitManager.swift */,
-				958B678425C42B2400BF9F89 /* ApiAccess.swift */,
+				958B678425C42B2400BF9F89 /* ApiManager.swift */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95E07B6A25CE9398001718AB /* AppView.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
@@ -370,7 +370,7 @@
 				95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */,
 				95ED8CE025D03D8900B6B605 /* StockAndNews.swift in Sources */,
 				95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */,
-				958B678525C42B2400BF9F89 /* ApiAccess.swift in Sources */,
+				958B678525C42B2400BF9F89 /* ApiManager.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
 				9598CFE325D06A6D00FA9E1B /* CreateButton.swift in Sources */,
 				95E07B6B25CE9398001718AB /* AppView.swift in Sources */,

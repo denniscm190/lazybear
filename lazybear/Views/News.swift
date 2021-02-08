@@ -9,7 +9,7 @@ import SwiftUI
 
 struct News: View {
     var symbol: String
-    @EnvironmentObject var apiAccess: ApiAccess
+    @EnvironmentObject var apiManager: ApiManager
     
     // <--------- API Job --------->
     @State private var url = String() {
@@ -35,8 +35,8 @@ struct News: View {
     
     
     private func getUrl() {
-        let baseUrl = apiAccess.results[apiAccess.option].url ?? ""
-        let token = apiAccess.results[apiAccess.option].key ?? ""
+        let baseUrl = apiManager.results[apiManager.option].url ?? ""
+        let token = apiManager.results[apiManager.option].key ?? ""
         let path = "/stable/stock/\(symbol)/news/last/10?token="
         
         self.url = baseUrl + path + token
@@ -46,6 +46,6 @@ struct News: View {
 struct News_Previews: PreviewProvider {
     static var previews: some View {
         News(symbol: "aapl")
-            .environmentObject(ApiAccess())
+            .environmentObject(ApiManager())
     }
 }

@@ -12,7 +12,7 @@ import SDWebImageSwiftUI
 struct WatchlistRow: View {
     var company: WatchlistCompany
     @Environment(\.editMode) var editMode  // EditButton list
-    @EnvironmentObject var apiAccess: ApiAccess
+    @EnvironmentObject var apiManager: ApiManager
     
     var body: some View {
         NavigationLink(destination: Company(name: company.name ?? "", symbol: company.symbol ?? "")) {
@@ -41,7 +41,7 @@ struct WatchlistRow: View {
     }
     
     private func endpoint() -> String {
-        let url = apiAccess.results[0].url
+        let url = apiManager.results[0].url
         let path = "/iex/api/logos/\(company.symbol ?? "").png"
         let endpoint = url! + path
         
