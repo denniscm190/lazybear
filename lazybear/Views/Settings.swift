@@ -9,7 +9,22 @@ import SwiftUI
 
 struct Settings: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Form {
+                Section(header: Text("")) {
+                    Label("General", image: "")
+                    Label("Appearance", image: "")
+                    Label("Theme", image: "")
+                    Label("App icon", image: "")
+                }
+    
+                Section(header: Text("")) {
+                    Label("About", image: "")
+                    Label("Rate Lazybear", image: "")
+                }
+            }
+            .navigationBarTitle("Settings", displayMode: .inline)
+        }
     }
 }
 

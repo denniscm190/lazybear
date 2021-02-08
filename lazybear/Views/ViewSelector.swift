@@ -27,7 +27,7 @@ struct ViewSelector: View {
             //message: Text("History will be claered from your device"),
             buttons: [.cancel(Text("Cancel")) { self.showingActionSheet = false },
                       .default(Text("Chart & news")) { self.viewSelected = 0 },
-                      .default(Text("Insider transactions")) { self.viewSelected = 1 }
+                      .default(Text("Insiders")) { self.viewSelected = 1 }
             ])
         
         return action
