@@ -54,11 +54,11 @@ struct TransactionDetail: View {
                     }
                     let price = data.transactionPrice ?? 0
                     if price != 0 {
-                        Text("Price per share: $\(shares, specifier: "%.2f")")
+                        Text("Price per share: $\(price, specifier: "%.2f")")
                     }
                     let value = data.transactionValue ?? 0
                     if value != 0 {
-                        Text("Transaction value: $\(shares, specifier: "%.2f")")
+                        Text("Transaction value: $\(value, specifier: "%.2f")")
                     }
                 }
             }

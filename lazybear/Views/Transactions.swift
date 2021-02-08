@@ -20,13 +20,15 @@ struct Transactions: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text("Insider transactions")
+            Text("Insiders")
                 .fontWeight(.semibold)
-                .modifier(TitleMod())
+                .modifier(Title())
             
             List {
-                ForEach(data, id: \.self) { data in
-                    TransactionRow(data: data)
+                Section(header: Text("Transactions")) {
+                    ForEach(data, id: \.self) { data in
+                        TransactionRow(data: data)
+                    }
                 }
             }
         } .onAppear { getUrl() }

@@ -18,19 +18,24 @@ struct HistoryList: View {
     
     var body: some View {
         if history.count > 0 {
-            Section(header: Text("History"),
-                    footer: Button(action: { self.showingActionSheet = true }
-                    ) {
-                        Text("Clear history").foregroundColor(.blue)
-                            .actionSheet(isPresented: $showingActionSheet) { alert() }
+            List {
+                Section(header: Text("History"),
+                        footer: Button(action: { self.showingActionSheet = true }
+                        ) {
+                            Text("Clear history").foregroundColor(.blue)
+                                .actionSheet(isPresented: $showingActionSheet) { alert() }
+                        }
+                ) {
+                    // Sorte array by Date. The new ones come first in the list
+                    let sorted = history.sorted { $0.date ?? Date() > $1.date ?? Date() }
+                    ForEach(sorted) { company in
+                        CompanyRow(history: company)
                     }
-            ) {
-                // Sorte array by Date. The new ones come first in the list
-                let sorted = history.sorted { $0.date ?? Date() > $1.date ?? Date() }
-                ForEach(sorted) { company in
-                    CompanyRow(history: company)
                 }
             }
+        } else {
+            Placeholder(title: "Try to search something!", text: "For example, type 'Apple' in the search bar")
+            Spacer()
         }
     }
     

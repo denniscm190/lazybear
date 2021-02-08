@@ -36,7 +36,8 @@
 		95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */; };
 		95B395A525BDF42E009A7EB0 /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B395A425BDF42E009A7EB0 /* companies.json */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
-		95DDC7AB25D1A98A002B2C9A /* TitleMod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDC7AA25D1A98A002B2C9A /* TitleMod.swift */; };
+		95DDC7B025D1ABF5002B2C9A /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDC7AF25D1ABF5002B2C9A /* Title.swift */; };
+		95DDC7B525D1AD3C002B2C9A /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDC7B425D1AD3C002B2C9A /* Placeholder.swift */; };
 		95E07B6B25CE9398001718AB /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E07B6A25CE9398001718AB /* AppView.swift */; };
 		95E07B6E25CE95A1001718AB /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E07B6D25CE95A1001718AB /* Search.swift */; };
 		95E07B7225CE95D9001718AB /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E07B7125CE95D9001718AB /* Settings.swift */; };
@@ -96,7 +97,8 @@
 		95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionCodes.swift; path = lazybear/Data/TransactionCodes.swift; sourceTree = SOURCE_ROOT; };
 		95B395A425BDF42E009A7EB0 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LazyBear/Persistence.swift; sourceTree = SOURCE_ROOT; };
-		95DDC7AA25D1A98A002B2C9A /* TitleMod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TitleMod.swift; path = lazybear/Views/TitleMod.swift; sourceTree = SOURCE_ROOT; };
+		95DDC7AF25D1ABF5002B2C9A /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Title.swift; path = lazybear/Views/Title.swift; sourceTree = SOURCE_ROOT; };
+		95DDC7B425D1AD3C002B2C9A /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = lazybear/Views/Placeholder.swift; sourceTree = SOURCE_ROOT; };
 		95E07B6A25CE9398001718AB /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppView.swift; path = lazybear/AppView.swift; sourceTree = SOURCE_ROOT; };
 		95E07B6D25CE95A1001718AB /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Search.swift; path = LazyBear/Views/Search.swift; sourceTree = SOURCE_ROOT; };
 		95E07B7125CE95D9001718AB /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Settings.swift; path = LazyBear/Views/Settings.swift; sourceTree = SOURCE_ROOT; };
@@ -173,6 +175,7 @@
 				95612C4F2598D48200F7698F /* SearchBar.swift */,
 				95ED8CD325D0242200B6B605 /* CompanyList.swift */,
 				95ED8CD625D0242900B6B605 /* HistoryList.swift */,
+				95DDC7B425D1AD3C002B2C9A /* Placeholder.swift */,
 				95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */,
 				95E411A625BEE03000A9C23F /* Watchlist.swift */,
 				95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */,
@@ -184,7 +187,7 @@
 				9598CFE225D06A6C00FA9E1B /* CreateButton.swift */,
 				95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */,
 				95E411B525BEE84E00A9C23F /* Stock.swift */,
-				95DDC7AA25D1A98A002B2C9A /* TitleMod.swift */,
+				95DDC7AF25D1ABF5002B2C9A /* Title.swift */,
 				95F6C30825BAF7C2003CF389 /* Selection.swift */,
 				9520F0B125C712D000692610 /* LineChartShape.swift */,
 				9520F0B425C7131300692610 /* LineChart.swift */,
@@ -359,7 +362,7 @@
 				9520F0B525C7131300692610 /* LineChart.swift in Sources */,
 				9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */,
 				959D28DF25CC9A1A0029F689 /* News.swift in Sources */,
-				95DDC7AB25D1A98A002B2C9A /* TitleMod.swift in Sources */,
+				95DDC7B025D1ABF5002B2C9A /* Title.swift in Sources */,
 				95E07B9D25CEAC46001718AB /* TransactionDetail.swift in Sources */,
 				95FE646B25C30B880052832E /* ApiModel.swift in Sources */,
 				95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */,
@@ -382,6 +385,7 @@
 				95ED176B25CEFE1B00AE34B3 /* RecentSearch+CoreDataClass.swift in Sources */,
 				95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */,
 				95E411B625BEE84E00A9C23F /* Stock.swift in Sources */,
+				95DDC7B525D1AD3C002B2C9A /* Placeholder.swift in Sources */,
 				95ED8CD425D0242200B6B605 /* CompanyList.swift in Sources */,
 				95ED8CDB25D02DF300B6B605 /* LogoModifier.swift in Sources */,
 				9520F0B225C712D000692610 /* LineChartShape.swift in Sources */,

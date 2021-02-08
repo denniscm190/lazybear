@@ -30,28 +30,32 @@ struct Stock: View {
         VStack(alignment: .leading) {
             Text("Stock")
                 .fontWeight(.semibold)
-                .modifier(TitleMod())
+                .modifier(Title())
             
             Divider()
             HStack {
                 Price(symbol: symbol, showHorizontal: true)
+                    .padding(.leading)
+                
                 Spacer()
             }
             
             Divider()
-            Selection(items: periods, selected: $selectedPeriod)
-                .onChange(of: selectedPeriod, perform: { (value) in
-                    getUrl(range: periods[selectedPeriod])
-                })
-            
-            let prices = data.map { $0.close ?? 0 }
-            if showingLineChart {
-                let normalPrices = normalize(prices)
-                LineChart(dataPoints: normalPrices, lineColor: colorLineChart(prices: prices) ? .green : .red, lineWidth: 2)
-                    .frame(height: lineChartHeight)
+            Group {
+                Selection(items: periods, selected: $selectedPeriod)
+                    .onChange(of: selectedPeriod, perform: { (value) in
+                        getUrl(range: periods[selectedPeriod])
+                    })
+                
+                let prices = data.map { $0.close ?? 0 }
+                if showingLineChart {
+                    let normalPrices = normalize(prices)
+                    LineChart(dataPoints: normalPrices, lineColor: colorLineChart(prices: prices) ? .green : .red, lineWidth: 2)
+                        .frame(height: lineChartHeight)
+                }
             }
+            .padding([.leading, .trailing])
         }
-        .padding([.leading, .trailing])
         .onAppear { getUrl(range: periods[selectedPeriod]) }
     }
     

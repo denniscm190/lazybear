@@ -11,11 +11,12 @@ struct CompanyList: View {
     @State var searchedCompany: String
     
     var body: some View {
-        ForEach(companiesData.filter({ searchedCompany.isEmpty ? true : $0.name.localizedStandardContains(searchedCompany) })
-                , id: \.symbol) { company in
-                CompanyRow(company: company)
-            
-        }
+        List {
+            ForEach(companiesData.filter({ searchedCompany.isEmpty ? true : $0.name.localizedStandardContains(searchedCompany) })
+                    , id: \.symbol) { company in
+                    CompanyRow(company: company)
+            }
+        } .id(UUID())  // Increase speed in search the list
     }
 }
 

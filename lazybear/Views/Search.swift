@@ -14,17 +14,17 @@ struct Search: View {
         NavigationView {
             VStack {
                 SearchBar(searchedText: $searchedCompany)
-                List {
+                Spacer()
+                
                     if searchedCompany.count > 2 {
                         CompanyList(searchedCompany: searchedCompany)
                     } else {
                         HistoryList()
                     }
-                }
-                .id(UUID())  // Increase speed in search the list
-                .navigationBarTitle("Search", displayMode: .inline)
             }
-        } .navigationViewStyle(StackNavigationViewStyle())
+            .navigationBarTitle("Search", displayMode: .inline)
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
