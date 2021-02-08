@@ -27,7 +27,11 @@ struct Stock: View {
     // <--------- API Job --------->
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text("Stock")
+                .fontWeight(.semibold)
+                .modifier(TitleMod())
+            
             Divider()
             HStack {
                 Price(symbol: symbol, showHorizontal: true)

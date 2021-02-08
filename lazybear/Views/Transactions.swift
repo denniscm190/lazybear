@@ -21,9 +21,8 @@ struct Transactions: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Insider transactions")
-                .font(.title)
                 .fontWeight(.semibold)
-                .padding([.leading, .bottom])
+                .modifier(TitleMod())
             
             List {
                 ForEach(data, id: \.self) { data in
