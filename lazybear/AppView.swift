@@ -29,13 +29,13 @@ struct AppView: View {
     
     // Assign CloudKit fetch to model
     private func cloudValues() {
-        var results = [ApiModel]()
+        var results = [ApiManagerModel]()
         cloudFetch.forEach({ (result) in
             let key = result.object(forKey: "key") as? String
             let name = result.object(forKey: "name") as? String
             let url = result.object(forKey: "url") as? String
             
-            let value = ApiModel(key: key, name: name, url: url)
+            let value = ApiManagerModel(key: key, name: name, url: url)
             results.append(value)
         })
         // Main thread

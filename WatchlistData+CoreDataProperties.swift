@@ -1,8 +1,8 @@
 //
-//  WatchlistCompany+CoreDataProperties.swift
+//  WatchlistData+CoreDataProperties.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 28/1/21.
+//  Created by Dennis Concepción Martín on 8/2/21.
 //
 //
 
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension WatchlistCompany {
+extension WatchlistData {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<WatchlistCompany> {
-        return NSFetchRequest<WatchlistCompany>(entityName: "WatchlistCompany")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<WatchlistData> {
+        return NSFetchRequest<WatchlistData>(entityName: "WatchlistData")
     }
 
     @NSManaged public var cik: String?
@@ -33,6 +33,6 @@ extension WatchlistCompany {
 
 }
 
-extension WatchlistCompany : Identifiable {
+extension WatchlistData : Identifiable {
 
 }

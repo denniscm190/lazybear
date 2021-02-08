@@ -10,17 +10,17 @@ import CloudKit
 
 struct Watchlist: View {
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var companies: FetchedResults<WatchlistCompany>  // Fetch core data
+    @FetchRequest(entity: WatchlistData.entity(), sortDescriptors: [])
+    var watchlistData: FetchedResults<WatchlistData>  // Fetch core data
     
     var body: some View {
         NavigationView {
             VStack {
-                if companies.count > 0 {
+                if watchlistData.count > 0 {
                     List {
                         Section(header: Text("Watchlist")) {
-                            ForEach(companies) { company in
-                                WatchlistRow(company: company)
+                            ForEach(watchlistData) { company in
+                                WatchlistRow(watchlistData: company)
                             }
                             .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }  // Delete from persistent storage
                         }
@@ -38,7 +38,7 @@ struct Watchlist: View {
     
     func deleteWatchlist(indexSet: IndexSet) {
         for index in indexSet {
-            viewContext.delete(companies[index])
+            viewContext.delete(watchlistData[index])
         }
         do {
             try viewContext.save()

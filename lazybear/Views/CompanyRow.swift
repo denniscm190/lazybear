@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct CompanyRow: View {
-    var company: CompanyModel?
-    var history: RecentSearch?
+    var companyModel: CompanyModel?
+    var historyData: HistoryData?
     @State var showingCompany = false
     
     var body: some View {
-        let name = company?.name ?? history?.name ?? ""
-        let symbol = company?.symbol ?? history?.symbol ?? ""
+        let name = companyModel?.name ?? historyData?.name ?? ""
+        let symbol = companyModel?.symbol ?? historyData?.symbol ?? ""
         
         NavigationLink(destination: Company(name: name, symbol: symbol)) {
             HStack {
@@ -26,7 +26,7 @@ struct CompanyRow: View {
                         .font(.subheadline)
                 }
                 
-                if history != nil {
+                if historyData != nil {
                     Spacer()
                     let (day, month) = formatDate()
                     Text("\(day) \(month)")
@@ -37,7 +37,7 @@ struct CompanyRow: View {
     }
     
     private func formatDate() -> (String, String) {
-        let date = history?.date ?? Date()
+        let date = historyData?.date ?? Date()
         let calendar = Calendar.current
         let components = calendar.dateComponents([.day, .month], from: date)
         
@@ -51,6 +51,6 @@ struct CompanyRow: View {
 
 struct CompanyRown_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyRow(company: companiesData[0])
+        CompanyRow(companyModel: companiesData[0])
     }
 }

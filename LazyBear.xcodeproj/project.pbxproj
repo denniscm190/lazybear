@@ -22,13 +22,17 @@
 		9589C94D25CE0B4C0045DFF3 /* AddWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */; };
 		958B678525C42B2400BF9F89 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958B678425C42B2400BF9F89 /* ApiManager.swift */; };
 		9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */; };
-		9598CFE325D06A6D00FA9E1B /* CreateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598CFE225D06A6C00FA9E1B /* CreateButton.swift */; };
+		9598CFE325D06A6D00FA9E1B /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9598CFE225D06A6C00FA9E1B /* AddButton.swift */; };
 		959D28DC25CC99710029F689 /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D28DB25CC99710029F689 /* NewsModel.swift */; };
 		959D28DF25CC9A1A0029F689 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D28DE25CC9A1A0029F689 /* News.swift */; };
 		959D28E225CC9B370029F689 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959D28E125CC9B370029F689 /* NewsRow.swift */; };
 		95AB4A7A259DCBAE0064C9C1 /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */; };
 		95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */; };
 		95AB4A90259DD66D0064C9C1 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */; };
+		95B0421725D1EC2F00230109 /* HistoryData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0421525D1EC2F00230109 /* HistoryData+CoreDataClass.swift */; };
+		95B0421825D1EC3000230109 /* HistoryData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0421625D1EC2F00230109 /* HistoryData+CoreDataProperties.swift */; };
+		95B0421C25D1EC4200230109 /* WatchlistData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0421A25D1EC4200230109 /* WatchlistData+CoreDataClass.swift */; };
+		95B0421D25D1EC4200230109 /* WatchlistData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B0421B25D1EC4200230109 /* WatchlistData+CoreDataProperties.swift */; };
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
 		95B04EB72521236A000AD27F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B04EB62521236A000AD27F /* Assets.xcassets */; };
@@ -48,8 +52,6 @@
 		95E411A725BEE03000A9C23F /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411A625BEE03000A9C23F /* Watchlist.swift */; };
 		95E411B625BEE84E00A9C23F /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411B525BEE84E00A9C23F /* Stock.swift */; };
 		95E411BE25BEEA6C00A9C23F /* WatchlistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */; };
-		95ED176B25CEFE1B00AE34B3 /* RecentSearch+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED176925CEFE1B00AE34B3 /* RecentSearch+CoreDataClass.swift */; };
-		95ED176C25CEFE1B00AE34B3 /* RecentSearch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED176A25CEFE1B00AE34B3 /* RecentSearch+CoreDataProperties.swift */; };
 		95ED8CD425D0242200B6B605 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED8CD325D0242200B6B605 /* CompanyList.swift */; };
 		95ED8CD725D0242900B6B605 /* HistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED8CD625D0242900B6B605 /* HistoryList.swift */; };
 		95ED8CDB25D02DF300B6B605 /* LogoModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ED8CDA25D02DF300B6B605 /* LogoModifier.swift */; };
@@ -59,9 +61,7 @@
 		95F6CA0525CF2A4E0064E4E9 /* ViewSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */; };
 		95F6F45C25C20D8D002AC66A /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F6F45B25C20D8D002AC66A /* Price.swift */; };
 		95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */; };
-		95FE646725C2DC580052832E /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FE646525C2DC570052832E /* WatchlistCompany+CoreDataClass.swift */; };
-		95FE646825C2DC580052832E /* WatchlistCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FE646625C2DC570052832E /* WatchlistCompany+CoreDataProperties.swift */; };
-		95FE646B25C30B880052832E /* ApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FE646A25C30B880052832E /* ApiModel.swift */; };
+		95FE646B25C30B880052832E /* ApiManagerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FE646A25C30B880052832E /* ApiManagerModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,13 +81,17 @@
 		9589C94C25CE0B4C0045DFF3 /* AddWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddWatchlist.swift; path = LazyBear/Views/AddWatchlist.swift; sourceTree = SOURCE_ROOT; };
 		958B678425C42B2400BF9F89 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManager.swift; path = lazybear/ApiManager.swift; sourceTree = SOURCE_ROOT; };
 		9597CE0325C1DFE7004DDFED /* LogoPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoPlaceholder.swift; sourceTree = "<group>"; };
-		9598CFE225D06A6C00FA9E1B /* CreateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateButton.swift; path = lazybear/Views/CreateButton.swift; sourceTree = SOURCE_ROOT; };
+		9598CFE225D06A6C00FA9E1B /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddButton.swift; path = lazybear/Views/AddButton.swift; sourceTree = SOURCE_ROOT; };
 		959D28DB25CC99710029F689 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsModel.swift; path = lazybear/Models/NewsModel.swift; sourceTree = SOURCE_ROOT; };
 		959D28DE25CC9A1A0029F689 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = News.swift; path = LazyBear/Views/News.swift; sourceTree = SOURCE_ROOT; };
 		959D28E125CC9B370029F689 /* NewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsRow.swift; path = LazyBear/Views/NewsRow.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A79259DCBAE0064C9C1 /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReadJson.swift; path = LazyBear/Jobs/ReadJson.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyModel.swift; path = lazybear/Models/CompanyModel.swift; sourceTree = SOURCE_ROOT; };
 		95AB4A8F259DD66D0064C9C1 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
+		95B0421525D1EC2F00230109 /* HistoryData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		95B0421625D1EC2F00230109 /* HistoryData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HistoryData+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		95B0421A25D1EC4200230109 /* WatchlistData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		95B0421B25D1EC4200230109 /* WatchlistData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95B04EAF25212369000AD27F /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95B04EB225212369000AD27F /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95B04EB425212369000AD27F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,8 +112,6 @@
 		95E411A625BEE03000A9C23F /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
 		95E411B525BEE84E00A9C23F /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		95E411BD25BEEA6C00A9C23F /* WatchlistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistRow.swift; sourceTree = "<group>"; };
-		95ED176925CEFE1B00AE34B3 /* RecentSearch+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearch+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95ED176A25CEFE1B00AE34B3 /* RecentSearch+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RecentSearch+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95ED8CD325D0242200B6B605 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompanyList.swift; path = lazybear/Views/CompanyList.swift; sourceTree = SOURCE_ROOT; };
 		95ED8CD625D0242900B6B605 /* HistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryList.swift; path = lazybear/Views/HistoryList.swift; sourceTree = SOURCE_ROOT; };
 		95ED8CDA25D02DF300B6B605 /* LogoModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LogoModifier.swift; path = lazybear/Views/LogoModifier.swift; sourceTree = SOURCE_ROOT; };
@@ -119,9 +121,7 @@
 		95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewSelector.swift; path = LazyBear/Views/ViewSelector.swift; sourceTree = SOURCE_ROOT; };
 		95F6F45B25C20D8D002AC66A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		95F7CAF525ADC7B7009E0E7C /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
-		95FE646525C2DC570052832E /* WatchlistCompany+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95FE646625C2DC570052832E /* WatchlistCompany+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		95FE646A25C30B880052832E /* ApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiModel.swift; path = lazybear/Models/ApiModel.swift; sourceTree = SOURCE_ROOT; };
+		95FE646A25C30B880052832E /* ApiManagerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiManagerModel.swift; path = lazybear/Models/ApiManagerModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +160,7 @@
 			children = (
 				95AB4A7C259DCC0C0064C9C1 /* CompanyModel.swift */,
 				954D992425A2123B001F7F60 /* HistoricalPricesModel.swift */,
-				95FE646A25C30B880052832E /* ApiModel.swift */,
+				95FE646A25C30B880052832E /* ApiManagerModel.swift */,
 				954DDF0325C456E800848A4B /* QuoteModel.swift */,
 				95363CE125C87CF000B74131 /* InsiderTransactionModel.swift */,
 				959D28DB25CC99710029F689 /* NewsModel.swift */,
@@ -184,7 +184,7 @@
 				95F6F45B25C20D8D002AC66A /* Price.swift */,
 				95E07B7125CE95D9001718AB /* Settings.swift */,
 				95F6C2EF25BAE2ED003CF389 /* Company.swift */,
-				9598CFE225D06A6C00FA9E1B /* CreateButton.swift */,
+				9598CFE225D06A6C00FA9E1B /* AddButton.swift */,
 				95F6CA0425CF2A4E0064E4E9 /* ViewSelector.swift */,
 				95E411B525BEE84E00A9C23F /* Stock.swift */,
 				95DDC7AF25D1ABF5002B2C9A /* Title.swift */,
@@ -232,10 +232,10 @@
 		95B04EA625212369000AD27F = {
 			isa = PBXGroup;
 			children = (
-				95ED176925CEFE1B00AE34B3 /* RecentSearch+CoreDataClass.swift */,
-				95ED176A25CEFE1B00AE34B3 /* RecentSearch+CoreDataProperties.swift */,
-				95FE646525C2DC570052832E /* WatchlistCompany+CoreDataClass.swift */,
-				95FE646625C2DC570052832E /* WatchlistCompany+CoreDataProperties.swift */,
+				95B0421A25D1EC4200230109 /* WatchlistData+CoreDataClass.swift */,
+				95B0421B25D1EC4200230109 /* WatchlistData+CoreDataProperties.swift */,
+				95B0421525D1EC2F00230109 /* HistoryData+CoreDataClass.swift */,
+				95B0421625D1EC2F00230109 /* HistoryData+CoreDataProperties.swift */,
 				95B04EB125212369000AD27F /* LazyBear */,
 				95B04EB025212369000AD27F /* Products */,
 				9500257E256D17D9008FFD28 /* Frameworks */,
@@ -362,9 +362,10 @@
 				9520F0B525C7131300692610 /* LineChart.swift in Sources */,
 				9597CE0425C1DFE7004DDFED /* LogoPlaceholder.swift in Sources */,
 				959D28DF25CC9A1A0029F689 /* News.swift in Sources */,
+				95B0421D25D1EC4200230109 /* WatchlistData+CoreDataProperties.swift in Sources */,
 				95DDC7B025D1ABF5002B2C9A /* Title.swift in Sources */,
 				95E07B9D25CEAC46001718AB /* TransactionDetail.swift in Sources */,
-				95FE646B25C30B880052832E /* ApiModel.swift in Sources */,
+				95FE646B25C30B880052832E /* ApiManagerModel.swift in Sources */,
 				95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */,
 				95612C512598D48200F7698F /* SearchBar.swift in Sources */,
 				95E411BE25BEEA6C00A9C23F /* WatchlistRow.swift in Sources */,
@@ -374,15 +375,14 @@
 				95E07B7225CE95D9001718AB /* Settings.swift in Sources */,
 				959D28DC25CC99710029F689 /* NewsModel.swift in Sources */,
 				95F6C30925BAF7C2003CF389 /* Selection.swift in Sources */,
+				95B0421C25D1EC4200230109 /* WatchlistData+CoreDataClass.swift in Sources */,
 				95F6C2F025BAE2ED003CF389 /* Company.swift in Sources */,
 				95ED8CE025D03D8900B6B605 /* StockAndNews.swift in Sources */,
 				95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */,
 				958B678525C42B2400BF9F89 /* ApiManager.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
-				9598CFE325D06A6D00FA9E1B /* CreateButton.swift in Sources */,
+				9598CFE325D06A6D00FA9E1B /* AddButton.swift in Sources */,
 				95E07B6B25CE9398001718AB /* AppView.swift in Sources */,
-				95ED176C25CEFE1B00AE34B3 /* RecentSearch+CoreDataProperties.swift in Sources */,
-				95ED176B25CEFE1B00AE34B3 /* RecentSearch+CoreDataClass.swift in Sources */,
 				95AB4A7D259DCC0C0064C9C1 /* CompanyModel.swift in Sources */,
 				95E411B625BEE84E00A9C23F /* Stock.swift in Sources */,
 				95DDC7B525D1AD3C002B2C9A /* Placeholder.swift in Sources */,
@@ -392,14 +392,14 @@
 				95F6CA0525CF2A4E0064E4E9 /* ViewSelector.swift in Sources */,
 				95E07BA325CEAC7D001718AB /* Transactions.swift in Sources */,
 				954D992525A2123B001F7F60 /* HistoricalPricesModel.swift in Sources */,
-				95FE646725C2DC580052832E /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				95E411A725BEE03000A9C23F /* Watchlist.swift in Sources */,
 				95825AFC25C7255600465409 /* NormalizeData.swift in Sources */,
 				95363CDC25C8741900B74131 /* Request.swift in Sources */,
 				95363CE225C87CF000B74131 /* InsiderTransactionModel.swift in Sources */,
 				95E07B6E25CE95A1001718AB /* Search.swift in Sources */,
+				95B0421725D1EC2F00230109 /* HistoryData+CoreDataClass.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,
-				95FE646825C2DC580052832E /* WatchlistCompany+CoreDataProperties.swift in Sources */,
+				95B0421825D1EC3000230109 /* HistoryData+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

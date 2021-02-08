@@ -28,7 +28,7 @@ struct Company: View {
         .navigationBarTitle(symbol, displayMode: .inline)
         .navigationBarItems(trailing:
             HStack {
-                CreateButton(symbol: symbol, name: name)
+                AddButton(symbol: symbol, name: name)
                     .padding(.trailing)
                 
                 Spacer()
@@ -38,7 +38,7 @@ struct Company: View {
     }
     
     private func saveSearch(name: String, symbol: String) {
-        let searched = RecentSearch(context: viewContext)
+        let searched = HistoryData(context: viewContext)
         searched.name = name
         searched.symbol = symbol
         searched.date = Date()

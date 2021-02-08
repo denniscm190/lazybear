@@ -24,7 +24,6 @@ struct ViewSelector: View {
     private func alert() -> ActionSheet {
         let action = ActionSheet(
             title: Text("Views"),
-            //message: Text("History will be claered from your device"),
             buttons: [.cancel(Text("Cancel")) { self.showingActionSheet = false },
                       .default(Text("Chart & news")) { self.viewSelected = 0 },
                       .default(Text("Insiders")) { self.viewSelected = 1 }

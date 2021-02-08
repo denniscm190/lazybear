@@ -14,7 +14,7 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<14 {
-            let newItem = WatchlistCompany(context: viewContext)
+            let newItem = WatchlistData(context: viewContext)
             newItem.symbol = String()
             newItem.exchange = String()
             newItem.exchangeSuffix = String()
@@ -32,7 +32,7 @@ struct PersistenceController {
         }
         
         for _ in 0..<1 {
-            let newItem = RecentSearch(context: viewContext)
+            let newItem = HistoryData(context: viewContext)
             newItem.name = String()
             newItem.symbol = String()
         }

@@ -8,15 +8,15 @@
 import SwiftUI
 import SPAlert
 
-struct CreateButton: View {
+struct AddButton: View {
     var symbol: String
     var name: String
     
     @State private var showingActionSheet = false
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var companies: FetchedResults<WatchlistCompany>  // Fetch core data
+    @FetchRequest(entity: WatchlistData.entity(), sortDescriptors: [])
+    var companies: FetchedResults<WatchlistData>  // Fetch core data
     
     var body: some View {
         Button(action: { self.showingActionSheet = true }) {
@@ -49,7 +49,7 @@ struct CreateButton: View {
     
     private func addWatchlist() {
         let alertView = SPAlertView(title: "Added to watchlist", preset: .done)
-        let watchlistCompany = WatchlistCompany(context: viewContext)
+        let watchlistCompany = WatchlistData(context: viewContext)
         watchlistCompany.name = name
         watchlistCompany.symbol = symbol
         do {
@@ -80,6 +80,6 @@ struct CreateButton: View {
 
 struct CreateButton_Previews: PreviewProvider {
     static var previews: some View {
-        CreateButton(symbol: "aapl", name: "apple inc")
+        AddButton(symbol: "aapl", name: "apple inc")
     }
 }

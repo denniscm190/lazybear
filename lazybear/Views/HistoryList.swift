@@ -12,12 +12,12 @@ struct HistoryList: View {
     
     // <--------- Core Data --------->
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: RecentSearch.entity(), sortDescriptors: [])
-    var history: FetchedResults<RecentSearch>
+    @FetchRequest(entity: HistoryData.entity(), sortDescriptors: [])
+    var historyData: FetchedResults<HistoryData>
     // <--------- Core Data --------->
     
     var body: some View {
-        if history.count > 0 {
+        if historyData.count > 0 {
             List {
                 Section(header: Text("History"),
                         footer: Button(action: { self.showingActionSheet = true }
@@ -27,9 +27,9 @@ struct HistoryList: View {
                         }
                 ) {
                     // Sorte array by Date. The new ones come first in the list
-                    let sorted = history.sorted { $0.date ?? Date() > $1.date ?? Date() }
+                    let sorted = historyData.sorted { $0.date ?? Date() > $1.date ?? Date() }
                     ForEach(sorted) { company in
-                        CompanyRow(history: company)
+                        CompanyRow(historyData: company)
                     }
                 }
             }
@@ -40,7 +40,7 @@ struct HistoryList: View {
     }
     
     private func delete() {
-        for company in history {
+        for company in historyData {
             viewContext.delete(company)
         }
         do {

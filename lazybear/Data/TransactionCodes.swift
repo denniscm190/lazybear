@@ -6,8 +6,8 @@
 //
 
 import Foundation
-// General transaction codes for Form 4
 
+// General transaction codes for Form 4
 let transactionCodes: [String: String] = [
     "P": "Open market or private purchase of securities",
     "S": "Open market or private sale of securities",

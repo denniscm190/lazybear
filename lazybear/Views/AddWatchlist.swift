@@ -14,17 +14,17 @@ struct AddWatchlist: View {
     
     // <--------- Core Data --------->
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var companies: FetchedResults<WatchlistCompany>
+    @FetchRequest(entity: WatchlistData.entity(), sortDescriptors: [])
+    var watchlistData: FetchedResults<WatchlistData>
     // <--------- Core Data --------->
     
     var body: some View {
-        let watchSymbols = companies.map { $0.symbol }
+        let watchlistSymbols = watchlistData.map { $0.symbol }
         let alertView = SPAlertView(title: "Company added", preset: .done)
         
-        if !watchSymbols.contains(symbol) {
+        if !watchlistSymbols.contains(symbol) {
             Button(action: {
-                addWatchlist(name: name, symbol: symbol)
+                addWatchlist()
                 alertView.present(haptic: .success)
             }) {
                 Text("Add")
@@ -32,10 +32,10 @@ struct AddWatchlist: View {
         }
     }
     
-    private func addWatchlist(name: String, symbol: String) {
-        let watchlistCompany = WatchlistCompany(context: viewContext)
-        watchlistCompany.name = name
-        watchlistCompany.symbol = symbol
+    private func addWatchlist() {
+        let watchlistData = WatchlistData(context: viewContext)
+        watchlistData.name = name
+        watchlistData.symbol = symbol
         do {
             try viewContext.save()
             print("Company saved.")
@@ -44,9 +44,10 @@ struct AddWatchlist: View {
         }
     }
 }
-
+/*
 struct AddWatchlist_Previews: PreviewProvider {
     static var previews: some View {
         AddWatchlist(symbol: "aapl", name: "apple")
     }
 }
+ */

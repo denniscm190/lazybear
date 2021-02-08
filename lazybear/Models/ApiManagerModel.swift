@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ApiModel {
+struct ApiManagerModel {
     var key: String?
     var name: String?
     var url: String?
