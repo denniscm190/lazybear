@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/*
+ Placeholder when some lists are empty, such as HistoryList and WachtList
+ */
+
 struct Placeholder: View {
     @State var title: String
     @State var text: String?

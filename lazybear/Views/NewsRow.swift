@@ -43,8 +43,11 @@ struct NewsRow: View {
         }
     }
     
+    // Cover Epoch time to human date
     private func epochToHours() -> (String, String) {
         let now = Date() // Current date
+        // Time when the article was published. Divide new.datetime by 1,000 because
+        // TimeInterval() function must be in seconds, not in miliseconds
         let articlePublished = Date(timeIntervalSince1970: TimeInterval(new.datetime ?? 0)/1000)
         
         let calendar = Calendar.current

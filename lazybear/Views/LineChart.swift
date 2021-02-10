@@ -21,14 +21,6 @@ struct LineChart: View {
                 LineChartShape(dataPoints: dataPoints, pointSize: pointSize, drawingLines: true)
                     .stroke(lineColor, lineWidth: lineWidth)
             }
-            
-            // Add the data points on the line
-            /*
-            if lineColor != .clear {
-                LineChartShape(dataPoints: dataPoints, pointSize: pointSize, drawingLines: false)
-                    .fill(pointColor)
-            }
-             */
         }
     }
 }

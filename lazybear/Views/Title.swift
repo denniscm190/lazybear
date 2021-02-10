@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/*
+ Views title modifier inside Company
+ */
+
 struct Title: ViewModifier {
     func body(content: Content) -> some View {
         content

@@ -19,6 +19,7 @@ struct WatchlistRow: View {
         let symbol = watchlistData.symbol ?? ""
         NavigationLink(destination: Company(name: name, symbol: symbol)) {
             HStack {
+                // Request image. SDWebImageSwiftUI framework
                 WebImage(url: URL(string: endpoint(symbol: symbol)))
                     .resizable()
                     .placeholder { LogoPlaceholder() }  // If there is no logo
@@ -34,7 +35,9 @@ struct WatchlistRow: View {
                 }
                 
                 Spacer()
-                if self.editMode?.wrappedValue.isEditing ?? true { } else { // If EditButton() is not clicked -> show prices
+                // If EditButton() is not clicked => show prices
+                if self.editMode?.wrappedValue.isEditing ?? true { }
+                else {
                     Price(symbol: symbol, showHorizontal: false)
                 }
             }
@@ -42,6 +45,7 @@ struct WatchlistRow: View {
         }
     }
     
+    // Create endpoint to request logos
     private func endpoint(symbol: String) -> String {
         let url = apiManager.results[0].url
         let path = "/iex/api/logos/\(symbol).png"

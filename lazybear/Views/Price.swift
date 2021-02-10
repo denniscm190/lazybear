@@ -8,16 +8,21 @@
 import SwiftUI
 import CloudKit
 
+/*
+ Real-time stock prices. 1) On appear create endpoint, 2) when it's created request data from API,
+ 3) when data is received show view. Every x seconds the view will be refreshed to recall the API
+ and show the new stock price.
+ */
+
 struct Price: View {
     @State var symbol: String
     @State var showHorizontal: Bool
     @EnvironmentObject var apiManager: ApiManager
     
-    // <--------- API Job --------->
+    // API job variables
     @State private var showingView = false
     @State private var url = String() { didSet { requestPrice() }}
     @State private var data = [QuoteModel]() { didSet { self.showingView = true }}
-    // <--------- API Job --------->
     
     // Set recurrent price request. Real-time prices
     let timer = Timer.publish(every: 5, on: .main, in: .common).autoconnect()
@@ -34,6 +39,8 @@ struct Price: View {
                         .font(.subheadline)
                         .foregroundColor(percentageColor())
                 }
+                // Wrap content in a HStack if showHorizontal is passed true
+                // So the prices and the percentage change will show horizontal
                 .if(showHorizontal) { content in
                         HStack { content }
                     }
@@ -44,6 +51,7 @@ struct Price: View {
         .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
     }
     
+    // Create endpoint
      private func getUrl() {
         let baseUrl = apiManager.results[apiManager.option].url ?? ""
         let token = apiManager.results[apiManager.option].key ?? ""

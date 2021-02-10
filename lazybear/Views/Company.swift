@@ -7,12 +7,14 @@
 
 import SwiftUI
 
+/*
+ Base view when a company is tapped. On appear it will save the company to HistoryData.
+ */
+
 struct Company: View {
     var name: String
     var symbol: String
     @State var viewSelected = 0
-    
-    @Environment(\.presentationMode) var presentationMode
     @Environment(\.managedObjectContext) private var viewContext  // Core data
     
     var body: some View {
@@ -37,6 +39,7 @@ struct Company: View {
         )
     }
     
+    // Save company to HistoryData
     private func saveSearch(name: String, symbol: String) {
         let searched = HistoryData(context: viewContext)
         searched.name = name

@@ -32,7 +32,6 @@ struct NewsDetail: View {
                         Link("Read the full article", destination: URL(string: new.url ?? "")!)
                             .padding(.top)
                     }
-
                 }
             }
             .padding()

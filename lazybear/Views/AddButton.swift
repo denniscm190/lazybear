@@ -8,6 +8,10 @@
 import SwiftUI
 import SPAlert
 
+/*
+ Generic add button. When tapped many options could be shown. Save to favourite, to watchlist, etc
+ */
+
 struct AddButton: View {
     var symbol: String
     var name: String
@@ -22,7 +26,7 @@ struct AddButton: View {
         Button(action: { self.showingActionSheet = true }) {
             Image(systemName: "plus")
                 .imageScale(.large)
-                .frame(width: 30, height: 30)  // This frame change the tappable area
+                .frame(width: 30, height: 30)  // Increase tappable area
                 .actionSheet(isPresented: $showingActionSheet) { alert() }
         }
     }
@@ -31,7 +35,7 @@ struct AddButton: View {
     private func alert() -> ActionSheet {
         var buttons: [ActionSheet.Button] = [.cancel(Text("Cancel")) { self.showingActionSheet = false }]
         
-        // Logic to create buttons
+        // If the company is already in watchlist => show Remove from watchlist instead
         let watchlistSymbols = companies.map { $0.symbol }
         
         if watchlistSymbols.contains(symbol) {
@@ -47,6 +51,7 @@ struct AddButton: View {
         return action
     }
     
+    // Save company to Watchlist
     private func addWatchlist() {
         let alertView = SPAlertView(title: "Added to watchlist", preset: .done)
         let watchlistCompany = WatchlistData(context: viewContext)
@@ -61,6 +66,7 @@ struct AddButton: View {
         }
     }
     
+    // Remove company from watchlist
     func removeWatchlist() {
         let alertView = SPAlertView(title: "Removed from watchlist", preset: .done)
         let watchlistSymbols = companies.map { $0.symbol }

@@ -39,6 +39,7 @@
 		95B3552825CD4A5600BCDE8E /* NewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552725CD4A5600BCDE8E /* NewsDetail.swift */; };
 		95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */; };
 		95B395A525BDF42E009A7EB0 /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 95B395A425BDF42E009A7EB0 /* companies.json */; };
+		95BF355225D464B20010E48D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BF355125D464B20010E48D /* CoreDataManager.swift */; };
 		95D1BF4925ADCF7700E5D063 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D1BF4825ADCF7700E5D063 /* Persistence.swift */; };
 		95DDC7B025D1ABF5002B2C9A /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDC7AF25D1ABF5002B2C9A /* Title.swift */; };
 		95DDC7B525D1AD3C002B2C9A /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DDC7B425D1AD3C002B2C9A /* Placeholder.swift */; };
@@ -100,6 +101,7 @@
 		95B3552725CD4A5600BCDE8E /* NewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewsDetail.swift; path = LazyBear/Views/NewsDetail.swift; sourceTree = SOURCE_ROOT; };
 		95B3552E25CD629F00BCDE8E /* TransactionCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionCodes.swift; path = lazybear/Data/TransactionCodes.swift; sourceTree = SOURCE_ROOT; };
 		95B395A425BDF42E009A7EB0 /* companies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = companies.json; path = lazybear/Data/companies.json; sourceTree = SOURCE_ROOT; };
+		95BF355125D464B20010E48D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CoreDataManager.swift; path = lazybear/CoreDataManager.swift; sourceTree = SOURCE_ROOT; };
 		95D1BF4825ADCF7700E5D063 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = LazyBear/Persistence.swift; sourceTree = SOURCE_ROOT; };
 		95DDC7AF25D1ABF5002B2C9A /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Title.swift; path = lazybear/Views/Title.swift; sourceTree = SOURCE_ROOT; };
 		95DDC7B425D1AD3C002B2C9A /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Placeholder.swift; path = lazybear/Views/Placeholder.swift; sourceTree = SOURCE_ROOT; };
@@ -196,8 +198,8 @@
 				959D28E125CC9B370029F689 /* NewsRow.swift */,
 				95B3552725CD4A5600BCDE8E /* NewsDetail.swift */,
 				95E07BA225CEAC7D001718AB /* Transactions.swift */,
-				95E07B9C25CEAC46001718AB /* TransactionDetail.swift */,
 				95E07B9F25CEAC61001718AB /* TransactionRow.swift */,
+				95E07B9C25CEAC46001718AB /* TransactionDetail.swift */,
 				95ED8CDF25D03D8900B6B605 /* StockAndNews.swift */,
 			);
 			path = Views;
@@ -261,6 +263,7 @@
 				95D1BF4825ADCF7700E5D063 /* Persistence.swift */,
 				95078FD025BF4E640004FA75 /* CloudKitManager.swift */,
 				958B678425C42B2400BF9F89 /* ApiManager.swift */,
+				95BF355125D464B20010E48D /* CoreDataManager.swift */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95E07B6A25CE9398001718AB /* AppView.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
@@ -369,6 +372,7 @@
 				95B3552F25CD629F00BCDE8E /* TransactionCodes.swift in Sources */,
 				95612C512598D48200F7698F /* SearchBar.swift in Sources */,
 				95E411BE25BEEA6C00A9C23F /* WatchlistRow.swift in Sources */,
+				95BF355225D464B20010E48D /* CoreDataManager.swift in Sources */,
 				95078FD125BF4E640004FA75 /* CloudKitManager.swift in Sources */,
 				95B04EB525212369000AD27F /* ContentView.swift in Sources */,
 				95AB4A90259DD66D0064C9C1 /* CompanyRow.swift in Sources */,

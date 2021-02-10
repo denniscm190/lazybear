@@ -7,9 +7,15 @@
 
 import SwiftUI
 
+/*
+ Reuse this struct for two types of data, CompanyModel and HistoryData.
+ If HistoryData is passed => show the base row + date added to the list.
+ Else show base row
+ */
+
 struct CompanyRow: View {
-    var companyModel: CompanyModel?
-    var historyData: HistoryData?
+    var companyModel: CompanyModel? //Optional
+    var historyData: HistoryData? // Optional
     @State var showingCompany = false
     
     var body: some View {
@@ -36,6 +42,7 @@ struct CompanyRow: View {
         }
     }
     
+    // From long date get only day and month in letters
     private func formatDate() -> (String, String) {
         let date = historyData?.date ?? Date()
         let calendar = Calendar.current

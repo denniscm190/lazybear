@@ -11,12 +11,11 @@ struct News: View {
     var symbol: String
     @EnvironmentObject var apiManager: ApiManager
     
-    // <--------- API Job --------->
+    // API job variables
     @State private var url = String() {
         didSet { request(url: url, model: [NewsModel].self) { self.news = $0 } }}
     
     @State private var news = [NewsModel]()
-    // <--------- API Job --------->
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -33,7 +32,7 @@ struct News: View {
         .onAppear { getUrl() }
     }
     
-    
+    // Create endpoint
     private func getUrl() {
         let baseUrl = apiManager.results[apiManager.option].url ?? ""
         let token = apiManager.results[apiManager.option].key ?? ""

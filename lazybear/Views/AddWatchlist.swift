@@ -8,30 +8,35 @@
 import SwiftUI
 import SPAlert
 
+/*
+ If the company is not in watchlist => Add it
+ */
+
 struct AddWatchlist: View {
     var symbol: String
     var name: String
     
-    // <--------- Core Data --------->
+    // CoreData variables
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: WatchlistData.entity(), sortDescriptors: [])
     var watchlistData: FetchedResults<WatchlistData>
-    // <--------- Core Data --------->
     
     var body: some View {
-        let watchlistSymbols = watchlistData.map { $0.symbol }
-        let alertView = SPAlertView(title: "Company added", preset: .done)
+        let watchlistSymbols = watchlistData.map { $0.symbol }  // Array of symbols
+        let alertView = SPAlertView(title: "Company added", preset: .done)  // Create HUD
         
+        // If symbol is not in the array of symbols => show add button
         if !watchlistSymbols.contains(symbol) {
             Button(action: {
                 addWatchlist()
-                alertView.present(haptic: .success)
+                alertView.present(haptic: .success)  // Show HUD when added
             }) {
                 Text("Add")
             }
         }
     }
     
+    // Add to watchlist
     private func addWatchlist() {
         let watchlistData = WatchlistData(context: viewContext)
         watchlistData.name = name
@@ -44,10 +49,10 @@ struct AddWatchlist: View {
         }
     }
 }
-/*
+
 struct AddWatchlist_Previews: PreviewProvider {
     static var previews: some View {
         AddWatchlist(symbol: "aapl", name: "apple")
     }
 }
- */
+ 

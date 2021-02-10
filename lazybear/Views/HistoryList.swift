@@ -7,14 +7,17 @@
 
 import SwiftUI
 
+/*
+ If the HistoryData is not empty => Show HistoryData. Else show a placeholder
+ */
+
 struct HistoryList: View {
     @State private var showingActionSheet = false
     
-    // <--------- Core Data --------->
+    // Core Data variables
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: HistoryData.entity(), sortDescriptors: [])
     var historyData: FetchedResults<HistoryData>
-    // <--------- Core Data --------->
     
     var body: some View {
         if historyData.count > 0 {
@@ -26,7 +29,7 @@ struct HistoryList: View {
                                 .actionSheet(isPresented: $showingActionSheet) { alert() }
                         }
                 ) {
-                    // Sorte array by Date. The new ones come first in the list
+                    // Sore array by Date. The latest added to the list comes first
                     let sorted = historyData.sorted { $0.date ?? Date() > $1.date ?? Date() }
                     ForEach(sorted) { company in
                         CompanyRow(historyData: company)

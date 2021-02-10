@@ -8,10 +8,15 @@
 import SwiftUI
 import CloudKit
 
+/*
+ If Watchlist is empty => show placeholder. Else show watchlist.
+ */
+
 struct Watchlist: View {
+    // CoreData variables
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(entity: WatchlistData.entity(), sortDescriptors: [])
-    var watchlistData: FetchedResults<WatchlistData>  // Fetch core data
+    var watchlistData: FetchedResults<WatchlistData> // List
     
     var body: some View {
         NavigationView {
@@ -22,7 +27,8 @@ struct Watchlist: View {
                             ForEach(watchlistData) { company in
                                 WatchlistRow(watchlistData: company)
                             }
-                            .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }  // Delete from persistent storage
+                            // Swipe to delete a company
+                            .onDelete { indexSet in deleteWatchlist(indexSet: indexSet) }
                         }
                     }
                     .toolbar { EditButton() }
@@ -35,7 +41,7 @@ struct Watchlist: View {
         .navigationViewStyle(StackNavigationViewStyle())
     }
   
-    
+    // Delete a company from watchlist
     func deleteWatchlist(indexSet: IndexSet) {
         for index in indexSet {
             viewContext.delete(watchlistData[index])

@@ -5,7 +5,7 @@
 //  Created by Dennis Concepción Martín on 25/1/21.
 //
 
-import SwiftUI
+import Foundation
 import CloudKit
 
 class CloudKitManager {

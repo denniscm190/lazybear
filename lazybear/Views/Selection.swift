@@ -12,7 +12,7 @@ struct Selection: View {
     @Binding var selected: Int
     
     var body: some View {
-        Picker(selection: $selected, label: Text("Please choose a period")) {
+        Picker(selection: $selected, label: Text("")) {
             ForEach(0 ..< items.count) {
                 Text(self.items[$0])
             }

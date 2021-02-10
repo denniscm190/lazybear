@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+/*
+ If the search is not tapped, which means the user is not searching => show HistoryList().
+ If it's tapped and the text searched is bigger that 2 letters => show results
+ */
+
 struct Search: View {
     @State var searchedCompany = String()
     
