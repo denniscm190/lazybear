@@ -14,9 +14,9 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<2 {
-            let savedCompanies = SavedCompanies(context: viewContext)
-            savedCompanies.name = "apple inc"
-            savedCompanies.symbol = "aapl"
+            let watchlistCompanies = WatchlistCompanies(context: viewContext)
+            watchlistCompanies.name = "apple inc"
+            watchlistCompanies.symbol = "aapl"
         }
         do {
             try viewContext.save()

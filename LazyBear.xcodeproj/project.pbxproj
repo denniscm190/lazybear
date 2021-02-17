@@ -200,6 +200,7 @@
 /* Begin XCBuildConfiguration section */
 		95B04EBC2521236A000AD27F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95FF4EA925DD94430013319E /* Sandbox.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -261,6 +262,7 @@
 		};
 		95B04EBD2521236A000AD27F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95FF4EAA25DD94720013319E /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
