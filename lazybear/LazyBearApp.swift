@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct LazyBearApp: App {
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
-            TestAPI()
+            ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

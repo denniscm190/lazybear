@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct Row: View {
-    var baseText: String
-    var underText: String?
+    @State var baseText: String
+    @State var underText: String?
     
-    var leftView: AnyView?
-    var rightView: AnyView?
+    @State var leftView: AnyView?
+    @State var rightView: AnyView?
     
     var body: some View {
         HStack {

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		95002580256D17D9008FFD28 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9500257F256D17D9008FFD28 /* StoreKit.framework */; };
+		950C0BB625DD9867006A49BC /* WatchlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C0BB525DD9867006A49BC /* WatchlistManager.swift */; };
 		951F589125DD86F200E051E0 /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F589025DD86F200E051E0 /* TestAPI.swift */; };
 		951F589A25DD8A8100E051E0 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F589925DD8A8100E051E0 /* Row.swift */; };
 		951F589D25DD8A9C00E051E0 /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F589C25DD8A9C00E051E0 /* Watchlist.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		95002578256D1564008FFD28 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		9500257F256D17D9008FFD28 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		950C0BB525DD9867006A49BC /* WatchlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WatchlistManager.swift; path = lazybear/Classes/WatchlistManager.swift; sourceTree = SOURCE_ROOT; };
 		951F589025DD86F200E051E0 /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestAPI.swift; path = lazybear/Tests/TestAPI.swift; sourceTree = SOURCE_ROOT; };
 		951F589925DD8A8100E051E0 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Row.swift; path = lazybear/UI/Row.swift; sourceTree = SOURCE_ROOT; };
 		951F589C25DD8A9C00E051E0 /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Watchlist.swift; path = lazybear/UI/Watchlist.swift; sourceTree = SOURCE_ROOT; };
@@ -58,6 +60,14 @@
 				9500257F256D17D9008FFD28 /* StoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		950C0BB425DD9852006A49BC /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				950C0BB525DD9867006A49BC /* WatchlistManager.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		951F588F25DD86E600E051E0 /* Tests */ = {
@@ -108,6 +118,7 @@
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
 				951F589825DD8A1B00E051E0 /* UI */,
+				950C0BB425DD9852006A49BC /* Classes */,
 				951F588F25DD86E600E051E0 /* Tests */,
 			);
 			path = LazyBear;
@@ -185,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				950C0BB625DD9867006A49BC /* WatchlistManager.swift in Sources */,
 				95B04EB525212369000AD27F /* ContentView.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
 				951F589125DD86F200E051E0 /* TestAPI.swift in Sources */,
