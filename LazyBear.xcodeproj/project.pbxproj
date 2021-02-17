@@ -7,29 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95672B6925DDA2E200DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B6825DDA2E200DCBE4A /* LazyBearApp.swift */; };
-		95672B6B25DDA2E200DCBE4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B6A25DDA2E200DCBE4A /* ContentView.swift */; };
-		95672B6D25DDA2E200DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B6C25DDA2E200DCBE4A /* Assets.xcassets */; };
-		95672B7025DDA2E200DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B6F25DDA2E200DCBE4A /* Preview Assets.xcassets */; };
-		95672B7225DDA2E200DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B7125DDA2E200DCBE4A /* Persistence.swift */; };
-		95672B7525DDA2E200DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B7325DDA2E200DCBE4A /* LazyBear.xcdatamodeld */; };
+		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
+		95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9025DDA54700DCBE4A /* ContentView.swift */; };
+		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
+		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
+		95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
+		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		95672B6525DDA2E200DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		95672B6825DDA2E200DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
-		95672B6A25DDA2E200DCBE4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		95672B6C25DDA2E200DCBE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95672B6F25DDA2E200DCBE4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95672B7125DDA2E200DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		95672B7425DDA2E200DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
-		95672B7625DDA2E200DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95672B7F25DDA36E00DCBE4A /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		95672B8025DDA37500DCBE4A /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
+		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
+		95672B9025DDA54700DCBE4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95672B9225DDA54700DCBE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
+		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		95672B6225DDA2E200DCBE4A /* Frameworks */ = {
+		95672B8825DDA54700DCBE4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,42 +37,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		95672B5C25DDA2E200DCBE4A = {
+		95672B8225DDA54700DCBE4A = {
 			isa = PBXGroup;
 			children = (
-				95672B6725DDA2E200DCBE4A /* LazyBear */,
-				95672B6625DDA2E200DCBE4A /* Products */,
+				95672B8D25DDA54700DCBE4A /* LazyBear */,
+				95672B8C25DDA54700DCBE4A /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		95672B6625DDA2E200DCBE4A /* Products */ = {
+		95672B8C25DDA54700DCBE4A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95672B6525DDA2E200DCBE4A /* LazyBear.app */,
+				95672B8B25DDA54700DCBE4A /* LazyBear.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95672B6725DDA2E200DCBE4A /* LazyBear */ = {
+		95672B8D25DDA54700DCBE4A /* LazyBear */ = {
 			isa = PBXGroup;
 			children = (
-				95672B6825DDA2E200DCBE4A /* LazyBearApp.swift */,
-				95672B6A25DDA2E200DCBE4A /* ContentView.swift */,
-				95672B6C25DDA2E200DCBE4A /* Assets.xcassets */,
-				95672B7125DDA2E200DCBE4A /* Persistence.swift */,
-				95672B7625DDA2E200DCBE4A /* Info.plist */,
-				95672B7325DDA2E200DCBE4A /* LazyBear.xcdatamodeld */,
-				95672B6E25DDA2E200DCBE4A /* Preview Content */,
-				95672B7F25DDA36E00DCBE4A /* Production.xcconfig */,
-				95672B8025DDA37500DCBE4A /* Sandbox.xcconfig */,
+				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
+				95672B9025DDA54700DCBE4A /* ContentView.swift */,
+				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
+				95672B9725DDA54700DCBE4A /* Persistence.swift */,
+				95672B9C25DDA54800DCBE4A /* Info.plist */,
+				95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */,
+				95672B9425DDA54700DCBE4A /* Preview Content */,
 			);
 			path = LazyBear;
 			sourceTree = "<group>";
 		};
-		95672B6E25DDA2E200DCBE4A /* Preview Content */ = {
+		95672B9425DDA54700DCBE4A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				95672B6F25DDA2E200DCBE4A /* Preview Assets.xcassets */,
+				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -82,13 +78,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		95672B6425DDA2E200DCBE4A /* LazyBear */ = {
+		95672B8A25DDA54700DCBE4A /* LazyBear */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 95672B7925DDA2E200DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */;
+			buildConfigurationList = 95672B9F25DDA54800DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */;
 			buildPhases = (
-				95672B6125DDA2E200DCBE4A /* Sources */,
-				95672B6225DDA2E200DCBE4A /* Frameworks */,
-				95672B6325DDA2E200DCBE4A /* Resources */,
+				95672B8725DDA54700DCBE4A /* Sources */,
+				95672B8825DDA54700DCBE4A /* Frameworks */,
+				95672B8925DDA54700DCBE4A /* Resources */,
 			);
 			buildRules = (
 			);
@@ -96,24 +92,24 @@
 			);
 			name = LazyBear;
 			productName = LazyBear;
-			productReference = 95672B6525DDA2E200DCBE4A /* LazyBear.app */;
+			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		95672B5D25DDA2E200DCBE4A /* Project object */ = {
+		95672B8325DDA54700DCBE4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					95672B6425DDA2E200DCBE4A = {
+					95672B8A25DDA54700DCBE4A = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = 95672B6025DDA2E200DCBE4A /* Build configuration list for PBXProject "LazyBear" */;
+			buildConfigurationList = 95672B8625DDA54700DCBE4A /* Build configuration list for PBXProject "LazyBear" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,44 +117,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 95672B5C25DDA2E200DCBE4A;
-			productRefGroup = 95672B6625DDA2E200DCBE4A /* Products */;
+			mainGroup = 95672B8225DDA54700DCBE4A;
+			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95672B6425DDA2E200DCBE4A /* LazyBear */,
+				95672B8A25DDA54700DCBE4A /* LazyBear */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		95672B6325DDA2E200DCBE4A /* Resources */ = {
+		95672B8925DDA54700DCBE4A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95672B7025DDA2E200DCBE4A /* Preview Assets.xcassets in Resources */,
-				95672B6D25DDA2E200DCBE4A /* Assets.xcassets in Resources */,
+				95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */,
+				95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		95672B6125DDA2E200DCBE4A /* Sources */ = {
+		95672B8725DDA54700DCBE4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95672B7225DDA2E200DCBE4A /* Persistence.swift in Sources */,
-				95672B6B25DDA2E200DCBE4A /* ContentView.swift in Sources */,
-				95672B6925DDA2E200DCBE4A /* LazyBearApp.swift in Sources */,
-				95672B7525DDA2E200DCBE4A /* LazyBear.xcdatamodeld in Sources */,
+				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
+				95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */,
+				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
+				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		95672B7725DDA2E200DCBE4A /* Debug */ = {
+		95672B9D25DDA54800DCBE4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -219,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		95672B7825DDA2E200DCBE4A /* Release */ = {
+		95672B9E25DDA54800DCBE4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -274,7 +270,7 @@
 			};
 			name = Release;
 		};
-		95672B7A25DDA2E200DCBE4A /* Debug */ = {
+		95672BA025DDA54800DCBE4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -296,7 +292,7 @@
 			};
 			name = Debug;
 		};
-		95672B7B25DDA2E200DCBE4A /* Release */ = {
+		95672BA125DDA54800DCBE4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -321,20 +317,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		95672B6025DDA2E200DCBE4A /* Build configuration list for PBXProject "LazyBear" */ = {
+		95672B8625DDA54700DCBE4A /* Build configuration list for PBXProject "LazyBear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95672B7725DDA2E200DCBE4A /* Debug */,
-				95672B7825DDA2E200DCBE4A /* Release */,
+				95672B9D25DDA54800DCBE4A /* Debug */,
+				95672B9E25DDA54800DCBE4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95672B7925DDA2E200DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */ = {
+		95672B9F25DDA54800DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95672B7A25DDA2E200DCBE4A /* Debug */,
-				95672B7B25DDA2E200DCBE4A /* Release */,
+				95672BA025DDA54800DCBE4A /* Debug */,
+				95672BA125DDA54800DCBE4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -342,17 +338,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		95672B7325DDA2E200DCBE4A /* LazyBear.xcdatamodeld */ = {
+		95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				95672B7425DDA2E200DCBE4A /* LazyBear.xcdatamodel */,
+				95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */,
 			);
-			currentVersion = 95672B7425DDA2E200DCBE4A /* LazyBear.xcdatamodel */;
+			currentVersion = 95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */;
 			path = LazyBear.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 95672B5D25DDA2E200DCBE4A /* Project object */;
+	rootObject = 95672B8325DDA54700DCBE4A /* Project object */;
 }
