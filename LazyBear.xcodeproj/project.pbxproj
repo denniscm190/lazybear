@@ -34,6 +34,8 @@
 		95B04EB62521236A000AD27F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		95B04EBB2521236A000AD27F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95F7CAF525ADC7B7009E0E7C /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
+		95FF4EA925DD94430013319E /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Sandbox.xcconfig; path = lazybear/Sandbox.xcconfig; sourceTree = SOURCE_ROOT; };
+		95FF4EAA25DD94720013319E /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = lazybear/Production.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,8 @@
 				95621AD725BF2EC500BB17FC /* LazyBear.entitlements */,
 				95002578256D1564008FFD28 /* Configuration.storekit */,
 				95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */,
+				95FF4EA925DD94430013319E /* Sandbox.xcconfig */,
+				95FF4EAA25DD94720013319E /* Production.xcconfig */,
 				951F58A025DD8CED00E051E0 /* Persistence.swift */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
