@@ -1,4 +1,4 @@
 # Architecture
 
 ## Backend
-![alt text](lazybear-iOS/repo-assets/architecture.jpg)
+![alt text](repo-assets/architecture.jpg)
