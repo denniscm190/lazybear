@@ -1,28 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="HistoryData" representedClassName="HistoryData" syncable="YES">
-        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="symbol" optional="YES" attributeType="String"/>
-    </entity>
-    <entity name="WatchlistData" representedClassName="WatchlistData" syncable="YES">
-        <attribute name="cik" optional="YES" attributeType="String"/>
-        <attribute name="currency" optional="YES" attributeType="String"/>
-        <attribute name="date" optional="YES" attributeType="String"/>
-        <attribute name="exchange" optional="YES" attributeType="String"/>
-        <attribute name="exchangeName" optional="YES" attributeType="String"/>
-        <attribute name="exchangeSuffix" optional="YES" attributeType="String"/>
-        <attribute name="figi" optional="YES" attributeType="String"/>
-        <attribute name="iexId" optional="YES" attributeType="String"/>
-        <attribute name="isEnabled" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
-        <attribute name="lei" optional="YES" attributeType="String"/>
-        <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="region" optional="YES" attributeType="String"/>
-        <attribute name="symbol" optional="YES" attributeType="String"/>
-        <attribute name="type" optional="YES" attributeType="String"/>
-    </entity>
-    <elements>
-        <element name="HistoryData" positionX="160" positionY="192" width="128" height="74"/>
-        <element name="WatchlistData" positionX="-63" positionY="-18" width="128" height="239"/>
-    </elements>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D74" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <elements/>
 </model>
