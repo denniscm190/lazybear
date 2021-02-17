@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		95002580256D17D9008FFD28 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9500257F256D17D9008FFD28 /* StoreKit.framework */; };
+		951F589125DD86F200E051E0 /* TestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F589025DD86F200E051E0 /* TestAPI.swift */; };
+		951F589A25DD8A8100E051E0 /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F589925DD8A8100E051E0 /* Row.swift */; };
+		951F589D25DD8A9C00E051E0 /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F589C25DD8A9C00E051E0 /* Watchlist.swift */; };
+		951F58A125DD8CED00E051E0 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951F58A025DD8CED00E051E0 /* Persistence.swift */; };
 		95621AD925BF2EDB00BB17FC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95621AD825BF2EDB00BB17FC /* CloudKit.framework */; };
 		95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB225212369000AD27F /* LazyBearApp.swift */; };
 		95B04EB525212369000AD27F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B04EB425212369000AD27F /* ContentView.swift */; };
@@ -18,6 +22,12 @@
 /* Begin PBXFileReference section */
 		95002578256D1564008FFD28 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		9500257F256D17D9008FFD28 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		951F588E25DD855300E051E0 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Sandbox.xcconfig; path = lazybear/Sandbox.xcconfig; sourceTree = SOURCE_ROOT; };
+		951F589025DD86F200E051E0 /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestAPI.swift; path = lazybear/Tests/TestAPI.swift; sourceTree = SOURCE_ROOT; };
+		951F589325DD87F500E051E0 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = lazybear/Production.xcconfig; sourceTree = SOURCE_ROOT; };
+		951F589925DD8A8100E051E0 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Row.swift; path = lazybear/UI/Row.swift; sourceTree = SOURCE_ROOT; };
+		951F589C25DD8A9C00E051E0 /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Watchlist.swift; path = lazybear/UI/Watchlist.swift; sourceTree = SOURCE_ROOT; };
+		951F58A025DD8CED00E051E0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95621AD725BF2EC500BB17FC /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		95621AD825BF2EDB00BB17FC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		95B04EAF25212369000AD27F /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -50,6 +60,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		951F588F25DD86E600E051E0 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				951F589025DD86F200E051E0 /* TestAPI.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		951F589825DD8A1B00E051E0 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				951F589C25DD8A9C00E051E0 /* Watchlist.swift */,
+				951F589925DD8A8100E051E0 /* Row.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
 		95B04EA625212369000AD27F = {
 			isa = PBXGroup;
 			children = (
@@ -75,8 +102,13 @@
 				95621AD725BF2EC500BB17FC /* LazyBear.entitlements */,
 				95002578256D1564008FFD28 /* Configuration.storekit */,
 				95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */,
+				951F58A025DD8CED00E051E0 /* Persistence.swift */,
+				951F588E25DD855300E051E0 /* Sandbox.xcconfig */,
+				951F589325DD87F500E051E0 /* Production.xcconfig */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
+				951F589825DD8A1B00E051E0 /* UI */,
+				951F588F25DD86E600E051E0 /* Tests */,
 			);
 			path = LazyBear;
 			sourceTree = "<group>";
@@ -155,7 +187,11 @@
 			files = (
 				95B04EB525212369000AD27F /* ContentView.swift in Sources */,
 				95B04EB325212369000AD27F /* LazyBearApp.swift in Sources */,
+				951F589125DD86F200E051E0 /* TestAPI.swift in Sources */,
+				951F58A125DD8CED00E051E0 /* Persistence.swift in Sources */,
+				951F589A25DD8A8100E051E0 /* Row.swift in Sources */,
 				95F7CAF625ADC7B7009E0E7C /* LazyBear.xcdatamodeld in Sources */,
+				951F589D25DD8A9C00E051E0 /* Watchlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +200,7 @@
 /* Begin XCBuildConfiguration section */
 		95B04EBC2521236A000AD27F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 951F588E25DD855300E051E0 /* Sandbox.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -225,6 +262,7 @@
 		};
 		95B04EBD2521236A000AD27F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 951F589325DD87F500E051E0 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -271,6 +309,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
