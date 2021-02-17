@@ -22,9 +22,7 @@
 /* Begin PBXFileReference section */
 		95002578256D1564008FFD28 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		9500257F256D17D9008FFD28 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		951F588E25DD855300E051E0 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Sandbox.xcconfig; path = lazybear/Sandbox.xcconfig; sourceTree = SOURCE_ROOT; };
 		951F589025DD86F200E051E0 /* TestAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestAPI.swift; path = lazybear/Tests/TestAPI.swift; sourceTree = SOURCE_ROOT; };
-		951F589325DD87F500E051E0 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = lazybear/Production.xcconfig; sourceTree = SOURCE_ROOT; };
 		951F589925DD8A8100E051E0 /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Row.swift; path = lazybear/UI/Row.swift; sourceTree = SOURCE_ROOT; };
 		951F589C25DD8A9C00E051E0 /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Watchlist.swift; path = lazybear/UI/Watchlist.swift; sourceTree = SOURCE_ROOT; };
 		951F58A025DD8CED00E051E0 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -103,8 +101,6 @@
 				95002578256D1564008FFD28 /* Configuration.storekit */,
 				95F7CAF425ADC7B7009E0E7C /* LazyBear.xcdatamodeld */,
 				951F58A025DD8CED00E051E0 /* Persistence.swift */,
-				951F588E25DD855300E051E0 /* Sandbox.xcconfig */,
-				951F589325DD87F500E051E0 /* Production.xcconfig */,
 				95B04EB225212369000AD27F /* LazyBearApp.swift */,
 				95B04EB425212369000AD27F /* ContentView.swift */,
 				951F589825DD8A1B00E051E0 /* UI */,
@@ -200,7 +196,6 @@
 /* Begin XCBuildConfiguration section */
 		95B04EBC2521236A000AD27F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 951F588E25DD855300E051E0 /* Sandbox.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -262,7 +257,6 @@
 		};
 		95B04EBD2521236A000AD27F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 951F589325DD87F500E051E0 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
