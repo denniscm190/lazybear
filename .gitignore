@@ -1,2 +1,4 @@
 .DS_Store
 lazybear/.DS_Store
+lazybear/Sandbox.xcconfig
+lazybear/Production.xconfig
