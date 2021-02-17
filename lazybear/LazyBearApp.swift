@@ -12,7 +12,7 @@ struct LazyBearApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TestAPI()
         }
     }
 }

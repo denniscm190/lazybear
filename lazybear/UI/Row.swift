@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct Row: View {
+    var baseText: String
+    var underText: String?
+    
+    var leftView: AnyView?
+    var rightView: AnyView?
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            leftView
+            VStack {
+                Text(baseText)
+                Text(underText ?? "")
+            }
+            
+            Spacer()
+            rightView
+        }
     }
 }
 
 struct Row_Previews: PreviewProvider {
     static var previews: some View {
-        Row()
+        Row(baseText: "Some text")
     }
 }
