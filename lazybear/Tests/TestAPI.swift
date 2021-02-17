@@ -9,7 +9,8 @@ import SwiftUI
 
 struct TestAPI: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        //let apiKey = Bundle.main.infoDictionary?["IEX_API"]
+        Text("Hello world")
     }
 }
 
