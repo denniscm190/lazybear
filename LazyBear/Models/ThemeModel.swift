@@ -7,14 +7,6 @@
 
 import SwiftUI
 
-struct ThemeModel: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct ThemeModel_Previews: PreviewProvider {
-    static var previews: some View {
-        ThemeModel()
-    }
+struct ThemeModel: Hashable, Codable {
+    var name: String
 }
