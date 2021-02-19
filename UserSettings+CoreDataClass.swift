@@ -11,5 +11,5 @@ import CoreData
 
 @objc(UserSettings)
 public class UserSettings: NSManagedObject {
-
+    
 }

@@ -16,8 +16,8 @@ extension UserSettings {
         return NSFetchRequest<UserSettings>(entityName: "UserSettings")
     }
 
-    @NSManaged public var appIcon: String?
-    @NSManaged public var theme: String?
+    @NSManaged public var appIcon: String
+    @NSManaged public var theme: String
 
 }
 
