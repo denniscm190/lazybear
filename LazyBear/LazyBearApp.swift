@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct LazyBearApp: App {
-    let persistenceController = PersistenceController.shared
+    let persistenceController = PersistenceController.shared  // Core Data init
 
     var body: some Scene {
         WindowGroup {
