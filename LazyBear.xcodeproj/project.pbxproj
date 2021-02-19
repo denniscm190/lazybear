@@ -13,6 +13,22 @@
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
 		95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
 		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
+		958A733425E00BA500FD7ECA /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 958A733325E00BA500FD7ECA /* companies.json */; };
+		958A733A25E00C3100FD7ECA /* Company+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */; };
+		958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */; };
+		958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A734125E00C9900FD7ECA /* Watchlist.swift */; };
+		958A734525E00D3D00FD7ECA /* Row.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A734425E00D3D00FD7ECA /* Row.swift */; };
+		958A734925E010F900FD7ECA /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A734825E010F900FD7ECA /* Search.swift */; };
+		958A734C25E010FF00FD7ECA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A734B25E010FF00FD7ECA /* SearchBar.swift */; };
+		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
+		958A735725E01F9E00FD7ECA /* ReadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A735625E01F9E00FD7ECA /* ReadJson.swift */; };
+		958A735B25E0264E00FD7ECA /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A735A25E0264E00FD7ECA /* CompanyModel.swift */; };
+		958A735F25E0311B00FD7ECA /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A735E25E0311B00FD7ECA /* Settings.swift */; };
+		958A736325E0320B00FD7ECA /* UserSettings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A736125E0320B00FD7ECA /* UserSettings+CoreDataClass.swift */; };
+		958A736425E0320B00FD7ECA /* UserSettings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A736225E0320B00FD7ECA /* UserSettings+CoreDataProperties.swift */; };
+		95ACB5A925E0397B00A3CCC8 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */; };
+		95ACB5AC25E03A7D00A3CCC8 /* themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 95ACB5AB25E03A7D00A3CCC8 /* themes.json */; };
+		95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +40,25 @@
 		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		958A733325E00BA500FD7ECA /* companies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = companies.json; sourceTree = "<group>"; };
+		958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
+		958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		958A734125E00C9900FD7ECA /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
+		958A734425E00D3D00FD7ECA /* Row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Row.swift; sourceTree = "<group>"; };
+		958A734825E010F900FD7ECA /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		958A734B25E010FF00FD7ECA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
+		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		958A735625E01F9E00FD7ECA /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJson.swift; sourceTree = "<group>"; };
+		958A735A25E0264E00FD7ECA /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		958A735E25E0311B00FD7ECA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		958A736125E0320B00FD7ECA /* UserSettings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserSettings+CoreDataClass.swift"; sourceTree = "<group>"; };
+		958A736225E0320B00FD7ECA /* UserSettings+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserSettings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9594152A25DDA5CA00BCE299 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		9594152B25DDA5D800BCE299 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
+		95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		95ACB5AB25E03A7D00A3CCC8 /* themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = themes.json; sourceTree = "<group>"; };
+		95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,8 +76,13 @@
 		95672B8225DDA54700DCBE4A = {
 			isa = PBXGroup;
 			children = (
+				958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */,
+				958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */,
+				958A736125E0320B00FD7ECA /* UserSettings+CoreDataClass.swift */,
+				958A736225E0320B00FD7ECA /* UserSettings+CoreDataProperties.swift */,
 				95672B8D25DDA54700DCBE4A /* LazyBear */,
 				95672B8C25DDA54700DCBE4A /* Products */,
+				958A735025E0170900FD7ECA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,12 +97,20 @@
 		95672B8D25DDA54700DCBE4A /* LazyBear */ = {
 			isa = PBXGroup;
 			children = (
+				958A734E25E016FD00FD7ECA /* LazyBear.entitlements */,
 				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
 				95672B9025DDA54700DCBE4A /* ContentView.swift */,
 				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
 				95672B9725DDA54700DCBE4A /* Persistence.swift */,
 				95672B9C25DDA54800DCBE4A /* Info.plist */,
 				95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */,
+				9594152A25DDA5CA00BCE299 /* Production.xcconfig */,
+				9594152B25DDA5D800BCE299 /* Sandbox.xcconfig */,
+				95B1874925DDAC4D0068A364 /* UI */,
+				95B1874825DDAC470068A364 /* Models */,
+				958A735525E01F7E00FD7ECA /* Functions */,
+				958A733225E00B9200FD7ECA /* Local data */,
+				95B1874A25DDAC5B0068A364 /* Tests */,
 				95672B9425DDA54700DCBE4A /* Preview Content */,
 			);
 			path = LazyBear;
@@ -73,6 +122,60 @@
 				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		958A733225E00B9200FD7ECA /* Local data */ = {
+			isa = PBXGroup;
+			children = (
+				95ACB5AB25E03A7D00A3CCC8 /* themes.json */,
+				958A733325E00BA500FD7ECA /* companies.json */,
+			);
+			path = "Local data";
+			sourceTree = "<group>";
+		};
+		958A735025E0170900FD7ECA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				958A735125E0170900FD7ECA /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		958A735525E01F7E00FD7ECA /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				958A735625E01F9E00FD7ECA /* ReadJson.swift */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		95B1874825DDAC470068A364 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				958A735A25E0264E00FD7ECA /* CompanyModel.swift */,
+				95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95B1874925DDAC4D0068A364 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				958A734125E00C9900FD7ECA /* Watchlist.swift */,
+				958A734425E00D3D00FD7ECA /* Row.swift */,
+				958A734825E010F900FD7ECA /* Search.swift */,
+				958A734B25E010FF00FD7ECA /* SearchBar.swift */,
+				958A735E25E0311B00FD7ECA /* Settings.swift */,
+				95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		95B1874A25DDAC5B0068A364 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,6 +236,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */,
+				95ACB5AC25E03A7D00A3CCC8 /* themes.json in Resources */,
+				958A733425E00BA500FD7ECA /* companies.json in Resources */,
 				95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,10 +249,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				958A735725E01F9E00FD7ECA /* ReadJson.swift in Sources */,
+				958A734925E010F900FD7ECA /* Search.swift in Sources */,
+				958A735F25E0311B00FD7ECA /* Settings.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
+				958A736325E0320B00FD7ECA /* UserSettings+CoreDataClass.swift in Sources */,
+				958A736425E0320B00FD7ECA /* UserSettings+CoreDataProperties.swift in Sources */,
+				958A735B25E0264E00FD7ECA /* CompanyModel.swift in Sources */,
 				95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */,
+				958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */,
+				95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
+				958A734525E00D3D00FD7ECA /* Row.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
+				958A734C25E010FF00FD7ECA /* SearchBar.swift in Sources */,
+				958A733A25E00C3100FD7ECA /* Company+CoreDataClass.swift in Sources */,
+				95ACB5A925E0397B00A3CCC8 /* CompanyView.swift in Sources */,
+				958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +274,7 @@
 /* Begin XCBuildConfiguration section */
 		95672B9D25DDA54800DCBE4A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9594152B25DDA5D800BCE299 /* Sandbox.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -217,6 +336,7 @@
 		};
 		95672B9E25DDA54800DCBE4A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9594152A25DDA5CA00BCE299 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -275,6 +395,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
@@ -297,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
