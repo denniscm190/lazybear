@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,7 +13,6 @@
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
 		95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
 		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
-		958A733425E00BA500FD7ECA /* companies.json in Resources */ = {isa = PBXBuildFile; fileRef = 958A733325E00BA500FD7ECA /* companies.json */; };
 		958A733A25E00C3100FD7ECA /* Company+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */; };
 		958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */; };
 		958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A734125E00C9900FD7ECA /* Watchlist.swift */; };
@@ -29,6 +28,9 @@
 		95ACB5A925E0397B00A3CCC8 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */; };
 		95ACB5AC25E03A7D00A3CCC8 /* themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 95ACB5AB25E03A7D00A3CCC8 /* themes.json */; };
 		95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */; };
+		95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E09E25E127D7007EFDE3 /* Request.swift */; };
+		95B3E0A225E1283F007EFDE3 /* TestSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E0A125E1283F007EFDE3 /* TestSearchAPI.swift */; };
+		95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 95B3E0A525E1318D007EFDE3 /* SwiftlySearch */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +42,6 @@
 		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		958A733325E00BA500FD7ECA /* companies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = companies.json; sourceTree = "<group>"; };
 		958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
 		958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		958A734125E00C9900FD7ECA /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
@@ -59,6 +60,8 @@
 		95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		95ACB5AB25E03A7D00A3CCC8 /* themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = themes.json; sourceTree = "<group>"; };
 		95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
+		95B3E09E25E127D7007EFDE3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		95B3E0A125E1283F007EFDE3 /* TestSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
+				95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,7 +132,6 @@
 			isa = PBXGroup;
 			children = (
 				95ACB5AB25E03A7D00A3CCC8 /* themes.json */,
-				958A733325E00BA500FD7ECA /* companies.json */,
 			);
 			path = "Local data";
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				958A735625E01F9E00FD7ECA /* ReadJson.swift */,
+				95B3E09E25E127D7007EFDE3 /* Request.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -174,6 +178,7 @@
 		95B1874A25DDAC5B0068A364 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				95B3E0A125E1283F007EFDE3 /* TestSearchAPI.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -194,6 +199,9 @@
 			dependencies = (
 			);
 			name = LazyBear;
+			packageProductDependencies = (
+				95B3E0A525E1318D007EFDE3 /* SwiftlySearch */,
+			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +229,9 @@
 				Base,
 			);
 			mainGroup = 95672B8225DDA54700DCBE4A;
+			packageReferences = (
+				95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
+			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -237,7 +248,6 @@
 			files = (
 				95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */,
 				95ACB5AC25E03A7D00A3CCC8 /* themes.json in Resources */,
-				958A733425E00BA500FD7ECA /* companies.json in Resources */,
 				95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,9 +266,11 @@
 				958A736325E0320B00FD7ECA /* UserSettings+CoreDataClass.swift in Sources */,
 				958A736425E0320B00FD7ECA /* UserSettings+CoreDataProperties.swift in Sources */,
 				958A735B25E0264E00FD7ECA /* CompanyModel.swift in Sources */,
+				95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */,
 				95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */,
 				958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */,
 				95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */,
+				95B3E0A225E1283F007EFDE3 /* TestSearchAPI.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				958A734525E00D3D00FD7ECA /* Row.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
@@ -458,6 +470,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95B3E0A525E1318D007EFDE3 /* SwiftlySearch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
+			productName = SwiftlySearch;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */ = {

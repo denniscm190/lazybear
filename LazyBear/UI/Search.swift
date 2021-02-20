@@ -6,22 +6,31 @@
 //
 
 import SwiftUI
+import SwiftlySearch
 
 struct Search: View {
     @State private var company = String()
+    @State private var companies = [CompanyModel]()
     
     var body: some View {
         NavigationView {
-            VStack {
-                SearchBar(searchedText: $company)
-                    List(companies.filter({company.isEmpty ? false : $0.name.localizedStandardContains(company)}),id: \.symbol) { company in
-                        Row(baseText: company.symbol, subText: company.name)
-                    }
-                    .id(UUID())
+            List(companies, id: \.symbol) { company in
+                Row(baseText: company.symbol ?? "-", subText: company.securityName ?? "")
             }
+            .navigationBarSearch(self.$company)
+                .onChange(of: company, perform: { company in
+                    request(url: getUrl(), model: [CompanyModel].self) { self.companies = $0 }
+                })
             .navigationTitle("Search 🔍")
         }
-        .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    private func getUrl() -> String {
+        let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
+        let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
+        let url = "\(baseUrl)/search/\(company)?token=\(apiKey)"
+        
+        return url
     }
 }
 
