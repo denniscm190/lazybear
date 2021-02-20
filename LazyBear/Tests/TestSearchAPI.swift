@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct TestSearchAPI: View {
+    @State private var companies = [CompanyModel]()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: { print(companies) }) {
+            Text("Print companies")
+        }
+        .onAppear {
+            request(url: getUrl(), model: [CompanyModel].self) { self.companies = $0 }
+        }
+    }
+    
+    private func getUrl() -> String {
+        let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
+        let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
+        let url = "\(baseUrl)/search/apple?token=\(apiKey)"
+        
+        return url
     }
 }
 
