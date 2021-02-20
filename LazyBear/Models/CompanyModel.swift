@@ -7,12 +7,14 @@
 
 import SwiftUI
 
-struct CompanyModel: Hashable, Codable {
-    var symbol: String
-    var exchange: String
-    var exchangeName: String
-    var name: String
-    var region: String
-    var currency: String
+struct CompanyModel: Codable {
+    var symbol: String?
+    var cik: String?
+    var securityName: String?
+    var securityType: String?
+    var region: String?
+    var exchange: String?
+    var sector: String?
+
 }
 

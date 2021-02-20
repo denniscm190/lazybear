@@ -5,16 +5,31 @@
 //  Created by Dennis Concepción Martín on 20/2/21.
 //
 
-import SwiftUI
+import Foundation
 
-struct Request: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+// Network request
+func request<T: Decodable>(url: String, model: T.Type, completion: @escaping (_ result: T) -> Void) {
+    // We take some model data T.Type
+    guard let url = URL(string: url) else {
+        print("Invalid URL")
+        return
     }
-}
-
-struct Request_Previews: PreviewProvider {
-    static var previews: some View {
-        Request()
+    let request = URLRequest(url: url)
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        if let data = data {
+            do {
+                // Decode response with the model passed
+                let decodedResponse = try JSONDecoder().decode(model, from: data)
+                DispatchQueue.main.async {
+                    //print(decodedResponse)
+                    completion(decodedResponse)
+                }
+                return
+            } catch {
+                print(error)
+            }
+        }
+        print("Fetch failed: \(error?.localizedDescription ?? "Unknown error")")
     }
+    .resume()
 }

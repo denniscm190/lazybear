@@ -7,7 +7,6 @@
 
 import Foundation
 
-let companies: [CompanyModel] = load("companies.json")
 let themes: [ThemeModel] = load("themes.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
