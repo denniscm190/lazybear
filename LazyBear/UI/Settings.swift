@@ -10,7 +10,6 @@ import CoreData
 
 struct Settings: View {
     @Environment(\.managedObjectContext) private var moc
-    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: []) var userSettings: FetchedResults<UserSettings>
     @State var theme = ""
 
     var body: some View {
