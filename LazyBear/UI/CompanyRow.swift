@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Row: View {
+struct CompanyRow: View {
     var baseText: String
     var subText: String?
     var lefView: AnyView?
@@ -32,6 +32,6 @@ struct Row: View {
 
 struct Row_Previews: PreviewProvider {
     static var previews: some View {
-        Row(baseText: "aapl", subText: "apple inc")
+        CompanyRow(baseText: "aapl", subText: "apple inc")
     }
 }
