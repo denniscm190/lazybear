@@ -29,7 +29,6 @@
 		95ACB5AC25E03A7D00A3CCC8 /* themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 95ACB5AB25E03A7D00A3CCC8 /* themes.json */; };
 		95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */; };
 		95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E09E25E127D7007EFDE3 /* Request.swift */; };
-		95B3E0A225E1283F007EFDE3 /* TestSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E0A125E1283F007EFDE3 /* TestSearchAPI.swift */; };
 		95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 95B3E0A525E1318D007EFDE3 /* SwiftlySearch */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +60,6 @@
 		95ACB5AB25E03A7D00A3CCC8 /* themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = themes.json; sourceTree = "<group>"; };
 		95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		95B3E09E25E127D7007EFDE3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		95B3E0A125E1283F007EFDE3 /* TestSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSearchAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,7 +176,6 @@
 		95B1874A25DDAC5B0068A364 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				95B3E0A125E1283F007EFDE3 /* TestSearchAPI.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -270,7 +267,6 @@
 				95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */,
 				958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */,
 				95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */,
-				95B3E0A225E1283F007EFDE3 /* TestSearchAPI.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				958A734525E00D3D00FD7ECA /* Row.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
