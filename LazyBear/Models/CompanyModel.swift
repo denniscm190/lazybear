@@ -8,13 +8,7 @@
 import SwiftUI
 
 struct CompanyModel: Codable {
-    var symbol: String?
-    var cik: String?
+    var symbol: String
     var securityName: String?
-    var securityType: String?
-    var region: String?
-    var exchange: String?
-    var sector: String?
-
 }
 

@@ -1,5 +1,5 @@
 //
-//  Row.swift
+//  CompanyRow.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 19/2/21.
@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CompanyRow: View {
-    var baseText: String
-    var subText: String?
+    var symbol: String
+    var name: String
     var lefView: AnyView?
     var rightView: AnyView?
     
@@ -17,10 +17,10 @@ struct CompanyRow: View {
         HStack {
             lefView
             VStack(alignment: .leading) {
-                Text(baseText.uppercased())
+                Text(symbol.uppercased())
                     .fontWeight(.semibold)
                 
-                Text(subText?.capitalized ?? "")
+                Text(name.capitalized)
                     .lineLimit(1)
             }
             
@@ -32,6 +32,6 @@ struct CompanyRow: View {
 
 struct Row_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyRow(baseText: "aapl", subText: "apple inc")
+        CompanyRow(symbol: "aapl", name: "apple inc")
     }
 }

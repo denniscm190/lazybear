@@ -14,8 +14,10 @@ struct Watchlist: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(companies, id: \.cik) { company in
-                    Row(baseText: company.symbol, subText: company.name)
+                ForEach(companies, id: \.self) { company in
+                    NavigationLink(destination: CompanyView(name: company.name, symbol: company.symbol)) {
+                        CompanyRow(symbol: company.symbol, name: company.name)
+                    }
                 }
                 .onDelete(perform: removeCompany)
             }

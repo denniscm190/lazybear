@@ -15,7 +15,11 @@ struct Search: View {
     var body: some View {
         NavigationView {
             List(companies, id: \.symbol) { company in
-                Row(baseText: company.symbol ?? "-", subText: company.securityName ?? "")
+                NavigationLink(destination: CompanyView(name: company.securityName ?? "-", symbol: company.symbol)
+                                .navigationTitle(company.symbol)
+                ) {
+                    CompanyRow(symbol: company.symbol, name: company.securityName ?? "-")
+                }
             }
             .navigationBarSearch(self.$company)
                 .onChange(of: company, perform: { company in
@@ -23,6 +27,8 @@ struct Search: View {
                 })
             .navigationTitle("Search 🔍")
         }
+        // Empty list
+        .onDisappear { self.companies = [CompanyModel]() }
     }
     
     private func getUrl() -> String {

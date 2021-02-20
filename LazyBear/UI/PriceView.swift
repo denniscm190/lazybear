@@ -8,13 +8,15 @@
 import SwiftUI
 
 struct PriceView: View {
+    var symbol: String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Price View")
     }
 }
 
 struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceView()
+        PriceView(symbol: "aapl")
     }
 }
