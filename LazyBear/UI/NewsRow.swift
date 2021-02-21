@@ -30,7 +30,7 @@ struct NewsRow: View {
                     Text(summary)
                         .opacity(0.5)
                         .font(.subheadline)
-                        .lineLimit(2)
+                        .lineLimit(1)
                         .padding(.bottom, 5)
                 }
                 

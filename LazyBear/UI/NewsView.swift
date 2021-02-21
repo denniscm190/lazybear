@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct NewsView: View {
-    @State var news = [NewsModel]()
     var symbol: String
+    @State var news = [NewsModel]()
     
     var body: some View {
         VStack(alignment: .leading) {

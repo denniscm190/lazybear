@@ -16,7 +16,9 @@ struct Watchlist: View {
         NavigationView {
             List {
                 ForEach(companies, id: \.self) { company in
-                    NavigationLink(destination: CompanyView(hudManager: hudManager, name: company.name, symbol: company.symbol)) {
+                    NavigationLink(destination: CompanyView(hudManager: hudManager, name: company.name, symbol: company.symbol)
+                                    .navigationTitle(company.symbol)
+                    ) {
                         CompanyRow(symbol: company.symbol, name: company.name)
                     }
                 }
