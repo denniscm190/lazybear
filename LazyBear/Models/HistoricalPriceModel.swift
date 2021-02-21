@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-struct HistoricalPrice: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+struct HistoricalPriceModel: Codable {
+    var date: String
+    var close: Double
+    var volume: Int
+    var change: Double
+    var changePercent: Double
+    var changeOverTime: Double
 
-struct HistoricalPrice_Previews: PreviewProvider {
-    static var previews: some View {
-        HistoricalPrice()
-    }
 }

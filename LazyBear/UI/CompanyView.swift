@@ -16,9 +16,12 @@ struct CompanyView: View {
     var symbol: String
     
     var body: some View {
-        ScrollView {
-            PriceView(symbol: symbol)
-            NewsView(symbol: symbol)
+        GeometryReader { geo in
+            ScrollView {
+                //PriceView(symbol: symbol)
+                HistoricalPriceView(symbol: symbol, chartHeight: geo.size.width / 2)
+                NewsView(symbol: symbol)
+            }
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
