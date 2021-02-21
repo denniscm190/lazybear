@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9549D62A25E18E890085C3CD /* ChartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549D62925E18E890085C3CD /* ChartTests.swift */; };
+		9549D63325E1903F0085C3CD /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9549D63225E1903F0085C3CD /* Charts */; };
+		9549D63625E191520085C3CD /* Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549D63525E191520085C3CD /* Normalize.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
 		95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9025DDA54700DCBE4A /* ContentView.swift */; };
 		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
@@ -34,9 +37,13 @@
 		95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */; };
 		95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E09E25E127D7007EFDE3 /* Request.swift */; };
 		95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 95B3E0A525E1318D007EFDE3 /* SwiftlySearch */; };
+		95BFAE4B25E2AEA000A70EC3 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE4A25E2AEA000A70EC3 /* HUD.swift */; };
+		95BFAE4E25E2B0C200A70EC3 /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE4D25E2B0C200A70EC3 /* HUDManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9549D62925E18E890085C3CD /* ChartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartTests.swift; sourceTree = "<group>"; };
+		9549D63525E191520085C3CD /* Normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Normalize.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95672B9025DDA54700DCBE4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -68,6 +75,8 @@
 		95ACB5AB25E03A7D00A3CCC8 /* themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = themes.json; sourceTree = "<group>"; };
 		95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		95B3E09E25E127D7007EFDE3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		95BFAE4A25E2AEA000A70EC3 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		95BFAE4D25E2B0C200A70EC3 /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
+				9549D63325E1903F0085C3CD /* Charts in Frameworks */,
 				95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				958A734E25E016FD00FD7ECA /* LazyBear.entitlements */,
+				95BFAE4D25E2B0C200A70EC3 /* HUDManager.swift */,
 				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
 				95672B9025DDA54700DCBE4A /* ContentView.swift */,
 				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
@@ -155,6 +166,7 @@
 			children = (
 				958A735625E01F9E00FD7ECA /* ReadJson.swift */,
 				95B3E09E25E127D7007EFDE3 /* Request.swift */,
+				9549D63525E191520085C3CD /* Normalize.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -181,6 +193,7 @@
 				95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */,
 				95ABDD3425E166BA00310776 /* NewsView.swift */,
 				95ABDD3B25E1717300310776 /* NewsRow.swift */,
+				95BFAE4A25E2AEA000A70EC3 /* HUD.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -188,6 +201,7 @@
 		95B1874A25DDAC5B0068A364 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				9549D62925E18E890085C3CD /* ChartTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 			name = LazyBear;
 			packageProductDependencies = (
 				95B3E0A525E1318D007EFDE3 /* SwiftlySearch */,
+				9549D63225E1903F0085C3CD /* Charts */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -240,6 +255,7 @@
 			mainGroup = 95672B8225DDA54700DCBE4A;
 			packageReferences = (
 				95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
+				9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -270,6 +286,7 @@
 			files = (
 				95ABDD3825E167E500310776 /* NewsModel.swift in Sources */,
 				95ABDD3C25E1717300310776 /* NewsRow.swift in Sources */,
+				9549D62A25E18E890085C3CD /* ChartTests.swift in Sources */,
 				958A735725E01F9E00FD7ECA /* ReadJson.swift in Sources */,
 				958A734925E010F900FD7ECA /* Search.swift in Sources */,
 				958A735F25E0311B00FD7ECA /* Settings.swift in Sources */,
@@ -278,6 +295,7 @@
 				958A736425E0320B00FD7ECA /* UserSettings+CoreDataProperties.swift in Sources */,
 				958A735B25E0264E00FD7ECA /* CompanyModel.swift in Sources */,
 				95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */,
+				9549D63625E191520085C3CD /* Normalize.swift in Sources */,
 				95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */,
 				958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */,
 				95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */,
@@ -287,9 +305,11 @@
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				958A734C25E010FF00FD7ECA /* SearchBar.swift in Sources */,
 				95ABDD3125E1602D00310776 /* PriceView.swift in Sources */,
+				95BFAE4B25E2AEA000A70EC3 /* HUD.swift in Sources */,
 				958A733A25E00C3100FD7ECA /* Company+CoreDataClass.swift in Sources */,
 				95ACB5A925E0397B00A3CCC8 /* CompanyView.swift in Sources */,
 				958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */,
+				95BFAE4E25E2B0C200A70EC3 /* HUDManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +504,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/spacenation/swiftui-charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
@@ -495,6 +523,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9549D63225E1903F0085C3CD /* Charts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */;
+			productName = Charts;
+		};
 		95B3E0A525E1318D007EFDE3 /* SwiftlySearch */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
