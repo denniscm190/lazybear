@@ -5,16 +5,17 @@
 //  Created by Dennis Concepción Martín on 20/2/21.
 //
 
-import SwiftUI
+import Foundation
 
-struct Normalize: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+func normalize(_ data: [Double]) -> [Double] {
+    var normalData = [Double]()
+    let min = data.min()!
+    let max = data.max()!
+    
+    for value in data {
+        let normal = (value - min) / (max - min)
+        normalData.append(normal)
     }
-}
-
-struct Normalize_Previews: PreviewProvider {
-    static var previews: some View {
-        Normalize()
-    }
+    
+    return normalData
 }

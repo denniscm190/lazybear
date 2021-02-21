@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ChartTests: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        let someData: [Double] = [50.0, 49.1, 1.4, 120.4, 523.30]
+        Chart(data: normalize(someData))
+            .chartStyle(
+                AreaChartStyle(.quadCurve, fill:
+                    LinearGradient(gradient: .init(colors: [Color.blue.opacity(0.2), Color.blue.opacity(0.05)]), startPoint: .top, endPoint: .bottom)
+                )
+            )
     }
 }
 
