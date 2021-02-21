@@ -8,25 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var hudManager = HUDManager()
+    
     var body: some View {
-        TabView {
-            // First view
-            Watchlist()
-                .tabItem {
-                    Label("Watchlist", systemImage: "list.dash")
-                }
+        ZStack(alignment: .top) {
+            TabView {
+                // First view
+                Watchlist(hudManager: hudManager)
+                    .tabItem {
+                        Label("Watchlist", systemImage: "list.dash")
+                    }
+                
+                // First view
+                Search(hudManager: hudManager)
+                    .tabItem {
+                        Label("Search", systemImage: "magnifyingglass")
+                    }
+                
+                // First view
+                Settings()
+                    .tabItem {
+                        Label("Settings", systemImage: "gear")
+                    }
+            }
             
-            // First view
-            Search()
-                .tabItem {
-                    Label("Search", systemImage: "magnifyingglass")
-                }
-            
-            // First view
-            Settings()
-                .tabItem {
-                    Label("Settings", systemImage: "gear")
-                }
+            HUD(text: hudManager.text, image: hudManager.image)
+                .offset(y: hudManager.isShowing ? 0 : -100)
+                .animation(.easeInOut)
         }
     }
 }

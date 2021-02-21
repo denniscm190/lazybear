@@ -7,14 +7,19 @@
 
 import SwiftUI
 
-struct HUDManager: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct HUDManager_Previews: PreviewProvider {
-    static var previews: some View {
-        HUDManager()
+class HUDManager: ObservableObject {
+    var text = String()
+    var image = "checkmark.circle"
+    @Published var isShowing = false
+    
+    func show(text: String, image: String) {
+        self.text = text
+        self.image = image
+        self.isShowing = true
+        
+        // Dimiss after time
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.isShowing = false
+        }
     }
 }

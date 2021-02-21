@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct HUD: View {
-    @ViewBuilder var body: some View {
-        Text("Saved image")
+    var text: String
+    var image: String
+    
+    var body: some View {
+        Label(text, systemImage: image)
             .foregroundColor(.gray)
             .padding(.horizontal, 10)
             .padding(14)

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CompanyView: View {
+    @ObservedObject var hudManager: HUDManager
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     @Environment(\.managedObjectContext) private var moc
     
@@ -38,11 +39,14 @@ struct CompanyView: View {
     
     // Add to watchlist
     private func add() {
+        let generator = UINotificationFeedbackGenerator()  // Haptic
         let company = Company(context: moc)
         company.symbol = symbol
         company.name = name
         do {
             try moc.save()
+            hudManager.show(text: "Company saved", image: "checkmark.circle")
+            generator.notificationOccurred(.success)
             print("Company saved.")
         } catch {
             print(error.localizedDescription)
@@ -53,7 +57,7 @@ struct CompanyView: View {
 struct CompanyView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CompanyView(name: "apple inc", symbol: "aapl")
+            CompanyView(hudManager: HUDManager(), name: "apple inc", symbol: "aapl")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

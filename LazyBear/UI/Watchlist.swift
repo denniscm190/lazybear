@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Watchlist: View {
+    @ObservedObject var hudManager: HUDManager
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     
@@ -15,7 +16,7 @@ struct Watchlist: View {
         NavigationView {
             List {
                 ForEach(companies, id: \.self) { company in
-                    NavigationLink(destination: CompanyView(name: company.name, symbol: company.symbol)) {
+                    NavigationLink(destination: CompanyView(hudManager: hudManager, name: company.name, symbol: company.symbol)) {
                         CompanyRow(symbol: company.symbol, name: company.name)
                     }
                 }
@@ -35,12 +36,16 @@ struct Watchlist: View {
             let company = companies[index]
             moc.delete(company)
         }
-        try? moc.save()
+        do {
+            try moc.save()
+        } catch {
+            // Error
+        }
     }
 }
 
 struct Watchlist_Previews: PreviewProvider {
     static var previews: some View {
-        Watchlist()
+        Watchlist(hudManager: HUDManager())
     }
 }
