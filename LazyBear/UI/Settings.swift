@@ -32,6 +32,7 @@ struct Settings: View {
     private func save(change: Any) {
         let userSettings = UserSettings(context: moc)
         userSettings.theme = change as! String
+        userSettings.changedAt = Date()
         do {
             try moc.save()
             print("Core Data saved")
