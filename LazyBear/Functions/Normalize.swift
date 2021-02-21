@@ -1,0 +1,20 @@
+//
+//  Normalize.swift
+//  LazyBear
+//
+//  Created by Dennis Concepción Martín on 20/2/21.
+//
+
+import SwiftUI
+
+struct Normalize: View {
+    var body: some View {
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    }
+}
+
+struct Normalize_Previews: PreviewProvider {
+    static var previews: some View {
+        Normalize()
+    }
+}
