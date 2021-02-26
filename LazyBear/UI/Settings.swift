@@ -9,35 +9,26 @@ import SwiftUI
 import CoreData
 
 struct Settings: View {
-    @Environment(\.managedObjectContext) private var moc
-    @State var theme = ""
-
+    @FetchRequest(entity: UserSettings.entity(),
+                  sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
+    var userSettings: FetchedResults<UserSettings>
+    
     var body: some View {
         NavigationView {
             Form {
-                Picker("Themes", selection: $theme) {
-                    ForEach(themes, id: \.name) { theme in
-                        Text(theme.name)
-                            .tag(theme.name)
-                    }
+                let theme = userSettings.first?.theme ?? "Default"
+                let language = userSettings.first?.newsLanguage ?? "en"
+                ThemePicker(theme: theme)
+                NewsLanguagePicker(language: language)
+                
+                Section {
+                    SettingRow(image: "at", text: "About", colour: .systemBlue)
+                    SettingRow(image: "bag.fill", text: "Tip jar", colour: .systemGreen)
+                    SettingRow(image: "suit.heart.fill", text: "Rate Lazybear", colour: .systemRed)
+                    
                 }
-                .onChange(of: theme, perform: { theme in
-                    save(change: theme)
-                })
             }
             .navigationTitle("Settings 👨🏻‍🔧")
-        }
-    }
-    
-    private func save(change: Any) {
-        let userSettings = UserSettings(context: moc)
-        userSettings.theme = change as? String
-        userSettings.changedAt = Date()
-        do {
-            try moc.save()
-            print("Core Data saved")
-        } catch {
-            print(error.localizedDescription)
         }
     }
 }
