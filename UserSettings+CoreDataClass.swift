@@ -2,7 +2,7 @@
 //  UserSettings+CoreDataClass.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 21/2/21.
+//  Created by Dennis Concepción Martín on 26/2/21.
 //
 //
 

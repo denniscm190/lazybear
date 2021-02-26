@@ -2,7 +2,7 @@
 //  UserSettings+CoreDataProperties.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 21/2/21.
+//  Created by Dennis Concepción Martín on 26/2/21.
 //
 //
 
@@ -17,8 +17,9 @@ extension UserSettings {
     }
 
     @NSManaged public var appIcon: String?
-    @NSManaged public var theme: String?
     @NSManaged public var changedAt: Date
+    @NSManaged public var theme: String?
+    @NSManaged public var newsLanguage: String?
 
 }
 
