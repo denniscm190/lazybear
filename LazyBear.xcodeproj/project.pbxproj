@@ -52,6 +52,8 @@
 		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9571888F25E8E1A7002CDBD7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		9571889025E8E1AD002CDBD7 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
 		958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		958A734125E00C9900FD7ECA /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
@@ -63,8 +65,6 @@
 		958A735625E01F9E00FD7ECA /* ReadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadJson.swift; sourceTree = "<group>"; };
 		958A735A25E0264E00FD7ECA /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		958A735E25E0311B00FD7ECA /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
-		9594152A25DDA5CA00BCE299 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		9594152B25DDA5D800BCE299 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		95ABDD3025E1602D00310776 /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		95ABDD3425E166BA00310776 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		95ABDD3725E167E500310776 /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
@@ -120,20 +120,20 @@
 			isa = PBXGroup;
 			children = (
 				958A734E25E016FD00FD7ECA /* LazyBear.entitlements */,
-				95BFAE4D25E2B0C200A70EC3 /* HUDManager.swift */,
-				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
-				95672B9025DDA54700DCBE4A /* ContentView.swift */,
-				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
-				95672B9725DDA54700DCBE4A /* Persistence.swift */,
 				95672B9C25DDA54800DCBE4A /* Info.plist */,
 				95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */,
-				9594152A25DDA5CA00BCE299 /* Production.xcconfig */,
-				9594152B25DDA5D800BCE299 /* Sandbox.xcconfig */,
+				9571888F25E8E1A7002CDBD7 /* Production.xcconfig */,
+				9571889025E8E1AD002CDBD7 /* Sandbox.xcconfig */,
+				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
+				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
+				95672B9025DDA54700DCBE4A /* ContentView.swift */,
+				95BFAE4D25E2B0C200A70EC3 /* HUDManager.swift */,
+				95672B9725DDA54700DCBE4A /* Persistence.swift */,
 				95B1874925DDAC4D0068A364 /* UI */,
 				95B1874825DDAC470068A364 /* Models */,
 				958A735525E01F7E00FD7ECA /* Functions */,
 				958A733225E00B9200FD7ECA /* Local data */,
-				95B1874A25DDAC5B0068A364 /* Tests */,
+				9571888D25E8E17C002CDBD7 /* Tests */,
 				95672B9425DDA54700DCBE4A /* Preview Content */,
 			);
 			path = LazyBear;
@@ -145,6 +145,13 @@
 				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9571888D25E8E17C002CDBD7 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		958A733225E00B9200FD7ECA /* Local data */ = {
@@ -200,13 +207,6 @@
 				95BFAE5725E2C5A700A70EC3 /* HistoricalPriceView.swift */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		95B1874A25DDAC5B0068A364 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,7 +322,7 @@
 /* Begin XCBuildConfiguration section */
 		95672B9D25DDA54800DCBE4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9594152B25DDA5D800BCE299 /* Sandbox.xcconfig */;
+			baseConfigurationReference = 9571889025E8E1AD002CDBD7 /* Sandbox.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -384,7 +384,7 @@
 		};
 		95672B9E25DDA54800DCBE4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9594152A25DDA5CA00BCE299 /* Production.xcconfig */;
+			baseConfigurationReference = 9571888F25E8E1A7002CDBD7 /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
