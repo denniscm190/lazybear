@@ -8,6 +8,7 @@
 import Foundation
 
 let themes: [ThemeModel] = load("themes.json")
+let newsLanguages: [NewsLanguageModel] = load("newsLanguages.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
