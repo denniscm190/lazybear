@@ -43,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		950BA46B25E944F500D065EF /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		950BA46C25E944FC00D065EF /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		9549D63525E191520085C3CD /* Normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Normalize.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
@@ -52,8 +54,6 @@
 		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9571888F25E8E1A7002CDBD7 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		9571889025E8E1AD002CDBD7 /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
 		958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		958A734125E00C9900FD7ECA /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
@@ -95,6 +95,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950BA46D25E9450B00D065EF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		95672B8225DDA54700DCBE4A = {
 			isa = PBXGroup;
 			children = (
@@ -122,8 +129,8 @@
 				958A734E25E016FD00FD7ECA /* LazyBear.entitlements */,
 				95672B9C25DDA54800DCBE4A /* Info.plist */,
 				95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */,
-				9571888F25E8E1A7002CDBD7 /* Production.xcconfig */,
-				9571889025E8E1AD002CDBD7 /* Sandbox.xcconfig */,
+				950BA46B25E944F500D065EF /* Production.xcconfig */,
+				950BA46C25E944FC00D065EF /* Sandbox.xcconfig */,
 				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
 				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
 				95672B9025DDA54700DCBE4A /* ContentView.swift */,
@@ -133,7 +140,7 @@
 				95B1874825DDAC470068A364 /* Models */,
 				958A735525E01F7E00FD7ECA /* Functions */,
 				958A733225E00B9200FD7ECA /* Local data */,
-				9571888D25E8E17C002CDBD7 /* Tests */,
+				950BA46D25E9450B00D065EF /* Tests */,
 				95672B9425DDA54700DCBE4A /* Preview Content */,
 			);
 			path = LazyBear;
@@ -145,13 +152,6 @@
 				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9571888D25E8E17C002CDBD7 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		958A733225E00B9200FD7ECA /* Local data */ = {
@@ -322,7 +322,7 @@
 /* Begin XCBuildConfiguration section */
 		95672B9D25DDA54800DCBE4A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9571889025E8E1AD002CDBD7 /* Sandbox.xcconfig */;
+			baseConfigurationReference = 950BA46C25E944FC00D065EF /* Sandbox.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -384,7 +384,7 @@
 		};
 		95672B9E25DDA54800DCBE4A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9571888F25E8E1A7002CDBD7 /* Production.xcconfig */;
+			baseConfigurationReference = 950BA46B25E944F500D065EF /* Production.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -445,7 +445,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -470,7 +470,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
