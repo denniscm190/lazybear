@@ -8,7 +8,7 @@
 import SwiftUI
 
 class HUDManager: ObservableObject {
-    var text = String()
+    var text = "Company saved"
     var image = "checkmark.circle"
     @Published var isShowing = false
     
