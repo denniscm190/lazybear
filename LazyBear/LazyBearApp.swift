@@ -13,7 +13,7 @@ struct LazyBearApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TestAlternative()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
