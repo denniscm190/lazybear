@@ -40,7 +40,8 @@ struct ContentView: View {
                 .offset(y: hudManager.isShowing ? 0 : -100)
                 .animation(.easeInOut)
         }
-        .accentColor(Color("\(userSettings.first!.theme.lowercased())Accent"))
+        .accentColor(Color("\(userSettings.first?.theme?.lowercased() ?? "default")Accent"))
+        // If this value is not optional it will cause a crash
     }
 }
 
