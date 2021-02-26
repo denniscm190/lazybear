@@ -20,6 +20,9 @@ struct Settings: View {
                 let language = userSettings.first?.newsLanguage ?? "en"
                 ThemePicker(theme: theme)
                 NewsLanguagePicker(language: language)
+                NavigationLink(destination: IconPicker()) {
+                    Text("App icon")
+                }
                 
                 Section {
                     SettingRow(image: "at", text: "About", colour: .systemBlue)

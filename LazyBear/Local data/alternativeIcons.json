@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Default",
+        "file": "defaultIcon"
+    },
+    {
+        "name": "Angry bear",
+        "file": "angryIcon"
+    }
+]
