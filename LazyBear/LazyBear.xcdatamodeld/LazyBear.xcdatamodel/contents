@@ -12,10 +12,11 @@
     <entity name="UserSettings" representedClassName="UserSettings" syncable="YES">
         <attribute name="appIcon" optional="YES" attributeType="String"/>
         <attribute name="changedAt" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="newsLanguage" optional="YES" attributeType="String"/>
         <attribute name="theme" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Company" positionX="-63" positionY="-9" width="128" height="134"/>
-        <element name="UserSettings" positionX="-63" positionY="45" width="128" height="74"/>
+        <element name="UserSettings" positionX="-63" positionY="45" width="128" height="89"/>
     </elements>
 </model>
