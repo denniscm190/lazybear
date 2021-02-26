@@ -14,4 +14,5 @@ struct NewsModel: Codable, Hashable {
     var url: String?
     var summary: String?
     var image: String?
+    var lang: String?
 }

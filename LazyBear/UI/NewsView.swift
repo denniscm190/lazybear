@@ -26,7 +26,7 @@ struct NewsView: View {
     private func getUrl() -> String {
         let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
         let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
-        let url = "\(baseUrl)/stock/\(symbol)/news/last/10?token=\(apiKey)"
+        let url = "\(baseUrl)/stock/\(symbol)/news/last/30?token=\(apiKey)"
 
         return url
     }

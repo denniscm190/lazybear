@@ -40,6 +40,8 @@ struct NewsRow: View {
                         .font(.caption2)
                         .opacity(0.5)
                 }
+                
+                Text(new.lang ?? "Nil")
             }
         }
         .padding(.horizontal)
