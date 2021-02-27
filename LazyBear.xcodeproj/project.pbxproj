@@ -10,7 +10,6 @@
 		950B674925E99FA900BF8593 /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B674825E99FA900BF8593 /* IconPicker.swift */; };
 		950B674C25E9A03E00BF8593 /* alternativeIcons.json in Resources */ = {isa = PBXBuildFile; fileRef = 950B674B25E9A03E00BF8593 /* alternativeIcons.json */; };
 		950B674F25E9A0AE00BF8593 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B674E25E9A0AE00BF8593 /* IconModel.swift */; };
-		950B675225E9A51700BF8593 /* IconRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B675125E9A51700BF8593 /* IconRow.swift */; };
 		9549D63325E1903F0085C3CD /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9549D63225E1903F0085C3CD /* Charts */; };
 		9549D63625E191520085C3CD /* Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549D63525E191520085C3CD /* Normalize.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
@@ -38,6 +37,7 @@
 		95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */; };
 		95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E09E25E127D7007EFDE3 /* Request.swift */; };
 		95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 95B3E0A525E1318D007EFDE3 /* SwiftlySearch */; };
+		95BB43C025EA667700B6C965 /* DateSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB43BF25EA667700B6C965 /* DateSelection.swift */; };
 		95BFAE4B25E2AEA000A70EC3 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE4A25E2AEA000A70EC3 /* HUD.swift */; };
 		95BFAE4E25E2B0C200A70EC3 /* HUDManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE4D25E2B0C200A70EC3 /* HUDManager.swift */; };
 		95BFAE5425E2C52300A70EC3 /* HistoricalPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE5325E2C52300A70EC3 /* HistoricalPriceModel.swift */; };
@@ -57,7 +57,6 @@
 		950B674825E99FA900BF8593 /* IconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPicker.swift; sourceTree = "<group>"; };
 		950B674B25E9A03E00BF8593 /* alternativeIcons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = alternativeIcons.json; sourceTree = "<group>"; };
 		950B674E25E9A0AE00BF8593 /* IconModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModel.swift; sourceTree = "<group>"; };
-		950B675125E9A51700BF8593 /* IconRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconRow.swift; sourceTree = "<group>"; };
 		950BA46B25E944F500D065EF /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		950BA46C25E944FC00D065EF /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		9549D63525E191520085C3CD /* Normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Normalize.swift; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 		95ACB5AB25E03A7D00A3CCC8 /* themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = themes.json; sourceTree = "<group>"; };
 		95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		95B3E09E25E127D7007EFDE3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		95BB43BF25EA667700B6C965 /* DateSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelection.swift; sourceTree = "<group>"; };
 		95BFAE4A25E2AEA000A70EC3 /* HUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
 		95BFAE4D25E2B0C200A70EC3 /* HUDManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDManager.swift; sourceTree = "<group>"; };
 		95BFAE5325E2C52300A70EC3 /* HistoricalPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPriceModel.swift; sourceTree = "<group>"; };
@@ -161,7 +161,6 @@
 				95B1874925DDAC4D0068A364 /* UI */,
 				95B1874825DDAC470068A364 /* Models */,
 				958A735525E01F7E00FD7ECA /* Functions */,
-				958A733225E00B9200FD7ECA /* Local data */,
 				95F0463425E98788006A5A17 /* Resources */,
 				950BA46D25E9450B00D065EF /* Tests */,
 				95672B9425DDA54700DCBE4A /* Preview Content */,
@@ -175,16 +174,6 @@
 				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		958A733225E00B9200FD7ECA /* Local data */ = {
-			isa = PBXGroup;
-			children = (
-				95ACB5AB25E03A7D00A3CCC8 /* themes.json */,
-				95F045FA25E96A58006A5A17 /* newsLanguages.json */,
-				950B674B25E9A03E00BF8593 /* alternativeIcons.json */,
-			);
-			path = "Local data";
 			sourceTree = "<group>";
 		};
 		958A735025E0170900FD7ECA /* Frameworks */ = {
@@ -229,7 +218,6 @@
 				95F0460725E9704F006A5A17 /* ThemePicker.swift */,
 				95F0460A25E970DB006A5A17 /* NewsLanguagePicker.swift */,
 				950B674825E99FA900BF8593 /* IconPicker.swift */,
-				950B675125E9A51700BF8593 /* IconRow.swift */,
 				95F0460F25E976B5006A5A17 /* SettingRow.swift */,
 				95ABDD3025E1602D00310776 /* PriceView.swift */,
 				95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */,
@@ -237,6 +225,7 @@
 				95ABDD3B25E1717300310776 /* NewsRow.swift */,
 				95BFAE4A25E2AEA000A70EC3 /* HUD.swift */,
 				95BFAE5725E2C5A700A70EC3 /* HistoricalPriceView.swift */,
+				95BB43BF25EA667700B6C965 /* DateSelection.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -244,6 +233,9 @@
 		95F0463425E98788006A5A17 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				95ACB5AB25E03A7D00A3CCC8 /* themes.json */,
+				95F045FA25E96A58006A5A17 /* newsLanguages.json */,
+				950B674B25E9A03E00BF8593 /* alternativeIcons.json */,
 				95F0462625E98376006A5A17 /* default.png */,
 				95F0461B25E98015006A5A17 /* angry.png */,
 			);
@@ -359,12 +351,12 @@
 				958A734C25E010FF00FD7ECA /* SearchBar.swift in Sources */,
 				95F0460B25E970DB006A5A17 /* NewsLanguagePicker.swift in Sources */,
 				95ABDD3125E1602D00310776 /* PriceView.swift in Sources */,
-				950B675225E9A51700BF8593 /* IconRow.swift in Sources */,
 				95BFAE4B25E2AEA000A70EC3 /* HUD.swift in Sources */,
 				95F0460525E96DBB006A5A17 /* UserSettings+CoreDataProperties.swift in Sources */,
 				958A733A25E00C3100FD7ECA /* Company+CoreDataClass.swift in Sources */,
 				95ACB5A925E0397B00A3CCC8 /* CompanyView.swift in Sources */,
 				958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */,
+				95BB43C025EA667700B6C965 /* DateSelection.swift in Sources */,
 				95BFAE4E25E2B0C200A70EC3 /* HUDManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,7 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -522,7 +514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
