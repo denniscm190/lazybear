@@ -12,9 +12,17 @@ struct HistoricalPriceView: View {
     var symbol: String
     var chartHeight: CGFloat
     @State private var historicalPrices = [HistoricalPriceModel]()
+    var period = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
+    @State var selectedPeriod = 2
     
     var body: some View {
         VStack {
+            DateSelection(period: period, selectedperiod: $selectedPeriod)
+                .padding(.horizontal)
+                .onChange(of: selectedPeriod, perform: { (value) in
+                    request(url: getUrl(range: period[value]), model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
+                })
+            
             let (colour, prices) = prepareChart()
             Chart(data: prices)
                 .frame(height: chartHeight)
@@ -24,15 +32,15 @@ struct HistoricalPriceView: View {
                                                            endPoint: .bottom)))
         }
         .onAppear {
-            request(url: getUrl(), model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
+            request(url: getUrl(range: "3m"), model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
         }
     }
     
-    private func getUrl() -> String {
+    private func getUrl(range: String) -> String {
         let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
         let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
-        let url = "\(baseUrl)/stock/\(symbol)/chart/1m?chartCloseOnly=true&token=\(apiKey)"
-        
+        let url = "\(baseUrl)/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&token=\(apiKey)"
+
         return url
     }
     
