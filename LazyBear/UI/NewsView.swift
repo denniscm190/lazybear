@@ -11,11 +11,17 @@ struct NewsView: View {
     var symbol: String
     @State var news = [NewsModel]()
     
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
+    var userSettings: FetchedResults<UserSettings>
+    
     var body: some View {
         VStack(alignment: .leading) {
+            let language = userSettings.first?.newsLanguage ?? "en"
             ForEach(news, id: \.self) { new in
-                NewsRow(new: new)
-                Divider()
+                if language == new.lang {
+                    NewsRow(new: new)
+                    Divider()
+                }
             }
         }
         .onAppear {
