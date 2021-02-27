@@ -39,6 +39,7 @@ struct PersistenceController {
 
     init(inMemory: Bool = false) {
         container = NSPersistentCloudKitContainer(name: "LazyBear")
+        container.viewContext.automaticallyMergesChangesFromParent = true  // Not sure about this
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }
