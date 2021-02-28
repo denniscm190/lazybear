@@ -9,7 +9,24 @@ import SwiftUI
 
 struct TestPullScroll: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            ScrollView {
+                ForEach((1...10), id: \.self) {
+                    Text("Row \($0)")
+                    Divider()
+                }
+            }
+        }
+    }
+    
+    func action() {
+        print("Action")
+    }
+}
+
+struct Row: View {
+    var body: some View {
+        Text("Hello row")
     }
 }
 
