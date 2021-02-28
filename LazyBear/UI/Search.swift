@@ -15,11 +15,15 @@ struct Search: View {
     
     var body: some View {
         NavigationView {
-            List(filterList(), id: \.symbol) { company in
-                NavigationLink(destination: CompanyView(hudManager: hudManager, name: company.securityName ?? "-", symbol: company.symbol)
-                                .navigationTitle(company.symbol)
+            let colorNumber = ["1", "2", "3", "4", "5"]
+            let list = filterList()
+            List(list.indices, id: \.self) { i in
+                let name = list[i].securityName ?? "-"
+                let symbol = list[i].symbol
+                NavigationLink(destination: CompanyView(hudManager: hudManager, name: name, symbol: symbol)
+                                .navigationTitle(symbol)
                 ) {
-                    CompanyRow(symbol: company.symbol, name: company.securityName ?? "-", rowNumber: 1)
+                    CompanyRow(symbol: symbol, name: name, rowNumber: i % colorNumber.count)
                 }
             }
             .navigationBarSearch(self.$company)

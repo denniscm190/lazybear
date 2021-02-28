@@ -15,12 +15,15 @@ struct Watchlist: View {
     
     var body: some View {
         NavigationView {
+            let colorNumber = ["1", "2", "3", "4", "5"]
             List {
-                ForEach(companies, id: \.self) { company in
-                    NavigationLink(destination: CompanyView(hudManager: hudManager, name: company.name, symbol: company.symbol)
-                                    .navigationTitle(company.symbol)
+                ForEach(companies.indices) { i in
+                    let name = companies[i].name
+                    let symbol = companies[i].symbol
+                    NavigationLink(destination: CompanyView(hudManager: hudManager, name: name, symbol: symbol)
+                                    .navigationTitle(symbol)
                     ) {
-                        CompanyRow(symbol: company.symbol, name: company.name, rowNumber: 1)
+                        CompanyRow(symbol: symbol, name: name, rowNumber: i % colorNumber.count)
                     }
                 }
                 .onDelete(perform: removeCompany)
