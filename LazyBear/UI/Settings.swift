@@ -19,7 +19,7 @@ struct Settings: View {
         NavigationView {
             Form {
                 let theme = userSettings.first?.theme ?? "Default"
-                let language = userSettings.first?.newsLanguage ?? "en"
+                let language = userSettings.first?.newsLanguage ?? "English"
                 ThemePicker(theme: theme)
                 NewsLanguagePicker(language: language)
                 NavigationLink(destination: IconPicker()) {

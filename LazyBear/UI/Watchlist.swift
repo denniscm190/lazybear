@@ -15,6 +15,8 @@ struct Watchlist: View {
     
     var body: some View {
         NavigationView {
+            // Iterate over and over through this list to print the color for every row
+            // Color names are from 1 to 5
             let colorNumber = ["1", "2", "3", "4", "5"]
             List {
                 ForEach(companies.indices) { i in
@@ -23,6 +25,7 @@ struct Watchlist: View {
                     NavigationLink(destination: CompanyView(hudManager: hudManager, name: name, symbol: symbol)
                                     .navigationTitle(symbol)
                     ) {
+                        // Pass color number to the row
                         CompanyRow(symbol: symbol, name: name, rowNumber: i % colorNumber.count)
                     }
                 }
