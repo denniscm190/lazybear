@@ -19,7 +19,7 @@ struct Search: View {
                 NavigationLink(destination: CompanyView(hudManager: hudManager, name: company.securityName ?? "-", symbol: company.symbol)
                                 .navigationTitle(company.symbol)
                 ) {
-                    CompanyRow(symbol: company.symbol, name: company.securityName ?? "-")
+                    CompanyRow(symbol: company.symbol, name: company.securityName ?? "-", rowNumber: 1)
                 }
             }
             .navigationBarSearch(self.$company)

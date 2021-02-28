@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct Watchlist: View {
     @ObservedObject var hudManager: HUDManager
@@ -19,7 +20,7 @@ struct Watchlist: View {
                     NavigationLink(destination: CompanyView(hudManager: hudManager, name: company.name, symbol: company.symbol)
                                     .navigationTitle(company.symbol)
                     ) {
-                        CompanyRow(symbol: company.symbol, name: company.name)
+                        CompanyRow(symbol: company.symbol, name: company.name, rowNumber: 1)
                     }
                 }
                 .onDelete(perform: removeCompany)

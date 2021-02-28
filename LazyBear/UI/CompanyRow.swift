@@ -10,12 +10,20 @@ import SwiftUI
 struct CompanyRow: View {
     var symbol: String
     var name: String
-    var lefView: AnyView?
-    var rightView: AnyView?
+    var rowNumber: Int
+    
+    // Fetch user appearence settings (the last one made first)
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
+    var userSettings: FetchedResults<UserSettings>
     
     var body: some View {
         HStack {
-            lefView
+            let theme = userSettings.first?.theme?.lowercased() ?? "default"
+            RoundedRectangle(cornerRadius: 15)
+                .foregroundColor(Color("\(theme)Row\(rowNumber)"))
+                .frame(width: 10)
+                .offset(x: -25)
+            
             VStack(alignment: .leading) {
                 Text(symbol.uppercased())
                     .fontWeight(.semibold)
@@ -23,15 +31,14 @@ struct CompanyRow: View {
                 Text(name.capitalized)
                     .lineLimit(1)
             }
-            
-            Spacer()
-            rightView
         }
     }
 }
 
 struct Row_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyRow(symbol: "aapl", name: "apple inc")
+        List {
+            CompanyRow(symbol: "aapl", name: "apple inc", rowNumber: 2)
+        }
     }
 }
