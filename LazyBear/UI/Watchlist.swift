@@ -12,6 +12,7 @@ struct Watchlist: View {
     @ObservedObject var hudManager: HUDManager
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
+    @Environment(\.editMode) var mode
     
     var body: some View {
         NavigationView {

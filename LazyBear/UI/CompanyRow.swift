@@ -22,7 +22,6 @@ struct CompanyRow: View {
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color("\(theme)Row\(rowNumber)"))
                 .frame(width: 10)
-                .offset(x: -25)
             
             VStack(alignment: .leading) {
                 Text(symbol.uppercased())
