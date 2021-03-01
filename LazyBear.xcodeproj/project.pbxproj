@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9505763625ED605100D548E4 /* matteBlack.png in Resources */ = {isa = PBXBuildFile; fileRef = 9505763525ED605100D548E4 /* matteBlack.png */; };
+		9505764025ED670B00D548E4 /* graffiti.png in Resources */ = {isa = PBXBuildFile; fileRef = 9505763A25ED670B00D548E4 /* graffiti.png */; };
+		9505764125ED670B00D548E4 /* green.png in Resources */ = {isa = PBXBuildFile; fileRef = 9505763B25ED670B00D548E4 /* green.png */; };
+		9505764225ED670B00D548E4 /* matteWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 9505763C25ED670B00D548E4 /* matteWhite.png */; };
+		9505764325ED670B00D548E4 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 9505763D25ED670B00D548E4 /* blue.png */; };
+		9505764425ED670B00D548E4 /* pink.png in Resources */ = {isa = PBXBuildFile; fileRef = 9505763E25ED670B00D548E4 /* pink.png */; };
+		9505764525ED670B00D548E4 /* red.png in Resources */ = {isa = PBXBuildFile; fileRef = 9505763F25ED670B00D548E4 /* red.png */; };
 		9508479A25EBD340000106A9 /* TestPullScroll.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9508479925EBD340000106A9 /* TestPullScroll.swift */; };
 		950B674925E99FA900BF8593 /* IconPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B674825E99FA900BF8593 /* IconPicker.swift */; };
 		950B674C25E9A03E00BF8593 /* alternativeIcons.json in Resources */ = {isa = PBXBuildFile; fileRef = 950B674B25E9A03E00BF8593 /* alternativeIcons.json */; };
@@ -49,11 +56,17 @@
 		95F0460825E9704F006A5A17 /* ThemePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0460725E9704F006A5A17 /* ThemePicker.swift */; };
 		95F0460B25E970DB006A5A17 /* NewsLanguagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0460A25E970DB006A5A17 /* NewsLanguagePicker.swift */; };
 		95F0461025E976B5006A5A17 /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0460F25E976B5006A5A17 /* SettingRow.swift */; };
-		95F0461F25E98015006A5A17 /* angry.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F0461B25E98015006A5A17 /* angry.png */; };
 		95F0462825E98376006A5A17 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F0462625E98376006A5A17 /* default.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9505763525ED605100D548E4 /* matteBlack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matteBlack.png; sourceTree = "<group>"; };
+		9505763A25ED670B00D548E4 /* graffiti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graffiti.png; sourceTree = "<group>"; };
+		9505763B25ED670B00D548E4 /* green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green.png; sourceTree = "<group>"; };
+		9505763C25ED670B00D548E4 /* matteWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = matteWhite.png; sourceTree = "<group>"; };
+		9505763D25ED670B00D548E4 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		9505763E25ED670B00D548E4 /* pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink.png; sourceTree = "<group>"; };
+		9505763F25ED670B00D548E4 /* red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red.png; sourceTree = "<group>"; };
 		9508479925EBD340000106A9 /* TestPullScroll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPullScroll.swift; sourceTree = "<group>"; };
 		950B674825E99FA900BF8593 /* IconPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPicker.swift; sourceTree = "<group>"; };
 		950B674B25E9A03E00BF8593 /* alternativeIcons.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = alternativeIcons.json; sourceTree = "<group>"; };
@@ -99,7 +112,6 @@
 		95F0460725E9704F006A5A17 /* ThemePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePicker.swift; sourceTree = "<group>"; };
 		95F0460A25E970DB006A5A17 /* NewsLanguagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLanguagePicker.swift; sourceTree = "<group>"; };
 		95F0460F25E976B5006A5A17 /* SettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
-		95F0461B25E98015006A5A17 /* angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angry.png; sourceTree = "<group>"; };
 		95F0462625E98376006A5A17 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,7 +249,13 @@
 				95F045FA25E96A58006A5A17 /* newsLanguages.json */,
 				950B674B25E9A03E00BF8593 /* alternativeIcons.json */,
 				95F0462625E98376006A5A17 /* default.png */,
-				95F0461B25E98015006A5A17 /* angry.png */,
+				9505763D25ED670B00D548E4 /* blue.png */,
+				9505763B25ED670B00D548E4 /* green.png */,
+				9505763E25ED670B00D548E4 /* pink.png */,
+				9505763F25ED670B00D548E4 /* red.png */,
+				9505763525ED605100D548E4 /* matteBlack.png */,
+				9505763C25ED670B00D548E4 /* matteWhite.png */,
+				9505763A25ED670B00D548E4 /* graffiti.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -308,9 +326,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */,
-				95F0461F25E98015006A5A17 /* angry.png in Resources */,
 				95F0462825E98376006A5A17 /* default.png in Resources */,
 				95ACB5AC25E03A7D00A3CCC8 /* themes.json in Resources */,
+				9505764225ED670B00D548E4 /* matteWhite.png in Resources */,
+				9505764525ED670B00D548E4 /* red.png in Resources */,
+				9505764125ED670B00D548E4 /* green.png in Resources */,
+				9505764425ED670B00D548E4 /* pink.png in Resources */,
+				9505764025ED670B00D548E4 /* graffiti.png in Resources */,
+				9505763625ED605100D548E4 /* matteBlack.png in Resources */,
+				9505764325ED670B00D548E4 /* blue.png in Resources */,
 				95F045FB25E96A58006A5A17 /* newsLanguages.json in Resources */,
 				95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */,
 				950B674C25E9A03E00BF8593 /* alternativeIcons.json in Resources */,
