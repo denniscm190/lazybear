@@ -21,7 +21,7 @@ struct CompanyRow: View {
             let theme = userSettings.first?.theme?.lowercased() ?? "default"
             RoundedRectangle(cornerRadius: 15)
                 .foregroundColor(Color("\(theme)Row\(rowNumber)"))
-                .frame(width: 10)
+                .frame(width: 5)
             
             VStack(alignment: .leading) {
                 Text(symbol.uppercased())
