@@ -1,10 +1,42 @@
 [
     {
         "name": "Default",
-        "file": "defaultIcon"
+        "file": "defaultIcon",
+        "background": false
     },
     {
-        "name": "Angry bear",
-        "file": "angryIcon"
+        "name": "Blue",
+        "file": "blueIcon",
+        "background": false
+    },
+    {
+        "name": "Green",
+        "file": "greenIcon",
+        "background": false
+    },
+    {
+        "name": "Pink",
+        "file": "pinkIcon",
+        "background": false
+    },
+    {
+        "name": "Red",
+        "file": "redIcon",
+        "background": false
+    },
+    {
+        "name": "Matte black",
+        "file": "matteBlackIcon",
+        "background": true
+    },
+    {
+        "name": "Matte white",
+        "file": "matteWhiteIcon",
+        "background": false
+    },
+    {
+        "name": "Graffiti",
+        "file": "graffitiIcon",
+        "background": false
     }
 ]

@@ -10,4 +10,5 @@ import SwiftUI
 struct IconModel: Codable, Hashable {
     var name: String
     var file: String
+    var background: Bool
 }

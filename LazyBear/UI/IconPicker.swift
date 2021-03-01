@@ -9,20 +9,43 @@ import SwiftUI
 
 struct IconPicker: View {
     var body: some View {
-        List(icons, id:\.name) { icon in
-            Button(action: { changeIcon(key: icon.file) }) {
-                HStack {
-                    Image(icon.file)
-                        .resizable()
-                        .cornerRadius(20)
-                        .frame(width: 70, height: 70)
-                        
-                    Text(icon.name)
+        List {
+            Section(header: Text("Without background")) {
+                ForEach(icons, id: \.name) { icon in
+                    if !icon.background {
+                        IconRow(icon: icon)
+                    }
                 }
             }
-            .buttonStyle(PlainButtonStyle())
+            
+            Section(header: Text("With background")) {
+                ForEach(icons, id: \.name) { icon in
+                    if icon.background {
+                        IconRow(icon: icon)
+                    }
+                }
+            }
         }
         .listStyle(GroupedListStyle())
+    }
+}
+
+struct IconRow: View {
+    @Environment(\.colorScheme) var colorScheme  // Detect dark mode
+    var icon: IconModel
+    
+    var body: some View {
+        Button(action: { changeIcon(key: icon.file) }) {
+            HStack {
+                Image(icon.file)
+                    .resizable()
+                    .cornerRadius(20)
+                    .frame(width: 70, height: 70)
+                    
+                Text(icon.name)
+                    .foregroundColor(colorScheme == .dark ? .white: .black)
+            }
+        }
     }
     
     private func changeIcon(key: String) {
