@@ -12,6 +12,8 @@ struct HistoricalPriceView: View {
     var symbol: String
     var chartHeight: CGFloat
     @State private var historicalPrices = [HistoricalPriceModel]()
+   
+    // Date picker
     var period = ["1W", "1M", "3M", "6M", "1Y", "2Y", "5Y"]
     @State var selectedPeriod = 2
     
