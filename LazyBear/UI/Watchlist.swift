@@ -12,22 +12,17 @@ struct Watchlist: View {
     @ObservedObject var hudManager: HUDManager
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
-    @Environment(\.editMode) var mode
     
     var body: some View {
         NavigationView {
-            // Iterate over and over through this list to print the color for every row
-            // Color names are from 1 to 5
-            let colorNumber = ["1", "2", "3", "4", "5"]
             List {
-                ForEach(companies.indices) { i in
+                ForEach(companies.indices, id: \.self) { i in
                     let name = companies[i].name
                     let symbol = companies[i].symbol
                     NavigationLink(destination: CompanyView(hudManager: hudManager, name: name, symbol: symbol)
                                     .navigationTitle(symbol)
                     ) {
-                        // Pass color number to the row
-                        CompanyRow(symbol: symbol, name: name, rowNumber: i % colorNumber.count)
+                        CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)
                     }
                 }
                 .onDelete(perform: removeCompany)

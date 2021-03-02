@@ -9,10 +9,8 @@ import SwiftUI
 
 struct NewsView: View {
     var symbol: String
-    @State var news = [NewsModel]()
-    
-    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
-    var userSettings: FetchedResults<UserSettings>
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)]) var userSettings: FetchedResults<UserSettings>
+    @State private var news = [NewsModel]()
     
     var body: some View {
         VStack(alignment: .leading) {

@@ -15,10 +15,6 @@ struct Search: View {
     
     var body: some View {
         NavigationView {
-            let colorNumber = ["1", "2", "3", "4", "5"]
-            // Iterate over and over through this list to print the color for every row
-            // Color names are from 1 to 5
-            
             let list = filterList()
             List(list.indices, id: \.self) { i in
                 let name = list[i].securityName ?? "-"
@@ -26,8 +22,7 @@ struct Search: View {
                 NavigationLink(destination: CompanyView(hudManager: hudManager, name: name, symbol: symbol)
                                 .navigationTitle(symbol)
                 ) {
-                    // Pass color number to the row
-                    CompanyRow(symbol: symbol, name: name, rowNumber: i % colorNumber.count)
+                    CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)
                 }
             }
             .navigationBarSearch(self.$company)

@@ -13,9 +13,9 @@ struct NewsLanguagePicker: View {
     
     var body: some View {
         Picker("News language", selection: $language) {
-            ForEach(newsLanguages, id: \.name) { language in
+            ForEach(newsLanguages, id: \.code) { language in
                 Text("\(language.flag) \(language.name)")
-                    .tag(language.name)
+                    .tag(language.code)
             }
         }
         .onChange(of: language, perform: { language in
