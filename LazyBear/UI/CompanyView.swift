@@ -18,14 +18,14 @@ struct CompanyView: View {
     var body: some View {
         GeometryReader { geo in
             ScrollView {
-                //PriceView(symbol: symbol)
+                PriceView(symbol: symbol)
                 HistoricalPriceView(symbol: symbol, chartHeight: geo.size.width / 2)
                 NewsView(symbol: symbol)
             }
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Text("Change view")
+                // Here I will add the view selector (Stock news, insiders, etc)
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {

@@ -26,7 +26,7 @@ struct Settings: View {
                     Text("App icon")
                 }
                 
-                Section {
+                Section(footer: IexAttribution(text: "Data provided by IEX Cloud").padding(.top)) {
                     ForEach((0...3), id: \.self) { index in
                         Link(destination: URL(string: setting.links[index])!) {
                             HStack {
