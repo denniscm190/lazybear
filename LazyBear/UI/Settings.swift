@@ -18,10 +18,8 @@ struct Settings: View {
     var body: some View {
         NavigationView {
             Form {
-                let theme = userSettings.first?.theme ?? "Default"
-                let language = userSettings.first?.newsLanguage ?? "English"
-                ThemePicker(theme: theme)
-                LanguagePicker(language: language)
+                ThemePicker(theme: userSettings.first?.theme ?? "Default")
+                LanguagePicker(language: userSettings.first?.newsLanguage ?? "en")
                 NavigationLink(destination: IconPicker()) {
                     Text("App icon")
                 }
@@ -36,8 +34,6 @@ struct Settings: View {
                         }
                         .foregroundColor(colorScheme == .dark ? .white: .black)
                     }
-                    
-                    SettingRow(image: "bag.fill", text: "Tip jar", colour: .systemGreen)
                 }
             }
             .navigationTitle("Settings 👨🏻‍🔧")
