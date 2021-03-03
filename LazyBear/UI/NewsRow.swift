@@ -9,40 +9,48 @@ import SwiftUI
 
 struct NewsRow: View {
     var new: NewsModel
+    @State var showingDetail = false
     
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                if let source = new.source {
-                    Text(source.uppercased())
-                        .font(.caption)
-                        .opacity(0.5)
+        
+        Button(action: { self.showingDetail = true }) {
+            HStack {
+                VStack(alignment: .leading) {
+                    if let source = new.source {
+                        Text(source.uppercased())
+                            .font(.caption)
+                            .opacity(0.5)
+                        
+                    }
+        
+                    if let headline = new.headline {
+                        Text(headline)
+                            .font(.headline)
+                            .lineLimit(4)
+                    }
                     
-                }
-    
-                if let headline = new.headline {
-                    Text(headline)
-                        .font(.headline)
-                        .lineLimit(4)
-                }
-                
-                if let summary = new.summary {
-                    Text(summary)
-                        .opacity(0.5)
-                        .font(.subheadline)
-                        .lineLimit(1)
-                        .padding(.bottom, 5)
-                }
-                
-                if (new.datetime != nil) {
-                    let humanDate = convertDate()
-                    Text("\(humanDate) ago")
-                        .font(.caption2)
-                        .opacity(0.5)
+                    if let summary = new.summary {
+                        Text(summary)
+                            .opacity(0.5)
+                            .font(.subheadline)
+                            .lineLimit(1)
+                            .padding(.bottom, 5)
+                    }
+                    
+                    if (new.datetime != nil) {
+                        let humanDate = convertDate()
+                        Text("\(humanDate) ago")
+                            .font(.caption2)
+                            .opacity(0.5)
+                    }
                 }
             }
         }
+        .buttonStyle(PlainButtonStyle())
         .padding(.horizontal)
+        .sheet(isPresented: $showingDetail) {
+            DetailNew(new: new)
+        }
     }
     
     // Cover Epoch time to human date
