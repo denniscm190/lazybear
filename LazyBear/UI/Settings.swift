@@ -21,7 +21,7 @@ struct Settings: View {
                 let theme = userSettings.first?.theme ?? "Default"
                 let language = userSettings.first?.newsLanguage ?? "English"
                 ThemePicker(theme: theme)
-                NewsLanguagePicker(language: language)
+                LanguagePicker(language: language)
                 NavigationLink(destination: IconPicker()) {
                     Text("App icon")
                 }

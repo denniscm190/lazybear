@@ -19,7 +19,7 @@ struct CompanyView: View {
         GeometryReader { geo in
             ScrollView {
                 PriceView(symbol: symbol)
-                HistoricalPriceView(symbol: symbol, chartHeight: geo.size.width / 2)
+                ChartView(symbol: symbol, chartHeight: geo.size.width / 2)
                 NewsView(symbol: symbol)
             }
         }

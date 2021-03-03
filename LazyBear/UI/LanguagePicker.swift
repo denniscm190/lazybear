@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct NewsLanguagePicker: View {
+struct LanguagePicker: View {
     @Environment(\.managedObjectContext) private var moc
     @State var language: String
     
@@ -38,6 +38,6 @@ struct NewsLanguagePicker: View {
 
 struct NewsLanguagePicker_Previews: PreviewProvider {
     static var previews: some View {
-        NewsLanguagePicker(language: "en")
+        LanguagePicker(language: "en")
     }
 }

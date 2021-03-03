@@ -8,7 +8,7 @@
 import SwiftUI
 import Charts
 
-struct HistoricalPriceView: View {
+struct ChartView: View {
     var symbol: String
     var chartHeight: CGFloat
     @State private var historicalPrices = [HistoricalPriceModel]()
@@ -69,6 +69,6 @@ struct HistoricalPriceView: View {
 
 struct HistoricalPriceView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoricalPriceView(symbol: "aapl", chartHeight: 200)
+        ChartView(symbol: "aapl", chartHeight: 200)
     }
 }

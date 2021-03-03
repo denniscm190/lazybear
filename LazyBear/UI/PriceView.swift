@@ -28,7 +28,6 @@ struct PriceView: View {
                     .foregroundColor(negativeChange ? Color(.systemRed) : Color(.systemGreen))
                     .padding(.trailing)
                 
-                IexAttribution(text: "IEX Cloud")
                 Spacer()
             
             }
