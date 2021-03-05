@@ -53,7 +53,7 @@ struct FakeLinkArrow: View {
 
 class SettingMetadata {
     var links = ["https://lazybear.app",
-                 "https://lazybear.app",
+                 "https://apps.apple.com/us/app/lazybear/id1534612943",
                  "https://github.com/DennisTechnologies/Lazybear-App/issues",
                  "https://github.com/DennisTechnologies/Lazybear-App/discussions"]
     
