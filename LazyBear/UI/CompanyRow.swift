@@ -12,17 +12,9 @@ struct CompanyRow: View {
     var name: String
     var rowNumber: Int
     
-    // Fetch user appearence settings (the last one made first)
-    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
-    var userSettings: FetchedResults<UserSettings>
-    
     var body: some View {
         HStack {
-            let theme = userSettings.first?.theme?.lowercased() ?? "default"
-            RoundedRectangle(cornerRadius: 15)
-                .foregroundColor(Color("\(theme)Row\(rowNumber)"))
-                .frame(width: 5)
-            
+            SideColor(rowNumber: rowNumber)
             VStack(alignment: .leading) {
                 Text(symbol.uppercased())
                     .fontWeight(.semibold)

@@ -27,6 +27,9 @@
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
 		95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
 		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
+		957B816825F2A02C0005E5C0 /* InsiderTranModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B816725F2A02C0005E5C0 /* InsiderTranModel.swift */; };
+		957B816D25F2A35D0005E5C0 /* TransRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B816C25F2A35D0005E5C0 /* TransRow.swift */; };
+		957B817025F2A4290005E5C0 /* SideColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 957B816F25F2A4290005E5C0 /* SideColor.swift */; };
 		958A733A25E00C3100FD7ECA /* Company+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */; };
 		958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */; };
 		958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958A734125E00C9900FD7ECA /* Watchlist.swift */; };
@@ -52,6 +55,10 @@
 		95BFAE5825E2C5A700A70EC3 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE5725E2C5A700A70EC3 /* ChartView.swift */; };
 		95D34C2125EFD319006F4A81 /* DetailNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D34C2025EFD319006F4A81 /* DetailNew.swift */; };
 		95D34C2725EFD5FE006F4A81 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95D34C2625EFD5FE006F4A81 /* SDWebImageSwiftUI */; };
+		95DED9D525F2A752000DFCBA /* transactionCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9D425F2A752000DFCBA /* transactionCodes.swift */; };
+		95DED9D825F2B1EF000DFCBA /* TopInsiderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9D725F2B1EF000DFCBA /* TopInsiderModel.swift */; };
+		95DED9DB25F2B268000DFCBA /* InsiderSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9DA25F2B268000DFCBA /* InsiderSum.swift */; };
+		95DED9E425F2B4D6000DFCBA /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95DED9E325F2B4D6000DFCBA /* SwiftUICharts */; };
 		95F045FB25E96A58006A5A17 /* newsLanguages.json in Resources */ = {isa = PBXBuildFile; fileRef = 95F045FA25E96A58006A5A17 /* newsLanguages.json */; };
 		95F045FE25E96AA1006A5A17 /* NewsLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F045FD25E96AA1006A5A17 /* NewsLanguageModel.swift */; };
 		95F0460425E96DBB006A5A17 /* UserSettings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0460225E96DBB006A5A17 /* UserSettings+CoreDataClass.swift */; };
@@ -60,7 +67,7 @@
 		95F0460B25E970DB006A5A17 /* LanguagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0460A25E970DB006A5A17 /* LanguagePicker.swift */; };
 		95F0461025E976B5006A5A17 /* SettingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F0460F25E976B5006A5A17 /* SettingRow.swift */; };
 		95F0462825E98376006A5A17 /* default.png in Resources */ = {isa = PBXBuildFile; fileRef = 95F0462625E98376006A5A17 /* default.png */; };
-		95F90AB825F280190023A4B0 /* InsidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F90AB725F280190023A4B0 /* InsidersView.swift */; };
+		95F90AB825F280190023A4B0 /* InsiderTrans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F90AB725F280190023A4B0 /* InsiderTrans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +94,9 @@
 		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		957B816725F2A02C0005E5C0 /* InsiderTranModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTranModel.swift; sourceTree = "<group>"; };
+		957B816C25F2A35D0005E5C0 /* TransRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransRow.swift; sourceTree = "<group>"; };
+		957B816F25F2A4290005E5C0 /* SideColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideColor.swift; sourceTree = "<group>"; };
 		958A733825E00C3100FD7ECA /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
 		958A733925E00C3100FD7ECA /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		958A734125E00C9900FD7ECA /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
@@ -111,6 +121,9 @@
 		95BFAE5325E2C52300A70EC3 /* HistoricalPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPriceModel.swift; sourceTree = "<group>"; };
 		95BFAE5725E2C5A700A70EC3 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		95D34C2025EFD319006F4A81 /* DetailNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNew.swift; sourceTree = "<group>"; };
+		95DED9D425F2A752000DFCBA /* transactionCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionCodes.swift; sourceTree = "<group>"; };
+		95DED9D725F2B1EF000DFCBA /* TopInsiderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInsiderModel.swift; sourceTree = "<group>"; };
+		95DED9DA25F2B268000DFCBA /* InsiderSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderSum.swift; sourceTree = "<group>"; };
 		95F045FA25E96A58006A5A17 /* newsLanguages.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = newsLanguages.json; sourceTree = "<group>"; };
 		95F045FD25E96AA1006A5A17 /* NewsLanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsLanguageModel.swift; sourceTree = "<group>"; };
 		95F0460225E96DBB006A5A17 /* UserSettings+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserSettings+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -119,7 +132,7 @@
 		95F0460A25E970DB006A5A17 /* LanguagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagePicker.swift; sourceTree = "<group>"; };
 		95F0460F25E976B5006A5A17 /* SettingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRow.swift; sourceTree = "<group>"; };
 		95F0462625E98376006A5A17 /* default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = default.png; sourceTree = "<group>"; };
-		95F90AB725F280190023A4B0 /* InsidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsidersView.swift; sourceTree = "<group>"; };
+		95F90AB725F280190023A4B0 /* InsiderTrans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTrans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +144,7 @@
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				9549D63325E1903F0085C3CD /* Charts in Frameworks */,
 				95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */,
+				95DED9E425F2B4D6000DFCBA /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +238,8 @@
 				95F045FD25E96AA1006A5A17 /* NewsLanguageModel.swift */,
 				950B674E25E9A0AE00BF8593 /* IconModel.swift */,
 				9517625F25EEB37E00733235 /* PriceModel.swift */,
+				957B816725F2A02C0005E5C0 /* InsiderTranModel.swift */,
+				95DED9D725F2B1EF000DFCBA /* TopInsiderModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,6 +250,7 @@
 				958A734125E00C9900FD7ECA /* Watchlist.swift */,
 				958A734825E010F900FD7ECA /* Search.swift */,
 				958A734425E00D3D00FD7ECA /* CompanyRow.swift */,
+				957B816F25F2A4290005E5C0 /* SideColor.swift */,
 				95ACB5A825E0397B00A3CCC8 /* CompanyView.swift */,
 				95ABDD3025E1602D00310776 /* PriceView.swift */,
 				95BB43BF25EA667700B6C965 /* DateSelection.swift */,
@@ -248,7 +265,9 @@
 				95F0460F25E976B5006A5A17 /* SettingRow.swift */,
 				9517626225EEBD3800733235 /* IexAttribution.swift */,
 				95BFAE4A25E2AEA000A70EC3 /* HUD.swift */,
-				95F90AB725F280190023A4B0 /* InsidersView.swift */,
+				95F90AB725F280190023A4B0 /* InsiderTrans.swift */,
+				957B816C25F2A35D0005E5C0 /* TransRow.swift */,
+				95DED9DA25F2B268000DFCBA /* InsiderSum.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -267,6 +286,7 @@
 				9505763525ED605100D548E4 /* matteBlack.png */,
 				9505763C25ED670B00D548E4 /* matteWhite.png */,
 				9505763A25ED670B00D548E4 /* graffiti.png */,
+				95DED9D425F2A752000DFCBA /* transactionCodes.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -291,6 +311,7 @@
 				95B3E0A525E1318D007EFDE3 /* SwiftlySearch */,
 				9549D63225E1903F0085C3CD /* Charts */,
 				95D34C2625EFD5FE006F4A81 /* SDWebImageSwiftUI */,
+				95DED9E325F2B4D6000DFCBA /* SwiftUICharts */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -323,6 +344,7 @@
 				95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */,
 				95D34C2525EFD5FE006F4A81 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				95DED9E225F2B4D6000DFCBA /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -381,22 +403,28 @@
 				950B674F25E9A0AE00BF8593 /* IconModel.swift in Sources */,
 				958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */,
 				9517626325EEBD3800733235 /* IexAttribution.swift in Sources */,
-				95F90AB825F280190023A4B0 /* InsidersView.swift in Sources */,
+				95F90AB825F280190023A4B0 /* InsiderTrans.swift in Sources */,
 				95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				9517626025EEB37E00733235 /* PriceModel.swift in Sources */,
 				958A734525E00D3D00FD7ECA /* CompanyRow.swift in Sources */,
+				95DED9D525F2A752000DFCBA /* transactionCodes.swift in Sources */,
 				95ABDD3525E166BA00310776 /* NewsView.swift in Sources */,
+				957B816825F2A02C0005E5C0 /* InsiderTranModel.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				95F0460B25E970DB006A5A17 /* LanguagePicker.swift in Sources */,
 				95D34C2125EFD319006F4A81 /* DetailNew.swift in Sources */,
 				95ABDD3125E1602D00310776 /* PriceView.swift in Sources */,
 				95BFAE4B25E2AEA000A70EC3 /* HUD.swift in Sources */,
 				95F0460525E96DBB006A5A17 /* UserSettings+CoreDataProperties.swift in Sources */,
+				95DED9DB25F2B268000DFCBA /* InsiderSum.swift in Sources */,
 				958A733A25E00C3100FD7ECA /* Company+CoreDataClass.swift in Sources */,
+				957B816D25F2A35D0005E5C0 /* TransRow.swift in Sources */,
 				95ACB5A925E0397B00A3CCC8 /* CompanyView.swift in Sources */,
 				958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */,
 				95BB43C025EA667700B6C965 /* DateSelection.swift in Sources */,
+				957B817025F2A4290005E5C0 /* SideColor.swift in Sources */,
+				95DED9D825F2B1EF000DFCBA /* TopInsiderModel.swift in Sources */,
 				95BFAE4E25E2B0C200A70EC3 /* HUDManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +648,14 @@
 				minimumVersion = 2.0.1;
 			};
 		};
+		95DED9E225F2B4D6000DFCBA /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mecid/SwiftUICharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -637,6 +673,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95D34C2525EFD5FE006F4A81 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		95DED9E325F2B4D6000DFCBA /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95DED9E225F2B4D6000DFCBA /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 

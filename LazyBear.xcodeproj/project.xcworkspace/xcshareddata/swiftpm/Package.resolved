@@ -45,6 +45,15 @@
           "revision": "c58b15c37eae9bd20525c6daa93a06a689ca75cb",
           "version": "1.1.0"
         }
+      },
+      {
+        "package": "SwiftUICharts",
+        "repositoryURL": "https://github.com/mecid/SwiftUICharts.git",
+        "state": {
+          "branch": null,
+          "revision": "6cacb77e8d3e0a9ed1d09ce9a19ba057c95ce529",
+          "version": "0.5.2"
+        }
       }
     ]
   },

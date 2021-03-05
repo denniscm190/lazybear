@@ -31,7 +31,8 @@ struct CompanyView: View {
                         NewsView(symbol: symbol)
                         
                 } else if viewState == .insiders {
-                    InsidersView()
+                    InsiderSum(symbol: symbol)
+                    InsiderTrans(symbol: symbol)
                 }
             }
         }
