@@ -19,7 +19,7 @@ struct Search: View {
             List(list.indices, id: \.self) { i in
                 let name = list[i].securityName ?? "-"
                 let symbol = list[i].symbol
-                NavigationLink(destination: CompanyView(hudManager: hudManager, name: name, symbol: symbol)
+                NavigationLink(destination: CompanyView(name: name, symbol: symbol, hudManager: hudManager)
                                 .navigationTitle(symbol)
                 ) {
                     CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)

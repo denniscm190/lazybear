@@ -7,25 +7,44 @@
 
 import SwiftUI
 
+enum ViewType {
+    case stock, insiders
+}
+
 struct CompanyView: View {
+    var name: String
+    var symbol: String
+    
     @ObservedObject var hudManager: HUDManager
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     @Environment(\.managedObjectContext) private var moc
     
-    var name: String
-    var symbol: String
+    @State private var showingAction = false
+    @State var viewState = ViewType.stock
     
     var body: some View {
         GeometryReader { geo in
             ScrollView {
-                PriceView(symbol: symbol)
-                ChartView(symbol: symbol, chartHeight: geo.size.width / 2)
-                NewsView(symbol: symbol)
+                if viewState == .stock {
+                        PriceView(symbol: symbol)
+                        ChartView(symbol: symbol, chartHeight: geo.size.width / 2)
+                        NewsView(symbol: symbol)
+                        
+                } else if viewState == .insiders {
+                    InsidersView()
+                }
             }
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
-                // Here I will add the view selector (Stock news, insiders, etc)
+                Button(action: { self.showingAction = true }) {
+                    if viewState == .stock {
+                        Text("Stock")
+                    } else if viewState == .insiders {
+                        Text("Insiders")
+                    }
+                    Image(systemName: "chevron.down")
+                }
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -37,6 +56,13 @@ struct CompanyView: View {
                     }
                 }
             }
+        }
+        .actionSheet(isPresented: $showingAction) {
+            ActionSheet(title: Text("Select an option"), buttons: [
+                .default(Text("Stock & news")) { self.viewState = ViewType.stock },
+                .default(Text("Insiders")) { self.viewState = ViewType.insiders },
+                .cancel()
+                ])
         }
     }
     
@@ -60,7 +86,7 @@ struct CompanyView: View {
 struct CompanyView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CompanyView(hudManager: HUDManager(), name: "apple inc", symbol: "aapl")
+            CompanyView(name: "apple inc", symbol: "aapl", hudManager: HUDManager())
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

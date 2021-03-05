@@ -19,7 +19,7 @@ struct Watchlist: View {
                 ForEach(companies.indices, id: \.self) { i in
                     let name = companies[i].name
                     let symbol = companies[i].symbol
-                    NavigationLink(destination: CompanyView(hudManager: hudManager, name: name, symbol: symbol)
+                    NavigationLink(destination: CompanyView(name: name, symbol: symbol, hudManager: hudManager)
                                     .navigationTitle(symbol)
                     ) {
                         CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)
