@@ -10,6 +10,7 @@ import SwiftUI
 struct NewsRow: View {
     var new: NewsModel
     @State var showingDetail = false
+    @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     
     var body: some View {
         
@@ -46,7 +47,7 @@ struct NewsRow: View {
                 }
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .foregroundColor(colorScheme == .dark ? .white: .black)
         .padding(.horizontal)
         .sheet(isPresented: $showingDetail) {
             DetailNew(new: new)

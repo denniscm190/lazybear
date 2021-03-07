@@ -23,7 +23,7 @@ struct InsiderSum: View {
                         .renderingMode(.original)
                         .imageScale(.large)
                     
-                    Text("Top 10 insiders")
+                    Text("Top insiders")
                         .font(.title2)
                         .fontWeight(.semibold)
                     
@@ -56,16 +56,20 @@ struct InsiderSum: View {
         request(url: getUrl(), model: [TopInsiderModel].self) { topInsiders in
             let theme = userSettings.first?.theme?.lowercased() ?? "default"
             // Loop over the response
+            var insiderNumber = 0
             for insider in topInsiders {
-                if let net = insider.position {
-                    let index = topInsiders.firstIndex(of: insider)  // Get number (indice) of the item in the list
-                    let rowNumber = index! % 5  // Get row color name
-                    let color = Color("\(theme)Row\(rowNumber)")  // Define color
-                    let label = LocalizedStringKey(insider.entityName.capitalized)  // Define label
-                    let legend = Legend(color: color, label: label)  // Define legend SwiftUICharts
-                    let dataPoint = DataPoint(value: Double(net), label: LocalizedStringKey(String(net)), legend: legend)
-                    
-                    dataPoints.append(dataPoint)
+                insiderNumber += 1
+                if insiderNumber < 5 {
+                    if let net = insider.position {
+                        let index = topInsiders.firstIndex(of: insider)  // Get number (indice) of the item in the list
+                        let rowNumber = index! % 5  // Get row color name
+                        let color = Color("\(theme)Row\(rowNumber)")  // Define color
+                        let label = LocalizedStringKey(insider.entityName.capitalized)  // Define label
+                        let legend = Legend(color: color, label: label)  // Define legend SwiftUICharts
+                        let dataPoint = DataPoint(value: Double(net), label: LocalizedStringKey(String(net)), legend: legend)
+                        
+                        dataPoints.append(dataPoint)
+                    }
                 }
             }
         }

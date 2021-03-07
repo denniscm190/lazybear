@@ -29,8 +29,6 @@ struct InsiderTrans: View {
                 .padding(.horizontal)
             }
             
-            Divider()
-            
             ForEach(transactions.reversed(), id: \.self) { trans in
                 TransRow(transaction: trans)
                     .padding(.horizontal)

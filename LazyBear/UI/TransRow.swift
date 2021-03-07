@@ -10,6 +10,7 @@ import SwiftUI
 struct TransRow: View {
     var transaction: InsiderTranModel
     @State private var showingDetail = false
+    @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     
     var body: some View {
         Button(action: { self.showingDetail = true }) {
@@ -31,7 +32,7 @@ struct TransRow: View {
                 }
             }
         }
-        .buttonStyle(PlainButtonStyle())
+        .foregroundColor(colorScheme == .dark ? .white: .black)
         .sheet(isPresented: $showingDetail) {
             TranDetail(transaction: transaction)
         }
