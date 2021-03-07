@@ -14,18 +14,20 @@ struct NewsView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "newspaper.fill")
-                    .foregroundColor(Color(.systemYellow))
-                    .imageScale(.large)
-                
-                Text("Recent news")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                
-                Spacer()
+            if !news.isEmpty {
+                HStack {
+                    Image(systemName: "newspaper.fill")
+                        .foregroundColor(Color(.systemYellow))
+                        .imageScale(.large)
+                    
+                    Text("Recent news")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Spacer()
+                }
+                .padding()
             }
-            .padding()
             
             let language = userSettings.first?.newsLanguage ?? "en"
             ForEach(news, id: \.self) { new in

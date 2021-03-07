@@ -9,24 +9,31 @@ import SwiftUI
 
 struct TransRow: View {
     var transaction: InsiderTranModel
+    @State private var showingDetail = false
     
     var body: some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading) {
-                Text(transaction.fullName?.capitalized ?? "-")
-                    .fontWeight(.semibold)
+        Button(action: { self.showingDetail = true }) {
+            HStack(alignment: .top) {
+                VStack(alignment: .leading) {
+                    Text(transaction.fullName?.capitalized ?? "-")
+                        .fontWeight(.semibold)
+                    
+                    if let date = transaction.transactionDate {
+                        Text(date)
+                    }
+                }
                 
-                if let date = transaction.transactionDate {
-                    Text(date)
+                Spacer()
+                if let shares = transaction.transactionShares ?? 0 {
+                    Text("\(shares)")
+                        .foregroundColor(shares < 0 ? Color(.systemRed): Color(.systemGreen))
+                        .fontWeight(.semibold)
                 }
             }
-            
-            Spacer()
-            if let shares = transaction.transactionShares ?? 0 {
-                Text("\(shares)")
-                    .foregroundColor(shares < 0 ? Color(.systemRed): Color(.systemGreen))
-                    .fontWeight(.semibold)
-            }
+        }
+        .buttonStyle(PlainButtonStyle())
+        .sheet(isPresented: $showingDetail) {
+            TranDetail(transaction: transaction)
         }
     }
 }

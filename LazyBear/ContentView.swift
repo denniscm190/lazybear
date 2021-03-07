@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    // Start ObservedObjects
     @ObservedObject var hudManager = HUDManager()
     
-    // Fetch user appearence settings (the last one made first)
+    // Fetch user appearence settings
     @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
     var userSettings: FetchedResults<UserSettings>
     

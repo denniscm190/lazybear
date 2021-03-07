@@ -19,6 +19,7 @@
 		950B674F25E9A0AE00BF8593 /* IconModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B674E25E9A0AE00BF8593 /* IconModel.swift */; };
 		9517626025EEB37E00733235 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517625F25EEB37E00733235 /* PriceModel.swift */; };
 		9517626325EEBD3800733235 /* IexAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517626225EEBD3800733235 /* IexAttribution.swift */; };
+		9520C26F25F4D43D0070DD71 /* TranDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520C26E25F4D43D0070DD71 /* TranDetail.swift */; };
 		9549D63325E1903F0085C3CD /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9549D63225E1903F0085C3CD /* Charts */; };
 		9549D63625E191520085C3CD /* Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549D63525E191520085C3CD /* Normalize.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
@@ -85,6 +86,7 @@
 		950BA46C25E944FC00D065EF /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
 		9517625F25EEB37E00733235 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		9517626225EEBD3800733235 /* IexAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IexAttribution.swift; sourceTree = "<group>"; };
+		9520C26E25F4D43D0070DD71 /* TranDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranDetail.swift; sourceTree = "<group>"; };
 		9549D63525E191520085C3CD /* Normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Normalize.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				95BFAE4A25E2AEA000A70EC3 /* HUD.swift */,
 				95F90AB725F280190023A4B0 /* InsiderTrans.swift */,
 				957B816C25F2A35D0005E5C0 /* TransRow.swift */,
+				9520C26E25F4D43D0070DD71 /* TranDetail.swift */,
 				95DED9DA25F2B268000DFCBA /* InsiderSum.swift */,
 			);
 			path = UI;
@@ -422,6 +425,7 @@
 				957B816D25F2A35D0005E5C0 /* TransRow.swift in Sources */,
 				95ACB5A925E0397B00A3CCC8 /* CompanyView.swift in Sources */,
 				958A734225E00C9900FD7ECA /* Watchlist.swift in Sources */,
+				9520C26F25F4D43D0070DD71 /* TranDetail.swift in Sources */,
 				95BB43C025EA667700B6C965 /* DateSelection.swift in Sources */,
 				957B817025F2A4290005E5C0 /* SideColor.swift in Sources */,
 				95DED9D825F2B1EF000DFCBA /* TopInsiderModel.swift in Sources */,
@@ -557,7 +561,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -567,7 +571,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -582,7 +586,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -592,7 +596,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 3.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

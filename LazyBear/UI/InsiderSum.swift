@@ -17,16 +17,18 @@ struct InsiderSum: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "star.fill")
-                    .renderingMode(.original)
-                    .imageScale(.large)
-                
-                Text("Top 10 insiders")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                
-                Spacer()
+            if !dataPoints.isEmpty {
+                HStack {
+                    Image(systemName: "star.fill")
+                        .renderingMode(.original)
+                        .imageScale(.large)
+                    
+                    Text("Top 10 insiders")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                    
+                    Spacer()
+                }
             }
             
             HorizontalBarChartView(dataPoints: dataPoints)

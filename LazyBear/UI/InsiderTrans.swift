@@ -13,31 +13,25 @@ struct InsiderTrans: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            HStack {
-                Image(systemName: "dollarsign.circle.fill")
-                    .foregroundColor(Color(.systemGreen))
-                    .imageScale(.large)
-                
-                Text("Latest transactions")
-                    .font(.title2)
-                    .fontWeight(.semibold)
-                    .padding(.horizontal)
-                
-                Spacer()
+            if !transactions.isEmpty {
+                HStack {
+                    Image(systemName: "dollarsign.circle.fill")
+                        .foregroundColor(Color(.systemGreen))
+                        .imageScale(.large)
+                    
+                    Text("Latest transactions")
+                        .font(.title2)
+                        .fontWeight(.semibold)
+                        .padding(.horizontal)
+                    
+                    Spacer()
+                }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
             
             Divider()
             
-            if transactions.isEmpty {
-                HStack {
-                    Spacer()
-                    ProgressView()
-                    Spacer()
-                }
-            }
-            
-            ForEach(transactions, id: \.self) { trans in
+            ForEach(transactions.reversed(), id: \.self) { trans in
                 TransRow(transaction: trans)
                     .padding(.horizontal)
                     .padding(.vertical, 5)
