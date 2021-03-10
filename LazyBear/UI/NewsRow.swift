@@ -45,6 +45,8 @@ struct NewsRow: View {
                             .opacity(0.5)
                     }
                 }
+                
+                Spacer()
             }
         }
         .foregroundColor(colorScheme == .dark ? .white: .black)

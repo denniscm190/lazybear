@@ -17,7 +17,7 @@ struct NewsView: View {
             if !news.isEmpty {
                 HStack {
                     Image(systemName: "newspaper.fill")
-                        .foregroundColor(Color(.systemYellow))
+                        .foregroundColor(Color(.systemTeal))
                         .imageScale(.large)
                     
                     Text("Recent news")

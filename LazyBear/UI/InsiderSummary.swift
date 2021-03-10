@@ -1,5 +1,5 @@
 //
-//  InsiderSum.swift
+//  InsiderSummary.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 5/3/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftUICharts
 
-struct InsiderSum: View {
+struct InsiderSummary: View {
     var symbol: String
     @State private var dataPoints = [DataPoint]()
     
@@ -76,8 +76,8 @@ struct InsiderSum: View {
     }
 }
 
-struct InsiderSum_Previews: PreviewProvider {
+struct InsiderSummary_Previews: PreviewProvider {
     static var previews: some View {
-        InsiderSum(symbol: "aapl")
+        InsiderSummary(symbol: "aapl")
     }
 }

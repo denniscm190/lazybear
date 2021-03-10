@@ -1,5 +1,5 @@
 //
-//  HUD.swift
+//  Notification.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 21/2/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HUD: View {
+struct Notification: View {
     var text: String
     var image: String
     

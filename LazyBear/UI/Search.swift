@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftlySearch
 
 struct Search: View {
-    @ObservedObject var hudManager: HUDManager
+    @ObservedObject var hudManager: HudManager
     @State private var company = String()
     @State private var companies = [CompanyModel]()
     
@@ -59,6 +59,6 @@ struct Search: View {
 
 struct Search_Previews: PreviewProvider {
     static var previews: some View {
-        Search(hudManager: HUDManager())
+        Search(hudManager: HudManager())
     }
 }

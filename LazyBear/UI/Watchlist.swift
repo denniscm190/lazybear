@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct Watchlist: View {
-    @ObservedObject var hudManager: HUDManager
+    @ObservedObject var hudManager: HudManager
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     
@@ -51,6 +51,6 @@ struct Watchlist: View {
 
 struct Watchlist_Previews: PreviewProvider {
     static var previews: some View {
-        Watchlist(hudManager: HUDManager())
+        Watchlist(hudManager: HudManager())
     }
 }

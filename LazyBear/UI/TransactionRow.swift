@@ -1,5 +1,5 @@
 //
-//  InsiderRow.swift
+//  TransactionRow.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 5/3/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TransRow: View {
+struct TransactionRow: View {
     var transaction: InsiderTranModel
     @State private var showingDetail = false
     @Environment(\.colorScheme) var colorScheme  // Detect dark mode
@@ -34,13 +34,13 @@ struct TransRow: View {
         }
         .foregroundColor(colorScheme == .dark ? .white: .black)
         .sheet(isPresented: $showingDetail) {
-            TranDetail(transaction: transaction)
+            TransactionDetail(transaction: transaction)
         }
     }
 }
 
-struct TransRow_Previews: PreviewProvider {
+struct TransactionRow_Previews: PreviewProvider {
     static var previews: some View {
-        TransRow(transaction: InsiderTranModel(directIndirect: "D", transactionDate: "2020-02-04", fullName: "WAGNER SUSAN", postShares: 886126, transactionCode: "M", transactionPrice: 13.20, transactionShares: 12345, transactionValue: 123456.50))
+        TransactionRow(transaction: InsiderTranModel(directIndirect: "D", transactionDate: "2020-02-04", fullName: "WAGNER SUSAN", postShares: 886126, transactionCode: "M", transactionPrice: 13.20, transactionShares: 12345, transactionValue: 123456.50))
     }
 }

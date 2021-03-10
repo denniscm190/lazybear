@@ -1,5 +1,5 @@
 //
-//  InsidersView.swift
+//  InsiderTransactions.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 5/3/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InsiderTrans: View {
+struct InsiderTransactions: View {
     var symbol: String
     @State private var transactions = [InsiderTranModel]()
     
@@ -15,14 +15,13 @@ struct InsiderTrans: View {
         VStack(alignment: .leading) {
             if !transactions.isEmpty {
                 HStack {
-                    Image(systemName: "dollarsign.circle.fill")
+                    Image(systemName: "dollarsign.square.fill")
                         .foregroundColor(Color(.systemGreen))
                         .imageScale(.large)
                     
                     Text("Latest transactions")
                         .font(.title2)
                         .fontWeight(.semibold)
-                        .padding(.horizontal)
                     
                     Spacer()
                 }
@@ -30,7 +29,7 @@ struct InsiderTrans: View {
             }
             
             ForEach(transactions.reversed(), id: \.self) { trans in
-                TransRow(transaction: trans)
+                TransactionRow(transaction: trans)
                     .padding(.horizontal)
                     .padding(.vertical, 5)
                 
@@ -51,8 +50,8 @@ struct InsiderTrans: View {
     }
 }
 
-struct InsiderTrans_Previews: PreviewProvider {
+struct InsiderTransactions_Previews: PreviewProvider {
     static var previews: some View {
-        InsiderTrans(symbol: "aapl")
+        InsiderTransactions(symbol: "aapl")
     }
 }

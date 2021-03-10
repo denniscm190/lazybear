@@ -1,5 +1,5 @@
 //
-//  TranDetail.swift
+//  TransactionDetail.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 7/3/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TranDetail: View {
+struct TransactionDetail: View {
     var transaction: InsiderTranModel
     
     var body: some View {
@@ -64,8 +64,8 @@ struct TranDetail: View {
     }
 }
 
-struct TranDetail_Previews: PreviewProvider {
+struct TransactionDetail_Previews: PreviewProvider {
     static var previews: some View {
-        TranDetail(transaction: InsiderTranModel(directIndirect: "D", transactionDate: "2020-02-04", fullName: "WAGNER SUSAN", postShares: 886126, transactionCode: "M", transactionPrice: 13.20, transactionShares: 12345, transactionValue: 123456.50))
+        TransactionDetail(transaction: InsiderTranModel(directIndirect: "D", transactionDate: "2020-02-04", fullName: "WAGNER SUSAN", postShares: 886126, transactionCode: "M", transactionPrice: 13.20, transactionShares: 12345, transactionValue: 123456.50))
     }
 }
