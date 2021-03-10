@@ -15,11 +15,10 @@ struct CompanyView: View {
     var name: String
     var symbol: String
     
-    @ObservedObject var hudManager: HUDManager
+    @ObservedObject var hudManager: HudManager
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     @Environment(\.managedObjectContext) private var moc
-    
-    @State private var showingAction = false
+
     @State var viewState = ViewType.stock
     
     var body: some View {
@@ -31,20 +30,15 @@ struct CompanyView: View {
                         NewsView(symbol: symbol)
                         
                 } else if viewState == .insiders {
-                    InsiderSum(symbol: symbol)
-                    InsiderTrans(symbol: symbol)
+                    InsiderSummary(symbol: symbol)
+                    InsiderTransactions(symbol: symbol)
                 }
             }
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Button(action: { self.showingAction = true }) {
-                    if viewState == .stock {
-                        Text("Stock")
-                    } else if viewState == .insiders {
-                        Text("Insiders")
-                    }
-                    Image(systemName: "chevron.down")
+                Button(action: { self.hudManager.showAction.toggle() }) {
+                    Text("Test")
                 }
             }
             
@@ -58,13 +52,6 @@ struct CompanyView: View {
                 }
             }
         }
-        .actionSheet(isPresented: $showingAction) {
-            ActionSheet(title: Text("Select an option"), buttons: [
-                .default(Text("Stock & news")) { self.viewState = ViewType.stock },
-                .default(Text("Insiders")) { self.viewState = ViewType.insiders },
-                .cancel()
-                ])
-        }
     }
     
     // Add to watchlist
@@ -75,7 +62,7 @@ struct CompanyView: View {
         company.name = name
         do {
             try moc.save()
-            hudManager.show(text: "Company saved", image: "checkmark.circle")
+            hudManager.selectHud(type: .notification)
             generator.notificationOccurred(.success)
             print("Company saved.")
         } catch {
@@ -87,7 +74,8 @@ struct CompanyView: View {
 struct CompanyView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CompanyView(name: "apple inc", symbol: "aapl", hudManager: HUDManager())
+            CompanyView(name: "apple inc", symbol: "aapl", hudManager: HudManager())
+                .navigationTitle("APPL")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

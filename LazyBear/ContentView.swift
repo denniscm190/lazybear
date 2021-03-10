@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     // Start ObservedObjects
-    @ObservedObject var hudManager = HUDManager()
+    @ObservedObject var hudManager = HudManager()
     
     // Fetch user appearence settings
     @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
@@ -37,9 +37,23 @@ struct ContentView: View {
                     }
             }
             
-            HUD(text: hudManager.text, image: hudManager.image)
-                .offset(y: hudManager.isShowing ? 0 : -100)
+            Notification(text: "Company saved", image: "checkmark.circle")
+                .offset(y: hudManager.showNotification ? 0 : -100)
                 .animation(.easeInOut)
+            
+            // Action sheet
+            ZStack(alignment: .bottom) {
+                Color(.gray)
+                    .edgesIgnoringSafeArea(.all)
+                    .opacity(hudManager.showAction ? 0.2: 0)
+                    .animation(.easeInOut)
+                    .onTapGesture { hudManager.showAction = false }
+                
+                ActionView()
+                    .offset(y: hudManager.showAction ? 0 : 250)
+                    .animation(.easeInOut)
+                    .padding(.horizontal)
+            }
         }
         .accentColor(Color("\(userSettings.first?.theme?.lowercased() ?? "default")Accent"))
         // If this value is not optional it will cause a crash
