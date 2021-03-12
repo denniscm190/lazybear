@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    // Start ObservedObjects
-    @ObservedObject var hudManager = HudManager()
+    @EnvironmentObject var hudManager: HudManager
     
     // Fetch user appearence settings
     @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
@@ -19,13 +18,13 @@ struct ContentView: View {
         ZStack(alignment: .top) {
             TabView {
                 // First view
-                Watchlist(hudManager: hudManager)
+                Watchlist()
                     .tabItem {
                         Label("Watchlist", systemImage: "list.dash")
                     }
                 
                 // First view
-                Search(hudManager: hudManager)
+                Search()
                     .tabItem {
                         Label("Search", systemImage: "magnifyingglass")
                     }
@@ -37,6 +36,8 @@ struct ContentView: View {
                     }
             }
             
+            // Show HUDs
+            // Notification
             Notification(text: "Company saved", image: "checkmark.circle")
                 .offset(y: hudManager.showNotification ? 0 : -100)
                 .animation(.easeInOut)

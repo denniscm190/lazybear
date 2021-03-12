@@ -9,7 +9,7 @@ import SwiftUI
 import CoreData
 
 struct Watchlist: View {
-    @ObservedObject var hudManager: HudManager
+    @EnvironmentObject var hudManager: HudManager
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     
@@ -19,7 +19,7 @@ struct Watchlist: View {
                 ForEach(companies.indices, id: \.self) { i in
                     let name = companies[i].name
                     let symbol = companies[i].symbol
-                    NavigationLink(destination: CompanyView(name: name, symbol: symbol, hudManager: hudManager)
+                    NavigationLink(destination: CompanyView(name: name, symbol: symbol)
                                     .navigationTitle(symbol)
                     ) {
                         CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)
@@ -51,6 +51,6 @@ struct Watchlist: View {
 
 struct Watchlist_Previews: PreviewProvider {
     static var previews: some View {
-        Watchlist(hudManager: HudManager())
+        Watchlist()
     }
 }

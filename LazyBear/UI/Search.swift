@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftlySearch
 
 struct Search: View {
-    @ObservedObject var hudManager: HudManager
+    @EnvironmentObject var hudManager: HudManager
     @State private var company = String()
     @State private var companies = [CompanyModel]()
     
@@ -19,7 +19,7 @@ struct Search: View {
             List(list.indices, id: \.self) { i in
                 let name = list[i].securityName ?? "-"
                 let symbol = list[i].symbol
-                NavigationLink(destination: CompanyView(name: name, symbol: symbol, hudManager: hudManager)
+                NavigationLink(destination: CompanyView(name: name, symbol: symbol)
                                 .navigationTitle(symbol)
                 ) {
                     CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)
@@ -59,6 +59,6 @@ struct Search: View {
 
 struct Search_Previews: PreviewProvider {
     static var previews: some View {
-        Search(hudManager: HudManager())
+        Search()
     }
 }
