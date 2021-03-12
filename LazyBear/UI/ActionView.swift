@@ -56,6 +56,7 @@ struct ActionView: View {
             )
             .cornerRadius(20)
         }
+        .frame(maxWidth: 500)
     }
         
     private func changeViewTo(_ view: ViewType ) {
