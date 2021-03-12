@@ -31,6 +31,8 @@ struct Search: View {
                 })
             .navigationTitle("Search 🔍")
         }
+        .navigationViewStyle(StackNavigationViewStyle())
+        
         // Empty list
         .onDisappear { self.companies = [CompanyModel]() }
     }

@@ -34,6 +34,7 @@ struct Watchlist: View {
                 }
             }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
     
     private func removeCompany(at offsets: IndexSet) {
