@@ -29,6 +29,7 @@ struct CompanyView: View {
                     InsiderTransactions(symbol: symbol)
                 }
             }
+            .onAppear { companyType.view = .stock }
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
