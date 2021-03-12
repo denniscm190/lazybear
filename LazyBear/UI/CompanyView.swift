@@ -7,29 +7,24 @@
 
 import SwiftUI
 
-enum ViewType {
-    case stock, insiders
-}
-
 struct CompanyView: View {
     var name: String
     var symbol: String
     
-    @ObservedObject var hudManager: HudManager
+    @EnvironmentObject var hudManager: HudManager
+    @EnvironmentObject var companyType: CompanyType
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     @Environment(\.managedObjectContext) private var moc
-
-    @State var viewState = ViewType.stock
     
     var body: some View {
         GeometryReader { geo in
             ScrollView {
-                if viewState == .stock {
+                if companyType.view == .stock {
                         PriceView(symbol: symbol)
                         ChartView(symbol: symbol, chartHeight: geo.size.width / 2)
                         NewsView(symbol: symbol)
                         
-                } else if viewState == .insiders {
+                } else if companyType.view == .insiders {
                     InsiderSummary(symbol: symbol)
                     InsiderTransactions(symbol: symbol)
                 }
@@ -74,7 +69,7 @@ struct CompanyView: View {
 struct CompanyView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            CompanyView(name: "apple inc", symbol: "aapl", hudManager: HudManager())
+            CompanyView(name: "apple inc", symbol: "aapl")
                 .navigationTitle("APPL")
         }
         .navigationViewStyle(StackNavigationViewStyle())

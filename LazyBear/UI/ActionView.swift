@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ActionView: View {
+    @EnvironmentObject var companyType: CompanyType
+    @EnvironmentObject var hudManager: HudManager
     
     var body: some View {
         VStack {
             VStack {
                 Group {
-                    Button(action: {  }) {
+                    Button(action: { changeViewTo(.stock) }) {
                         Image(systemName: "chart.bar")
                         Text("Stock & news")
                         Spacer()
@@ -21,7 +23,7 @@ struct ActionView: View {
                     Divider()
                         .offset(x: 45)
                     
-                    Button(action: {  }) {
+                    Button(action: { changeViewTo(.insiders) }) {
                         Image(systemName: "chart.pie")
                         Text("Insider transactions")
                         Spacer()
@@ -35,7 +37,7 @@ struct ActionView: View {
                     .cornerRadius(20)
             )
             
-            Button(action: {  }) {
+            Button(action: { self.hudManager.showAction = false }) {
                 Spacer()
                 Text("Cancel")
                 Spacer()
@@ -48,6 +50,23 @@ struct ActionView: View {
             )
         }
         .frame(maxWidth: 600)
+    }
+    
+    private func changeViewTo(_ view: ViewType ) {
+        // Show view after one second.
+        // Give time to dismiss the Action View
+        self.hudManager.showAction = false
+        
+        if view == .stock {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.companyType.view = .stock
+                
+            }
+        } else if view == .insiders {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.companyType.view = .insiders
+            }
+        }
     }
 }
 
