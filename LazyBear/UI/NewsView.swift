@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import WaterfallGrid
 
 struct NewsView: View {
     var symbol: String
-    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)]) var userSettings: FetchedResults<UserSettings>
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
+    var userSettings: FetchedResults<UserSettings>
     @State private var news = [NewsModel]()
     
     var body: some View {
@@ -30,11 +32,31 @@ struct NewsView: View {
             }
             
             let language = userSettings.first?.newsLanguage ?? "en"
-            ForEach(news, id: \.self) { new in
-                if language == new.lang {
-                    NewsRow(new: new)
-                    Divider()
+            
+            // If iPhone
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                ForEach(news, id: \.self) { new in
+                    if language == new.lang {
+                        NewsRow(new: new)
+                          .padding(.horizontal)
+                        
+                        Divider()
+                    }
                 }
+            }
+            
+            // If iPad
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                WaterfallGrid(news, id: \.self) { new in
+                    NewsRow(new: new)
+                }
+                .gridStyle(
+                    columnsInPortrait: 2,
+                    columnsInLandscape: 3,
+                    spacing: 8,
+                    animation: .easeInOut(duration: 0.5)
+                  )
+                .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             }
         }
         .onAppear {

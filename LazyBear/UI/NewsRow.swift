@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct NewsRow: View {
     var new: NewsModel
@@ -13,50 +14,54 @@ struct NewsRow: View {
     @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     
     var body: some View {
-        
         Button(action: { self.showingDetail = true }) {
-            HStack {
-                VStack(alignment: .leading) {
-                    if let source = new.source {
-                        Text(source.uppercased())
-                            .font(.caption)
-                            .opacity(0.5)
-                        
-                    }
-        
-                    if let headline = new.headline {
-                        Text(headline)
-                            .font(.headline)
-                            .lineLimit(4)
-                    }
+            VStack(alignment: .leading) {
+                // If iPad show Image
+                if UIDevice.current.userInterfaceIdiom == .pad {
+                    WebImage(url: URL(string: new.image ?? ""))
+                        .resizable()
+                        .placeholder {  }
+                        .indicator(.activity)
+                        .aspectRatio(contentMode: .fit)
+                        .cornerRadius(UIDevice.current.userInterfaceIdiom == .pad ? 10: 0)
+                }
+            
+                if let source = new.source {
+                    Text(source.uppercased())
+                        .font(.caption)
+                        .opacity(0.5)
                     
-                    if let summary = new.summary {
-                        Text(summary)
-                            .opacity(0.5)
-                            .font(.subheadline)
-                            .lineLimit(1)
-                            .padding(.bottom, 5)
-                    }
-                    
-                    if (new.datetime != nil) {
-                        let humanDate = convertDate()
-                        Text("\(humanDate) ago")
-                            .font(.caption2)
-                            .opacity(0.5)
-                    }
+                }
+
+                if let headline = new.headline {
+                    Text(headline)
+                        .font(.headline)
+                        .lineLimit(UIDevice.current.userInterfaceIdiom == .pad ? nil: 4)
                 }
                 
-                Spacer()
+                if let summary = new.summary {
+                    Text(summary)
+                        .opacity(0.5)
+                        .font(.subheadline)
+                        .lineLimit(UIDevice.current.userInterfaceIdiom == .pad ? 10: 1)
+                        .padding(.bottom, 5)
+                }
+                
+                if (new.datetime != nil) {
+                    let humanDate = convertDate()
+                    Text("\(humanDate) ago")
+                        .font(.caption2)
+                        .opacity(0.5)
+                }
             }
         }
         .foregroundColor(colorScheme == .dark ? .white: .black)
-        .padding(.horizontal)
         .sheet(isPresented: $showingDetail) {
             DetailNew(new: new)
         }
     }
     
-    // Cover Epoch time to human date
+    // Convert Epoch time to human date
         private func convertDate() -> String {
             let now = Date() // Current date
             // Time when the article was published. Divide new.datetime by 1,000 because

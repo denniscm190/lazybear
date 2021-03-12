@@ -53,7 +53,7 @@ struct ContentView: View {
                 ActionView()
                     .offset(y: hudManager.showAction ? 0 : 250)
                     .animation(.easeInOut)
-                    .padding(.horizontal)
+                    .padding()
             }
         }
         .accentColor(Color("\(userSettings.first?.theme?.lowercased() ?? "default")Accent"))
@@ -65,5 +65,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(HudManager())
     }
 }

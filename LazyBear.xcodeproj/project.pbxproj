@@ -20,6 +20,7 @@
 		9517626025EEB37E00733235 /* PriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517625F25EEB37E00733235 /* PriceModel.swift */; };
 		9517626325EEBD3800733235 /* IexAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517626225EEBD3800733235 /* IexAttribution.swift */; };
 		9520C26F25F4D43D0070DD71 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520C26E25F4D43D0070DD71 /* TransactionDetail.swift */; };
+		9525C89725FBF7310080A0E8 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 9525C89625FBF7310080A0E8 /* WaterfallGrid */; };
 		9549D63325E1903F0085C3CD /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9549D63225E1903F0085C3CD /* Charts */; };
 		9549D63625E191520085C3CD /* Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549D63525E191520085C3CD /* Normalize.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
@@ -149,6 +150,7 @@
 				95D34C2725EFD5FE006F4A81 /* SDWebImageSwiftUI in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				9549D63325E1903F0085C3CD /* Charts in Frameworks */,
+				9525C89725FBF7310080A0E8 /* WaterfallGrid in Frameworks */,
 				95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */,
 				95DED9E425F2B4D6000DFCBA /* SwiftUICharts in Frameworks */,
 			);
@@ -321,6 +323,7 @@
 				9549D63225E1903F0085C3CD /* Charts */,
 				95D34C2625EFD5FE006F4A81 /* SDWebImageSwiftUI */,
 				95DED9E325F2B4D6000DFCBA /* SwiftUICharts */,
+				9525C89625FBF7310080A0E8 /* WaterfallGrid */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -354,6 +357,7 @@
 				9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */,
 				95D34C2525EFD5FE006F4A81 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				95DED9E225F2B4D6000DFCBA /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
+				9525C89525FBF7310080A0E8 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -636,6 +640,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		9525C89525FBF7310080A0E8 /* XCRemoteSwiftPackageReference "WaterfallGrid" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/paololeonardi/WaterfallGrid.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
 		9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/spacenation/swiftui-charts.git";
@@ -671,6 +683,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		9525C89625FBF7310080A0E8 /* WaterfallGrid */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9525C89525FBF7310080A0E8 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
+			productName = WaterfallGrid;
+		};
 		9549D63225E1903F0085C3CD /* Charts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */;
