@@ -33,7 +33,14 @@ struct CompanyView: View {
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Button(action: { self.hudManager.showAction.toggle() }) {
-                    Text("Test")
+                    HStack {
+                        if companyType.view == .stock {
+                            Text("Stock")
+                        } else if companyType.view == .insiders {
+                            Text("Insiders")
+                        }
+                        Image(systemName: "chevron.down")
+                    }
                 }
             }
             
@@ -70,6 +77,8 @@ struct CompanyView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             CompanyView(name: "apple inc", symbol: "aapl")
+                .environmentObject(HudManager())
+                .environmentObject(CompanyType())
                 .navigationTitle("APPL")
         }
         .navigationViewStyle(StackNavigationViewStyle())

@@ -44,7 +44,7 @@ struct ContentView: View {
             
             // Action sheet
             ZStack(alignment: .bottom) {
-                Color(.gray)
+                Color(.black)
                     .edgesIgnoringSafeArea(.all)
                     .opacity(hudManager.showAction ? 0.2: 0)
                     .animation(.easeInOut)

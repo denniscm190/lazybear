@@ -10,32 +10,39 @@ import SwiftUI
 struct ActionView: View {
     @EnvironmentObject var companyType: CompanyType
     @EnvironmentObject var hudManager: HudManager
+    @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     
     var body: some View {
-        VStack {
-            VStack {
+        VStack(alignment: .leading) {
+            VStack(alignment: .leading) {
                 Group {
                     Button(action: { changeViewTo(.stock) }) {
                         Image(systemName: "chart.bar")
+                            .frame(width: 50)
+                        
                         Text("Stock & news")
                         Spacer()
                     }
+                    .padding([.leading, .top, .trailing])
+                    
                     Divider()
-                        .offset(x: 45)
+                        .offset(x: 75)
                     
                     Button(action: { changeViewTo(.insiders) }) {
                         Image(systemName: "chart.pie")
+                            .frame(width: 50)
+                        
                         Text("Insider transactions")
                         Spacer()
                     }
+                    .padding([.leading, .bottom, .trailing])
                 }
                 .modifier(Title())
             }
-            .padding()
             .background(
-                Color(.white)
-                    .cornerRadius(20)
+                colorScheme == .dark ? Color(red: 0.15, green: 0.17, blue: 0.18): Color(.white)
             )
+            .cornerRadius(20)
             
             Button(action: { self.hudManager.showAction = false }) {
                 Spacer()
@@ -43,15 +50,14 @@ struct ActionView: View {
                 Spacer()
             }
             .modifier(Title())
-            .padding(.vertical)
+            .padding()
             .background(
-                Color(.white)
-                    .cornerRadius(20)
+                colorScheme == .dark ? Color(red: 0.15, green: 0.17, blue: 0.18): Color(.white)
             )
+            .cornerRadius(20)
         }
-        .frame(maxWidth: 600)
     }
-    
+        
     private func changeViewTo(_ view: ViewType ) {
         // Show view after one second.
         // Give time to dismiss the Action View
@@ -85,3 +91,4 @@ struct Title: ViewModifier {
             .frame(maxWidth: .infinity)
     }
 }
+
