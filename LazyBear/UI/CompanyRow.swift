@@ -28,7 +28,6 @@ struct CompanyRow: View {
             Spacer()
             if showPrice {
                 PriceView(symbol: symbol, showVertical: true)
-                    .animation(.easeInOut)
             }
         }
         
