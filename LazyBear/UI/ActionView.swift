@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActionView: View {
-    @EnvironmentObject var companyType: CompanyType
+    @EnvironmentObject var companyOption: CompanyOption
     @EnvironmentObject var hudManager: HudManager
     @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     
@@ -66,12 +66,12 @@ struct ActionView: View {
         
         if view == .stock {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.companyType.view = .stock
+                self.companyOption.view = .stock
                 
             }
         } else if view == .insiders {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                self.companyType.view = .insiders
+                self.companyOption.view = .insiders
             }
         }
     }
