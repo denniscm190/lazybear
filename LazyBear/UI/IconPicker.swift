@@ -10,7 +10,7 @@ import SwiftUI
 struct IconPicker: View {
     var body: some View {
         List {
-            Section(header: Text("Without background")) {
+            Section(header: Text("White background")) {
                 ForEach(icons, id: \.name) { icon in
                     if !icon.background {
                         IconRow(icon: icon)
@@ -18,7 +18,7 @@ struct IconPicker: View {
                 }
             }
             
-            Section(header: Text("With background")) {
+            Section(header: Text("Black background")) {
                 ForEach(icons, id: \.name) { icon in
                     if icon.background {
                         IconRow(icon: icon)
