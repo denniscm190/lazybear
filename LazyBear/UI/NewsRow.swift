@@ -10,11 +10,11 @@ import SDWebImageSwiftUI
 
 struct NewsRow: View {
     var new: NewsModel
-    @State var showingDetail = false
+    @State var showingSafari = false
     @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     
     var body: some View {
-        Button(action: { self.showingDetail = true }) {
+        Button(action: { self.showingSafari = true }) {
             VStack(alignment: .leading) {
                 // If iPad show Image
                 if UIDevice.current.userInterfaceIdiom == .pad {
@@ -56,8 +56,8 @@ struct NewsRow: View {
             }
         }
         .foregroundColor(colorScheme == .dark ? .white: .black)
-        .sheet(isPresented: $showingDetail) {
-            DetailNew(new: new)
+        .sheet(isPresented: $showingSafari) {
+            SafariView(url:URL(string: new.url ?? "")!)
         }
     }
     
