@@ -9,28 +9,39 @@ import SwiftUI
 
 struct PriceView: View {
     var symbol: String
+    var showVertical: Bool
     @State private var latestPrice = Float()
     @State private var changePercent = Double()
     @State private var negativeChange = false
     @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Set recurrent price request
     
     var body: some View {
-        VStack(alignment: .leading) {
-            HStack {
-                Text("\(latestPrice, specifier: "%.2f")")
-                    .font(.title3)
-                    .fontWeight(.bold)
-                    .padding(.horizontal)
+        VStack {
+            if showVertical {
+                VStack(alignment: .trailing) {
+                    Text("\(latestPrice, specifier: "%.2f")")
+                        .fontWeight(.semibold)
+                        .padding(.horizontal)
 
-                Text("\(changePercent*100, specifier: "%.2f")%")
-                    .font(.headline)
-                    .foregroundColor(negativeChange ? Color(.systemRed) : Color(.systemGreen))
-                    .padding(.trailing)
-                
-                Spacer()
-            
+                    Text("\(changePercent*100, specifier: "%.2f")%")
+                        .foregroundColor(negativeChange ? Color(.systemRed) : Color(.systemGreen))
+                        .padding(.trailing)
+                }
+            } else {
+                HStack {
+                    Text("\(latestPrice, specifier: "%.2f")")
+                        .font(.title3)
+                        .fontWeight(.bold)
+                        .padding(.horizontal)
+
+                    Text("\(changePercent*100, specifier: "%.2f")%")
+                        .font(.headline)
+                        .foregroundColor(negativeChange ? Color(.systemRed) : Color(.systemGreen))
+                        .padding(.trailing)
+                    
+                    Spacer()
+                }
             }
-            
         }
         .onReceive(timer) { _ in call(); print("requested") }
         .onAppear {
@@ -56,6 +67,6 @@ struct PriceView: View {
 
 struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceView(symbol: "aapl")
+        PriceView(symbol: "aapl", showVertical: false)
     }
 }

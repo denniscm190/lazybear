@@ -24,7 +24,7 @@ struct CompanyView: View {
         GeometryReader { geo in
             ScrollView {
                 if companyOption.view == .stock {
-                        PriceView(symbol: symbol)
+                    PriceView(symbol: symbol, showVertical: false)
                         ChartView(symbol: symbol, chartHeight: geo.size.width / 2)
                         NewsView(symbol: symbol)
                         

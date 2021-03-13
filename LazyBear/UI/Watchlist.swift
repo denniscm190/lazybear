@@ -16,13 +16,14 @@ struct Watchlist: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(companies.indices, id: \.self) { i in
-                    let name = companies[i].name
-                    let symbol = companies[i].symbol
+                ForEach(companies, id: \.symbol) { company in
+                    let index = companies.firstIndex(of: company)
+                    let name = company.name
+                    let symbol = company.symbol
                     NavigationLink(destination: CompanyView(name: name, symbol: symbol)
                                     .navigationTitle(symbol)
                     ) {
-                        CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)
+                        CompanyRow(symbol: symbol, name: name, rowNumber: index! % 5, showPrice: true)
                     }
                 }
                 .onDelete(perform: removeCompany)

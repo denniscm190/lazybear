@@ -22,7 +22,7 @@ struct Search: View {
                 NavigationLink(destination: CompanyView(name: name, symbol: symbol)
                                 .navigationTitle(symbol)
                 ) {
-                    CompanyRow(symbol: symbol, name: name, rowNumber: i % 5)
+                    CompanyRow(symbol: symbol, name: name, rowNumber: i % 5, showPrice: true)
                 }
             }
             .navigationBarSearch(self.$company)

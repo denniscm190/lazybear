@@ -11,6 +11,8 @@ struct CompanyRow: View {
     var symbol: String
     var name: String
     var rowNumber: Int
+    var showPrice: Bool
+//    @Environment(\.editMode) var mode
     
     var body: some View {
         HStack {
@@ -18,18 +20,29 @@ struct CompanyRow: View {
             VStack(alignment: .leading) {
                 Text(symbol.uppercased())
                     .fontWeight(.semibold)
-                
+
                 Text(name.capitalized)
                     .lineLimit(1)
             }
+            
+            Spacer()
+            if showPrice {
+                PriceView(symbol: symbol, showVertical: true)
+                    .animation(.easeInOut)
+            }
         }
+        
+//        if self.mode?.wrappedValue.isEditing ?? true {
+//            return PriceView(symbol: symbol)
+//        }
+        
     }
 }
 
 struct Row_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            CompanyRow(symbol: "aapl", name: "apple inc", rowNumber: 2)
+            CompanyRow(symbol: "aapl", name: "apple inc", rowNumber: 2, showPrice: true)
         }
     }
 }
