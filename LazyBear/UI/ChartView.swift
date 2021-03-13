@@ -22,7 +22,8 @@ struct ChartView: View {
             DateSelection(period: period, selectedperiod: $selectedPeriod)
                 .padding(.horizontal)
                 .onChange(of: selectedPeriod, perform: { (value) in
-                    request(url: getUrl(range: period[value]), model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
+                    let url = getUrl(endpoint: .historicalPrices, symbol: symbol, range: period[value])
+                    request(url: url, model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
                 })
             
             let (colour, prices) = prepareChart()
@@ -34,16 +35,9 @@ struct ChartView: View {
                                                            endPoint: .bottom)))
         }
         .onAppear {
-            request(url: getUrl(range: "3m"), model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
+            let url = getUrl(endpoint: .historicalPrices, symbol: symbol, range: "3m")
+            request(url: url, model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
         }
-    }
-    
-    private func getUrl(range: String) -> String {
-        let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
-        let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
-        let url = "\(baseUrl)/stock/\(symbol)/chart/\(range)?chartCloseOnly=true&token=\(apiKey)"
-
-        return url
     }
     
     private func prepareChart() -> (Color, [Double]) {

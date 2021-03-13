@@ -12,7 +12,6 @@ struct PriceView: View {
     @State private var latestPrice = Float()
     @State private var changePercent = Double()
     @State private var negativeChange = false
-    
     @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Set recurrent price request
     
     var body: some View {
@@ -41,16 +40,9 @@ struct PriceView: View {
         .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
     }
     
-    private func getUrl() -> String {
-        let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
-        let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
-        let url = "\(baseUrl)/stock/\(symbol)/quote?token=\(apiKey)"
-
-        return url
-    }
-    
     private func call() {
-        request(url: getUrl(), model: PriceModel.self) { result in
+        let url = getUrl(endpoint: .quote, symbol: symbol)
+        request(url: url, model: PriceModel.self) { result in
             self.latestPrice = result.latestPrice
             if result.changePercent < 0 {
                 self.negativeChange  = true

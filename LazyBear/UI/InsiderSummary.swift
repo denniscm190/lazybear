@@ -44,16 +44,9 @@ struct InsiderSummary: View {
         }
     }
     
-    private func getUrl() -> String {
-        let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
-        let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
-        let url = "\(baseUrl)/stock/\(symbol)/insider-roster?token=\(apiKey)"
-        
-        return url
-    }
-    
     private func generateChart() {
-        request(url: getUrl(), model: [TopInsiderModel].self) { topInsiders in
+        let url = getUrl(endpoint: .insiderSummary, symbol: symbol)
+        request(url: url, model: [TopInsiderModel].self) { topInsiders in
             let theme = userSettings.first?.theme?.lowercased() ?? "default"
             // Loop over the response
             var insiderNumber = 0

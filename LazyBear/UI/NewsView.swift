@@ -32,44 +32,37 @@ struct NewsView: View {
             }
             
             let language = userSettings.first?.newsLanguage ?? "en"
+            let filteredNews = news.filter { $0.lang == language }
             
             // If iPhone
             if UIDevice.current.userInterfaceIdiom == .phone {
-                ForEach(news, id: \.self) { new in
-                    if language == new.lang {
-                        NewsRow(new: new)
-                          .padding(.horizontal)
-                        
-                        Divider()
-                    }
+                ForEach(filteredNews, id: \.self) { new in
+                    NewsRow(new: new)
+                      .padding(.horizontal)
+                    
+                    Divider()
+                    
                 }
             }
             
             // If iPad
             if UIDevice.current.userInterfaceIdiom == .pad {
-                WaterfallGrid(news, id: \.self) { new in
+                WaterfallGrid(filteredNews, id: \.self) { new in
                     NewsRow(new: new)
                 }
                 .gridStyle(
                     columnsInPortrait: 2,
                     columnsInLandscape: 3,
                     spacing: 8,
-                    animation: .easeInOut(duration: 0.5)
+                    animation: .easeInOut
                   )
                 .padding(EdgeInsets(top: 16, leading: 8, bottom: 16, trailing: 8))
             }
         }
         .onAppear {
-            request(url: getUrl(), model: [NewsModel].self) { self.news = $0 }
+            let url = getUrl(endpoint: .news, symbol: symbol)
+            request(url: url, model: [NewsModel].self) { self.news = $0 }
         }
-    }
-    
-    private func getUrl() -> String {
-        let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
-        let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
-        let url = "\(baseUrl)/stock/\(symbol)/news/last/30?token=\(apiKey)"
-
-        return url
     }
 }
 

@@ -7,37 +7,41 @@
 
 import SwiftUI
 
+enum ViewType {
+    case stock, insiders
+}
+
 struct CompanyView: View {
     var name: String
     var symbol: String
-    
     @EnvironmentObject var hudManager: HudManager
-    @EnvironmentObject var companyType: CompanyType
-    @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
+    @EnvironmentObject var companyOption: CompanyOption
     @Environment(\.managedObjectContext) private var moc
+    @FetchRequest(entity: Company.entity(), sortDescriptors: [])
+    var companies: FetchedResults<Company>
     
     var body: some View {
         GeometryReader { geo in
             ScrollView {
-                if companyType.view == .stock {
+                if companyOption.view == .stock {
                         PriceView(symbol: symbol)
                         ChartView(symbol: symbol, chartHeight: geo.size.width / 2)
                         NewsView(symbol: symbol)
                         
-                } else if companyType.view == .insiders {
+                } else if companyOption.view == .insiders {
                     InsiderSummary(symbol: symbol)
                     InsiderTransactions(symbol: symbol)
                 }
             }
-            .onAppear { companyType.view = .stock }
+            .onAppear { companyOption.view = .stock }
         }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Button(action: { self.hudManager.showAction.toggle() }) {
                     HStack {
-                        if companyType.view == .stock {
+                        if companyOption.view == .stock {
                             Text("Stock")
-                        } else if companyType.view == .insiders {
+                        } else if companyOption.view == .insiders {
                             Text("Insiders")
                         }
                         Image(systemName: "chevron.down")
@@ -79,7 +83,7 @@ struct CompanyView_Previews: PreviewProvider {
         NavigationView {
             CompanyView(name: "apple inc", symbol: "aapl")
                 .environmentObject(HudManager())
-                .environmentObject(CompanyType())
+                .environmentObject(CompanyOption())
                 .navigationTitle("APPL")
         }
         .navigationViewStyle(StackNavigationViewStyle())
