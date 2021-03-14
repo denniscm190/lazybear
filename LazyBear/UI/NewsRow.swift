@@ -10,7 +10,7 @@ import SDWebImageSwiftUI
 
 struct NewsRow: View {
     var new: NewsModel
-    @State var showingSafari = false
+    @State private var showingSafari = false
     @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     
     var body: some View {

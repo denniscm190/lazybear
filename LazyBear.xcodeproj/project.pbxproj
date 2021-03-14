@@ -21,8 +21,6 @@
 		9517626325EEBD3800733235 /* IexAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517626225EEBD3800733235 /* IexAttribution.swift */; };
 		9520C26F25F4D43D0070DD71 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520C26E25F4D43D0070DD71 /* TransactionDetail.swift */; };
 		9525C89725FBF7310080A0E8 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 9525C89625FBF7310080A0E8 /* WaterfallGrid */; };
-		9549D63325E1903F0085C3CD /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9549D63225E1903F0085C3CD /* Charts */; };
-		9549D63625E191520085C3CD /* Normalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9549D63525E191520085C3CD /* Normalize.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
 		95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9025DDA54700DCBE4A /* ContentView.swift */; };
 		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
@@ -58,11 +56,11 @@
 		95BFAE4E25E2B0C200A70EC3 /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE4D25E2B0C200A70EC3 /* HudManager.swift */; };
 		95BFAE5425E2C52300A70EC3 /* HistoricalPriceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE5325E2C52300A70EC3 /* HistoricalPriceModel.swift */; };
 		95BFAE5825E2C5A700A70EC3 /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE5725E2C5A700A70EC3 /* ChartView.swift */; };
+		95D28EC625FD2BBE00FBE5F8 /* DemoChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D28EC525FD2BBE00FBE5F8 /* DemoChart.swift */; };
 		95D34C2725EFD5FE006F4A81 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95D34C2625EFD5FE006F4A81 /* SDWebImageSwiftUI */; };
 		95DED9D525F2A752000DFCBA /* transactionCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9D425F2A752000DFCBA /* transactionCodes.swift */; };
 		95DED9D825F2B1EF000DFCBA /* TopInsiderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9D725F2B1EF000DFCBA /* TopInsiderModel.swift */; };
 		95DED9DB25F2B268000DFCBA /* InsiderSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9DA25F2B268000DFCBA /* InsiderSummary.swift */; };
-		95DED9E425F2B4D6000DFCBA /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95DED9E325F2B4D6000DFCBA /* SwiftUICharts */; };
 		95E9D09725F6AA0400A947A1 /* ActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E9D09625F6AA0400A947A1 /* ActionView.swift */; };
 		95F045FB25E96A58006A5A17 /* newsLanguages.json in Resources */ = {isa = PBXBuildFile; fileRef = 95F045FA25E96A58006A5A17 /* newsLanguages.json */; };
 		95F045FE25E96AA1006A5A17 /* NewsLanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F045FD25E96AA1006A5A17 /* NewsLanguageModel.swift */; };
@@ -91,7 +89,6 @@
 		9517625F25EEB37E00733235 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		9517626225EEBD3800733235 /* IexAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IexAttribution.swift; sourceTree = "<group>"; };
 		9520C26E25F4D43D0070DD71 /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
-		9549D63525E191520085C3CD /* Normalize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Normalize.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95672B9025DDA54700DCBE4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +126,7 @@
 		95BFAE4D25E2B0C200A70EC3 /* HudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
 		95BFAE5325E2C52300A70EC3 /* HistoricalPriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPriceModel.swift; sourceTree = "<group>"; };
 		95BFAE5725E2C5A700A70EC3 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
+		95D28EC525FD2BBE00FBE5F8 /* DemoChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoChart.swift; sourceTree = "<group>"; };
 		95DED9D425F2A752000DFCBA /* transactionCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionCodes.swift; sourceTree = "<group>"; };
 		95DED9D725F2B1EF000DFCBA /* TopInsiderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInsiderModel.swift; sourceTree = "<group>"; };
 		95DED9DA25F2B268000DFCBA /* InsiderSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderSummary.swift; sourceTree = "<group>"; };
@@ -151,10 +149,8 @@
 			files = (
 				95D34C2725EFD5FE006F4A81 /* SDWebImageSwiftUI in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
-				9549D63325E1903F0085C3CD /* Charts in Frameworks */,
 				9525C89725FBF7310080A0E8 /* WaterfallGrid in Frameworks */,
 				95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */,
-				95DED9E425F2B4D6000DFCBA /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,6 +160,7 @@
 		950BA46D25E9450B00D065EF /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				95D28EC525FD2BBE00FBE5F8 /* DemoChart.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -234,7 +231,6 @@
 			children = (
 				958A735625E01F9E00FD7ECA /* ReadJson.swift */,
 				95B3E09E25E127D7007EFDE3 /* Request.swift */,
-				9549D63525E191520085C3CD /* Normalize.swift */,
 				95A5D95C25FCEEBC0090C1EA /* GetUrl.swift */,
 			);
 			path = Functions;
@@ -323,9 +319,7 @@
 			name = LazyBear;
 			packageProductDependencies = (
 				95B3E0A525E1318D007EFDE3 /* SwiftlySearch */,
-				9549D63225E1903F0085C3CD /* Charts */,
 				95D34C2625EFD5FE006F4A81 /* SDWebImageSwiftUI */,
-				95DED9E325F2B4D6000DFCBA /* SwiftUICharts */,
 				9525C89625FBF7310080A0E8 /* WaterfallGrid */,
 			);
 			productName = LazyBear;
@@ -357,9 +351,7 @@
 			mainGroup = 95672B8225DDA54700DCBE4A;
 			packageReferences = (
 				95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
-				9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */,
 				95D34C2525EFD5FE006F4A81 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
-				95DED9E225F2B4D6000DFCBA /* XCRemoteSwiftPackageReference "SwiftUICharts" */,
 				9525C89525FBF7310080A0E8 /* XCRemoteSwiftPackageReference "WaterfallGrid" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
@@ -400,6 +392,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95ABDD3825E167E500310776 /* NewsModel.swift in Sources */,
+				95D28EC625FD2BBE00FBE5F8 /* DemoChart.swift in Sources */,
 				95ABDD3C25E1717300310776 /* NewsRow.swift in Sources */,
 				950B674925E99FA900BF8593 /* IconPicker.swift in Sources */,
 				958A735725E01F9E00FD7ECA /* ReadJson.swift in Sources */,
@@ -414,7 +407,6 @@
 				95F045FE25E96AA1006A5A17 /* NewsLanguageModel.swift in Sources */,
 				95BFAE5425E2C52300A70EC3 /* HistoricalPriceModel.swift in Sources */,
 				95BFAE5825E2C5A700A70EC3 /* ChartView.swift in Sources */,
-				9549D63625E191520085C3CD /* Normalize.swift in Sources */,
 				95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */,
 				95F0460425E96DBB006A5A17 /* UserSettings+CoreDataClass.swift in Sources */,
 				950B674F25E9A0AE00BF8593 /* IconModel.swift in Sources */,
@@ -652,14 +644,6 @@
 				minimumVersion = 1.0.1;
 			};
 		};
-		9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/spacenation/swiftui-charts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		95B3E0A425E1318D007EFDE3 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
@@ -676,14 +660,6 @@
 				minimumVersion = 2.0.1;
 			};
 		};
-		95DED9E225F2B4D6000DFCBA /* XCRemoteSwiftPackageReference "SwiftUICharts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mecid/SwiftUICharts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.5.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -691,11 +667,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9525C89525FBF7310080A0E8 /* XCRemoteSwiftPackageReference "WaterfallGrid" */;
 			productName = WaterfallGrid;
-		};
-		9549D63225E1903F0085C3CD /* Charts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9549D63125E1903F0085C3CD /* XCRemoteSwiftPackageReference "swiftui-charts" */;
-			productName = Charts;
 		};
 		95B3E0A525E1318D007EFDE3 /* SwiftlySearch */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -706,11 +677,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95D34C2525EFD5FE006F4A81 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
-		};
-		95DED9E325F2B4D6000DFCBA /* SwiftUICharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95DED9E225F2B4D6000DFCBA /* XCRemoteSwiftPackageReference "SwiftUICharts" */;
-			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 
