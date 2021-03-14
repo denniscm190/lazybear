@@ -17,8 +17,7 @@ struct CompanyView: View {
     @EnvironmentObject var hudManager: HudManager
     @EnvironmentObject var companyOption: CompanyOption
     @Environment(\.managedObjectContext) private var moc
-    @FetchRequest(entity: Company.entity(), sortDescriptors: [])
-    var companies: FetchedResults<Company>
+    @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     
     var body: some View {
         GeometryReader { geo in
@@ -52,9 +51,12 @@ struct CompanyView: View {
             ToolbarItem(placement: .navigationBarTrailing) {
                 let symbols = companies.map { $0.symbol }
                 if !symbols.contains(symbol) {
-                    Button(action: { add() }) {
+                    Button(action: { addCompany() }) {
                         Image(systemName: "star")
-                            .imageScale(.large)
+                    }
+                } else {
+                    Button(action: { removeCompany() }) {
+                        Image(systemName: "star.fill")
                     }
                 }
             }
@@ -62,7 +64,7 @@ struct CompanyView: View {
     }
     
     // Add to watchlist
-    private func add() {
+    private func addCompany() {
         let generator = UINotificationFeedbackGenerator()  // Haptic
         let company = Company(context: moc)
         company.symbol = symbol
@@ -71,9 +73,22 @@ struct CompanyView: View {
             try moc.save()
             hudManager.selectHud(type: .notification)
             generator.notificationOccurred(.success)
-            print("Company saved.")
+            print("Company saved")
         } catch {
             print(error.localizedDescription)
+        }
+    }
+    
+    private func removeCompany() {
+        let symbols = companies.map { $0.symbol }
+        let index = symbols.firstIndex(of: symbol)
+        let company = companies[index!]
+        moc.delete(company)
+        do {
+            try moc.save()
+            print("Company deleted")
+        } catch {
+            // Error
         }
     }
 }
