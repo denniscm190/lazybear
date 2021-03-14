@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Charts
 
 struct ChartView: View {
     var symbol: String
@@ -26,38 +25,12 @@ struct ChartView: View {
                     request(url: url, model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
                 })
             
-            let (colour, prices) = prepareChart()
-            Chart(data: prices)
-                .frame(height: chartHeight)
-                .chartStyle(AreaChartStyle(.quadCurve, fill:
-                                            LinearGradient(gradient: .init(colors: [colour.opacity(0.5), colour.opacity(0.2)]),
-                                                           startPoint: .top,
-                                                           endPoint: .bottom)))
+
         }
         .onAppear {
             let url = getUrl(endpoint: .historicalPrices, symbol: symbol, range: "3m")
             request(url: url, model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
         }
-    }
-    
-    private func prepareChart() -> (Color, [Double]) {
-        if !historicalPrices.isEmpty {
-            // Historical is been requested and successfully received
-            let prices = historicalPrices.map { $0.close } // Close prices array (for chart)
-            // Modify chart colour depending on % change over time
-            // If it's < 0 -> lost value -> red
-            var colour: Color = .red
-            let changeOverTime = historicalPrices.map { $0.changeOverTime }.last
-            if changeOverTime! >= 0 {
-                colour = .green
-            }
-            
-            return (colour, normalize(prices))
-        }
-        
-        // Handle error here after x seconds of requesting.
-        
-        return (.blue, [Double]())
     }
 }
 
