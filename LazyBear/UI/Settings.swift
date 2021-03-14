@@ -9,11 +9,11 @@ import SwiftUI
 import CoreData
 
 struct Settings: View {
-    @FetchRequest(entity: UserSettings.entity(),
-                  sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
-    var userSettings: FetchedResults<UserSettings>
     let setting = SettingMetadata()
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
+    var userSettings: FetchedResults<UserSettings>
     @Environment(\.colorScheme) var colorScheme  // Detect dark mode
+    @State private var showingSafari = false
     
     var body: some View {
         NavigationView {
@@ -26,13 +26,17 @@ struct Settings: View {
                 
                 Section(footer: IexAttribution(text: "Data provided by IEX Cloud").padding(.top)) {
                     ForEach((0...3), id: \.self) { index in
-                        Link(destination: URL(string: setting.links[index])!) {
-                            HStack {
-                                SettingRow(image: setting.images[index], text: setting.texts[index], colour: setting.colours[index])
-                                FakeLinkArrow()
+                            Button(action: { self.showingSafari = true }) {
+                                HStack {
+                                    SettingRow(image: setting.images[index], text: setting.texts[index], colour: setting.colours[index])
+                                    FakeLinkArrow()
+                                }
                             }
-                        }
-                        .foregroundColor(colorScheme == .dark ? .white: .black)
+                            .foregroundColor(colorScheme == .dark ? .white: .black)
+                            .sheet(isPresented: $showingSafari) {
+                                SafariView(url:URL(string: setting.links[index])!)
+                            }
+                        
                     }
                 }
             }
