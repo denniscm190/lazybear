@@ -29,11 +29,6 @@ struct Watchlist: View {
                 .onDelete(perform: removeCompany)
             }
             .navigationTitle("Watchlist 👀")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
