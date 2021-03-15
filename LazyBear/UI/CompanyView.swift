@@ -20,20 +20,20 @@ struct CompanyView: View {
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     
     var body: some View {
-        GeometryReader { geo in
-            ScrollView {
+        ScrollView {
+            //VStack {
                 if companyOption.view == .stock {
                     PriceView(symbol: symbol, showVertical: false)
-                        ChartView(symbol: symbol, chartHeight: geo.size.width / 2)
-                        NewsView(symbol: symbol)
+                    ChartView(symbol: symbol)
+                    NewsView(symbol: symbol)
                         
                 } else if companyOption.view == .insiders {
                     InsiderSummary(symbol: symbol)
                     InsiderTransactions(symbol: symbol)
                 }
-            }
-            .onAppear { companyOption.view = .stock }
+            //}
         }
+        .onAppear { companyOption.view = .stock }
         .toolbar {
             ToolbarItem(placement: .principal) {
                 Button(action: { self.hudManager.showAction.toggle() }) {

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ChartView: View {
     var symbol: String
-    var chartHeight: CGFloat
     @State private var historicalPrices = [HistoricalPriceModel]()
    
     // Date picker
@@ -25,17 +24,19 @@ struct ChartView: View {
                     request(url: url, model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
                 })
             
-
+            let prices = historicalPrices.map { $0.close }
+            LineChart(data: prices)
         }
         .onAppear {
             let url = getUrl(endpoint: .historicalPrices, symbol: symbol, range: "3m")
             request(url: url, model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
         }
+
     }
 }
 
 struct HistoricalPriceView_Previews: PreviewProvider {
     static var previews: some View {
-        ChartView(symbol: "aapl", chartHeight: 200)
+        ChartView(symbol: "aapl")
     }
 }

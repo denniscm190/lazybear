@@ -14,6 +14,7 @@ struct LazyBearApp: App {
     // Start ObservedObjects
     @ObservedObject var hudManager = HudManager()
     @ObservedObject var companyOption = CompanyOption()
+    @ObservedObject var deviceSize = DeviceSize()
 
     var body: some Scene {
         WindowGroup {
@@ -21,6 +22,7 @@ struct LazyBearApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
                 .environmentObject(hudManager)
                 .environmentObject(companyOption)
+                .environmentObject(deviceSize)
         }
     }
 }
