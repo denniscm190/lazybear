@@ -26,6 +26,7 @@ struct ChartView: View {
             
             let prices = historicalPrices.map { $0.close }
             LineChart(data: prices)
+                .padding(.vertical)
         }
         .onAppear {
             let url = getUrl(endpoint: .historicalPrices, symbol: symbol, range: "3m")
