@@ -17,6 +17,9 @@ struct LineChart: View {
             
             VStack {
                 LineView(width: deviceSize.width, height: deviceSize.width / 3, normalizedData: normalizedData)
+                    .rotationEffect(.degrees(180), anchor: .center) 
+                    .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
+                    
             }
             .frame(width: deviceSize.width, height: deviceSize.width / 3)
         }

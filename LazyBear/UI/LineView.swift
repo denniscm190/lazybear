@@ -16,41 +16,56 @@ struct LineView: View {
     @State private var touchLocation: CGPoint = .zero
 
     var body: some View {
-        Line(width: width, height: height, normalizedData: normalizedData)
-            .stroke(Color.green, lineWidth: 2)
-            .rotationEffect(.degrees(180), anchor: .center)  // The path must be rotated
-            .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
-            .gesture(DragGesture()  // Add gesture
-            .onChanged({ value in  // Take value of the gesture
-                print("Location - > \(value.location)")
-            })
-        )
-    }
-}
-
-struct Line: Shape {
-    var width: CGFloat
-    var height: CGFloat
-    var normalizedData: [Double]
-    
-    func path(in rect: CGRect) -> Path {
-        var path = Path()
-        
         // Substract 2 to skip the first and the last item
         let widthBetweenPoints = Double(width) / Double(normalizedData.count - 2)
         let initialPoint = normalizedData[0] * Double(height)
         var x: Double = 0
+        var pathPoints = [CGPoint]()
         
-        path.move(to: CGPoint(x: x, y: initialPoint))
-        for y in normalizedData {
-            // Skip first item
-            if normalizedData.firstIndex(of: y) != 0 {
-                x += widthBetweenPoints
-                let y = y * Double(height)
-                path.addLine(to: CGPoint(x: x, y: y))
+        ZStack {
+            GeometryReader { geo in
+            Path { path in
+                path.move(to: CGPoint(x: x, y: initialPoint))
+                for y in normalizedData {
+                    // Skip first item
+                    if normalizedData.firstIndex(of: y) != 0 {
+                        x += widthBetweenPoints
+                        let y = y * Double(height)
+                        path.addLine(to: CGPoint(x: x, y: y))
+                    }
+                    
+                    pathPoints.append(path.currentPoint!)
+                }
+            }
+            .stroke(Color.green, lineWidth: 2)
+            .gesture(DragGesture()  // Add gesture
+            .onChanged({ value in  // Take value of the gesture
+                let (closestXPoint, closestYPoint) = getClosestValueFrom(value.location, inData: pathPoints)
+                self.touchLocation.x = closestXPoint
+                self.touchLocation.y = closestYPoint
+                
+            }))
+            
+            
+            IndicatorPoint()
+                .position(x: touchLocation.x, y: touchLocation.y)
             }
         }
-        return path
+    }
+    
+    // First search the closest X path point from the touch location. The find the correspondant Y path point
+    // given the X path point
+    func getClosestValueFrom(_ value: CGPoint, inData: [CGPoint]) -> (CGFloat, CGFloat) {
+        let touchPoint: (CGFloat, CGFloat) = (value.x, value.y)
+        let xPathPoints = inData.map { $0.x }
+        let yPathPoints = inData.map { $0.y }
+        
+        // Closest X value
+        let closestXPoint = xPathPoints.enumerated().min( by: { abs($0.1 - touchPoint.0) < abs($1.1 - touchPoint.0) } )!
+        let closestYPointIndex = xPathPoints.firstIndex(of: closestXPoint.element)!
+        let closestYPoint = yPathPoints[closestYPointIndex]
+        
+        return (closestXPoint.element, closestYPoint)
     }
 }
 
