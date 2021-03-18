@@ -33,9 +33,10 @@ struct IconPicker: View {
 struct IconRow: View {
     @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     var icon: IconModel
+    let haptics = Haptics()
     
     var body: some View {
-        Button(action: { changeIcon(key: icon.file) }) {
+        Button(action: { haptics.simpleSuccess(); changeIcon(key: icon.file) }) {
             HStack {
                 Image(icon.file)
                     .resizable()

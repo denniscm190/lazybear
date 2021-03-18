@@ -10,7 +10,8 @@ import SwiftUI
 struct IndicatorPoint: View {
     var body: some View {
         Circle()
-            .frame(width: 10, height: 10)
+            .frame(width: 20, height: 20)
+            .foregroundColor(.blue)
     }
 }
 

@@ -14,6 +14,7 @@ enum ViewType {
 struct CompanyView: View {
     var name: String
     var symbol: String
+    let haptics = Haptics()
     @EnvironmentObject var hudManager: HudManager
     @EnvironmentObject var companyOption: CompanyOption
     @Environment(\.managedObjectContext) private var moc
@@ -65,14 +66,13 @@ struct CompanyView: View {
     
     // Add to watchlist
     private func addCompany() {
-        let generator = UINotificationFeedbackGenerator()  // Haptic
         let company = Company(context: moc)
         company.symbol = symbol
         company.name = name
         do {
             try moc.save()
             hudManager.selectHud(type: .notification)
-            generator.notificationOccurred(.success)
+            haptics.simpleSuccess()
             print("Company saved")
         } catch {
             print(error.localizedDescription)
