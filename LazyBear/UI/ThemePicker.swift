@@ -10,6 +10,7 @@ import SwiftUI
 struct ThemePicker: View {
     @Environment(\.managedObjectContext) private var moc
     @State var theme: String
+    let haptics = Haptics()
     
     var body: some View {
         Picker("Themes", selection: $theme) {
@@ -35,6 +36,7 @@ struct ThemePicker: View {
         userSettings.theme = change as? String
         do {
             try moc.save()
+            haptics.simpleSuccess()
             print("Settings saved")
         } catch {
             print(error.localizedDescription)
