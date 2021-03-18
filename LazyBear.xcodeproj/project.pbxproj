@@ -50,10 +50,12 @@
 		95ACB5AC25E03A7D00A3CCC8 /* themes.json in Resources */ = {isa = PBXBuildFile; fileRef = 95ACB5AB25E03A7D00A3CCC8 /* themes.json */; };
 		95ACB5AF25E03AA100A3CCC8 /* ThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */; };
 		95AEF3AC25FFBB4D001B77BB /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEF3AB25FFBB4D001B77BB /* LineView.swift */; };
-		95AEF3B025FFD8CF001B77BB /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEF3AF25FFD8CF001B77BB /* LineChart.swift */; };
 		95AEF3B325FFDC04001B77BB /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEF3B225FFDC04001B77BB /* DeviceSize.swift */; };
 		95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E09E25E127D7007EFDE3 /* Request.swift */; };
 		95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 95B3E0A525E1318D007EFDE3 /* SwiftlySearch */; };
+		95B746F22603A05400BC4E22 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B746F12603A05400BC4E22 /* Haptics.swift */; };
+		95B746F52603A28100BC4E22 /* NormalizeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B746F42603A28100BC4E22 /* NormalizeData.swift */; };
+		95B746FD2603ACA200BC4E22 /* PriceChartIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B746FC2603ACA200BC4E22 /* PriceChartIndicator.swift */; };
 		95BB43C025EA667700B6C965 /* DateSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB43BF25EA667700B6C965 /* DateSelection.swift */; };
 		95BFAE4B25E2AEA000A70EC3 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE4A25E2AEA000A70EC3 /* Notification.swift */; };
 		95BFAE4E25E2B0C200A70EC3 /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BFAE4D25E2B0C200A70EC3 /* HudManager.swift */; };
@@ -124,9 +126,11 @@
 		95ACB5AB25E03A7D00A3CCC8 /* themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = themes.json; sourceTree = "<group>"; };
 		95ACB5AE25E03AA100A3CCC8 /* ThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeModel.swift; sourceTree = "<group>"; };
 		95AEF3AB25FFBB4D001B77BB /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
-		95AEF3AF25FFD8CF001B77BB /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		95AEF3B225FFDC04001B77BB /* DeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
 		95B3E09E25E127D7007EFDE3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		95B746F12603A05400BC4E22 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
+		95B746F42603A28100BC4E22 /* NormalizeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizeData.swift; sourceTree = "<group>"; };
+		95B746FC2603ACA200BC4E22 /* PriceChartIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartIndicator.swift; sourceTree = "<group>"; };
 		95BB43BF25EA667700B6C965 /* DateSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSelection.swift; sourceTree = "<group>"; };
 		95BFAE4A25E2AEA000A70EC3 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		95BFAE4D25E2B0C200A70EC3 /* HudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 				958A735625E01F9E00FD7ECA /* ReadJson.swift */,
 				95B3E09E25E127D7007EFDE3 /* Request.swift */,
 				95A5D95C25FCEEBC0090C1EA /* GetUrl.swift */,
+				95B746F12603A05400BC4E22 /* Haptics.swift */,
+				95B746F42603A28100BC4E22 /* NormalizeData.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 				95ABDD3025E1602D00310776 /* PriceView.swift */,
 				95BB43BF25EA667700B6C965 /* DateSelection.swift */,
 				95BFAE5725E2C5A700A70EC3 /* ChartView.swift */,
+				95B746FC2603ACA200BC4E22 /* PriceChartIndicator.swift */,
 				95ABDD3425E166BA00310776 /* NewsView.swift */,
 				95ABDD3B25E1717300310776 /* NewsRow.swift */,
 				95A5D96325FCF3640090C1EA /* SafariView.swift */,
@@ -284,7 +291,6 @@
 				9520C26E25F4D43D0070DD71 /* TransactionDetail.swift */,
 				95DED9DA25F2B268000DFCBA /* InsiderSummary.swift */,
 				95E9D09625F6AA0400A947A1 /* ActionView.swift */,
-				95AEF3AF25FFD8CF001B77BB /* LineChart.swift */,
 				95AEF3AB25FFBB4D001B77BB /* LineView.swift */,
 				95F8433D2602455E00770F8A /* IndicatorPoint.swift */,
 			);
@@ -415,11 +421,13 @@
 				95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */,
 				95F045FE25E96AA1006A5A17 /* NewsLanguageModel.swift in Sources */,
 				95BFAE5425E2C52300A70EC3 /* HistoricalPriceModel.swift in Sources */,
+				95B746FD2603ACA200BC4E22 /* PriceChartIndicator.swift in Sources */,
 				95BFAE5825E2C5A700A70EC3 /* ChartView.swift in Sources */,
 				95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */,
 				95F0460425E96DBB006A5A17 /* UserSettings+CoreDataClass.swift in Sources */,
 				950B674F25E9A0AE00BF8593 /* IconModel.swift in Sources */,
 				95A5D96425FCF3640090C1EA /* SafariView.swift in Sources */,
+				95B746F22603A05400BC4E22 /* Haptics.swift in Sources */,
 				958A733B25E00C3100FD7ECA /* Company+CoreDataProperties.swift in Sources */,
 				95A5D95D25FCEEBC0090C1EA /* GetUrl.swift in Sources */,
 				9517626325EEBD3800733235 /* IexAttribution.swift in Sources */,
@@ -434,7 +442,6 @@
 				95ABDD3525E166BA00310776 /* NewsView.swift in Sources */,
 				957B816825F2A02C0005E5C0 /* InsiderTranModel.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
-				95AEF3B025FFD8CF001B77BB /* LineChart.swift in Sources */,
 				95F0460B25E970DB006A5A17 /* LanguagePicker.swift in Sources */,
 				95E9D09725F6AA0400A947A1 /* ActionView.swift in Sources */,
 				95ABDD3125E1602D00310776 /* PriceView.swift in Sources */,
@@ -449,6 +456,7 @@
 				95BB43C025EA667700B6C965 /* DateSelection.swift in Sources */,
 				957B817025F2A4290005E5C0 /* SideColor.swift in Sources */,
 				95DED9D825F2B1EF000DFCBA /* TopInsiderModel.swift in Sources */,
+				95B746F52603A28100BC4E22 /* NormalizeData.swift in Sources */,
 				95BFAE4E25E2B0C200A70EC3 /* HudManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
