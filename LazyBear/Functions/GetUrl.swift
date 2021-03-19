@@ -13,6 +13,7 @@ enum Endpoint {
     case historicalPrices
     case insiderTransactions
     case insiderSummary
+    case keyStats
 }
 
 func getUrl(endpoint: Endpoint, symbol: String, range: String = "") -> String {
@@ -30,5 +31,7 @@ func getUrl(endpoint: Endpoint, symbol: String, range: String = "") -> String {
         return "\(baseUrl)/stock/\(symbol)/insider-transactions?token=\(apiKey)"
     case .insiderSummary:
         return "\(baseUrl)/stock/\(symbol)/insider-roster?token=\(apiKey)"
+    case .keyStats:
+        return "\(baseUrl)/stock/\(symbol)/stats?token=\(apiKey)"
     }
 }

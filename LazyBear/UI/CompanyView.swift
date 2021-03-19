@@ -26,6 +26,7 @@ struct CompanyView: View {
                 if companyOption.view == .stock {
                     PriceView(symbol: symbol, showVertical: false)
                     ChartView(symbol: symbol)
+                    KeyStatsView(symbol: symbol)
                     NewsView(symbol: symbol)
                         
                 } else if companyOption.view == .insiders {
