@@ -12,7 +12,6 @@ struct CompanyRow: View {
     var name: String
     var rowNumber: Int
     var showPrice: Bool
-//    @Environment(\.editMode) var mode
     
     var body: some View {
         HStack {
@@ -30,11 +29,6 @@ struct CompanyRow: View {
                 PriceView(symbol: symbol, showVertical: true)
             }
         }
-        
-//        if self.mode?.wrappedValue.isEditing ?? true {
-//            return PriceView(symbol: symbol)
-//        }
-        
     }
 }
 

@@ -15,6 +15,7 @@ struct CompanyView: View {
     var name: String
     var symbol: String
     let haptics = Haptics()
+    @State private var scale: CGFloat = 1
     @EnvironmentObject var hudManager: HudManager
     @EnvironmentObject var companyOption: CompanyOption
     @Environment(\.managedObjectContext) private var moc
@@ -22,23 +23,21 @@ struct CompanyView: View {
     
     var body: some View {
         ScrollView {
-            //VStack {
-                if companyOption.view == .stock {
-                    PriceView(symbol: symbol, showVertical: false)
-                    ChartView(symbol: symbol)
-                    KeyStatsView(symbol: symbol)
-                    NewsView(symbol: symbol)
-                        
-                } else if companyOption.view == .insiders {
-                    InsiderSummary(symbol: symbol)
-                    InsiderTransactions(symbol: symbol)
-                }
-            //}
+            if companyOption.view == .stock {
+                PriceView(symbol: symbol, showVertical: false)
+                ChartView(symbol: symbol)
+                KeyStatsView(symbol: symbol)
+                NewsView(symbol: symbol)
+                    
+            } else if companyOption.view == .insiders {
+                InsiderSummary(symbol: symbol)
+                InsiderTransactions(symbol: symbol)
+            }
         }
         .onAppear { companyOption.view = .stock }
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Button(action: { self.hudManager.showAction.toggle(); haptics.simpleSuccess() }) {
+                Button(action: { self.hudManager.showAction.toggle(); haptics.simpleSuccess()}) {
                     HStack {
                         if companyOption.view == .stock {
                             Text("Stock")
@@ -56,6 +55,9 @@ struct CompanyView: View {
                     Button(action: { addCompany() }) {
                         Image(systemName: "star")
                     }
+                    .scaleEffect(scale)
+                    .animation(.easeIn)
+                    
                 } else {
                     Button(action: { removeCompany() }) {
                         Image(systemName: "star.fill")
