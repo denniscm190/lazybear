@@ -21,6 +21,7 @@
 		9517626325EEBD3800733235 /* IexAttribution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9517626225EEBD3800733235 /* IexAttribution.swift */; };
 		9520C26F25F4D43D0070DD71 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9520C26E25F4D43D0070DD71 /* TransactionDetail.swift */; };
 		9525C89725FBF7310080A0E8 /* WaterfallGrid in Frameworks */ = {isa = PBXBuildFile; productRef = 9525C89625FBF7310080A0E8 /* WaterfallGrid */; };
+		9551FD9B2604E2B0009F61BF /* StringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9551FD9A2604E2B0009F61BF /* StringToDate.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
 		95672B9125DDA54700DCBE4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9025DDA54700DCBE4A /* ContentView.swift */; };
 		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
@@ -94,6 +95,7 @@
 		9517625F25EEB37E00733235 /* PriceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceModel.swift; sourceTree = "<group>"; };
 		9517626225EEBD3800733235 /* IexAttribution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IexAttribution.swift; sourceTree = "<group>"; };
 		9520C26E25F4D43D0070DD71 /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
+		9551FD9A2604E2B0009F61BF /* StringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDate.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95672B9025DDA54700DCBE4A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				95A5D95C25FCEEBC0090C1EA /* GetUrl.swift */,
 				95B746F12603A05400BC4E22 /* Haptics.swift */,
 				95B746F42603A28100BC4E22 /* NormalizeData.swift */,
+				9551FD9A2604E2B0009F61BF /* StringToDate.swift */,
 			);
 			path = Functions;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				9517626025EEB37E00733235 /* PriceModel.swift in Sources */,
 				95AEF3B325FFDC04001B77BB /* DeviceSize.swift in Sources */,
+				9551FD9B2604E2B0009F61BF /* StringToDate.swift in Sources */,
 				958A734525E00D3D00FD7ECA /* CompanyRow.swift in Sources */,
 				95DED9D525F2A752000DFCBA /* transactionCodes.swift in Sources */,
 				95ABDD3525E166BA00310776 /* NewsView.swift in Sources */,
@@ -589,7 +593,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -614,7 +618,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
