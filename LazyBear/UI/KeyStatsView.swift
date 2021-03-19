@@ -9,7 +9,9 @@ import SwiftUI
 
 struct KeyStatsView: View {
     var symbol: String
+    @Environment(\.colorScheme) var colorScheme  // Detect dark mode
     @State private var keyStats = KeyStatsModel()
+    @State var showingDetail = false
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -17,10 +19,21 @@ struct KeyStatsView: View {
                 let keys = Array(mirrorStructure().keys)
                 let values = Array(mirrorStructure().values)
                 ForEach(keys.indices, id: \.self) { index in
-                    KeyStatComponent(text: keys[index], data: values[index])
+                    Button(action: { self.showingDetail = true }) {
+                        KeyStatComponent(text: keys[index], data: values[index])
+                    }
+                    .foregroundColor(colorScheme == .dark ? .white: .black)
+                }
+                Button(action: { self.showingDetail = true }) {
+                    Text("See more ratios")
+                        .font(.caption)
+                        .fontWeight(.semibold)
                 }
             }
             .padding()
+        }
+        .sheet(isPresented: $showingDetail) {
+            KeyStatsDetail(keyStats: keyStats)
         }
         .onAppear {
             let url = getUrl(endpoint: .keyStats, symbol: symbol)
