@@ -37,7 +37,7 @@ struct CompanyView: View {
         .onAppear { companyOption.view = .stock }
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Button(action: { self.hudManager.showAction.toggle() }) {
+                Button(action: { self.hudManager.showAction.toggle(); haptics.simpleSuccess() }) {
                     HStack {
                         if companyOption.view == .stock {
                             Text("Stock")

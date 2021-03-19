@@ -9,6 +9,7 @@ import SwiftUI
 import CoreHaptics
 
 class Haptics {
+    
     func simpleSuccess() {
         let generator = UINotificationFeedbackGenerator()
         generator.notificationOccurred(.success)
