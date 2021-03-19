@@ -54,6 +54,9 @@
 		95AEF3B325FFDC04001B77BB /* DeviceSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AEF3B225FFDC04001B77BB /* DeviceSize.swift */; };
 		95B3E09F25E127D7007EFDE3 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3E09E25E127D7007EFDE3 /* Request.swift */; };
 		95B3E0A625E1318D007EFDE3 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 95B3E0A525E1318D007EFDE3 /* SwiftlySearch */; };
+		95B60E402605054700A49DF8 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B60E3F2605054700A49DF8 /* KeyStatsModel.swift */; };
+		95B60E43260506F400A49DF8 /* KeyStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B60E42260506F400A49DF8 /* KeyStatsView.swift */; };
+		95B60E4626050A9C00A49DF8 /* KeyStatComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B60E4526050A9C00A49DF8 /* KeyStatComponent.swift */; };
 		95B746F22603A05400BC4E22 /* Haptics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B746F12603A05400BC4E22 /* Haptics.swift */; };
 		95B746F52603A28100BC4E22 /* NormalizeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B746F42603A28100BC4E22 /* NormalizeData.swift */; };
 		95B746FD2603ACA200BC4E22 /* PriceChartIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B746FC2603ACA200BC4E22 /* PriceChartIndicator.swift */; };
@@ -130,6 +133,9 @@
 		95AEF3AB25FFBB4D001B77BB /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		95AEF3B225FFDC04001B77BB /* DeviceSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSize.swift; sourceTree = "<group>"; };
 		95B3E09E25E127D7007EFDE3 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		95B60E3F2605054700A49DF8 /* KeyStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsModel.swift; sourceTree = "<group>"; };
+		95B60E42260506F400A49DF8 /* KeyStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsView.swift; sourceTree = "<group>"; };
+		95B60E4526050A9C00A49DF8 /* KeyStatComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatComponent.swift; sourceTree = "<group>"; };
 		95B746F12603A05400BC4E22 /* Haptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Haptics.swift; sourceTree = "<group>"; };
 		95B746F42603A28100BC4E22 /* NormalizeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalizeData.swift; sourceTree = "<group>"; };
 		95B746FC2603ACA200BC4E22 /* PriceChartIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceChartIndicator.swift; sourceTree = "<group>"; };
@@ -263,6 +269,7 @@
 				9517625F25EEB37E00733235 /* PriceModel.swift */,
 				957B816725F2A02C0005E5C0 /* InsiderTranModel.swift */,
 				95DED9D725F2B1EF000DFCBA /* TopInsiderModel.swift */,
+				95B60E3F2605054700A49DF8 /* KeyStatsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -296,6 +303,8 @@
 				95E9D09625F6AA0400A947A1 /* ActionView.swift */,
 				95AEF3AB25FFBB4D001B77BB /* LineView.swift */,
 				95F8433D2602455E00770F8A /* IndicatorPoint.swift */,
+				95B60E42260506F400A49DF8 /* KeyStatsView.swift */,
+				95B60E4526050A9C00A49DF8 /* KeyStatComponent.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -410,12 +419,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				95ABDD3825E167E500310776 /* NewsModel.swift in Sources */,
+				95B60E402605054700A49DF8 /* KeyStatsModel.swift in Sources */,
 				95ABDD3C25E1717300310776 /* NewsRow.swift in Sources */,
 				950B674925E99FA900BF8593 /* IconPicker.swift in Sources */,
 				958A735725E01F9E00FD7ECA /* ReadJson.swift in Sources */,
+				95B60E43260506F400A49DF8 /* KeyStatsView.swift in Sources */,
 				958A734925E010F900FD7ECA /* Search.swift in Sources */,
 				958A735F25E0311B00FD7ECA /* Settings.swift in Sources */,
 				95F0461025E976B5006A5A17 /* SettingRow.swift in Sources */,
+				95B60E4626050A9C00A49DF8 /* KeyStatComponent.swift in Sources */,
 				95F0460825E9704F006A5A17 /* ThemePicker.swift in Sources */,
 				95A5D95A25FCEDDB0090C1EA /* CompanyOption.swift in Sources */,
 				95AEF3AC25FFBB4D001B77BB /* LineView.swift in Sources */,
