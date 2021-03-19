@@ -57,6 +57,7 @@ struct ChartView: View {
             }
         }
         .onAppear {
+            self.selectedPeriod = 2
             let url = getUrl(endpoint: .historicalPrices, symbol: symbol, range: "3m")
             request(url: url, model: [HistoricalPriceModel].self) { self.historicalPrices = $0 }
         }
@@ -78,8 +79,7 @@ struct ChartView: View {
     
     private func rangeEndpointSelector(_ value: Int) -> String {
         var url = ""
-        
-        
+
         if selectedPeriod == 0 {  // 1 week
             url = getUrl(endpoint: .historicalPrices, symbol: symbol, range: selected(interval: .oneWeek))
         } else if selectedPeriod == 1 {  // 1 month
@@ -105,19 +105,16 @@ struct ChartView: View {
     }
     
     private func lineViewSize() -> (CGFloat, CGFloat) {
-        var divisor: CGFloat = 3
+        var width = deviceSize.width
+        var height = width / 3
         
         // if running on iPad
         if UIDevice.current.userInterfaceIdiom == .pad {
-            divisor = 6
-        }
-        
-        var width = deviceSize.width
-        var height = deviceSize.width / divisor
-        
-        if orientation.isLandscape {
-            width = deviceSize.height
-            height = deviceSize.height / divisor
+            height =  width / 6
+            if orientation.isLandscape {
+                width = deviceSize.height
+                height = width / 6
+            }
         }
         
         return (width, height)
