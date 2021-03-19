@@ -10,21 +10,21 @@ import SwiftUI
 struct PriceView: View {
     var symbol: String
     var showVertical: Bool
-    @State private var latestPrice = Float()
-    @State private var changePercent = Double()
-    @State private var negativeChange = false
+    @State private var price = PriceModel()
     @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Set recurrent price request
     
     var body: some View {
+        let latestPrice = price.latestPrice ?? 0
+        let changePercent = price.changePercent ?? 0
         VStack {
             if showVertical {
                 VStack(alignment: .trailing) {
                     Text("\(latestPrice, specifier: "%.2f")")
                         .fontWeight(.semibold)
                         .padding(.horizontal)
-
+                    
                     Text("\(changePercent*100, specifier: "%.2f")%")
-                        .foregroundColor(negativeChange ? Color(.systemRed) : Color(.systemGreen))
+                        .foregroundColor(changePercent < 0 ? Color(.systemRed) : Color(.systemGreen))
                         .padding(.trailing)
                 }
             } else {
@@ -36,7 +36,7 @@ struct PriceView: View {
 
                     Text("\(changePercent*100, specifier: "%.2f")%")
                         .font(.headline)
-                        .foregroundColor(negativeChange ? Color(.systemRed) : Color(.systemGreen))
+                        .foregroundColor(changePercent < 0 ? Color(.systemRed) : Color(.systemGreen))
                         .padding(.trailing)
                     
                     Spacer()
@@ -54,12 +54,7 @@ struct PriceView: View {
     private func call() {
         let url = getUrl(endpoint: .quote, symbol: symbol)
         request(url: url, model: PriceModel.self) { result in
-            self.latestPrice = result.latestPrice
-            if result.changePercent < 0 {
-                self.negativeChange  = true
-            }
-            
-            self.changePercent = result.changePercent
+            self.price = result
         }
     }
 }

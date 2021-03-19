@@ -8,6 +8,6 @@
 import SwiftUI
 
 struct PriceModel: Codable {
-    var latestPrice: Float
-    var changePercent: Double
+    var latestPrice: Float?
+    var changePercent: Double?
 }
