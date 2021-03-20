@@ -1,5 +1,5 @@
 //
-//  InsiderSumModel.swift
+//  InsiderSummaryModel.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 5/3/21.

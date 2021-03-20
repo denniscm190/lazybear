@@ -15,12 +15,8 @@ struct InsiderTransactions: View {
         VStack(alignment: .leading) {
             if !transactions.isEmpty {
                 HStack {
-                    Image(systemName: "dollarsign.square.fill")
-                        .foregroundColor(Color(.systemGreen))
-                        .imageScale(.large)
-                    
                     Text("Latest transactions")
-                        .font(.title2)
+                        .font(.title)
                         .fontWeight(.semibold)
                     
                     Spacer()

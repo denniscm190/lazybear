@@ -18,12 +18,8 @@ struct NewsView: View {
         VStack(alignment: .leading) {
             if !news.isEmpty {
                 HStack {
-                    Image(systemName: "newspaper.fill")
-                        .foregroundColor(Color(.systemTeal))
-                        .imageScale(.large)
-                    
                     Text("Recent news")
-                        .font(.title2)
+                        .font(.title)
                         .fontWeight(.semibold)
                     
                     Spacer()

@@ -29,7 +29,7 @@ struct Search: View {
                 .onChange(of: company, perform: { company in
                     request(url: getUrl(), model: [CompanyModel].self) { self.companies = $0 }
                 })
-            .navigationTitle("Search 🔍")
+            .navigationTitle("Search")
         }
         .navigationViewStyle(StackNavigationViewStyle())
         

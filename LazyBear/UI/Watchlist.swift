@@ -28,7 +28,7 @@ struct Watchlist: View {
                 }
                 .onDelete(perform: removeCompany)
             }
-            .navigationTitle("Watchlist 👀")
+            .navigationTitle("Watchlist")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

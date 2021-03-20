@@ -40,7 +40,7 @@ struct Settings: View {
                     }
                 }
             }
-            .navigationTitle("Settings 👨🏻‍🔧")
+            .navigationTitle("Settings")
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }
