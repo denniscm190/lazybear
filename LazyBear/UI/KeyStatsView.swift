@@ -30,7 +30,7 @@ struct KeyStatsView: View {
                         .fontWeight(.semibold)
                 }
             }
-            .padding()
+            .padding([.leading, .top, .trailing])
         }
         .sheet(isPresented: $showingDetail) {
             KeyStatsDetail(keyStats: keyStats)

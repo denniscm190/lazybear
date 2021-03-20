@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InsiderSummary: View {
     var symbol: String
-    @State private var insiderSummary = [InsiderSummaryModel]() {didSet { print(insiderSummary) }}
+    @State private var insiderSummary = [InsiderSummaryModel]()
     
     var body: some View {
         let maxPosition = insiderSummary.map { ($0.position ?? 0) }.max()
