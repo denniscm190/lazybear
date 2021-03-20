@@ -24,7 +24,7 @@ struct NewsView: View {
                     
                     Spacer()
                 }
-                .padding()
+                .padding([.horizontal, .bottom])
             }
             
             let language = userSettings.first?.newsLanguage ?? "en"
