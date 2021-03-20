@@ -67,7 +67,6 @@
 		95C9F857260544510062ED11 /* KeyStatsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C9F856260544510062ED11 /* KeyStatsDetail.swift */; };
 		95D34C2725EFD5FE006F4A81 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95D34C2625EFD5FE006F4A81 /* SDWebImageSwiftUI */; };
 		95D62B7826063489007EACBF /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D62B7726063489007EACBF /* HapticsManager.swift */; };
-		95D62B7F2606383A007EACBF /* InsiderSummaryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D62B7E2606383A007EACBF /* InsiderSummaryRow.swift */; };
 		95D62B8326063931007EACBF /* HorizontalBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D62B8226063931007EACBF /* HorizontalBar.swift */; };
 		95DED9D525F2A752000DFCBA /* transactionCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9D425F2A752000DFCBA /* transactionCodes.swift */; };
 		95DED9D825F2B1EF000DFCBA /* InsiderSummaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95DED9D725F2B1EF000DFCBA /* InsiderSummaryModel.swift */; };
@@ -148,7 +147,6 @@
 		95BFAE5725E2C5A700A70EC3 /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		95C9F856260544510062ED11 /* KeyStatsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsDetail.swift; sourceTree = "<group>"; };
 		95D62B7726063489007EACBF /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
-		95D62B7E2606383A007EACBF /* InsiderSummaryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderSummaryRow.swift; sourceTree = "<group>"; };
 		95D62B8226063931007EACBF /* HorizontalBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalBar.swift; sourceTree = "<group>"; };
 		95DED9D425F2A752000DFCBA /* transactionCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = transactionCodes.swift; sourceTree = "<group>"; };
 		95DED9D725F2B1EF000DFCBA /* InsiderSummaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderSummaryModel.swift; sourceTree = "<group>"; };
@@ -307,7 +305,6 @@
 				9520C26E25F4D43D0070DD71 /* TransactionDetail.swift */,
 				95DED9DA25F2B268000DFCBA /* InsiderSummary.swift */,
 				95D62B8226063931007EACBF /* HorizontalBar.swift */,
-				95D62B7E2606383A007EACBF /* InsiderSummaryRow.swift */,
 				95E9D09625F6AA0400A947A1 /* ActionView.swift */,
 				95AEF3AB25FFBB4D001B77BB /* LineView.swift */,
 				95F8433D2602455E00770F8A /* IndicatorPoint.swift */,
@@ -439,7 +436,6 @@
 				95B60E4626050A9C00A49DF8 /* KeyStatComponent.swift in Sources */,
 				95D62B7826063489007EACBF /* HapticsManager.swift in Sources */,
 				95F0460825E9704F006A5A17 /* ThemePicker.swift in Sources */,
-				95D62B7F2606383A007EACBF /* InsiderSummaryRow.swift in Sources */,
 				95A5D95A25FCEDDB0090C1EA /* CompanyOption.swift in Sources */,
 				95AEF3AC25FFBB4D001B77BB /* LineView.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
