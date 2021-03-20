@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TopInsiderModel: Codable, Hashable {
+struct InsiderSummaryModel: Codable, Hashable {
     var entityName: String
     var position: Int?
 }

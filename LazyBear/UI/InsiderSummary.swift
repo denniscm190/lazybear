@@ -9,25 +9,40 @@ import SwiftUI
 
 struct InsiderSummary: View {
     var symbol: String
-    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
-    var userSettings: FetchedResults<UserSettings>
+    @State private var insiderSummary = [InsiderSummaryModel]() {didSet { print(insiderSummary) }}
     
     var body: some View {
+        let maxPosition = insiderSummary.map { ($0.position ?? 0) }.max()
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: "star.fill")
-                    .renderingMode(.original)
-                    .imageScale(.large)
-                
                 Text("Top insiders")
-                    .font(.title2)
+                    .font(.title)
                     .fontWeight(.semibold)
                 
                 Spacer()
             }
+            .padding(.bottom)
             
+            ForEach(insiderSummary.indices, id: \.self) { index in
+                if index < 3 {  // Number of rows that I want to show
+                    let name = insiderSummary[index].entityName
+                    let position = insiderSummary[index].position ?? 1
+                    let pct = getPercentage(maxPosition ?? 1, position)
+                    HorizontalBar(text: name, data: position, capsulePctWidth: pct)
+                }
+            }
         }
         .padding()
+        .onAppear {
+            let url = getUrl(endpoint: .insiderSummary, symbol: symbol)
+            request(url: url, model: [InsiderSummaryModel].self) { self.insiderSummary = $0 }
+        }
+    }
+    
+    private func getPercentage(_ maxValue: Int, _ value: Int) -> CGFloat {
+        let pct = Double(value) / Double(maxValue)
+        
+        return CGFloat(pct)
     }
 }
 
