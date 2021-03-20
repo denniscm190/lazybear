@@ -12,7 +12,6 @@ struct LineView: View {
     var width: CGFloat
     var height: CGFloat
     var normalizedData: [Double]
-    let haptics = Haptics()
     
     // Drag gesture
     @Binding var showingChartIndicator: Bool
@@ -21,6 +20,7 @@ struct LineView: View {
     
     @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
     var userSettings: FetchedResults<UserSettings>
+    @EnvironmentObject var hapticsManager: HapticsManager
 
     var body: some View {
         let colour = Color("\(userSettings.first?.theme?.lowercased() ?? "default")Accent")
@@ -69,7 +69,7 @@ struct LineView: View {
                     self.showingChartIndicator = true
                     self.indexValue = yPointIndex
                 } else {
-                    haptics.simpleSuccess()
+                    hapticsManager.simpleSuccess()
                 }
             default:
                 break

@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var hudManager: HudManager
     @EnvironmentObject var deviceSize: DeviceSize
+    @EnvironmentObject var hapticsManager: HapticsManager
     
     // Fetch user appearence settings
     @FetchRequest(entity: UserSettings.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \UserSettings.changedAt, ascending: false)])
@@ -64,6 +65,7 @@ struct ContentView: View {
                 // Assign device screen size to the class
                 self.deviceSize.width = geo.size.width
                 self.deviceSize.height = geo.size.height
+                hapticsManager.prepareHaptics()
             }
         }
     }

@@ -9,8 +9,8 @@ import SwiftUI
 
 struct LanguagePicker: View {
     @Environment(\.managedObjectContext) private var moc
+    @EnvironmentObject var hapticsManager: HapticsManager
     @State var language: String
-    let haptics = Haptics()
     
     var body: some View {
         Picker("News language", selection: $language) {
@@ -30,7 +30,7 @@ struct LanguagePicker: View {
         userSettings.newsLanguage = change as? String
         do {
             try moc.save()
-            haptics.simpleSuccess()
+            hapticsManager.complexSuccess()
             print("Settings saved")
         } catch {
             print(error.localizedDescription)

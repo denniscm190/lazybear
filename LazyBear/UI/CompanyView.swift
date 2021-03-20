@@ -14,10 +14,10 @@ enum ViewType {
 struct CompanyView: View {
     var name: String
     var symbol: String
-    let haptics = Haptics()
     @State private var scale: CGFloat = 1
     @EnvironmentObject var hudManager: HudManager
     @EnvironmentObject var companyOption: CompanyOption
+    @EnvironmentObject var hapticsManager: HapticsManager
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: Company.entity(), sortDescriptors: []) var companies: FetchedResults<Company>
     
@@ -37,7 +37,7 @@ struct CompanyView: View {
         .onAppear { companyOption.view = .stock }
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Button(action: { self.hudManager.showAction.toggle(); haptics.simpleSuccess()}) {
+                Button(action: { self.hudManager.showAction.toggle(); hapticsManager.complexSuccess()}) {
                     HStack {
                         if companyOption.view == .stock {
                             Text("Stock")
@@ -75,7 +75,7 @@ struct CompanyView: View {
         do {
             try moc.save()
             hudManager.selectHud(type: .notification)
-            haptics.simpleSuccess()
+            hapticsManager.simpleSuccess()
             print("Company saved")
         } catch {
             print(error.localizedDescription)

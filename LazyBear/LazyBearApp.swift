@@ -15,6 +15,7 @@ struct LazyBearApp: App {
     @ObservedObject var hudManager = HudManager()
     @ObservedObject var companyOption = CompanyOption()
     @ObservedObject var deviceSize = DeviceSize()
+    @ObservedObject var hapticsManager = HapticsManager()
 
     var body: some Scene {
         WindowGroup {
@@ -23,6 +24,7 @@ struct LazyBearApp: App {
                 .environmentObject(hudManager)
                 .environmentObject(companyOption)
                 .environmentObject(deviceSize)
+                .environmentObject(hapticsManager)
         }
     }
 }
