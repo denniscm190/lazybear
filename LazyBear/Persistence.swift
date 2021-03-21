@@ -14,14 +14,8 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let company = Company(context: viewContext)
-            company.name = "apple inc"
-            company.symbol = "aapl"
-            company.cik = "123"
-            company.currency = "USD"
-            company.exchange = "NYSE"
-            company.exchangeName = "New York Stock Exchange"
-            company.region = "US"
+            let entity = Entity(context: viewContext)
+            entity.attribute = 1
     
         }
         do {

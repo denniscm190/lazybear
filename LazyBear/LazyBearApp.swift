@@ -10,21 +10,27 @@ import SwiftUI
 @main
 struct LazyBearApp: App {
     let persistenceController = PersistenceController.shared  // Core Data init
-    
-    // Start ObservedObjects
-    @ObservedObject var hudManager = HudManager()
-    @ObservedObject var companyOption = CompanyOption()
-    @ObservedObject var deviceSize = DeviceSize()
-    @ObservedObject var hapticsManager = HapticsManager()
 
     var body: some Scene {
         WindowGroup {
+            if isAppAlreadyLaunchedOnce() {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(hudManager)
-                .environmentObject(companyOption)
-                .environmentObject(deviceSize)
-                .environmentObject(hapticsManager)
+            } else {
+                WelcomeView()
+            }
+        }
+    }
+    
+    private func isAppAlreadyLaunchedOnce() -> Bool {
+        let defaults = UserDefaults.standard
+        
+        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "IsAppAlreadyLaunchedOnce") {
+            print("App already launched : \(isAppAlreadyLaunchedOnce)")
+            
+            return true
+        } else {
+            return false
         }
     }
 }
