@@ -14,7 +14,8 @@
 		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
 		95AD4A2D26078C1400498079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A2C26078C1400498079 /* ContentView.swift */; };
-		95AD4A38260794A800498079 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A37260794A800498079 /* OnboardView.swift */; };
+		95AD4A38260794A800498079 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A37260794A800498079 /* WhatsNewView.swift */; };
+		95CE9469260AA62900C27556 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE9468260AA62900C27556 /* SignUp.swift */; };
 		95E512D32607B42200C283E0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E512D22607B42200C283E0 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,7 +32,8 @@
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		95AD4A2C26078C1400498079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		95AD4A37260794A800498079 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		95AD4A37260794A800498079 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
+		95CE9468260AA62900C27556 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		95E512D22607B42200C283E0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,10 +121,19 @@
 		95B1874925DDAC4D0068A364 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				95E512D22607B42200C283E0 /* WelcomeView.swift */,
-				95AD4A37260794A800498079 /* OnboardView.swift */,
+				95CE9467260AA60700C27556 /* Onboarding */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		95CE9467260AA60700C27556 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				95E512D22607B42200C283E0 /* WelcomeView.swift */,
+				95CE9468260AA62900C27556 /* SignUp.swift */,
+				95AD4A37260794A800498079 /* WhatsNewView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		95E512DE2607C81F00C283E0 /* Classes */ = {
@@ -212,9 +223,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CE9469260AA62900C27556 /* SignUp.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
 				95E512D32607B42200C283E0 /* WelcomeView.swift in Sources */,
-				95AD4A38260794A800498079 /* OnboardView.swift in Sources */,
+				95AD4A38260794A800498079 /* WhatsNewView.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
