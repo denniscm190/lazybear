@@ -13,7 +13,7 @@ struct WelcomeView: View {
     
     var body: some View {
         if showingNextView {
-            SignUp()
+            WhatsNewView()
         } else {
             GeometryReader { geo in
                 VStack(alignment: .leading) {
@@ -27,7 +27,7 @@ struct WelcomeView: View {
                     Group {
                         Text("Welcome to")
                         Text("Lazybear")
-                            .foregroundColor(.blue)
+                            .foregroundColor(Color("default"))
                             .offset(y: -15)
                             .padding(.bottom, -15)
                     }

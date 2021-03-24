@@ -62,6 +62,7 @@ struct WhatsNewView: View {
             }
         } else {
             ContentView()
+                .transition(.asymmetric(insertion: .scale, removal: .opacity))
         }
     }
 }
@@ -106,7 +107,13 @@ struct WhatsNewButton: View {
     var body: some View {
         HStack {
             Spacer()
-            Button(action: { self.showContentView = true }) {
+            Button(action: {
+//                writeUserDefaults()
+                withAnimation {
+                    self.showContentView = true
+                    
+                }
+            }) {
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(.blue)
                     .frame(height: 50)
@@ -120,8 +127,8 @@ struct WhatsNewButton: View {
         }
     }
     
-//    func writeUserDefaults() {
-//        let defaults = UserDefaults.standard
-//        defaults.setValue(true, forKey: "IsAppAlreadyLaunchedOnce")
-//    }
+    func writeUserDefaults() {
+        let defaults = UserDefaults.standard
+        defaults.setValue(true, forKey: "IsAppAlreadyLaunchedOnce")
+    }
 }
