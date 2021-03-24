@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		954D7EA7260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */; };
+		954D7EA8260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D7EA6260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift */; };
+		954D7EAC260BBB2400A13C50 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D7EAB260BBB2400A13C50 /* HomeView.swift */; };
+		954D7EB1260BBBEA00A13C50 /* UserHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D7EB0260BBBEA00A13C50 /* UserHelper.swift */; };
+		954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 954D7EC1260BE70C00A13C50 /* SwiftlySearch */; };
+		954D7EC6260BE84100A13C50 /* WatchlistPreviewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D7EC5260BE84100A13C50 /* WatchlistPreviewHelper.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
 		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
@@ -15,13 +21,17 @@
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
 		95AD4A2D26078C1400498079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A2C26078C1400498079 /* ContentView.swift */; };
 		95AD4A38260794A800498079 /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A37260794A800498079 /* WhatsNewView.swift */; };
-		95CE9469260AA62900C27556 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CE9468260AA62900C27556 /* SignUp.swift */; };
 		95E512D32607B42200C283E0 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E512D22607B42200C283E0 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		950BA46B25E944F500D065EF /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		950BA46C25E944FC00D065EF /* Sandbox.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Sandbox.xcconfig; sourceTree = "<group>"; };
+		954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataClass.swift"; sourceTree = "<group>"; };
+		954D7EA6260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		954D7EAB260BBB2400A13C50 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		954D7EB0260BBBEA00A13C50 /* UserHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserHelper.swift; sourceTree = "<group>"; };
+		954D7EC5260BE84100A13C50 /* WatchlistPreviewHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistPreviewHelper.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95672B9225DDA54700DCBE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -33,7 +43,6 @@
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		95AD4A2C26078C1400498079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95AD4A37260794A800498079 /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
-		95CE9468260AA62900C27556 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		95E512D22607B42200C283E0 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,12 +52,40 @@
 			buildActionMask = 2147483647;
 			files = (
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
+				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		954D7E9D260BBA5200A13C50 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */,
+				954D7EA6260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		954D7EAA260BBB0E00A13C50 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				954D7EAB260BBB2400A13C50 /* HomeView.swift */,
+				954D7EAF260BBBD500A13C50 /* Helpers */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		954D7EAF260BBBD500A13C50 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				954D7EB0260BBBEA00A13C50 /* UserHelper.swift */,
+				954D7EC5260BE84100A13C50 /* WatchlistPreviewHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		95672B8225DDA54700DCBE4A = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +116,7 @@
 				95AD4A2C26078C1400498079 /* ContentView.swift */,
 				95672B9725DDA54700DCBE4A /* Persistence.swift */,
 				95B1874925DDAC4D0068A364 /* Views */,
+				954D7E9D260BBA5200A13C50 /* Models */,
 				95672B9425DDA54700DCBE4A /* Preview Content */,
 			);
 			path = LazyBear;
@@ -104,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				95CE9467260AA60700C27556 /* Onboarding */,
+				954D7EAA260BBB0E00A13C50 /* Home */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -112,7 +151,6 @@
 			isa = PBXGroup;
 			children = (
 				95E512D22607B42200C283E0 /* WelcomeView.swift */,
-				95CE9468260AA62900C27556 /* SignUp.swift */,
 				95AD4A37260794A800498079 /* WhatsNewView.swift */,
 			);
 			path = Onboarding;
@@ -135,6 +173,7 @@
 			);
 			name = LazyBear;
 			packageProductDependencies = (
+				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -164,6 +203,7 @@
 			);
 			mainGroup = 95672B8225DDA54700DCBE4A;
 			packageReferences = (
+				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -191,11 +231,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CE9469260AA62900C27556 /* SignUp.swift in Sources */,
+				954D7EAC260BBB2400A13C50 /* HomeView.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
+				954D7EA8260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				95E512D32607B42200C283E0 /* WelcomeView.swift in Sources */,
+				954D7EB1260BBBEA00A13C50 /* UserHelper.swift in Sources */,
+				954D7EC6260BE84100A13C50 /* WatchlistPreviewHelper.swift in Sources */,
 				95AD4A38260794A800498079 /* WhatsNewView.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
+				954D7EA7260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
 			);
@@ -394,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		954D7EC1260BE70C00A13C50 /* SwiftlySearch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
+			productName = SwiftlySearch;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */ = {
