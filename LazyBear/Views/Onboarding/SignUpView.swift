@@ -21,20 +21,31 @@ struct SignUpView: View {
             GeometryReader { geo in
                 NavigationView {
                     VStack(alignment: .leading) {
+                        Text("Let us cutomise your experience.")
+                            .padding(.bottom)
+                            .opacity(0.6)
+                        
                         ProfileAvatar(size: geo.size.height * 0.3, showingAvatars: $showingAvatars)
                             .padding(.bottom)
                             
                         UserNameTextfield(username: $environmentSignUp.username)
                             .padding(.bottom)
                         
+                        Spacer()
                         Button(action: {checkAndSave()}) {
                             NextButton(text: "Continue")
-                                .padding(.bottom, 50)
                         }
+                        HStack {
+                            Spacer()
+                            Text("We do not sell your data to third parties.")
+                                .opacity(0.6)
+                            Spacer()
+                        }
+                            .font(.caption)
+                        .padding(.bottom, 30)
                     }
                     .padding()
                     .navigationTitle("Sign Up")
-                    .navigationBarTitleDisplayMode(.inline)
                 }
             }
             .alert(isPresented: $usernameIsEmptyAlert) {
@@ -86,7 +97,7 @@ struct ProfileAvatar: View {
                     .frame(maxWidth: size, maxHeight: size)
                     .scaledToFit()
                     .clipShape(Circle())
-                    .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 0.0, y: 0.0)
+                    .shadow(color: Color.black.opacity(0.2), radius: 10)
                 
                 if !environmentSignUp.hideAvatarSelector {
                     Button(action: { self.showingAvatars = true }) {
@@ -113,7 +124,9 @@ struct UserNameTextfield: View {
     @Binding var username: String
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
+            Text("Choose your username")
+                .font(.callout)
             TextField("Username", text: $username) { isEditing in
                 if isEditing {  // If it's true
                     environmentSignUp.hideAvatarSelector = isEditing

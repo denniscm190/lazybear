@@ -14,7 +14,7 @@ struct UserHelper: View {
         GeometryReader { geo in
             HStack {
                 UserImage()
-                    .frame(height: geo.size.height * 0.1)
+                    .frame(height: geo.size.height * 0.15)
                     .padding(.horizontal)
                 
                 VStack(alignment: .leading) {
@@ -36,17 +36,13 @@ struct UserImage: View {
     
     var body: some View {
         let avatar = userSettings.first!.avatar
-        RoundedRectangle(cornerRadius: 20)
+        Image(avatar)
+            .resizable()
             .aspectRatio(1.0, contentMode: .fit)
-            .foregroundColor(Color("default"))
-            .opacity(0.3)
-            .overlay(
-                Image(avatar)
-                    .resizable()
-                    .aspectRatio(1.0, contentMode: .fit)
-                    .cornerRadius(20)
-                    .padding(5)
-            )
+            .cornerRadius(20)
+            .shadow(color: Color.black.opacity(0.2), radius: 10)
+            .padding(5)
+            
     }
 }
 

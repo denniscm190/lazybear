@@ -28,7 +28,7 @@ struct WelcomeView: View {
                     Spacer()
                     Image("default")
                         .resizable()
-                        .frame(width: geo.size.width * 0.2, height: geo.size.width * 0.2)
+                        .frame(width: geo.size.width * 0.25, height: geo.size.width * 0.25)
                         .cornerRadius(25)
                         .shadow(color: Color.black.opacity(0.2), radius: 10)
                     
@@ -43,6 +43,7 @@ struct WelcomeView: View {
                     
                             
                     Text("Easily follow your stocks and the markets in real-time.")
+                        .padding(.top, 5)
                     
                     HStack {
                         if self.showingProgressView {

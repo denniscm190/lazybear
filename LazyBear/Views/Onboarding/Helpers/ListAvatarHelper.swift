@@ -19,7 +19,7 @@ struct ListAvatarHelper: View {
         NavigationView {
             ScrollView(showsIndicators: false) {
                 LazyVGrid(columns: columns, spacing: 10) {
-                    ForEach((1..<9), id: \.self) { index in
+                    ForEach((1..<11), id: \.self) { index in
                         let avatar = "random\(index)"
                         Button(action: {
                             environmentSignUp.avatar = avatar
@@ -53,6 +53,6 @@ extension Image {
             .scaledToFit()
             .clipShape(Circle())
             .padding()
-            .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 0.0, y: 0.0)
+            .shadow(color: Color.black.opacity(0.2), radius: 10)
     }
 }
