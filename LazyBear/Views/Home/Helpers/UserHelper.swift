@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct UserHelper: View {
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: []) var userSettings: FetchedResults<UserSettings>
+    
     var body: some View {
         GeometryReader { geo in
             HStack {
@@ -16,7 +18,8 @@ struct UserHelper: View {
                     .padding(.horizontal)
                 
                 VStack(alignment: .leading) {
-                    Text("Hello, Dennis!")
+                    let name = userSettings.first!.username
+                    Text("Hello, \(name)")
                         .font(.title)
                         .fontWeight(.semibold)
                     
@@ -29,13 +32,16 @@ struct UserHelper: View {
 }
 
 struct UserImage: View {
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: []) var userSettings: FetchedResults<UserSettings>
+    
     var body: some View {
+        let avatar = userSettings.first!.avatar
         RoundedRectangle(cornerRadius: 20)
             .aspectRatio(1.0, contentMode: .fit)
             .foregroundColor(Color("default"))
             .opacity(0.3)
             .overlay(
-                Image("testMemoji")
+                Image(avatar)
                     .resizable()
                     .aspectRatio(1.0, contentMode: .fit)
                     .cornerRadius(20)

@@ -8,12 +8,20 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @FetchRequest(entity: UserSettings.entity(), sortDescriptors: []) var userSettings: FetchedResults<UserSettings>
+    @ObservedObject var environmentSignUp = EnvironmentSignUp()
     @State private var showingNextView = false
     @State private var showingProgressView = false
     
     var body: some View {
         if showingNextView {
-            WhatsNewView()
+            if userSettings.isEmpty {
+                SignUpView()
+                    .environmentObject(environmentSignUp)
+            } else {
+                ContentView()
+            }
+            
         } else {
             GeometryReader { geo in
                 VStack(alignment: .leading) {
@@ -26,12 +34,13 @@ struct WelcomeView: View {
                     
                     Group {
                         Text("Welcome to")
+                            .fontWeight(.black)
                         Text("Lazybear")
+                            .fontWeight(.black)
                             .foregroundColor(Color("default"))
-                            .offset(y: -15)
-                            .padding(.bottom, -15)
                     }
-                    .font((.system(size: 50, weight: .black)))
+                    .font(.largeTitle)
+                    
                             
                     Text("Easily follow your stocks and the markets in real-time.")
                     

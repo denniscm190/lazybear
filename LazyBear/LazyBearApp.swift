@@ -18,6 +18,7 @@ struct LazyBearApp: App {
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
             } else {
                 WelcomeView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
             }
         }
     }
