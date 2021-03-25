@@ -1,5 +1,5 @@
 //
-//  SignUp.swift
+//  SignUpView.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 25/3/21.
@@ -7,65 +7,99 @@
 
 import SwiftUI
 
-struct SignUp: View {
-    @State var username: String = ""
-    @State var textFieldIsEditing = false
+struct SignUpView: View {
+    @Environment(\.managedObjectContext) private var moc
+    @EnvironmentObject var environmentSignUp: EnvironmentSignUp
+    @State private var showingAvatars = false
+    @State private var usernameIsEmptyAlert = false
+    @State private var showContentView = false
     
     var body: some View {
-        GeometryReader { geo in
-            VStack(alignment: .leading) {
-                Text("Sign Up")
-                    .font((.system(size: 50, weight: .black)))
-                    .padding(.vertical)
-                
-                Text("Let us customise your experience")
-                    .opacity(0.5)
-                    .padding(.bottom)
-            
-                ProfileAvatar(size: geo.size.height * 0.3, textFieldIsEditing: $textFieldIsEditing)
-                    .padding(.bottom)
-                    
-                UserNameTextfield(username: $username, isEditing: $textFieldIsEditing)
-                Spacer()
-                NextButton(text: "Continue")
-                    .padding(.bottom, 50)
-                
-                
+        if showContentView {
+            ContentView()
+        } else {
+            GeometryReader { geo in
+                NavigationView {
+                    VStack(alignment: .leading) {
+                        ProfileAvatar(size: geo.size.height * 0.3, showingAvatars: $showingAvatars)
+                            .padding(.bottom)
+                            
+                        UserNameTextfield(username: $environmentSignUp.username)
+                            .padding(.bottom)
+                        
+                        Button(action: {checkAndSave()}) {
+                            NextButton(text: "Continue")
+                                .padding(.bottom, 50)
+                        }
+                    }
+                    .padding()
+                    .navigationTitle("Sign Up")
+                    .navigationBarTitleDisplayMode(.inline)
+                }
             }
-            .padding(.horizontal)
+            .alert(isPresented: $usernameIsEmptyAlert) {
+                Alert(title: Text("Select a username"), message: Text("Need ideas? Try Stockmaster, or Financial lover"), dismissButton: .default(Text("Got it!")))
+            }
+            .sheet(isPresented: $showingAvatars) {
+                ListAvatarHelper()
+            }
+        }
+    }
+    
+    private func checkAndSave() {
+        if environmentSignUp.username.isEmpty {
+            self.usernameIsEmptyAlert = true
+        } else {
+            // Save settings to CLOUDKIT and show ContentView
+            let userSettings = UserSettings(context: moc)
+            userSettings.avatar = environmentSignUp.avatar
+            userSettings.username = environmentSignUp.username
+            do {
+                try moc.save()
+                print("User saved")
+                self.showContentView = true
+            } catch {
+                print(error.localizedDescription)
+            }
         }
     }
 }
 
-struct SignUp_Previews: PreviewProvider {
+struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUp()
+        SignUpView()
+            .environmentObject(EnvironmentSignUp())
     }
 }
 
 struct ProfileAvatar: View {
+    @EnvironmentObject var environmentSignUp: EnvironmentSignUp
     @State var size: CGFloat
-    @Binding var textFieldIsEditing: Bool
+    @Binding var showingAvatars: Bool
     
     var body: some View {
         HStack {
             Spacer()
             ZStack(alignment: .topTrailing) {
-                Image("boyAvatar")
+                Image(environmentSignUp.avatar)
                     .resizable()
                     .frame(maxWidth: size, maxHeight: size)
                     .scaledToFit()
                     .clipShape(Circle())
+                    .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 0.0, y: 0.0)
                 
-                if !textFieldIsEditing {
-                    Image(systemName: "photo")
-                        .foregroundColor(.white)
-                        .padding()
-                        .background(
-                            Circle()
-                                .foregroundColor(Color("default"))
-                        )
-                        .padding()
+                if !environmentSignUp.hideAvatarSelector {
+                    Button(action: { self.showingAvatars = true }) {
+                        Image(systemName: "photo")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(
+                                Circle()
+                                    .foregroundColor(Color("default"))
+                                    .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 0.0, y: 0.0)
+                            )
+                            .padding()
+                    }
                 }
             }
             
@@ -75,20 +109,21 @@ struct ProfileAvatar: View {
 }
 
 struct UserNameTextfield: View {
+    @EnvironmentObject var environmentSignUp: EnvironmentSignUp
     @Binding var username: String
-    @Binding var isEditing: Bool
     
     var body: some View {
         VStack {
-        Text("Your username")
-            .font(.headline)
-        
             TextField("Username", text: $username) { isEditing in
-                self.isEditing = isEditing
-            } onCommit: {
-                print(username)
+                if isEditing {  // If it's true
+                    environmentSignUp.hideAvatarSelector = isEditing
+                } else {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        environmentSignUp.hideAvatarSelector = isEditing
+                    }
+                }
             }
-            .padding(8)
+            .padding(10)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .foregroundColor(Color(.systemGray6))

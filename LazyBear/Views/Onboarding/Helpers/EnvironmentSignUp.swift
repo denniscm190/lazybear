@@ -7,14 +7,8 @@
 
 import SwiftUI
 
-struct EnvironmentSignUp: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct EnvironmentSignUp_Previews: PreviewProvider {
-    static var previews: some View {
-        EnvironmentSignUp()
-    }
+class EnvironmentSignUp: ObservableObject {
+    @Published var username = ""
+    @Published var avatar = "random4"
+    @Published var hideAvatarSelector = false
 }
