@@ -16,6 +16,10 @@ struct PersistenceController {
         for _ in 0..<10 {
             let entity = Entity(context: viewContext)
             entity.attribute = 1
+            
+            let userSettings = UserSettings(context: viewContext)
+            userSettings.avatar = "random4"
+            userSettings.username = "Dennis"
     
         }
         do {
