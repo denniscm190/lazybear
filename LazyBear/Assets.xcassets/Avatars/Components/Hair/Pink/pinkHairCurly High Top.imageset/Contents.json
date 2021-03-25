@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "pinkHairCurly High Top.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "pinkHairCurly High Top@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "pinkHairCurly High Top@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

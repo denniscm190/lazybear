@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "orangeHairCurly Bun.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "orangeHairCurly Bun@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "orangeHairCurly Bun@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

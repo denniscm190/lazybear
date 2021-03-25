@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "brunetteHairExtra Long.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "brunetteHairExtra Long@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "brunetteHairExtra Long@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
