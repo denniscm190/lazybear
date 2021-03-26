@@ -19,7 +19,8 @@ struct WelcomeView: View {
                 SignUpView()
                     .environmentObject(environmentSignUp)
             } else {
-                ContentView()
+                SignUpView()
+                    .environmentObject(environmentSignUp)
             }
             
         } else {

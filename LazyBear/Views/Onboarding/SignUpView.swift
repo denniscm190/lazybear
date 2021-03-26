@@ -25,7 +25,7 @@ struct SignUpView: View {
                             .padding(.bottom)
                             .opacity(0.6)
                         
-                        ProfileAvatar(size: geo.size.height * 0.3, showingAvatars: $showingAvatars)
+                        ProfileAvatar(scaleMultipler: 2, backgroundHeight: 200, showingAvatars: $showingAvatars)
                             .padding(.bottom)
                             
                         UserNameTextfield(username: $environmentSignUp.username)
@@ -52,7 +52,7 @@ struct SignUpView: View {
                 Alert(title: Text("Select a username"), message: Text("Need ideas? Try Stockmaster, or Financial lover"), dismissButton: .default(Text("Got it!")))
             }
             .sheet(isPresented: $showingAvatars) {
-                ListAvatarHelper()
+                AvatarCreator()
             }
         }
     }
@@ -63,7 +63,6 @@ struct SignUpView: View {
         } else {
             // Save settings to CLOUDKIT and show ContentView
             let userSettings = UserSettings(context: moc)
-            userSettings.avatar = environmentSignUp.avatar
             userSettings.username = environmentSignUp.username
             do {
                 try moc.save()
@@ -84,21 +83,17 @@ struct SignUpView_Previews: PreviewProvider {
 }
 
 struct ProfileAvatar: View {
-    @EnvironmentObject var environmentSignUp: EnvironmentSignUp
-    @State var size: CGFloat
+    var scaleMultipler: CGFloat
+    var backgroundHeight: CGFloat
     @Binding var showingAvatars: Bool
+    @EnvironmentObject var environmentSignUp: EnvironmentSignUp
     
     var body: some View {
         HStack {
-            Spacer()
+         Spacer()
             ZStack(alignment: .topTrailing) {
-                Image(environmentSignUp.avatar)
-                    .resizable()
-                    .frame(maxWidth: size, maxHeight: size)
-                    .scaledToFit()
-                    .clipShape(Circle())
-                    .shadow(color: Color.black.opacity(0.2), radius: 10)
-                
+               Avatar(scaleMultipler: 2, backgroundHeight: 200)
+                .shadow(color: Color.gray.opacity(0.2), radius: 10)
                 if !environmentSignUp.hideAvatarSelector {
                     Button(action: { self.showingAvatars = true }) {
                         Image(systemName: "photo")
@@ -107,7 +102,7 @@ struct ProfileAvatar: View {
                             .background(
                                 Circle()
                                     .foregroundColor(Color("default"))
-                                    .shadow(color: Color.gray.opacity(0.3), radius: 10, x: 0.0, y: 0.0)
+                                    .shadow(color: Color.gray.opacity(0.2), radius: 10)
                             )
                             .padding()
                     }

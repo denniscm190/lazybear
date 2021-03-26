@@ -16,6 +16,7 @@ struct LazyBearApp: App {
             if isAppAlreadyLaunchedOnce() {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                
             } else {
                 WelcomeView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
