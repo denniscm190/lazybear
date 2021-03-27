@@ -111,7 +111,11 @@ struct ProfileAvatar: View {
             ZStack(alignment: .topTrailing) {
                 Button(action: { self.showingAvatarGenerator = true; self.hapticsManager.simpleSuccess()}) {
                     Avatar()
-                    .shadow(color: Color.gray.opacity(0.2), radius: 10)
+                        .shadow(color: Color.gray.opacity(0.2), radius: 10)
+                        .background(
+                            Circle()
+                                .foregroundColor(Color(firstAvatar.background))
+                        )
                     
                 }
             }

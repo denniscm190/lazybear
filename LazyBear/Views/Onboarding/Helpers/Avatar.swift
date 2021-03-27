@@ -36,10 +36,6 @@ struct Avatar: View {
                 )
         }
         .padding()
-        .background(
-            Circle()
-                .foregroundColor(Color(firstAvatar.background))
-        )
     }
 }
 extension Image {

@@ -15,11 +15,17 @@ struct AvatarCreator: View {
     var components = ["Hair", "Eyes", "Mouth", "Body"]
     @State private var selectedComponent = "Hair"
     @Environment(\.presentationMode) var avatarGeneratorPresentation
+    @EnvironmentObject var firstAvatar: FirstAvatar
     
     var body: some View {
         NavigationView {
             VStack {
                 Avatar()
+                    .shadow(color: Color.gray.opacity(0.2), radius: 10)
+                    .background(
+                        Circle()
+                            .foregroundColor(Color(firstAvatar.background))
+                    )
                     .padding(.top)
                 
                 Picker("Select a component", selection: $selectedComponent) {
