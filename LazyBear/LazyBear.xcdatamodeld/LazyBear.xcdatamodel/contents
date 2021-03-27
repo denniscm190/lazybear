@@ -4,7 +4,16 @@
         <attribute name="attribute" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="UserSettings" representedClassName="UserSettings" syncable="YES">
-        <attribute name="avatar" optional="YES" attributeType="String"/>
+        <attribute name="background" optional="YES" attributeType="String"/>
+        <attribute name="body" optional="YES" attributeType="String"/>
+        <attribute name="bodyColor" optional="YES" attributeType="String"/>
+        <attribute name="eyes" optional="YES" attributeType="String"/>
+        <attribute name="facialHair" optional="YES" attributeType="String"/>
+        <attribute name="hair" optional="YES" attributeType="String"/>
+        <attribute name="hairColor" optional="YES" attributeType="String"/>
+        <attribute name="mouth" optional="YES" attributeType="String"/>
+        <attribute name="nose" optional="YES" attributeType="String"/>
+        <attribute name="skinTone" optional="YES" attributeType="String"/>
         <attribute name="username" optional="YES" attributeType="String"/>
     </entity>
     <entity name="WatchlistCompany" representedClassName="WatchlistCompany" syncable="YES">
@@ -14,7 +23,7 @@
     </entity>
     <elements>
         <element name="Entity" positionX="-63" positionY="-18" width="128" height="44"/>
-        <element name="UserSettings" positionX="-63" positionY="9" width="128" height="59"/>
+        <element name="UserSettings" positionX="-63" positionY="9" width="128" height="14"/>
         <element name="WatchlistCompany" positionX="-63" positionY="-9" width="128" height="74"/>
     </elements>
 </model>

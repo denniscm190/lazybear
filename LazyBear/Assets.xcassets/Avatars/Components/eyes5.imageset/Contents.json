@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "EyesSunglasses.png",
+      "filename" : "eyes5.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "EyesSunglasses@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "EyesSunglasses@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

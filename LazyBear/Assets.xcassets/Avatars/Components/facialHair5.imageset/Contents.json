@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "FacialHairSoulPatch.png",
+      "filename" : "facialHair5.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "FacialHairSoulPatch@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "FacialHairSoulPatch@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

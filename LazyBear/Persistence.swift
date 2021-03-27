@@ -18,7 +18,6 @@ struct PersistenceController {
             entity.attribute = 1
             
             let userSettings = UserSettings(context: viewContext)
-            userSettings.avatar = "random4"
             userSettings.username = "Dennis"
     
         }

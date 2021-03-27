@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "FacialHairShadow.png",
+      "filename" : "facialHair4.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "FacialHairShadow@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "FacialHairShadow@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

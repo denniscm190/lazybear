@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct WelcomeView: View {
+    @EnvironmentObject var hapticsManager: HapticsManager
     @FetchRequest(entity: UserSettings.entity(), sortDescriptors: []) var userSettings: FetchedResults<UserSettings>
-    @ObservedObject var environmentSignUp = EnvironmentSignUp()
+    @ObservedObject var environmentSignUp = FirstAvatar()
     @State private var showingNextView = false
     @State private var showingProgressView = false
     
@@ -19,7 +20,7 @@ struct WelcomeView: View {
                 SignUpView()
                     .environmentObject(environmentSignUp)
             } else {
-                SignUpView()
+                ContentView()
                     .environmentObject(environmentSignUp)
             }
             
@@ -66,6 +67,7 @@ struct WelcomeView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         self.showingProgressView = true
                     }
+                    self.hapticsManager.prepareHaptics()
                 }
             }
         }

@@ -2,23 +2,14 @@
 //  HomeView.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 24/3/21.
+//  Created by Dennis Concepción Martín on 27/3/21.
 //
 
 import SwiftUI
 
 struct HomeView: View {
-    @State private var searchText = ""
-    
     var body: some View {
-    NavigationView {
-        GeometryReader { geo in
-            VStack {
-                UserHelper()
-                    .padding(.top)
-                }
-            }
-        }
+        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 

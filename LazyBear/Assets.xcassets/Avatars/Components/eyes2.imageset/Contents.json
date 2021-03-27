@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "EyesHappy.png",
+      "filename" : "eyes2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "EyesHappy@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "EyesHappy@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

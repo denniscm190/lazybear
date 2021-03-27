@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "HairCurly.png",
+      "filename" : "hair9.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "HairCurly@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "HairCurly@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

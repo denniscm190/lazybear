@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "MouthLips.png",
+      "filename" : "mouth2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "MouthLips@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "MouthLips@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

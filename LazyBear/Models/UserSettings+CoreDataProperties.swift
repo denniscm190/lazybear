@@ -2,7 +2,7 @@
 //  UserSettings+CoreDataProperties.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 25/3/21.
+//  Created by Dennis Concepción Martín on 27/3/21.
 //
 //
 
@@ -17,7 +17,16 @@ extension UserSettings {
     }
 
     @NSManaged public var username: String
-    @NSManaged public var avatar: String
+    @NSManaged public var body: String
+    @NSManaged public var bodyColor: String
+    @NSManaged public var eyes: String
+    @NSManaged public var facialHair: String
+    @NSManaged public var hair: String
+    @NSManaged public var hairColor: String
+    @NSManaged public var mouth: String
+    @NSManaged public var nose: String
+    @NSManaged public var skinTone: String
+    @NSManaged public var background: String
 
 }
 

@@ -8,48 +8,51 @@
 import SwiftUI
 
 struct Avatar: View {
-    var scaleMultipler: CGFloat
-    var backgroundHeight: CGFloat
-    @EnvironmentObject var environmentSignUp: EnvironmentSignUp
+    @EnvironmentObject var firstAvatar: FirstAvatar
     
     var body: some View {
-        environmentSignUp.background
-            .clipShape(Circle())
-            .frame(maxWidth: backgroundHeight + 50, maxHeight: backgroundHeight)
-            .overlay(
-                Image("Head")
-                    .scaleEffect(scaleMultipler)
-                    .colorMultiply(environmentSignUp.skinTone)
-            )
-            .overlay(
-                ZStack {
-                    Image(environmentSignUp.hair)
-                        .scaleEffect(scaleMultipler)
-                        .offset(y: -5*scaleMultipler)
-                        .colorMultiply(environmentSignUp.hairColor)
-                    
-                    Image(environmentSignUp.nose)
-                        .scaleEffect(scaleMultipler)
-                    
-                    Image(environmentSignUp.eyes)
-                        .scaleEffect(scaleMultipler)
-                        .offset(y: -5*scaleMultipler)
-                    
-                    Image(environmentSignUp.mouth)
-                        .scaleEffect(scaleMultipler)
-                        .offset(y: 5*scaleMultipler)
-                    
-                    Image(environmentSignUp.body)
-                        .scaleEffect(scaleMultipler)
-                        .offset(y: 19*scaleMultipler)
-                        .colorMultiply(environmentSignUp.bodyColor)
-                }
-            )
+        VStack {
+            Image("head")
+                .componentModifier()
+                .overlay(
+                    ZStack {
+                        Image(firstAvatar.body)
+                            .componentModifier()
+                            .colorMultiply(Color(firstAvatar.bodyColor))
+
+                        Image(firstAvatar.hair)
+                            .componentModifier()
+                            .colorMultiply(Color(firstAvatar.hairColor))
+                        
+                        Image(firstAvatar.eyes)
+                            .componentModifier()
+                        
+                        Image(firstAvatar.nose)
+                            .componentModifier()
+                        
+                        Image(firstAvatar.mouth)
+                            .componentModifier()
+                    }
+                )
+        }
+        .padding()
+        .background(
+            Circle()
+                .foregroundColor(Color(firstAvatar.background))
+        )
+    }
+}
+extension Image {
+    func componentModifier() -> some View {
+        self
+            .resizable()
+            .aspectRatio(contentMode: .fit)
     }
 }
 
 struct Avatar_Previews: PreviewProvider {
     static var previews: some View {
-        Avatar(scaleMultipler: 2, backgroundHeight: 100)
+        Avatar()
+            .environmentObject(FirstAvatar())
     }
 }

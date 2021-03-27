@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "HairShortComboverChops.png",
+      "filename" : "hair18.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "HairShortComboverChops@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "HairShortComboverChops@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

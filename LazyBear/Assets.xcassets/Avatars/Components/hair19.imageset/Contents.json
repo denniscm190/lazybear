@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "HairSideShave.png",
+      "filename" : "hair19.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "HairSideShave@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "HairSideShave@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

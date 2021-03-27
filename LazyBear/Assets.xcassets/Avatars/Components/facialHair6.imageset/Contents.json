@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "FacialHairWalrus.png",
+      "filename" : "facialHair6.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "FacialHairWalrus@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "FacialHairWalrus@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -10,16 +10,19 @@ import SwiftUI
 @main
 struct LazyBearApp: App {
     let persistenceController = PersistenceController.shared  // Core Data init
+    @ObservedObject var hapticsManager = HapticsManager()
 
     var body: some Scene {
         WindowGroup {
             if isAppAlreadyLaunchedOnce() {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(hapticsManager)
                 
             } else {
                 WelcomeView()
                     .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                    .environmentObject(hapticsManager)
             }
         }
     }
