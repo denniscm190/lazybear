@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showWelcome = false
+    
     var body: some View {
         TabView {
             HomeView()
@@ -26,7 +28,20 @@ struct ContentView: View {
                     Text("Third")
                 }
         }
+//        .onAppear { isAppAlreadyLaunchedOnce() }
+        .sheet(isPresented: $showWelcome) {
+            
+        }
     }
+    
+//    private func isAppAlreadyLaunchedOnce() {
+//        let defaults = UserDefaults.standard
+//
+//        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "IsAppAlreadyLaunchedOnce") {
+//            print("App already launched : \(isAppAlreadyLaunchedOnce)")
+//            self.showWelcome = true
+//        }
+//    }
 }
 
 struct ContentView_Previews: PreviewProvider {
