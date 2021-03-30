@@ -2,7 +2,7 @@
 //  SectorPerformanceModel.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 28/3/21.
+//  Created by Dennis Concepción Martín on 30/3/21.
 //
 
 import SwiftUI

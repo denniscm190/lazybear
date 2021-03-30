@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SectorRow: View {
+    var sectorPerformance: [SectorPerformanceModel]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -18,8 +19,8 @@ struct SectorRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach((1..<10)) { _ in
-                        SectorItem()
+                    ForEach(sectorPerformance, id: \.self) { sector in
+                        SectorItem(sector: sector)
                     }
                 }
                 .padding()
@@ -32,6 +33,6 @@ struct SectorRow: View {
 
 struct SectorRow_Previews: PreviewProvider {
     static var previews: some View {
-        SectorRow()
+        SectorRow(sectorPerformance: [SectorPerformanceModel(name: "Technology", performance: 0.04, lastUpdated: 1617137138)])
     }
 }

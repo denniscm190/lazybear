@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var homeData = HomeData()
+    @State private var showTradingDates = false
+    
+    static let taskDateFormat: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        return formatter
+        }()
+
+        let dueDate = Date()
     
     var body: some View {
         NavigationView {
             List {
-                SectorRow()
+                SectorRow(sectorPerformance: homeData.sectorPerformance)
                     .listRowInsets(EdgeInsets())
                 
                 let keyTitles = ["Top gainers", "Top losers", "Most active"]
@@ -22,9 +32,26 @@ struct HomeView: View {
                 }
                 .listRowInsets(EdgeInsets())
             }
-            .navigationTitle("Home")
+            .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
             .navigationBarTitleDisplayMode(.inline)
             .navigationViewStyle(StackNavigationViewStyle())
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { showTradingDates = true }) {
+                        Image(systemName: "calendar.badge.clock")
+                    }
+                }
+                
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: { homeData.getSectorPerformance() }) {
+                        Text("Test recall")
+                    }
+                }
+            }
+        }
+        .onAppear { homeData.getSectorPerformance() }
+        .sheet(isPresented: $showTradingDates) {
+            TradingDates()
         }
     }
 }
