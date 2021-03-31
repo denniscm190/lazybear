@@ -46,9 +46,11 @@ struct TopStockRow: View {
     }
 }
 
-//
-//struct TopStockRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopStockRow(key: "Gainers", list:[CompanyRowModel](), intradayPrices: <#[String : IntradayPricesArray]#>)
-//    }
-//}
+
+struct TopStockRow_Previews: PreviewProvider {
+    static var previews: some View {
+        let list = [CompanyRowModel(symbol: "aapl", companyName: "apple inc", latestPrice: 120.30, changePercent: 0.03)]
+        let intradayPricesArray = IntradayPricesArray(intradayPrices: [IntradayPricesModel(open: 120.00)])
+        TopStockRow(key: "Gainers", list: list, intradayPricesDict: ["AAPL": intradayPricesArray])
+    }
+}

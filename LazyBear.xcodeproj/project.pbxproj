@@ -29,6 +29,7 @@
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
 		95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
 		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
+		9585FE782614E5E60022CFD8 /* TradingDatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9585FE772614E5E60022CFD8 /* TradingDatesModel.swift */; };
 		95893DC92613C421003698C5 /* HomeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95893DC82613C421003698C5 /* HomeData.swift */; };
 		95893DCE2613C46B003698C5 /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95893DCD2613C46B003698C5 /* SectorPerformanceModel.swift */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
@@ -65,6 +66,7 @@
 		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9585FE772614E5E60022CFD8 /* TradingDatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesModel.swift; sourceTree = "<group>"; };
 		95893DC82613C421003698C5 /* HomeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeData.swift; sourceTree = "<group>"; };
 		95893DCD2613C46B003698C5 /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			children = (
 				95893DC82613C421003698C5 /* HomeData.swift */,
 				95893DCD2613C46B003698C5 /* SectorPerformanceModel.swift */,
+				9585FE772614E5E60022CFD8 /* TradingDatesModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				95893DC92613C421003698C5 /* HomeData.swift in Sources */,
 				95893DCE2613C46B003698C5 /* SectorPerformanceModel.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
+				9585FE782614E5E60022CFD8 /* TradingDatesModel.swift in Sources */,
 				95ECCA5D2612169200A67EFA /* LineShape.swift in Sources */,
 				9550444C26111FED000E0BCB /* TopStockItem.swift in Sources */,
 				951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */,

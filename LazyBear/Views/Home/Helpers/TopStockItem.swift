@@ -55,9 +55,9 @@ struct TopStockItem: View {
     }
 }
 
-//struct TopStockItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TopStockItem(company: CompanyRowModel(symbol: "aapl", companyName: "apple inc", latestPrice: 120.30, changePercent: 0.03), intradayPrices: <#IntradayPricesArray#>)
-//
-//    }
-//}
+struct TopStockItem_Previews: PreviewProvider {
+    static var previews: some View {
+        TopStockItem(company: CompanyRowModel(symbol: "aapl", companyName: "apple inc", latestPrice: 120.30, changePercent: 0.03), intradayPricesArray: IntradayPricesArray(intradayPrices: [IntradayPricesModel(open: 120.00)]))
+
+    }
+}

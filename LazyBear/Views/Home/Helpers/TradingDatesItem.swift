@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TradingDatesItem: View {
+    var date: Date
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
@@ -21,10 +22,10 @@ struct TradingDatesItem: View {
                         .foregroundColor(Color("default"))
                         
                     VStack {
-                        Text("April")
+                        Text(get(.month))
                             .fontWeight(.semibold)
                         
-                        Text("20")
+                        Text(get(.day))
                             .font(.title)
                             .fontWeight(.semibold)
                             .foregroundColor(Color("default"))
@@ -47,10 +48,32 @@ struct TradingDatesItem: View {
                 .clipShape(RoundedRectangle(cornerRadius: 20))
             )
     }
+    
+    private enum Components {
+        case day, month, year
+    }
+    
+    private func get(_ components: Components) -> String {
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: date)
+        
+        switch components {
+        case .year:
+            return "\(dateComponents.year ?? 2020)"
+        case .day:
+            return "\(dateComponents.day ?? 1)"
+        case .month:
+            let dateFormatter = DateFormatter()
+            let monthNumber = dateComponents.month ?? 1
+            let monthLetters = dateFormatter.shortMonthSymbols[monthNumber-1]
+            
+            return "\(monthLetters)"
+        }
+        
+    }
 }
 
 struct TradingDatesItem_Previews: PreviewProvider {
     static var previews: some View {
-        TradingDatesItem()
+        TradingDatesItem(date: Date())
     }
 }

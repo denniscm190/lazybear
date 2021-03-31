@@ -11,6 +11,7 @@ class HomeData: ObservableObject {
     @Published var sectorPerformance = [SectorPerformanceModel]()
     @Published var list = ["mostactive": [CompanyRowModel](), "gainers": [CompanyRowModel](), "losers": [CompanyRowModel]()]
     @Published var intradayPrices = [String(): IntradayPricesArray(intradayPrices: [IntradayPricesModel(open: Double())])]
+    @Published var holidayDates = [TradingDatesModel]()
     
     private let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
     private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
@@ -56,5 +57,9 @@ class HomeData: ObservableObject {
                 }
             }
         }
+        
+        // 4. Request trading and holiday days
+        url = "\(baseUrl)/ref-data/us/dates/holiday/next/30?token=\(apiKey)"
+        request(url: url, model: [TradingDatesModel].self) { self.holidayDates = $0 }
     }
 }

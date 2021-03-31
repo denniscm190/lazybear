@@ -46,7 +46,7 @@ struct HomeView: View {
         .onAppear { homeData.get() }
         .onReceive(timer) {_ in homeData.get() }
         .sheet(isPresented: $showTradingDates) {
-            TradingDates()
+            TradingDates(stringDates: homeData.holidayDates)
         }
     }
 }
