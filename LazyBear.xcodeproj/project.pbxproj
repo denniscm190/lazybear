@@ -33,6 +33,8 @@
 		95893DCE2613C46B003698C5 /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95893DCD2613C46B003698C5 /* SectorPerformanceModel.swift */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
 		95AD4A2D26078C1400498079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A2C26078C1400498079 /* ContentView.swift */; };
+		95BC3B4F261476FB00FC3A12 /* IntradayPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC3B4E261476FB00FC3A12 /* IntradayPricesModel.swift */; };
+		95E745DA2614624500744A1E /* HomeDataPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E745D92614624500744A1E /* HomeDataPreview.swift */; };
 		95ECCA5D2612169200A67EFA /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECCA5C2612169200A67EFA /* LineShape.swift */; };
 		95ECCA60261216D500A67EFA /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECCA5F261216D500A67EFA /* LineView.swift */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		95AD4A2C26078C1400498079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95BC3B4E261476FB00FC3A12 /* IntradayPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayPricesModel.swift; sourceTree = "<group>"; };
+		95E745D92614624500744A1E /* HomeDataPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataPreview.swift; sourceTree = "<group>"; };
 		95ECCA5C2612169200A67EFA /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		95ECCA5F261216D500A67EFA /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,6 +121,7 @@
 				954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */,
 				954D7EA6260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift */,
 				952045232610FD7F00A76362 /* CompanyRowModel.swift */,
+				95BC3B4E261476FB00FC3A12 /* IntradayPricesModel.swift */,
 			);
 			path = "Global Models";
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		95672B9425DDA54700DCBE4A /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				95E745D72614622C00744A1E /* Home */,
 				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -225,6 +231,22 @@
 				95893DD22613CAB5003698C5 /* Global Helpers */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		95E745D72614622C00744A1E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				95E745D82614623700744A1E /* Networking */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		95E745D82614623700744A1E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				95E745D92614624500744A1E /* HomeDataPreview.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
+				95E745DA2614624500744A1E /* HomeDataPreview.swift in Sources */,
 				9550444926111FC9000E0BCB /* TopStockRow.swift in Sources */,
 				952045242610FD7F00A76362 /* CompanyRowModel.swift in Sources */,
 				9550444326111E7A000E0BCB /* SectorRow.swift in Sources */,
@@ -314,6 +337,7 @@
 				950C36E9260FBB550081CF53 /* UserSettings+CoreDataProperties.swift in Sources */,
 				954D7EA8260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */,
+				95BC3B4F261476FB00FC3A12 /* IntradayPricesModel.swift in Sources */,
 				95893DC92613C421003698C5 /* HomeData.swift in Sources */,
 				95893DCE2613C46B003698C5 /* SectorPerformanceModel.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,

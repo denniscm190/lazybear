@@ -8,19 +8,25 @@
 import SwiftUI
 
 struct TopStockRow: View {
-    var keyTitle: String
+    var key: String
+    var list: [CompanyRowModel]
+    var intradayPricesDict: [String: IntradayPricesArray]
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(keyTitle)
+            Text(adaptTitle())
                 .font(.title3)
                 .fontWeight(.semibold)
                 .padding([.top, .horizontal])
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach((1..<10)) { _ in
-                        TopStockItem()
+                    ForEach(list, id: \.self) { company in
+                        let symbol = company.symbol.uppercased()
+                        if let prices = intradayPricesDict[symbol] {
+                            TopStockItem(company: company, intradayPricesArray: prices)
+                        }
+                        
                     }
                 }
                 .padding()
@@ -29,10 +35,20 @@ struct TopStockRow: View {
         }
         .padding(.bottom)
     }
-}
-
-struct TopStockRow_Previews: PreviewProvider {
-    static var previews: some View {
-        TopStockRow(keyTitle: "Sample title")
+    
+    private func adaptTitle() -> String {
+        if key == "mostactive" {
+            
+            return "Most active"
+        } else {
+            return key.capitalized
+        }
     }
 }
+
+//
+//struct TopStockRow_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TopStockRow(key: "Gainers", list:[CompanyRowModel](), intradayPrices: <#[String : IntradayPricesArray]#>)
+//    }
+//}

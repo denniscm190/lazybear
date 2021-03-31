@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct LineView: View {
+    var data: [Double]
+    
     var body: some View {
         GeometryReader { proxy in
             VStack {
-                let sampleData = generateRandomSample()
-                LineShape(width: proxy.size.width, height: proxy.size.height, normalizedData: normalize(sampleData))
+                LineShape(width: proxy.size.width, height: proxy.size.height, normalizedData: normalize(data))
                     .stroke(lineWidth: 2)
                     .rotationEffect(.degrees(180), anchor: .center)
                     .rotation3DEffect(.degrees(180), axis: (x: 0.0, y: 1.0, z: 0.0))
@@ -33,20 +34,19 @@ struct LineView: View {
 
         return normalData
     }
+}
+
+struct LineView_Previews: PreviewProvider {
+    static var previews: some View {
+        LineView(data: generateRandomSample())
+    }
     
-    // DELETE THIS FUNCTION ON PRODUCTION
-    private func generateRandomSample() -> [Double] {
+    static private func generateRandomSample() -> [Double] {
         var randomSample = [Double]()
         for _ in 1..<10 {
             randomSample.append(Double.random(in: 1...100))
         }
         
         return randomSample
-    }
-}
-
-struct LineView_Previews: PreviewProvider {
-    static var previews: some View {
-        LineView()
     }
 }

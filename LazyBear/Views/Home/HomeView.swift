@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var homeData = HomeData()
     @State private var showTradingDates = false
+    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Set recurrent price request
     
     static let taskDateFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -25,10 +26,9 @@ struct HomeView: View {
                 SectorRow(sectorPerformance: homeData.sectorPerformance)
                     .listRowInsets(EdgeInsets())
                 
-                let keyTitles = ["Top gainers", "Top losers", "Most active"]
-                ForEach(keyTitles, id: \.self) { keyTitle in
-                    TopStockRow(keyTitle: keyTitle)
-                    
+                // Get keys of the dictionary list
+                ForEach(homeData.list.keys.sorted(), id: \.self) { key in
+                    TopStockRow(key: key, list: homeData.list[key] ?? [CompanyRowModel](), intradayPricesDict: homeData.intradayPrices)
                 }
                 .listRowInsets(EdgeInsets())
             }
@@ -41,15 +41,10 @@ struct HomeView: View {
                         Image(systemName: "calendar.badge.clock")
                     }
                 }
-                
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { homeData.getSectorPerformance() }) {
-                        Text("Test recall")
-                    }
-                }
             }
         }
-        .onAppear { homeData.getSectorPerformance() }
+        .onAppear { homeData.get() }
+        .onReceive(timer) {_ in homeData.get() }
         .sheet(isPresented: $showTradingDates) {
             TradingDates()
         }

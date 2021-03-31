@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TopStockItem: View {
+    var company: CompanyRowModel
+    var intradayPricesArray: IntradayPricesArray
     
     var body: some View {
             RoundedRectangle(cornerRadius: 20)
@@ -17,21 +19,23 @@ struct TopStockItem: View {
                 .overlay(
                     VStack(alignment: .leading) {
                         Group {
-                            Text("Symbol".uppercased())
+                            Text(company.symbol.uppercased())
                                 .fontWeight(.semibold)
                                 .padding(.top)
                             
-                            Text("Company name".capitalized)
+                            Text(company.companyName.capitalized)
+                                .font(.callout)
                                 .fontWeight(.semibold)
                                 .opacity(0.6)
+                                .lineLimit(1)
                             
-                            Text("$120.20")
-                                .foregroundColor(.green)
+                            Text("$\(company.latestPrice, specifier: "%.2f")")
+                                .foregroundColor(company.changePercent < 0 ? .red: .green)
                                 .fontWeight(.semibold)
                                 .padding(.top)
                             
-                            Text("+\(1.22, specifier: "%.2f")%")
-                                .foregroundColor(.green)
+                            Text("\(company.changePercent*100, specifier: "%.2f")%")
+                                .foregroundColor(company.changePercent < 0 ? .red: .green)
                                 .fontWeight(.semibold)
                                 
                         }
@@ -39,21 +43,21 @@ struct TopStockItem: View {
                         
                         Spacer()
                          
-                        
-                        LineView()
-                            .foregroundColor(.green)
+                        let prices = intradayPricesArray.intradayPrices.compactMap { $0.open }
+                        // Compact Map will return an array without the nil values
+                        LineView(data: prices)
+                            .foregroundColor(company.changePercent < 0 ? .red: .green)
                             .padding(.vertical)
                             .clipped()
-                            
                             
                     }
                 )
     }
 }
 
-struct TopStockItem_Previews: PreviewProvider {
-    static var previews: some View {
-        TopStockItem()
-
-    }
-}
+//struct TopStockItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TopStockItem(company: CompanyRowModel(symbol: "aapl", companyName: "apple inc", latestPrice: 120.30, changePercent: 0.03), intradayPrices: <#IntradayPricesArray#>)
+//
+//    }
+//}
