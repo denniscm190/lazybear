@@ -12,6 +12,7 @@ class HomeData: ObservableObject {
     @Published var sectorPerformance = [SectorPerformanceModel]()
     @Published var list = ["mostactive": [CompanyRowModel](), "gainers": [CompanyRowModel](), "losers": [CompanyRowModel]()]
     @Published var intradayPrices = [String(): IntradayPricesArray(intradayPrices: [IntradayPricesModel(open: Double())])]
+    @Published var holidayDates = [TradingDatesModel]()
     
     private let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
     private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
@@ -66,10 +67,22 @@ class HomeData: ObservableObject {
             }
         }
         
+//      3. REQUEST TRADING/HOLIDAY DAYS
+        url = "\(baseUrl)/ref-data/us/dates/holiday/next/30?token=\(apiKey)"
+        print("Entering group: request Trading/holiday Days")
+        dispatchGroup.enter()  // Enter group
+        genericRequest(url: url, model: [TradingDatesModel].self) {
+            self.holidayDates = $0
+            
+            print("Leaving group: request Trading/holiday Days")
+            dispatchGroup.leave()
+        
+       }
+        
         // This will run after the ForLoop and if it was successful
         dispatchGroup.notify(queue: .main) {
             
-//           3. INTRADAY PRICES REQUEST
+//           4. INTRADAY PRICES REQUEST
             // Once the previous request are made, I can append the final part of the url and make the request
             url = "\(url)&types=intraday-prices&token=\(self.apiKey)"
             genericRequest(url: url, model: [String: IntradayPricesArray].self) {

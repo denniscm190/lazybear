@@ -17,15 +17,20 @@ struct ContentView: View {
                     Image(systemName: "house")
                     Text("Home")
                 }
-            Text("Another Tab")
+            SearchView()
                 .tabItem {
-                    Image(systemName: "2.square.fill")
-                    Text("Second")
+                    Image(systemName: "magnifyingglass")
+                    Text("Search")
                 }
             Text("The Last Tab")
                 .tabItem {
                     Image(systemName: "3.square.fill")
                     Text("Third")
+                }
+            Text("The Last Tab")
+                .tabItem {
+                    Image(systemName: "3.square.fill")
+                    Text("Forth")
                 }
         }
 //        .onAppear { isAppAlreadyLaunchedOnce() }

@@ -34,6 +34,7 @@ struct HomeView: View {
                     .listRowInsets(EdgeInsets())
                 }
                 .onReceive(timer) {_ in homeData.request() }
+                .onDisappear { timer.upstream.connect().cancel() }
                 .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationViewStyle(StackNavigationViewStyle())
@@ -46,7 +47,7 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showTradingDates) {
-//                TradingDates(stringDates: homeData.holidayDates)
+                TradingDates(stringDates: homeData.holidayDates)
             }
         } else {
             ProgressView()
