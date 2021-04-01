@@ -13,7 +13,7 @@ struct TradingDates: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(spacing: 30) {
+                VStack(spacing: 20) {
                     ForEach(getArrayOfDates(), id: \.self) { date in
                         TradingDatesItem(date: date)
                     }

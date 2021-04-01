@@ -29,18 +29,16 @@ struct TradingDatesItem: View {
                             .font(.title)
                             .fontWeight(.semibold)
                             .foregroundColor(Color("default"))
+                        
+                        Text(get(.year))
+                            .font(.caption)
+                            .fontWeight(.semibold)
                     }
                     
                     Spacer()
                     VStack {
-                        Text("US Markets open in regular hours")
+                        Text("US Markets are closed")
                             .fontWeight(.semibold)
-                        
-                        Text("Random funny phrase")
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                            .multilineTextAlignment(.center)
-                            .opacity(0.6)
                     }
                     
                     Spacer()

@@ -21,32 +21,36 @@ struct HomeView: View {
         let dueDate = Date()
     
     var body: some View {
-        NavigationView {
-            List {
-                SectorRow(sectorPerformance: homeData.sectorPerformance)
+        if homeData.showView {
+            NavigationView {
+                List {
+                    SectorRow(sectorPerformance: homeData.sectorPerformance)
+                        .listRowInsets(EdgeInsets())
+                        
+                    // Get keys of the dictionary list
+                    ForEach(homeData.list.keys.sorted(), id: \.self) { key in
+                        TopStockRow(key: key, list: homeData.list[key] ?? [CompanyRowModel](), intradayPricesDict: homeData.intradayPrices)
+                    }
                     .listRowInsets(EdgeInsets())
-                
-                // Get keys of the dictionary list
-                ForEach(homeData.list.keys.sorted(), id: \.self) { key in
-                    TopStockRow(key: key, list: homeData.list[key] ?? [CompanyRowModel](), intradayPricesDict: homeData.intradayPrices)
                 }
-                .listRowInsets(EdgeInsets())
-            }
-            .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationViewStyle(StackNavigationViewStyle())
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { showTradingDates = true }) {
-                        Image(systemName: "calendar.badge.clock")
+                .onReceive(timer) {_ in homeData.request() }
+                .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
+                .navigationBarTitleDisplayMode(.inline)
+                .navigationViewStyle(StackNavigationViewStyle())
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: { showTradingDates = true }) {
+                            Image(systemName: "calendar.badge.clock")
+                        }
                     }
                 }
             }
-        }
-        .onAppear { homeData.get() }
-        .onReceive(timer) {_ in homeData.get() }
-        .sheet(isPresented: $showTradingDates) {
-            TradingDates(stringDates: homeData.holidayDates)
+            .sheet(isPresented: $showTradingDates) {
+//                TradingDates(stringDates: homeData.holidayDates)
+            }
+        } else {
+            ProgressView()
+                .onAppear { homeData.request() }
         }
     }
 }
