@@ -9,33 +9,42 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showWelcome = false
+    @EnvironmentObject var hudManager: HudManager
     
     var body: some View {
-        TabView {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-            SearchView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                }
-            Text("The Last Tab")
-                .tabItem {
-                    Image(systemName: "3.square.fill")
-                    Text("Third")
-                }
-            Text("The Last Tab")
-                .tabItem {
-                    Image(systemName: "3.square.fill")
-                    Text("Forth")
-                }
-        }
-//        .onAppear { isAppAlreadyLaunchedOnce() }
-        .sheet(isPresented: $showWelcome) {
+        ZStack {
+            TabView {
+                HomeView()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Home")
+                    }
+                SearchView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
+                Text("The Last Tab")
+                    .tabItem {
+                        Image(systemName: "3.square.fill")
+                        Text("Third")
+                    }
+                Text("The Last Tab")
+                    .tabItem {
+                        Image(systemName: "3.square.fill")
+                        Text("Forth")
+                    }
+            }
+    //        .onAppear { isAppAlreadyLaunchedOnce() }
+            .sheet(isPresented: $showWelcome) {
+                
+            }
+            BackgroundShadow()
             
+            HelpSheet()
+                .offset(y: hudManager.showSearchHelper ? 0 : 700)
+                .animation(.easeInOut)
+                .padding(.horizontal)
         }
     }
     
@@ -52,5 +61,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(HudManager())
     }
 }
