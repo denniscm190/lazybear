@@ -7,7 +7,7 @@
 
 import Foundation
 
-let companyTags: [CompanyTagsModel] = parseJSON("companyTags.json")
+let popularCompanies: [PopularCompanyModel] = parseJSON("popularCompanies.json")
 
 func parseJSON<T: Decodable>(_ filename: String) -> T {
     let data: Data

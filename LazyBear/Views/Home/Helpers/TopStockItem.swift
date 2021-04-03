@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct TopStockItem: View {
-    var company: CompanyRowModel
-    var intradayPricesArray: IntradayPricesArray
+    var company: CompanyQuoteModel
+    @State private var intradayPrices = [IntradayPricesModel]()
+    
+    private let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
+    private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
     
     var body: some View {
             RoundedRectangle(cornerRadius: 20)
@@ -29,35 +32,42 @@ struct TopStockItem: View {
                                 .opacity(0.6)
                                 .lineLimit(1)
                             
-                            Text("$\(company.latestPrice, specifier: "%.2f")")
-                                .foregroundColor(company.changePercent < 0 ? .red: .green)
-                                .fontWeight(.semibold)
-                                .padding(.top)
-                            
-                            Text("\(company.changePercent*100, specifier: "%.2f")%")
-                                .foregroundColor(company.changePercent < 0 ? .red: .green)
-                                .fontWeight(.semibold)
+                            PriceView(latestPrice: company.latestPrice, changePercent: company.changePercent)
                                 
                         }
                         .padding(.horizontal)
                         
                         Spacer()
                          
-                        let prices = intradayPricesArray.intradayPrices.compactMap { $0.open }
-                        // Compact Map will return an array without the nil values
-                        LineView(data: prices)
-                            .foregroundColor(company.changePercent < 0 ? .red: .green)
-                            .padding(.vertical)
-                            .clipped()
+                        let prices = intradayPrices.compactMap { $0.open }
+                        if prices.isEmpty {
+                            Text("No data available")
+                                .font(.caption)
+                                .opacity(0.6)
+                        } else {
+                            LineView(data: prices)
+                                .foregroundColor(company.changePercent < 0 ? .red: .green)
+                                .padding(.vertical)
+                                .clipped()
+                        }
                             
                     }
+                    ,alignment: .leading
                 )
+                .onAppear { requestIntradayPrices(company.symbol) }
+    }
+    
+    private func requestIntradayPrices(_ symbol: String) {
+        let url = "\(baseUrl)/stock/\(symbol)/intraday-prices?token=\(apiKey)"
+        genericRequest(url: url, model: [IntradayPricesModel].self) {
+            self.intradayPrices = $0
+        }
     }
 }
 
 struct TopStockItem_Previews: PreviewProvider {
     static var previews: some View {
-        TopStockItem(company: CompanyRowModel(symbol: "aapl", companyName: "apple inc", latestPrice: 120.30, changePercent: 0.03), intradayPricesArray: IntradayPricesArray(intradayPrices: [IntradayPricesModel(open: 120.00)]))
+        TopStockItem(company: CompanyQuoteModel(companyName: "Akumin Inc", symbol: "AKU", latestPrice: 120.30, changePercent: 0.03))
 
     }
 }

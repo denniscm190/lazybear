@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct TopStockRow: View {
-    var key: String
-    var list: [CompanyRowModel]
-    var intradayPricesDict: [String: IntradayPricesArray]
+    var listType: String
+    var list: [CompanyQuoteModel]
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -22,11 +21,7 @@ struct TopStockRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(list, id: \.self) { company in
-                        let symbol = company.symbol.uppercased()
-                        if let prices = intradayPricesDict[symbol] {
-                            TopStockItem(company: company, intradayPricesArray: prices)
-                        }
-                        
+                        TopStockItem(company: company)
                     }
                 }
                 .padding()
@@ -37,11 +32,11 @@ struct TopStockRow: View {
     }
     
     private func adaptTitle() -> String {
-        if key == "mostactive" {
+        if listType == "mostactive" {
             
             return "Most active"
         } else {
-            return key.capitalized
+            return listType.capitalized
         }
     }
 }
@@ -49,8 +44,6 @@ struct TopStockRow: View {
 
 struct TopStockRow_Previews: PreviewProvider {
     static var previews: some View {
-        let list = [CompanyRowModel(symbol: "aapl", companyName: "apple inc", latestPrice: 120.30, changePercent: 0.03)]
-        let intradayPricesArray = IntradayPricesArray(intradayPrices: [IntradayPricesModel(open: 120.00)])
-        TopStockRow(key: "Gainers", list: list, intradayPricesDict: ["AAPL": intradayPricesArray])
+        TopStockRow(listType: "gainers", list: [CompanyQuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 120.30, changePercent: 0.03)])
     }
 }

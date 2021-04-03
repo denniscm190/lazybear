@@ -2,7 +2,7 @@
 //  GenericRequest.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 1/4/21.
+//  Created by Dennis Concepción Martín on 3/4/21.
 //
 
 import SwiftUI

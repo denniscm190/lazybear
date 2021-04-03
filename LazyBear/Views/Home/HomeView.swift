@@ -28,13 +28,15 @@ struct HomeView: View {
                         .listRowInsets(EdgeInsets())
                         
                     // Get keys of the dictionary list
-                    ForEach(homeData.list.keys.sorted(), id: \.self) { key in
-                        TopStockRow(key: key, list: homeData.list[key] ?? [CompanyRowModel](), intradayPricesDict: homeData.intradayPrices)
+                    ForEach(homeData.topLists.keys.sorted(), id: \.self) { listType in
+                        if let list = homeData.topLists[listType] {
+                            TopStockRow(listType: listType, list: list)
+                        }
                     }
                     .listRowInsets(EdgeInsets())
                 }
-                .onReceive(timer) {_ in homeData.request() }
-                .onDisappear { timer.upstream.connect().cancel() }
+                .onReceive(timer) { _ in homeData.request() }
+                .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationViewStyle(StackNavigationViewStyle())
@@ -47,11 +49,15 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showTradingDates) {
-                TradingDates(stringDates: homeData.holidayDates)
+                TradingDates()
             }
         } else {
             ProgressView()
-                .onAppear { homeData.request() }
+                .onAppear {
+                    homeData.request()
+                    self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Restart timer
+                }
+            
         }
     }
 }

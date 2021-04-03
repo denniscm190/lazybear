@@ -7,8 +7,16 @@
 
 import SwiftUI
 
+enum DateType {
+    case holidays, trading
+}
+
 struct TradingDates: View {
-    var stringDates: [TradingDatesModel]
+    @State private var dates = [TradingDatesModel]()
+    @State private var showingView = false
+    
+    private let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
+    private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
     
     var body: some View {
         NavigationView {
@@ -20,14 +28,32 @@ struct TradingDates: View {
                 }
                 .padding()
             }
+            .onAppear { requestDates(.holidays) }
             .navigationTitle("Holiday dates")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
     
+    private func requestDates(_ dateType: DateType) {
+        switch dateType {
+        case .trading:
+            let tradingUrl = "\(baseUrl)/ref-data/us/dates/trade/next/10?token=\(apiKey)"
+            genericRequest(url: tradingUrl, model: [TradingDatesModel].self) {
+                self.dates = $0
+                self.showingView = true
+            }
+        case.holidays:
+            let holidaysUrl = "\(baseUrl)/ref-data/us/dates/holiday/next/10?token=\(apiKey)"
+            genericRequest(url: holidaysUrl, model: [TradingDatesModel].self) {
+                self.dates = $0
+                self.showingView = true
+            }
+        }
+    }
     
     private func getArrayOfDates() -> [Date] {
         // Get array of the string dates
-        let stringDates = self.stringDates.map { $0.date }
+        let stringDates = self.dates.map { $0.date }
         
         // Convert string to date
         let dateFormatter = DateFormatter()
@@ -46,6 +72,6 @@ struct TradingDates: View {
 struct TradingDate_Previews: PreviewProvider {
     static var previews: some View {
         // Format is YYY-MM-DD
-        TradingDates(stringDates: [TradingDatesModel(date: "2020-04-01")])
+        TradingDates()
     }
 }
