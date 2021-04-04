@@ -24,14 +24,14 @@ struct ContentView: View {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
                     }
-                Text("The Last Tab")
+                ProfileView()
                     .tabItem {
-                        Image(systemName: "3.square.fill")
-                        Text("Third")
+                        Image(systemName: "person")
+                        Text("Profile")
                     }
                 Text("The Last Tab")
                     .tabItem {
-                        Image(systemName: "3.square.fill")
+                        Image(systemName: "4.square.fill")
                         Text("Forth")
                     }
             }

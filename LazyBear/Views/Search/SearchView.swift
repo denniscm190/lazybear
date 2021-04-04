@@ -32,10 +32,7 @@ struct SearchView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarSearch($searchedText)
             .onChange(of: searchedText, perform: { searchedText in
-                if !searchedText.isEmpty {
-                    searchData.request(searchedText)
-                    self.showingSearchList = true
-                }
+                showSearchList(searchedText)
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -44,6 +41,15 @@ struct SearchView: View {
                     }
                 }
             }
+        }
+    }
+    
+    private func showSearchList(_ searchedText: String) {
+        if !searchedText.isEmpty {
+            // Encode string with spaces
+            let encodedSearchedText = searchedText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            searchData.request(encodedSearchedText!)
+            self.showingSearchList = true
         }
     }
 }

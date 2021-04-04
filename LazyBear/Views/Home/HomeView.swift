@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var homeData = HomeData()
     @State private var showTradingDates = false
-    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Set recurrent price request
+    // Set recurrent price request
+    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
     static let taskDateFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -55,7 +56,8 @@ struct HomeView: View {
             ProgressView()
                 .onAppear {
                     homeData.request()
-                    self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  // Restart timer
+                    // Restart timer
+                    self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
                 }
             
         }
