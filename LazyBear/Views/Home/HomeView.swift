@@ -36,7 +36,7 @@ struct HomeView: View {
                     }
                     .listRowInsets(EdgeInsets())
                 }
-                .onReceive(timer) { _ in homeData.request() }
+                .onReceive(timer) { _ in homeData.get() }
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
                 .navigationBarTitleDisplayMode(.inline)
@@ -55,7 +55,7 @@ struct HomeView: View {
         } else {
             ProgressView()
                 .onAppear {
-                    homeData.request()
+                    homeData.get()
                     // Restart timer
                     self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
                 }

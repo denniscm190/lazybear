@@ -13,7 +13,7 @@ class SearchData: ObservableObject {
     private let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
     private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
     
-    func request(_ searchedText: String) {
+    func get(_ searchedText: String) {
         let url = "\(baseUrl)/search/\(searchedText)?token=\(apiKey)"
         
         genericRequest(url: url, model: [SearchModel].self) {

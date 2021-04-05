@@ -48,7 +48,7 @@ struct SearchView: View {
         if !searchedText.isEmpty {
             // Encode string with spaces
             let encodedSearchedText = searchedText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-            searchData.request(encodedSearchedText!)
+            searchData.get(encodedSearchedText!)
             self.showingSearchList = true
         }
     }

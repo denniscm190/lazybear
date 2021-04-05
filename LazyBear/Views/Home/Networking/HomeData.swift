@@ -20,7 +20,7 @@ class HomeData: ObservableObject {
     private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
     
     
-    func request() {
+    func get() {
         let dispatchGroup = DispatchGroup()
         var url = String()
         

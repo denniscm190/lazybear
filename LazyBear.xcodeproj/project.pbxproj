@@ -29,7 +29,7 @@
 		9550444326111E7A000E0BCB /* SectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444226111E7A000E0BCB /* SectorRow.swift */; };
 		9550444626111EE5000E0BCB /* SectorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444526111EE5000E0BCB /* SectorItem.swift */; };
 		9550444926111FC9000E0BCB /* TopStockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444826111FC9000E0BCB /* TopStockRow.swift */; };
-		9550444C26111FED000E0BCB /* TopStockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444B26111FED000E0BCB /* TopStockItem.swift */; };
+		9550444C26111FED000E0BCB /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444B26111FED000E0BCB /* StockItem.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
 		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
@@ -49,9 +49,6 @@
 		95ECCA5D2612169200A67EFA /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECCA5C2612169200A67EFA /* LineShape.swift */; };
 		95ECCA60261216D500A67EFA /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECCA5F261216D500A67EFA /* LineView.swift */; };
 		95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0DB2619CA7200440386 /* ProfileView.swift */; };
-		95FBE0E32619CBE500440386 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0E22619CBE500440386 /* UserProfile.swift */; };
-		95FBE0E72619CC8700440386 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0E62619CC8700440386 /* ImagePicker.swift */; };
-		95FBE0EB2619D31100440386 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0EA2619D31100440386 /* EditProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,7 +75,7 @@
 		9550444226111E7A000E0BCB /* SectorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorRow.swift; sourceTree = "<group>"; };
 		9550444526111EE5000E0BCB /* SectorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorItem.swift; sourceTree = "<group>"; };
 		9550444826111FC9000E0BCB /* TopStockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStockRow.swift; sourceTree = "<group>"; };
-		9550444B26111FED000E0BCB /* TopStockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStockItem.swift; sourceTree = "<group>"; };
+		9550444B26111FED000E0BCB /* StockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItem.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95672B9225DDA54700DCBE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -101,9 +98,6 @@
 		95ECCA5C2612169200A67EFA /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
 		95ECCA5F261216D500A67EFA /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		95FBE0DB2619CA7200440386 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
-		95FBE0E22619CBE500440386 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
-		95FBE0E62619CC8700440386 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		95FBE0EA2619D31100440386 /* EditProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,8 +167,10 @@
 		954D7E9D260BBA5200A13C50 /* Global Models */ = {
 			isa = PBXGroup;
 			children = (
+				95893DCD2613C46B003698C5 /* CompanyQuoteModel.swift */,
 				954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */,
 				954D7EA6260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift */,
+				95A5187626186C830002D27C /* IntradayPricesModel.swift */,
 			);
 			path = "Global Models";
 			sourceTree = "<group>";
@@ -196,7 +192,6 @@
 				9550444226111E7A000E0BCB /* SectorRow.swift */,
 				9550444526111EE5000E0BCB /* SectorItem.swift */,
 				9550444826111FC9000E0BCB /* TopStockRow.swift */,
-				9550444B26111FED000E0BCB /* TopStockItem.swift */,
 				951566E92613A37C007C0F36 /* TradingDatesItem.swift */,
 			);
 			path = Helpers;
@@ -256,9 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				9523ED532615CB7F006D3D6F /* HomeData.swift */,
-				95893DCD2613C46B003698C5 /* CompanyQuoteModel.swift */,
 				95A5187926186C960002D27C /* TradingDatesModel.swift */,
-				95A5187626186C830002D27C /* IntradayPricesModel.swift */,
 				95A5187326186C680002D27C /* SectorPerformanceModel.swift */,
 			);
 			path = Networking;
@@ -272,6 +265,7 @@
 				95A5188526186F590002D27C /* PriceView.swift */,
 				950D0E2F2618B34600D17AD7 /* BlurBackground.swift */,
 				950D0E352618B61000D17AD7 /* BackgroundShadow.swift */,
+				9550444B26111FED000E0BCB /* StockItem.swift */,
 			);
 			path = "Global Helpers";
 			sourceTree = "<group>";
@@ -327,19 +321,8 @@
 			isa = PBXGroup;
 			children = (
 				95FBE0DB2619CA7200440386 /* ProfileView.swift */,
-				95FBE0E12619CBD600440386 /* Helpers */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		95FBE0E12619CBD600440386 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				95FBE0E22619CBE500440386 /* UserProfile.swift */,
-				95FBE0EA2619D31100440386 /* EditProfile.swift */,
-				95FBE0E62619CC8700440386 /* ImagePicker.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,17 +401,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95FBE0E72619CC8700440386 /* ImagePicker.swift in Sources */,
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
-				95FBE0EB2619D31100440386 /* EditProfile.swift in Sources */,
 				95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */,
 				95E745DA2614624500744A1E /* HomeDataPreview.swift in Sources */,
 				95A5187726186C830002D27C /* IntradayPricesModel.swift in Sources */,
 				95A5188626186F590002D27C /* PriceView.swift in Sources */,
 				9550444926111FC9000E0BCB /* TopStockRow.swift in Sources */,
 				9523ED542615CB7F006D3D6F /* HomeData.swift in Sources */,
-				95FBE0E32619CBE500440386 /* UserProfile.swift in Sources */,
 				9550444326111E7A000E0BCB /* SectorRow.swift in Sources */,
 				950D0E302618B34600D17AD7 /* BlurBackground.swift in Sources */,
 				95ECCA60261216D500A67EFA /* LineView.swift in Sources */,
@@ -445,7 +425,7 @@
 				950D0E222618AD4A00D17AD7 /* SearchModel.swift in Sources */,
 				95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */,
 				95ECCA5D2612169200A67EFA /* LineShape.swift in Sources */,
-				9550444C26111FED000E0BCB /* TopStockItem.swift in Sources */,
+				9550444C26111FED000E0BCB /* StockItem.swift in Sources */,
 				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
 				950D0E362618B61000D17AD7 /* BackgroundShadow.swift in Sources */,
 				950D0E292618AEC800D17AD7 /* CompanyRow.swift in Sources */,

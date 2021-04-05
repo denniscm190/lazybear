@@ -21,7 +21,7 @@ struct TopStockRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(list, id: \.self) { company in
-                        TopStockItem(company: company)
+                        StockItem(company: company)
                     }
                 }
                 .padding()
@@ -44,6 +44,6 @@ struct TopStockRow: View {
 
 struct TopStockRow_Previews: PreviewProvider {
     static var previews: some View {
-        TopStockRow(listType: "gainers", list: [CompanyQuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 120.30, changePercent: 0.03)])
+        TopStockRow(listType: "gainers", list: [CompanyQuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 120.30, changePercent: 0.034)])
     }
 }

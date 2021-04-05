@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
+    var watchlistCompanies: FetchedResults<WatchlistCompany>
+    
     var body: some View {
         NavigationView {
-            UserProfile()
+            List {
+                ForEach(watchlistCompanies, id: \.self) { company in
+                    Text("Hello company")
+                }
+            }
+            .navigationTitle("My profile")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
