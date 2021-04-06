@@ -9,7 +9,7 @@ import SwiftUI
 
 struct StockItem: View {
     var company: CompanyQuoteModel
-    @State private var intradayPrices = [IntradayPricesModel]()
+    var intradayPrices: [IntradayPricesResult]
     
     private let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
     private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
@@ -44,7 +44,7 @@ struct StockItem: View {
                         Text("No data available")
                             .font(.caption)
                             .opacity(0.6)
-                        
+
                         Spacer()
                     } else {
                         LineView(data: prices)
@@ -56,20 +56,13 @@ struct StockItem: View {
                 }
                 ,alignment: .leading
             )
-            .onAppear { requestIntradayPrices(company.symbol) }
-    }
-    
-    private func requestIntradayPrices(_ symbol: String) {
-        let url = "\(baseUrl)/stock/\(symbol)/intraday-prices?token=\(apiKey)"
-        genericRequest(url: url, model: [IntradayPricesModel].self) {
-            self.intradayPrices = $0
-        }
+            .onAppear {  }
     }
 }
 
-struct StockItem_Previews: PreviewProvider {
-    static var previews: some View {
-        StockItem(company: CompanyQuoteModel(companyName: "Akumin Inc", symbol: "AKU", latestPrice: 120.30, changePercent: 0.03))
-
-    }
-}
+//struct StockItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StockItem(company: CompanyQuoteModel(companyName: "Akumin Inc", symbol: "AKU", latestPrice: 120.30, changePercent: 0.03))
+//
+//    }
+//}

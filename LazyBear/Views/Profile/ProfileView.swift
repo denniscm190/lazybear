@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var watchlistCompanies: FetchedResults<WatchlistCompany>
+    @ObservedObject var profileData = ProfileData()
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(watchlistCompanies, id: \.self) { company in
+                ForEach(profileData.companies, id: \.self) { company in
                     Text("Hello company")
                 }
             }

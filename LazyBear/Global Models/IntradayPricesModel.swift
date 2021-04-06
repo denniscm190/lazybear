@@ -7,6 +7,10 @@
 
 import SwiftUI
 
-struct IntradayPricesModel: Codable {
+struct IntradayPricesBatch: Codable {
+    var intradayprices: [IntradayPricesResult]
+}
+
+struct IntradayPricesResult: Codable {
     var open: Double?
 }

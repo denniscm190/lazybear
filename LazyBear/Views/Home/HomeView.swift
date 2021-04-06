@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var homeData = HomeData()
     @State private var showTradingDates = false
+    
     // Set recurrent price request
     @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
@@ -29,9 +30,11 @@ struct HomeView: View {
                         .listRowInsets(EdgeInsets())
                         
                     // Get keys of the dictionary list
-                    ForEach(homeData.topLists.keys.sorted(), id: \.self) { listType in
+                    let listTypes = ["mostactive", "losers", "gainers"]
+                    ForEach(listTypes.sorted(), id: \.self) { listType in
                         if let list = homeData.topLists[listType] {
-                            TopStockRow(listType: listType, list: list)
+                            StockRectangleRow(listType: listType, list: list, intradayPrices: homeData.intradayPrices)
+                                
                         }
                     }
                     .listRowInsets(EdgeInsets())
