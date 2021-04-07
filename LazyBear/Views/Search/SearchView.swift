@@ -20,11 +20,21 @@ struct SearchView: View {
                 if showingSearchList {
                     CompanyList(searchResult: searchData.searchResult)
                 } else {
-                    Text("Are you looking for something? 👀")
-                        .fontWeight(.semibold)
-                    
-                    Text("Use the search bar to find a company")
-                    Text(searchedText)
+                    VStack(alignment: .center) {
+                        Image("bearSleeping")
+                            .resizable()
+                            .scaledToFit()
+                        
+                        Text("Are you looking for something?")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom)
+                        
+                        Text("Use the search bar to find your favourite company. Type the stock symbol or name, we'll find it!")
+                            .multilineTextAlignment(.center)
+                    }
+                    .padding(.horizontal)
                 }
             }
             .onDisappear { self.searchedText = ""; self.showingSearchList = false }
