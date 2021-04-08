@@ -43,8 +43,8 @@ private func adaptTitle(_ listType: String) -> String {
 }
 
 
-//struct StockRectangleRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StockRectangleRow(listType: "gainers", list: [CompanyQuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 120.30, changePercent: 0.034)])
-//    }
-//}
+struct StockRectangleRow_Previews: PreviewProvider {
+    static var previews: some View {
+        StockRectangleRow(listType: "gainers", list: [CompanyQuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 120.30, changePercent: 0.034)], intradayPrices: ["aapl": [IntradayPricesResult(open: 130.3)]])
+    }
+}

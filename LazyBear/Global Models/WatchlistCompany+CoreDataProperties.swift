@@ -16,9 +16,9 @@ extension WatchlistCompany {
         return NSFetchRequest<WatchlistCompany>(entityName: "WatchlistCompany")
     }
 
-    @NSManaged public var symbol: String?
-    @NSManaged public var name: String?
-    @NSManaged public var watchlist: String?
+    @NSManaged public var symbol: String
+    @NSManaged public var name: String
+    @NSManaged public var watchlist: String
 
 }
 

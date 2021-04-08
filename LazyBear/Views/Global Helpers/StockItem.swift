@@ -60,9 +60,9 @@ struct StockItem: View {
     }
 }
 
-//struct StockItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        StockItem(company: CompanyQuoteModel(companyName: "Akumin Inc", symbol: "AKU", latestPrice: 120.30, changePercent: 0.03))
-//
-//    }
-//}
+struct StockItem_Previews: PreviewProvider {
+    static var previews: some View {
+        StockItem(company: CompanyQuoteModel(companyName: "Akumin Inc", symbol: "AKU", latestPrice: 120.30, changePercent: 0.03), intradayPrices: [IntradayPricesResult(open: 130.3)])
+
+    }
+}
