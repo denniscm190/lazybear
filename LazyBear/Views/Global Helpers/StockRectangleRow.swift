@@ -9,13 +9,13 @@ import SwiftUI
 
 
 struct StockRectangleRow: View {
-    var listType: String
-    var list: [CompanyQuoteModel]
-    var intradayPrices: [String: [IntradayPricesResult]]
+    var listName: String
+    var list: [QuoteModel]
+    var nestedIntradayPrices: [String: NestedIntradayPricesModel]?
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(adaptTitle(listType))
+            Text(adaptTitle(listName))
                 .font(.title3)
                 .fontWeight(.semibold)
                 .padding([.top, .horizontal])
@@ -23,7 +23,11 @@ struct StockRectangleRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(list, id: \.self) { company in
-                        StockItem(company: company, intradayPrices: self.intradayPrices[company.symbol]!)
+                        if let intradayPrices = nestedIntradayPrices?[company.symbol.uppercased()] {
+                            StockItem(company: company, intradayPrices: intradayPrices.nestedIntradayPrices)
+                        } else {
+                            StockItem(company: company, intradayPrices: nil)
+                        }
                     }
                 }
                 .padding()
@@ -31,6 +35,12 @@ struct StockRectangleRow: View {
             .frame(height: 250)
         }
         .padding(.bottom)
+    }
+    
+    private func testPrint(_ test: Any) -> Text {
+        print(test)
+        
+        return Text("")
     }
 }
 
@@ -45,6 +55,10 @@ private func adaptTitle(_ listType: String) -> String {
 
 struct StockRectangleRow_Previews: PreviewProvider {
     static var previews: some View {
-        StockRectangleRow(listType: "gainers", list: [CompanyQuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 120.30, changePercent: 0.034)], intradayPrices: ["aapl": [IntradayPricesResult(open: 130.3)]])
+        StockRectangleRow(
+            listName: "mostactive",
+            list: [QuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 130.3, changePercent: 0.03)],
+            nestedIntradayPrices: ["AAPL": NestedIntradayPricesModel(nestedIntradayPrices: [IntradayPricesModel(marketOpen: 130.3)])]
+        )
     }
 }
