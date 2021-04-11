@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct StockItem: View {
-    var company: CompanyQuoteModel
-    var intradayPrices: [IntradayPricesResult]
+    var company: QuoteModel
+    var intradayPrices: [IntradayPricesModel]?
     
     private let baseUrl = Bundle.main.infoDictionary?["IEX_URL"] as? String ?? "Empty url"
     private let apiKey = Bundle.main.infoDictionary?["IEX_API"] as? String ?? "Empty key"
@@ -39,14 +39,7 @@ struct StockItem: View {
                     
                     Spacer()
                      
-                    let prices = intradayPrices.compactMap { $0.open }
-                    if prices.isEmpty {
-                        Text("No data available")
-                            .font(.caption)
-                            .opacity(0.6)
-
-                        Spacer()
-                    } else {
+                    if let prices = intradayPrices?.compactMap { $0.marketOpen } {
                         LineView(data: prices)
                             .foregroundColor(company.changePercent < 0 ? .red: .green)
                             .padding(.vertical)
@@ -56,13 +49,14 @@ struct StockItem: View {
                 }
                 ,alignment: .leading
             )
-            .onAppear {  }
     }
 }
 
 struct StockItem_Previews: PreviewProvider {
     static var previews: some View {
-        StockItem(company: CompanyQuoteModel(companyName: "Akumin Inc", symbol: "AKU", latestPrice: 120.30, changePercent: 0.03), intradayPrices: [IntradayPricesResult(open: 130.3)])
-
+        StockItem(
+            company: QuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 130.3, changePercent: 0.03),
+            intradayPrices: [IntradayPricesModel(marketOpen: 130.3)]
+        )
     }
 }

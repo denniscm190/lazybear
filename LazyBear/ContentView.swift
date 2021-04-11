@@ -19,21 +19,21 @@ struct ContentView: View {
                         Image(systemName: "house")
                         Text("Home")
                     }
-                SearchView()
-                    .tabItem {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                    }
-                ProfileView()
-                    .tabItem {
-                        Image(systemName: "person")
-                        Text("Profile")
-                    }
-                Text("The Last Tab")
-                    .tabItem {
-                        Image(systemName: "4.square.fill")
-                        Text("Forth")
-                    }
+//                SearchView()
+//                    .tabItem {
+//                        Image(systemName: "magnifyingglass")
+//                        Text("Search")
+//                    }
+//                ProfileView()
+//                    .tabItem {
+//                        Image(systemName: "person")
+//                        Text("Profile")
+//                    }
+//                Text("The Last Tab")
+//                    .tabItem {
+//                        Image(systemName: "4.square.fill")
+//                        Text("Forth")
+//                    }
             }
     //        .onAppear { isAppAlreadyLaunchedOnce() }
             .sheet(isPresented: $showWelcome) {

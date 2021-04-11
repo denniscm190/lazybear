@@ -1,13 +1,13 @@
 //
-//  CompanyQuoteModel.swift
+//  QuoteModel.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 30/3/21.
+//  Created by Dennis Concepción Martín on 11/4/21.
 //
 
 import SwiftUI
 
-struct CompanyQuoteModel: Codable, Hashable {
+struct QuoteModel: Codable, Hashable {
     var companyName: String
     var symbol: String
     var latestPrice: Double

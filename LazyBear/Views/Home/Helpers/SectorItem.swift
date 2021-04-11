@@ -39,6 +39,6 @@ struct SectorItem: View {
 
 struct SectorItem_Previews: PreviewProvider {
     static var previews: some View {
-        SectorItem(sector: SectorPerformanceModel(name: "Technology", performance: 0.04, lastUpdated: 1617137138))
+        SectorItem(sector: SectorPerformanceModel(name: "Technology", performance: 0.04))
     }
 }

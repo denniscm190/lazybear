@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var homeData = HomeData()
+    @ObservedObject var home = Home()
     @State private var showTradingDates = false
     
     // Set recurrent price request
@@ -23,23 +23,26 @@ struct HomeView: View {
         let dueDate = Date()
     
     var body: some View {
-        if homeData.showView {
+        if home.showView {
             NavigationView {
                 List {
-                    SectorRow(sectorPerformance: homeData.sectorPerformance)
-                        .listRowInsets(EdgeInsets())
-                        
-                    // Get keys of the dictionary list
-                    let listTypes = ["mostactive", "losers", "gainers"]
-                    ForEach(listTypes.sorted(), id: \.self) { listType in
-                        if let list = homeData.topLists[listType] {
-                            StockRectangleRow(listType: listType, list: list, intradayPrices: homeData.intradayPrices)
-                                
-                        }
+                    if let sectorPerformance = home.data.sectorPerformance {
+                        SectorRow(sectorPerformance: sectorPerformance)
+                            .listRowInsets(EdgeInsets())
                     }
-                    .listRowInsets(EdgeInsets())
+                    
+                    if let lists = home.data.lists {
+                        ForEach(Array(lists.keys.sorted()), id: \.self) { listName in
+                            if let intradayPrices = home.data.intradayPrices {
+                                StockRectangleRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: intradayPrices)
+                            } else {
+                                StockRectangleRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: nil)
+                            }
+                        }
+                        .listRowInsets(EdgeInsets())
+                    }
                 }
-                .onReceive(timer) { _ in homeData.get() }
+                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/streaming") }
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
                 .navigationBarTitleDisplayMode(.inline)
@@ -53,12 +56,14 @@ struct HomeView: View {
                 }
             }
             .sheet(isPresented: $showTradingDates) {
-                TradingDates()
+                if let dates = home.data.tradingDates {
+                    TradingDates(dates: dates)
+                }
             }
         } else {
             ProgressView()
                 .onAppear {
-                    homeData.get()
+                    home.request("https://api.lazybear.app/home/init")
                     // Restart timer
                     self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
                 }
