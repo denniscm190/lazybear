@@ -39,12 +39,14 @@ struct ContentView: View {
             .sheet(isPresented: $showWelcome) {
                 
             }
-            BackgroundShadow()
             
-            HelpSheet()
-                .offset(y: hudManager.showSearchHelper ? 0 : 700)
-                .animation(.easeInOut)
-                .padding(.horizontal)
+            Group {
+                BackgroundShadow()
+                HelpSheet()
+                    .offset(y: hudManager.showSearchHelper ? 0 : 700)
+            }
+            .animation(.easeInOut)
+            .padding(.horizontal)
         }
     }
     

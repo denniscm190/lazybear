@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 func parseJSON<T: Decodable>(_ filename: String) -> T {
     let data: Data
     

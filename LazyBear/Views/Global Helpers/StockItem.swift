@@ -39,7 +39,7 @@ struct StockItem: View {
                     
                     Spacer()
                      
-                    if let prices = intradayPrices?.compactMap { $0.marketOpen } {
+                    if let prices = intradayPrices?.compactMap { $0.open } {
                         LineView(data: prices)
                             .foregroundColor(company.changePercent < 0 ? .red: .green)
                             .padding(.vertical)
@@ -56,7 +56,7 @@ struct StockItem_Previews: PreviewProvider {
     static var previews: some View {
         StockItem(
             company: QuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 130.3, changePercent: 0.03),
-            intradayPrices: [IntradayPricesModel(marketOpen: 130.3)]
+            intradayPrices: [IntradayPricesModel(open: 130.3)]
         )
     }
 }

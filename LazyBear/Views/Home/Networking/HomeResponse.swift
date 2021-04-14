@@ -12,12 +12,14 @@ struct HomeResponse: Codable {
     var sectorPerformance: [SectorPerformanceModel]?
     var tradingDates: [TradingDatesModel]?
     var intradayPrices: [String: NestedIntradayPricesModel]?  // String is each company symbol
+    var latestCurrencies: [String: CurrencyModel]?
     
     private enum CodingKeys : String, CodingKey {
         case lists
         case sectorPerformance = "sector_performance"
         case tradingDates = "trading_dates"
         case intradayPrices = "intraday_prices"
+        case latestCurrencies = "latest_currencies"
     }
 }
 

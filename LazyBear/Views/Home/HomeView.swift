@@ -41,6 +41,11 @@ struct HomeView: View {
                         }
                         .listRowInsets(EdgeInsets())
                     }
+                    
+                    if let latestCurrencies = home.data.latestCurrencies {
+                        CurrencyRow(latestCurrencies: latestCurrencies)
+                            .listRowInsets(EdgeInsets())
+                    }
                 }
                 .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/streaming") }
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
@@ -64,10 +69,11 @@ struct HomeView: View {
             ProgressView()
                 .onAppear {
                     home.request("https://api.lazybear.app/home/init")
+                    
                     // Restart timer
                     self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
                 }
-            
+
         }
     }
 }

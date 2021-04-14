@@ -17,6 +17,11 @@ struct SectorRow: View {
                 .fontWeight(.semibold)
                 .padding([.top, .horizontal])
             
+            Text("Real-time data")
+                .font(.caption)
+                .opacity(0.5)
+                .padding(.horizontal)
+            
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(sectorPerformance, id: \.self) { sector in

@@ -13,12 +13,28 @@ struct StockRectangleRow: View {
     var list: [QuoteModel]
     var nestedIntradayPrices: [String: NestedIntradayPricesModel]?
     
+    @State private var showExtensiveList = false
+    
     var body: some View {
         VStack(alignment: .leading) {
-            Text(adaptTitle(listName))
-                .font(.title3)
-                .fontWeight(.semibold)
-                .padding([.top, .horizontal])
+            HStack(alignment: .bottom) {
+                VStack(alignment: .leading) {
+                    Text(adaptTitle(listName))
+                        .font(.title3)
+                        .fontWeight(.semibold)
+                        .padding([.top, .horizontal])
+                    
+                    Text("Real-time quotes")
+                        .font(.caption)
+                        .opacity(0.5)
+                        .padding(.horizontal)
+                }
+                
+                Spacer()
+                Button("See all", action: { self.showExtensiveList = true })
+                    .buttonStyle(BorderlessButtonStyle())
+                    .padding(.horizontal)
+            }
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -35,12 +51,9 @@ struct StockRectangleRow: View {
             .frame(height: 250)
         }
         .padding(.bottom)
-    }
-    
-    private func testPrint(_ test: Any) -> Text {
-        print(test)
-        
-        return Text("")
+        .sheet(isPresented: $showExtensiveList) {
+            ExtensiveList(listName: adaptTitle(listName), list: list, nestedIntradayPrices: nestedIntradayPrices, latestCurrencies: nil)
+        }
     }
 }
 
@@ -58,7 +71,7 @@ struct StockRectangleRow_Previews: PreviewProvider {
         StockRectangleRow(
             listName: "mostactive",
             list: [QuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 130.3, changePercent: 0.03)],
-            nestedIntradayPrices: ["AAPL": NestedIntradayPricesModel(nestedIntradayPrices: [IntradayPricesModel(marketOpen: 130.3)])]
+            nestedIntradayPrices: ["AAPL": NestedIntradayPricesModel(nestedIntradayPrices: [IntradayPricesModel(open: 130.3)])]
         )
     }
 }
