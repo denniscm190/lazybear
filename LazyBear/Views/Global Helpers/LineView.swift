@@ -24,8 +24,8 @@ struct LineView: View {
     // Normalize data
     func normalize(_ data: [Double]) -> [Double] {
         var normalData = [Double]()
-        let min = data.min()!
-        let max = data.max()!
+        let min = data.min() ?? 0
+        let max = data.max() ?? 0
 
         for value in data {
             let normal = (value - min) / (max - min)

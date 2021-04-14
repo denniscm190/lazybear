@@ -8,5 +8,5 @@
 import SwiftUI
 
 struct IntradayPricesModel: Codable {
-    var marketOpen: Double?
+    var open: Double?
 }

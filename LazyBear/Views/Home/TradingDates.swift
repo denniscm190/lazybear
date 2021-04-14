@@ -10,6 +10,7 @@ import SwiftUI
 
 struct TradingDates: View {
     var dates: [TradingDatesModel]
+    @Environment(\.presentationMode) var tradingDatesPresent
     
     var body: some View {
         NavigationView {
@@ -23,6 +24,14 @@ struct TradingDates: View {
             }
             .navigationTitle("Holiday dates")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { tradingDatesPresent.wrappedValue.dismiss() }) {
+                        Image(systemName: "multiply")
+                            .imageScale(.large)
+                    }
+                }
+            }
         }
     }
     
