@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import WaterfallGrid
 
 struct CurrencyRow: View {
     var latestCurrencies: [String: CurrencyModel]
