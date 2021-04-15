@@ -34,9 +34,9 @@ struct HomeView: View {
                     if let lists = home.data.lists {
                         ForEach(Array(lists.keys.sorted()), id: \.self) { listName in
                             if let intradayPrices = home.data.intradayPrices {
-                                StockRectangleRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: intradayPrices)
+                                StockRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: intradayPrices)
                             } else {
-                                StockRectangleRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: nil)
+                                StockRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: nil)
                             }
                         }
                         .listRowInsets(EdgeInsets())

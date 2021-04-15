@@ -17,7 +17,7 @@ struct CurrencyListItem: View {
                 .padding(.trailing)
             
             VStack(alignment: .leading) {
-                Text(currencySymbol)
+                Text("USD/\(currencySymbol)")
                     .font(.headline)
                 
                 Text(currency.name)
@@ -25,7 +25,7 @@ struct CurrencyListItem: View {
             }
             
             Spacer()
-            Text("$ \(currency.rate, specifier: "%.2f")")
+            Text("\(currency.rate, specifier: "%.2f")")
                 .padding(.horizontal)
         }
     }

@@ -25,7 +25,11 @@ struct ExtensiveList: View {
             VStack {
                 if let list = list {
                     List(list, id: \.self) { company in
-                        Text(company.companyName)
+                        if let intradayPrices = nestedIntradayPrices?[company.symbol.uppercased()] {
+                            StockItem(company: company, intradayPrices: intradayPrices.nestedIntradayPrices, orientation: .horizontal)
+                        } else {
+                            StockItem(company: company, intradayPrices: nil, orientation: .horizontal)
+                        }
                     }
                 }
                 

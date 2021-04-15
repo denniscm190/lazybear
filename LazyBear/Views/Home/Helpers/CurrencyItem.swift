@@ -23,7 +23,7 @@ struct CurrencyItem: View {
                             Text(currency.flag)
                         )
                     VStack(alignment: .leading) {
-                        Text(currencySymbol)
+                        Text("USD/\(currencySymbol)")
                             .font(.headline)
                         
                         Text(currency.name)
@@ -31,7 +31,7 @@ struct CurrencyItem: View {
                     }
                     
                     Spacer()
-                    Text("$ \(currency.rate, specifier: "%.2f")")
+                    Text("\(currency.rate, specifier: "%.2f")")
                         .padding(.horizontal)
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 8))

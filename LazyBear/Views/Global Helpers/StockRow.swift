@@ -1,5 +1,5 @@
 //
-//  StockRectangleRow.swift
+//  StockRow.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 28/3/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct StockRectangleRow: View {
+struct StockRow: View {
     var listName: String
     var list: [QuoteModel]
     var nestedIntradayPrices: [String: NestedIntradayPricesModel]?
@@ -40,9 +40,9 @@ struct StockRectangleRow: View {
                 HStack(spacing: 20) {
                     ForEach(list, id: \.self) { company in
                         if let intradayPrices = nestedIntradayPrices?[company.symbol.uppercased()] {
-                            StockItem(company: company, intradayPrices: intradayPrices.nestedIntradayPrices)
+                            StockItem(company: company, intradayPrices: intradayPrices.nestedIntradayPrices, orientation: .vertical)
                         } else {
-                            StockItem(company: company, intradayPrices: nil)
+                            StockItem(company: company, intradayPrices: nil, orientation: .vertical)
                         }
                     }
                 }
@@ -68,7 +68,7 @@ private func adaptTitle(_ listType: String) -> String {
 
 struct StockRectangleRow_Previews: PreviewProvider {
     static var previews: some View {
-        StockRectangleRow(
+        StockRow(
             listName: "mostactive",
             list: [QuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 130.3, changePercent: 0.03)],
             nestedIntradayPrices: ["AAPL": NestedIntradayPricesModel(nestedIntradayPrices: [IntradayPricesModel(open: 130.3)])]
