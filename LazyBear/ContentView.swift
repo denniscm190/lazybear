@@ -19,11 +19,11 @@ struct ContentView: View {
                         Image(systemName: "house")
                         Text("Home")
                     }
-//                SearchView()
-//                    .tabItem {
-//                        Image(systemName: "magnifyingglass")
-//                        Text("Search")
-//                    }
+                SearchView()
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Search")
+                    }
 //                ProfileView()
 //                    .tabItem {
 //                        Image(systemName: "person")
@@ -42,11 +42,12 @@ struct ContentView: View {
             
             Group {
                 BackgroundShadow()
+                    
                 HelpSheet()
                     .offset(y: hudManager.showSearchHelper ? 0 : 700)
+                    .padding(.horizontal)
             }
             .animation(.easeInOut)
-            .padding(.horizontal)
         }
     }
     

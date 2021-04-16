@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-//struct CompanyList: View {
-//    var searchResult: [SearchModel]
-//    
-//    var body: some View {
-//        List(searchResult, id: \.self) { company in
-//            CompanyRow(company: company)
-//        }
-//        .listStyle(GroupedListStyle())
-//    }
-//}
-//
-//struct CompanyList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CompanyList(searchResult: [SearchModel(securityName: "aaple inc", symbol: "aapl", region: "US", currency: "USD"), SearchModel(securityName: "aaple inc", symbol: "aapl", region: "US", currency: "USD"), SearchModel(securityName: "aaple inc", symbol: "aapl", region: "US", currency: "USD"), SearchModel(securityName: "aaple inc", symbol: "aapl", region: "US", currency: "USD"), SearchModel(securityName: "aaple inc", symbol: "aapl", region: "US", currency: "USD")])
-//    }
-//}
+struct CompanyList: View {
+    var searchResult: [SearchResponse]
+    
+    var body: some View {
+        List(searchResult, id: \.self) { company in
+            SearchedCompanyItem(company: company)
+        }
+        .listStyle(GroupedListStyle())
+    }
+}
+
+struct CompanyList_Previews: PreviewProvider {
+    static var previews: some View {
+        CompanyList(searchResult: [SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl")])
+    }
+}

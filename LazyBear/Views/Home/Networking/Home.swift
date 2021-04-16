@@ -11,13 +11,17 @@ class Home: ObservableObject {
     @Published var showView = false
     @Published var data = HomeResponse()
     
+    var streamingRequests = 0  // Count streaming requests
+    
     func request(_ url: String) {
         genericRequest(url: url, model: HomeResponse.self) { response in
-            // Is intradayPrices is empty -> request all data
-            if self.data.intradayPrices == nil {
+            self.streamingRequests += 1
+            
+            // If is the first request -> init()
+            if self.streamingRequests == 1 {
                 self.data = response
             } else {
-                // If not, request streaming data (without intradayPrices)
+                // If not, request streaming data (without intradayPrices and latestCurrencies)
                 self.data.lists = response.lists
                 self.data.sectorPerformance = response.sectorPerformance
             }
