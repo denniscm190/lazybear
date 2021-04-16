@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C36E2260FB6180081CF53 /* HapticsManager.swift */; };
+		950C57132629EF9100F234FE /* LazyBearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57122629EF9100F234FE /* LazyBearTests.swift */; };
+		950C57232629EFC200F234FE /* LazyBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57222629EFC200F234FE /* LazyBearUITests.swift */; };
 		950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E182618AA4900D17AD7 /* CompanyList.swift */; };
 		950D0E292618AEC800D17AD7 /* SearchedCompanyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */; };
 		950D0E2D2618B2B900D17AD7 /* HelpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E2C2618B2B900D17AD7 /* HelpSheet.swift */; };
@@ -57,8 +59,32 @@
 		95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0DB2619CA7200440386 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		950C57152629EF9100F234FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95672B8A25DDA54700DCBE4A;
+			remoteInfo = LazyBear;
+		};
+		950C57252629EFC200F234FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95672B8A25DDA54700DCBE4A;
+			remoteInfo = LazyBear;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		950C36E2260FB6180081CF53 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
+		950C57102629EF9100F234FE /* LazyBearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C57122629EF9100F234FE /* LazyBearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearTests.swift; sourceTree = "<group>"; };
+		950C57142629EF9100F234FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950C57202629EFC200F234FE /* LazyBearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		950C57222629EFC200F234FE /* LazyBearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearUITests.swift; sourceTree = "<group>"; };
+		950C57242629EFC200F234FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950C572D2629F03A00F234FE /* LazyBear.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = LazyBear.xctestplan; path = LazyBear.xcodeproj/LazyBear.xctestplan; sourceTree = "<group>"; };
 		950D0E182618AA4900D17AD7 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedCompanyItem.swift; sourceTree = "<group>"; };
 		950D0E2C2618B2B900D17AD7 /* HelpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSheet.swift; sourceTree = "<group>"; };
@@ -111,6 +137,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		950C570D2629EF9100F234FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C571D2629EFC200F234FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95672B8825DDA54700DCBE4A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,6 +163,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950C57112629EF9100F234FE /* LazyBearTests */ = {
+			isa = PBXGroup;
+			children = (
+				950C57122629EF9100F234FE /* LazyBearTests.swift */,
+				950C57142629EF9100F234FE /* Info.plist */,
+			);
+			path = LazyBearTests;
+			sourceTree = "<group>";
+		};
+		950C57212629EFC200F234FE /* LazyBearUITests */ = {
+			isa = PBXGroup;
+			children = (
+				950C57222629EFC200F234FE /* LazyBearUITests.swift */,
+				950C57242629EFC200F234FE /* Info.plist */,
+			);
+			path = LazyBearUITests;
+			sourceTree = "<group>";
+		};
 		950D0E272618AEBB00D17AD7 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -138,13 +196,6 @@
 				951490542610BD2B00BDEEB5 /* WelcomeView.swift */,
 			);
 			path = Welcome;
-			sourceTree = "<group>";
-		};
-		95201A36260CAD36007D5300 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		952045132610C7A200A76362 /* Global functions */ = {
@@ -216,7 +267,10 @@
 		95672B8225DDA54700DCBE4A = {
 			isa = PBXGroup;
 			children = (
+				950C572D2629F03A00F234FE /* LazyBear.xctestplan */,
 				95672B8D25DDA54700DCBE4A /* LazyBear */,
+				950C57112629EF9100F234FE /* LazyBearTests */,
+				950C57212629EFC200F234FE /* LazyBearUITests */,
 				95672B8C25DDA54700DCBE4A /* Products */,
 				958A735025E0170900FD7ECA /* Frameworks */,
 			);
@@ -226,6 +280,8 @@
 			isa = PBXGroup;
 			children = (
 				95672B8B25DDA54700DCBE4A /* LazyBear.app */,
+				950C57102629EF9100F234FE /* LazyBearTests.xctest */,
+				950C57202629EFC200F234FE /* LazyBearUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,7 +302,6 @@
 				952045132610C7A200A76362 /* Global functions */,
 				954D7E9D260BBA5200A13C50 /* Global Models */,
 				9523ED402615BD93006D3D6F /* Resources */,
-				95201A36260CAD36007D5300 /* Tests */,
 				95672B9425DDA54700DCBE4A /* Preview Content */,
 			);
 			path = LazyBear;
@@ -342,6 +397,42 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		950C570F2629EF9100F234FE /* LazyBearTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950C57172629EF9100F234FE /* Build configuration list for PBXNativeTarget "LazyBearTests" */;
+			buildPhases = (
+				950C570C2629EF9100F234FE /* Sources */,
+				950C570D2629EF9100F234FE /* Frameworks */,
+				950C570E2629EF9100F234FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950C57162629EF9100F234FE /* PBXTargetDependency */,
+			);
+			name = LazyBearTests;
+			productName = LazyBearTests;
+			productReference = 950C57102629EF9100F234FE /* LazyBearTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		950C571F2629EFC200F234FE /* LazyBearUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 950C57272629EFC200F234FE /* Build configuration list for PBXNativeTarget "LazyBearUITests" */;
+			buildPhases = (
+				950C571C2629EFC200F234FE /* Sources */,
+				950C571D2629EFC200F234FE /* Frameworks */,
+				950C571E2629EFC200F234FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				950C57262629EFC200F234FE /* PBXTargetDependency */,
+			);
+			name = LazyBearUITests;
+			productName = LazyBearUITests;
+			productReference = 950C57202629EFC200F234FE /* LazyBearUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		95672B8A25DDA54700DCBE4A /* LazyBear */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95672B9F25DDA54800DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */;
@@ -371,6 +462,14 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					950C570F2629EF9100F234FE = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 95672B8A25DDA54700DCBE4A;
+					};
+					950C571F2629EFC200F234FE = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 95672B8A25DDA54700DCBE4A;
+					};
 					95672B8A25DDA54700DCBE4A = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -393,11 +492,27 @@
 			projectRoot = "";
 			targets = (
 				95672B8A25DDA54700DCBE4A /* LazyBear */,
+				950C570F2629EF9100F234FE /* LazyBearTests */,
+				950C571F2629EFC200F234FE /* LazyBearUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		950C570E2629EF9100F234FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C571E2629EFC200F234FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95672B8925DDA54700DCBE4A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +526,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		950C570C2629EF9100F234FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950C57132629EF9100F234FE /* LazyBearTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		950C571C2629EFC200F234FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				950C57232629EFC200F234FE /* LazyBearUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95672B8725DDA54700DCBE4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -463,7 +594,98 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		950C57162629EF9100F234FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95672B8A25DDA54700DCBE4A /* LazyBear */;
+			targetProxy = 950C57152629EF9100F234FE /* PBXContainerItemProxy */;
+		};
+		950C57262629EFC200F234FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95672B8A25DDA54700DCBE4A /* LazyBear */;
+			targetProxy = 950C57252629EFC200F234FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		950C57182629EF9100F234FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBear.app/LazyBear";
+			};
+			name = Debug;
+		};
+		950C57192629EF9100F234FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBear.app/LazyBear";
+			};
+			name = Release;
+		};
+		950C57282629EFC200F234FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LazyBear;
+			};
+			name = Debug;
+		};
+		950C57292629EFC200F234FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LazyBear;
+			};
+			name = Release;
+		};
 		95672B9D25DDA54800DCBE4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -633,6 +855,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		950C57172629EF9100F234FE /* Build configuration list for PBXNativeTarget "LazyBearTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950C57182629EF9100F234FE /* Debug */,
+				950C57192629EF9100F234FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		950C57272629EFC200F234FE /* Build configuration list for PBXNativeTarget "LazyBearUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				950C57282629EFC200F234FE /* Debug */,
+				950C57292629EFC200F234FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95672B8625DDA54700DCBE4A /* Build configuration list for PBXProject "LazyBear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
