@@ -16,7 +16,13 @@ struct PersistenceController {
         for _ in 0..<10 {
             let entity = Entity(context: viewContext)
             entity.attribute = 1
-    
+        }
+        
+        for _ in 0..<10 {
+            let watchlistCompany = WatchlistCompany(context: viewContext)
+            watchlistCompany.name = "Apple Inc"
+            watchlistCompany.symbol = "AAPL"
+            watchlistCompany.watchlist = "Technologies"
         }
         do {
             try viewContext.save()
