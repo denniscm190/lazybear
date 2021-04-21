@@ -10,8 +10,8 @@ import SwiftUI
 
 struct StockRow: View {
     var listName: String
-    var list: [QuoteModel]
-    var nestedIntradayPrices: [String: NestedIntradayPricesModel]?
+    var list: [String: QuoteModel]
+    var intradayPrices: [String: [IntradayPriceModel]]?
     
     @State private var showExtensiveList = false
     
@@ -19,7 +19,7 @@ struct StockRow: View {
         VStack(alignment: .leading) {
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
-                    Text(adaptTitle(listName))
+                    Text(listName)
                         .font(.title3)
                         .fontWeight(.semibold)
                         .padding([.top, .horizontal])
@@ -38,12 +38,8 @@ struct StockRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(list, id: \.self) { company in
-                        if let intradayPrices = nestedIntradayPrices?[company.symbol.uppercased()] {
-                            StockItem(company: company, intradayPrices: intradayPrices.nestedIntradayPrices, orientation: .vertical)
-                        } else {
-                            StockItem(company: company, intradayPrices: nil, orientation: .vertical)
-                        }
+                    ForEach(Array(list.keys.sorted()), id: \.self) { companySymbol in
+                        StockItem(symbol: companySymbol, company: list[companySymbol]!, intradayPrices: intradayPrices?[companySymbol], orientation: .vertical)
                     }
                 }
                 .padding()
@@ -52,16 +48,8 @@ struct StockRow: View {
         }
         .padding(.bottom)
         .sheet(isPresented: $showExtensiveList) {
-            ExtensiveList(listName: adaptTitle(listName), list: list, nestedIntradayPrices: nestedIntradayPrices, latestCurrencies: nil)
+            ExtensiveList(listName: listName, list: list, intradayPrices: intradayPrices, latestCurrencies: nil)
         }
-    }
-}
-
-private func adaptTitle(_ listType: String) -> String {
-    if listType == "mostactive" {
-        return "Most active"
-    } else {
-        return listType.capitalized
     }
 }
 
@@ -69,9 +57,9 @@ private func adaptTitle(_ listType: String) -> String {
 struct StockRectangleRow_Previews: PreviewProvider {
     static var previews: some View {
         StockRow(
-            listName: "mostactive",
-            list: [QuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 130.3, changePercent: 0.03)],
-            nestedIntradayPrices: ["AAPL": NestedIntradayPricesModel(nestedIntradayPrices: [IntradayPricesModel(open: 130.3)])]
+            listName: "Gainers",
+            list: ["AAPL": QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 130.3)],
+            intradayPrices: ["AAPL": [IntradayPriceModel(open: 130.2)]]
         )
     }
 }

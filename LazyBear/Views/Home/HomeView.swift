@@ -32,22 +32,25 @@ struct HomeView: View {
                     }
                     
                     if let lists = home.data.lists {
-                        ForEach(Array(lists.keys.sorted()), id: \.self) { listName in
-                            if let intradayPrices = home.data.intradayPrices {
-                                StockRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: intradayPrices)
-                            } else {
-                                StockRow(listName: listName, list: lists[listName]!, nestedIntradayPrices: nil)
-                            }
+                        if let gainers = lists.gainers {
+                            StockRow(listName: "Gainers", list: gainers, intradayPrices: home.data.intradayPrices)
+                                .listRowInsets(EdgeInsets())
                         }
-                        .listRowInsets(EdgeInsets())
+                        if let losers = lists.losers {
+                            StockRow(listName: "Losers", list: losers, intradayPrices: home.data.intradayPrices)
+                                .listRowInsets(EdgeInsets())
+                        }
+                        if let mostActive = lists.mostactive {
+                            StockRow(listName: "Most active", list: mostActive, intradayPrices: home.data.intradayPrices)
+                                .listRowInsets(EdgeInsets())
+                        }
                     }
-                    
                     if let latestCurrencies = home.data.latestCurrencies {
                         CurrencyRow(latestCurrencies: latestCurrencies)
                             .listRowInsets(EdgeInsets())
                     }
                 }
-                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/streaming") }
+                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/type=streaming") }
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
                 .navigationBarTitleDisplayMode(.inline)
@@ -68,7 +71,7 @@ struct HomeView: View {
         } else {
             ProgressView()
                 .onAppear {
-                    home.request("https://api.lazybear.app/home/init")
+                    home.request("https://api.lazybear.app/home/type=init")
                     
                     // Restart timer
                     self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()

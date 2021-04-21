@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct ExtensiveList: View {
-    // General argument
     var listName: String
-    
-    // Arguments for lists
-    var list: [QuoteModel]?
-    var nestedIntradayPrices: [String: NestedIntradayPricesModel]?
-    
-    // Arguments for currencies
+    var list: [String: QuoteModel]?
+    var intradayPrices: [String: [IntradayPriceModel]]?
     var latestCurrencies: [String: CurrencyModel]?
     
     @Environment(\.presentationMode) var extensiveListPresent
@@ -24,17 +19,13 @@ struct ExtensiveList: View {
         NavigationView {
             VStack {
                 if let list = list {
-                    List(list, id: \.self) { company in
-                        if let intradayPrices = nestedIntradayPrices?[company.symbol.uppercased()] {
-                            StockItem(company: company, intradayPrices: intradayPrices.nestedIntradayPrices, orientation: .horizontal)
-                        } else {
-                            StockItem(company: company, intradayPrices: nil, orientation: .horizontal)
-                        }
+                    List(Array(list.keys.sorted()), id: \.self) { companySymbol in
+                        StockItem(symbol: companySymbol, company: list[companySymbol]!, intradayPrices: intradayPrices?[companySymbol], orientation: .horizontal)
                     }
                 }
                 
                 if let latestCurrencies = latestCurrencies {
-                    List(Array(latestCurrencies.keys), id: \.self) { currencySymbol in
+                    List(Array(latestCurrencies.keys.sorted()), id: \.self) { currencySymbol in
                         CurrencyListItem(currencySymbol: currencySymbol, currency: latestCurrencies[currencySymbol]!)
                     }
                 }

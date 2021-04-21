@@ -16,7 +16,6 @@
 		950D0E302618B34600D17AD7 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E2F2618B34600D17AD7 /* BlurBackground.swift */; };
 		950D0E332618B44800D17AD7 /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E322618B44800D17AD7 /* HudManager.swift */; };
 		950D0E362618B61000D17AD7 /* BackgroundShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E352618B61000D17AD7 /* BackgroundShadow.swift */; };
-		95115E982625D15900BDC0F8 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95115E972625D15900BDC0F8 /* CurrencyModel.swift */; };
 		951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951490542610BD2B00BDEEB5 /* WelcomeView.swift */; };
 		951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E62613A2B6007C0F36 /* TradingDates.swift */; };
 		951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E92613A37C007C0F36 /* TradingDatesItem.swift */; };
@@ -32,10 +31,6 @@
 		9550444626111EE5000E0BCB /* SectorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444526111EE5000E0BCB /* SectorItem.swift */; };
 		9550444926111FC9000E0BCB /* StockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444826111FC9000E0BCB /* StockRow.swift */; };
 		9550444C26111FED000E0BCB /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444B26111FED000E0BCB /* StockItem.swift */; };
-		955E732D26235561005652FF /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E732C26235561005652FF /* QuoteModel.swift */; };
-		955E7330262355FD005652FF /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E732F262355FD005652FF /* SectorPerformanceModel.swift */; };
-		955E733326235633005652FF /* IntradayPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733226235633005652FF /* IntradayPricesModel.swift */; };
-		955E73362623565F005652FF /* TradingDatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E73352623565F005652FF /* TradingDatesModel.swift */; };
 		955E73392623568F005652FF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E73382623568F005652FF /* Home.swift */; };
 		955E733C262356F3005652FF /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
@@ -47,6 +42,11 @@
 		95721DB4262787EF00EC527B /* ExtensiveList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95721DB3262787EF00EC527B /* ExtensiveList.swift */; };
 		95721DB826278EC100EC527B /* CurrencyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95721DB726278EC100EC527B /* CurrencyListItem.swift */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
+		95A07F5D26305A8F009865AA /* IntradayPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F5C26305A8F009865AA /* IntradayPricesModel.swift */; };
+		95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
+		95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
+		95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */; };
+		95A07F7626305AE3009865AA /* TradingDatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7526305AE3009865AA /* TradingDatesModel.swift */; };
 		95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5186926185AAB0002D27C /* GenericRequest.swift */; };
 		95A5188626186F590002D27C /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5188526186F590002D27C /* PriceView.swift */; };
 		95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7C065261639DF003E2EC1 /* SearchView.swift */; };
@@ -92,7 +92,6 @@
 		950D0E2F2618B34600D17AD7 /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
 		950D0E322618B44800D17AD7 /* HudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
 		950D0E352618B61000D17AD7 /* BackgroundShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundShadow.swift; sourceTree = "<group>"; };
-		95115E972625D15900BDC0F8 /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		951490542610BD2B00BDEEB5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		951566E62613A2B6007C0F36 /* TradingDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDates.swift; sourceTree = "<group>"; };
 		951566E92613A37C007C0F36 /* TradingDatesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesItem.swift; sourceTree = "<group>"; };
@@ -107,10 +106,6 @@
 		9550444526111EE5000E0BCB /* SectorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorItem.swift; sourceTree = "<group>"; };
 		9550444826111FC9000E0BCB /* StockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRow.swift; sourceTree = "<group>"; };
 		9550444B26111FED000E0BCB /* StockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItem.swift; sourceTree = "<group>"; };
-		955E732C26235561005652FF /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
-		955E732F262355FD005652FF /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
-		955E733226235633005652FF /* IntradayPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayPricesModel.swift; sourceTree = "<group>"; };
-		955E73352623565F005652FF /* TradingDatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesModel.swift; sourceTree = "<group>"; };
 		955E73382623568F005652FF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		955E733B262356F3005652FF /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +120,11 @@
 		95721DB726278EC100EC527B /* CurrencyListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListItem.swift; sourceTree = "<group>"; };
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		95A07F5C26305A8F009865AA /* IntradayPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayPricesModel.swift; sourceTree = "<group>"; };
+		95A07F6126305A9B009865AA /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
+		95A07F6B26305AC6009865AA /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
+		95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
+		95A07F7526305AE3009865AA /* TradingDatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesModel.swift; sourceTree = "<group>"; };
 		95A5186926185AAB0002D27C /* GenericRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRequest.swift; sourceTree = "<group>"; };
 		95A5188526186F590002D27C /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		95A7C065261639DF003E2EC1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -232,11 +232,11 @@
 			children = (
 				954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */,
 				954D7EA6260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift */,
-				955E732C26235561005652FF /* QuoteModel.swift */,
-				955E732F262355FD005652FF /* SectorPerformanceModel.swift */,
-				955E733226235633005652FF /* IntradayPricesModel.swift */,
-				955E73352623565F005652FF /* TradingDatesModel.swift */,
-				95115E972625D15900BDC0F8 /* CurrencyModel.swift */,
+				95A07F5C26305A8F009865AA /* IntradayPricesModel.swift */,
+				95A07F6126305A9B009865AA /* CurrencyModel.swift */,
+				95A07F6B26305AC6009865AA /* QuoteModel.swift */,
+				95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */,
+				95A07F7526305AE3009865AA /* TradingDatesModel.swift */,
 			);
 			path = "Global Models";
 			sourceTree = "<group>";
@@ -548,7 +548,6 @@
 				9550444926111FC9000E0BCB /* StockRow.swift in Sources */,
 				9550444326111E7A000E0BCB /* SectorRow.swift in Sources */,
 				95721DB826278EC100EC527B /* CurrencyListItem.swift in Sources */,
-				955E7330262355FD005652FF /* SectorPerformanceModel.swift in Sources */,
 				950D0E302618B34600D17AD7 /* BlurBackground.swift in Sources */,
 				95ECCA60261216D500A67EFA /* LineView.swift in Sources */,
 				9550443A26111B2B000E0BCB /* HomeView.swift in Sources */,
@@ -566,25 +565,26 @@
 				9550444C26111FED000E0BCB /* StockItem.swift in Sources */,
 				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
 				952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */,
+				95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */,
 				950D0E362618B61000D17AD7 /* BackgroundShadow.swift in Sources */,
-				955E732D26235561005652FF /* QuoteModel.swift in Sources */,
+				95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */,
 				9529947E2629CA3E005F0AB0 /* Search.swift in Sources */,
 				950D0E292618AEC800D17AD7 /* SearchedCompanyItem.swift in Sources */,
 				955E733C262356F3005652FF /* HomeResponse.swift in Sources */,
-				955E733326235633005652FF /* IntradayPricesModel.swift in Sources */,
 				951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */,
 				951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */,
 				95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */,
+				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
 				9550444626111EE5000E0BCB /* SectorItem.swift in Sources */,
 				954D7EA7260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */,
 				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
-				95115E982625D15900BDC0F8 /* CurrencyModel.swift in Sources */,
 				95721DB4262787EF00EC527B /* ExtensiveList.swift in Sources */,
 				95C8C0DB262A36990082D1D9 /* Profile.swift in Sources */,
-				955E73362623565F005652FF /* TradingDatesModel.swift in Sources */,
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
+				95A07F5D26305A8F009865AA /* IntradayPricesModel.swift in Sources */,
+				95A07F7626305AE3009865AA /* TradingDatesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

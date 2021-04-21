@@ -8,26 +8,24 @@
 import SwiftUI
 
 struct HomeResponse: Codable {
-    var lists: [String: [QuoteModel]]?  // String is the list type; gainers, losers ...
-    var sectorPerformance: [SectorPerformanceModel]?
-    var tradingDates: [TradingDatesModel]?
-    var intradayPrices: [String: NestedIntradayPricesModel]?  // String is each company symbol
-    var latestCurrencies: [String: CurrencyModel]?
-    
-    private enum CodingKeys : String, CodingKey {
+  var intradayPrices: [String: [IntradayPriceModel]]?
+  var latestCurrencies: [String: CurrencyModel]?
+  var lists: ListsModel?
+  var sectorPerformance: [SectorPerformanceModel]?
+  var tradingDates: [TradingDatesModel]?
+  
+  private enum CodingKeys : String, CodingKey {
+        case intradayPrices = "intraday_prices"
+        case latestCurrencies = "latest_currencies"
         case lists
         case sectorPerformance = "sector_performance"
         case tradingDates = "trading_dates"
-        case intradayPrices = "intraday_prices"
-        case latestCurrencies = "latest_currencies"
     }
 }
 
 
-struct NestedIntradayPricesModel: Codable {
-    var nestedIntradayPrices: [IntradayPricesModel]
-    
-    private enum CodingKeys : String, CodingKey {
-        case nestedIntradayPrices = "intradayprices"
-    }
+struct ListsModel: Codable {
+  var mostactive: [String: QuoteModel]?
+  var gainers: [String: QuoteModel]?
+  var losers: [String: QuoteModel]?
 }

@@ -12,15 +12,16 @@ enum OrientationView {
 }
 
 struct StockItem: View {
+    var symbol: String
     var company: QuoteModel
-    var intradayPrices: [IntradayPricesModel]?
+    var intradayPrices: [IntradayPriceModel]?
     var orientation: OrientationView
     
     var body: some View {
         if orientation == .vertical {
-            return AnyView(VerticalStockRow(company: company, intradayPrices: intradayPrices))
+            return AnyView(VerticalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices))
         } else {
-            return AnyView(HorizontalStockRow(company: company, intradayPrices: intradayPrices))
+            return AnyView(HorizontalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices))
         }
     }
 }
@@ -28,16 +29,17 @@ struct StockItem: View {
 struct StockItem_Previews: PreviewProvider {
     static var previews: some View {
         StockItem(
-            company: QuoteModel(companyName: "apple inc", symbol: "aapl", latestPrice: 130.3, changePercent: 0.03),
-            intradayPrices: [IntradayPricesModel(open: 130.3), IntradayPricesModel(open: 132.3)], orientation: .horizontal
+            symbol: "AAPL", company: QuoteModel(changePercent: 0.03, companyName: "apple inc", latestPrice: 130.3),
+            intradayPrices: [IntradayPriceModel(open: 130.3), IntradayPriceModel(open: 132.3)], orientation: .horizontal
         )
     }
 }
 
 
 struct VerticalStockRow: View {
+    var symbol: String
     var company: QuoteModel
-    var intradayPrices: [IntradayPricesModel]?
+    var intradayPrices: [IntradayPriceModel]?
     
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
@@ -47,7 +49,7 @@ struct VerticalStockRow: View {
             .overlay(
                 VStack(alignment: .leading) {
                     Group {
-                        Text(company.symbol.uppercased())
+                        Text(symbol.uppercased())
                             .fontWeight(.semibold)
                             .padding(.top)
                         
@@ -80,13 +82,14 @@ struct VerticalStockRow: View {
 
 
 struct HorizontalStockRow: View {
+    var symbol: String
     var company: QuoteModel
-    var intradayPrices: [IntradayPricesModel]?
+    var intradayPrices: [IntradayPriceModel]?
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(company.symbol.uppercased())
+                Text(symbol.uppercased())
                     .fontWeight(.semibold)
                 
                 Text(company.companyName.capitalized)

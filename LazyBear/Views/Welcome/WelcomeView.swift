@@ -16,7 +16,7 @@ struct WelcomeView: View {
                 VStack {
                     Image("default")
                         .resizable()
-                        .frame(width: proxy.size.width*0.3, height: proxy.size.width*0.3)
+                        .frame(width: proxy.size.width*0.25, height: proxy.size.width*0.25)
                         .cornerRadius(25)
                         .shadow(color: Color.black.opacity(0.3), radius: 10)
                         .padding(.vertical)
