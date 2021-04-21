@@ -7,21 +7,11 @@
 
 import SwiftUI
 
-//struct ProfileResponse: Codable {
-//    var intradayPrices: [String: NestedIntradayPricesModel]?  // String is each company symbol
-//    var quotes: [String: NestedQuoteModel]?  // String is each company symbol
-//    
-//    private enum CodingKeys : String, CodingKey {
-//        case intradayPrices = "intraday_prices"
-//        case quotes
-//    }
-//}
-//
-//
-//struct NestedQuoteModel: Codable {
-//    var nestedQuoteModel: QuoteModel
-//    
-//    private enum CodingKeys : String, CodingKey {
-//        case nestedQuoteModel = "quote"
-//    }
-//}
+struct ProfileResponse: Codable {
+  var intradayPrices: [String: [IntradayPriceModel]]?
+  var quotes: [String: QuoteModel]?
+  
+  private enum CodingKeys : String, CodingKey {
+        case intradayPrices = "intraday_prices"
+    }
+}
