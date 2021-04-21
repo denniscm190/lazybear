@@ -6,22 +6,55 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ProfileView: View {
     @ObservedObject var profile = Profile()
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
+    var watchlistCompanies: FetchedResults<WatchlistCompany>
 
     var body: some View {
-        NavigationView {
-            List {
-                
-
+        if profile.showView {
+            NavigationView {
+                List {
+                    // Take all the different watchlist created
+                    let watchlists = Set(watchlistCompanies.map { $0.watchlist })  // Set -> avoid duplicates names
+                    ForEach(Array(watchlists), id: \.self) { watchlist in
+                        
+                        // Get all the symbols of this watchlist
+                        let symbols = watchlistCompanies.filter({ $0.watchlist == watchlist }).map { $0.symbol }
+                        
+                        if let companies = profile.data.quotes {
+                            let filteredCompanies = companies.filter({ symbols.contains($0.key) })
+                            StockRow(listName: watchlist, list: filteredCompanies, intradayPrices: profile.data.intradayPrices)
+                                .listRowInsets(EdgeInsets())
+                        }
+                    }
+                }
+                .navigationTitle("My profile")
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle("My profile")
-            .navigationBarTitleDisplayMode(.inline)
-            .onAppear {
-                profile.request("https://api.lazybear.app/profile/type=init/symbols=aapl,fb")
+        } else {
+            ProgressView()
+                .onAppear { prepareUrl() }
+        }
+    }
+    
+    private func prepareUrl() {
+        let symbols = watchlistCompanies.map { $0.symbol }  // Get symbols in watchlists
+        var url = "https://api.lazybear.app/profile/type=init/symbols="
+        print(url)
+
+        var counter = 0
+        for symbol in symbols {
+            counter += 1
+            if counter == 1 {
+                url += symbol
+            } else {
+                url += ",\(symbol)"
             }
         }
+        profile.request(url)
     }
 }
 

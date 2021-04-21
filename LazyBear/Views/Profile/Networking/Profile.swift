@@ -16,14 +16,16 @@ class Profile: ObservableObject {
     func request(_ url: String) {
         genericRequest(url: url, model: ProfileResponse.self) { response in
             self.streamingRequests += 1
-            
+
             // If is the first request -> init()
             if self.streamingRequests == 1 {
                 self.data = response
             } else {
-                // If not, request streaming data (without intradayPrices)
+                 // If not, request streaming data (without intradayPrices)
                 self.data.quotes = response.quotes
             }
+
+            self.showView = true
         }
     }
 }

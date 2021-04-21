@@ -11,7 +11,8 @@ struct ProfileResponse: Codable {
   var intradayPrices: [String: [IntradayPriceModel]]?
   var quotes: [String: QuoteModel]?
   
-  private enum CodingKeys : String, CodingKey {
+    private enum CodingKeys : String, CodingKey {
         case intradayPrices = "intraday_prices"
+        case quotes
     }
 }

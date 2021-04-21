@@ -9,26 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showWelcome = false
+    @State var selectedView = 1
     @EnvironmentObject var hudManager: HudManager
     
     var body: some View {
         ZStack {
-            TabView {
+            TabView(selection: $selectedView) {
                 HomeView()
                     .tabItem {
                         Image(systemName: "house")
                         Text("Home")
                     }
+                    .tag(1)  // Do not remove tags. It causes an odd behaviour when showView is activated
                 SearchView()
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
                     }
+                    .tag(2)
                 ProfileView()
                     .tabItem {
                         Image(systemName: "person")
                         Text("Profile")
                     }
+                    .tag(3)
 //                Text("The Last Tab")
 //                    .tabItem {
 //                        Image(systemName: "4.square.fill")
