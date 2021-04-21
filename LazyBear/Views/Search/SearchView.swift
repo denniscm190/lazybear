@@ -43,7 +43,7 @@ struct SearchView: View {
                 if !searchedText.isEmpty {
                     // Encode string with spaces
                     let encodedSearchedText = searchedText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-                    search.request("https://api.lazybear.app/search/\(encodedSearchedText ?? "")")
+                    search.request("https://api.lazybear.app/search/text=\(encodedSearchedText ?? "")")
                 } else {
                     search.showSearchList = false
                 }
