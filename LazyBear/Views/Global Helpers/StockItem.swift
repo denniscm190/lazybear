@@ -16,12 +16,13 @@ struct StockItem: View {
     var company: QuoteModel
     var intradayPrices: [IntradayPriceModel]?
     var orientation: OrientationView
+    var hidePriceView: Bool?
     
     var body: some View {
         if orientation == .vertical {
             return AnyView(VerticalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices))
         } else {
-            return AnyView(HorizontalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices))
+            return AnyView(HorizontalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices, hidePriceView: hidePriceView ?? false))
         }
     }
 }
@@ -85,6 +86,7 @@ struct HorizontalStockRow: View {
     var symbol: String
     var company: QuoteModel
     var intradayPrices: [IntradayPriceModel]?
+    var hidePriceView: Bool
     
     var body: some View {
         HStack {
@@ -100,17 +102,19 @@ struct HorizontalStockRow: View {
             }
             
             Spacer()
-            if let prices = intradayPrices?.compactMap { $0.open } {
-                LineView(data: prices)
-                    .foregroundColor(company.changePercent < 0 ? .red: .green)
-                    .frame(width: 80)
-                    .padding(.vertical, 10)
-                    .padding(.leading)
+            if !hidePriceView {
+                if let prices = intradayPrices?.compactMap { $0.open } {
+                    LineView(data: prices)
+                        .foregroundColor(company.changePercent < 0 ? .red: .green)
+                        .frame(width: 80)
+                        .padding(.vertical, 10)
+                        .padding(.leading)
+                }
+                
+                PriceView(latestPrice: company.latestPrice, changePercent: company.changePercent, align: .trailing)
+                    // Center PriceView with the other rows
+                    .frame(minWidth: 80, alignment: .trailing)
             }
-            
-            PriceView(latestPrice: company.latestPrice, changePercent: company.changePercent, align: .trailing)
-                // Avoid moving LineView along the HStack when numbers increases
-                .frame(minWidth: 80, alignment: .trailing)
         }
         .padding(5)
     }

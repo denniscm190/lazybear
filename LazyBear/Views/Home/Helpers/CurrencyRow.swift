@@ -43,7 +43,7 @@ struct CurrencyRow: View {
             }
         }
         .sheet(isPresented: $showExtensiveList) {
-            ExtensiveList(listName: "Currencies", latestCurrencies: latestCurrencies)
+            ExtensiveList(listName: "Currencies", latestCurrencies: latestCurrencies, addOnDelete: false)
         }
     }
 }

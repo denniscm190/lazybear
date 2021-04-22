@@ -33,15 +33,15 @@ struct HomeView: View {
                     
                     if let lists = home.data.lists {
                         if let gainers = lists.gainers {
-                            StockRow(listName: "Gainers", list: gainers, intradayPrices: home.data.intradayPrices)
+                            StockRow(listName: "Gainers", list: gainers, intradayPrices: home.data.intradayPrices, addOnDelete: false)
                                 .listRowInsets(EdgeInsets())
                         }
                         if let losers = lists.losers {
-                            StockRow(listName: "Losers", list: losers, intradayPrices: home.data.intradayPrices)
+                            StockRow(listName: "Losers", list: losers, intradayPrices: home.data.intradayPrices, addOnDelete: false)
                                 .listRowInsets(EdgeInsets())
                         }
                         if let mostActive = lists.mostactive {
-                            StockRow(listName: "Most active", list: mostActive, intradayPrices: home.data.intradayPrices)
+                            StockRow(listName: "Most active", list: mostActive, intradayPrices: home.data.intradayPrices, addOnDelete: false)
                                 .listRowInsets(EdgeInsets())
                         }
                     }

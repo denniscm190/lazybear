@@ -26,7 +26,7 @@ struct ProfileView: View {
                         
                         if let companies = profile.data.quotes {
                             let filteredCompanies = companies.filter({ symbols.contains($0.key) })
-                            StockRow(listName: watchlist, list: filteredCompanies, intradayPrices: profile.data.intradayPrices)
+                            StockRow(listName: watchlist, list: filteredCompanies, intradayPrices: profile.data.intradayPrices, addOnDelete: true)
                                 .listRowInsets(EdgeInsets())
                         }
                     }
@@ -43,7 +43,6 @@ struct ProfileView: View {
     private func prepareUrl() {
         let symbols = watchlistCompanies.map { $0.symbol }  // Get symbols in watchlists
         var url = "https://api.lazybear.app/profile/type=init/symbols="
-        print(url)
 
         var counter = 0
         for symbol in symbols {

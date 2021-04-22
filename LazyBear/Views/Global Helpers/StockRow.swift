@@ -12,6 +12,7 @@ struct StockRow: View {
     var listName: String
     var list: [String: QuoteModel]
     var intradayPrices: [String: [IntradayPriceModel]]?
+    var addOnDelete: Bool
     
     @State private var showExtensiveList = false
     
@@ -48,7 +49,7 @@ struct StockRow: View {
         }
         .padding(.bottom)
         .sheet(isPresented: $showExtensiveList) {
-            ExtensiveList(listName: listName, list: list, intradayPrices: intradayPrices, latestCurrencies: nil)
+            ExtensiveList(listName: listName, list: list, intradayPrices: intradayPrices, latestCurrencies: nil, addOnDelete: addOnDelete)
         }
     }
 }
@@ -59,7 +60,7 @@ struct StockRectangleRow_Previews: PreviewProvider {
         StockRow(
             listName: "Gainers",
             list: ["AAPL": QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 130.3)],
-            intradayPrices: ["AAPL": [IntradayPriceModel(open: 130.2)]]
+            intradayPrices: ["AAPL": [IntradayPriceModel(open: 130.2)]], addOnDelete: false
         )
     }
 }
