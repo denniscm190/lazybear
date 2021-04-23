@@ -8,5 +8,5 @@
 import SwiftUI
 
 class HudManager: ObservableObject {
-    @Published var showSearchHelper = false
+
 }

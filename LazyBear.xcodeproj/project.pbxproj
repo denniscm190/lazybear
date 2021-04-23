@@ -12,10 +12,7 @@
 		950C57232629EFC200F234FE /* LazyBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57222629EFC200F234FE /* LazyBearUITests.swift */; };
 		950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E182618AA4900D17AD7 /* CompanyList.swift */; };
 		950D0E292618AEC800D17AD7 /* SearchedCompanyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */; };
-		950D0E2D2618B2B900D17AD7 /* HelpSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E2C2618B2B900D17AD7 /* HelpSheet.swift */; };
-		950D0E302618B34600D17AD7 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E2F2618B34600D17AD7 /* BlurBackground.swift */; };
 		950D0E332618B44800D17AD7 /* HudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E322618B44800D17AD7 /* HudManager.swift */; };
-		950D0E362618B61000D17AD7 /* BackgroundShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E352618B61000D17AD7 /* BackgroundShadow.swift */; };
 		951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951490542610BD2B00BDEEB5 /* WelcomeView.swift */; };
 		951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E62613A2B6007C0F36 /* TradingDates.swift */; };
 		951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E92613A37C007C0F36 /* TradingDatesItem.swift */; };
@@ -88,10 +85,7 @@
 		950C572D2629F03A00F234FE /* LazyBear.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = LazyBear.xctestplan; path = LazyBear.xcodeproj/LazyBear.xctestplan; sourceTree = "<group>"; };
 		950D0E182618AA4900D17AD7 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
 		950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedCompanyItem.swift; sourceTree = "<group>"; };
-		950D0E2C2618B2B900D17AD7 /* HelpSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpSheet.swift; sourceTree = "<group>"; };
-		950D0E2F2618B34600D17AD7 /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
 		950D0E322618B44800D17AD7 /* HudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudManager.swift; sourceTree = "<group>"; };
-		950D0E352618B61000D17AD7 /* BackgroundShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundShadow.swift; sourceTree = "<group>"; };
 		951490542610BD2B00BDEEB5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		951566E62613A2B6007C0F36 /* TradingDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDates.swift; sourceTree = "<group>"; };
 		951566E92613A37C007C0F36 /* TradingDatesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesItem.swift; sourceTree = "<group>"; };
@@ -187,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */,
-				950D0E2C2618B2B900D17AD7 /* HelpSheet.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -246,7 +239,6 @@
 			children = (
 				9550443926111B2B000E0BCB /* HomeView.swift */,
 				951566E62613A2B6007C0F36 /* TradingDates.swift */,
-				95721DB3262787EF00EC527B /* ExtensiveList.swift */,
 				954D7EAF260BBBD500A13C50 /* Helpers */,
 				95893DC72613C410003698C5 /* Networking */,
 			);
@@ -332,10 +324,9 @@
 				95ECCA5F261216D500A67EFA /* LineView.swift */,
 				95ECCA5C2612169200A67EFA /* LineShape.swift */,
 				95A5188526186F590002D27C /* PriceView.swift */,
-				950D0E2F2618B34600D17AD7 /* BlurBackground.swift */,
-				950D0E352618B61000D17AD7 /* BackgroundShadow.swift */,
 				9550444826111FC9000E0BCB /* StockRow.swift */,
 				9550444B26111FED000E0BCB /* StockItem.swift */,
+				95721DB3262787EF00EC527B /* ExtensiveList.swift */,
 			);
 			path = "Global Helpers";
 			sourceTree = "<group>";
@@ -548,7 +539,6 @@
 				9550444926111FC9000E0BCB /* StockRow.swift in Sources */,
 				9550444326111E7A000E0BCB /* SectorRow.swift in Sources */,
 				95721DB826278EC100EC527B /* CurrencyListItem.swift in Sources */,
-				950D0E302618B34600D17AD7 /* BlurBackground.swift in Sources */,
 				95ECCA60261216D500A67EFA /* LineView.swift in Sources */,
 				9550443A26111B2B000E0BCB /* HomeView.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
@@ -556,7 +546,6 @@
 				954D7EA8260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */,
 				950D0E332618B44800D17AD7 /* HudManager.swift in Sources */,
-				950D0E2D2618B2B900D17AD7 /* HelpSheet.swift in Sources */,
 				955E73392623568F005652FF /* Home.swift in Sources */,
 				95721DA6262761E700EC527B /* CurrencyRow.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
@@ -566,7 +555,6 @@
 				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
 				952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */,
 				95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */,
-				950D0E362618B61000D17AD7 /* BackgroundShadow.swift in Sources */,
 				95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */,
 				9529947E2629CA3E005F0AB0 /* Search.swift in Sources */,
 				950D0E292618AEC800D17AD7 /* SearchedCompanyItem.swift in Sources */,

@@ -11,7 +11,6 @@ import SwiftlySearch
 struct SearchView: View {
     @ObservedObject var search = Search()
     @State private var searchedText = String()
-    @EnvironmentObject var hudManager: HudManager
     
     var body: some View {
         NavigationView {
@@ -48,13 +47,6 @@ struct SearchView: View {
                     search.showSearchList = false
                 }
             })
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: { self.hudManager.showSearchHelper = true }) {
-                        Image(systemName: "questionmark.circle")
-                    }
-                }
-            }
         }
     }
 }
