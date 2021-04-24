@@ -37,6 +37,13 @@ struct ProfileView: View {
                 }
                 .navigationTitle("My profile")
                 .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {}) {
+                            Image(systemName: "plus")
+                        }
+                    }
+                }
             }
         } else {
             ProgressView()
@@ -45,19 +52,23 @@ struct ProfileView: View {
     }
     
     private func prepareUrl() {
-        let symbols = watchlistCompanies.map { $0.symbol }  // Get symbols in watchlists
-        var url = "https://api.lazybear.app/profile/type=init/symbols="
+        if watchlistCompanies.isEmpty {
+            profile.showView = true
+        } else {
+            let symbols = watchlistCompanies.map { $0.symbol }  // Get symbols in watchlists
+            var url = "https://api.lazybear.app/profile/type=init/symbols="
 
-        var counter = 0
-        for symbol in symbols {
-            counter += 1
-            if counter == 1 {
-                url += symbol
-            } else {
-                url += ",\(symbol)"
+            var counter = 0
+            for symbol in symbols {
+                counter += 1
+                if counter == 1 {
+                    url += symbol
+                } else {
+                    url += ",\(symbol)"
+                }
             }
+            profile.request(url)
         }
-        profile.request(url)
     }
 }
 

@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct RenameSheet: View {
-    @State private var name: String = String()
-    @Binding var showAction: Bool
+    var listName: String
+    
+    @State private var newListName: String = String()
+    @Binding var showRenameAction: Bool
+    @Binding var presentationMode: PresentationMode
+    
+    @Environment(\.managedObjectContext) private var moc
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
+    var watchlistCompany: FetchedResults<WatchlistCompany>
     
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
@@ -24,7 +31,7 @@ struct RenameSheet: View {
                         .font(.callout)
                     
                     Spacer()
-                    TextField("Technologies, banks, ...", text: $name)
+                    TextField("Technologies, banks...", text: $newListName)
                         .padding(8)
                         .background(
                             Color(.systemBackground)
@@ -37,7 +44,7 @@ struct RenameSheet: View {
                         Spacer()
                         Button(action: {
                             UIApplication.shared.endEditing()
-                            self.showAction = false
+                            self.showRenameAction = false
                         }) {
                             Text("Cancel")
                                 .fontWeight(.semibold)
@@ -49,7 +56,7 @@ struct RenameSheet: View {
                         Divider()
                             
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: { renameList(newListName) }) {
                             Text("Done")
                         }
                         Spacer()
@@ -63,6 +70,22 @@ struct RenameSheet: View {
                .clipShape(RoundedRectangle(cornerRadius: 20))
         )
     }
+    
+    private func renameList(_ newListName: String) {
+        let selectedWatchlist = watchlistCompany.filter({ $0.watchlist == listName })
+        for company in selectedWatchlist {
+            company.watchlist = newListName
+        }
+        do {
+            try moc.save()
+            print("List updated")
+            UIApplication.shared.endEditing()  // Dismiss Keyboard
+            self.showRenameAction = false  // Dismiss action rename sheet
+            self.$presentationMode.wrappedValue.dismiss()  // Dismiss Modal View
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
 }
 // Dismiss Keyboard
 extension UIApplication {
@@ -72,7 +95,9 @@ extension UIApplication {
 }
 
 struct RenameSheet_Previews: PreviewProvider {
+    @Environment(\.presentationMode) static var presentationMode
+    
     static var previews: some View {
-        RenameSheet(showAction: .constant(true))
+        RenameSheet(listName: "MyWatchlist", showRenameAction: .constant(true), presentationMode: presentationMode)
     }
 }

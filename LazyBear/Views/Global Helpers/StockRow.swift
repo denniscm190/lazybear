@@ -15,6 +15,7 @@ struct StockRow: View {
     var addOnDelete: Bool
     
     @State private var showExtensiveList = false
+    @Environment(\.managedObjectContext) private var moc
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -50,6 +51,8 @@ struct StockRow: View {
         .padding(.bottom)
         .sheet(isPresented: $showExtensiveList) {
             ExtensiveList(listName: listName, list: list, intradayPrices: intradayPrices, latestCurrencies: nil, addOnDelete: addOnDelete)
+                .environment(\.managedObjectContext, self.moc)
+            
         }
     }
 }

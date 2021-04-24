@@ -14,7 +14,11 @@ struct ExtensiveList: View {
     var latestCurrencies: [String: CurrencyModel]?
     var addOnDelete: Bool
     
-    @Environment(\.presentationMode) private var extensiveListPresent
+    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.managedObjectContext) private var moc
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
+    var watchlistCompany: FetchedResults<WatchlistCompany>
+    
     @State private var isEditMode: EditMode = .inactive
     @State private var showRenameAction = false
     @State private var showDeleteAlert = false
@@ -34,7 +38,7 @@ struct ExtensiveList: View {
                                     )
                                 
                             }
-                            .onDelete(perform: addOnDelete ? removeCompany: nil)
+                            .onDelete(perform: addOnDelete ? deleteCompany: nil)
                         }
                     }
                     
@@ -54,7 +58,7 @@ struct ExtensiveList: View {
                     .onTapGesture { showRenameAction = false }
                 
                 // Show rename Action Sheet
-                RenameSheet(showAction: $showRenameAction)
+                RenameSheet(listName: listName, showRenameAction: $showRenameAction, presentationMode: presentationMode)
                     .offset(y: showRenameAction ? 0: 700)
                     .animation(.easeInOut)
             }
@@ -63,9 +67,7 @@ struct ExtensiveList: View {
                 Alert(
                     title: Text("Are you sure you want to delete this list?"),
                     message: Text("This action can't be undo"),
-                    primaryButton: .destructive(Text("Delete")) {
-                        print("Deleting...")
-                    },
+                    primaryButton: .destructive(Text("Delete")) { deleteList() },
                     secondaryButton: .cancel()
                 )
             }
@@ -76,7 +78,7 @@ struct ExtensiveList: View {
                     if addOnDelete {
                         EditButton()
                     } else {
-                        Button(action: { extensiveListPresent.wrappedValue.dismiss() }) {
+                        Button(action: { presentationMode.wrappedValue.dismiss() }) {
                             Image(systemName: "multiply")
                                 .imageScale(.large)
                         }
@@ -111,8 +113,34 @@ struct ExtensiveList: View {
             .environment(\.editMode, self.$isEditMode)  // Always after Toolbar
         }
     }
-    private func removeCompany(at offsets: IndexSet) {
-        print("Hello")
+    
+    // Delete company from watchlist
+    private func deleteCompany(at offsets: IndexSet) {
+        for index in offsets {
+            let company = watchlistCompany[index]
+            moc.delete(company)
+        }
+        do {
+            try moc.save()
+            print("Company deleted")
+        } catch {
+            // Error
+        }
+    }
+    
+    // Remove entire watchlist
+    private func deleteList() {
+        let selectedWatchlist = watchlistCompany.filter({ $0.watchlist == listName })
+        for company in selectedWatchlist {
+            moc.delete(company)
+        }
+        do {
+            try moc.save()
+            print("List deleted")
+            presentationMode.wrappedValue.dismiss()  // Dismiss view
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 }
 
