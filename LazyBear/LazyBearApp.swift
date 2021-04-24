@@ -10,14 +10,11 @@ import SwiftUI
 @main
 struct LazyBearApp: App {
     let persistenceController = PersistenceController.shared  // Core Data init
-    
-    @ObservedObject var hudManager = HudManager()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
-                .environmentObject(hudManager)
         }
     }
 }
