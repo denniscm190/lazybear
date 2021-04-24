@@ -26,8 +26,12 @@ struct ProfileView: View {
                         
                         if let companies = profile.data.quotes {
                             let filteredCompanies = companies.filter({ symbols.contains($0.key) })
-                            StockRow(listName: watchlist, list: filteredCompanies, intradayPrices: profile.data.intradayPrices, addOnDelete: true)
-                                .listRowInsets(EdgeInsets())
+                            StockRow(listName: watchlist,
+                                     list: filteredCompanies,
+                                     intradayPrices: profile.data.intradayPrices,
+                                     addOnDelete: true
+                            )
+                            .listRowInsets(EdgeInsets())
                         }
                     }
                 }
