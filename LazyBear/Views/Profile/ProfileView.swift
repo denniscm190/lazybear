@@ -12,22 +12,17 @@ struct ProfileView: View {
     @ObservedObject var profile = Profile()
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
-    
-    // Refresh view when watchlistCompanies change
-    @State private var refreshing = false
-    private var didSave =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
 
     var body: some View {
         if profile.showView {
             NavigationView {
+                // Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
                 List {
-                    // Take all the different watchlist created
                     let watchlists = Set(watchlistCompanies.map { $0.watchlist })  // Set -> avoid duplicates names
+                    
                     ForEach(Array(watchlists), id: \.self) { watchlist in
-                        
-                        // Get all the symbols of this watchlist
                         let symbols = watchlistCompanies.filter({ $0.watchlist == watchlist }).map { $0.symbol }
-                        
+
                         if let companies = profile.data.quotes {
                             let filteredCompanies = companies.filter({ symbols.contains($0.key) })
                             StockRow(listName: watchlist,
@@ -35,12 +30,9 @@ struct ProfileView: View {
                                      intradayPrices: profile.data.intradayPrices,
                                      addOnDelete: true
                             )
+                            .onAppear { updateRows(symbols.count, filteredCompanies.count) }
                             .listRowInsets(EdgeInsets())
                         }
-                    }
-                    // The listener for refresh the view
-                    .onReceive(self.didSave) { _ in
-                        self.refreshing.toggle()
                     }
                 }
                 .navigationTitle("My profile")
@@ -55,11 +47,11 @@ struct ProfileView: View {
             }
         } else {
             ProgressView()
-                .onAppear { prepareUrl() }
+                .onAppear { prepareUrl(isInitRequest: true) }
         }
     }
     
-    private func prepareUrl() {
+    private func prepareUrl(isInitRequest: Bool) {
         if watchlistCompanies.isEmpty {
             profile.showView = true
         } else {
@@ -75,7 +67,17 @@ struct ProfileView: View {
                     url += ",\(symbol)"
                 }
             }
-            profile.request(url)
+            profile.request(url, isInitRequest: isInitRequest)
+        }
+    }
+    
+    /*
+     If Core Data changes, companies is not updated because the API request is not called ->
+     Check if symbols.count (Core Data) is equal to filteredCompanies -> if not -> call API
+     */
+    private func updateRows(_ numberOfCoreDataCompanies: Int, _ numberOfApiRequestedCompanies: Int) {
+        if numberOfCoreDataCompanies != numberOfApiRequestedCompanies {
+            prepareUrl(isInitRequest: true)  // Call API
         }
     }
 }

@@ -50,7 +50,7 @@ struct HomeView: View {
                             .listRowInsets(EdgeInsets())
                     }
                 }
-                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/type=streaming") }
+                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/type=streaming", isInitRequest: false) }
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
                 .navigationBarTitleDisplayMode(.inline)
@@ -71,7 +71,7 @@ struct HomeView: View {
         } else {
             ProgressView()
                 .onAppear {
-                    home.request("https://api.lazybear.app/home/type=init")
+                    home.request("https://api.lazybear.app/home/type=init", isInitRequest: true)
                     
                     // Restart timer
                     self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()

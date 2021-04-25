@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+/*
+ DELETE IN PRODUCTION
+ */
+
 struct WatchlistManagerTest: View {
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
@@ -15,6 +19,7 @@ struct WatchlistManagerTest: View {
     var body: some View {
         VStack {
             Button("Add company", action: addCompany)
+            Button("Reset Entity", action: resetCoreDataEntity)
         }
     }
     
@@ -35,7 +40,7 @@ struct WatchlistManagerTest: View {
         let watchlistCompany = WatchlistCompany(context: moc)
         watchlistCompany.symbol = "TSLA"
         watchlistCompany.name = "Tesla Inc"
-        watchlistCompany.watchlist = "Watchlist2"
+        watchlistCompany.watchlist = "My portfolio"
         do {
             try moc.save()
             print("Company saved")
@@ -56,6 +61,18 @@ struct WatchlistManagerTest: View {
 //            // Error
 //        }
 //    }
+    
+    private func resetCoreDataEntity() {
+        for item in watchlistCompany {
+            moc.delete(item)
+        }
+        do {
+            try moc.save()
+            print("Company deleted")
+        } catch {
+            // Error
+        }
+    }
 }
 
 struct WatchlistManagerTest_Previews: PreviewProvider {

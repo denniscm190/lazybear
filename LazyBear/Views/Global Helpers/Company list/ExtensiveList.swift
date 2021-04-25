@@ -59,7 +59,7 @@ struct ExtensiveList: View {
                     .onTapGesture { showRenameAction = false }
                 
                 // Show rename Action Sheet
-                RenameSheet(listName: listName, showRenameAction: $showRenameAction, presentationMode: presentationMode)
+                TextfieldAlert(listName: listName, showRenameAction: $showRenameAction, presentationMode: presentationMode)
                     .offset(y: showRenameAction ? 0: 700)
                     .animation(.easeInOut)
             }

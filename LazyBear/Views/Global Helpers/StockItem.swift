@@ -60,7 +60,7 @@ struct VerticalStockRow: View {
                             .opacity(0.6)
                             .lineLimit(1)
                         
-                        PriceView(latestPrice: company.latestPrice, changePercent: company.changePercent, align: .leading)
+                        PriceView(latestPrice: company.latestPrice ?? 0, changePercent: company.changePercent ?? 0, align: .leading)
                             .padding(.top)
                             
                     }
@@ -70,7 +70,7 @@ struct VerticalStockRow: View {
                      
                     if let prices = intradayPrices?.compactMap { $0.open } {
                         LineView(data: prices)
-                            .foregroundColor(company.changePercent < 0 ? .red: .green)
+                            .foregroundColor(company.changePercent ?? 0 < 0 ? .red: .green)
                             .padding(.vertical)
                             .clipped()
                     }
@@ -105,13 +105,13 @@ struct HorizontalStockRow: View {
             if !hidePriceView {
                 if let prices = intradayPrices?.compactMap { $0.open } {
                     LineView(data: prices)
-                        .foregroundColor(company.changePercent < 0 ? .red: .green)
+                        .foregroundColor(company.changePercent ?? 0 < 0 ? .red: .green)
                         .frame(width: 80)
                         .padding(.vertical, 10)
                         .padding(.leading)
                 }
                 
-                PriceView(latestPrice: company.latestPrice, changePercent: company.changePercent, align: .trailing)
+                PriceView(latestPrice: company.latestPrice ?? 0, changePercent: company.changePercent ?? 0, align: .trailing)
                     // Center PriceView with the other rows
                     .frame(minWidth: 80, alignment: .trailing)
             }

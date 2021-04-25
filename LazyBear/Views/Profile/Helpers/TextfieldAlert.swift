@@ -1,5 +1,5 @@
 //
-//  RenameSheet.swift
+//  TextfieldAlert.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 24/4/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RenameSheet: View {
+struct TextfieldAlert: View {
     var listName: String
     
     @State private var newListName: String = String()
@@ -39,7 +39,9 @@ struct RenameSheet: View {
                         )
                     
                     Divider()
-
+                    
+                    
+                    // Cancel and Done buttons
                     HStack {
                         Spacer()
                         Button(action: {
@@ -50,7 +52,6 @@ struct RenameSheet: View {
                                 .fontWeight(.semibold)
                                 .foregroundColor(.red)
                         }
-                        
 
                         Spacer()
                         Divider()
@@ -98,6 +99,6 @@ struct RenameSheet_Previews: PreviewProvider {
     @Environment(\.presentationMode) static var presentationMode
     
     static var previews: some View {
-        RenameSheet(listName: "MyWatchlist", showRenameAction: .constant(true), presentationMode: presentationMode)
+        TextfieldAlert(listName: "MyWatchlist", showRenameAction: .constant(true), presentationMode: presentationMode)
     }
 }

@@ -16,7 +16,6 @@ struct CompanyList: View {
                 SearchedCompanyItem(company: company)
             }
         }
-        .listStyle(GroupedListStyle())
     }
 }
 
