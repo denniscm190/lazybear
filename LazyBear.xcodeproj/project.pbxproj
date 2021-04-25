@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		950272CD2635AACD003E779D /* ToolbarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950272CC2635AACD003E779D /* ToolbarMenu.swift */; };
 		950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C36E2260FB6180081CF53 /* HapticsManager.swift */; };
 		950C57132629EF9100F234FE /* LazyBearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57122629EF9100F234FE /* LazyBearTests.swift */; };
 		950C57232629EFC200F234FE /* LazyBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57222629EFC200F234FE /* LazyBearUITests.swift */; };
@@ -77,6 +78,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		950272CC2635AACD003E779D /* ToolbarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarMenu.swift; sourceTree = "<group>"; };
 		950C36E2260FB6180081CF53 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		950C57102629EF9100F234FE /* LazyBearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		950C57122629EF9100F234FE /* LazyBearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearTests.swift; sourceTree = "<group>"; };
@@ -163,6 +165,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		950272CA2635AA9F003E779D /* Company list */ = {
+			isa = PBXGroup;
+			children = (
+				95721DB3262787EF00EC527B /* ExtensiveList.swift */,
+				950272CB2635AABC003E779D /* Helpers */,
+			);
+			path = "Company list";
+			sourceTree = "<group>";
+		};
+		950272CB2635AABC003E779D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				950272CC2635AACD003E779D /* ToolbarMenu.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		950C57112629EF9100F234FE /* LazyBearTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,12 +343,12 @@
 		95893DD22613CAB5003698C5 /* Global Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				950272CA2635AA9F003E779D /* Company list */,
 				95ECCA5F261216D500A67EFA /* LineView.swift */,
 				95ECCA5C2612169200A67EFA /* LineShape.swift */,
 				95A5188526186F590002D27C /* PriceView.swift */,
 				9550444826111FC9000E0BCB /* StockRow.swift */,
 				9550444B26111FED000E0BCB /* StockItem.swift */,
-				95721DB3262787EF00EC527B /* ExtensiveList.swift */,
 				95BD2FB226341D36008B6752 /* BlurBackground.swift */,
 			);
 			path = "Global Helpers";
@@ -554,6 +573,7 @@
 				9550444326111E7A000E0BCB /* SectorRow.swift in Sources */,
 				95721DB826278EC100EC527B /* CurrencyListItem.swift in Sources */,
 				95ECCA60261216D500A67EFA /* LineView.swift in Sources */,
+				950272CD2635AACD003E779D /* ToolbarMenu.swift in Sources */,
 				9550443A26111B2B000E0BCB /* HomeView.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
 				95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */,

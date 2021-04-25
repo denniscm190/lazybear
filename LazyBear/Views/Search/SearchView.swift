@@ -10,6 +10,7 @@ import SwiftlySearch
 
 struct SearchView: View {
     @ObservedObject var search = Search()
+    @Environment(\.presentationMode) private var presentationMode
     @State private var searchedText = String()
     
     var body: some View {

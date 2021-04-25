@@ -19,7 +19,7 @@ struct RenameSheet: View {
     var watchlistCompany: FetchedResults<WatchlistCompany>
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 20)
+        RoundedRectangle(cornerRadius: 15)
             .frame(width: 280, height: 180)
             .foregroundColor(Color(.secondarySystemBackground))
             .overlay(
@@ -32,10 +32,10 @@ struct RenameSheet: View {
                     
                     Spacer()
                     TextField("Technologies, banks...", text: $newListName)
-                        .padding(8)
+                        .padding(7)
                         .background(
                             Color(.systemBackground)
-                                .cornerRadius(8)
+                                .cornerRadius(7)
                         )
                     
                     Divider()
@@ -67,7 +67,7 @@ struct RenameSheet: View {
             )
         .background(
             BlurBackground(style: .systemMaterial)
-               .clipShape(RoundedRectangle(cornerRadius: 20))
+               .clipShape(RoundedRectangle(cornerRadius: 15))
         )
     }
     

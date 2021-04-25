@@ -12,6 +12,10 @@ struct ProfileView: View {
     @ObservedObject var profile = Profile()
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
+    
+    // Refresh view when watchlistCompanies change
+    @State private var refreshing = false
+    private var didSave =  NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
 
     var body: some View {
         if profile.showView {
@@ -33,6 +37,10 @@ struct ProfileView: View {
                             )
                             .listRowInsets(EdgeInsets())
                         }
+                    }
+                    // The listener for refresh the view
+                    .onReceive(self.didSave) { _ in
+                        self.refreshing.toggle()
                     }
                 }
                 .navigationTitle("My profile")

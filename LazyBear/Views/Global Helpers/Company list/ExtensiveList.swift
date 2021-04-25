@@ -22,6 +22,7 @@ struct ExtensiveList: View {
     @State private var isEditMode: EditMode = .inactive
     @State private var showRenameAction = false
     @State private var showDeleteAlert = false
+    @State private var showSearchView = false
     
     var body: some View {
         NavigationView {
@@ -71,6 +72,9 @@ struct ExtensiveList: View {
                     secondaryButton: .cancel()
                 )
             }
+            .sheet(isPresented: $showSearchView) {
+                SearchView()
+            }
             .navigationTitle(listName)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -86,27 +90,10 @@ struct ExtensiveList: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if addOnDelete {
-                        Menu {
-                            Section {
-                                Button(action: { self.showRenameAction = true }) {
-                                    Label("Rename list", systemImage: "square.and.pencil")
-                                }
-
-                                Button(action: { print("Add company") }) {
-                                    Label("Add company", systemImage: "plus")
-                                }
-                            }
-
-                            Section(header: Text("Secondary actions")) {
-                                Button(action: { self.showDeleteAlert = true }) {
-                                    Label("Delete list", systemImage: "trash")
-                                }
-                            }
-                        }
-                        label: {
-                            Label("Options", systemImage: "ellipsis.circle")
-                                .imageScale(.large)
-                        }
+                        ToolbarMenu(showRenameAction: $showRenameAction,
+                                    showSearchView: $showSearchView,
+                                    showDeleteAlert: $showDeleteAlert
+                        )
                     }
                 }
             }
@@ -124,7 +111,7 @@ struct ExtensiveList: View {
             try moc.save()
             print("Company deleted")
         } catch {
-            // Error
+            print(error.localizedDescription)
         }
     }
     
