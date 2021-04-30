@@ -12,12 +12,15 @@ struct ProfileView: View {
     @ObservedObject var profile = Profile()
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
+    
+    @State private var showCreateNewWatchlist = false
 
     var body: some View {
         if profile.showView {
             NavigationView {
-                // Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
                 List {
+                    
+                    // Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
                     let watchlists = Set(watchlistCompanies.map { $0.watchlist })  // Set -> avoid duplicates names
                     
                     ForEach(Array(watchlists), id: \.self) { watchlist in
@@ -39,11 +42,14 @@ struct ProfileView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: {}) {
+                        Button(action: { showCreateNewWatchlist = true }) {
                             Image(systemName: "plus")
                         }
                     }
                 }
+            }
+            .sheet(isPresented: $showCreateNewWatchlist) {
+                CreateNewWatchlist()
             }
         } else {
             ProgressView()

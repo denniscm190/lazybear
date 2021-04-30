@@ -9,6 +9,10 @@ import SwiftUI
 import SwiftlySearch
 
 struct SearchView: View {
+    // Only unseful when it's called from Profile View
+    var calledFromProfileView: Bool?
+    var newWatchlistClass: NewWatchlistClass?
+    
     @ObservedObject var search = Search()
     @Environment(\.presentationMode) private var presentationMode
     @State private var searchedText = String()
@@ -17,7 +21,7 @@ struct SearchView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 if search.showSearchList {
-                    CompanyList(searchResult: search.data)
+                    CompanyList(searchResult: search.data, calledFromProfileView: calledFromProfileView, newWatchlistClass: newWatchlistClass)
                 } else {
                     VStack(alignment: .center) {
                         Image("bearSleeping")

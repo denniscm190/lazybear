@@ -10,6 +10,9 @@ import SwiftUI
 struct SearchedCompanyItem: View {
     var company: SearchResponse
     
+    // Only unseful when it's called from Profile View
+    var calledFromProfileView: Bool?
+    
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompany: FetchedResults<WatchlistCompany>
@@ -19,18 +22,20 @@ struct SearchedCompanyItem: View {
     var body: some View {
         let watchlistSymbols = watchlistCompany.map { $0.symbol }
         HStack {
-            Button(action: { self.showingActionSheet = true }) {
-                if watchlistSymbols.contains(company.symbol!) {
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                        .imageScale(.large)
-                } else {
-                    Image(systemName: "star")
-                        .foregroundColor(.yellow)
-                        .imageScale(.large)
+            if !(calledFromProfileView ?? false) {
+                Button(action: { self.showingActionSheet = true }) {
+                    if watchlistSymbols.contains(company.symbol!) {
+                        Image(systemName: "star.fill")
+                            .foregroundColor(.yellow)
+                            .imageScale(.large)
+                    } else {
+                        Image(systemName: "star")
+                            .foregroundColor(.yellow)
+                            .imageScale(.large)
+                    }
                 }
+                .buttonStyle(PlainButtonStyle())
             }
-            .buttonStyle(PlainButtonStyle())
             
             VStack(alignment: .leading) {
                 Text(company.symbol!.uppercased())
