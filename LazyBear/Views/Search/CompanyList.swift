@@ -13,16 +13,22 @@ struct CompanyList: View {
     // Only unseful when it's called from Profile View
     var calledFromProfileView: Bool?
     var newWatchlistClass: NewWatchlistClass?
+    @Binding var presentationMode: PresentationMode
     
     var body: some View {
         List(searchResult, id: \.self) { company in
             SearchedCompanyItem(company: company, calledFromProfileView: calledFromProfileView)
                 .if(calledFromProfileView ?? false ) { content in
-                    Button(action: { newWatchlistClass!.companies.append(company) }) {
+                    Button(action: { save(company) }) {
                         content
                     }
                 }
         }
+    }
+    
+    private func save(_ company: SearchResponse) {
+        newWatchlistClass!.companies.append(company)
+        $presentationMode.wrappedValue.dismiss()  // Dismiss view
     }
 }
 
@@ -43,7 +49,9 @@ extension View {
 }
 
 struct CompanyList_Previews: PreviewProvider {
+    @Environment(\.presentationMode) static var presentationMode
+    
     static var previews: some View {
-        CompanyList(searchResult: [SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl")])
+        CompanyList(searchResult: [SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl")], presentationMode: presentationMode)
     }
 }

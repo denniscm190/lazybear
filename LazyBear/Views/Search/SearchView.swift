@@ -21,7 +21,7 @@ struct SearchView: View {
         NavigationView {
             VStack(alignment: .leading) {
                 if search.showSearchList {
-                    CompanyList(searchResult: search.data, calledFromProfileView: calledFromProfileView, newWatchlistClass: newWatchlistClass)
+                    CompanyList(searchResult: search.data, calledFromProfileView: calledFromProfileView, newWatchlistClass: newWatchlistClass, presentationMode: presentationMode)
                 } else {
                     VStack(alignment: .center) {
                         Image("bearSleeping")

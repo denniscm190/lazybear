@@ -10,6 +10,8 @@ import CoreData
 
 struct ProfileView: View {
     @ObservedObject var profile = Profile()
+    
+    @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
     
@@ -48,8 +50,9 @@ struct ProfileView: View {
                     }
                 }
             }
-            .sheet(isPresented: $showCreateNewWatchlist) {
+            .fullScreenCover(isPresented: $showCreateNewWatchlist) {
                 CreateNewWatchlist()
+                    .environment(\.managedObjectContext, self.moc)
             }
         } else {
             ProgressView()
