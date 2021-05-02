@@ -30,8 +30,8 @@
 		9550444C26111FED000E0BCB /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444B26111FED000E0BCB /* StockItem.swift */; };
 		955E73392623568F005652FF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E73382623568F005652FF /* Home.swift */; };
 		955E733C262356F3005652FF /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
-		9562404C263C766D00C6C511 /* CreateNewWatchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404B263C766D00C6C511 /* CreateNewWatchlist.swift */; };
-		9562404E263C7D8800C6C511 /* NewWatchlistClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404D263C7D8800C6C511 /* NewWatchlistClass.swift */; };
+		9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404B263C766D00C6C511 /* WatchlistCreator.swift */; };
+		9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
 		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
@@ -46,6 +46,11 @@
 		95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
 		95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */; };
 		95A07F7626305AE3009865AA /* TradingDatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7526305AE3009865AA /* TradingDatesModel.swift */; };
+		95A4B930263E9F530056F036 /* WatchlistCreatorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */; };
+		95A4B933263E9F810056F036 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 95A4B932263E9F810056F036 /* Introspect */; };
+		95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */; };
+		95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */; };
+		95A4B939263EB1C20056F036 /* WatchlistLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B938263EB1C20056F036 /* WatchlistLists.swift */; };
 		95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5186926185AAB0002D27C /* GenericRequest.swift */; };
 		95A5188626186F590002D27C /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5188526186F590002D27C /* PriceView.swift */; };
 		95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7C065261639DF003E2EC1 /* SearchView.swift */; };
@@ -108,8 +113,8 @@
 		955E73382623568F005652FF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		955E733B262356F3005652FF /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		9562404A263C72E800C6C511 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9562404B263C766D00C6C511 /* CreateNewWatchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWatchlist.swift; sourceTree = "<group>"; };
-		9562404D263C7D8800C6C511 /* NewWatchlistClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWatchlistClass.swift; sourceTree = "<group>"; };
+		9562404B263C766D00C6C511 /* WatchlistCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreator.swift; sourceTree = "<group>"; };
+		9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorClass.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95672B9225DDA54700DCBE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +132,10 @@
 		95A07F6B26305AC6009865AA /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
 		95A07F7526305AE3009865AA /* TradingDatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesModel.swift; sourceTree = "<group>"; };
+		95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorList.swift; sourceTree = "<group>"; };
+		95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorSearchBar.swift; sourceTree = "<group>"; };
+		95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorRow.swift; sourceTree = "<group>"; };
+		95A4B938263EB1C20056F036 /* WatchlistLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistLists.swift; sourceTree = "<group>"; };
 		95A5186926185AAB0002D27C /* GenericRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRequest.swift; sourceTree = "<group>"; };
 		95A5188526186F590002D27C /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		95A7C065261639DF003E2EC1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -163,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
+				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,9 +405,13 @@
 		95BD2F91263418F7008B6752 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				95A4B938263EB1C20056F036 /* WatchlistLists.swift */,
 				95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */,
-				9562404B263C766D00C6C511 /* CreateNewWatchlist.swift */,
-				9562404D263C7D8800C6C511 /* NewWatchlistClass.swift */,
+				9562404B263C766D00C6C511 /* WatchlistCreator.swift */,
+				9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */,
+				95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */,
+				95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */,
+				95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -475,6 +489,7 @@
 			name = LazyBear;
 			packageProductDependencies = (
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
+				95A4B932263E9F810056F036 /* Introspect */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -513,6 +528,7 @@
 			mainGroup = 95672B8225DDA54700DCBE4A;
 			packageReferences = (
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
+				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -589,12 +605,13 @@
 				951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */,
 				955E73392623568F005652FF /* Home.swift in Sources */,
 				95721DA6262761E700EC527B /* CurrencyRow.swift in Sources */,
-				9562404C263C766D00C6C511 /* CreateNewWatchlist.swift in Sources */,
+				9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				95E6C57626345CE700AC1518 /* WatchlistManagerTest.swift in Sources */,
 				95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */,
 				95ECCA5D2612169200A67EFA /* LineShape.swift in Sources */,
 				9550444C26111FED000E0BCB /* StockItem.swift in Sources */,
+				95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */,
 				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
 				952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */,
 				95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */,
@@ -611,8 +628,11 @@
 				954D7EA7260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */,
+				95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */,
 				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
-				9562404E263C7D8800C6C511 /* NewWatchlistClass.swift in Sources */,
+				95A4B939263EB1C20056F036 /* WatchlistLists.swift in Sources */,
+				95A4B930263E9F530056F036 /* WatchlistCreatorList.swift in Sources */,
+				9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */,
 				95721DB4262787EF00EC527B /* ExtensiveList.swift in Sources */,
 				95C8C0DB262A36990082D1D9 /* Profile.swift in Sources */,
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
@@ -934,6 +954,14 @@
 				minimumVersion = 1.2.4;
 			};
 		};
+		95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -941,6 +969,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
 			productName = SwiftlySearch;
+		};
+		95A4B932263E9F810056F036 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
 		};
 /* End XCSwiftPackageProductDependency section */
 

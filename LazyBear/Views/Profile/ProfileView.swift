@@ -20,11 +20,12 @@ struct ProfileView: View {
     var body: some View {
         if profile.showView {
             NavigationView {
+                
                 List {
                     
                     // Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
                     let watchlists = Set(watchlistCompanies.map { $0.watchlist })  // Set -> avoid duplicates names
-                    
+
                     ForEach(Array(watchlists), id: \.self) { watchlist in
                         let symbols = watchlistCompanies.filter({ $0.watchlist == watchlist }).map { $0.symbol }
 
@@ -35,7 +36,6 @@ struct ProfileView: View {
                                      intradayPrices: profile.data.intradayPrices,
                                      addOnDelete: true
                             )
-                            .onAppear { updateRows(symbols.count, filteredCompanies.count) }
                             .listRowInsets(EdgeInsets())
                         }
                     }
@@ -51,7 +51,7 @@ struct ProfileView: View {
                 }
             }
             .fullScreenCover(isPresented: $showCreateNewWatchlist) {
-                CreateNewWatchlist()
+                WatchlistCreator()
                     .environment(\.managedObjectContext, self.moc)
             }
         } else {
@@ -60,6 +60,9 @@ struct ProfileView: View {
         }
     }
     
+    /*
+     Get symbols in watchlists -> request
+     */
     private func prepareUrl(isInitRequest: Bool) {
         if watchlistCompanies.isEmpty {
             profile.showView = true
@@ -70,6 +73,7 @@ struct ProfileView: View {
             var counter = 0
             for symbol in symbols {
                 counter += 1
+                
                 if counter == 1 {
                     url += symbol
                 } else {
@@ -77,16 +81,6 @@ struct ProfileView: View {
                 }
             }
             profile.request(url, isInitRequest: isInitRequest)
-        }
-    }
-    
-    /*
-     If Core Data changes, companies is not updated because the API request is not called ->
-     Check if symbols.count (Core Data) is equal to filteredCompanies -> if not -> call API
-     */
-    private func updateRows(_ numberOfCoreDataCompanies: Int, _ numberOfApiRequestedCompanies: Int) {
-        if numberOfCoreDataCompanies != numberOfApiRequestedCompanies {
-            prepareUrl(isInitRequest: true)  // Call API
         }
     }
 }
