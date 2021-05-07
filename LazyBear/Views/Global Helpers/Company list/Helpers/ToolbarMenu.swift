@@ -8,20 +8,26 @@
 import SwiftUI
 
 struct ToolbarMenu: View {
-    @Binding var showRenameAction: Bool
-    @Binding var showDeleteAlert: Bool
+    @Binding var showRenameListAction: Bool
+    @Binding var showDeleteListAlert: Bool
+    
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
+    var watchlistCompany: FetchedResults<WatchlistCompany>
     
     var body: some View {
         Menu {
             Section {
-                Button(action: { showRenameAction = true }) {
+                Button(action: { showRenameListAction = true }) {
                     Label("Rename list", systemImage: "square.and.pencil")
                 }
             }
-
-            Section(header: Text("Secondary actions")) {
-                Button(action: { showDeleteAlert = true }) {
-                    Label("Delete list", systemImage: "trash")
+            
+            // If there are only 1 watchlist -> It cannot be deleted
+            if Set(watchlistCompany.map { $0.watchlist }).count > 1 {
+                Section(header: Text("Secondary actions")) {
+                    Button(action: { showDeleteListAlert = true }) {
+                        Label("Delete list", systemImage: "trash")
+                    }
                 }
             }
         }
@@ -34,6 +40,6 @@ struct ToolbarMenu: View {
 
 struct ToolbarMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ToolbarMenu(showRenameAction: .constant(false), showDeleteAlert: .constant(false))
+        ToolbarMenu(showRenameListAction: .constant(false), showDeleteListAlert: .constant(false))
     }
 }

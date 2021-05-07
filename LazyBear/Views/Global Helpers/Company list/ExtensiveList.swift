@@ -20,8 +20,8 @@ struct ExtensiveList: View {
     var watchlistCompany: FetchedResults<WatchlistCompany>
     
     @State private var isEditMode: EditMode = .inactive
-    @State private var showRenameAction = false
-    @State private var showDeleteAlert = false
+    @State private var showRenameListAction = false
+    @State private var showDeleteListAlert = false
     @State private var showSearchView = false
     
     var body: some View {
@@ -54,17 +54,17 @@ struct ExtensiveList: View {
                 // Blur background
                 Color(.black)
                     .edgesIgnoringSafeArea(.all)
-                    .opacity(showRenameAction ? 0.2: 0)
+                    .opacity(showRenameListAction ? 0.2: 0)
                     .animation(.easeInOut)
-                    .onTapGesture { showRenameAction = false }
+                    .onTapGesture { showRenameListAction = false }
                 
                 // Show rename Action Sheet
-                TextfieldAlert(listName: listName, showRenameAction: $showRenameAction, presentationMode: presentationMode)
-                    .offset(y: showRenameAction ? 0: 700)
+                TextfieldAlert(listName: listName, showRenameAction: $showRenameListAction, presentationMode: presentationMode)
+                    .offset(y: showRenameListAction ? 0: 700)
                     .animation(.easeInOut)
             }
             // Show delete list alert
-            .alert(isPresented: $showDeleteAlert) {
+            .alert(isPresented: $showDeleteListAlert) {
                 Alert(
                     title: Text("Are you sure you want to delete this list?"),
                     message: Text("This action can't be undo"),
@@ -87,7 +87,7 @@ struct ExtensiveList: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if addOnDelete {
-                        ToolbarMenu(showRenameAction: $showRenameAction, showDeleteAlert: $showDeleteAlert)
+                        ToolbarMenu(showRenameListAction: $showRenameListAction, showDeleteListAlert: $showDeleteListAlert)
                     }
                 }
             }
@@ -95,7 +95,9 @@ struct ExtensiveList: View {
         }
     }
     
-    // Delete company from watchlist
+    /*
+     Delete company from watchlist
+     */
     private func deleteCompany(at offsets: IndexSet) {
         for index in offsets {
             let company = watchlistCompany[index]
@@ -109,7 +111,9 @@ struct ExtensiveList: View {
         }
     }
     
-    // Remove entire watchlist
+    /*
+     Remove entire list if it's not the last one. It can't be zero watchlists
+     */
     private func deleteList() {
         let selectedWatchlist = watchlistCompany.filter({ $0.watchlist == listName })
         for company in selectedWatchlist {

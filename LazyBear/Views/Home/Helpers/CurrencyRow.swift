@@ -10,6 +10,7 @@ import SwiftUI
 struct CurrencyRow: View {
     var latestCurrencies: [String: CurrencyModel]
     
+    @Environment(\.managedObjectContext) private var moc
     @State private var showExtensiveList = false
     
     var body: some View {
@@ -44,6 +45,7 @@ struct CurrencyRow: View {
         }
         .sheet(isPresented: $showExtensiveList) {
             ExtensiveList(listName: "Currencies", latestCurrencies: latestCurrencies, addOnDelete: false)
+                .environment(\.managedObjectContext, self.moc)
         }
     }
 }
