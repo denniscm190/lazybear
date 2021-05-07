@@ -32,6 +32,7 @@
 		955E733C262356F3005652FF /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
 		9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404B263C766D00C6C511 /* WatchlistCreator.swift */; };
 		9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */; };
+		95629DA02645298E007AF020 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95629D9F2645298E007AF020 /* Profile.swift */; };
 		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
 		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
 		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
@@ -50,7 +51,6 @@
 		95A4B933263E9F810056F036 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 95A4B932263E9F810056F036 /* Introspect */; };
 		95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */; };
 		95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */; };
-		95A4B939263EB1C20056F036 /* WatchlistLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B938263EB1C20056F036 /* WatchlistLists.swift */; };
 		95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5186926185AAB0002D27C /* GenericRequest.swift */; };
 		95A5188626186F590002D27C /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5188526186F590002D27C /* PriceView.swift */; };
 		95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7C065261639DF003E2EC1 /* SearchView.swift */; };
@@ -58,7 +58,6 @@
 		95AD4A2D26078C1400498079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A2C26078C1400498079 /* ContentView.swift */; };
 		95BD2FAE26341BD1008B6752 /* TextfieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */; };
 		95BD2FB326341D36008B6752 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FB226341D36008B6752 /* BlurBackground.swift */; };
-		95C8C0DB262A36990082D1D9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DA262A36990082D1D9 /* Profile.swift */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
 		95E6C57626345CE700AC1518 /* WatchlistManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6C57526345CE700AC1518 /* WatchlistManagerTest.swift */; };
@@ -115,6 +114,7 @@
 		9562404A263C72E800C6C511 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		9562404B263C766D00C6C511 /* WatchlistCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreator.swift; sourceTree = "<group>"; };
 		9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorClass.swift; sourceTree = "<group>"; };
+		95629D9F2645298E007AF020 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
 		95672B9225DDA54700DCBE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 		95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorList.swift; sourceTree = "<group>"; };
 		95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorSearchBar.swift; sourceTree = "<group>"; };
 		95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorRow.swift; sourceTree = "<group>"; };
-		95A4B938263EB1C20056F036 /* WatchlistLists.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistLists.swift; sourceTree = "<group>"; };
 		95A5186926185AAB0002D27C /* GenericRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRequest.swift; sourceTree = "<group>"; };
 		95A5188526186F590002D27C /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		95A7C065261639DF003E2EC1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
@@ -143,7 +142,6 @@
 		95AD4A2C26078C1400498079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldAlert.swift; sourceTree = "<group>"; };
 		95BD2FB226341D36008B6752 /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
-		95C8C0DA262A36990082D1D9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
 		95E6C57526345CE700AC1518 /* WatchlistManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistManagerTest.swift; sourceTree = "<group>"; };
@@ -405,7 +403,6 @@
 		95BD2F91263418F7008B6752 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				95A4B938263EB1C20056F036 /* WatchlistLists.swift */,
 				95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */,
 				9562404B263C766D00C6C511 /* WatchlistCreator.swift */,
 				9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */,
@@ -419,7 +416,7 @@
 		95C8C0D9262A31DA0082D1D9 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				95C8C0DA262A36990082D1D9 /* Profile.swift */,
+				95629D9F2645298E007AF020 /* Profile.swift */,
 				95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */,
 			);
 			path = Networking;
@@ -630,11 +627,10 @@
 				95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */,
 				95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */,
 				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
-				95A4B939263EB1C20056F036 /* WatchlistLists.swift in Sources */,
+				95629DA02645298E007AF020 /* Profile.swift in Sources */,
 				95A4B930263E9F530056F036 /* WatchlistCreatorList.swift in Sources */,
 				9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */,
 				95721DB4262787EF00EC527B /* ExtensiveList.swift in Sources */,
-				95C8C0DB262A36990082D1D9 /* Profile.swift in Sources */,
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
 				95BD2FAE26341BD1008B6752 /* TextfieldAlert.swift in Sources */,
 				95A07F5D26305A8F009865AA /* IntradayPricesModel.swift in Sources */,

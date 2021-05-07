@@ -50,7 +50,7 @@ struct SearchedCompanyItem: View {
             }
         }
         .actionSheet(isPresented: $showingActionSheet) {
-            ActionSheet(title: Text("Your watchlists"), message: Text("Select"), buttons: generateButtons())
+            ActionSheet(title: Text("Add to watchlist"), message: Text("Select"), buttons: generateButtons())
         }
     }
     

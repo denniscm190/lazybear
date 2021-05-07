@@ -72,9 +72,6 @@ struct ExtensiveList: View {
                     secondaryButton: .cancel()
                 )
             }
-            .sheet(isPresented: $showSearchView) {
-                SearchView()
-            }
             .navigationTitle(listName)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -90,10 +87,7 @@ struct ExtensiveList: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if addOnDelete {
-                        ToolbarMenu(showRenameAction: $showRenameAction,
-                                    showSearchView: $showSearchView,
-                                    showDeleteAlert: $showDeleteAlert
-                        )
+                        ToolbarMenu(showRenameAction: $showRenameAction, showDeleteAlert: $showDeleteAlert)
                     }
                 }
             }

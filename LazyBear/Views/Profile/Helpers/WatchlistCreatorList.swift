@@ -13,6 +13,7 @@ struct WatchlistCreatorList: View {
     @State private var companies = [SearchResponse]()
     
     @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.managedObjectContext) private var moc
     
     var body: some View {
         NavigationView {
@@ -21,6 +22,7 @@ struct WatchlistCreatorList: View {
                 
                 List(companies, id: \.self) { company in
                     WatchlistCreatorRow(company: company, presentationMode: presentationMode, watchlistCreatorClass: watchlistCreatorClass)
+                        .environment(\.managedObjectContext, self.moc)
                 }
             }
             .navigationTitle("Search")

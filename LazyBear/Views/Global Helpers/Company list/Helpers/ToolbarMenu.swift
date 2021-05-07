@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ToolbarMenu: View {
     @Binding var showRenameAction: Bool
-    @Binding var showSearchView: Bool
     @Binding var showDeleteAlert: Bool
     
     var body: some View {
@@ -17,10 +16,6 @@ struct ToolbarMenu: View {
             Section {
                 Button(action: { showRenameAction = true }) {
                     Label("Rename list", systemImage: "square.and.pencil")
-                }
-
-                Button(action: { showSearchView = true }) {
-                    Label("Add company", systemImage: "plus")
                 }
             }
 
@@ -39,6 +34,6 @@ struct ToolbarMenu: View {
 
 struct ToolbarMenu_Previews: PreviewProvider {
     static var previews: some View {
-        ToolbarMenu(showRenameAction: .constant(false), showSearchView: .constant(false), showDeleteAlert: .constant(false))
+        ToolbarMenu(showRenameAction: .constant(false), showDeleteAlert: .constant(false))
     }
 }

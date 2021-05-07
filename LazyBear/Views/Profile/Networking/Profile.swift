@@ -2,7 +2,7 @@
 //  Profile.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 16/4/21.
+//  Created by Dennis Concepción Martín on 7/5/21.
 //
 
 import SwiftUI

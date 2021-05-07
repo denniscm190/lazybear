@@ -25,7 +25,7 @@ struct TradingDates: View {
             .navigationTitle("Holiday dates")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
+                ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { tradingDatesPresent.wrappedValue.dismiss() }) {
                         Image(systemName: "multiply")
                             .imageScale(.large)

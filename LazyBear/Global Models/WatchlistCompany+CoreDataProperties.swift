@@ -25,3 +25,10 @@ extension WatchlistCompany {
 extension WatchlistCompany : Identifiable {
 
 }
+
+extension WatchlistCompany {
+    static func == (lhs: WatchlistCompany, rhs: WatchlistCompany) -> Bool {
+        print("Custom equation has been called")
+        return lhs.id == rhs.id
+    }
+}
