@@ -61,7 +61,17 @@ struct VerticalStockRow: View {
                             .opacity(0.6)
                             .lineLimit(1)
                         
-                        PriceView(latestPrice: company.latestPrice ?? 0, changePercent: company.changePercent ?? 0, align: .leading)
+                        let priceViewStyle = PriceViewStyle(
+                            alignment: .leading,
+                            priceFont: .body,
+                            priceFontWeight: .semibold,
+                            percentFont: .callout,
+                            percentFontWeight: .semibold
+                        )
+                        
+                        PriceView(latestPrice: company.latestPrice ?? 0,
+                                  changePercent: company.changePercent ?? 0,
+                                  style: priceViewStyle)
                             .padding(.top)
                             
                     }
@@ -110,7 +120,17 @@ struct HorizontalStockRow: View {
                         .padding(.leading)
                 }
                 
-                PriceView(latestPrice: company.latestPrice ?? 0, changePercent: company.changePercent ?? 0, align: .trailing)
+                let priceViewStyle = PriceViewStyle(
+                    alignment: .leading,
+                    priceFont: .body,
+                    priceFontWeight: .semibold,
+                    percentFont: .callout,
+                    percentFontWeight: .semibold
+                )
+                
+                PriceView(latestPrice: company.latestPrice ?? 0,
+                          changePercent: company.changePercent ?? 0,
+                          style: priceViewStyle)
                     // Center PriceView with the other rows
                     .frame(minWidth: 80, alignment: .trailing)
             }

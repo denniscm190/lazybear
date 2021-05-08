@@ -10,18 +10,19 @@ import SwiftUI
 struct PriceView: View {
     var latestPrice: Double
     var changePercent: Double
-    var align: HorizontalAlignment
+    var style: PriceViewStyle
     
     var body: some View {
-        VStack(alignment: align) {
+        VStack(alignment: style.alignment) {
             Text("$\(latestPrice, specifier: "%.2f")")
                 .foregroundColor(changePercent < 0 ? .red: .green)
-                .fontWeight(.semibold)
+                .font(style.priceFont)
+                .fontWeight(style.priceFontWeight)
             
             Text("\(changePercent*100, specifier: "%.2f")%")
                 .foregroundColor(changePercent < 0 ? .red: .green)
-                .font(.callout)
-                .fontWeight(.semibold)
+                .font(style.percentFont)
+                .fontWeight(style.percentFontWeight)
         }
     }
 }
@@ -29,6 +30,16 @@ struct PriceView: View {
 
 struct PriceView_Previews: PreviewProvider {
     static var previews: some View {
-        PriceView(latestPrice: 120.30, changePercent: 0.03, align: .leading)
+        PriceView(
+            latestPrice: 120.30,
+            changePercent: 0.03,
+            style: PriceViewStyle(
+                alignment: .leading,
+                priceFont: .body,
+                priceFontWeight: .semibold,
+                percentFont: .callout,
+                percentFontWeight: .semibold
+            )
+        )
     }
 }
