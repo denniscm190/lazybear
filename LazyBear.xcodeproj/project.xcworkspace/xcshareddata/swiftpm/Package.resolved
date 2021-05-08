@@ -5,9 +5,9 @@
         "package": "StockCharts",
         "repositoryURL": "https://github.com/denniscm190/StockCharts.git",
         "state": {
-          "branch": "lazybear-tests",
-          "revision": "9d93ca31e602373373c86d759092bcc0f2ca1339",
-          "version": null
+          "branch": null,
+          "revision": "cd83064a16d419160722f8c57bcc90bfb907ff24",
+          "version": "1.1.3"
         }
       },
       {

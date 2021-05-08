@@ -30,6 +30,7 @@
 		9550444C26111FED000E0BCB /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444B26111FED000E0BCB /* StockItem.swift */; };
 		955E73392623568F005652FF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E73382623568F005652FF /* Home.swift */; };
 		955E733C262356F3005652FF /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
+		95606D082647005B0072C02C /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95606D072647005B0072C02C /* StockCharts */; };
 		9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404B263C766D00C6C511 /* WatchlistCreator.swift */; };
 		9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */; };
 		95629DA02645298E007AF020 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95629D9F2645298E007AF020 /* Profile.swift */; };
@@ -58,7 +59,6 @@
 		95AD4A2D26078C1400498079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A2C26078C1400498079 /* ContentView.swift */; };
 		95BD2FAE26341BD1008B6752 /* TextfieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */; };
 		95BD2FB326341D36008B6752 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FB226341D36008B6752 /* BlurBackground.swift */; };
-		95C547CD2646F29100F96C93 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95C547CC2646F29100F96C93 /* StockCharts */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
 		95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0DB2619CA7200440386 /* ProfileView.swift */; };
@@ -164,7 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95C547CD2646F29100F96C93 /* StockCharts in Frameworks */,
+				95606D082647005B0072C02C /* StockCharts in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
@@ -480,7 +480,7 @@
 			packageProductDependencies = (
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 				95A4B932263E9F810056F036 /* Introspect */,
-				95C547CC2646F29100F96C93 /* StockCharts */,
+				95606D072647005B0072C02C /* StockCharts */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -520,7 +520,7 @@
 			packageReferences = (
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				95C547CB2646F29100F96C93 /* XCRemoteSwiftPackageReference "StockCharts" */,
+				95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -942,20 +942,20 @@
 				minimumVersion = 1.2.4;
 			};
 		};
+		95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.3;
+			};
+		};
 		95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.1.3;
-			};
-		};
-		95C547CB2646F29100F96C93 /* XCRemoteSwiftPackageReference "StockCharts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
-			requirement = {
-				branch = "lazybear-tests";
-				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -966,15 +966,15 @@
 			package = 954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
 			productName = SwiftlySearch;
 		};
+		95606D072647005B0072C02C /* StockCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */;
+			productName = StockCharts;
+		};
 		95A4B932263E9F810056F036 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
-		};
-		95C547CC2646F29100F96C93 /* StockCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95C547CB2646F29100F96C93 /* XCRemoteSwiftPackageReference "StockCharts" */;
-			productName = StockCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 
