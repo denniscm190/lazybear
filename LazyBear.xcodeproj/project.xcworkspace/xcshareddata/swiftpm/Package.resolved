@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "StockCharts",
+        "repositoryURL": "https://github.com/denniscm190/StockCharts.git",
+        "state": {
+          "branch": "lazybear-tests",
+          "revision": "9d93ca31e602373373c86d759092bcc0f2ca1339",
+          "version": null
+        }
+      },
+      {
         "package": "SwiftlySearch",
         "repositoryURL": "https://github.com/thislooksfun/SwiftlySearch.git",
         "state": {

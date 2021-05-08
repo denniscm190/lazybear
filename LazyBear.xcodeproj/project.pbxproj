@@ -58,11 +58,9 @@
 		95AD4A2D26078C1400498079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A2C26078C1400498079 /* ContentView.swift */; };
 		95BD2FAE26341BD1008B6752 /* TextfieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */; };
 		95BD2FB326341D36008B6752 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FB226341D36008B6752 /* BlurBackground.swift */; };
+		95C547CD2646F29100F96C93 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95C547CC2646F29100F96C93 /* StockCharts */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
-		95E6C57626345CE700AC1518 /* WatchlistManagerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E6C57526345CE700AC1518 /* WatchlistManagerTest.swift */; };
-		95ECCA5D2612169200A67EFA /* LineShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECCA5C2612169200A67EFA /* LineShape.swift */; };
-		95ECCA60261216D500A67EFA /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95ECCA5F261216D500A67EFA /* LineView.swift */; };
 		95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0DB2619CA7200440386 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -144,9 +142,6 @@
 		95BD2FB226341D36008B6752 /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
 		95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
-		95E6C57526345CE700AC1518 /* WatchlistManagerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistManagerTest.swift; sourceTree = "<group>"; };
-		95ECCA5C2612169200A67EFA /* LineShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineShape.swift; sourceTree = "<group>"; };
-		95ECCA5F261216D500A67EFA /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		95FBE0DB2619CA7200440386 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -169,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95C547CD2646F29100F96C93 /* StockCharts in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
@@ -325,7 +321,6 @@
 				95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */,
 				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
 				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
-				95E6C57526345CE700AC1518 /* WatchlistManagerTest.swift */,
 				95AD4A2C26078C1400498079 /* ContentView.swift */,
 				95672B9725DDA54700DCBE4A /* Persistence.swift */,
 				950C36E2260FB6180081CF53 /* HapticsManager.swift */,
@@ -359,8 +354,6 @@
 			isa = PBXGroup;
 			children = (
 				950272CA2635AA9F003E779D /* Company list */,
-				95ECCA5F261216D500A67EFA /* LineView.swift */,
-				95ECCA5C2612169200A67EFA /* LineShape.swift */,
 				95A5188526186F590002D27C /* PriceView.swift */,
 				9550444826111FC9000E0BCB /* StockRow.swift */,
 				9550444B26111FED000E0BCB /* StockItem.swift */,
@@ -487,6 +480,7 @@
 			packageProductDependencies = (
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 				95A4B932263E9F810056F036 /* Introspect */,
+				95C547CC2646F29100F96C93 /* StockCharts */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -526,6 +520,7 @@
 			packageReferences = (
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+				95C547CB2646F29100F96C93 /* XCRemoteSwiftPackageReference "StockCharts" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -593,7 +588,6 @@
 				9550444926111FC9000E0BCB /* StockRow.swift in Sources */,
 				9550444326111E7A000E0BCB /* SectorRow.swift in Sources */,
 				95721DB826278EC100EC527B /* CurrencyListItem.swift in Sources */,
-				95ECCA60261216D500A67EFA /* LineView.swift in Sources */,
 				950272CD2635AACD003E779D /* ToolbarMenu.swift in Sources */,
 				9550443A26111B2B000E0BCB /* HomeView.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
@@ -604,9 +598,7 @@
 				95721DA6262761E700EC527B /* CurrencyRow.swift in Sources */,
 				9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
-				95E6C57626345CE700AC1518 /* WatchlistManagerTest.swift in Sources */,
 				95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */,
-				95ECCA5D2612169200A67EFA /* LineShape.swift in Sources */,
 				9550444C26111FED000E0BCB /* StockItem.swift in Sources */,
 				95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */,
 				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
@@ -958,6 +950,14 @@
 				minimumVersion = 0.1.3;
 			};
 		};
+		95C547CB2646F29100F96C93 /* XCRemoteSwiftPackageReference "StockCharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
+			requirement = {
+				branch = "lazybear-tests";
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -970,6 +970,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		95C547CC2646F29100F96C93 /* StockCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95C547CB2646F29100F96C93 /* XCRemoteSwiftPackageReference "StockCharts" */;
+			productName = StockCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 

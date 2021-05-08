@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import StockCharts
 
 enum OrientationView {
     case horizontal, vertical
@@ -69,10 +70,9 @@ struct VerticalStockRow: View {
                     Spacer()
                      
                     if let prices = intradayPrices?.compactMap { $0.open } {
-                        LineView(data: prices)
-                            .foregroundColor(company.changePercent ?? 0 < 0 ? .red: .green)
+                        LineChartView(data: prices, dates: nil, hours: nil, dragGesture: false)
                             .padding(.vertical)
-                            .clipped()
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
                     }
                         
                 }
@@ -104,8 +104,7 @@ struct HorizontalStockRow: View {
             Spacer()
             if !hidePriceView {
                 if let prices = intradayPrices?.compactMap { $0.open } {
-                    LineView(data: prices)
-                        .foregroundColor(company.changePercent ?? 0 < 0 ? .red: .green)
+                    LineChartView(data: prices, dates: nil, hours: nil, dragGesture: false)
                         .frame(width: 80)
                         .padding(.vertical, 10)
                         .padding(.leading)
