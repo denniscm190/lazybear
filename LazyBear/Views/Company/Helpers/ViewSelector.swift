@@ -9,7 +9,9 @@ import SwiftUI
 
 
 class ViewSelector: ObservableObject {
-    @Published var showChartView = false
+    @Published var views = [
+        "chart": true
+    ]
     
     enum ViewType {
         case chart
@@ -19,17 +21,16 @@ class ViewSelector: ObservableObject {
         switch viewType {
         case .chart:
             toogleVariables()
+            views["chart"] = true
         }
     }
     
+    /*
+     Change to false views
+     */
     private func toogleVariables() {
-        // Testing this ////
-        let mirror = Mirror(reflecting: self)
-        
-        for child in mirror.children {
-//            let value = child.value
-//            child.label = value
+        for view in views.keys {
+            views[view] = false
         }
-        ////
     }
 }

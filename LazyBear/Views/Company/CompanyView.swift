@@ -11,20 +11,37 @@ import StockCharts
 struct CompanyView: View {
     var symbol: String
     
-    // Date picker
-    var ranges = ["1D", "5D", "1M", "3M", "6M", "1Y", "5Y"]
-    @State private var selectedRange = "Red"
-    
+    @ObservedObject var company = Company()
     @ObservedObject var viewSelector = ViewSelector()
     @State private var showViewSelector = false
+    
+    // Set recurrent price request
+    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack {
                     CompanyHeader(symbol: symbol, showViewSelector: $showViewSelector)
-                    DatePicker(ranges: ranges, selectedRange: $selectedRange)
-                    Chart()
+                    
+                    // <--- Chart View --->
+                    if viewSelector.views["chart"]! {
+                        let url = "https://api.lazybear.app/company/chart/type=init/symbol=\(symbol)"
+                        
+                        if company.showChartView {
+                            Chart(chartData: company.chartData, symbol: symbol)
+                                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
+                                .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
+                                .onReceive(timer) { _ in
+                                    let url = "https://api.lazybear.app/company/chart/type=streaming/symbol=\(symbol)"
+                                    company.request(url, isInitRequest: false, "chart") }  // Receive timer notification
+                        }
+                        else {
+                            ProgressView()
+                                .onAppear { company.request(url, isInitRequest: true, "chart") } }
+                        
+                        // ---> Chart View <---
+                    }
                 }
                 .padding()
             }
@@ -32,8 +49,8 @@ struct CompanyView: View {
             .navigationBarTitleDisplayMode(.inline)
         }
         .actionSheet(isPresented: $showViewSelector) {
-            ActionSheet(title: Text("Change background"), message: Text("Select a new color"), buttons: [
-                .default(Text("Chart")) { viewSelector.showView(.chart) }, 
+            ActionSheet(title: Text("Select an option"), buttons: [
+                .default(Text("Chart & News")) { viewSelector.showView(.chart) }, 
                 .cancel()
             ])
         }

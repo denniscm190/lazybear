@@ -15,6 +15,9 @@ struct ProfileView: View {
     var watchlistCompanies: FetchedResults<WatchlistCompany>
 
     @State private var showCreateNewWatchlist = false
+    
+    // Set recurrent price request
+    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
 
     var body: some View {
         if profile.showView {
@@ -37,6 +40,9 @@ struct ProfileView: View {
                         refreshList()
                     }
                 }
+                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
+                .onReceive(timer) { _ in prepareUrl(isInitRequest: false) }
+                .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("My profile")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
@@ -65,7 +71,9 @@ struct ProfileView: View {
             profile.showView = true
         } else {
             let symbols = watchlistCompanies.map { $0.symbol }
-            var url = "https://api.lazybear.app/profile/type=init/symbols="
+            var typeRequest = "streaming"
+            if isInitRequest { typeRequest = "init" }
+            var url = "https://api.lazybear.app/profile/type=\(typeRequest)/symbols="
 
             var counter = 0
             for symbol in symbols {
