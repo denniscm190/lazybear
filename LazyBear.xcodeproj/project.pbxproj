@@ -70,7 +70,6 @@
 		95E31C142647363800106B98 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C132647363800106B98 /* Chart.swift */; };
 		95E31C16264736BE00106B98 /* DatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C15264736BE00106B98 /* DatePicker.swift */; };
 		95E31C1826473A4D00106B98 /* CompanyHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C1726473A4D00106B98 /* CompanyHeader.swift */; };
-		95E31C1C26473B5100106B98 /* ViewSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C1B26473B5100106B98 /* ViewSelector.swift */; };
 		95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0DB2619CA7200440386 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
@@ -161,7 +160,6 @@
 		95E31C132647363800106B98 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
 		95E31C15264736BE00106B98 /* DatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePicker.swift; sourceTree = "<group>"; };
 		95E31C1726473A4D00106B98 /* CompanyHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyHeader.swift; sourceTree = "<group>"; };
-		95E31C1B26473B5100106B98 /* ViewSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSelector.swift; sourceTree = "<group>"; };
 		95FBE0DB2619CA7200440386 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -452,7 +450,6 @@
 		95E31C0E26472CB600106B98 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				95E31C1B26473B5100106B98 /* ViewSelector.swift */,
 				95E31C1726473A4D00106B98 /* CompanyHeader.swift */,
 				95E31C15264736BE00106B98 /* DatePicker.swift */,
 				95613AE0264FD34100D4CE8F /* NewsRow.swift */,
@@ -645,7 +642,6 @@
 			files = (
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
-				95E31C1C26473B5100106B98 /* ViewSelector.swift in Sources */,
 				95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */,
 				95A5188626186F590002D27C /* PriceView.swift in Sources */,
 				95613AE1264FD34100D4CE8F /* NewsRow.swift in Sources */,

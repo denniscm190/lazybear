@@ -12,11 +12,10 @@ struct CompanyView: View {
     var symbol: String
     
     @ObservedObject var company = Company()
-    @ObservedObject var viewSelector = ViewSelector()
     @State private var showViewSelector = false
     
-    // Set recurrent price request
-    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
+    // Views
+    @State private var showChartView = true
     
     var body: some View {
         NavigationView {
@@ -24,23 +23,9 @@ struct CompanyView: View {
                 VStack {
                     CompanyHeader(symbol: symbol, showViewSelector: $showViewSelector)
                     
-                    // <--- Chart View --->
-                    if viewSelector.views["chart"]! {
-                        let url = "https://api.lazybear.app/company/chart/type=init/symbol=\(symbol)"
-                        
-                        if company.showChartView {
-                            Chart(chartData: company.chartData, symbol: symbol)
-                                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
-                                .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
-                                .onReceive(timer) { _ in
-                                    let url = "https://api.lazybear.app/company/chart/type=streaming/symbol=\(symbol)"
-                                    company.request(url, isInitRequest: false, "chart") }  // Receive timer notification
-                        }
-                        else {
-                            ProgressView()
-                                .onAppear { company.request(url, isInitRequest: true, "chart") } }
-                        
-                        // ---> Chart View <---
+                    // Chart View
+                    if showChartView {
+                        Chart(company: company, symbol: symbol)
                     }
                 }
                 .padding()
@@ -50,7 +35,7 @@ struct CompanyView: View {
         }
         .actionSheet(isPresented: $showViewSelector) {
             ActionSheet(title: Text("Select an option"), buttons: [
-                .default(Text("Chart & News")) { viewSelector.showView(.chart) }, 
+                .default(Text("Chart & News")) { showChartView = true },
                 .cancel()
             ])
         }

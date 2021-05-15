@@ -13,7 +13,7 @@ struct LazyBearApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CompanyView(symbol: "aapl")
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
