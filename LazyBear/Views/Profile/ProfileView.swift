@@ -41,7 +41,7 @@ struct ProfileView: View {
                     }
                 }
                 .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
-                .onReceive(timer) { _ in prepareUrl(isInitRequest: false) }
+                .onReceive(timer) { _ in prepareUrl(.streaming) }
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("My profile")
                 .navigationBarTitleDisplayMode(.inline)
@@ -59,35 +59,36 @@ struct ProfileView: View {
             }
         } else {
             ProgressView()
-                .onAppear { prepareUrl(isInitRequest: true) }
+                .onAppear { prepareUrl(.initial) }
         }
     }
     
     /*
      Get symbols in watchlists -> Prepare url -> Request
      */
-    private func prepareUrl(isInitRequest: Bool) {
-        if watchlistCompanies.isEmpty {
-            profile.showView = true
-        } else {
-            let symbols = watchlistCompanies.map { $0.symbol }
-            var typeRequest = "streaming"
-            if isInitRequest { typeRequest = "init" }
-            var url = "https://api.lazybear.app/profile/type=\(typeRequest)/symbols="
-
-            var counter = 0
-            for symbol in symbols {
-                counter += 1
-                
-                if counter == 1 {
-                    url += symbol
-                } else {
-                    url += ",\(symbol)"
-                }
+    private func prepareUrl(_ requestType: RequestType) {
+        let symbols = watchlistCompanies.map { $0.symbol }
+        
+        var symbolString = ""
+        for (index, symbol) in symbols.enumerated() {
+            if index == 0 {
+                symbolString += symbol
+            } else {
+                symbolString += ",\(symbol)"
             }
-            profile.request(url, isInitRequest: isInitRequest)
+        }
+        
+        switch requestType {
+        case .initial:
+            let url = "https://api.lazybear.app/profile/type=init/symbols=\(symbolString)"
+            profile.request(url, .initial)
+            
+        default:
+            let url = "https://api.lazybear.app/profile/type=streaming/symbols=\(symbolString)"
+            profile.request(url, .streaming)
         }
     }
+        
     
     /*
      When a company is added to a watchlist or a new watchlist is created -> call function
@@ -98,7 +99,7 @@ struct ProfileView: View {
         print("Companies requested -> \(profile.data.quotes!.count)")
         
         if profile.data.quotes!.count < watchlistCompanies.count {
-            prepareUrl(isInitRequest: true)
+            prepareUrl(.initial)
         }
     }
 }

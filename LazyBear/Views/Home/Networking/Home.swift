@@ -11,17 +11,16 @@ class Home: ObservableObject {
     @Published var showView = false
     @Published var data = HomeResponse()
     
-    func request(_ url: String, isInitRequest: Bool) {
+    func request(_ url: String, _ requestType: RequestType) {
         genericRequest(url: url, model: HomeResponse.self) { response in
-            
-            // If is the first request -> init()
-            if isInitRequest {
+            switch requestType {
+            case .initial:
                 self.data = response
-            } else {
-                // If not, request streaming data (without intradayPrices and latestCurrencies)
+            default:
                 self.data.lists = response.lists
                 self.data.sectorPerformance = response.sectorPerformance
             }
+            
             self.showView = true
         }
     }

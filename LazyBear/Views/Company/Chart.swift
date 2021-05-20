@@ -23,8 +23,9 @@ struct Chart: View {
         if company.showChartView {
             VStack {
                 DatePicker(ranges: ranges, selectedRange: $selectedRange)
-                    .onChange(of: selectedRange, perform: { value in
-                        print(value.lowercased())
+                    .onChange(of: selectedRange, perform: { range in
+//                        let url = "https://api.lazybear.app/company/chart/type=init/symbol=\(symbol)/range=\(range)"
+//                        company.request(url, .refresh, "chart")
                     })
                 
                 RoundedRectangle(cornerRadius: 15)
@@ -49,8 +50,8 @@ struct Chart: View {
                             }
                             .padding([.top, .leading, .trailing])
                             
-                            if let intradayPrices = company.chartData.intradayPrices![symbol.uppercased()] {
-                                if let prices = intradayPrices.compactMap { $0.open } {  // Map without nil
+                            if let historicalPrices = company.chartData.historicalPrices {
+                                if let prices = historicalPrices.compactMap { $0.close } {  // Map without nil
                                     LineChartView(data: prices, dates: nil, hours: nil, dragGesture: true)
                                         .padding(.bottom)
                                 }
@@ -68,12 +69,12 @@ struct Chart: View {
             .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
             .onReceive(timer) { _ in
                 let url = "https://api.lazybear.app/company/chart/type=streaming/symbol=\(symbol)"
-                company.request(url, isInitRequest: false, "chart") }  // Receive timer notification
+                company.request(url, .streaming, "chart") }  // Receive timer notification
         } else {
             ProgressView()
                 .onAppear {
                     let url = "https://api.lazybear.app/company/chart/type=init/symbol=\(symbol)"
-                    company.request(url, isInitRequest: true, "chart")
+                    company.request(url, .initial, "chart")
                 }
         }
     }
