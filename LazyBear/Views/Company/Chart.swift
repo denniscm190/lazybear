@@ -24,8 +24,8 @@ struct Chart: View {
             VStack {
                 DatePicker(ranges: ranges, selectedRange: $selectedRange)
                     .onChange(of: selectedRange, perform: { range in
-//                        let url = "https://api.lazybear.app/company/chart/type=init/symbol=\(symbol)/range=\(range)"
-//                        company.request(url, .refresh, "chart")
+                        let url = "https://api.lazybear.app/company/chart/type=refresh/symbol=\(symbol)/range=\(range.lowercased())"
+                        company.request(url, .refresh, "chart")
                     })
                 
                 RoundedRectangle(cornerRadius: 15)

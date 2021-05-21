@@ -18,7 +18,7 @@ class Company: ObservableObject {
                 case .initial:
                     self.chartData = response
                 case .refresh:
-                    print("refresh")
+                    self.chartData.historicalPrices = response.historicalPrices
                 case .streaming:
                     self.chartData.quote = response.quote
                 }

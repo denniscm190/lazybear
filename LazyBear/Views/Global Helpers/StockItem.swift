@@ -21,9 +21,20 @@ struct StockItem: View {
     
     var body: some View {
         if orientation == .vertical {
-            return AnyView(VerticalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices))
+            let verticalRow: AnyView = AnyView(
+                NavigationLink(destination: CompanyView(symbol: symbol)) {
+                    VerticalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices)
+                }
+                .buttonStyle(PlainButtonStyle())
+            )
+            return verticalRow
         } else {
-            return AnyView(HorizontalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices, hidePriceView: hidePriceView ?? false))
+            let horizontalRow: AnyView = AnyView(
+                NavigationLink(destination: CompanyView(symbol: symbol)) {
+                    HorizontalStockRow(symbol: symbol, company: company, intradayPrices: intradayPrices, hidePriceView: hidePriceView ?? false)
+                }
+            )
+            return horizontalRow
         }
     }
 }

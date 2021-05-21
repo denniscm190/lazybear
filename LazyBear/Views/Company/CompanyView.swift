@@ -18,20 +18,16 @@ struct CompanyView: View {
     @State private var showChartView = true
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                VStack {
-                    CompanyHeader(symbol: symbol, showViewSelector: $showViewSelector)
-                    
-                    // Chart View
-                    if showChartView {
-                        Chart(company: company, symbol: symbol)
-                    }
+        ScrollView {
+            VStack {
+                CompanyHeader(symbol: symbol, showViewSelector: $showViewSelector)
+                
+                // Chart View
+                if showChartView {
+                    Chart(company: company, symbol: symbol)
                 }
-                .padding()
             }
-            .navigationTitle("Apple inc")
-            .navigationBarTitleDisplayMode(.inline)
+            .padding()
         }
         .actionSheet(isPresented: $showViewSelector) {
             ActionSheet(title: Text("Select an option"), buttons: [
