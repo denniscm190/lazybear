@@ -30,6 +30,9 @@
 		9550444C26111FED000E0BCB /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444B26111FED000E0BCB /* StockItem.swift */; };
 		955E73392623568F005652FF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E73382623568F005652FF /* Home.swift */; };
 		955E733C262356F3005652FF /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
+		95602702265ABB440046F97E /* InsidersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602701265ABB440046F97E /* InsidersResponse.swift */; };
+		95602704265ABB990046F97E /* SummaryInsiderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* SummaryInsiderModel.swift */; };
+		95602706265ABC660046F97E /* Insiders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602705265ABC660046F97E /* Insiders.swift */; };
 		95606D082647005B0072C02C /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95606D072647005B0072C02C /* StockCharts */; };
 		95613AD9264FC5A900D4CE8F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613AD8264FC5A900D4CE8F /* Company.swift */; };
 		95613ADD264FC6A200D4CE8F /* ChartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADC264FC6A200D4CE8F /* ChartResponse.swift */; };
@@ -120,6 +123,9 @@
 		9550444B26111FED000E0BCB /* StockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItem.swift; sourceTree = "<group>"; };
 		955E73382623568F005652FF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		955E733B262356F3005652FF /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
+		95602701265ABB440046F97E /* InsidersResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsidersResponse.swift; sourceTree = "<group>"; };
+		95602703265ABB990046F97E /* SummaryInsiderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryInsiderModel.swift; sourceTree = "<group>"; };
+		95602705265ABC660046F97E /* Insiders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Insiders.swift; sourceTree = "<group>"; };
 		95613AD8264FC5A900D4CE8F /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		95613ADC264FC6A200D4CE8F /* ChartResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartResponse.swift; sourceTree = "<group>"; };
 		95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsModel.swift; sourceTree = "<group>"; };
@@ -286,6 +292,7 @@
 				95A07F7526305AE3009865AA /* TradingDatesModel.swift */,
 				95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */,
 				9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */,
+				95602703265ABB990046F97E /* SummaryInsiderModel.swift */,
 			);
 			path = "Global Models";
 			sourceTree = "<group>";
@@ -447,6 +454,7 @@
 			children = (
 				95E31C0C26472CA000106B98 /* CompanyView.swift */,
 				95E31C132647363800106B98 /* Chart.swift */,
+				95602705265ABC660046F97E /* Insiders.swift */,
 				95E31C0E26472CB600106B98 /* Helpers */,
 				95E31C0F26472CC000106B98 /* Networking */,
 			);
@@ -468,6 +476,7 @@
 			children = (
 				95613AD8264FC5A900D4CE8F /* Company.swift */,
 				95613ADC264FC6A200D4CE8F /* ChartResponse.swift */,
+				95602701265ABB440046F97E /* InsidersResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -646,6 +655,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95602704265ABB990046F97E /* SummaryInsiderModel.swift in Sources */,
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
 				95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */,
@@ -685,7 +695,9 @@
 				95E31C142647363800106B98 /* Chart.swift in Sources */,
 				951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */,
 				951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */,
+				95602702265ABB440046F97E /* InsidersResponse.swift in Sources */,
 				95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */,
+				95602706265ABC660046F97E /* Insiders.swift in Sources */,
 				95E31C0D26472CA000106B98 /* CompanyView.swift in Sources */,
 				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
 				9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */,

@@ -11,6 +11,9 @@ class Company: ObservableObject {
     @Published var showChartView = false
     @Published var chartData = ChartResponse()
     
+    @Published var showInsidersView = false
+    @Published var insidersData = InsidersResponse()
+    
     func request(_ url: String, _ requestType: RequestType, _ view: String) {
         if view == "chart" {
             genericRequest(url: url, model: ChartResponse.self) { response in
@@ -24,6 +27,10 @@ class Company: ObservableObject {
                 }
                 
                 self.showChartView = true
+            }
+        } else if view == "insider" {
+            genericRequest(url: url, model: InsidersResponse.self) { response in
+                self.insidersData = response
             }
         }
     }
