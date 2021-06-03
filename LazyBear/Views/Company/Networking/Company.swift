@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Bazooka
 
 class Company: ObservableObject {
     @Published var showChartView = false
@@ -15,8 +16,9 @@ class Company: ObservableObject {
     @Published var insidersData = InsidersResponse()
     
     func request(_ url: String, _ requestType: RequestType, _ view: String) {
+        let bazooka = Bazooka()
         if view == "chart" {
-            genericRequest(url: url, model: ChartResponse.self) { response in
+            bazooka.request(url: url, model: ChartResponse.self) { response in
                 switch requestType {
                 case .initial:
                     self.chartData = response
@@ -29,7 +31,7 @@ class Company: ObservableObject {
                 self.showChartView = true
             }
         } else if view == "insider" {
-            genericRequest(url: url, model: InsidersResponse.self) { response in
+            bazooka.request(url: url, model: InsidersResponse.self) { response in
                 self.insidersData = response
             }
         }

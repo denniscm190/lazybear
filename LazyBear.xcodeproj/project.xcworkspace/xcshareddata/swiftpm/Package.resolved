@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "Bazooka",
+        "repositoryURL": "https://github.com/denniscm190/Bazooka.git",
+        "state": {
+          "branch": null,
+          "revision": "4ac8be52a434c25d46d2486b66ba33f53ffdddb6",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "StockCharts",
         "repositoryURL": "https://github.com/denniscm190/StockCharts.git",
         "state": {

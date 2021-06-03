@@ -50,6 +50,7 @@
 		95721DB4262787EF00EC527B /* ExtensiveList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95721DB3262787EF00EC527B /* ExtensiveList.swift */; };
 		95721DB826278EC100EC527B /* CurrencyListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95721DB726278EC100EC527B /* CurrencyListItem.swift */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
+		9594331326691789004A0339 /* Bazooka in Frameworks */ = {isa = PBXBuildFile; productRef = 9594331226691789004A0339 /* Bazooka */; };
 		9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
 		95A07F5D26305A8F009865AA /* IntradayPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F5C26305A8F009865AA /* IntradayPricesModel.swift */; };
 		95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
@@ -60,7 +61,6 @@
 		95A4B933263E9F810056F036 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 95A4B932263E9F810056F036 /* Introspect */; };
 		95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */; };
 		95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */; };
-		95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5186926185AAB0002D27C /* GenericRequest.swift */; };
 		95A5188626186F590002D27C /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A5188526186F590002D27C /* PriceView.swift */; };
 		95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7C065261639DF003E2EC1 /* SearchView.swift */; };
 		95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7C0732616409D003E2EC1 /* ParseJSON.swift */; };
@@ -155,7 +155,6 @@
 		95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorList.swift; sourceTree = "<group>"; };
 		95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorSearchBar.swift; sourceTree = "<group>"; };
 		95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorRow.swift; sourceTree = "<group>"; };
-		95A5186926185AAB0002D27C /* GenericRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericRequest.swift; sourceTree = "<group>"; };
 		95A5188526186F590002D27C /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		95A7C065261639DF003E2EC1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		95A7C0732616409D003E2EC1 /* ParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
@@ -194,6 +193,7 @@
 			files = (
 				95606D082647005B0072C02C /* StockCharts in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
+				9594331326691789004A0339 /* Bazooka in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
 			);
@@ -258,7 +258,6 @@
 			children = (
 				952045142610C7C600A76362 /* ConvertEpoch.swift */,
 				95A7C0732616409D003E2EC1 /* ParseJSON.swift */,
-				95A5186926185AAB0002D27C /* GenericRequest.swift */,
 			);
 			path = "Global functions";
 			sourceTree = "<group>";
@@ -555,6 +554,7 @@
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 				95A4B932263E9F810056F036 /* Introspect */,
 				95606D072647005B0072C02C /* StockCharts */,
+				9594331226691789004A0339 /* Bazooka */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -595,6 +595,7 @@
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */,
+				9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -658,7 +659,6 @@
 				95602704265ABB990046F97E /* SummaryInsiderModel.swift in Sources */,
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
-				95A5186A26185AAB0002D27C /* GenericRequest.swift in Sources */,
 				95A5188626186F590002D27C /* PriceView.swift in Sources */,
 				95613AE1264FD34100D4CE8F /* NewsRow.swift in Sources */,
 				95613ADD264FC6A200D4CE8F /* ChartResponse.swift in Sources */,
@@ -1038,6 +1038,14 @@
 				minimumVersion = 1.1.3;
 			};
 		};
+		9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/denniscm190/Bazooka.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
@@ -1058,6 +1066,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */;
 			productName = StockCharts;
+		};
+		9594331226691789004A0339 /* Bazooka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */;
+			productName = Bazooka;
 		};
 		95A4B932263E9F810056F036 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;

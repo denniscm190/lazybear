@@ -6,13 +6,15 @@
 //
 
 import SwiftUI
+import Bazooka
 
 class Profile: ObservableObject {
     @Published var showView = false
     @Published var data = ProfileResponse()
     
     func request(_ url: String, _ requestType: RequestType) {
-        genericRequest(url: url, model: ProfileResponse.self) { response in
+        let bazooka = Bazooka()
+        bazooka.request(url: url, model: ProfileResponse.self) { response in
             switch requestType {
             case .initial:
                 self.data = response

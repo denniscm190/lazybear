@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Bazooka
 
 struct WatchlistCreatorList: View {
     @ObservedObject var watchlistCreatorClass: WatchlistCreatorClass
@@ -44,7 +45,8 @@ struct WatchlistCreatorList: View {
     }
     
     private func request(_ url: String) {
-        genericRequest(url: url, model: [SearchResponse].self) { response in
+        let bazooka = Bazooka()
+        bazooka.request(url: url, model: [SearchResponse].self) { response in
             self.companies = response
         }
     }
