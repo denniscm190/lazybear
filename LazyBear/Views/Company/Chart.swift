@@ -24,7 +24,7 @@ struct Chart: View {
             VStack {
                 DatePicker(ranges: ranges, selectedRange: $selectedRange)
                     .onChange(of: selectedRange, perform: { range in
-                        let url = "https://api.lazybear.app/company/chart/type=refresh/symbol=\(symbol)/range=\(range.lowercased())"
+                        let url = "https://api.lazybear.app/company/chart/symbol=\(symbol)/type=refresh/range=\(range.lowercased())"
                         company.request(url, .refresh, "chart")
                     })
                 
@@ -68,12 +68,12 @@ struct Chart: View {
             .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
             .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
             .onReceive(timer) { _ in
-                let url = "https://api.lazybear.app/company/chart/type=streaming/symbol=\(symbol)"
+                let url = "https://api.lazybear.app/company/chart/symbol=\(symbol)/type=streaming"
                 company.request(url, .streaming, "chart") }  // Receive timer notification
         } else {
             ProgressView()
                 .onAppear {
-                    let url = "https://api.lazybear.app/company/chart/type=init/symbol=\(symbol)"
+                    let url = "https://api.lazybear.app/company/chart/symbol=\(symbol)/type=init"
                     company.request(url, .initial, "chart")
                 }
         }

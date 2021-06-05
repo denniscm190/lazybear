@@ -9,28 +9,35 @@ import SwiftUI
 
 struct NewsRow: View {
     var new: LatestNewsModel
+    @State private var showingSafariView = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(new.source.uppercased())
-                .font(.caption)
-                .opacity(0.5)
-            
-            Text(new.headline)
-                .font(.headline)
-            
-            Text(new.summary)
-                .opacity(0.5)
-                .font(.subheadline)
-                .lineLimit(1)
-                .padding(.bottom, 5)
-            
-            let humanDate = convertDate()
-            Text("\(humanDate) ago")
-                .font(.caption2)
-                .opacity(0.5)
-            
-            Divider()
+        Button(action: { showingSafariView = true }) {
+            VStack(alignment: .leading) {
+                Text(new.source.uppercased())
+                    .font(.caption)
+                    .opacity(0.5)
+                
+                Text(new.headline)
+                    .font(.headline)
+                
+                Text(new.summary)
+                    .opacity(0.5)
+                    .font(.subheadline)
+                    .lineLimit(1)
+                    .padding(.bottom, 5)
+                
+                let humanDate = convertDate()
+                Text("\(humanDate) ago")
+                    .font(.caption2)
+                    .opacity(0.5)
+                
+                Divider()
+            }
+        }
+        .buttonStyle(PlainButtonStyle())
+        .sheet(isPresented: $showingSafariView) {
+            SFSafariViewWrapper(url: URL(string: new.url)!)
         }
     }
     

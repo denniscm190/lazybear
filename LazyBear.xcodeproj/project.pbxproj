@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		950272CD2635AACD003E779D /* ToolbarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950272CC2635AACD003E779D /* ToolbarMenu.swift */; };
+		950857A7266BD12D005357BA /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 950857A6266BD12D005357BA /* BetterSafariView */; };
+		950857A9266BD2C6005357BA /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950857A8266BD2C6005357BA /* SFSafariViewWrapper.swift */; };
+		950857D1266BE54B005357BA /* InsiderRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950857D0266BE54B005357BA /* InsiderRow.swift */; };
+		950857D3266BE55F005357BA /* RowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950857D2266BE55F005357BA /* RowShape.swift */; };
 		950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C36E2260FB6180081CF53 /* HapticsManager.swift */; };
 		950C57132629EF9100F234FE /* LazyBearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57122629EF9100F234FE /* LazyBearTests.swift */; };
 		950C57232629EFC200F234FE /* LazyBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57222629EFC200F234FE /* LazyBearUITests.swift */; };
@@ -97,6 +101,9 @@
 
 /* Begin PBXFileReference section */
 		950272CC2635AACD003E779D /* ToolbarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarMenu.swift; sourceTree = "<group>"; };
+		950857A8266BD2C6005357BA /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
+		950857D0266BE54B005357BA /* InsiderRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRow.swift; sourceTree = "<group>"; };
+		950857D2266BE55F005357BA /* RowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowShape.swift; sourceTree = "<group>"; };
 		950C36E2260FB6180081CF53 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		950C57102629EF9100F234FE /* LazyBearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		950C57122629EF9100F234FE /* LazyBearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearTests.swift; sourceTree = "<group>"; };
@@ -192,6 +199,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95606D082647005B0072C02C /* StockCharts in Frameworks */,
+				950857A7266BD12D005357BA /* BetterSafariView in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				9594331326691789004A0339 /* Bazooka in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
@@ -390,6 +398,7 @@
 				9550444B26111FED000E0BCB /* StockItem.swift */,
 				95BD2FB226341D36008B6752 /* BlurBackground.swift */,
 				95E8BAA22656D86E0016AE72 /* RequestType.swift */,
+				950857D2266BE55F005357BA /* RowShape.swift */,
 			);
 			path = "Global Helpers";
 			sourceTree = "<group>";
@@ -466,6 +475,8 @@
 				95E31C1726473A4D00106B98 /* CompanyHeader.swift */,
 				95E31C15264736BE00106B98 /* DatePicker.swift */,
 				95613AE0264FD34100D4CE8F /* NewsRow.swift */,
+				950857A8266BD2C6005357BA /* SFSafariViewWrapper.swift */,
+				950857D0266BE54B005357BA /* InsiderRow.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -555,6 +566,7 @@
 				95A4B932263E9F810056F036 /* Introspect */,
 				95606D072647005B0072C02C /* StockCharts */,
 				9594331226691789004A0339 /* Bazooka */,
+				950857A6266BD12D005357BA /* BetterSafariView */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -596,6 +608,7 @@
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */,
 				9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */,
+				950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -669,6 +682,7 @@
 				950272CD2635AACD003E779D /* ToolbarMenu.swift in Sources */,
 				9550443A26111B2B000E0BCB /* HomeView.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
+				950857D1266BE54B005357BA /* InsiderRow.swift in Sources */,
 				95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */,
 				95E8BAA32656D86E0016AE72 /* RequestType.swift in Sources */,
 				954D7EA8260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
@@ -699,6 +713,7 @@
 				95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */,
 				95602706265ABC660046F97E /* Insiders.swift in Sources */,
 				95E31C0D26472CA000106B98 /* CompanyView.swift in Sources */,
+				950857A9266BD2C6005357BA /* SFSafariViewWrapper.swift in Sources */,
 				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
 				9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */,
 				9550444626111EE5000E0BCB /* SectorItem.swift in Sources */,
@@ -711,6 +726,7 @@
 				95A4B930263E9F530056F036 /* WatchlistCreatorList.swift in Sources */,
 				9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */,
 				95721DB4262787EF00EC527B /* ExtensiveList.swift in Sources */,
+				950857D3266BE55F005357BA /* RowShape.swift in Sources */,
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
 				95BD2FAE26341BD1008B6752 /* TextfieldAlert.swift in Sources */,
 				95A07F5D26305A8F009865AA /* IntradayPricesModel.swift in Sources */,
@@ -1022,6 +1038,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
 		954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
@@ -1057,6 +1081,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		950857A6266BD12D005357BA /* BetterSafariView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */;
+			productName = BetterSafariView;
+		};
 		954D7EC1260BE70C00A13C50 /* SwiftlySearch */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;

@@ -95,8 +95,8 @@ struct ProfileView: View {
      to make the API request and refresh correctly the list
      */
     private func refreshList() {
-        print("Companies in watchlist -> \(watchlistCompanies.count)")
-        print("Companies requested -> \(profile.data.quotes!.count)")
+//        print("Companies in watchlist -> \(watchlistCompanies.count)")
+//        print("Companies requested -> \(profile.data.quotes!.count)")
         
         if profile.data.quotes!.count < watchlistCompanies.count {
             prepareUrl(.initial)
