@@ -12,10 +12,12 @@ struct TradingDates: View {
     var dates: [TradingDatesModel]
     @Environment(\.presentationMode) var tradingDatesPresent
     
+    let columns = [GridItem(.adaptive(minimum: 100))]
+    
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(spacing: 20) {
+                LazyVGrid(columns: columns, spacing: 20) {
                     ForEach(getArrayOfDates(), id: \.self) { date in
                         TradingDatesItem(date: date)
                     }

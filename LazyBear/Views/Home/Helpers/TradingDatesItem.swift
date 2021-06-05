@@ -14,36 +14,21 @@ struct TradingDatesItem: View {
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
             .foregroundColor(Color(.secondarySystemBackground))
-            .frame(height: 100)
+            .frame(width: 100, height: 100)
             .overlay(
-                HStack {
-                    Rectangle()
-                        .frame(width: 15)
+                VStack {
+                    Text(get(.month))
+                        .fontWeight(.semibold)
+                    
+                    Text(get(.day))
+                        .font(.title)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color("default"))
-                        
-                    VStack {
-                        Text(get(.month))
-                            .fontWeight(.semibold)
-                        
-                        Text(get(.day))
-                            .font(.title)
-                            .fontWeight(.semibold)
-                            .foregroundColor(Color("default"))
-                        
-                        Text(get(.year))
-                            .font(.caption)
-                            .fontWeight(.semibold)
-                    }
                     
-                    Spacer()
-                    VStack {
-                        Text("US Markets are closed")
-                            .fontWeight(.semibold)
-                    }
-                    
-                    Spacer()
+                    Text(get(.year))
+                        .font(.caption)
+                        .fontWeight(.semibold)
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 20))
             )
     }
     
