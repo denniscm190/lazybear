@@ -22,6 +22,7 @@
 		951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E92613A37C007C0F36 /* TradingDatesItem.swift */; };
 		952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952045142610C7C600A76362 /* ConvertEpoch.swift */; };
 		9523ED422615BDB2006D3D6F /* phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 9523ED412615BDB2006D3D6F /* phrases.json */; };
+		9526E56B266D34DF004B84EF /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 9526E56A266D34DF004B84EF /* StockCharts */; };
 		9529947E2629CA3E005F0AB0 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529947D2629CA3E005F0AB0 /* Search.swift */; };
 		952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952994812629CA46005F0AB0 /* SearchResponse.swift */; };
 		954D7EA7260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */; };
@@ -37,7 +38,6 @@
 		95602702265ABB440046F97E /* InsidersResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602701265ABB440046F97E /* InsidersResponse.swift */; };
 		95602704265ABB990046F97E /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
 		95602706265ABC660046F97E /* Insiders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602705265ABC660046F97E /* Insiders.swift */; };
-		95606D082647005B0072C02C /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95606D072647005B0072C02C /* StockCharts */; };
 		95613AD9264FC5A900D4CE8F /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613AD8264FC5A900D4CE8F /* Company.swift */; };
 		95613ADD264FC6A200D4CE8F /* ChartResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADC264FC6A200D4CE8F /* ChartResponse.swift */; };
 		95613ADF264FC6FD00D4CE8F /* LatestNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */; };
@@ -198,9 +198,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95606D082647005B0072C02C /* StockCharts in Frameworks */,
 				950857A7266BD12D005357BA /* BetterSafariView in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
+				9526E56B266D34DF004B84EF /* StockCharts in Frameworks */,
 				9594331326691789004A0339 /* Bazooka in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
@@ -564,9 +564,9 @@
 			packageProductDependencies = (
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 				95A4B932263E9F810056F036 /* Introspect */,
-				95606D072647005B0072C02C /* StockCharts */,
 				9594331226691789004A0339 /* Bazooka */,
 				950857A6266BD12D005357BA /* BetterSafariView */,
+				9526E56A266D34DF004B84EF /* StockCharts */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -606,9 +606,9 @@
 			packageReferences = (
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */,
 				9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */,
 				950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */,
+				9526E569266D34DF004B84EF /* XCRemoteSwiftPackageReference "StockCharts" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -1046,20 +1046,20 @@
 				minimumVersion = 2.3.1;
 			};
 		};
+		9526E569266D34DF004B84EF /* XCRemoteSwiftPackageReference "StockCharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.2;
+			};
+		};
 		954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.2.4;
-			};
-		};
-		95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.3;
 			};
 		};
 		9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */ = {
@@ -1086,15 +1086,15 @@
 			package = 950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */;
 			productName = BetterSafariView;
 		};
+		9526E56A266D34DF004B84EF /* StockCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9526E569266D34DF004B84EF /* XCRemoteSwiftPackageReference "StockCharts" */;
+			productName = StockCharts;
+		};
 		954D7EC1260BE70C00A13C50 /* SwiftlySearch */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
 			productName = SwiftlySearch;
-		};
-		95606D072647005B0072C02C /* StockCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95606D062647005B0072C02C /* XCRemoteSwiftPackageReference "StockCharts" */;
-			productName = StockCharts;
 		};
 		9594331226691789004A0339 /* Bazooka */ = {
 			isa = XCSwiftPackageProductDependency;

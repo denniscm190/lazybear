@@ -63,9 +63,7 @@ struct ProfileView: View {
             }
         } else {
             ProgressView()
-                .onAppear {
-                    print("Appeared")
-                    prepareUrl(.initial) }
+                .onAppear { prepareUrl(.initial) }
         }
     }
     
