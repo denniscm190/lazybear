@@ -16,27 +16,35 @@ struct NewsRow: View {
             RowShape()
                 .frame(height: 140)
                 .overlay(
-                    VStack(alignment: .leading) {
-                        Text(new.source.uppercased())
-                            .font(.caption)
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text(new.source.uppercased())
+                                .font(.caption)
+                                .opacity(0.5)
+                            
+                            Text(new.headline)
+                                .font(.headline)
+                            
+                            Text(new.summary)
+                                .opacity(0.5)
+                                .font(.subheadline)
+                                .lineLimit(1)
+                                .padding(.bottom, 5)
+                            
+                            let humanDate = convertEpoch(new.datetime, true)
+                            Text("\(humanDate) ago")
+                                .font(.caption2)
+                                .opacity(0.5)
+                            
+                        }
+                        .padding()
+                        
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .imageScale(.large)
                             .opacity(0.5)
-                        
-                        Text(new.headline)
-                            .font(.headline)
-                        
-                        Text(new.summary)
-                            .opacity(0.5)
-                            .font(.subheadline)
-                            .lineLimit(1)
-                            .padding(.bottom, 5)
-                        
-                        let humanDate = convertEpoch(new.datetime, true)
-                        Text("\(humanDate) ago")
-                            .font(.caption2)
-                            .opacity(0.5)
-                        
+                            .padding()
                     }
-                    .padding()
                     ,alignment: .leading
                 )
         }

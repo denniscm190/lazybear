@@ -41,8 +41,12 @@ struct ProfileView: View {
                     }
                 }
                 .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
-                .onReceive(timer) { _ in prepareUrl(.streaming) }
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
+                .onReceive(timer) { _ in
+                    if !showCreateNewWatchlist {
+                        prepareUrl(.streaming)
+                    }
+                }
                 .navigationTitle("My profile")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
@@ -59,7 +63,9 @@ struct ProfileView: View {
             }
         } else {
             ProgressView()
-                .onAppear { prepareUrl(.initial) }
+                .onAppear {
+                    print("Appeared")
+                    prepareUrl(.initial) }
         }
     }
     

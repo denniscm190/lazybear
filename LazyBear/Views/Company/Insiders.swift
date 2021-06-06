@@ -14,14 +14,9 @@ struct Insiders: View {
     var body: some View {
         if company.showInsidersView {
             VStack(alignment: .leading) {
-                HStack {
-                    Text("Top net buyers")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                    
-                    Spacer()
-                    Button("See all", action: {  })
-                }
+                Text("Top 10 insiders")
+                    .font(.title3)
+                    .fontWeight(.semibold)
                 
                 if let insiderSummer = company.insidersData.insiderRoster {
                     
@@ -34,7 +29,6 @@ struct Insiders: View {
                             let percentage = Double(insider.position) / Double(totalPositions)
                             
                             InsiderRow(percentageOfWidth: CGFloat(percentage), insiderRoster: insider)
-                                .onAppear { print(percentage) }
                         }
                     }
                 }

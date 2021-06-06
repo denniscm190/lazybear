@@ -35,11 +35,6 @@ struct ContentView: View {
                     Text("Profile")
                 }
                 .tag(3)
-//                Text("The Last Tab")
-//                    .tabItem {
-//                        Image(systemName: "4.square.fill")
-//                        Text("Forth")
-//                    }
         }
         .onAppear {
 //            isAppAlreadyLaunchedOnce()
