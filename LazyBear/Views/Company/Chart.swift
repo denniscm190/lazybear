@@ -39,9 +39,9 @@ struct Chart: View {
                                     let changePercent = quote.changePercent ?? 0
                                     let priceViewStyle = PriceViewStyle(
                                         alignment: .leading,
-                                        priceFont: .headline,
+                                        priceFont: .title3,
                                         priceFontWeight: .semibold,
-                                        percentFont: .body,
+                                        percentFont: .headline,
                                         percentFontWeight: .medium
                                     )
                                     PriceView(latestPrice: latestPrice, changePercent: changePercent, style: priceViewStyle)
@@ -50,11 +50,13 @@ struct Chart: View {
                             }
                             .padding([.top, .leading, .trailing])
                             
+                            Spacer()
                             if let historicalPrices = company.chartData.historicalPrices {
-                                if let prices = historicalPrices.compactMap { $0.close } {  // Map without nil
-                                    LineChartView(data: prices, dates: nil, hours: nil, dragGesture: true)
-                                        .padding(.bottom)
-                                }
+                                let prices = historicalPrices.compactMap { $0.close }
+                                let dates = historicalPrices.compactMap { $0.date }
+//                                let hours = historicalPrices.compactMap { $0.minute }
+                                LineChartView(data: prices, dates: dates, hours: nil, dragGesture: true)
+                                    .padding(.bottom)
                             }
                         }
                     )
@@ -68,7 +70,7 @@ struct Chart: View {
                     .padding(.top)
                 }
             }
-            .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
+            .onAppear { print("appeared"); self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
             .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
             .onReceive(timer) { _ in
                 let url = "https://api.lazybear.app/company/chart/symbol=\(symbol)/type=streaming"
@@ -80,6 +82,14 @@ struct Chart: View {
                     company.request(url, .initial, "chart")
                 }
         }
+    }
+    
+    /*
+     Price data is cached, so when the view disappears and appears again in a few seconds, the cached data is shown up. But the date range
+     is incorrect because, always when this view appears, selectedRange is "3M".
+     */
+    private func checkDateRange() {
+        
     }
 }
 

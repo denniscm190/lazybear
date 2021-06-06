@@ -13,13 +13,12 @@ struct Insiders: View {
     
     var body: some View {
         if company.showInsidersView {
-            VStack(alignment: .leading) {
-                Text("Top 10 insiders")
-                    .font(.title3)
-                    .fontWeight(.semibold)
+            if let insiderSummer = company.insidersData.insiderRoster {
+                VStack(alignment: .leading) {
+                    Text("Top 10 insiders")
+                        .font(.title3)
+                        .fontWeight(.semibold)
                 
-                if let insiderSummer = company.insidersData.insiderRoster {
-                    
                     // Get total shares owned by the top 10 insiders
                     let totalPositions =  insiderSummer.map { $0.position }.reduce(0, +)
                     VStack(alignment: .leading, spacing: 20) {

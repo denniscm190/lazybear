@@ -12,7 +12,9 @@ struct CompanyList: View {
     
     var body: some View {
         List(searchResult, id: \.self) { company in
-            SearchedCompanyItem(company: company)
+            NavigationLink(destination: CompanyView(symbol: company.symbol!)) {
+                SearchedCompanyItem(company: company)
+            }
         }
     }
 }

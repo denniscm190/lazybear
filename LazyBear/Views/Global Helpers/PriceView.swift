@@ -14,7 +14,7 @@ struct PriceView: View {
     
     var body: some View {
         VStack(alignment: style.alignment) {
-            Text("$\(latestPrice, specifier: "%.2f")")
+            Text("\(latestPrice, specifier: "%.2f")")
                 .foregroundColor(changePercent < 0 ? .red: .green)
                 .font(style.priceFont)
                 .fontWeight(style.priceFontWeight)
