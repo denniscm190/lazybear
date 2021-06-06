@@ -60,9 +60,12 @@ struct Chart: View {
                     )
                 
                 if let latestNews = company.chartData.latestNews {
-                    ForEach(latestNews, id: \.self) { new in
-                        NewsRow(new: new)
+                    VStack(spacing: 20) {
+                        ForEach(latestNews, id: \.self) { new in
+                            NewsRow(new: new)
+                        }
                     }
+                    .padding(.top)
                 }
             }
             .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer

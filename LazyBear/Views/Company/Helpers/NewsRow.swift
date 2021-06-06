@@ -13,47 +13,37 @@ struct NewsRow: View {
     
     var body: some View {
         Button(action: { showingSafariView = true }) {
-            VStack(alignment: .leading) {
-                Text(new.source.uppercased())
-                    .font(.caption)
-                    .opacity(0.5)
-                
-                Text(new.headline)
-                    .font(.headline)
-                
-                Text(new.summary)
-                    .opacity(0.5)
-                    .font(.subheadline)
-                    .lineLimit(1)
-                    .padding(.bottom, 5)
-                
-                let humanDate = convertDate()
-                Text("\(humanDate) ago")
-                    .font(.caption2)
-                    .opacity(0.5)
-                
-                Divider()
-            }
+            RowShape()
+                .frame(height: 140)
+                .overlay(
+                    VStack(alignment: .leading) {
+                        Text(new.source.uppercased())
+                            .font(.caption)
+                            .opacity(0.5)
+                        
+                        Text(new.headline)
+                            .font(.headline)
+                        
+                        Text(new.summary)
+                            .opacity(0.5)
+                            .font(.subheadline)
+                            .lineLimit(1)
+                            .padding(.bottom, 5)
+                        
+                        let humanDate = convertEpoch(new.datetime, true)
+                        Text("\(humanDate) ago")
+                            .font(.caption2)
+                            .opacity(0.5)
+                        
+                    }
+                    .padding()
+                    ,alignment: .leading
+                )
         }
         .buttonStyle(PlainButtonStyle())
         .sheet(isPresented: $showingSafariView) {
             SFSafariViewWrapper(url: URL(string: new.url)!)
         }
-    }
-    
-    /*
-     Convert Epoch time to human readable
-     */
-    private func convertDate() -> String {
-        let now = Date() // Current date
-        // Time when the article was published. Divide new.datetime by 1,000 because
-        // TimeInterval() function must be in seconds, not in miliseconds
-        let articlePublished = Date(timeIntervalSince1970: TimeInterval(new.datetime)/1000)
-        let formatter = DateComponentsFormatter()
-        formatter.unitsStyle = .full
-        let humanDate = formatter.string(from: articlePublished, to: now)!
-        
-        return humanDate
     }
 }
 

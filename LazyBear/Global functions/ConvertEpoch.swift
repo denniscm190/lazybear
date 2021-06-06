@@ -7,14 +7,27 @@
 
 import SwiftUI
 
-// Convert Epoch time to human date
-func convertEpoch(_ miliseconds: Int) -> String {
+/*
+ Convert Epoch time (in miliseconds) to human readable date
+ */
+func convertEpoch(_ miliseconds: Int, _ interval: Bool) -> String {
     let now = Date() // Current date
+    
     // TimeInterval() function must be in seconds, not in miliseconds
-    let articlePublished = Date(timeIntervalSince1970: TimeInterval(miliseconds/1000))
+    let convertedDate = Date(timeIntervalSince1970: TimeInterval(miliseconds/1000))
+    
     let formatter = DateComponentsFormatter()
     formatter.unitsStyle = .abbreviated
-    let humanDate = formatter.string(from: articlePublished, to: now)!
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateStyle = .medium
+    
+    var humanDate = String()
+    if interval {
+        humanDate = formatter.string(from: convertedDate, to: now)!
+    } else {
+        humanDate = dateFormatter.string(from: convertedDate)
+    }
     
     return humanDate
 }

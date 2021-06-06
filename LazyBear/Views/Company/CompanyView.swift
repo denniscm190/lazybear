@@ -16,25 +16,38 @@ struct CompanyView: View {
     
     // Views
     @State private var showChartView = true
+    @State private var showInsiderView = false
     
     var body: some View {
         ScrollView {
             VStack {
                 CompanyHeader(symbol: symbol, showViewSelector: $showViewSelector)
+                    .padding(.bottom)
                 
                 // Chart View
                 if showChartView {
                     Chart(company: company, symbol: symbol)
+                } else if showInsiderView {
+                    Insiders(company: company, symbol: symbol)
                 }
             }
             .padding()
         }
         .actionSheet(isPresented: $showViewSelector) {
             ActionSheet(title: Text("Select an option"), buttons: [
-                .default(Text("Chart & News")) { showChartView = true },
+                .default(Text("Chart & News")) { resetViews(); showChartView = true },
+                .default(Text("Insiders")) { resetViews(); showInsiderView = true },
                 .cancel()
             ])
         }
+    }
+    
+    /*
+     Hide all views to show later the one tapped
+     */
+    private func resetViews() {
+        showChartView = false
+        showInsiderView = false
     }
 }
 

@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct InsidersResponse: Codable {
-    var insiderSummary: [SummaryInsiderModel]?
+    var insiderRoster: [InsiderRosterModel]?
     
     private enum CodingKeys: String, CodingKey {
-        case insiderSummary = "insider_summary"
+        case insiderRoster = "insider_roster"
     }
 }

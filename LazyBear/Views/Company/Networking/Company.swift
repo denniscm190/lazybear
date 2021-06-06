@@ -33,6 +33,8 @@ class Company: ObservableObject {
         } else if view == "insider" {
             bazooka.request(url: url, model: InsidersResponse.self) { response in
                 self.insidersData = response
+                
+                self.showInsidersView = true
             }
         }
     }
