@@ -17,41 +17,19 @@ struct TradingDatesItem: View {
             .frame(width: 100, height: 100)
             .overlay(
                 VStack {
-                    Text(get(.month))
+                    Text(getDateComponents(.month, date))
                         .fontWeight(.semibold)
                     
-                    Text(get(.day))
+                    Text(getDateComponents(.day, date))
                         .font(.title)
                         .fontWeight(.semibold)
                         .foregroundColor(Color("default"))
                     
-                    Text(get(.year))
+                    Text(getDateComponents(.year, date))
                         .font(.caption)
                         .fontWeight(.semibold)
                 }
             )
-    }
-    
-    private enum Components {
-        case day, month, year
-    }
-    
-    private func get(_ components: Components) -> String {
-        let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: date)
-        
-        switch components {
-        case .year:
-            return "\(dateComponents.year ?? 2020)"
-        case .day:
-            return "\(dateComponents.day ?? 1)"
-        case .month:
-            let dateFormatter = DateFormatter()
-            let monthNumber = dateComponents.month ?? 1
-            let monthLetters = dateFormatter.shortMonthSymbols[monthNumber-1]
-            
-            return "\(monthLetters)"
-        }
-        
     }
 }
 
