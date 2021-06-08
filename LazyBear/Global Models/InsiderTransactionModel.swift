@@ -7,13 +7,13 @@
 
 import SwiftUI
 
-struct InsiderTransactionModel: Codable {
+struct InsiderTransactionModel: Codable, Hashable {
     var filingDate: String
     var fullName: String
-    var postShares: Int
+    var postShares: Int?
     var reportedTitle: String?
     var transactionCode: String
-    var transactionPrice: Float
-    var transactionShares: Int
-    var transactionValue: Float
+    var transactionPrice: Float?
+    var transactionShares: Int?
+    var transactionValue: Float?
 }

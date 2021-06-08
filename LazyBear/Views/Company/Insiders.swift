@@ -13,12 +13,15 @@ struct Insiders: View {
     
     var body: some View {
         if company.showInsidersView {
-            if let insiderSummary = company.insidersData.insiderRoster {
-                InsiderList(insiderSummary: insiderSummary, numberOfRows: 4)
-            }
-            
-            if let insiderTransactions = company.insidersData.insiderTransactions {
+            VStack {
+                if let insiderSummary = company.insidersData.insiderRoster {
+                    InsiderList(insiderSummary: insiderSummary)
+                        .padding(.bottom)
+                }
                 
+                if let transactions = company.insidersData.insiderTransactions {
+                    TransactionList(transactions: transactions)
+                }
             }
         } else {
             ProgressView()

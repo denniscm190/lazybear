@@ -9,8 +9,6 @@ import SwiftUI
 
 struct InsiderList: View {
     var insiderSummary: [InsiderRosterModel]
-    var numberOfRows: Int
-    
     @State private var showFullList = false
     
     var body: some View {
@@ -27,7 +25,7 @@ struct InsiderList: View {
             // Get total shares owned by the top 10 insiders
             let totalPositions =  insiderSummary.map { $0.position }.reduce(0, +)
             VStack(alignment: .leading, spacing: 20) {
-                ForEach(insiderSummary.prefix(numberOfRows), id: \.self) { insider in
+                ForEach(insiderSummary.prefix(3), id: \.self) { insider in
                     
                     // Compute percentage of ownership for each insider
                     let percentage = Double(insider.position) / Double(totalPositions)
@@ -45,8 +43,8 @@ struct InsiderList: View {
 struct InsiderList_Previews: PreviewProvider {
     static var previews: some View {
         InsiderList(insiderSummary:
-                    [InsiderRosterModel(entityName: "Dennis Concepcion", position: 1234, reportDate: 1234567)],
-                    numberOfRows: 3)
+                    [InsiderRosterModel(entityName: "Dennis Concepcion", position: 1234, reportDate: 1234567)]
+        )
     }
 }
 

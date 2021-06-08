@@ -70,7 +70,7 @@ struct Chart: View {
                     .padding(.top)
                 }
             }
-            .onAppear { print("appeared"); self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
+            .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
             .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
             .onReceive(timer) { _ in
                 let url = "https://api.lazybear.app/company/chart/symbol=\(symbol)/type=streaming"

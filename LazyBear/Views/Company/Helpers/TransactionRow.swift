@@ -40,9 +40,11 @@ struct TransactionRow: View {
                     }
                     
                     Spacer()
-                    VStack(alignment: .trailing) {
-                        Text("\(transaction.transactionShares)")
-                            .foregroundColor(transaction.transactionShares < 0 ? Color(.systemRed): Color(.systemGreen))
+                    if let transactionShares = transaction.transactionShares {
+                        VStack(alignment: .trailing) {
+                            Text("\(transactionShares)")
+                                .foregroundColor(transactionShares < 0 ? Color(.systemRed): Color(.systemGreen))
+                        }
                     }
                 }
                 .padding()

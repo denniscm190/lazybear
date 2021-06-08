@@ -491,10 +491,10 @@
 				95E31C15264736BE00106B98 /* DatePicker.swift */,
 				95613AE0264FD34100D4CE8F /* NewsRow.swift */,
 				950857A8266BD2C6005357BA /* SFSafariViewWrapper.swift */,
-				950857D0266BE54B005357BA /* InsiderRow.swift */,
 				95CCFB57266E7F4F00C384A1 /* InsiderList.swift */,
-				95CCFB59266E841B00C384A1 /* TransactionRow.swift */,
+				950857D0266BE54B005357BA /* InsiderRow.swift */,
 				95CCFB5B266E842000C384A1 /* TransactionList.swift */,
+				95CCFB59266E841B00C384A1 /* TransactionRow.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";

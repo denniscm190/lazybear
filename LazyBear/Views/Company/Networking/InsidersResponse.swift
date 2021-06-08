@@ -13,6 +13,6 @@ struct InsidersResponse: Codable {
     
     private enum CodingKeys: String, CodingKey {
         case insiderRoster = "insider_roster"
-        case insiderTransactions
+        case insiderTransactions = "insider_transactions"
     }
 }
