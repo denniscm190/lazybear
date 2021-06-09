@@ -45,6 +45,7 @@ struct TransactionRow: View {
                             Text("\(transactionShares)")
                                 .foregroundColor(transactionShares < 0 ? Color(.systemRed): Color(.systemGreen))
                         }
+                        .padding(.leading)
                     }
                 }
                 .padding()

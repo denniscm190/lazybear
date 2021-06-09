@@ -72,6 +72,7 @@
 		95BB05B22670B8C3005A2029 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
 		95BD2FAE26341BD1008B6752 /* TextfieldAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */; };
 		95BD2FB326341D36008B6752 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FB226341D36008B6752 /* BlurBackground.swift */; };
+		95C6CCD92670C3BB00E60517 /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C6CCD82670C3BB00E60517 /* StatsView.swift */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
 		95CCFB58266E7F4F00C384A1 /* InsiderList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB57266E7F4F00C384A1 /* InsiderList.swift */; };
@@ -176,6 +177,7 @@
 		95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsModel.swift; sourceTree = "<group>"; };
 		95BD2FAD26341BD1008B6752 /* TextfieldAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldAlert.swift; sourceTree = "<group>"; };
 		95BD2FB226341D36008B6752 /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
+		95C6CCD82670C3BB00E60517 /* StatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionModel.swift; sourceTree = "<group>"; };
 		95CCFB57266E7F4F00C384A1 /* InsiderList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderList.swift; sourceTree = "<group>"; };
@@ -498,6 +500,7 @@
 				950857D0266BE54B005357BA /* InsiderRow.swift */,
 				95CCFB5B266E842000C384A1 /* TransactionList.swift */,
 				95CCFB59266E841B00C384A1 /* TransactionRow.swift */,
+				95C6CCD82670C3BB00E60517 /* StatsView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -716,6 +719,7 @@
 				95CCFB58266E7F4F00C384A1 /* InsiderList.swift in Sources */,
 				9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */,
 				95BB05B22670B8C3005A2029 /* KeyStatsModel.swift in Sources */,
+				95C6CCD92670C3BB00E60517 /* StatsView.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */,
 				9550444C26111FED000E0BCB /* StockItem.swift in Sources */,

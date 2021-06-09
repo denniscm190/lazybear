@@ -22,7 +22,6 @@ class Company: ObservableObject {
                 switch requestType {
                 case .initial:
                     self.chartData = response
-                    print(response)
                 case .refresh:
                     self.chartData.historicalPrices = response.historicalPrices
                 case .streaming:

@@ -19,6 +19,8 @@ struct Chart: View {
     // Set recurrent price request
     @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
     
+    @State private var showingStatistics = false
+    
     var body: some View {
         if company.showChartView {
             VStack {
@@ -43,13 +45,17 @@ struct Chart: View {
                                         orientation: .HStack,
                                         priceFont: .title3,
                                         priceFontWeight: .semibold,
-                                        percentFont: .headline,
-                                        percentFontWeight: .medium,
+                                        percentFont: .body,
+                                        percentFontWeight: .semibold,
                                         showBackground: true
                                     )
                                     PriceView(latestPrice: latestPrice, changePercent: changePercent, style: priceViewStyle)
                                 }
                                 Spacer()
+                                
+                                if let _ = company.chartData.keyStats {
+                                    Button("See stats", action: { showingStatistics = true })
+                                }
                             }
                             .padding([.top, .leading, .trailing])
                             
@@ -72,6 +78,9 @@ struct Chart: View {
                     }
                     .padding(.top)
                 }
+            }
+            .sheet(isPresented: $showingStatistics) {
+                StatsView(keyStats: company.chartData.keyStats!)
             }
             .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
             .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
