@@ -1,0 +1,37 @@
+{
+    "keyStats":
+    {
+        "avg10Volume": "10 days average volume",
+        "avg30Volume": "30 days average volume",
+        "beta": "Beta",
+        "companyName": "Company Name",
+        "day200MovingAvg": "200 days moving average",
+        "day30ChangePercent": "30 days change percent",
+        "day50MovingAvg": "50 days moving average",
+        "day5ChangePercent": "Percent change in 5 days",
+        "dividendYield": "Dividend yield",
+        "employees": "Employees",
+        "exDividendDate": "Ex dividend date",
+        "float": "Float",
+        "marketcap": "Market cap",
+        "maxChangePercent": "Max change percent",
+        "month1ChangePercent": "Percent change in 1 month",
+        "month3ChangePercent": "Percent change in 3 months",
+        "month6ChangePercent": "Percent change in 6 months",
+        "nextDividendDate": "Next dividend date",
+        "nextEarningsDate": "Next earnings date",
+        "peRatio": "PE ratio",
+        "sharesOutstanding": "Shares outstanding",
+        "ttmDividendRate": "TTM dividend rate",
+        "ttmEPS": "TTM EPS",
+        "week52Change": "Change in 52 weeks",
+        "week52High": "52 weeks high",
+        "week52HighSplitAdjustOnly": " 52 weeks high (Split adjust only)",
+        "week52Low": "52 weeks low",
+        "week52LowSplitAdjustOnly": " 52 weeks low (Split adjust only)",
+        "year1ChangePercent": "Percent change in 1 year",
+        "year2ChangePercent": "Percent change in 2 year",
+        "year5ChangePercent": "Percent change in 5 year",
+        "ytdChangePercent": "YTD percent change"
+    }
+}

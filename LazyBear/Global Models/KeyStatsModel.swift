@@ -8,30 +8,42 @@
 import SwiftUI
 
 struct KeyStatsModel: Codable {
-    var avg10Volume, avg30Volume: Int?
-    var beta: Double?
     var companyName: String?
-    var day200MovingAvg, day30ChangePercent, day50MovingAvg, day5ChangePercent: Double?
-    var dividendYield: Double?
     var employees: Int?
-    var exDividendDate: String?
-    var float, marketcap: Int?
-    var maxChangePercent, month1ChangePercent, month3ChangePercent, month6ChangePercent: Double?
-    var nextDividendDate, nextEarningsDate: String?
-    var peRatio: Double?
+    var marketcap: Int?
+    var float: Int?
     var sharesOutstanding: Int?
-    var ttmDividendRate, ttmEPS, week52Change, week52High: Double?
-    var week52HighSplitAdjustOnly, week52Low: Double?
-    var week52LowSplitAdjustOnly: Double?
-    var year1ChangePercent, year2ChangePercent, year5ChangePercent, ytdChangePercent: Double?
+    
+    var beta: Double?
+    var peRatio: Double?
+    var dividendYield: Double?
+    var ttmDividendRate: Double?
+    var ttmEPS: Double?
+    
+    var avg10Volume: Int?
+    var avg30Volume: Int?
 
-    enum CodingKeys: String, CodingKey {
-        case avg10Volume, avg30Volume, beta, companyName, day200MovingAvg, day30ChangePercent, day50MovingAvg, day5ChangePercent, dividendYield, employees, exDividendDate, float, marketcap, maxChangePercent, month1ChangePercent, month3ChangePercent, month6ChangePercent, nextDividendDate, nextEarningsDate, peRatio, sharesOutstanding, ttmDividendRate, ttmEPS
-        case week52Change = "week52change"
-        case week52High = "week52high"
-        case week52HighSplitAdjustOnly = "week52highSplitAdjustOnly"
-        case week52Low = "week52low"
-        case week52LowSplitAdjustOnly = "week52lowSplitAdjustOnly"
-        case year1ChangePercent, year2ChangePercent, year5ChangePercent, ytdChangePercent
-    }
+    var day50MovingAvg: Double?
+    var day200MovingAvg: Double?
+    
+    var week52Change: Double?
+    var week52High: Double?
+    var week52Low: Double?
+    var week52HighSplitAdjustOnly: Double?
+    var week52LowSplitAdjustOnly: Double?
+    
+    var maxChangePercent: Double?
+    var ytdChangePercent: Double?
+    var day5ChangePercent: Double?
+    var day30ChangePercent: Double?
+    var month1ChangePercent: Double?
+    var month3ChangePercent: Double?
+    var month6ChangePercent: Double?
+    var year1ChangePercent: Double?
+    var year2ChangePercent: Double?
+    var year5ChangePercent: Double?
+    
+    var exDividendDate: String?
+    var nextDividendDate: String?
+    var nextEarningsDate: String?
 }
