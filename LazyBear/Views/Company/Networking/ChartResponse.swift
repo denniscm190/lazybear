@@ -11,10 +11,13 @@ struct ChartResponse: Codable {
     var historicalPrices: [HistoricalPricesModel]?
     var quote: [String: QuoteModel]?
     var latestNews: [LatestNewsModel]?
+    var keyStats: KeyStatsModel?
     
     private enum CodingKeys : String, CodingKey {
         case historicalPrices = "historical_prices"
         case quote
         case latestNews = "latest_news"
+        case keyStats = "key_stats"
     }
 }
+
