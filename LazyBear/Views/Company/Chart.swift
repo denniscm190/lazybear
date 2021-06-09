@@ -38,11 +38,14 @@ struct Chart: View {
                                     let latestPrice = quote.latestPrice ?? 0
                                     let changePercent = quote.changePercent ?? 0
                                     let priceViewStyle = PriceViewStyle(
-                                        alignment: .leading,
+                                        horizontalAlignment: .leading,
+                                        verticalAlignment: .center,
+                                        orientation: .HStack,
                                         priceFont: .title3,
                                         priceFontWeight: .semibold,
                                         percentFont: .headline,
-                                        percentFontWeight: .medium
+                                        percentFontWeight: .medium,
+                                        showBackground: true
                                     )
                                     PriceView(latestPrice: latestPrice, changePercent: changePercent, style: priceViewStyle)
                                 }

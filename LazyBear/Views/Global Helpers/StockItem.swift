@@ -73,11 +73,14 @@ struct VerticalStockRow: View {
                             .lineLimit(1)
                         
                         let priceViewStyle = PriceViewStyle(
-                            alignment: .leading,
+                            horizontalAlignment: .leading,
+                            verticalAlignment: .center,
+                            orientation: .VStack,
                             priceFont: .body,
                             priceFontWeight: .semibold,
                             percentFont: .callout,
-                            percentFontWeight: .semibold
+                            percentFontWeight: .semibold,
+                            showBackground: false
                         )
                         
                         PriceView(latestPrice: company.latestPrice ?? 0,
@@ -132,11 +135,14 @@ struct HorizontalStockRow: View {
                 }
                 
                 let priceViewStyle = PriceViewStyle(
-                    alignment: .leading,
+                    horizontalAlignment: .leading,
+                    verticalAlignment: .center,
+                    orientation: .VStack,
                     priceFont: .body,
                     priceFontWeight: .semibold,
                     percentFont: .callout,
-                    percentFontWeight: .semibold
+                    percentFontWeight: .semibold,
+                    showBackground: false
                 )
                 
                 PriceView(latestPrice: company.latestPrice ?? 0,

@@ -23,7 +23,7 @@ struct TradingDatesItem: View {
                     Text(getDateComponents(.day, date))
                         .font(.title)
                         .fontWeight(.semibold)
-                        .foregroundColor(Color("default"))
+                        .foregroundColor(Color(.systemBlue))
                     
                     Text(getDateComponents(.year, date))
                         .font(.caption)

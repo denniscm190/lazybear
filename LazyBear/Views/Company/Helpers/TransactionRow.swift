@@ -23,7 +23,7 @@ struct TransactionRow: View {
                         Text(getDateComponents(.day, date))
                             .font(.title)
                             .fontWeight(.semibold)
-                            .foregroundColor(Color("default"))
+                            .foregroundColor(Color(.systemBlue))
                         
                         Text(getDateComponents(.year, date))
                             .font(.caption)
@@ -36,7 +36,7 @@ struct TransactionRow: View {
                             .lineLimit(1)
                             .font(.headline)
                         
-                        Text(transaction.reportedTitle ?? "-")
+                        Text(transaction.reportedTitle?.capitalized ?? "-")
                     }
                     
                     Spacer()

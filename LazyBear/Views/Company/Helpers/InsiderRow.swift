@@ -27,7 +27,7 @@ struct InsiderRow: View {
                     
                     HStack {
                         Spacer()
-                        Text("\(insiderRoster.position) shares owned")
+                        Text("\(insiderRoster.position ?? 0) shares owned")
                             .font(.caption)
                             .opacity(0.5)
                     }
