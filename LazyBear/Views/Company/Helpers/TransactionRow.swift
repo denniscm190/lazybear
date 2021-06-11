@@ -56,14 +56,15 @@ struct TransactionRow: View {
 struct TransactionRow_Previews: PreviewProvider {
     static var previews: some View {
         TransactionRow(transaction:
-            InsiderTransactionModel(filingDate: "2020-01-01",
-                                    fullName: "Dennis Concepcion",
-                                    postShares: 1234,
-                                    reportedTitle: "Director",
-                                    transactionCode: "S",
-                                    transactionPrice: 20.08,
-                                    transactionShares: 12345,
-                                    transactionValue: 1234567.0
+            InsiderTransactionModel(
+                filingDate: "2020-01-01",
+                fullName: "Dennis Concepcion",
+                postShares: 1234,
+                reportedTitle: "Director",
+                transactionCode: "S",
+                transactionPrice: 20.08,
+                transactionShares: 12345,
+                transactionValue: 1234567.0
             )
         )
     }

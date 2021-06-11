@@ -230,13 +230,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		950272CA2635AA9F003E779D /* Company list */ = {
+		950272CA2635AA9F003E779D /* Extensive List */ = {
 			isa = PBXGroup;
 			children = (
 				95721DB3262787EF00EC527B /* ExtensiveList.swift */,
 				950272CB2635AABC003E779D /* Helpers */,
 			);
-			path = "Company list";
+			path = "Extensive List";
 			sourceTree = "<group>";
 		};
 		950272CB2635AABC003E779D /* Helpers */ = {
@@ -326,6 +326,7 @@
 				95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */,
 				95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */,
 				95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */,
+				95E8BAA22656D86E0016AE72 /* RequestType.swift */,
 			);
 			path = "Global Models";
 			sourceTree = "<group>";
@@ -418,12 +419,11 @@
 		95893DD22613CAB5003698C5 /* Global Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				950272CA2635AA9F003E779D /* Company list */,
+				950272CA2635AA9F003E779D /* Extensive List */,
 				95A5188526186F590002D27C /* PriceView.swift */,
 				9550444826111FC9000E0BCB /* StockRow.swift */,
 				9550444B26111FED000E0BCB /* StockItem.swift */,
 				95BD2FB226341D36008B6752 /* BlurBackground.swift */,
-				95E8BAA22656D86E0016AE72 /* RequestType.swift */,
 				950857D2266BE55F005357BA /* RowShape.swift */,
 			);
 			path = "Global Helpers";

@@ -56,8 +56,7 @@ struct WatchlistCreator: View {
                     Button("Cancel", action: { self.showCancelAlert = true })
                 }
             }
-            // Show delete list alert
-            .alert(isPresented: $showCancelAlert) {
+            .alert(isPresented: $showCancelAlert) {  /// Show alert when the user tries to exit the view without saving the new watchlist
                 Alert(
                     title: Text("Your watchlist won't be saved"),
                     message: Text("This action can't be undo"),
@@ -66,8 +65,7 @@ struct WatchlistCreator: View {
                 )
             }
         }
-        // Show alert when watchlist name is empty
-        .alert(isPresented: $watchlistNameIsEmpty) {
+        .alert(isPresented: $watchlistNameIsEmpty) {  /// Show alert when the user tries to save the watchlist without a name
             Alert(
                 title: Text("Give a name to your new watchlist"),
                 message: Text("Try My portfolio, Favourites, ..."),
@@ -82,7 +80,7 @@ struct WatchlistCreator: View {
     
     /*
      Search company in array and get the index -> Delete company at
-     this index from the array
+     this index from the array (Core Data)
      */
     private func remove(_ company: SearchResponse) {
         let index = watchlistCreatorClass.companies.firstIndex(of: company)

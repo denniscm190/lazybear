@@ -7,8 +7,10 @@
 
 import SwiftUI
 
+/*
+ Convert String to date with the format specified
+ */
 func convertStringToDate(_ stringDate: String) -> Date {
-    // Convert string to date
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "yyyy-MM-dd"
     

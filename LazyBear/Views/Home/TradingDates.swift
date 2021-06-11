@@ -37,6 +37,9 @@ struct TradingDates: View {
         }
     }
     
+    /*
+     Get array of dates to use in ForEach
+     */
     private func getArrayOfDates() -> [Date] {
         // Get array of the string dates
         let stringDates = self.dates.map { $0.date }

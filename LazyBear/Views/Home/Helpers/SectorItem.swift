@@ -37,8 +37,8 @@ struct SectorItem: View {
     }
 }
 
-//struct SectorItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SectorItem(sector: SectorPerformanceModel(name: "Technology", performance: 0.04))
-//    }
-//}
+struct SectorItem_Previews: PreviewProvider {
+    static var previews: some View {
+        SectorItem(sector: SectorPerformanceModel(name: "Technology", performance: 0.04))
+    }
+}

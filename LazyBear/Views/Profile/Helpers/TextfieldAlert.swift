@@ -41,7 +41,9 @@ struct TextfieldAlert: View {
                     Divider()
                     
                     
-                    // Cancel and Done buttons
+                    /*
+                     Cancel and Done buttons
+                     */
                     HStack {
                         Spacer()
                         Button(action: {
@@ -72,6 +74,9 @@ struct TextfieldAlert: View {
         )
     }
     
+    /*
+     Rename watchlist name in Core Data
+     */
     private func renameList(_ newListName: String) {
         let selectedWatchlist = watchlistCompany.filter({ $0.watchlist == listName })
         for company in selectedWatchlist {
@@ -80,16 +85,15 @@ struct TextfieldAlert: View {
         do {
             try moc.save()
             print("List updated")
-            UIApplication.shared.endEditing()  // Dismiss Keyboard
-            self.showRenameAction = false  // Dismiss action rename sheet
-            self.$presentationMode.wrappedValue.dismiss()  // Dismiss Modal View
+            UIApplication.shared.endEditing()  /// Dismiss Keyboard
+            self.showRenameAction = false  /// Dismiss action rename sheet
+            self.$presentationMode.wrappedValue.dismiss()  /// Dismiss Modal View
         } catch {
             print(error.localizedDescription)
         }
     }
 }
-// Dismiss Keyboard
-extension UIApplication {
+extension UIApplication {  /// Dismiss Keyboard Extension
     func endEditing() {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }

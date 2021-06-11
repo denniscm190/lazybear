@@ -15,28 +15,25 @@ struct ProfileView: View {
     var watchlistCompanies: FetchedResults<WatchlistCompany>
 
     @State private var showCreateNewWatchlist = false
-    
-    // Set recurrent price request
-    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
+    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  /// Set recurrent price request
 
     var body: some View {
         if profile.showView {
             NavigationView {
                 List {
-                    // Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
-                    let watchlists = Set(watchlistCompanies.map { $0.watchlist })  // Set -> avoid duplicates names
-                    
+                    /*
+                     Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
+                     */
+                    let watchlists = Set(watchlistCompanies.map { $0.watchlist })  /// Set -> avoid duplicates names
                     ForEach(Array(watchlists).sorted(), id: \.self) { listName in
                         let symbols = watchlistCompanies.filter({ $0.watchlist == listName }).map { $0.symbol }
-                        
                         if let companies = profile.data.quotes {
-                            // Select from API requested companies only the ones withing the watchlist
-                            let list = companies.filter({ symbols.contains($0.key) })
+                            let list = companies.filter({ symbols.contains($0.key) })  /// From API response select the companies within the specified watchlist
                             StockRow(listName: listName, list: list, intradayPrices: profile.data.intradayPrices, addOnDelete: true)
                         }
                     }
                     .listRowInsets(EdgeInsets())
-                    .onAppear {  // Refresh API requested companies when Core Data changes
+                    .onAppear {  /// Request API again when Core Data changes to update the list
                         refreshList()
                     }
                 }
@@ -68,7 +65,7 @@ struct ProfileView: View {
     }
     
     /*
-     Get symbols in watchlists -> Prepare url -> Request
+     Get symbols in watchlists (Core Data) -> Prepare url -> Request
      */
     private func prepareUrl(_ requestType: RequestType) {
         let symbols = watchlistCompanies.map { $0.symbol }

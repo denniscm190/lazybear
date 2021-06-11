@@ -14,12 +14,12 @@ struct SearchedCompanyItem: View {
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompany: FetchedResults<WatchlistCompany>
     
-    @State private var showingActionSheet = false
+    @State private var showingWatchlistSelector = false
     
     var body: some View {
-        let watchlistSymbols = watchlistCompany.map { $0.symbol }
         HStack {
-            Button(action: { self.showingActionSheet = true }) {
+            Button(action: { self.showingWatchlistSelector = true }) {
+                let watchlistSymbols = watchlistCompany.map { $0.symbol }
                 if watchlistSymbols.contains(company.symbol!) {
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
@@ -49,12 +49,15 @@ struct SearchedCompanyItem: View {
                 Text(company.region!)
             }
         }
-        .actionSheet(isPresented: $showingActionSheet) {
+        .actionSheet(isPresented: $showingWatchlistSelector) {
             ActionSheet(title: Text("Add to watchlist"), message: Text("Select"), buttons: generateButtons())
         }
     }
     
-    // Get watchlist names -> generate buttons
+    /*
+     Generate buttons for each watchlist to let the user selects to which watchlist
+     he wants to add the company
+     */
     private func generateButtons() -> [ActionSheet.Button] {
         var actionButtons = [ActionSheet.Button]()
         let watchlists = Set(watchlistCompany.map { $0.watchlist })
@@ -72,7 +75,9 @@ struct SearchedCompanyItem: View {
         return actionButtons
     }
     
-    // Add to watchlist
+    /*
+     When the user taps the watchlist -> save the company to CoreData
+     */
     private func addCompany(_ symbol: String, _ name: String, _ watchlist: String) {
         let watchlistCompany = WatchlistCompany(context: moc)
         watchlistCompany.symbol = symbol

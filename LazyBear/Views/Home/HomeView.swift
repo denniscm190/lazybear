@@ -9,10 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var home = Home()
-    @State private var showTradingDates = false
     
-    // Set recurrent price request
-    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
+    @State private var showTradingDates = false
+    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  /// Set recurrent price request
     
     static let taskDateFormat: DateFormatter = {
         let formatter = DateFormatter()
@@ -32,17 +31,12 @@ struct HomeView: View {
                     }
                     
                     if let lists = home.data.lists {
-                        if let gainers = lists.gainers {
-                            StockRow(listName: "Gainers", list: gainers, intradayPrices: home.data.intradayPrices, addOnDelete: false)
-                                .listRowInsets(EdgeInsets())
-                        }
-                        if let losers = lists.losers {
-                            StockRow(listName: "Losers", list: losers, intradayPrices: home.data.intradayPrices, addOnDelete: false)
-                                .listRowInsets(EdgeInsets())
-                        }
-                        if let mostActive = lists.mostactive {
-                            StockRow(listName: "Most active", list: mostActive, intradayPrices: home.data.intradayPrices, addOnDelete: false)
-                                .listRowInsets(EdgeInsets())
+                        let mirror = Mirror(reflecting: lists)
+                        ForEach(Array(mirror.children), id: \.label) { child in
+                            if let list = child.value as? [String : QuoteModel] {
+                                StockRow(listName: "\(child.label!)", list: list, intradayPrices: home.data.intradayPrices, addOnDelete: false)
+                                    .listRowInsets(EdgeInsets())
+                            }
                         }
                     }
                     if let latestCurrencies = home.data.latestCurrencies {
@@ -50,8 +44,8 @@ struct HomeView: View {
                             .listRowInsets(EdgeInsets())
                     }
                 }
-                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
-                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/type=streaming", .streaming) }  // Receive timer notification
+                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  /// Restart timer
+                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/type=streaming", .streaming) }  /// Receive timer notification
                 .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
                 .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
                 .navigationBarTitleDisplayMode(.inline)

@@ -13,9 +13,9 @@ struct WatchlistCreatorSearchBar: View {
     
     var body: some View {
         TextField("", text: $searchedCompany)
-        .introspectTextField { textField in
-            textField.becomeFirstResponder()
-        }
+            .introspectTextField { textField in
+                textField.becomeFirstResponder()
+            }
             .padding(10)
             .padding(.leading, 40)
             .overlay(
@@ -30,6 +30,7 @@ struct WatchlistCreatorSearchBar: View {
                     .cornerRadius(10)
             )
             .padding()
+        
     }
 }
 

@@ -11,15 +11,11 @@ import StockCharts
 struct Chart: View {
     @ObservedObject var company: Company
     var symbol: String
+    var ranges = ["1D", "5D", "1M", "3M", "6M", "1Y", "5Y"]  /// DatePicker ranges
     
-    // Date picker
-    var ranges = ["1D", "5D", "1M", "3M", "6M", "1Y", "5Y"]
-    @State private var selectedRange = "3M"
-    
-    // Set recurrent price request
-    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()
-    
-    @State private var showingStatistics = false
+    @State private var selectedRange = "3M"  /// Selected DatePicker range
+    @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() /// Set recurrent price request
+    @State private var showingStatistics = false  /// Show StatisticsView of the company
     
     var body: some View {
         if company.showChartView {
@@ -34,12 +30,15 @@ struct Chart: View {
                     .foregroundColor(Color(.secondarySystemBackground))
                     .frame(height: 270)
                     .overlay(
+                        /*
+                         Show PriceView and Chart
+                         */
                         VStack {
                             HStack {
                                 if let quote = company.chartData.quote![symbol.uppercased()] {
                                     let latestPrice = quote.latestPrice ?? 0
                                     let changePercent = quote.changePercent ?? 0
-                                    let priceViewStyle = PriceViewStyle(
+                                    let priceViewStyle = PriceViewStyle(  /// Define PriceView style
                                         horizontalAlignment: .leading,
                                         verticalAlignment: .center,
                                         orientation: .HStack,
@@ -53,7 +52,7 @@ struct Chart: View {
                                 }
                                 Spacer()
                                 
-                                if let _ = company.chartData.keyStats {
+                                if let _ = company.chartData.keyStats {  /// Check if keyStats is empty -> Hide button
                                     Button("See stats", action: { showingStatistics = true })
                                 }
                             }
@@ -63,13 +62,15 @@ struct Chart: View {
                             if let historicalPrices = company.chartData.historicalPrices {
                                 let prices = historicalPrices.compactMap { $0.close }
                                 let dates = historicalPrices.compactMap { $0.date }
-//                                let hours = historicalPrices.compactMap { $0.minute }
                                 LineChartView(data: prices, dates: dates, hours: nil, dragGesture: true)
                                     .padding(.bottom)
                             }
                         }
                     )
                 
+                /*
+                 Show latest news
+                 */
                 if let latestNews = company.chartData.latestNews {
                     VStack(spacing: 20) {
                         ForEach(latestNews, id: \.self) { new in
@@ -83,10 +84,10 @@ struct Chart: View {
                 StatsView(keyStats: company.chartData.keyStats!)
             }
             .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
-            .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
+            .onDisappear { self.timer.upstream.connect().cancel() }  /// Stop timer
             .onReceive(timer) { _ in
                 let url = "https://api.lazybear.app/company/chart/symbol=\(symbol)/type=streaming"
-                company.request(url, .streaming, "chart") }  // Receive timer notification
+                company.request(url, .streaming, "chart") }  /// Receive timer notification
         } else {
             ProgressView()
                 .onAppear {

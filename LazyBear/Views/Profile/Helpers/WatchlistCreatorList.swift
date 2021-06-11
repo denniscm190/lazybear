@@ -10,6 +10,7 @@ import Bazooka
 
 struct WatchlistCreatorList: View {
     @ObservedObject var watchlistCreatorClass: WatchlistCreatorClass
+    
     @State private var searchedCompany = String()
     @State private var companies = [SearchResponse]()
     
@@ -29,11 +30,7 @@ struct WatchlistCreatorList: View {
             .navigationTitle("Search")
             .navigationBarTitleDisplayMode(.inline)
             .onChange(of: searchedCompany, perform: { searchedCompany in
-                if !searchedCompany.isEmpty {
-                    // Encode string with spaces
-                    let encodedSearchedCompany = searchedCompany.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-                    request("https://api.lazybear.app/search/text=\(encodedSearchedCompany ?? "")")
-                }
+                encodeAndRequest(searchedCompany)
             })
             
             .toolbar {
@@ -44,10 +41,25 @@ struct WatchlistCreatorList: View {
         }
     }
     
+    /*
+     Get companies from the API that matches the searched text
+     */
     private func request(_ url: String) {
         let bazooka = Bazooka()
         bazooka.request(url: url, model: [SearchResponse].self) { response in
             self.companies = response
+        }
+    }
+    
+    /*
+     1) Check if searchedCompany is empty
+     2) Encode white spaces
+     3) Request API
+     */
+    private func encodeAndRequest(_ searchedCompany: String) {
+        if !searchedCompany.isEmpty {
+            let encodedSearchedCompany = searchedCompany.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            request("https://api.lazybear.app/search/text=\(encodedSearchedCompany ?? "")")
         }
     }
 }

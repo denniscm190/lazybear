@@ -23,6 +23,34 @@ struct CompanyList_Previews: PreviewProvider {
     @Environment(\.presentationMode) static var presentationMode
     
     static var previews: some View {
-        CompanyList(searchResult: [SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl"), SearchResponse(currency: "USD", region: "US", securityName: "aaple inc", symbol: "aapl")])
+        CompanyList(searchResult:
+            [
+                SearchResponse(
+                    currency: "USD",
+                    region: "US",
+                    securityName: "aaple inc",
+                    symbol: "aapl"),
+                SearchResponse(
+                    currency: "USD",
+                    region: "US",
+                    securityName: "aaple inc",
+                    symbol: "aapl"),
+                SearchResponse(
+                    currency: "USD",
+                    region: "US",
+                    securityName: "aaple inc",
+                    symbol: "aapl"),
+                SearchResponse(
+                    currency: "USD",
+                    region: "US",
+                    securityName: "aaple inc",
+                    symbol: "aapl"),
+                SearchResponse(
+                    currency: "USD",
+                    region: "US",
+                    securityName: "aaple inc",
+                    symbol: "aapl")
+            ]
+        )
     }
 }

@@ -40,16 +40,24 @@ struct SearchView: View {
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarSearch($searchedText)
             .onChange(of: searchedText, perform: { searchedText in
-                if !searchedText.isEmpty {
-                    // Encode string with spaces
-                    let encodedSearchedText = searchedText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
-                    search.request("https://api.lazybear.app/search/text=\(encodedSearchedText ?? "")")
-                } else {
-                    search.showSearchList = false
-                }
+                encodeAndRequest(searchedText)
             })
         }
         .navigationViewStyle(StackNavigationViewStyle())
+    }
+    
+    /*
+     1) Check if searchedText is empty
+     2) Encode white spaces
+     3) Make API request
+     */
+    private func encodeAndRequest(_ searchedText: String) {
+        if !searchedText.isEmpty {
+            let encodedSearchedText = searchedText.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+            search.request("https://api.lazybear.app/search/text=\(encodedSearchedText ?? "")")
+        } else {
+            search.showSearchList = false
+        }
     }
 }
 

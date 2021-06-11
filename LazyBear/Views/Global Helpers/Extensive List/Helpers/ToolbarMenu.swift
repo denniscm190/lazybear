@@ -22,8 +22,7 @@ struct ToolbarMenu: View {
                 }
             }
             
-            // If there are only 1 watchlist -> It cannot be deleted
-            if Set(watchlistCompany.map { $0.watchlist }).count > 1 {
+            if Set(watchlistCompany.map { $0.watchlist }).count > 1 {  /// If there are only 1 watchlist -> It cannot be deleted
                 Section(header: Text("Secondary actions")) {
                     Button(action: { showDeleteListAlert = true }) {
                         Label("Delete list", systemImage: "trash")

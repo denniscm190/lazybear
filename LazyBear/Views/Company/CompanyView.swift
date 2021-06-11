@@ -10,11 +10,12 @@ import StockCharts
 
 struct CompanyView: View {
     var symbol: String
-    
     @ObservedObject var company = Company()
     @State private var showViewSelector = false
     
-    // Views
+    /*
+     Views
+     */
     @State private var showChartView = true
     @State private var showInsiderView = false
     
@@ -23,8 +24,7 @@ struct CompanyView: View {
             VStack {
                 CompanyHeader(symbol: symbol, showViewSelector: $showViewSelector)
                     .padding(.bottom)
-                
-                // Chart View
+
                 if showChartView {
                     Chart(company: company, symbol: symbol)
                 } else if showInsiderView {
@@ -43,7 +43,7 @@ struct CompanyView: View {
     }
     
     /*
-     Hide all views to show later the one tapped
+     Hide all views to show the one selected by user
      */
     private func resetViews() {
         showChartView = false

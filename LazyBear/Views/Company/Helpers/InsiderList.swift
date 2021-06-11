@@ -22,14 +22,10 @@ struct InsiderList: View {
                 Button("See all", action: { showFullList = true })
             }
         
-            // Get total shares owned by the top 10 insiders
-            let totalPositions =  insiderSummary.map { $0.position ?? 0 }.reduce(0, +)
+            let totalPositions =  insiderSummary.map { $0.position ?? 0 }.reduce(0, +)  /// Get total shares owned by the top 10 insiders
             VStack(alignment: .leading, spacing: 20) {
                 ForEach(insiderSummary.prefix(3), id: \.self) { insider in
-                    
-                    // Compute percentage of ownership for each insider
-                    let percentage = Double(insider.position ?? 0) / Double(totalPositions)
-                    
+                    let percentage = Double(insider.position ?? 0) / Double(totalPositions)  /// Compute percentage of ownership for each insider
                     InsiderRow(percentageOfWidth: CGFloat(percentage), insiderRoster: insider)
                 }
             }
@@ -43,7 +39,13 @@ struct InsiderList: View {
 struct InsiderList_Previews: PreviewProvider {
     static var previews: some View {
         InsiderList(insiderSummary:
-                    [InsiderRosterModel(entityName: "Dennis Concepcion", position: 1234, reportDate: 1234567)]
+            [
+                InsiderRosterModel(
+                    entityName: "Dennis Concepcion",
+                    position: 1234,
+                    reportDate: 1234567
+                )
+            ]
         )
     }
 }
@@ -55,14 +57,10 @@ struct InsiderFullList: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                // Get total shares owned by the top 10 insiders
-                let totalPositions =  insiderSummary.map { $0.position ?? 0 }.reduce(0, +)
+                let totalPositions =  insiderSummary.map { $0.position ?? 0 }.reduce(0, +)  /// Get total shares owned by the top 10 insiders
                 VStack(alignment: .leading, spacing: 20) {
                     ForEach(insiderSummary, id: \.self) { insider in
-                        
-                        // Compute percentage of ownership for each insider
-                        let percentage = Double(insider.position ?? 0) / Double(totalPositions)
-                        
+                        let percentage = Double(insider.position ?? 0) / Double(totalPositions)  /// Compute percentage of ownership for each insider
                         InsiderRow(percentageOfWidth: CGFloat(percentage), insiderRoster: insider)
                     }
                 }

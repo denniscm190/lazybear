@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TransactionList: View {
     var transactions: [InsiderTransactionModel]
+    
     @State private var showFullList = false
     
     var body: some View {
@@ -38,17 +39,18 @@ struct TransactionList_Previews: PreviewProvider {
     static var previews: some View {
         TransactionList(transactions:
             [
-                InsiderTransactionModel(filingDate: "2020-01-01",
-                                        fullName: "Dennis Concepcion",
-                                        postShares: 1234,
-                                        reportedTitle: "Director",
-                                        transactionCode: "S",
-                                        transactionPrice: 20.08,
-                                        transactionShares: 12345,
-                                        transactionValue: 1234567.0
+                InsiderTransactionModel(
+                    filingDate: "2020-01-01",
+                    fullName: "Dennis Concepcion",
+                    postShares: 1234,
+                    reportedTitle: "Director",
+                    transactionCode: "S",
+                    transactionPrice: 20.08,
+                    transactionShares: 12345,
+                    transactionValue: 1234567.0
                 )
             ]
-            )
+        )
     }
 }
 

@@ -13,8 +13,9 @@ struct StockRow: View {
     var list: [String: QuoteModel]
     var intradayPrices: [String: [IntradayPriceModel]]?
     var addOnDelete: Bool
-    
+
     @State private var showExtensiveList = false
+    
     @Environment(\.managedObjectContext) private var moc
     
     var body: some View {
