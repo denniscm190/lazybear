@@ -83,6 +83,7 @@
 		95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5D266E855800C384A1 /* GetDateComponents.swift */; };
 		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
+		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E31C0D26472CA000106B98 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C0C26472CA000106B98 /* CompanyView.swift */; };
 		95E31C122647304100106B98 /* PriceViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C112647304100106B98 /* PriceViewStyle.swift */; };
 		95E31C142647363800106B98 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C132647363800106B98 /* Chart.swift */; };
@@ -190,6 +191,7 @@
 		95CCFB5D266E855800C384A1 /* GetDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateComponents.swift; sourceTree = "<group>"; };
 		95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertStringToDate.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
+		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E31C0C26472CA000106B98 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		95E31C112647304100106B98 /* PriceViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewStyle.swift; sourceTree = "<group>"; };
 		95E31C132647363800106B98 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				95672B9C25DDA54800DCBE4A /* Info.plist */,
 				95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */,
 				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
+				95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */,
 				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
 				95AD4A2C26078C1400498079 /* ContentView.swift */,
 				95672B9725DDA54700DCBE4A /* Persistence.swift */,
@@ -673,6 +676,7 @@
 				95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */,
 				9523ED422615BDB2006D3D6F /* phrases.json in Resources */,
 				95AF0FF72671320F0049C4AB /* DisplayWords.json in Resources */,
+				95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */,
 				95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
