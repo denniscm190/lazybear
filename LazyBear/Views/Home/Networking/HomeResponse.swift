@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeResponse: Codable {
-  var intradayPrices: [String: [IntradayPriceModel]]?
+  var intradayPrices: [String: [Double]]?
   var latestCurrencies: [String: CurrencyModel]?
   var lists: ListsModel?
   var sectorPerformance: [SectorPerformanceModel]?

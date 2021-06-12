@@ -15,7 +15,7 @@ enum OrientationView {
 struct StockItem: View {
     var symbol: String
     var company: QuoteModel
-    var intradayPrices: [IntradayPriceModel]?
+    var intradayPrices: [Double]?
     var orientation: OrientationView
     var hidePriceView: Bool?
     
@@ -43,7 +43,7 @@ struct StockItem_Previews: PreviewProvider {
     static var previews: some View {
         StockItem(
             symbol: "AAPL", company: QuoteModel(changePercent: 0.03, companyName: "apple inc", latestPrice: 130.3),
-            intradayPrices: [IntradayPriceModel(open: 130.3), IntradayPriceModel(open: 132.3)], orientation: .horizontal
+            intradayPrices: [130.3, 132.3], orientation: .horizontal
         )
     }
 }
@@ -52,7 +52,7 @@ struct StockItem_Previews: PreviewProvider {
 struct VerticalStockRow: View {
     var symbol: String
     var company: QuoteModel
-    var intradayPrices: [IntradayPriceModel]?
+    var intradayPrices: [Double]?
     
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
@@ -93,7 +93,7 @@ struct VerticalStockRow: View {
                     
                     Spacer()
                      
-                    if let prices = intradayPrices?.compactMap { $0.open } {
+                    if let prices = intradayPrices {
                         LineChartView(data: prices, dates: nil, hours: nil, dragGesture: false)
                             .padding(.vertical)
                             .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -109,7 +109,7 @@ struct VerticalStockRow: View {
 struct HorizontalStockRow: View {
     var symbol: String
     var company: QuoteModel
-    var intradayPrices: [IntradayPriceModel]?
+    var intradayPrices: [Double]?
     var hidePriceView: Bool
     
     var body: some View {
@@ -127,7 +127,7 @@ struct HorizontalStockRow: View {
             
             Spacer()
             if !hidePriceView {
-                if let prices = intradayPrices?.compactMap { $0.open } {
+                if let prices = intradayPrices {
                     LineChartView(data: prices, dates: nil, hours: nil, dragGesture: false)
                         .frame(width: 80)
                         .padding(.vertical, 10)

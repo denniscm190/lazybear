@@ -10,7 +10,7 @@ import SwiftUI
 struct ExtensiveList: View {
     var listName: String
     var list: [String: QuoteModel]?
-    var intradayPrices: [String: [IntradayPriceModel]]?
+    var intradayPrices: [String: [Double]]?
     var latestCurrencies: [String: CurrencyModel]?
     var addOnDelete: Bool
     

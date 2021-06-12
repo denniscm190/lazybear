@@ -56,7 +56,6 @@
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
 		9594331326691789004A0339 /* Bazooka in Frameworks */ = {isa = PBXBuildFile; productRef = 9594331226691789004A0339 /* Bazooka */; };
 		9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
-		95A07F5D26305A8F009865AA /* IntradayPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F5C26305A8F009865AA /* IntradayPricesModel.swift */; };
 		95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
 		95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
 		95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */; };
@@ -165,7 +164,6 @@
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPricesModel.swift; sourceTree = "<group>"; };
-		95A07F5C26305A8F009865AA /* IntradayPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntradayPricesModel.swift; sourceTree = "<group>"; };
 		95A07F6126305A9B009865AA /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		95A07F6B26305AC6009865AA /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
@@ -317,7 +315,6 @@
 			children = (
 				954D7EA5260BBA6600A13C50 /* WatchlistCompany+CoreDataClass.swift */,
 				954D7EA6260BBA6600A13C50 /* WatchlistCompany+CoreDataProperties.swift */,
-				95A07F5C26305A8F009865AA /* IntradayPricesModel.swift */,
 				95A07F6126305A9B009865AA /* CurrencyModel.swift */,
 				95A07F6B26305AC6009865AA /* QuoteModel.swift */,
 				95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */,
@@ -773,7 +770,6 @@
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
 				95BD2FAE26341BD1008B6752 /* TextfieldAlert.swift in Sources */,
 				95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */,
-				95A07F5D26305A8F009865AA /* IntradayPricesModel.swift in Sources */,
 				95A07F7626305AE3009865AA /* TradingDatesModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

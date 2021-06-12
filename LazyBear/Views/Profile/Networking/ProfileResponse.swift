@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileResponse: Codable {
-  var intradayPrices: [String: [IntradayPriceModel]]?
+  var intradayPrices: [String: [Double]]?
   var quotes: [String: QuoteModel]?
   
     private enum CodingKeys : String, CodingKey {

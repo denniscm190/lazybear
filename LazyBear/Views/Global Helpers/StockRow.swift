@@ -11,7 +11,7 @@ import SwiftUI
 struct StockRow: View {
     var listName: String
     var list: [String: QuoteModel]
-    var intradayPrices: [String: [IntradayPriceModel]]?
+    var intradayPrices: [String: [Double]]?
     var addOnDelete: Bool
 
     @State private var showExtensiveList = false
@@ -64,7 +64,7 @@ struct StockRectangleRow_Previews: PreviewProvider {
         StockRow(
             listName: "Gainers",
             list: ["AAPL": QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 130.3)],
-            intradayPrices: ["AAPL": [IntradayPriceModel(open: 130.2)]], addOnDelete: false
+            intradayPrices: ["AAPL": [130.2]], addOnDelete: false
         )
     }
 }
