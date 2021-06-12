@@ -34,7 +34,7 @@ struct HomeView: View {
                         let mirror = Mirror(reflecting: lists)
                         ForEach(Array(mirror.children), id: \.label) { child in
                             if let list = child.value as? [String : QuoteModel] {
-                                StockRow(listName: "\(child.label!)", list: list, intradayPrices: home.data.intradayPrices, addOnDelete: false)
+                                StockRow(listName: "\(adaptListTitle(child.label!))", list: list, intradayPrices: home.data.intradayPrices, addOnDelete: false)
                                     .listRowInsets(EdgeInsets())
                             }
                         }
@@ -69,6 +69,17 @@ struct HomeView: View {
                     home.request("https://api.lazybear.app/home/type=init", .initial)
                 }
 
+        }
+    }
+    
+    /*
+     Get list keys (mostactive, losers, active) and adapt them to diplay
+     */
+    private func adaptListTitle(_ title: String) -> String {
+        if title == "mostactive" {
+            return "Most active"
+        } else {
+            return title.capitalized
         }
     }
 }
