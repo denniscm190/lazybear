@@ -20,6 +20,15 @@
         }
       },
       {
+        "package": "Purchases",
+        "repositoryURL": "https://github.com/RevenueCat/purchases-ios.git",
+        "state": {
+          "branch": null,
+          "revision": "2811b25d8f275429e5d001e3990426ebba5147f4",
+          "version": "3.11.1"
+        }
+      },
+      {
         "package": "StockCharts",
         "repositoryURL": "https://github.com/denniscm190/StockCharts.git",
         "state": {

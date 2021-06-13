@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import Purchases
 
 @main
 struct LazyBearApp: App {
     let persistenceController = PersistenceController.shared  // Core Data init
+    init() {  /// Revenue Cat configuration
+            Purchases.configure(withAPIKey: "ZnlVFgEqTmhLagtzgFawvlhAROXQjyFi")
+        }
 
     var body: some Scene {
         WindowGroup {
