@@ -29,6 +29,7 @@ struct StatsView: View {
                             Spacer()
                             Text(unwrappedValue)
                                 .font(.callout)
+                                .lineLimit(1)
                         }
                     }
                 }

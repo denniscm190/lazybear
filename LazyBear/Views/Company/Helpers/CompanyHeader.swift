@@ -20,7 +20,7 @@ struct CompanyHeader: View {
             Spacer()
             
             Button(action: { showViewSelector = true }) {
-                Text("Views ")
+                Text("See more ")
                 Image(systemName: "chevron.down")
             }
         }

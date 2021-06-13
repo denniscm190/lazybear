@@ -25,11 +25,13 @@ struct ProfileView: View {
                      Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
                      */
                     let watchlists = Set(watchlistCompanies.map { $0.watchlist })  /// Set -> avoid duplicates names
+                    
                     ForEach(Array(watchlists).sorted(), id: \.self) { listName in
-                        let symbols = watchlistCompanies.filter({ $0.watchlist == listName }).map { $0.symbol }
+                        let symbols = watchlistCompanies.filter({ $0.watchlist == listName }).map { $0.symbol }  /// Get symbols contained in specified watchlist (Core Data)
+                        
                         if let companies = profile.data.quotes {
                             let list = companies.filter({ symbols.contains($0.key) })  /// From API response select the companies within the specified watchlist
-                            StockRow(listName: listName, list: list, intradayPrices: profile.data.intradayPrices, addOnDelete: true)
+                            StockRow(list: [listName: list], intradayPrices: profile.data.intradayPrices)
                         }
                     }
                     .listRowInsets(EdgeInsets())
@@ -37,8 +39,8 @@ struct ProfileView: View {
                         refreshList()
                     }
                 }
-                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  // Start timer
-                .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
+                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  /// Start timer
+                .onDisappear { self.timer.upstream.connect().cancel() }  /// Stop timer
                 .onReceive(timer) { _ in
                     if !showCreateNewWatchlist {
                         prepareUrl(.streaming)

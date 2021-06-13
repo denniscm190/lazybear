@@ -21,6 +21,20 @@ struct RowShape: View {
     }
 }
 
+/*
+ Apply modifiers to the passed view on some condition
+ */
+extension View {
+   @ViewBuilder
+   func `if`<Content: View>(_ conditional: Bool, content: (Self) -> Content) -> some View {
+        if conditional {
+            content(self)
+        } else {
+            self
+        }
+    }
+}
+
 struct RowShape_Previews: PreviewProvider {
     static var previews: some View {
         RowShape()

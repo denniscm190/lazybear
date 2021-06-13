@@ -10,6 +10,7 @@ import SwiftUI
 struct CurrencyItem: View {
     var currencySymbol: String
     var currency: CurrencyModel
+    var rectangleWidth: CGFloat?
     
     var body: some View {
         RoundedRectangle(cornerRadius: 8)

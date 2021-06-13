@@ -1,13 +1,13 @@
 //
-//  CurrencyListItem.swift
+//  CurrencySheetRow.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 14/4/21.
+//  Created by Dennis Concepción Martín on 13/6/21.
 //
 
 import SwiftUI
 
-struct CurrencyListItem: View {
+struct CurrencySheetRow: View {
     var currencySymbol: String
     var currency: CurrencyModel
     
@@ -26,13 +26,14 @@ struct CurrencyListItem: View {
             
             Spacer()
             Text("\(currency.rate, specifier: "%.2f")")
+                .fontWeight(.semibold)
                 .padding(.horizontal)
         }
     }
 }
 
-struct CurrencyRowItem_Previews: PreviewProvider {
+struct CurrencySheetRow_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyListItem(currencySymbol: "AUD", currency: CurrencyModel(flag: "🇺🇸", name: "Australian dollar", rate: 1.3116))
+        CurrencySheetRow(currencySymbol: "AUD", currency: CurrencyModel(flag: "🇦🇺", name: "Australian dollar", rate: 1.2938))
     }
 }

@@ -9,20 +9,17 @@ import SwiftUI
 
 
 struct StockRow: View {
-    var listName: String
-    var list: [String: QuoteModel]
+    var list: [String: [String: QuoteModel]]
     var intradayPrices: [String: [Double]]?
-    var addOnDelete: Bool
 
-    @State private var showExtensiveList = false
-    
-    @Environment(\.managedObjectContext) private var moc
+    @State private var showList = false
     
     var body: some View {
+        let listName = list.first!.key
         VStack(alignment: .leading) {
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
-                    Text(listName)
+                    Text(adaptListTitle(listName))
                         .font(.title3)
                         .fontWeight(.semibold)
                         .padding([.top, .horizontal])
@@ -34,15 +31,16 @@ struct StockRow: View {
                 }
                 
                 Spacer()
-                Button("See all", action: { self.showExtensiveList = true })
+                Button("See all", action: { showList = true })
                     .buttonStyle(BorderlessButtonStyle())
                     .padding(.horizontal)
             }
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(Array(list.keys.sorted()), id: \.self) { companySymbol in
-                        StockItem(symbol: companySymbol, company: list[companySymbol]!, intradayPrices: intradayPrices?[companySymbol], orientation: .vertical)
+                    let companies = list[listName]
+                    ForEach(Array(companies!.keys), id: \.self) { symbol in
+                        StockItem(symbol: symbol, company: companies![symbol]!, intradayPrices: intradayPrices![symbol])
                     }
                 }
                 .padding()
@@ -50,10 +48,19 @@ struct StockRow: View {
             .frame(height: 250)
         }
         .padding(.bottom)
-        .sheet(isPresented: $showExtensiveList) {
-            ExtensiveList(listName: listName, list: list, intradayPrices: intradayPrices, latestCurrencies: nil, addOnDelete: addOnDelete)
-                .environment(\.managedObjectContext, self.moc)
-            
+        .sheet(isPresented: $showList) {
+            StockSheet(listName: adaptListTitle(listName), companies: list[list.first!.key]!, intradayPrices: intradayPrices)
+        }
+    }
+    
+    /*
+     Get list keys (mostactive, losers, active) and adapt them to diplay
+     */
+    private func adaptListTitle(_ title: String) -> String {
+        if title == "mostactive" {
+            return "Most active"
+        } else {
+            return title.capitalized
         }
     }
 }
@@ -62,9 +69,8 @@ struct StockRow: View {
 struct StockRectangleRow_Previews: PreviewProvider {
     static var previews: some View {
         StockRow(
-            listName: "Gainers",
-            list: ["AAPL": QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 130.3)],
-            intradayPrices: ["AAPL": [130.2]], addOnDelete: false
+            list: ["mostactive": ["AAPL": QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 130.3)]],
+            intradayPrices: ["AAPL": [130.2]]
         )
     }
 }

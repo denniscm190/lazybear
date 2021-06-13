@@ -36,19 +36,19 @@ struct Chart: View {
                         VStack {
                             HStack {
                                 if let quote = company.chartData.quote![symbol.uppercased()] {
-                                    let latestPrice = quote.latestPrice ?? 0
-                                    let changePercent = quote.changePercent ?? 0
-                                    let priceViewStyle = PriceViewStyle(  /// Define PriceView style
-                                        horizontalAlignment: .leading,
-                                        verticalAlignment: .center,
-                                        orientation: .HStack,
-                                        priceFont: .title3,
-                                        priceFontWeight: .semibold,
-                                        percentFont: .body,
-                                        percentFontWeight: .semibold,
-                                        showBackground: true
-                                    )
-                                    PriceView(latestPrice: latestPrice, changePercent: changePercent, style: priceViewStyle)
+                                    if let latestPrice = quote.latestPrice, let changePercent = quote.changePercent {
+                                        HStack(alignment: .center) {
+                                            Text("\(latestPrice, specifier: "%.2f")")
+                                                .foregroundColor(changePercent < 0 ? .red: .green)
+                                                .fontWeight(.semibold)
+
+                                            Text("\(changePercent * 100, specifier: "%.2f")%")
+                                                .foregroundColor(changePercent < 0 ? .red: .green)
+                                                .font(.callout)
+                                                .fontWeight(.semibold)
+                                        }
+                                        .padding(.top)
+                                    }
                                 }
                                 Spacer()
                                 
