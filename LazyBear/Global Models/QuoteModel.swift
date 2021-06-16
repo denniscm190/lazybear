@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuoteModel: Codable {
-  var changePercent: Double?
-  var companyName: String
-  var latestPrice: Double?
+    var companyName: String
+    var latestPrice: Double?
+    var changePercent: Double?
 }

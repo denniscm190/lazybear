@@ -19,7 +19,7 @@ class Profile: ObservableObject {
             case .initial:
                 self.data = response
             default:
-                self.data.quotes = response.quotes
+                self.data = response
             }
             
             self.showView = true

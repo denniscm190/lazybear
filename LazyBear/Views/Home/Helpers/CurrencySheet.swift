@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct CurrencySheet: View {
+    var latestCurrencies: [CurrencyModel]
     @Environment(\.presentationMode) private var currencySheetPresentation
     
-    var latestCurrencies: [String: CurrencyModel]
     var body: some View {
         NavigationView {
             VStack {
-                List(Array(latestCurrencies.keys.sorted()), id: \.self) { currencySymbol in
-                    CurrencySheetRow(currencySymbol: currencySymbol, currency: latestCurrencies[currencySymbol]!)
+                List(latestCurrencies, id: \.self) { currency in
+                    CurrencySheetRow(currency: currency)
                 }
             }
             .navigationTitle("Currencies")
@@ -33,6 +33,6 @@ struct CurrencySheet: View {
 
 struct CurrencySheet_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySheet(latestCurrencies: ["AUD": CurrencyModel(flag: "🇦🇺", name: "Australian dollar", rate: 1.2938)])
+        CurrencySheet(latestCurrencies: [CurrencyModel(symbol: "AUD", name: "Australian dollar", flag: "🇦🇺", rate: 1.2938)])
     }
 }

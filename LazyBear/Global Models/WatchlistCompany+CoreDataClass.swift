@@ -2,7 +2,7 @@
 //  WatchlistCompany+CoreDataClass.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 24/3/21.
+//  Created by Dennis Concepción Martín on 16/6/21.
 //
 //
 

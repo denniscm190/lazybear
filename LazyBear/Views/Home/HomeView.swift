@@ -31,14 +31,13 @@ struct HomeView: View {
                     }
                     
                     if let lists = home.data.lists {
-                        let mirror = Mirror(reflecting: lists)
-                        ForEach(Array(mirror.children), id: \.label) { child in
-                            if let list = child.value as? [String : QuoteModel] {
-                                StockRow(list: [child.label!: list], intradayPrices: home.data.intradayPrices)
-                                    .listRowInsets(EdgeInsets())
-                            }
+                        let listNames = Array(lists.keys.sorted())
+                        ForEach(listNames, id: \.self) { listName in
+                            StockRow(listName: listName, companies: lists[listName]!)
+                                .listRowInsets(EdgeInsets())
                         }
                     }
+                    
                     if let latestCurrencies = home.data.latestCurrencies {
                         CurrencyRow(latestCurrencies: latestCurrencies)
                             .listRowInsets(EdgeInsets())

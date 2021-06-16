@@ -22,7 +22,7 @@ struct PersistenceController {
             let watchlistCompany = WatchlistCompany(context: viewContext)
             watchlistCompany.name = "Apple Inc"
             watchlistCompany.symbol = "AAPL"
-            watchlistCompany.watchlist = "Technologies"
+            watchlistCompany.watchlistName = "Technologies"
         }
         do {
             try viewContext.save()

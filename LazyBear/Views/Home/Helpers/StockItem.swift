@@ -9,9 +9,7 @@ import SwiftUI
 import StockCharts
 
 struct StockItem: View {
-    var symbol: String
-    var company: QuoteModel
-    var intradayPrices: [Double]?
+    var company: CompanyModel
     
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
@@ -21,7 +19,7 @@ struct StockItem: View {
             .overlay(
                 VStack(alignment: .leading) {
                     Group {
-                        Text(symbol.uppercased())
+                        Text(company.symbol.uppercased())
                             .fontWeight(.semibold)
                             .padding(.top)
                         
@@ -49,12 +47,9 @@ struct StockItem: View {
                     
                     Spacer()
                      
-                    if let prices = intradayPrices {
-                        LineChartView(data: prices, dates: nil, hours: nil, dragGesture: false)
-                            .padding(.vertical)
-                            .clipShape(RoundedRectangle(cornerRadius: 20))
-                    }
-                        
+                    LineChartView(data: company.intradayPrices, dates: nil, hours: nil, dragGesture: false)
+                        .padding(.vertical)
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
                 }
                 ,alignment: .leading
             )
@@ -63,9 +58,6 @@ struct StockItem: View {
 
 struct StockItem_Previews: PreviewProvider {
     static var previews: some View {
-        StockItem(
-            symbol: "aapl",
-            company: QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 120.3)
-        )
+        StockItem(company: CompanyModel(symbol: "aapl", companyName: "Apple Inc", latestPrice: 120.3, changePercent: 0.03, intradayPrices: [120.3]))
     }
 }

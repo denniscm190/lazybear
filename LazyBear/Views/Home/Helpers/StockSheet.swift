@@ -9,18 +9,15 @@ import SwiftUI
 
 struct StockSheet: View {
     var listName: String
-    var companies: [String: QuoteModel]
-    var intradayPrices: [String: [Double]]?
+    var companies: [CompanyModel]
     
     @Environment(\.presentationMode) private var stockSheetPresentation
     
     var body: some View {
         NavigationView {
             VStack {
-                List(Array(companies.keys.sorted()), id: \.self) { symbol in
-                    NavigationLink(destination: CompanyView(symbol: symbol)) {
-                        StockSheetRow(symbol: symbol, company: companies[symbol]!, intradayPrices: intradayPrices![symbol]!)
-                    }
+                List(companies, id: \.self) { company in
+                   StockSheetRow(company: company)
                 }
             }
             .navigationTitle(listName)
@@ -38,6 +35,9 @@ struct StockSheet: View {
 
 struct StockSheet_Previews: PreviewProvider {
     static var previews: some View {
-        StockSheet(listName: "Most active", companies: ["aapl": QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 120.3)])
+        StockSheet(
+            listName: "Most active",
+            companies: [CompanyModel(symbol: "aapl", companyName: "Apple Inc", latestPrice: 120.3, changePercent: 0.03, intradayPrices: [120.3])]
+        )
     }
 }

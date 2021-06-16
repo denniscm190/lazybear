@@ -7,8 +7,10 @@
 
 import SwiftUI
 
-struct CurrencyModel: Codable {
-  var flag: String
-  var name: String
-  var rate: Double
+
+struct CurrencyModel: Codable, Hashable {
+    var symbol: String
+    var name: String
+    var flag: String
+    var rate: Double
 }

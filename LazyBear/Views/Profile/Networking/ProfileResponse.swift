@@ -8,11 +8,5 @@
 import SwiftUI
 
 struct ProfileResponse: Codable {
-  var intradayPrices: [String: [Double]]?
-  var quotes: [String: QuoteModel]?
-  
-    private enum CodingKeys : String, CodingKey {
-        case intradayPrices = "intraday_prices"
-        case quotes
-    }
+  var quotes: [CompanyModel]?
 }

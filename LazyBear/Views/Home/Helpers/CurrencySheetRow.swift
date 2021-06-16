@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct CurrencySheetRow: View {
-    var currencySymbol: String
     var currency: CurrencyModel
     
     var body: some View {
@@ -17,7 +16,7 @@ struct CurrencySheetRow: View {
                 .padding(.trailing)
             
             VStack(alignment: .leading) {
-                Text("USD/\(currencySymbol)")
+                Text("USD/\(currency.symbol)")
                     .font(.headline)
                 
                 Text(currency.name)
@@ -34,6 +33,6 @@ struct CurrencySheetRow: View {
 
 struct CurrencySheetRow_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencySheetRow(currencySymbol: "AUD", currency: CurrencyModel(flag: "🇦🇺", name: "Australian dollar", rate: 1.2938))
+        CurrencySheetRow(currency: CurrencyModel(symbol: "AUD", name: "Australian dollar", flag: "🇦🇺", rate: 1.2938))
     }
 }

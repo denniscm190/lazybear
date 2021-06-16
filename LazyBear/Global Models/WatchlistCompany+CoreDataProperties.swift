@@ -2,7 +2,7 @@
 //  WatchlistCompany+CoreDataProperties.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 24/3/21.
+//  Created by Dennis Concepción Martín on 16/6/21.
 //
 //
 
@@ -16,19 +16,8 @@ extension WatchlistCompany {
         return NSFetchRequest<WatchlistCompany>(entityName: "WatchlistCompany")
     }
 
-    @NSManaged public var symbol: String
     @NSManaged public var name: String
-    @NSManaged public var watchlist: String
+    @NSManaged public var symbol: String
+    @NSManaged public var watchlistName: String
 
-}
-
-extension WatchlistCompany : Identifiable {
-
-}
-
-extension WatchlistCompany {
-    static func == (lhs: WatchlistCompany, rhs: WatchlistCompany) -> Bool {
-        print("Custom equation has been called")
-        return lhs.id == rhs.id
-    }
 }

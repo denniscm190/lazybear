@@ -99,7 +99,7 @@ struct WatchlistCreator: View {
                 let watchlistCompany = WatchlistCompany(context: moc)
                 watchlistCompany.name = company.securityName ?? "-"
                 watchlistCompany.symbol = company.symbol!
-                watchlistCompany.watchlist = watchlistCreatorClass.name
+                watchlistCompany.watchlistName = watchlistCreatorClass.name
             }
             
             do {

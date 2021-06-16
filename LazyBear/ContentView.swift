@@ -67,7 +67,7 @@ struct ContentView: View {
                 let watchlistCompany = WatchlistCompany(context: moc)
                 watchlistCompany.symbol = tupleCompany.0
                 watchlistCompany.name = tupleCompany.1
-                watchlistCompany.watchlist = "Default watchlist"
+                watchlistCompany.watchlistName = "Default watchlist"
             }
             do {
                 try moc.save()

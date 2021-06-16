@@ -9,14 +9,12 @@ import SwiftUI
 import StockCharts
 
 struct StockSheetRow: View {
-    var symbol: String
-    var company: QuoteModel
-    var intradayPrices: [Double]?
+    var company: CompanyModel
     
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text(symbol.capitalized.capitalized)
+                Text(company.symbol.uppercased())
                     .fontWeight(.semibold)
                 
                 Text(company.companyName.capitalized)
@@ -27,12 +25,11 @@ struct StockSheetRow: View {
             }
             
             Spacer()
-            if let prices = intradayPrices {
-                LineChartView(data: prices, dates: nil, hours: nil, dragGesture: false)
-                    .frame(width: 80)
-                    .padding(.vertical, 10)
-                    .padding(.leading)
-            }
+            LineChartView(data: company.intradayPrices, dates: nil, hours: nil, dragGesture: false)
+                .frame(width: 80)
+                .padding(.vertical, 10)
+                .padding(.horizontal)
+            
             
             if let latestPrice = company.latestPrice, let changePercent = company.changePercent {
                 VStack(alignment: .trailing) {
@@ -52,9 +49,6 @@ struct StockSheetRow: View {
 
 struct StockSheetRow_Previews: PreviewProvider {
     static var previews: some View {
-        StockSheetRow(
-            symbol: "aapl",
-            company: QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 120.3)
-        )
+        StockSheetRow(company: CompanyModel(symbol: "aapl", companyName: "Apple Inc", latestPrice: 120.3, changePercent: 0.03, intradayPrices: [120.3]))
     }
 }

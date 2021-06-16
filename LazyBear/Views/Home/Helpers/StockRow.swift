@@ -9,13 +9,14 @@ import SwiftUI
 
 
 struct StockRow: View {
-    var list: [String: [String: QuoteModel]]
-    var intradayPrices: [String: [Double]]?
+    var listName: String
+    var companies: [CompanyModel]
+    var showWatchlistSheet: Bool?
 
     @State private var showList = false
+    @Environment(\.managedObjectContext) private var moc
     
     var body: some View {
-        let listName = list.first!.key
         VStack(alignment: .leading) {
             HStack(alignment: .bottom) {
                 VStack(alignment: .leading) {
@@ -38,9 +39,8 @@ struct StockRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    let companies = list[listName]
-                    ForEach(Array(companies!.keys), id: \.self) { symbol in
-                        StockItem(symbol: symbol, company: companies![symbol]!, intradayPrices: intradayPrices![symbol])
+                    ForEach(companies, id: \.self) { company in
+                       StockItem(company: company)
                     }
                 }
                 .padding()
@@ -49,7 +49,12 @@ struct StockRow: View {
         }
         .padding(.bottom)
         .sheet(isPresented: $showList) {
-            StockSheet(listName: adaptListTitle(listName), companies: list[list.first!.key]!, intradayPrices: intradayPrices)
+            if showWatchlistSheet ?? false {
+                WatchlistSheet(listName: adaptListTitle(listName), companies: companies)
+                    .environment(\.managedObjectContext, self.moc)
+            } else {
+                StockSheet(listName: adaptListTitle(listName), companies: companies)
+            }
         }
     }
     
@@ -69,8 +74,8 @@ struct StockRow: View {
 struct StockRectangleRow_Previews: PreviewProvider {
     static var previews: some View {
         StockRow(
-            list: ["mostactive": ["AAPL": QuoteModel(changePercent: 0.03, companyName: "Apple Inc", latestPrice: 130.3)]],
-            intradayPrices: ["AAPL": [130.2]]
+            listName: "mostactive",
+             companies: [CompanyModel(symbol: "aapl", companyName: "Apple Inc", latestPrice: 120.3, changePercent: 0.03, intradayPrices: [120.3])]
         )
     }
 }

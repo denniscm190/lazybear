@@ -9,7 +9,7 @@ import SwiftUI
 
 
 struct TradingDates: View {
-    var dates: [TradingDatesModel]
+    var dates: [String]
     @Environment(\.presentationMode) private var presentationTradingDates
     
     let columns = [GridItem(.adaptive(minimum: 100))]
@@ -18,8 +18,8 @@ struct TradingDates: View {
         NavigationView {
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 20) {
-                    ForEach(getArrayOfDates(), id: \.self) { date in
-                        TradingDatesItem(date: date)
+                    ForEach(dates, id: \.self) { date in
+                        TradingDatesItem(date: convertStringToDate(date))
                     }
                 }
                 .padding()
@@ -36,31 +36,11 @@ struct TradingDates: View {
             }
         }
     }
-    
-    /*
-     Get array of dates to use in ForEach
-     */
-    private func getArrayOfDates() -> [Date] {
-        // Get array of the string dates
-        let stringDates = self.dates.map { $0.date }
-        
-        // Convert string to date
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        
-        // Append dates to a Date array
-        var dates = [Date]()
-        for stringDate in stringDates {
-            dates.append(dateFormatter.date(from: stringDate)!)
-        }
-        
-        return dates
-    }
 }
 
 struct TradingDate_Previews: PreviewProvider {
     static var previews: some View {
         // Format is YYYY-MM-DD
-        TradingDates(dates: [TradingDatesModel(date: "2021-01-01")])
+        TradingDates(dates: ["2021-01-01"])
     }
 }

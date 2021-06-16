@@ -12,14 +12,14 @@ struct SearchedCompanyItem: View {
     
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var watchlistCompany: FetchedResults<WatchlistCompany>
+    var watchlistCompanies: FetchedResults<WatchlistCompany>
     
     @State private var showingWatchlistSelector = false
     
     var body: some View {
         HStack {
             Button(action: { self.showingWatchlistSelector = true }) {
-                let watchlistSymbols = watchlistCompany.map { $0.symbol }
+                let watchlistSymbols = watchlistCompanies.map { $0.symbol }
                 if watchlistSymbols.contains(company.symbol!) {
                     Image(systemName: "star.fill")
                         .foregroundColor(.yellow)
@@ -60,7 +60,7 @@ struct SearchedCompanyItem: View {
      */
     private func generateButtons() -> [ActionSheet.Button] {
         var actionButtons = [ActionSheet.Button]()
-        let watchlists = Set(watchlistCompany.map { $0.watchlist })
+        let watchlists = Set(watchlistCompanies.map { $0.watchlistName })
         
         for watchlistName in watchlists {
             actionButtons.append(
@@ -78,11 +78,11 @@ struct SearchedCompanyItem: View {
     /*
      When the user taps the watchlist -> save the company to CoreData
      */
-    private func addCompany(_ symbol: String, _ name: String, _ watchlist: String) {
+    private func addCompany(_ symbol: String, _ name: String, _ watchlistName: String) {
         let watchlistCompany = WatchlistCompany(context: moc)
         watchlistCompany.symbol = symbol
         watchlistCompany.name = name
-        watchlistCompany.watchlist = watchlist
+        watchlistCompany.watchlistName = watchlistName
         do {
             try moc.save()
             print("Company saved")

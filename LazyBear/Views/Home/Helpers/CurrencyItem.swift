@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct CurrencyItem: View {
-    var currencySymbol: String
     var currency: CurrencyModel
-    var rectangleWidth: CGFloat?
     
     var body: some View {
         RoundedRectangle(cornerRadius: 8)
@@ -24,7 +22,7 @@ struct CurrencyItem: View {
                             Text(currency.flag)
                         )
                     VStack(alignment: .leading) {
-                        Text("USD/\(currencySymbol)")
+                        Text("USD/\(currency.symbol)")
                             .font(.headline)
                         
                         Text(currency.name)
@@ -42,6 +40,6 @@ struct CurrencyItem: View {
 
 struct CurrencyItem_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyItem(currencySymbol: "AUD", currency: CurrencyModel(flag: "🇺🇸", name: "Australian dollar", rate: 1.3116))
+        CurrencyItem(currency: CurrencyModel(symbol: "AUD", name: "Australian dollar", flag: "🇺🇸", rate: 1.3116))
     }
 }

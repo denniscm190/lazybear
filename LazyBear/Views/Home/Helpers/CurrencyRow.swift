@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CurrencyRow: View {
-    var latestCurrencies: [String: CurrencyModel]
+    var latestCurrencies: [CurrencyModel]
 
     @State private var showExtensiveList = false
     
@@ -35,8 +35,8 @@ struct CurrencyRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
-                    ForEach(Array(latestCurrencies.keys), id: \.self) { currencySymbol in
-                        CurrencyItem(currencySymbol: currencySymbol, currency: latestCurrencies[currencySymbol]!)
+                    ForEach(latestCurrencies, id: \.self) { currency in
+                        CurrencyItem(currency: currency)
                     }
                 }
                 .padding()
@@ -50,6 +50,6 @@ struct CurrencyRow: View {
 
 struct CurrencyRow_Previews: PreviewProvider {
     static var previews: some View {
-        CurrencyRow(latestCurrencies: ["AUD": CurrencyModel(flag: "🇺🇸", name: "Australian dollar", rate: 1.3116)])
+        CurrencyRow(latestCurrencies: [CurrencyModel(symbol: "AUD", name: "Australian dollar", flag: "🇺🇸", rate: 1.3116)])
     }
 }

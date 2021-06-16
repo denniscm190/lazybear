@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TextfieldAlert: View {
-    var listName: String
+    var watchlistName: String
     
     @State private var newListName: String = String()
     @Binding var showRenameAction: Bool
@@ -16,7 +16,7 @@ struct TextfieldAlert: View {
     
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var watchlistCompany: FetchedResults<WatchlistCompany>
+    var watchlistCompanies: FetchedResults<WatchlistCompany>
     
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
@@ -77,10 +77,10 @@ struct TextfieldAlert: View {
     /*
      Rename watchlist name in Core Data
      */
-    private func renameList(_ newListName: String) {
-        let selectedWatchlist = watchlistCompany.filter({ $0.watchlist == listName })
+    private func renameList(_ newWatchlistName: String) {
+        let selectedWatchlist = watchlistCompanies.filter({ $0.watchlistName == watchlistName })
         for company in selectedWatchlist {
-            company.watchlist = newListName
+            company.watchlistName = newWatchlistName
         }
         do {
             try moc.save()
@@ -103,6 +103,6 @@ struct RenameSheet_Previews: PreviewProvider {
     @Environment(\.presentationMode) static var presentationMode
     
     static var previews: some View {
-        TextfieldAlert(listName: "MyWatchlist", showRenameAction: .constant(true), presentationMode: presentationMode)
+        TextfieldAlert(watchlistName: "MyWatchlist", showRenameAction: .constant(true), presentationMode: presentationMode)
     }
 }
