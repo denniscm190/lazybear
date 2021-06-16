@@ -21,22 +21,16 @@ struct ProfileView: View {
         if profile.showView {
             NavigationView {
                 List {
-                    /*
-                     Get Watchlist names -> Create rows for each watchlist -> in each row, show companies
-                     */
-                    let watchlists = Set(watchlistCompanies.map { $0.watchlist })  /// Set -> avoid duplicates names
-                    
-                    ForEach(Array(watchlists).sorted(), id: \.self) { listName in
-                        let symbols = watchlistCompanies.filter({ $0.watchlist == listName }).map { $0.symbol }  /// Get symbols contained in specified watchlist (Core Data)
-                        
-                        if let companies = profile.data.quotes {
-                            let list = companies.filter({ symbols.contains($0.key) })  /// From API response select the companies within the specified watchlist
-                            StockRow(list: [listName: list], intradayPrices: profile.data.intradayPrices)
+                    if let apiCompanies = profile.data.quotes {
+                        let watchlistsNames = Array(Set(watchlistCompanies.map { $0.watchlistName })).sorted()  /// Get watchlistsNames in Core Data
+                        ForEach(watchlistsNames, id: \.self) { watchlistName in
+                            let companies = createWatchlistRow(apiCompanies, watchlistCompanies, watchlistName)
+                            StockRow(listName: watchlistName, companies: companies, showWatchlistSheet: true)
                         }
-                    }
-                    .listRowInsets(EdgeInsets())
-                    .onAppear {  /// Request API again when Core Data changes to update the list
-                        refreshList()
+                        .listRowInsets(EdgeInsets())
+                        .onAppear {  /// Request API again when Core Data changes to update the list
+                            refreshList()
+                        }
                     }
                 }
                 .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  /// Start timer
@@ -67,6 +61,35 @@ struct ProfileView: View {
     }
     
     /*
+     At this point, we have the API response with the watchlist companies data requested and received. Now, we have to extract from the API response
+     the companies within the selected watchlist. To do that, we should do the following:
+     1) Get an array of all the symbols within the specified watchlist.
+     2) Iterate over watchlistSymbols and return the company (QuoteModel object) from apiCompanies that matches.
+     3) Append this symbol to a new array.
+     */
+    private func createWatchlistRow(_ apiCompanies: [CompanyModel], _ watchlistCompanies: FetchedResults<WatchlistCompany>, _ watchlistName: String) -> [CompanyModel] {
+        let watchlistSymbols = watchlistCompanies.filter({ $0.watchlistName == watchlistName }).map { $0.symbol }  /// Get symbols contained in watchlistsName (Core Data)
+        
+        var companies = [CompanyModel]()
+        for watchlistSymbol in watchlistSymbols {
+            let company = apiCompanies.first(where: { $0.symbol == watchlistSymbol })
+            companies.append(company!)
+        }
+        
+        return companies
+    }
+    
+    /*
+     When a company is added to a watchlist or a new watchlist is created -> call function
+     to make the API request and refresh correctly the list
+     */
+    private func refreshList() {
+        if profile.data.quotes!.count < watchlistCompanies.count {
+            prepareUrl(.initial)
+        }
+    }
+    
+    /*
      Get symbols in watchlists (Core Data) -> Prepare url -> Request
      */
     private func prepareUrl(_ requestType: RequestType) {
@@ -89,20 +112,6 @@ struct ProfileView: View {
         default:
             let url = "https://api.lazybear.app/profile/type=streaming/symbols=\(symbolString)"
             profile.request(url, .streaming)
-        }
-    }
-        
-    
-    /*
-     When a company is added to a watchlist or a new watchlist is created -> call function
-     to make the API request and refresh correctly the list
-     */
-    private func refreshList() {
-//        print("Companies in watchlist -> \(watchlistCompanies.count)")
-//        print("Companies requested -> \(profile.data.quotes!.count)")
-        
-        if profile.data.quotes!.count < watchlistCompanies.count {
-            prepareUrl(.initial)
         }
     }
 }
