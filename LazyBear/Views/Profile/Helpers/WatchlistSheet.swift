@@ -9,22 +9,23 @@ import SwiftUI
 
 struct WatchlistSheet: View {
     var listName: String
-    var companies: [CompanyModel]
+    var apiCompanies: [CompanyModel]
     
-    @Environment(\.presentationMode) private var watchlistSheetPresentation
+    @Environment(\.presentationMode) private var watchlistSheetPresentationMode
     @Environment(\.managedObjectContext) private var moc
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [NSSortDescriptor(key:"symbol", ascending:true)])
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
     
-    /*
-     NSSortDescriptor and .sorted(by: {} in ForEach must coincide. If not .onDelete is not working well.
-     */
+    @State private var showDeleteListAlert = false
+    @State private var showRenameListSheet = false 
+    
     var body: some View {
         NavigationView {
             VStack {
                 List {
-                    ForEach(companies.sorted(by: { $0.companyName < $1.companyName }), id: \.self) { company in
-                        StockSheetRow(company: company)
+                    ForEach(watchlistCompanies.filter { $0.watchlistName == listName }, id: \.self) { watchlistCompany in
+                        let apiCompany = apiCompanies.first(where: { $0.symbol == watchlistCompany.symbol })
+                        WatchlistSheetRow(apiCompany: apiCompany!, watchlistCompany: watchlistCompany)
                     }
                     .onDelete(perform: deleteCompany)
                 }
@@ -33,27 +34,59 @@ struct WatchlistSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {watchlistSheetPresentation.wrappedValue.dismiss()}) {
+                    Button(action: {watchlistSheetPresentationMode.wrappedValue.dismiss()}) {
                         Image(systemName: "multiply")
                     }
                 }
+                
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    ToolbarMenu(showRenameListSheet: $showRenameListSheet, showDeleteListAlert: $showDeleteListAlert)
+                }
             }
+        }
+        .sheet(isPresented: $showRenameListSheet) {
+            RenameListSheet(oldWatchlistName: listName)
+                .environment(\.managedObjectContext, self.moc)
+        }
+        .alert(isPresented: $showDeleteListAlert) {  /// Show delete list alert
+            Alert(
+                title: Text("Are you sure you want to delete this list?"),
+                message: Text("This action can't be undo"),
+                primaryButton: .destructive(Text("Delete")) { deleteList() },
+                secondaryButton: .cancel()
+            )
         }
     }
     
     /*
-     Delete company from watchlist
+     Delete company from watchlist.
      */
     private func deleteCompany(at offsets: IndexSet) {
-        print(watchlistCompanies)
+        let watchlistCompaniesFiltered = watchlistCompanies.filter { $0.watchlistName == listName }
         for index in offsets {
-            print(index)
-            let company = watchlistCompanies[index]
+            let company = watchlistCompaniesFiltered[index]
             moc.delete(company)
         }
         do {
             try moc.save()
             print("Company deleted")
+        } catch {
+            print(error.localizedDescription)
+        }
+    }
+    
+    /*
+     Remove entire list if it's not the last one.
+     */
+    private func deleteList() {
+        let watchlistCompaniesFiltered = watchlistCompanies.filter { $0.watchlistName == listName }
+        for company in watchlistCompaniesFiltered {
+            moc.delete(company)
+        }
+        do {
+            try moc.save()
+            print("List deleted")
+            watchlistSheetPresentationMode.wrappedValue.dismiss()  /// Dismiss view
         } catch {
             print(error.localizedDescription)
         }
@@ -64,7 +97,7 @@ struct WatchlistSheet_Previews: PreviewProvider {
     static var previews: some View {
         WatchlistSheet(
             listName: "Most active",
-            companies: [CompanyModel(symbol: "aapl", companyName: "Apple Inc", latestPrice: 120.3, changePercent: 0.03, intradayPrices: [120.3])]
+            apiCompanies: [CompanyModel(symbol: "aapl", companyName: "Apple Inc", latestPrice: 120.3, changePercent: 0.03, intradayPrices: [120.3])]
         )
     }
 }

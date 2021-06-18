@@ -50,7 +50,7 @@ struct StockRow: View {
         .padding(.bottom)
         .sheet(isPresented: $showList) {
             if showWatchlistSheet ?? false {
-                WatchlistSheet(listName: adaptListTitle(listName), companies: companies)
+                WatchlistSheet(listName: listName, apiCompanies: companies)
                     .environment(\.managedObjectContext, self.moc)
             } else {
                 StockSheet(listName: adaptListTitle(listName), companies: companies)

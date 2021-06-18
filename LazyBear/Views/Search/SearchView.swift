@@ -20,7 +20,7 @@ struct SearchView: View {
                     CompanyList(searchResult: search.data)
                 } else {
                     VStack(alignment: .center) {
-                        Image("bearSleeping")
+                        Image("suitBear")
                             .resizable()
                             .scaledToFit()
                         
@@ -30,7 +30,7 @@ struct SearchView: View {
                             .multilineTextAlignment(.center)
                             .padding(.bottom)
                         
-                        Text("Use the search bar to find your favourite company. Type the stock symbol or name, we'll find it!")
+                        Text("Use the search bar to find your favourite company. Type the stock symbol or name, I'll find it")
                             .multilineTextAlignment(.center)
                     }
                     .padding(.horizontal)

@@ -12,7 +12,7 @@ struct RowShape: View {
     
     var body: some View {
         RoundedRectangle(cornerRadius: 25)
-            .foregroundColor(Color("CustomSecondaryBackground"))
+            .foregroundColor(Color("customSecondaryBackground"))
             .if(colorScheme == .light) { content in
                 // Apply shadow only when is not dark mode
                 content
