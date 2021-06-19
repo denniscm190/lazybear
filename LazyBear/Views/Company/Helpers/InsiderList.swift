@@ -52,7 +52,7 @@ struct InsiderList_Previews: PreviewProvider {
 
 struct InsiderFullList: View {
     var insiderSummary: [InsiderRosterModel]
-    @Environment(\.presentationMode) private var presentationInsiderFullList
+    @Environment(\.presentationMode) private var insiderFullListPresentation
     
     var body: some View {
         NavigationView {
@@ -70,7 +70,7 @@ struct InsiderFullList: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { presentationInsiderFullList.wrappedValue.dismiss() }) {
+                    Button(action: { insiderFullListPresentation.wrappedValue.dismiss() }) {
                         Image(systemName: "multiply")
                             .imageScale(.large)
                     }

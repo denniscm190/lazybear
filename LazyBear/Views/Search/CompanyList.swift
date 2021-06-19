@@ -19,9 +19,7 @@ struct CompanyList: View {
     }
 }
 
-struct CompanyList_Previews: PreviewProvider {
-    @Environment(\.presentationMode) static var presentationMode
-    
+struct CompanyList_Previews: PreviewProvider {    
     static var previews: some View {
         CompanyList(searchResult:
             [

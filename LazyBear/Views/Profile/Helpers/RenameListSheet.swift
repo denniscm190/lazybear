@@ -10,9 +10,10 @@ import Introspect
 
 struct RenameListSheet: View {
     var oldWatchlistName: String
+
     @State private var newWatchlistName = String()
     
-    @Environment(\.presentationMode) private var renameListSheetPresentationMode
+    @Environment(\.presentationMode) private var renameListSheetPresentation
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
@@ -31,7 +32,7 @@ struct RenameListSheet: View {
             .navigationTitle("Rename your watchlist")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { renameListSheetPresentationMode.wrappedValue.dismiss() }) {
+                    Button(action: { renameListSheetPresentation.wrappedValue.dismiss() }) {
                         Image(systemName: "multiply")
                     }
                 }
@@ -55,7 +56,8 @@ struct RenameListSheet: View {
         
         do {
             try moc.save()
-            renameListSheetPresentationMode.wrappedValue.dismiss()
+            renameListSheetPresentation.wrappedValue.dismiss()
+            
         } catch {
             print(error.localizedDescription)
         }
@@ -63,6 +65,8 @@ struct RenameListSheet: View {
 }
 
 struct RenameListSheet_Previews: PreviewProvider {
+    @Environment(\.presentationMode) static var presentationMode
+    
     static var previews: some View {
         RenameListSheet(oldWatchlistName: "Old name")
     }

@@ -10,7 +10,7 @@ import SwiftUI
 struct StatsView: View {
     var keyStats: KeyStatsModel
     
-    @Environment(\.presentationMode) private var presentationStatsView
+    @Environment(\.presentationMode) private var statsPresentation
     
     let displayWords: DisplayWordsModel = parseJSON("DisplayWords.json")
     
@@ -38,7 +38,7 @@ struct StatsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { presentationStatsView.wrappedValue.dismiss() }) {
+                    Button(action: { statsPresentation.wrappedValue.dismiss() }) {
                         Image(systemName: "multiply")
                             .imageScale(.large)
                     }

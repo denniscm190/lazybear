@@ -11,7 +11,7 @@ import SwiftlySearch
 struct SearchView: View {
     @ObservedObject var search = Search()
     @State private var searchedText = String()
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.presentationMode) private var searchViewPresentation
     
     var body: some View {
         NavigationView {

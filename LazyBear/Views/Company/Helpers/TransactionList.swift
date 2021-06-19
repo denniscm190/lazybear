@@ -56,7 +56,7 @@ struct TransactionList_Previews: PreviewProvider {
 
 struct TransactionFullList: View {
     var transactions: [InsiderTransactionModel]
-    @Environment(\.presentationMode) private var presentationTransactionFullList
+    @Environment(\.presentationMode) private var transactionFullListPresentation
     
     var body: some View {
         NavigationView {
@@ -72,7 +72,7 @@ struct TransactionFullList: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { presentationTransactionFullList.wrappedValue.dismiss() }) {
+                    Button(action: { transactionFullListPresentation.wrappedValue.dismiss() }) {
                         Image(systemName: "multiply")
                             .imageScale(.large)
                     }

@@ -14,7 +14,7 @@ struct WatchlistCreatorList: View {
     @State private var searchedCompany = String()
     @State private var companies = [SearchResponse]()
     
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.presentationMode) private var watchlistCreatorListPresentation
     @Environment(\.managedObjectContext) private var moc
     
     var body: some View {
@@ -23,7 +23,7 @@ struct WatchlistCreatorList: View {
                 WatchlistCreatorSearchBar(searchedCompany: $searchedCompany)
                 
                 List(companies, id: \.self) { company in
-                    WatchlistCreatorRow(company: company, presentationMode: presentationMode, watchlistCreatorClass: watchlistCreatorClass)
+                    WatchlistCreatorRow(company: company, watchlistCreatorListPresentation: watchlistCreatorListPresentation, watchlistCreatorClass: watchlistCreatorClass)
                         .environment(\.managedObjectContext, self.moc)
                 }
             }
@@ -35,7 +35,7 @@ struct WatchlistCreatorList: View {
             
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button("Cancel", action: { presentationMode.wrappedValue.dismiss() })
+                    Button("Cancel", action: { watchlistCreatorListPresentation.wrappedValue.dismiss() })
                 }
             }
         }

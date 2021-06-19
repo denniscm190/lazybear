@@ -11,7 +11,7 @@ struct WatchlistSheet: View {
     var listName: String
     var apiCompanies: [CompanyModel]
     
-    @Environment(\.presentationMode) private var watchlistSheetPresentationMode
+    @Environment(\.presentationMode) private var watchlistSheetPresentation
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
@@ -34,7 +34,7 @@ struct WatchlistSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {watchlistSheetPresentationMode.wrappedValue.dismiss()}) {
+                    Button(action: {watchlistSheetPresentation.wrappedValue.dismiss()}) {
                         Image(systemName: "multiply")
                     }
                 }
@@ -86,7 +86,7 @@ struct WatchlistSheet: View {
         do {
             try moc.save()
             print("List deleted")
-            watchlistSheetPresentationMode.wrappedValue.dismiss()  /// Dismiss view
+            watchlistSheetPresentation.wrappedValue.dismiss()  /// Dismiss view
         } catch {
             print(error.localizedDescription)
         }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WatchlistCreatorRow: View {
     var company: SearchResponse
-    @Binding var presentationMode: PresentationMode
+    @Binding var watchlistCreatorListPresentation: PresentationMode
     @ObservedObject var watchlistCreatorClass: WatchlistCreatorClass
     
     var body: some View {
@@ -41,7 +41,7 @@ struct WatchlistCreatorRow: View {
      */
     private func saveCompany() {
         watchlistCreatorClass.companies.append(company)
-        $presentationMode.wrappedValue.dismiss()
+        $watchlistCreatorListPresentation.wrappedValue.dismiss()
     }
 }
 
@@ -49,6 +49,6 @@ struct WatchlistCreatorRow_Previews: PreviewProvider {
     @Environment(\.presentationMode) static var presentationMode
     
     static var previews: some View {
-        WatchlistCreatorRow(company: SearchResponse(currency: "USD", exchange: nil, region: "US", securityName: "Apple Inc", symbol: "AAPL"), presentationMode: presentationMode, watchlistCreatorClass: WatchlistCreatorClass())
+        WatchlistCreatorRow(company: SearchResponse(currency: "USD", exchange: nil, region: "US", securityName: "Apple Inc", symbol: "AAPL"), watchlistCreatorListPresentation: presentationMode, watchlistCreatorClass: WatchlistCreatorClass())
     }
 }

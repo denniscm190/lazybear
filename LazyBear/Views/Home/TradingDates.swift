@@ -10,7 +10,7 @@ import SwiftUI
 
 struct TradingDates: View {
     var dates: [String]
-    @Environment(\.presentationMode) private var presentationTradingDates
+    @Environment(\.presentationMode) private var tradingDatesPresentation
     
     let columns = [GridItem(.adaptive(minimum: 100))]
     
@@ -28,7 +28,7 @@ struct TradingDates: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { presentationTradingDates.wrappedValue.dismiss() }) {
+                    Button(action: { tradingDatesPresentation.wrappedValue.dismiss() }) {
                         Image(systemName: "multiply")
                             .imageScale(.large)
                     }

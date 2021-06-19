@@ -14,7 +14,7 @@ struct WatchlistCreator: View {
     @State private var watchlistNameIsEmpty = false
     
     @Environment(\.managedObjectContext) private var moc
-    @Environment(\.presentationMode) private var presentationMode
+    @Environment(\.presentationMode) private var watchlistCreatorPresentation
     
     var body: some View {
         NavigationView {
@@ -60,7 +60,7 @@ struct WatchlistCreator: View {
                 Alert(
                     title: Text("Your watchlist won't be saved"),
                     message: Text("This action can't be undo"),
-                    primaryButton: .destructive(Text("Exit")) { presentationMode.wrappedValue.dismiss() },
+                    primaryButton: .destructive(Text("Exit")) { watchlistCreatorPresentation.wrappedValue.dismiss() },
                     secondaryButton: .cancel()
                 )
             }
@@ -105,7 +105,7 @@ struct WatchlistCreator: View {
             do {
                 try moc.save()
                 print("Watchlist created")
-                presentationMode.wrappedValue.dismiss()  // Dismiss view
+                watchlistCreatorPresentation.wrappedValue.dismiss()  // Dismiss view
             } catch {
                 print(error.localizedDescription)
             }
