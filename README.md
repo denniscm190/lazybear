@@ -1,2 +1,2 @@
-# Lazybear-iOS 🐻
+# Lazybear App 🐻
 🔒 Private repository
