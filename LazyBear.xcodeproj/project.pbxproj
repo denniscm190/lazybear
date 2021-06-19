@@ -32,6 +32,18 @@
 		951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E92613A37C007C0F36 /* TradingDatesItem.swift */; };
 		952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952045142610C7C600A76362 /* ConvertEpoch.swift */; };
 		9523ED422615BDB2006D3D6F /* phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 9523ED412615BDB2006D3D6F /* phrases.json */; };
+		952457D8267E339C00D5BBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952457D7267E339C00D5BBCB /* Assets.xcassets */; };
+		952457DF267E339C00D5BBCB /* LazyBearWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E3267E339C00D5BBCB /* LazyBearApp.swift */; };
+		952457E6267E339C00D5BBCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E5267E339C00D5BBCB /* ContentView.swift */; };
+		952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E7267E339C00D5BBCB /* NotificationController.swift */; };
+		952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E9267E339C00D5BBCB /* NotificationView.swift */; };
+		952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457EB267E339C00D5BBCB /* ComplicationController.swift */; };
+		952457EE267E339C00D5BBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952457ED267E339C00D5BBCB /* Assets.xcassets */; };
+		952457F1267E339C00D5BBCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952457F0267E339C00D5BBCB /* Preview Assets.xcassets */; };
+		952457FD267E339C00D5BBCB /* LazyBearWatchOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457FC267E339C00D5BBCB /* LazyBearWatchOSTests.swift */; };
+		95245808267E339D00D5BBCB /* LazyBearWatchOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95245807267E339D00D5BBCB /* LazyBearWatchOSUITests.swift */; };
+		9524580C267E339D00D5BBCB /* LazyBearWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9529947E2629CA3E005F0AB0 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529947D2629CA3E005F0AB0 /* Search.swift */; };
 		952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952994812629CA46005F0AB0 /* SearchResponse.swift */; };
 		952FC0B6267C93AE001406B1 /* ToolbarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FC0B5267C93AE001406B1 /* ToolbarMenu.swift */; };
@@ -88,6 +100,7 @@
 		95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5D266E855800C384A1 /* GetDateComponents.swift */; };
 		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
+		95E0275F267D0C9500B861E8 /* MainViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0275E267D0C9500B861E8 /* MainViewTest.swift */; };
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E31C0D26472CA000106B98 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C0C26472CA000106B98 /* CompanyView.swift */; };
 		95E31C142647363800106B98 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C132647363800106B98 /* Chart.swift */; };
@@ -112,7 +125,60 @@
 			remoteGlobalIDString = 95672B8A25DDA54700DCBE4A;
 			remoteInfo = LazyBear;
 		};
+		952457E0267E339C00D5BBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 952457DD267E339C00D5BBCB;
+			remoteInfo = "LazyBearWatchOS Extension";
+		};
+		952457F9267E339C00D5BBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 952457DD267E339C00D5BBCB;
+			remoteInfo = "LazyBearWatchOS Extension";
+		};
+		95245804267E339D00D5BBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 952457D4267E339B00D5BBCB;
+			remoteInfo = LazyBearWatchOS;
+		};
+		9524580A267E339D00D5BBCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 952457D4267E339B00D5BBCB;
+			remoteInfo = LazyBearWatchOS;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9524580D267E339D00D5BBCB /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				9524580C267E339D00D5BBCB /* LazyBearWatchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95245810267E339D00D5BBCB /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				952457DF267E339C00D5BBCB /* LazyBearWatchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		950857A8266BD2C6005357BA /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
@@ -143,6 +209,25 @@
 		951566E92613A37C007C0F36 /* TradingDatesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesItem.swift; sourceTree = "<group>"; };
 		952045142610C7C600A76362 /* ConvertEpoch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertEpoch.swift; sourceTree = "<group>"; };
 		9523ED412615BDB2006D3D6F /* phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = phrases.json; sourceTree = "<group>"; };
+		952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBearWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		952457D7267E339C00D5BBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		952457D9267E339C00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LazyBearWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		952457E3267E339C00D5BBCB /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
+		952457E5267E339C00D5BBCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		952457E7267E339C00D5BBCB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		952457E9267E339C00D5BBCB /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		952457EB267E339C00D5BBCB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		952457ED267E339C00D5BBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		952457F0267E339C00D5BBCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		952457F2267E339C00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		952457F8267E339C00D5BBCB /* LazyBearWatchOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearWatchOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		952457FC267E339C00D5BBCB /* LazyBearWatchOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearWatchOSTests.swift; sourceTree = "<group>"; };
+		952457FE267E339C00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95245803267E339D00D5BBCB /* LazyBearWatchOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearWatchOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95245807267E339D00D5BBCB /* LazyBearWatchOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearWatchOSUITests.swift; sourceTree = "<group>"; };
+		95245809267E339D00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9529947D2629CA3E005F0AB0 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		952994812629CA46005F0AB0 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		952FC0B5267C93AE001406B1 /* ToolbarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarMenu.swift; sourceTree = "<group>"; };
@@ -199,6 +284,7 @@
 		95CCFB5D266E855800C384A1 /* GetDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateComponents.swift; sourceTree = "<group>"; };
 		95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertStringToDate.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
+		95E0275E267D0C9500B861E8 /* MainViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTest.swift; sourceTree = "<group>"; };
 		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E31C0C26472CA000106B98 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		95E31C132647363800106B98 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
@@ -217,6 +303,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		950C571D2629EFC200F234FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952457DB267E339C00D5BBCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952457F5267E339C00D5BBCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95245800267E339D00D5BBCB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -245,6 +352,7 @@
 			isa = PBXGroup;
 			children = (
 				950B6F412676454A0029E447 /* RevenueCatTest.swift */,
+				95E0275E267D0C9500B861E8 /* MainViewTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -301,6 +409,57 @@
 				95AF0FF62671320F0049C4AB /* DisplayWords.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		952457D6267E339B00D5BBCB /* LazyBearWatchOS */ = {
+			isa = PBXGroup;
+			children = (
+				952457D7267E339C00D5BBCB /* Assets.xcassets */,
+				952457D9267E339C00D5BBCB /* Info.plist */,
+			);
+			path = LazyBearWatchOS;
+			sourceTree = "<group>";
+		};
+		952457E2267E339C00D5BBCB /* LazyBearWatchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				952457E3267E339C00D5BBCB /* LazyBearApp.swift */,
+				952457E5267E339C00D5BBCB /* ContentView.swift */,
+				952457E7267E339C00D5BBCB /* NotificationController.swift */,
+				952457E9267E339C00D5BBCB /* NotificationView.swift */,
+				952457EB267E339C00D5BBCB /* ComplicationController.swift */,
+				952457ED267E339C00D5BBCB /* Assets.xcassets */,
+				952457F2267E339C00D5BBCB /* Info.plist */,
+				952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */,
+				952457EF267E339C00D5BBCB /* Preview Content */,
+			);
+			path = "LazyBearWatchOS Extension";
+			sourceTree = "<group>";
+		};
+		952457EF267E339C00D5BBCB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				952457F0267E339C00D5BBCB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		952457FB267E339C00D5BBCB /* LazyBearWatchOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				952457FC267E339C00D5BBCB /* LazyBearWatchOSTests.swift */,
+				952457FE267E339C00D5BBCB /* Info.plist */,
+			);
+			path = LazyBearWatchOSTests;
+			sourceTree = "<group>";
+		};
+		95245806267E339D00D5BBCB /* LazyBearWatchOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95245807267E339D00D5BBCB /* LazyBearWatchOSUITests.swift */,
+				95245809267E339D00D5BBCB /* Info.plist */,
+			);
+			path = LazyBearWatchOSUITests;
 			sourceTree = "<group>";
 		};
 		9529947C2629CA2F005F0AB0 /* Networking */ = {
@@ -369,6 +528,10 @@
 				95672B8D25DDA54700DCBE4A /* LazyBear */,
 				950C57112629EF9100F234FE /* LazyBearTests */,
 				950C57212629EFC200F234FE /* LazyBearUITests */,
+				952457D6267E339B00D5BBCB /* LazyBearWatchOS */,
+				952457E2267E339C00D5BBCB /* LazyBearWatchOS Extension */,
+				952457FB267E339C00D5BBCB /* LazyBearWatchOSTests */,
+				95245806267E339D00D5BBCB /* LazyBearWatchOSUITests */,
 				95672B8C25DDA54700DCBE4A /* Products */,
 				958A735025E0170900FD7ECA /* Frameworks */,
 			);
@@ -380,6 +543,10 @@
 				95672B8B25DDA54700DCBE4A /* LazyBear.app */,
 				950C57102629EF9100F234FE /* LazyBearTests.xctest */,
 				950C57202629EFC200F234FE /* LazyBearUITests.xctest */,
+				952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */,
+				952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */,
+				952457F8267E339C00D5BBCB /* LazyBearWatchOSTests.xctest */,
+				95245803267E339D00D5BBCB /* LazyBearWatchOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -577,6 +744,76 @@
 			productReference = 950C57202629EFC200F234FE /* LazyBearUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		952457D4267E339B00D5BBCB /* LazyBearWatchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95245818267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS" */;
+			buildPhases = (
+				952457D3267E339B00D5BBCB /* Resources */,
+				95245810267E339D00D5BBCB /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				952457E1267E339C00D5BBCB /* PBXTargetDependency */,
+			);
+			name = LazyBearWatchOS;
+			productName = LazyBearWatchOS;
+			productReference = 952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95245817267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS Extension" */;
+			buildPhases = (
+				952457DA267E339C00D5BBCB /* Sources */,
+				952457DB267E339C00D5BBCB /* Frameworks */,
+				952457DC267E339C00D5BBCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LazyBearWatchOS Extension";
+			productName = "LazyBearWatchOS Extension";
+			productReference = 952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		952457F7267E339C00D5BBCB /* LazyBearWatchOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95245819267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSTests" */;
+			buildPhases = (
+				952457F4267E339C00D5BBCB /* Sources */,
+				952457F5267E339C00D5BBCB /* Frameworks */,
+				952457F6267E339C00D5BBCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				952457FA267E339C00D5BBCB /* PBXTargetDependency */,
+			);
+			name = LazyBearWatchOSTests;
+			productName = LazyBearWatchOSTests;
+			productReference = 952457F8267E339C00D5BBCB /* LazyBearWatchOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95245802267E339D00D5BBCB /* LazyBearWatchOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9524581A267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSUITests" */;
+			buildPhases = (
+				952457FF267E339D00D5BBCB /* Sources */,
+				95245800267E339D00D5BBCB /* Frameworks */,
+				95245801267E339D00D5BBCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95245805267E339D00D5BBCB /* PBXTargetDependency */,
+			);
+			name = LazyBearWatchOSUITests;
+			productName = LazyBearWatchOSUITests;
+			productReference = 95245803267E339D00D5BBCB /* LazyBearWatchOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		95672B8A25DDA54700DCBE4A /* LazyBear */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95672B9F25DDA54800DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */;
@@ -584,10 +821,12 @@
 				95672B8725DDA54700DCBE4A /* Sources */,
 				95672B8825DDA54700DCBE4A /* Frameworks */,
 				95672B8925DDA54700DCBE4A /* Resources */,
+				9524580D267E339D00D5BBCB /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9524580B267E339D00D5BBCB /* PBXTargetDependency */,
 			);
 			name = LazyBear;
 			packageProductDependencies = (
@@ -608,7 +847,7 @@
 		95672B8325DDA54700DCBE4A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					950C570F2629EF9100F234FE = {
@@ -618,6 +857,20 @@
 					950C571F2629EFC200F234FE = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = 95672B8A25DDA54700DCBE4A;
+					};
+					952457D4267E339B00D5BBCB = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					952457DD267E339C00D5BBCB = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					952457F7267E339C00D5BBCB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 952457DD267E339C00D5BBCB;
+					};
+					95245802267E339D00D5BBCB = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 952457D4267E339B00D5BBCB;
 					};
 					95672B8A25DDA54700DCBE4A = {
 						CreatedOnToolsVersion = 12.4;
@@ -648,6 +901,10 @@
 				95672B8A25DDA54700DCBE4A /* LazyBear */,
 				950C570F2629EF9100F234FE /* LazyBearTests */,
 				950C571F2629EFC200F234FE /* LazyBearUITests */,
+				952457D4267E339B00D5BBCB /* LazyBearWatchOS */,
+				952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */,
+				952457F7267E339C00D5BBCB /* LazyBearWatchOSTests */,
+				95245802267E339D00D5BBCB /* LazyBearWatchOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -661,6 +918,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		950C571E2629EFC200F234FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952457D3267E339B00D5BBCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952457D8267E339C00D5BBCB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952457DC267E339C00D5BBCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952457F1267E339C00D5BBCB /* Preview Assets.xcassets in Resources */,
+				952457EE267E339C00D5BBCB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952457F6267E339C00D5BBCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95245801267E339D00D5BBCB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -698,12 +986,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		952457DA267E339C00D5BBCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */,
+				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
+				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
+				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
+				952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952457F4267E339C00D5BBCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				952457FD267E339C00D5BBCB /* LazyBearWatchOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		952457FF267E339D00D5BBCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95245808267E339D00D5BBCB /* LazyBearWatchOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95672B8725DDA54700DCBE4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				95602704265ABB990046F97E /* InsiderRosterModel.swift in Sources */,
 				95131D46267A03020055C6DE /* WatchlistCompany+CoreDataProperties.swift in Sources */,
+				95E0275F267D0C9500B861E8 /* MainViewTest.swift in Sources */,
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
 				952FC0B6267C93AE001406B1 /* ToolbarMenu.swift in Sources */,
@@ -791,6 +1108,26 @@
 			target = 95672B8A25DDA54700DCBE4A /* LazyBear */;
 			targetProxy = 950C57252629EFC200F234FE /* PBXContainerItemProxy */;
 		};
+		952457E1267E339C00D5BBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */;
+			targetProxy = 952457E0267E339C00D5BBCB /* PBXContainerItemProxy */;
+		};
+		952457FA267E339C00D5BBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */;
+			targetProxy = 952457F9267E339C00D5BBCB /* PBXContainerItemProxy */;
+		};
+		95245805267E339D00D5BBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 952457D4267E339B00D5BBCB /* LazyBearWatchOS */;
+			targetProxy = 95245804267E339D00D5BBCB /* PBXContainerItemProxy */;
+		};
+		9524580B267E339D00D5BBCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 952457D4267E339B00D5BBCB /* LazyBearWatchOS */;
+			targetProxy = 9524580A267E339D00D5BBCB /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -869,6 +1206,182 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = LazyBear;
+			};
+			name = Release;
+		};
+		9524580E267E339D00D5BBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				IBSC_MODULE = LazyBearWatchOS_Extension;
+				INFOPLIST_FILE = LazyBearWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		9524580F267E339D00D5BBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				IBSC_MODULE = LazyBearWatchOS_Extension;
+				INFOPLIST_FILE = LazyBearWatchOS/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		95245811267E339D00D5BBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LazyBearWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		95245812267E339D00D5BBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "LazyBearWatchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		95245813267E339D00D5BBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearWatchOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBearWatchOS Extension.appex/LazyBearWatchOS Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		95245814267E339D00D5BBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearWatchOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBearWatchOS Extension.appex/LazyBearWatchOS Extension";
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Release;
+		};
+		95245815267E339D00D5BBCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearWatchOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = LazyBearWatchOS;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+			};
+			name = Debug;
+		};
+		95245816267E339D00D5BBCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = LazyBearWatchOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = LazyBearWatchOS;
+				WATCHOS_DEPLOYMENT_TARGET = 7.4;
 			};
 			name = Release;
 		};
@@ -1057,6 +1570,42 @@
 			buildConfigurations = (
 				950C57282629EFC200F234FE /* Debug */,
 				950C57292629EFC200F234FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95245817267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95245811267E339D00D5BBCB /* Debug */,
+				95245812267E339D00D5BBCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95245818267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9524580E267E339D00D5BBCB /* Debug */,
+				9524580F267E339D00D5BBCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95245819267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95245813267E339D00D5BBCB /* Debug */,
+				95245814267E339D00D5BBCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9524581A267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95245815267E339D00D5BBCB /* Debug */,
+				95245816267E339D00D5BBCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
