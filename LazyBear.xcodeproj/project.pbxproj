@@ -30,6 +30,7 @@
 		951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951490542610BD2B00BDEEB5 /* WelcomeView.swift */; };
 		951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E62613A2B6007C0F36 /* TradingDates.swift */; };
 		951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E92613A37C007C0F36 /* TradingDatesItem.swift */; };
+		9519BE06267E5EC3009C6015 /* ProfileStockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */; };
 		952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952045142610C7C600A76362 /* ConvertEpoch.swift */; };
 		9523ED422615BDB2006D3D6F /* phrases.json in Resources */ = {isa = PBXBuildFile; fileRef = 9523ED412615BDB2006D3D6F /* phrases.json */; };
 		952457D8267E339C00D5BBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952457D7267E339C00D5BBCB /* Assets.xcassets */; };
@@ -46,7 +47,6 @@
 		9524580C267E339D00D5BBCB /* LazyBearWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9529947E2629CA3E005F0AB0 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529947D2629CA3E005F0AB0 /* Search.swift */; };
 		952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952994812629CA46005F0AB0 /* SearchResponse.swift */; };
-		952FC0B6267C93AE001406B1 /* ToolbarMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FC0B5267C93AE001406B1 /* ToolbarMenu.swift */; };
 		952FC0B8267C97BA001406B1 /* WatchlistSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FC0B7267C97BA001406B1 /* WatchlistSheetRow.swift */; };
 		952FC0BA267C9A24001406B1 /* RenameListSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FC0B9267C9A24001406B1 /* RenameListSheet.swift */; };
 		954572EC267A3D6A00C33A20 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 954572EB267A3D6A00C33A20 /* StockCharts */; };
@@ -100,7 +100,6 @@
 		95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5D266E855800C384A1 /* GetDateComponents.swift */; };
 		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
-		95E0275F267D0C9500B861E8 /* MainViewTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E0275E267D0C9500B861E8 /* MainViewTest.swift */; };
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E31C0D26472CA000106B98 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C0C26472CA000106B98 /* CompanyView.swift */; };
 		95E31C142647363800106B98 /* Chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E31C132647363800106B98 /* Chart.swift */; };
@@ -207,6 +206,7 @@
 		951490542610BD2B00BDEEB5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		951566E62613A2B6007C0F36 /* TradingDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDates.swift; sourceTree = "<group>"; };
 		951566E92613A37C007C0F36 /* TradingDatesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesItem.swift; sourceTree = "<group>"; };
+		9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStockRow.swift; sourceTree = "<group>"; };
 		952045142610C7C600A76362 /* ConvertEpoch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertEpoch.swift; sourceTree = "<group>"; };
 		9523ED412615BDB2006D3D6F /* phrases.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = phrases.json; sourceTree = "<group>"; };
 		952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBearWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -230,7 +230,6 @@
 		95245809267E339D00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9529947D2629CA3E005F0AB0 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		952994812629CA46005F0AB0 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
-		952FC0B5267C93AE001406B1 /* ToolbarMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarMenu.swift; sourceTree = "<group>"; };
 		952FC0B7267C97BA001406B1 /* WatchlistSheetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistSheetRow.swift; sourceTree = "<group>"; };
 		952FC0B9267C9A24001406B1 /* RenameListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameListSheet.swift; sourceTree = "<group>"; };
 		9550443926111B2B000E0BCB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -284,7 +283,6 @@
 		95CCFB5D266E855800C384A1 /* GetDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateComponents.swift; sourceTree = "<group>"; };
 		95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertStringToDate.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
-		95E0275E267D0C9500B861E8 /* MainViewTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTest.swift; sourceTree = "<group>"; };
 		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E31C0C26472CA000106B98 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		95E31C132647363800106B98 /* Chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart.swift; sourceTree = "<group>"; };
@@ -352,7 +350,6 @@
 			isa = PBXGroup;
 			children = (
 				950B6F412676454A0029E447 /* RevenueCatTest.swift */,
-				95E0275E267D0C9500B861E8 /* MainViewTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -635,6 +632,7 @@
 		95BD2F91263418F7008B6752 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */,
 				9562404B263C766D00C6C511 /* WatchlistCreator.swift */,
 				9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */,
 				95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */,
@@ -642,7 +640,6 @@
 				95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */,
 				95131D4A267A15490055C6DE /* WatchlistSheet.swift */,
 				952FC0B7267C97BA001406B1 /* WatchlistSheetRow.swift */,
-				952FC0B5267C93AE001406B1 /* ToolbarMenu.swift */,
 				952FC0B9267C9A24001406B1 /* RenameListSheet.swift */,
 			);
 			path = Helpers;
@@ -1020,10 +1017,8 @@
 			files = (
 				95602704265ABB990046F97E /* InsiderRosterModel.swift in Sources */,
 				95131D46267A03020055C6DE /* WatchlistCompany+CoreDataProperties.swift in Sources */,
-				95E0275F267D0C9500B861E8 /* MainViewTest.swift in Sources */,
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
-				952FC0B6267C93AE001406B1 /* ToolbarMenu.swift in Sources */,
 				95131D4B267A15490055C6DE /* WatchlistSheet.swift in Sources */,
 				95CCFB5C266E842000C384A1 /* TransactionList.swift in Sources */,
 				95613AE1264FD34100D4CE8F /* NewsRow.swift in Sources */,
@@ -1074,6 +1069,7 @@
 				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
 				9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */,
 				95123AC026767370001BFAF3 /* StockItem.swift in Sources */,
+				9519BE06267E5EC3009C6015 /* ProfileStockRow.swift in Sources */,
 				9550444626111EE5000E0BCB /* SectorItem.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */,
@@ -1216,9 +1212,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				IBSC_MODULE = LazyBearWatchOS_Extension;
 				INFOPLIST_FILE = LazyBearWatchOS/Info.plist;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1236,9 +1234,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				IBSC_MODULE = LazyBearWatchOS_Extension;
 				INFOPLIST_FILE = LazyBearWatchOS/Info.plist;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
@@ -1254,6 +1254,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -1263,6 +1264,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1278,6 +1280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -1287,6 +1290,7 @@
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
@@ -1510,7 +1514,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -1520,7 +1524,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1535,7 +1539,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
@@ -1545,7 +1549,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4;
+				MARKETING_VERSION = 4.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

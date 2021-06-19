@@ -25,7 +25,7 @@ struct ProfileView: View {
                         let watchlistsNames = Array(Set(watchlistCompanies.map { $0.watchlistName })).sorted()  /// Get watchlistsNames in Core Data
                         ForEach(watchlistsNames, id: \.self) { watchlistName in
                             let companies = createWatchlistRow(apiCompanies, watchlistCompanies, watchlistName)
-                            StockRow(listName: watchlistName, companies: companies, showWatchlistSheet: true)
+                            ProfileStockRow(watchlistName: watchlistName, companies: companies)
                         }
                         .listRowInsets(EdgeInsets())
                         .onAppear {  /// Request API again when Core Data changes to update the list
