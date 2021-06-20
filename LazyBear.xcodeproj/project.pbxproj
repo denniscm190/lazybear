@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9502BBF5267F5194003B0A59 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF4267F5194003B0A59 /* CompanyView.swift */; };
+		9502BBF7267F5974003B0A59 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF6267F5974003B0A59 /* CompanyResponse.swift */; };
+		9502BBF9267F59A0003B0A59 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF8267F59A0003B0A59 /* Company.swift */; };
 		950857A7266BD12D005357BA /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 950857A6266BD12D005357BA /* BetterSafariView */; };
 		950857D3266BE55F005357BA /* RowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950857D2266BE55F005357BA /* RowShape.swift */; };
 		950B6F3D267643460029E447 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 950B6F3C267643460029E447 /* Purchases */; };
@@ -83,7 +85,6 @@
 		95AF0FF72671320F0049C4AB /* DisplayWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AF0FF62671320F0049C4AB /* DisplayWords.json */; };
 		95AF0FF92671342E0049C4AB /* DisplayWordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */; };
 		95BB05B22670B8C3005A2029 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
-		95BD2FB326341D36008B6752 /* BlurBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BD2FB226341D36008B6752 /* BlurBackground.swift */; };
 		95C22F3F26776F010014C98A /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
@@ -167,6 +168,8 @@
 
 /* Begin PBXFileReference section */
 		9502BBF4267F5194003B0A59 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		9502BBF6267F5974003B0A59 /* CompanyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyResponse.swift; sourceTree = "<group>"; };
+		9502BBF8267F59A0003B0A59 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		950857D2266BE55F005357BA /* RowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowShape.swift; sourceTree = "<group>"; };
 		950B6F3E267643640029E447 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		950B6F412676454A0029E447 /* RevenueCatTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatTest.swift; sourceTree = "<group>"; };
@@ -252,7 +255,6 @@
 		95AF0FF62671320F0049C4AB /* DisplayWords.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DisplayWords.json; sourceTree = "<group>"; };
 		95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayWordsModel.swift; sourceTree = "<group>"; };
 		95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsModel.swift; sourceTree = "<group>"; };
-		95BD2FB226341D36008B6752 /* BlurBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurBackground.swift; sourceTree = "<group>"; };
 		95C22F3E26776F010014C98A /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionModel.swift; sourceTree = "<group>"; };
@@ -562,7 +564,6 @@
 		95893DD22613CAB5003698C5 /* Global Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				95BD2FB226341D36008B6752 /* BlurBackground.swift */,
 				950857D2266BE55F005357BA /* RowShape.swift */,
 			);
 			path = "Global Helpers";
@@ -646,6 +647,8 @@
 		95E31C0F26472CC000106B98 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				9502BBF8267F59A0003B0A59 /* Company.swift */,
+				9502BBF6267F5974003B0A59 /* CompanyResponse.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -1006,11 +1009,11 @@
 				95613ADF264FC6FD00D4CE8F /* LatestNewsModel.swift in Sources */,
 				950D0E292618AEC800D17AD7 /* SearchedCompanyItem.swift in Sources */,
 				955E733C262356F3005652FF /* HomeResponse.swift in Sources */,
-				95BD2FB326341D36008B6752 /* BlurBackground.swift in Sources */,
 				951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */,
 				951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */,
 				95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */,
 				95131D47267A03020055C6DE /* WatchlistCompany+CoreDataClass.swift in Sources */,
+				9502BBF7267F5974003B0A59 /* CompanyResponse.swift in Sources */,
 				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
 				9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */,
 				95123AC026767370001BFAF3 /* StockItem.swift in Sources */,
@@ -1032,6 +1035,7 @@
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
 				952FC0BA267C9A24001406B1 /* RenameListSheet.swift in Sources */,
 				95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */,
+				9502BBF9267F59A0003B0A59 /* Company.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
