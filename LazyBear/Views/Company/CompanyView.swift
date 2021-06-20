@@ -10,8 +10,9 @@ import SwiftUI
 struct CompanyView: View {
     var symbol: String
     var name: String
-    
     @ObservedObject var company = Company()
+    var ranges = ["1D", "5D", "1M", "3M", "6M", "1Y", "5Y"]  /// DatePicker ranges
+    @State private var selectedRange = "3M"  /// Selected DatePicker range
     
     var body: some View {
         if company.showView {
@@ -28,7 +29,19 @@ struct CompanyView: View {
                         }
                         .padding(.horizontal)
                         
-                        ChartHelper(quote: company.data.quote, historicalPrices: company.data.historicalPrices)
+                        Picker("", selection: $selectedRange) {
+                            ForEach(ranges, id: \.self) {
+                                Text($0)
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        .padding(.horizontal)
+                        .onChange(of: selectedRange, perform: { range in
+                            let url = "https://api.lazybear.app/company/symbol=\(symbol)/type=refresh/range=\(range.lowercased())"
+                            company.request(url, .refresh)
+                        })
+                        
+                        ChartHelper(company: company)
                         KeyStatsHelper(keyStats: company.data.keyStats)
                     }
                 }

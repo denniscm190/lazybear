@@ -9,8 +9,8 @@ import SwiftUI
 
 struct KeyStatsHelper: View {
     var keyStats: KeyStatsModel?
-    
     let displayWords: DisplayWordsModel = parseJSON("DisplayWords.json")
+    @State private var showList = false
     
     var body: some View {
         if let keyStats = keyStats {
@@ -23,29 +23,35 @@ struct KeyStatsHelper: View {
                         if let unwrappedValue = unwrapAnyOptional(value: child.value) {
                             let label = String(child.label!)
                             
-                            Capsule()
-                                .frame(width: 250, height: 40)
-                                .foregroundColor(.white)
-                                .shadow(color: Color(.systemGray).opacity(0.25), radius: 10, x: 0.0, y: 0.0)
-                                .overlay(
-                                    HStack {
-                                        Text("\(displayWords.keyStats[label]!):")
-                                            .font(.callout)
-                                            .fontWeight(.semibold)
-                                            .lineLimit(1)
-                                        
-                                        Spacer()
-                                        Text(unwrappedValue)
-                                            .font(.callout)
-                                            .lineLimit(1)
-                                    }
-                                    .padding()
-                                )
+                            Button(action: { showList = true }) {
+                                Capsule()
+                                    .frame(width: 250, height: 40)
+                                    .foregroundColor(.white)
+                                    .shadow(color: Color(.systemGray).opacity(0.25), radius: 10, x: 0.0, y: 0.0)
+                                    .overlay(
+                                        HStack {
+                                            Text("\(displayWords.keyStats[label]!):")
+                                                .font(.callout)
+                                                .fontWeight(.semibold)
+                                                .lineLimit(1)
+                                            
+                                            Spacer()
+                                            Text(unwrappedValue)
+                                                .font(.callout)
+                                                .lineLimit(1)
+                                        }
+                                        .padding()
+                                    )
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
                 .frame(height: 80)
                 .padding(.horizontal)
+            }
+            .sheet(isPresented: $showList) {
+                KeyStatsList(keyStats: keyStats)
             }
         }
     }

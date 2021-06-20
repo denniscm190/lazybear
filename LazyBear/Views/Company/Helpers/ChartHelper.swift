@@ -6,18 +6,17 @@
 //
 
 import SwiftUI
+import StockCharts
 
 struct ChartHelper: View {
-    var quote: [QuoteModel]?
-    var historicalPrices: [HistoricalPricesModel]?
+    @ObservedObject var company: Company
     
     var body: some View {
         CustomRectangleBox()
             .frame(height: 270)
-            .padding(.horizontal)
             .overlay(
                 VStack {
-                    if let quote = quote?.first {
+                    if let quote = company.data.quote?.first {
                         HStack(alignment: .center) {
                             Text("\(quote.latestPrice ?? 0, specifier: "%.2f")")
                                 .foregroundColor(quote.changePercent ?? 0 < 0 ? .red: .green)
@@ -27,23 +26,33 @@ struct ChartHelper: View {
                                 .foregroundColor(quote.changePercent ?? 0 < 0 ? .red: .green)
                                 .font(.callout)
                                 .fontWeight(.semibold)
+                            
+                            Spacer()
                         }
-                        .padding(.top)
+                        .padding()
+                        
+                        if let historicalPrices = company.data.historicalPrices {
+                            let prices = historicalPrices.compactMap { $0.close }
+                            let dates = historicalPrices.compactMap { $0.date }
+                            if company.showChart {
+                                LineChartView(data: prices, dates: dates, hours: nil, dragGesture: true)
+                            } else {
+                                Spacer()
+                                ProgressView()
+                                Spacer()
+                            }
+                        }
                     }
+                    
+                    Spacer()
                 }
             )
+            .padding(.horizontal)
     }
 }
 
 struct ChartHelper_Previews: PreviewProvider {
     static var previews: some View {
-        ChartHelper(
-            quote: [
-                QuoteModel(companyName: "apple inc", latestPrice: 120.3, changePercent: 0.03)
-            ],
-            historicalPrices: [
-                HistoricalPricesModel(close: 120.3, date: "2020-01-01", minute: nil)
-            ]
-        )
+        ChartHelper(company: Company())
     }
 }

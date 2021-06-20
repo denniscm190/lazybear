@@ -13,6 +13,7 @@
 		9502BBFB267F5EE8003B0A59 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */; };
 		9502BBFD267F63F3003B0A59 /* CustomRectangleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */; };
 		9502BBFF267F6454003B0A59 /* KeyStatsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */; };
+		9502BC01267F8771003B0A59 /* KeyStatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BC00267F8771003B0A59 /* KeyStatsList.swift */; };
 		950857A7266BD12D005357BA /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 950857A6266BD12D005357BA /* BetterSafariView */; };
 		950B6F3D267643460029E447 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 950B6F3C267643460029E447 /* Purchases */; };
 		950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B6F3E267643640029E447 /* StoreKit.framework */; };
@@ -175,6 +176,7 @@
 		9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
 		9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRectangleBox.swift; sourceTree = "<group>"; };
 		9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsHelper.swift; sourceTree = "<group>"; };
+		9502BC00267F8771003B0A59 /* KeyStatsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsList.swift; sourceTree = "<group>"; };
 		950B6F3E267643640029E447 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		950B6F412676454A0029E447 /* RevenueCatTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatTest.swift; sourceTree = "<group>"; };
 		950C36E2260FB6180081CF53 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
@@ -638,6 +640,7 @@
 				9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */,
 				9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */,
 				9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */,
+				9502BC00267F8771003B0A59 /* KeyStatsList.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1023,6 +1026,7 @@
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
 				95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */,
 				95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */,
+				9502BC01267F8771003B0A59 /* KeyStatsList.swift in Sources */,
 				95123AB826766497001BFAF3 /* CurrencySheet.swift in Sources */,
 				95AF0FF92671342E0049C4AB /* DisplayWordsModel.swift in Sources */,
 				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
