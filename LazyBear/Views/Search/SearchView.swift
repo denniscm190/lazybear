@@ -43,6 +43,7 @@ struct SearchView: View {
                 encodeAndRequest(searchedText)
             })
         }
+        .background(Color("customBackground").edgesIgnoringSafeArea(.all))
         .navigationViewStyle(StackNavigationViewStyle())
     }
     

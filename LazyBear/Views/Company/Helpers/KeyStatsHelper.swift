@@ -11,11 +11,12 @@ struct KeyStatsHelper: View {
     var keyStats: KeyStatsModel?
     let displayWords: DisplayWordsModel = parseJSON("DisplayWords.json")
     @State private var showList = false
+    @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
         if let keyStats = keyStats {
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 40) {
+                HStack(spacing: 20) {
                     
                     let mirror = Mirror(reflecting: keyStats)
                     ForEach(Array(mirror.children), id: \.label) { child in  /// Iterate over each variable within the class
@@ -26,8 +27,10 @@ struct KeyStatsHelper: View {
                             Button(action: { showList = true }) {
                                 Capsule()
                                     .frame(width: 250, height: 40)
-                                    .foregroundColor(.white)
-                                    .shadow(color: Color(.systemGray).opacity(0.25), radius: 10, x: 0.0, y: 0.0)
+                                    .foregroundColor(Color("customSecondaryBackground"))
+                                    .if(colorScheme == .light) { content in
+                                        content.shadow(color: Color(.systemGray).opacity(0.25), radius: 10, x: 0.0, y: 0.0)
+                                    }
                                     .overlay(
                                         HStack {
                                             Text("\(displayWords.keyStats[label]!):")

@@ -8,10 +8,15 @@
 import SwiftUI
 
 struct CustomRectangleBox: View {
+    @Environment(\.colorScheme) private var colorScheme
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 15)
-            .foregroundColor(.white)
-            .shadow(color: Color(.systemGray).opacity(0.25), radius: 10, x: 0.0, y: 0.0)
+            .foregroundColor(Color("customSecondaryBackground"))
+            .if(colorScheme == .light) { content in
+                content.shadow(color: Color(.systemGray).opacity(0.25), radius: 10, x: 0.0, y: 0.0)
+            }
+            
     }
 }
 

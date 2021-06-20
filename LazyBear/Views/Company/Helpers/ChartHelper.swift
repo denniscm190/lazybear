@@ -36,6 +36,7 @@ struct ChartHelper: View {
                             let dates = historicalPrices.compactMap { $0.date }
                             if company.showChart {
                                 LineChartView(data: prices, dates: dates, hours: nil, dragGesture: true)
+                                    .padding(.bottom)
                             } else {
                                 Spacer()
                                 ProgressView()

@@ -24,39 +24,41 @@ struct HomeView: View {
     var body: some View {
         if home.showView {
             NavigationView {
-                List {
-                    if let sectorPerformance = home.data.sectorPerformance {
-                        SectorRow(sectorPerformance: sectorPerformance)
-                            .listRowInsets(EdgeInsets())
-                    }
-                    
-                    if let lists = home.data.lists {
-                        let listNames = Array(lists.keys.sorted())
-                        ForEach(listNames, id: \.self) { listName in
-                            StockRow(listName: listName, companies: lists[listName]!)
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        if let sectorPerformance = home.data.sectorPerformance {
+                            SectorRow(sectorPerformance: sectorPerformance)
+                                .listRowInsets(EdgeInsets())
+                        }
+                        
+                        if let lists = home.data.lists {
+                            let listNames = Array(lists.keys.sorted())
+                            ForEach(listNames, id: \.self) { listName in
+                                StockRow(listName: listName, companies: lists[listName]!)
+                                    .listRowInsets(EdgeInsets())
+                            }
+                        }
+                        
+                        if let latestCurrencies = home.data.latestCurrencies {
+                            CurrencyRow(latestCurrencies: latestCurrencies)
                                 .listRowInsets(EdgeInsets())
                         }
                     }
-                    
-                    if let latestCurrencies = home.data.latestCurrencies {
-                        CurrencyRow(latestCurrencies: latestCurrencies)
-                            .listRowInsets(EdgeInsets())
-                    }
-                }
-                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  /// Restart timer
-                .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/type=streaming", .streaming) }  /// Receive timer notification
-                .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
-                .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
-                .navigationBarTitleDisplayMode(.inline)
-                .navigationViewStyle(StackNavigationViewStyle())
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: { showTradingDates = true }) {
-                            Image(systemName: "calendar.badge.clock")
+                    .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  /// Restart timer
+                    .onReceive(timer) { _ in home.request("https://api.lazybear.app/home/type=streaming", .streaming) }  /// Receive timer notification
+                    .onDisappear { self.timer.upstream.connect().cancel() }  // Stop timer
+                    .navigationTitle("\(dueDate, formatter: Self.taskDateFormat)")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button(action: { showTradingDates = true }) {
+                                Image(systemName: "calendar.badge.clock")
+                            }
                         }
                     }
                 }
+                .background(Color("customBackground").edgesIgnoringSafeArea(.all))
             }
+            .navigationViewStyle(StackNavigationViewStyle())
             .sheet(isPresented: $showTradingDates) {
                 if let dates = home.data.tradingDates {
                     TradingDates(dates: dates)

@@ -10,12 +10,16 @@ import StockCharts
 
 struct StockItem: View {
     var company: CompanyModel
+    @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
         RoundedRectangle(cornerRadius: 20)
-            .foregroundColor(Color(.secondarySystemBackground))
+            .foregroundColor(Color("customSecondaryBackground"))
             .aspectRatio(0.8, contentMode: .fit)
             .clipShape(RoundedRectangle(cornerRadius: 20))
+            .if(colorScheme == .light) { content in
+                content.shadow(color: Color(.systemGray).opacity(0.25), radius: 10, x: 0.0, y: 0.0)
+            }
             .overlay(
                 VStack(alignment: .leading) {
                     Group {

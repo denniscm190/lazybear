@@ -45,7 +45,7 @@ struct CompanyView: View {
                         KeyStatsHelper(keyStats: company.data.keyStats)
                     }
                 }
-                .background(Color(.systemGray6).edgesIgnoringSafeArea(.all))
+                .background(Color("customBackground").edgesIgnoringSafeArea(.all))
                 .navigationTitle(symbol.uppercased())
             }
         } else {

@@ -20,7 +20,7 @@ struct SectorRow: View {
             Text("Real-time data")
                 .font(.caption)
                 .opacity(0.5)
-                .padding(.horizontal)
+                .padding([.horizontal, .bottom])
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {

@@ -20,40 +20,43 @@ struct ProfileView: View {
     var body: some View {
         if profile.showView {
             NavigationView {
-                List {
-                    if let apiCompanies = profile.data.quotes {
-                        let watchlistsNames = Array(Set(watchlistCompanies.map { $0.watchlistName })).sorted()  /// Get watchlistsNames in Core Data
-                        ForEach(watchlistsNames, id: \.self) { watchlistName in
-                            let companies = createWatchlistRow(apiCompanies, watchlistCompanies, watchlistName)
-                            ProfileStockRow(watchlistName: watchlistName, companies: companies)
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        if let apiCompanies = profile.data.quotes {
+                            let watchlistsNames = Array(Set(watchlistCompanies.map { $0.watchlistName })).sorted()  /// Get watchlistsNames in Core Data
+                            ForEach(watchlistsNames, id: \.self) { watchlistName in
+                                let companies = createWatchlistRow(apiCompanies, watchlistCompanies, watchlistName)
+                                ProfileStockRow(watchlistName: watchlistName, companies: companies)
+                            }
+                            .listRowInsets(EdgeInsets())
+                            .onAppear {  /// Request API again when Core Data changes to update the list
+                                refreshList()
+                            }
                         }
-                        .listRowInsets(EdgeInsets())
-                        .onAppear {  /// Request API again when Core Data changes to update the list
-                            refreshList()
+                    }
+                    .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  /// Start timer
+                    .onDisappear { self.timer.upstream.connect().cancel() }  /// Stop timer
+                    .onReceive(timer) { _ in
+                        if !showCreateNewWatchlist {
+                            prepareUrl(.streaming)
+                        }
+                    }
+                    .navigationTitle("My profile")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
+                            Button(action: { showCreateNewWatchlist = true }) {
+                                Image(systemName: "plus")
+                            }
                         }
                     }
                 }
-                .onAppear { self.timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect() }  /// Start timer
-                .onDisappear { self.timer.upstream.connect().cancel() }  /// Stop timer
-                .onReceive(timer) { _ in
-                    if !showCreateNewWatchlist {
-                        prepareUrl(.streaming)
-                    }
-                }
-                .navigationTitle("My profile")
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        Button(action: { showCreateNewWatchlist = true }) {
-                            Image(systemName: "plus")
-                        }
-                    }
+                .background(Color("customBackground").edgesIgnoringSafeArea(.all))
+                .fullScreenCover(isPresented: $showCreateNewWatchlist) {
+                    WatchlistCreator()
+                        .environment(\.managedObjectContext, self.moc)
                 }
             }
-            .fullScreenCover(isPresented: $showCreateNewWatchlist) {
-                WatchlistCreator()
-                    .environment(\.managedObjectContext, self.moc)
-            }
+            .navigationViewStyle(StackNavigationViewStyle())
         } else {
             ProgressView()
                 .onAppear { prepareUrl(.initial) }
