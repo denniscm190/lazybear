@@ -629,9 +629,9 @@
 		95E31C0B26472C8500106B98 /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				9502BBF4267F5194003B0A59 /* CompanyView.swift */,
 				95E31C0E26472CB600106B98 /* Helpers */,
 				95E31C0F26472CC000106B98 /* Networking */,
-				9502BBF4267F5194003B0A59 /* CompanyView.swift */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -1215,7 +1215,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
 			};
 			name = Debug;
 		};
@@ -1241,7 +1241,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
+				WATCHOS_DEPLOYMENT_TARGET = 7.2;
 			};
 			name = Release;
 		};
