@@ -10,8 +10,10 @@
 		9502BBF5267F5194003B0A59 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF4267F5194003B0A59 /* CompanyView.swift */; };
 		9502BBF7267F5974003B0A59 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF6267F5974003B0A59 /* CompanyResponse.swift */; };
 		9502BBF9267F59A0003B0A59 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF8267F59A0003B0A59 /* Company.swift */; };
+		9502BBFB267F5EE8003B0A59 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */; };
+		9502BBFD267F63F3003B0A59 /* CustomRectangleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */; };
+		9502BBFF267F6454003B0A59 /* KeyStatsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */; };
 		950857A7266BD12D005357BA /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 950857A6266BD12D005357BA /* BetterSafariView */; };
-		950857D3266BE55F005357BA /* RowShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950857D2266BE55F005357BA /* RowShape.swift */; };
 		950B6F3D267643460029E447 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 950B6F3C267643460029E447 /* Purchases */; };
 		950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B6F3E267643640029E447 /* StoreKit.framework */; };
 		950B6F422676454A0029E447 /* RevenueCatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B6F412676454A0029E447 /* RevenueCatTest.swift */; };
@@ -170,7 +172,9 @@
 		9502BBF4267F5194003B0A59 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
 		9502BBF6267F5974003B0A59 /* CompanyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyResponse.swift; sourceTree = "<group>"; };
 		9502BBF8267F59A0003B0A59 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		950857D2266BE55F005357BA /* RowShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowShape.swift; sourceTree = "<group>"; };
+		9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
+		9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRectangleBox.swift; sourceTree = "<group>"; };
+		9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsHelper.swift; sourceTree = "<group>"; };
 		950B6F3E267643640029E447 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		950B6F412676454A0029E447 /* RevenueCatTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatTest.swift; sourceTree = "<group>"; };
 		950C36E2260FB6180081CF53 /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
@@ -561,14 +565,6 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
-		95893DD22613CAB5003698C5 /* Global Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				950857D2266BE55F005357BA /* RowShape.swift */,
-			);
-			path = "Global Helpers";
-			sourceTree = "<group>";
-		};
 		958A735025E0170900FD7ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,7 +593,6 @@
 				95A7C06126163943003E2EC1 /* Search */,
 				95FBE0DA2619CA6000440386 /* Profile */,
 				95E31C0B26472C8500106B98 /* Company */,
-				95893DD22613CAB5003698C5 /* Global Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -640,6 +635,9 @@
 		95E31C0E26472CB600106B98 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */,
+				9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */,
+				9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1000,8 +998,10 @@
 				950B6F422676454A0029E447 /* RevenueCatTest.swift in Sources */,
 				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
 				95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */,
+				9502BBFD267F63F3003B0A59 /* CustomRectangleBox.swift in Sources */,
 				95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */,
 				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
+				9502BBFB267F5EE8003B0A59 /* ChartHelper.swift in Sources */,
 				952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */,
 				95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */,
 				95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */,
@@ -1017,6 +1017,7 @@
 				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
 				9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */,
 				95123AC026767370001BFAF3 /* StockItem.swift in Sources */,
+				9502BBFF267F6454003B0A59 /* KeyStatsHelper.swift in Sources */,
 				9519BE06267E5EC3009C6015 /* ProfileStockRow.swift in Sources */,
 				9550444626111EE5000E0BCB /* SectorItem.swift in Sources */,
 				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
@@ -1031,7 +1032,6 @@
 				95A4B930263E9F530056F036 /* WatchlistCreatorList.swift in Sources */,
 				95123ABA2676658E001BFAF3 /* StockSheet.swift in Sources */,
 				9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */,
-				950857D3266BE55F005357BA /* RowShape.swift in Sources */,
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
 				952FC0BA267C9A24001406B1 /* RenameListSheet.swift in Sources */,
 				95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */,
