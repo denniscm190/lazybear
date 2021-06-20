@@ -106,7 +106,7 @@ struct ProfileView: View {
         
         switch requestType {
         case .initial:
-            let url = "https://api.lazybear.app/profile/type=init/symbols=\(symbolString)"
+            let url = "https://api.lazybear.app/profile/type=initial/symbols=\(symbolString)"
             profile.request(url, .initial)
             
         default:

@@ -65,7 +65,7 @@ struct HomeView: View {
         } else {
             ProgressView()
                 .onAppear {
-                    home.request("https://api.lazybear.app/home/type=init", .initial)
+                    home.request("https://api.lazybear.app/home/type=initial", .initial)
                 }
 
         }
