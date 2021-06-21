@@ -19,7 +19,6 @@ struct CurrencySheet: View {
                 }
             }
             .navigationTitle("Currencies")
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {currencySheetPresentation.wrappedValue.dismiss()}) {

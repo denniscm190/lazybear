@@ -61,7 +61,7 @@ struct HomeView: View {
             .navigationViewStyle(StackNavigationViewStyle())
             .sheet(isPresented: $showTradingDates) {
                 if let dates = home.data.tradingDates {
-                    TradingDates(dates: dates)
+                    TradingDatesSheet(dates: dates)
                 }
             }
         } else {

@@ -17,11 +17,15 @@ struct StockSheet: View {
         NavigationView {
             VStack {
                 List(companies, id: \.self) { company in
-                   StockSheetRow(company: company)
+                    NavigationLink(destination:
+                        CompanyView(symbol: company.symbol, name: company.companyName)
+                            .navigationTitle(company.symbol.uppercased())
+                    ) {
+                        StockSheetRow(company: company)
+                    }
                 }
             }
             .navigationTitle(listName)
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {stockSheetPresentation.wrappedValue.dismiss()}) {

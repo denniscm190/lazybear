@@ -24,12 +24,11 @@ struct NewsHelper: View {
             }
             .padding(.bottom)
             
-            ForEach(latestNews.prefix(4), id: \.self) { new in
+            let latestNewsPrefixed = latestNews.prefix(4)
+            ForEach(latestNewsPrefixed, id: \.self) { new in
                 if !new.headline.isEmpty {
                     NewsRow(new: new)
                     Divider()
-                        .padding(.leading, 80)
-                    
                 }
             }
         }

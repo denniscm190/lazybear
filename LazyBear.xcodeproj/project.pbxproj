@@ -31,7 +31,7 @@
 		95131D47267A03020055C6DE /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D44267A02FC0055C6DE /* WatchlistCompany+CoreDataClass.swift */; };
 		95131D4B267A15490055C6DE /* WatchlistSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D4A267A15490055C6DE /* WatchlistSheet.swift */; };
 		951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951490542610BD2B00BDEEB5 /* WelcomeView.swift */; };
-		951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E62613A2B6007C0F36 /* TradingDates.swift */; };
+		951566E72613A2B6007C0F36 /* TradingDatesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E62613A2B6007C0F36 /* TradingDatesSheet.swift */; };
 		951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E92613A37C007C0F36 /* TradingDatesItem.swift */; };
 		9519BE06267E5EC3009C6015 /* ProfileStockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */; };
 		952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952045142610C7C600A76362 /* ConvertEpoch.swift */; };
@@ -71,6 +71,9 @@
 		95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
 		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
 		95721DA6262761E700EC527B /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95721DA5262761E700EC527B /* CurrencyRow.swift */; };
+		9576BFEB26810661002BCAC6 /* InsiderRosterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEA26810661002BCAC6 /* InsiderRosterHelper.swift */; };
+		9576BFED26810713002BCAC6 /* InsiderRosterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEC26810713002BCAC6 /* InsiderRosterList.swift */; };
+		9576BFEF26810719002BCAC6 /* InsiderRosterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
 		9594331326691789004A0339 /* Bazooka in Frameworks */ = {isa = PBXBuildFile; productRef = 9594331226691789004A0339 /* Bazooka */; };
 		9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
@@ -97,7 +100,6 @@
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */; };
 		95E4A2D92680931300A6FEB9 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D82680931300A6FEB9 /* NewsRow.swift */; };
-		95E4A2DC2680971A00A6FEB9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95E4A2DB2680971A00A6FEB9 /* SDWebImageSwiftUI */; };
 		95E4A2E02680A70000A6FEB9 /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2DF2680A70000A6FEB9 /* NewsList.swift */; };
 		95E4A2E22680AD7C00A6FEB9 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */; };
 		95E8BAA32656D86E0016AE72 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8BAA22656D86E0016AE72 /* RequestType.swift */; };
@@ -203,7 +205,7 @@
 		95131D45267A02FC0055C6DE /* WatchlistCompany+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		95131D4A267A15490055C6DE /* WatchlistSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistSheet.swift; sourceTree = "<group>"; };
 		951490542610BD2B00BDEEB5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		951566E62613A2B6007C0F36 /* TradingDates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDates.swift; sourceTree = "<group>"; };
+		951566E62613A2B6007C0F36 /* TradingDatesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesSheet.swift; sourceTree = "<group>"; };
 		951566E92613A37C007C0F36 /* TradingDatesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesItem.swift; sourceTree = "<group>"; };
 		9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStockRow.swift; sourceTree = "<group>"; };
 		952045142610C7C600A76362 /* ConvertEpoch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertEpoch.swift; sourceTree = "<group>"; };
@@ -251,6 +253,9 @@
 		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
 		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95721DA5262761E700EC527B /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
+		9576BFEA26810661002BCAC6 /* InsiderRosterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRosterHelper.swift; sourceTree = "<group>"; };
+		9576BFEC26810713002BCAC6 /* InsiderRosterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRosterList.swift; sourceTree = "<group>"; };
+		9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRosterRow.swift; sourceTree = "<group>"; };
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPricesModel.swift; sourceTree = "<group>"; };
@@ -324,7 +329,6 @@
 			files = (
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */,
-				95E4A2DC2680971A00A6FEB9 /* SDWebImageSwiftUI in Frameworks */,
 				9594331326691789004A0339 /* Bazooka in Frameworks */,
 				954572EC267A3D6A00C33A20 /* StockCharts in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
@@ -483,7 +487,6 @@
 			isa = PBXGroup;
 			children = (
 				9550443926111B2B000E0BCB /* HomeView.swift */,
-				951566E62613A2B6007C0F36 /* TradingDates.swift */,
 				954D7EAF260BBBD500A13C50 /* Helpers */,
 				95893DC72613C410003698C5 /* Networking */,
 			);
@@ -493,13 +496,14 @@
 		954D7EAF260BBBD500A13C50 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				951566E92613A37C007C0F36 /* TradingDatesItem.swift */,
+				951566E62613A2B6007C0F36 /* TradingDatesSheet.swift */,
 				9550444226111E7A000E0BCB /* SectorRow.swift */,
 				9550444526111EE5000E0BCB /* SectorItem.swift */,
 				9550444826111FC9000E0BCB /* StockRow.swift */,
 				95123ABF26767370001BFAF3 /* StockItem.swift */,
 				95721DA5262761E700EC527B /* CurrencyRow.swift */,
 				95D308F72624B3A400A39F77 /* CurrencyItem.swift */,
-				951566E92613A37C007C0F36 /* TradingDatesItem.swift */,
 				95123AB726766497001BFAF3 /* CurrencySheet.swift */,
 				95123ABB2676676B001BFAF3 /* CurrencySheetRow.swift */,
 				95123AB92676658E001BFAF3 /* StockSheet.swift */,
@@ -653,9 +657,12 @@
 				9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */,
 				9502BC00267F8771003B0A59 /* KeyStatsList.swift */,
 				95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */,
-				95E4A2DF2680A70000A6FEB9 /* NewsList.swift */,
 				95E4A2D82680931300A6FEB9 /* NewsRow.swift */,
+				95E4A2DF2680A70000A6FEB9 /* NewsList.swift */,
 				95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */,
+				9576BFEA26810661002BCAC6 /* InsiderRosterHelper.swift */,
+				9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */,
+				9576BFEC26810713002BCAC6 /* InsiderRosterList.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -809,7 +816,6 @@
 				9594331226691789004A0339 /* Bazooka */,
 				950B6F3C267643460029E447 /* Purchases */,
 				954572EB267A3D6A00C33A20 /* StockCharts */,
-				95E4A2DB2680971A00A6FEB9 /* SDWebImageSwiftUI */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -866,7 +872,6 @@
 				9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */,
 				950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 				954572EA267A3D6A00C33A20 /* XCRemoteSwiftPackageReference "StockCharts" */,
-				95E4A2DA2680971A00A6FEB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -995,6 +1000,7 @@
 				95602704265ABB990046F97E /* InsiderRosterModel.swift in Sources */,
 				95E4A2D92680931300A6FEB9 /* NewsRow.swift in Sources */,
 				95131D46267A03020055C6DE /* WatchlistCompany+CoreDataProperties.swift in Sources */,
+				9576BFEF26810719002BCAC6 /* InsiderRosterRow.swift in Sources */,
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
 				95131D4B267A15490055C6DE /* WatchlistSheet.swift in Sources */,
@@ -1007,9 +1013,10 @@
 				95123ABC2676676B001BFAF3 /* CurrencySheetRow.swift in Sources */,
 				95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */,
 				95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */,
+				9576BFED26810713002BCAC6 /* InsiderRosterList.swift in Sources */,
 				95E8BAA32656D86E0016AE72 /* RequestType.swift in Sources */,
 				95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */,
-				951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */,
+				951566E72613A2B6007C0F36 /* TradingDatesSheet.swift in Sources */,
 				9502BBF5267F5194003B0A59 /* CompanyView.swift in Sources */,
 				955E73392623568F005652FF /* Home.swift in Sources */,
 				95721DA6262761E700EC527B /* CurrencyRow.swift in Sources */,
@@ -1038,6 +1045,7 @@
 				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
 				9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */,
 				95123AC026767370001BFAF3 /* StockItem.swift in Sources */,
+				9576BFEB26810661002BCAC6 /* InsiderRosterHelper.swift in Sources */,
 				9502BBFF267F6454003B0A59 /* KeyStatsHelper.swift in Sources */,
 				9519BE06267E5EC3009C6015 /* ProfileStockRow.swift in Sources */,
 				9550444626111EE5000E0BCB /* SectorItem.swift in Sources */,
@@ -1647,14 +1655,6 @@
 				minimumVersion = 0.1.3;
 			};
 		};
-		95E4A2DA2680971A00A6FEB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1682,11 +1682,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
-		};
-		95E4A2DB2680971A00A6FEB9 /* SDWebImageSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95E4A2DA2680971A00A6FEB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
-			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

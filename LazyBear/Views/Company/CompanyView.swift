@@ -16,46 +16,48 @@ struct CompanyView: View {
     
     var body: some View {
         if company.showView {
-            NavigationView {
-                ScrollView {
-                    VStack {
-                        HStack {
-                            Text(name.capitalized)
-                                .font(.title)
-                                .fontWeight(.semibold)
-                                .lineLimit(1)
-                            
-                            Spacer()
-                        }
-                        .padding(.horizontal)
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    HStack {
+                        Text(name.capitalized)
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .lineLimit(1)
                         
-                        Picker("Select a range", selection: $selectedRange) {
-                            ForEach(ranges, id: \.self) {
-                                Text($0)
-                            }
-                        }
-                        .pickerStyle(SegmentedPickerStyle())
-                        .padding(.horizontal)
-                        .onChange(of: selectedRange, perform: { range in
-                            let url = "https://api.lazybear.app/company/symbol=\(symbol)/type=refresh/range=\(range.lowercased())"
-                            company.request(url, .refresh)
-                        })
-                        
-                        ChartHelper(company: company)
-                        KeyStatsHelper(keyStats: company.data.keyStats)
-                        if let latestNews = company.data.latestNews {
-                            NewsHelper(latestNews: latestNews)
-                                .padding([.horizontal, .bottom])
+                        Spacer()
+                    }
+                    .padding(.horizontal)
+                    
+                    Picker("Select a range", selection: $selectedRange) {
+                        ForEach(ranges, id: \.self) {
+                            Text($0)
                         }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding(.horizontal)
+                    .onChange(of: selectedRange, perform: { range in
+                        let url = "https://api.lazybear.app/company/symbol=\(symbol)/type=refresh/range=\(range.lowercased())"
+                        company.request(url, .refresh)
+                    })
+                    
+                    ChartHelper(company: company)
+                    KeyStatsHelper(keyStats: company.data.keyStats)
+                    if let latestNews = company.data.latestNews {
+                        NewsHelper(latestNews: latestNews)
+                            .padding([.horizontal, .bottom])
+                    }
+                    
+                    if let insiderRoster = company.data.insiderRoster {
+                        InsiderRosterHelper(insiderRoster: insiderRoster)
+                            .padding([.horizontal, .bottom])
+                    }
                 }
-                .background(Color("customBackground").edgesIgnoringSafeArea(.all))
-                .navigationTitle(symbol.uppercased())
             }
+            .background(Color("customBackground").edgesIgnoringSafeArea(.all))
         } else {
             ProgressView()
                 .onAppear {
-                    company.request("https://api.lazybear.app/company/symbol=aapl", .initial)
+                    company.request("https://api.lazybear.app/company/symbol=\(symbol)", .initial)
                 }
         }
     }

@@ -39,7 +39,13 @@ struct StockRow: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
                     ForEach(companies, id: \.self) { company in
-                       StockItem(company: company)
+                        NavigationLink(destination:
+                            CompanyView(symbol: company.symbol, name: company.companyName)
+                                        .navigationTitle(company.symbol.uppercased())
+                        ) {
+                            StockItem(company: company)
+                        }
+                        .buttonStyle(PlainButtonStyle())
                     }
                 }
                 .padding()

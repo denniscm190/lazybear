@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
 
 struct NewsRow: View {
     var new: LatestNewsModel
@@ -14,28 +13,20 @@ struct NewsRow: View {
     
     var body: some View {
         HStack {
-            RoundedRectangle(cornerRadius: 10)
-                .frame(width: 65, height: 65, alignment: .center)
-                .overlay(
-                    WebImage(url: URL(string: new.image))
-                       .resizable()
-                       .placeholder {
-                           Rectangle()
-                            .foregroundColor(.gray)
-                       }
-                       .indicator(.activity)
-                       .scaledToFill()
-                    )
-                .clipShape(RoundedRectangle(cornerRadius: 10))
-            
             VStack(alignment: .leading) {
-                Text(new.headline)
+                Text("\(convertEpoch(new.datetime, true)) ago")
+                    .font(.caption2)
+                    .opacity(0.5)
+                
+                Text(new.headline.capitalized)
                     .font(.callout)
                     .fontWeight(.semibold)
                     .fixedSize(horizontal: false, vertical: true)  /// I need to add this to make lineLimit works correctly
                     .lineLimit(3)
             }
-            .padding(.horizontal, 5)
+//            .padding(.horizontal, 5)
+            
+            Spacer()
             
             Button(action: { showWebArticle = true }) {
                 Capsule()

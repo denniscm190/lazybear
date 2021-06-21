@@ -13,13 +13,13 @@ struct NewsList: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView(showsIndicators: false) {
                 VStack {
                     ForEach(latestNews, id: \.self) { new in
                         if !new.headline.isEmpty {
                             NewsRow(new: new)
                             Divider()
-                                .padding(.leading, 80)
+                                .padding()
                             
                         }
                     }

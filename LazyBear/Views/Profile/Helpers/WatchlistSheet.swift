@@ -31,7 +31,6 @@ struct WatchlistSheet: View {
                 }
             }
             .navigationTitle(listName)
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { willRenameWatchlist = false; watchlistSheetPresentation.wrappedValue.dismiss()} ) {

@@ -35,7 +35,6 @@ struct KeyStatsList: View {
                 }
             }
             .navigationTitle("Key Stats")
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { keyStatsListPresentation.wrappedValue.dismiss() }) {

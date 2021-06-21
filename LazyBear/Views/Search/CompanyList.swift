@@ -12,9 +12,12 @@ struct CompanyList: View {
     
     var body: some View {
         List(searchResult, id: \.self) { company in
-//            NavigationLink(destination: CompanyView(symbol: company.symbol!)) {
+            NavigationLink(destination:
+                CompanyView(symbol: company.symbol!, name: company.securityName!)
+                    .navigationTitle(company.symbol!.uppercased())
+            ) {
                 SearchedCompanyItem(company: company)
-//            }
+            }
         }
     }
 }

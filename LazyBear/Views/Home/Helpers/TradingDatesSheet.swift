@@ -1,5 +1,5 @@
 //
-//  TradingDate.swift
+//  TradingDateSheet.swift
 //  LazyBear
 //
 //  Created by Dennis Concepción Martín on 30/3/21.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct TradingDates: View {
+struct TradingDatesSheet: View {
     var dates: [String]
     @Environment(\.presentationMode) private var tradingDatesPresentation
     
@@ -25,7 +25,6 @@ struct TradingDates: View {
                 .padding()
             }
             .navigationTitle("Holiday dates")
-            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: { tradingDatesPresentation.wrappedValue.dismiss() }) {
@@ -41,6 +40,6 @@ struct TradingDates: View {
 struct TradingDate_Previews: PreviewProvider {
     static var previews: some View {
         // Format is YYYY-MM-DD
-        TradingDates(dates: ["2021-01-01"])
+        TradingDatesSheet(dates: ["2021-01-01"])
     }
 }
