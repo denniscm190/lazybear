@@ -50,7 +50,7 @@ struct KeyStatsHelper: View {
                         }
                     }
                 }
-                .frame(height: 80)
+                .frame(height: 70)
                 .padding(.horizontal)
             }
             .sheet(isPresented: $showList) {

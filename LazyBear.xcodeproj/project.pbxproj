@@ -14,7 +14,6 @@
 		9502BBFD267F63F3003B0A59 /* CustomRectangleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */; };
 		9502BBFF267F6454003B0A59 /* KeyStatsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */; };
 		9502BC01267F8771003B0A59 /* KeyStatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BC00267F8771003B0A59 /* KeyStatsList.swift */; };
-		950857A7266BD12D005357BA /* BetterSafariView in Frameworks */ = {isa = PBXBuildFile; productRef = 950857A6266BD12D005357BA /* BetterSafariView */; };
 		950B6F3D267643460029E447 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 950B6F3C267643460029E447 /* Purchases */; };
 		950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B6F3E267643640029E447 /* StoreKit.framework */; };
 		950B6F422676454A0029E447 /* RevenueCatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B6F412676454A0029E447 /* RevenueCatTest.swift */; };
@@ -96,6 +95,11 @@
 		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
+		95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */; };
+		95E4A2D92680931300A6FEB9 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D82680931300A6FEB9 /* NewsRow.swift */; };
+		95E4A2DC2680971A00A6FEB9 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 95E4A2DB2680971A00A6FEB9 /* SDWebImageSwiftUI */; };
+		95E4A2E02680A70000A6FEB9 /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2DF2680A70000A6FEB9 /* NewsList.swift */; };
+		95E4A2E22680AD7C00A6FEB9 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */; };
 		95E8BAA32656D86E0016AE72 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8BAA22656D86E0016AE72 /* RequestType.swift */; };
 		95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0DB2619CA7200440386 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
@@ -270,6 +274,10 @@
 		95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertStringToDate.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
 		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHelper.swift; sourceTree = "<group>"; };
+		95E4A2D82680931300A6FEB9 /* NewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
+		95E4A2DF2680A70000A6FEB9 /* NewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
+		95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
 		95E8BAA22656D86E0016AE72 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
 		95FBE0DB2619CA7200440386 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,9 +322,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950857A7266BD12D005357BA /* BetterSafariView in Frameworks */,
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */,
+				95E4A2DC2680971A00A6FEB9 /* SDWebImageSwiftUI in Frameworks */,
 				9594331326691789004A0339 /* Bazooka in Frameworks */,
 				954572EC267A3D6A00C33A20 /* StockCharts in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
@@ -644,6 +652,10 @@
 				9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */,
 				9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */,
 				9502BC00267F8771003B0A59 /* KeyStatsList.swift */,
+				95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */,
+				95E4A2DF2680A70000A6FEB9 /* NewsList.swift */,
+				95E4A2D82680931300A6FEB9 /* NewsRow.swift */,
+				95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -795,9 +807,9 @@
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 				95A4B932263E9F810056F036 /* Introspect */,
 				9594331226691789004A0339 /* Bazooka */,
-				950857A6266BD12D005357BA /* BetterSafariView */,
 				950B6F3C267643460029E447 /* Purchases */,
 				954572EB267A3D6A00C33A20 /* StockCharts */,
+				95E4A2DB2680971A00A6FEB9 /* SDWebImageSwiftUI */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -852,9 +864,9 @@
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */,
-				950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */,
 				950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 				954572EA267A3D6A00C33A20 /* XCRemoteSwiftPackageReference "StockCharts" */,
+				95E4A2DA2680971A00A6FEB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -981,6 +993,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95602704265ABB990046F97E /* InsiderRosterModel.swift in Sources */,
+				95E4A2D92680931300A6FEB9 /* NewsRow.swift in Sources */,
 				95131D46267A03020055C6DE /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				950C36E3260FB6180081CF53 /* HapticsManager.swift in Sources */,
 				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
@@ -993,6 +1006,7 @@
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
 				95123ABC2676676B001BFAF3 /* CurrencySheetRow.swift in Sources */,
 				95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */,
+				95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */,
 				95E8BAA32656D86E0016AE72 /* RequestType.swift in Sources */,
 				95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */,
 				951566E72613A2B6007C0F36 /* TradingDates.swift in Sources */,
@@ -1033,6 +1047,7 @@
 				9502BC01267F8771003B0A59 /* KeyStatsList.swift in Sources */,
 				95123AB826766497001BFAF3 /* CurrencySheet.swift in Sources */,
 				95AF0FF92671342E0049C4AB /* DisplayWordsModel.swift in Sources */,
+				95E4A2E22680AD7C00A6FEB9 /* SFSafariViewWrapper.swift in Sources */,
 				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
 				95629DA02645298E007AF020 /* Profile.swift in Sources */,
 				95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */,
@@ -1042,6 +1057,7 @@
 				9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */,
 				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
 				952FC0BA267C9A24001406B1 /* RenameListSheet.swift in Sources */,
+				95E4A2E02680A70000A6FEB9 /* NewsList.swift in Sources */,
 				95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */,
 				9502BBF9267F59A0003B0A59 /* Company.swift in Sources */,
 			);
@@ -1591,14 +1607,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/stleamist/BetterSafariView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.3.1;
-			};
-		};
 		950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
@@ -1639,14 +1647,17 @@
 				minimumVersion = 0.1.3;
 			};
 		};
+		95E4A2DA2680971A00A6FEB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		950857A6266BD12D005357BA /* BetterSafariView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 950857A5266BD12D005357BA /* XCRemoteSwiftPackageReference "BetterSafariView" */;
-			productName = BetterSafariView;
-		};
 		950B6F3C267643460029E447 /* Purchases */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */;
@@ -1671,6 +1682,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		95E4A2DB2680971A00A6FEB9 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95E4A2DA2680971A00A6FEB9 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 

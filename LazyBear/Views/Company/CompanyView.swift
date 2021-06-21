@@ -29,7 +29,7 @@ struct CompanyView: View {
                         }
                         .padding(.horizontal)
                         
-                        Picker("", selection: $selectedRange) {
+                        Picker("Select a range", selection: $selectedRange) {
                             ForEach(ranges, id: \.self) {
                                 Text($0)
                             }
@@ -43,6 +43,10 @@ struct CompanyView: View {
                         
                         ChartHelper(company: company)
                         KeyStatsHelper(keyStats: company.data.keyStats)
+                        if let latestNews = company.data.latestNews {
+                            NewsHelper(latestNews: latestNews)
+                                .padding([.horizontal, .bottom])
+                        }
                     }
                 }
                 .background(Color("customBackground").edgesIgnoringSafeArea(.all))
