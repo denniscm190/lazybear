@@ -17,19 +17,26 @@ struct ChartHelper: View {
             .overlay(
                 VStack {
                     if let quote = company.data.quote?.first {
-                        HStack(alignment: .center) {
-                            Text("\(quote.latestPrice ?? 0, specifier: "%.2f")")
-                                .foregroundColor(quote.changePercent ?? 0 < 0 ? .red: .green)
-                                .fontWeight(.semibold)
+                        Text("\(quote.latestPrice ?? 0, specifier: "%.2f")")
+                            .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundColor(quote.changePercent ?? 0 < 0 ? .red: .green)
+                            .padding(.top)
 
+                        HStack {
                             Text("\(quote.changePercent ?? 0 * 100, specifier: "%.2f")%")
                                 .foregroundColor(quote.changePercent ?? 0 < 0 ? .red: .green)
-                                .font(.callout)
+                                .font(.caption)
                                 .fontWeight(.semibold)
                             
-                            Spacer()
+                            Text("1 day")
+                                .font(.caption)
+                                .opacity(0.5)
                         }
-                        .padding()
+                        .padding(.horizontal)
+            
+                        Spacer()
+                        
                         
                         if let historicalPrices = company.data.historicalPrices {
                             let prices = historicalPrices.compactMap { $0.close }
