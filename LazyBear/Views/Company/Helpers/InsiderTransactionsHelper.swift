@@ -33,7 +33,7 @@ struct InsiderTransactionsHelper: View {
             CustomRectangleBox()
         )
         .sheet(isPresented: $showList) {
-            InsiderTransactionsList(insiderTransactions: insiderTransactions)
+            InsiderTransactionsList(insiderTransactions: insiderTransactions, isPresented: $showList)
         }
     }
 }

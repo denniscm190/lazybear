@@ -54,7 +54,7 @@ struct KeyStatsHelper: View {
                 .padding(.horizontal)
             }
             .sheet(isPresented: $showList) {
-                KeyStatsList(keyStats: keyStats)
+                KeyStatsList(keyStats: keyStats, isPresented: $showList)
             }
         }
     }

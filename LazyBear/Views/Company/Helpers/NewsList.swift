@@ -9,7 +9,7 @@ import SwiftUI
 
 struct NewsList: View {
     var latestNews: [LatestNewsModel]
-    @Environment(\.presentationMode) private var newsListPresentation
+    @Binding var isPresented: Bool
     
     var body: some View {
         NavigationView {
@@ -29,7 +29,7 @@ struct NewsList: View {
             .navigationTitle("Latest news")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button(action: { newsListPresentation.wrappedValue.dismiss() }) {
+                    Button(action: { self.isPresented.toggle() }) {
                         Image(systemName: "multiply")
                     }
                 }
@@ -50,6 +50,7 @@ struct NewsList_Previews: PreviewProvider {
                     summary: "https://www.investing.com/news/stock-market-news",
                     url: "https://cloud.iexapis.com/v1/news/article/99abeb99-6d9e-47c8-ae7b-53404eacccec")
             ]
+            , isPresented: .constant(true)
         )
     }
 }

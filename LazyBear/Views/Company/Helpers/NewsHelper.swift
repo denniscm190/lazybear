@@ -37,7 +37,7 @@ struct NewsHelper: View {
             CustomRectangleBox()
         )
         .sheet(isPresented: $showList) {
-            NewsList(latestNews: latestNews)
+            NewsList(latestNews: latestNews, isPresented: $showList)
         }
     }
 }

@@ -9,9 +9,8 @@ import SwiftUI
 
 struct KeyStatsList: View {
     var keyStats: KeyStatsModel
-    
+    @Binding var isPresented: Bool
     let displayWords: DisplayWordsModel = parseJSON("DisplayWords.json")
-    @Environment(\.presentationMode) var keyStatsListPresentation
     
     var body: some View {
         NavigationView {
@@ -37,7 +36,7 @@ struct KeyStatsList: View {
             .navigationTitle("Key Stats")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { keyStatsListPresentation.wrappedValue.dismiss() }) {
+                    Button(action: { self.isPresented.toggle() }) {
                         Image(systemName: "multiply")
                     }
                         
@@ -96,7 +95,8 @@ struct KeyStatsList_Previews: PreviewProvider {
                             exDividendDate: "2020-01-01",
                             nextDividendDate: "2020-01-01",
                             nextEarningsDate: "2020-01-01"
-                    )
+                        )
+                     , isPresented: .constant(true)
                 )
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct InsiderTransactionsList: View {
     var insiderTransactions: [InsiderTransactionModel]
-    @Environment(\.presentationMode) private var insiderTransactionsListPresentation
+    @Binding var isPresented: Bool
     
     var body: some View {
         NavigationView {
@@ -25,7 +25,7 @@ struct InsiderTransactionsList: View {
             .navigationTitle("Insider Transactions")
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button(action: { insiderTransactionsListPresentation.wrappedValue.dismiss() }) {
+                    Button(action: { self.isPresented.toggle() }) {
                         Image(systemName: "multiply")
                     }
                 }
@@ -50,6 +50,7 @@ struct InsiderTransactionsList_Previews: PreviewProvider {
                         transactionValue: 1234567.0
                     )
                 ]
+            , isPresented: .constant(true)
         )
     }
 }
