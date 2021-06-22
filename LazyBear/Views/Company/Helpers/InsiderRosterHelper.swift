@@ -14,7 +14,7 @@ struct InsiderRosterHelper: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Text("Top 10 Insiders")
+                Text("Top Insiders")
                     .font(.title)
                     .fontWeight(.semibold)
                 
@@ -35,7 +35,7 @@ struct InsiderRosterHelper: View {
             CustomRectangleBox()
         )
         .sheet(isPresented: $showList) {
-            InsiderRosterList(insiderRoster: insiderRoster)
+            InsiderRosterList(insiderRoster: insiderRoster, isPresented: $showList)
         }
     }
 }

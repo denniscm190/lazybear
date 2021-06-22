@@ -10,7 +10,9 @@ import SwiftUI
 struct CompanyView: View {
     var symbol: String
     var name: String
+    
     @ObservedObject var company = Company()
+    
     var ranges = ["1D", "5D", "1M", "3M", "6M", "1Y", "5Y"]  /// DatePicker ranges
     @State private var selectedRange = "3M"  /// Selected DatePicker range
     
@@ -23,11 +25,11 @@ struct CompanyView: View {
                             .font(.title)
                             .fontWeight(.semibold)
                             .lineLimit(1)
-                        
+
                         Spacer()
                     }
                     .padding(.horizontal)
-                    
+
                     Picker("Select a range", selection: $selectedRange) {
                         ForEach(ranges, id: \.self) {
                             Text($0)
@@ -41,7 +43,10 @@ struct CompanyView: View {
                     })
                     
                     ChartHelper(company: company)
-                    KeyStatsHelper(keyStats: company.data.keyStats)
+                    if let keyStats = company.data.keyStats {
+                        KeyStatsHelper(keyStats: keyStats)
+                    }
+
                     if let latestNews = company.data.latestNews {
                         NewsHelper(latestNews: latestNews)
                             .padding([.horizontal, .bottom])
