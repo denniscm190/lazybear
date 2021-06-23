@@ -19,7 +19,13 @@ struct InsiderTransactionsHelper: View {
                     .fontWeight(.semibold)
                 
                 Spacer()
-                Button("See all", action: { showList = true } )
+                NavigationLink(destination: InsiderTransactionsList(insiderTransactions: insiderTransactions)
+                                .navigationTitle("Insider Transactions")
+                                .navigationBarTitleDisplayMode(.large)
+                ) {
+                    Text("See all")
+                        .accentColor(Color(.systemBlue))
+                }
             }
             .padding(.bottom)
             
@@ -32,9 +38,6 @@ struct InsiderTransactionsHelper: View {
         .background(
             CustomRectangleBox()
         )
-        .sheet(isPresented: $showList) {
-            InsiderTransactionsList(insiderTransactions: insiderTransactions, isPresented: $showList)
-        }
     }
 }
 

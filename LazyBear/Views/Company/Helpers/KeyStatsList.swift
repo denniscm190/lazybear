@@ -9,37 +9,25 @@ import SwiftUI
 
 struct KeyStatsList: View {
     var keyStats: KeyStatsModel
-    @Binding var isPresented: Bool
     let displayWords: DisplayWordsModel = parseJSON("DisplayWords.json")
     
     var body: some View {
-        NavigationView {
-            Form {
-                let mirror = Mirror(reflecting: keyStats)
-                ForEach(Array(mirror.children), id: \.label) { child in  /// Iterate over each variable within the class
-                    if let unwrappedValue = unwrapAnyOptional(value: child.value) {
-                        let label = String(child.label!)
-                        HStack {
-                            Text("\(displayWords.keyStats[label]!):")
-                                .font(.callout)
-                                .fontWeight(.semibold)
-                                .lineLimit(1)
-                            
-                            Spacer()
-                            Text(unwrappedValue)
-                                .font(.callout)
-                                .lineLimit(1)
-                        }
-                    }
-                }
-            }
-            .navigationTitle("Key Stats")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: { self.isPresented.toggle() }) {
-                        Image(systemName: "multiply")
-                    }
+        Form {
+            let mirror = Mirror(reflecting: keyStats)
+            ForEach(Array(mirror.children), id: \.label) { child in  /// Iterate over each variable within the class
+                if let unwrappedValue = unwrapAnyOptional(value: child.value) {
+                    let label = String(child.label!)
+                    HStack {
+                        Text("\(displayWords.keyStats[label]!):")
+                            .font(.callout)
+                            .fontWeight(.semibold)
+                            .lineLimit(1)
                         
+                        Spacer()
+                        Text(unwrappedValue)
+                            .font(.callout)
+                            .lineLimit(1)
+                    }
                 }
             }
         }
@@ -96,7 +84,6 @@ struct KeyStatsList_Previews: PreviewProvider {
                             nextDividendDate: "2020-01-01",
                             nextEarningsDate: "2020-01-01"
                         )
-                     , isPresented: .constant(true)
                 )
     }
 }

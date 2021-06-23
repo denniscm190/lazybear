@@ -9,31 +9,20 @@ import SwiftUI
 
 struct NewsList: View {
     var latestNews: [LatestNewsModel]
-    @Binding var isPresented: Bool
     
     var body: some View {
-        NavigationView {
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    ForEach(latestNews, id: \.self) { new in
-                        if !new.headline.isEmpty {
-                            NewsRow(new: new)
-                            Divider()
-                                .padding()
-                            
-                        }
-                    }
-                }
-                .padding()
-            }
-            .navigationTitle("Latest news")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button(action: { self.isPresented.toggle() }) {
-                        Image(systemName: "multiply")
+        ScrollView(showsIndicators: false) {
+            VStack {
+                ForEach(latestNews, id: \.self) { new in
+                    if !new.headline.isEmpty {
+                        NewsRow(new: new)
+                        Divider()
+                            .padding()
+                        
                     }
                 }
             }
+            .padding()
         }
     }
 }
@@ -50,7 +39,6 @@ struct NewsList_Previews: PreviewProvider {
                     summary: "https://www.investing.com/news/stock-market-news",
                     url: "https://cloud.iexapis.com/v1/news/article/99abeb99-6d9e-47c8-ae7b-53404eacccec")
             ]
-            , isPresented: .constant(true)
         )
     }
 }

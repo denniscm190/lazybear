@@ -56,7 +56,7 @@ struct CompanyView: View {
                         InsiderRosterHelper(insiderRoster: insiderRoster)
                             .padding([.horizontal, .bottom])
                     }
-                    
+
                     if let insiderTransactions = company.data.insiderTransactions {
                         InsiderTransactionsHelper(insiderTransactions: insiderTransactions)
                             .padding([.horizontal, .bottom])

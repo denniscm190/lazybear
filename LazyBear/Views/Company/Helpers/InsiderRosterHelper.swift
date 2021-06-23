@@ -9,7 +9,6 @@ import SwiftUI
 
 struct InsiderRosterHelper: View {
     var insiderRoster: [InsiderRosterModel]
-    @State private var showList = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -19,7 +18,12 @@ struct InsiderRosterHelper: View {
                     .fontWeight(.semibold)
                 
                 Spacer()
-                Button("See all", action: { showList = true } )
+                NavigationLink(destination: InsiderRosterList(insiderRoster: insiderRoster)
+                                .navigationTitle("Top Insiders")
+                ) {
+                    Text("See all")
+                        .accentColor(Color(.systemBlue))
+                }
             }
             .padding(.bottom)
             
@@ -34,9 +38,6 @@ struct InsiderRosterHelper: View {
         .background(
             CustomRectangleBox()
         )
-        .sheet(isPresented: $showList) {
-            InsiderRosterList(insiderRoster: insiderRoster, isPresented: $showList)
-        }
     }
 }
 

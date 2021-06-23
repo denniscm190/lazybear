@@ -9,8 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
-            .padding()
+        VStack {
+            ForEach((1..<4)) { _ in
+                Text("Hello")
+            }
+            .navigationTitle("Lazybear")
+        }
     }
 }
 

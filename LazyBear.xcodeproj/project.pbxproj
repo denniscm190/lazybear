@@ -80,6 +80,10 @@
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
 		9594331326691789004A0339 /* Bazooka in Frameworks */ = {isa = PBXBuildFile; productRef = 9594331226691789004A0339 /* Bazooka */; };
 		9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
+		9595DC342682849E00DC8104 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC332682849E00DC8104 /* HomeView.swift */; };
+		9595DC36268284B100DC8104 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC35268284B100DC8104 /* CompanyRow.swift */; };
+		9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D44267A02FC0055C6DE /* WatchlistCompany+CoreDataClass.swift */; };
+		9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D45267A02FC0055C6DE /* WatchlistCompany+CoreDataProperties.swift */; };
 		95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
 		95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
 		95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */; };
@@ -265,6 +269,8 @@
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPricesModel.swift; sourceTree = "<group>"; };
+		9595DC332682849E00DC8104 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		9595DC35268284B100DC8104 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
 		95A07F6126305A9B009865AA /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		95A07F6B26305AC6009865AA /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
@@ -426,6 +432,7 @@
 				952457E7267E339C00D5BBCB /* NotificationController.swift */,
 				952457E9267E339C00D5BBCB /* NotificationView.swift */,
 				952457EB267E339C00D5BBCB /* ComplicationController.swift */,
+				9595DC2E2682840C00DC8104 /* Views */,
 				952457ED267E339C00D5BBCB /* Assets.xcassets */,
 				952457F2267E339C00D5BBCB /* Info.plist */,
 				952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */,
@@ -595,6 +602,39 @@
 				958A735125E0170900FD7ECA /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9595DC2E2682840C00DC8104 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9595DC312682845500DC8104 /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9595DC312682845500DC8104 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9595DC332682849E00DC8104 /* HomeView.swift */,
+				9595DC322682848B00DC8104 /* Helpers */,
+				9595DC392682858D00DC8104 /* Networking */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9595DC322682848B00DC8104 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9595DC35268284B100DC8104 /* CompanyRow.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		9595DC392682858D00DC8104 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		95A7C06126163943003E2EC1 /* Search */ = {
@@ -981,8 +1021,12 @@
 				952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */,
 				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
 				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
+				9595DC342682849E00DC8104 /* HomeView.swift in Sources */,
+				9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
+				9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */,
+				9595DC36268284B100DC8104 /* CompanyRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

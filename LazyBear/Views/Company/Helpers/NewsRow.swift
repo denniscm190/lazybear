@@ -19,12 +19,11 @@ struct NewsRow: View {
                     .opacity(0.5)
                 
                 Text(new.headline.capitalized)
-                    .font(.callout)
+                    .font(.headline)
                     .fontWeight(.semibold)
                     .fixedSize(horizontal: false, vertical: true)  /// I need to add this to make lineLimit works correctly
                     .lineLimit(3)
             }
-//            .padding(.horizontal, 5)
             
             Spacer()
             

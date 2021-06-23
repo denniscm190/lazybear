@@ -10,7 +10,6 @@ import SwiftUI
 struct KeyStatsHelper: View {
     var keyStats: KeyStatsModel?
     let displayWords: DisplayWordsModel = parseJSON("DisplayWords.json")
-    @State private var showList = false
     @Environment(\.colorScheme) private var colorScheme
     
     var body: some View {
@@ -24,7 +23,9 @@ struct KeyStatsHelper: View {
                         if let unwrappedValue = unwrapAnyOptional(value: child.value) {
                             let label = String(child.label!)
                             
-                            Button(action: { showList = true }) {
+                            NavigationLink(destination: KeyStatsList(keyStats: keyStats)
+                                            .navigationTitle("Key Stats")
+                            ) {
                                 Capsule()
                                     .frame(width: 250, height: 40)
                                     .foregroundColor(Color("customSecondaryBackground"))
@@ -52,9 +53,6 @@ struct KeyStatsHelper: View {
                 }
                 .frame(height: 70)
                 .padding(.horizontal)
-            }
-            .sheet(isPresented: $showList) {
-                KeyStatsList(keyStats: keyStats, isPresented: $showList)
             }
         }
     }

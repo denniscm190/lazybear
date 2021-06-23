@@ -9,29 +9,18 @@ import SwiftUI
 
 struct InsiderRosterList: View {
     var insiderRoster: [InsiderRosterModel]
-    @Binding var isPresented: Bool
         
     var body: some View {
-        NavigationView {
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    let totalPositions =  insiderRoster.map { $0.position ?? 0 }.reduce(0, +)  /// Get total shares owned by top 10 insiders
-                    ForEach(insiderRoster, id: \.self) { insider in
-                        let percentageOfWidth = Double(insider.position ?? 0) / Double(totalPositions)   /// Compute percentage of ownership for each insider
-                        InsiderRosterRow(insider: insider, percentageOfWidth: CGFloat(percentageOfWidth))
-                        Divider()
-                    }
-                }
-                .padding()
-            }
-            .navigationTitle("Top 10 Insiders")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button(action: { self.isPresented.toggle() }) {
-                        Image(systemName: "multiply")
-                    }
+        ScrollView(showsIndicators: false) {
+            VStack {
+                let totalPositions =  insiderRoster.map { $0.position ?? 0 }.reduce(0, +)  /// Get total shares owned by top 10 insiders
+                ForEach(insiderRoster, id: \.self) { insider in
+                    let percentageOfWidth = Double(insider.position ?? 0) / Double(totalPositions)   /// Compute percentage of ownership for each insider
+                    InsiderRosterRow(insider: insider, percentageOfWidth: CGFloat(percentageOfWidth))
+                    Divider()
                 }
             }
+            .padding()
         }
     }
 }
@@ -47,7 +36,6 @@ struct InsiderRosterList_Previews: PreviewProvider {
                         reportDate: 12345
                     )
                 ]
-            , isPresented: .constant(true)
         )
     }
 }

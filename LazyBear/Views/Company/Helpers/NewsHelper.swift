@@ -10,8 +10,6 @@ import SwiftUI
 struct NewsHelper: View {
     var latestNews: [LatestNewsModel]
     
-    @State private var showList = false
-    
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
@@ -20,7 +18,13 @@ struct NewsHelper: View {
                     .fontWeight(.semibold)
                 
                 Spacer()
-                Button("See all", action: { showList = true } )
+
+                NavigationLink(destination: NewsList(latestNews: latestNews)
+                                .navigationTitle("Latest news")
+                ) {
+                    Text("See all")
+                        .accentColor(Color(.systemBlue))
+                }
             }
             .padding(.bottom)
             
@@ -36,9 +40,6 @@ struct NewsHelper: View {
         .background(
             CustomRectangleBox()
         )
-        .sheet(isPresented: $showList) {
-            NewsList(latestNews: latestNews, isPresented: $showList)
-        }
     }
 }
 

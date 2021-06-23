@@ -9,27 +9,16 @@ import SwiftUI
 
 struct InsiderTransactionsList: View {
     var insiderTransactions: [InsiderTransactionModel]
-    @Binding var isPresented: Bool
     
     var body: some View {
-        NavigationView {
-            ScrollView(showsIndicators: false) {
-                VStack {
-                    ForEach(insiderTransactions, id: \.self) { insiderTransaction in
-                        InsiderTransactionsRow(insiderTransaction: insiderTransaction)
-                        Divider()
-                    }
-                }
-                .padding()
-            }
-            .navigationTitle("Insider Transactions")
-            .toolbar {
-                ToolbarItem(placement: .cancellationAction) {
-                    Button(action: { self.isPresented.toggle() }) {
-                        Image(systemName: "multiply")
-                    }
+        ScrollView(showsIndicators: false) {
+            VStack {
+                ForEach(insiderTransactions, id: \.self) { insiderTransaction in
+                    InsiderTransactionsRow(insiderTransaction: insiderTransaction)
+                    Divider()
                 }
             }
+            .padding()
         }
     }
 }
@@ -50,7 +39,6 @@ struct InsiderTransactionsList_Previews: PreviewProvider {
                         transactionValue: 1234567.0
                     )
                 ]
-            , isPresented: .constant(true)
         )
     }
 }
