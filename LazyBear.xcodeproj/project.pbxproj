@@ -98,6 +98,8 @@
 		95AF0FF92671342E0049C4AB /* DisplayWordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */; };
 		95B85AB6267FAE7A0080CF39 /* ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B85AB5267FAE7A0080CF39 /* ConditionalModifier.swift */; };
 		95BB05B22670B8C3005A2029 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
+		95BC1C642683326C00F94373 /* KeyStatsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C632683326C00F94373 /* KeyStatsRow.swift */; };
+		95BC1C66268336A200F94373 /* UnwrapAnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */; };
 		95C22F3F26776F010014C98A /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
@@ -284,6 +286,8 @@
 		95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayWordsModel.swift; sourceTree = "<group>"; };
 		95B85AB5267FAE7A0080CF39 /* ConditionalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalModifier.swift; sourceTree = "<group>"; };
 		95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsModel.swift; sourceTree = "<group>"; };
+		95BC1C632683326C00F94373 /* KeyStatsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsRow.swift; sourceTree = "<group>"; };
+		95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwrapAnyOptional.swift; sourceTree = "<group>"; };
 		95C22F3E26776F010014C98A /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
 		95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
 		95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionModel.swift; sourceTree = "<group>"; };
@@ -402,6 +406,7 @@
 				95CCFB5D266E855800C384A1 /* GetDateComponents.swift */,
 				95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */,
 				95B85AB5267FAE7A0080CF39 /* ConditionalModifier.swift */,
+				95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */,
 			);
 			path = "Global functions";
 			sourceTree = "<group>";
@@ -701,6 +706,7 @@
 				9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */,
 				9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */,
 				9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */,
+				95BC1C632683326C00F94373 /* KeyStatsRow.swift */,
 				9502BC00267F8771003B0A59 /* KeyStatsList.swift */,
 				95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */,
 				95E4A2D82680931300A6FEB9 /* NewsRow.swift */,
@@ -1063,6 +1069,7 @@
 				95123ABE267669C6001BFAF3 /* StockSheetRow.swift in Sources */,
 				9550443A26111B2B000E0BCB /* HomeView.swift in Sources */,
 				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
+				95BC1C66268336A200F94373 /* UnwrapAnyOptional.swift in Sources */,
 				95123ABC2676676B001BFAF3 /* CurrencySheetRow.swift in Sources */,
 				95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */,
 				95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */,
@@ -1084,6 +1091,7 @@
 				95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */,
 				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
 				9502BBFB267F5EE8003B0A59 /* ChartHelper.swift in Sources */,
+				95BC1C642683326C00F94373 /* KeyStatsRow.swift in Sources */,
 				952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */,
 				95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */,
 				95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */,

@@ -22,7 +22,7 @@ struct NewsRow: View {
                     .font(.headline)
                     .fontWeight(.semibold)
                     .fixedSize(horizontal: false, vertical: true)  /// I need to add this to make lineLimit works correctly
-                    .lineLimit(3)
+                    .lineLimit(2)
             }
             
             Spacer()

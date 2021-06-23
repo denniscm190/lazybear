@@ -16,33 +16,22 @@ struct KeyStatsList: View {
             let mirror = Mirror(reflecting: keyStats)
             ForEach(Array(mirror.children), id: \.label) { child in  /// Iterate over each variable within the class
                 if let unwrappedValue = unwrapAnyOptional(value: child.value) {
-                    let label = String(child.label!)
-                    HStack {
-                        Text("\(displayWords.keyStats[label]!):")
-                            .font(.callout)
-                            .fontWeight(.semibold)
-                            .lineLimit(1)
-                        
-                        Spacer()
-                        Text(unwrappedValue)
-                            .font(.callout)
-                            .lineLimit(1)
+                    if unwrappedValue != "0.000" && unwrappedValue != "0" && !unwrappedValue.isEmpty {
+                        let label = String(child.label!)
+                        HStack {
+                            Text("\(displayWords.keyStats[label]!):")
+                                .font(.callout)
+                                .fontWeight(.semibold)
+                                .lineLimit(1)
+                            
+                            Spacer()
+                            Text(unwrappedValue)
+                                .font(.callout)
+                                .lineLimit(1)
+                        }
                     }
                 }
             }
-        }
-    }
-    
-    /*
-     Unwrap optional Int, Double, String into String
-     */
-    private func unwrapAnyOptional(value: Any) -> String? {
-        if let value = value as? Int {
-            return "\(value)"
-        } else if let value = value as? Double {
-            return String(format: "%.3f", value)
-        } else {
-            return value as? String
         }
     }
 }

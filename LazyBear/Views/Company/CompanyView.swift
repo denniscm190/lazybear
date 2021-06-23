@@ -44,22 +44,29 @@ struct CompanyView: View {
                     
                     ChartHelper(company: company)
                     if let keyStats = company.data.keyStats {
-                        KeyStatsHelper(keyStats: keyStats)
+                    KeyStatsHelper(keyStats: keyStats)
+                        
                     }
 
                     if let latestNews = company.data.latestNews {
-                        NewsHelper(latestNews: latestNews)
-                            .padding([.horizontal, .bottom])
+                        if !latestNews.isEmpty {
+                            NewsHelper(latestNews: latestNews)
+                                .padding([.horizontal, .bottom])
+                        }
                     }
                     
                     if let insiderRoster = company.data.insiderRoster {
-                        InsiderRosterHelper(insiderRoster: insiderRoster)
-                            .padding([.horizontal, .bottom])
+                        if !insiderRoster.isEmpty {
+                            InsiderRosterHelper(insiderRoster: insiderRoster)
+                                .padding([.horizontal, .bottom])
+                        }
                     }
 
                     if let insiderTransactions = company.data.insiderTransactions {
-                        InsiderTransactionsHelper(insiderTransactions: insiderTransactions)
-                            .padding([.horizontal, .bottom])
+                        if !insiderTransactions.isEmpty {
+                            InsiderTransactionsHelper(insiderTransactions: insiderTransactions)
+                                .padding([.horizontal, .bottom])
+                        }
                     }
                 }
             }
