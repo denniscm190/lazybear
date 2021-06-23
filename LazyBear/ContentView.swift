@@ -9,35 +9,37 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var showWelcome = false
-    @State var selectedView = 1
+    @State var selectedTab: Tab = .home
+    @StateObject var hapticsManager = HapticsManager()
     
     @Environment(\.managedObjectContext) private var moc
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
     var watchlistCompanies: FetchedResults<WatchlistCompany>
     
     var body: some View {
-        TabView(selection: $selectedView) {
+        TabView(selection: $selectedTab) {
             HomeView()
                 .tabItem {
                     Image(systemName: "house")
                     Text("Home")
                 }
-                .tag(1)  // Do not remove tags. It causes an odd behaviour when showView is activated
+                .tag(Tab.home)  /// Do not remove tags. It causes an odd behaviour when showView is activated
             SearchView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
-                .tag(2)
+                .tag(Tab.search)
             ProfileView()
                 .tabItem {
                     Image(systemName: "person")
                     Text("Profile")
                 }
-                .tag(3)
+                .tag(Tab.profile)
         }
         .onAppear {
 //            isAppAlreadyLaunchedOnce()
+            hapticsManager.prepareHaptics()
             createDefaultWatchlist()
         }
         .sheet(isPresented: $showWelcome) {
@@ -76,6 +78,13 @@ struct ContentView: View {
                 print(error.localizedDescription)
             }
         }
+    }
+}
+extension ContentView {
+    enum Tab: Hashable {
+        case home
+        case search
+        case profile
     }
 }
 
