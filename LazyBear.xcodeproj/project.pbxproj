@@ -78,7 +78,6 @@
 		9576BFED26810713002BCAC6 /* InsiderRosterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEC26810713002BCAC6 /* InsiderRosterList.swift */; };
 		9576BFEF26810719002BCAC6 /* InsiderRosterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
-		9594331326691789004A0339 /* Bazooka in Frameworks */ = {isa = PBXBuildFile; productRef = 9594331226691789004A0339 /* Bazooka */; };
 		9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
 		9595DC342682849E00DC8104 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC332682849E00DC8104 /* HomeView.swift */; };
 		9595DC36268284B100DC8104 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC35268284B100DC8104 /* CompanyRow.swift */; };
@@ -100,6 +99,7 @@
 		95BB05B22670B8C3005A2029 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
 		95BC1C642683326C00F94373 /* KeyStatsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C632683326C00F94373 /* KeyStatsRow.swift */; };
 		95BC1C66268336A200F94373 /* UnwrapAnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */; };
+		95BEA1A626876DE100BF18AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95BEA1A526876DE100BF18AB /* Alamofire */; };
 		95C22F3F26776F010014C98A /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
@@ -344,8 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
+				95BEA1A626876DE100BF18AB /* Alamofire in Frameworks */,
 				950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */,
-				9594331326691789004A0339 /* Bazooka in Frameworks */,
 				9547482A26822F0700D6A966 /* StockCharts in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				950B6F3D267643460029E447 /* Purchases in Frameworks */,
@@ -868,9 +868,9 @@
 			packageProductDependencies = (
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 				95A4B932263E9F810056F036 /* Introspect */,
-				9594331226691789004A0339 /* Bazooka */,
 				950B6F3C267643460029E447 /* Purchases */,
 				9547482926822F0700D6A966 /* StockCharts */,
+				95BEA1A526876DE100BF18AB /* Alamofire */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -924,9 +924,9 @@
 			packageReferences = (
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */,
 				950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 				9547482826822F0700D6A966 /* XCRemoteSwiftPackageReference "StockCharts" */,
+				95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -1703,20 +1703,20 @@
 				minimumVersion = 1.2.4;
 			};
 		};
-		9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/denniscm190/Bazooka.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 		95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.1.3;
+			};
+		};
+		95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1737,15 +1737,15 @@
 			package = 954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
 			productName = SwiftlySearch;
 		};
-		9594331226691789004A0339 /* Bazooka */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9594331126691789004A0339 /* XCRemoteSwiftPackageReference "Bazooka" */;
-			productName = Bazooka;
-		};
 		95A4B932263E9F810056F036 /* Introspect */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
 			productName = Introspect;
+		};
+		95BEA1A526876DE100BF18AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 

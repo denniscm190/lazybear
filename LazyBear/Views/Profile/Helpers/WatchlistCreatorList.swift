@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Bazooka
+import Alamofire
 
 struct WatchlistCreatorList: View {
     @ObservedObject var watchlistCreatorClass: WatchlistCreatorClass
@@ -45,9 +45,10 @@ struct WatchlistCreatorList: View {
      Get companies from the API that matches the searched text
      */
     private func request(_ url: String) {
-        let bazooka = Bazooka()
-        bazooka.request(url: url, model: [SearchResponse].self) { response in
-            self.companies = response
+        AF.request(url).responseDecodable(of: [SearchResponse].self) { response in
+            if let value = response.value {
+                self.companies = value
+            }
         }
     }
     

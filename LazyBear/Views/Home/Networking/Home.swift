@@ -6,24 +6,25 @@
 //
 
 import SwiftUI
-import Bazooka
+import Alamofire
 
 class Home: ObservableObject {
     @Published var showView = false
     @Published var data = HomeResponse()
     
     func request(_ url: String, _ requestType: RequestType) {
-        let bazooka = Bazooka()
-        bazooka.request(url: url, model: HomeResponse.self) { response in
-            switch requestType {
-            case .initial:
-                self.data = response
-            default:
-                self.data.lists = response.lists
-                self.data.sectorPerformance = response.sectorPerformance
+        AF.request(url).responseDecodable(of: HomeResponse.self) { response in
+            if let value = response.value {
+                switch requestType {
+                case .initial:
+                    self.data = value
+                default:
+                    self.data.lists = value.lists
+                    self.data.sectorPerformance = value.sectorPerformance
+                }
+                
+                self.showView = true
             }
-            
-            self.showView = true
         }
     }
 }

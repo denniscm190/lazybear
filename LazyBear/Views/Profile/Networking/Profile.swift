@@ -6,23 +6,24 @@
 //
 
 import SwiftUI
-import Bazooka
+import Alamofire
 
 class Profile: ObservableObject {
     @Published var showView = false
     @Published var data = ProfileResponse()
     
     func request(_ url: String, _ requestType: RequestType) {
-        let bazooka = Bazooka()
-        bazooka.request(url: url, model: ProfileResponse.self) { response in
-            switch requestType {
-            case .initial:
-                self.data = response
-            default:
-                self.data = response
+        AF.request(url).responseDecodable(of: ProfileResponse.self) { response in
+            if let value = response.value {
+                switch requestType {
+                case .initial:
+                    self.data = value
+                default:
+                    self.data = value
+                }
+
+                self.showView = true
             }
-            
-            self.showView = true
         }
     }
 }

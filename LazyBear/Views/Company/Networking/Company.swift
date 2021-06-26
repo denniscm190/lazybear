@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import Bazooka
+import Alamofire
 
 class Company: ObservableObject {
     @Published var showView = false
@@ -15,19 +15,20 @@ class Company: ObservableObject {
     
     func request(_ url: String, _ requestType: RequestType) {
         if requestType == .refresh { self.showChart = false }
-        let bazooka = Bazooka()
-        bazooka.request(url: url, model: CompanyResponse.self) { response in
-            switch requestType {
-            case .initial:
-                self.data = response
-            case .streaming:
-                self.data.quote = response.quote
-            case .refresh:
-                self.data.historicalPrices = response.historicalPrices
+        AF.request(url).responseDecodable(of: CompanyResponse.self) { response in
+            if let value = response.value {
+                switch requestType {
+                case .initial:
+                    self.data = value
+                case .streaming:
+                    self.data.quote = value.quote
+                case .refresh:
+                    self.data.historicalPrices = value.historicalPrices
+                }
+                
+                self.showView = true
+                self.showChart = true
             }
-            
-            self.showView = true
-            self.showChart = true
         }
     }
 }

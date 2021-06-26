@@ -6,17 +6,18 @@
 //
 
 import SwiftUI
-import Bazooka
+import Alamofire
 
 class Search: ObservableObject {
     @Published var data = [SearchResponse()]
     @Published var showSearchList = false
     
     func request(_ url: String) {
-        let bazooka = Bazooka()
-        bazooka.request(url: url, model: [SearchResponse].self) { response in
-            self.data = response
-            self.showSearchList = true
+        AF.request(url).responseDecodable(of: [SearchResponse].self) { response in
+            if let value = response.value {
+                self.data = value
+                self.showSearchList = true
+            }
         }
     }
 }
