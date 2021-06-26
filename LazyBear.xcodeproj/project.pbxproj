@@ -100,6 +100,11 @@
 		95BC1C642683326C00F94373 /* KeyStatsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C632683326C00F94373 /* KeyStatsRow.swift */; };
 		95BC1C66268336A200F94373 /* UnwrapAnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */; };
 		95BEA1A626876DE100BF18AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95BEA1A526876DE100BF18AB /* Alamofire */; };
+		95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95629D9F2645298E007AF020 /* Profile.swift */; };
+		95BEA1AC268778E500BF18AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95BEA1AB268778E500BF18AB /* Alamofire */; };
+		95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
+		95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
+		95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8BAA22656D86E0016AE72 /* RequestType.swift */; };
 		95C22F3F26776F010014C98A /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
@@ -322,6 +327,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95BEA1AC268778E500BF18AB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,6 +816,9 @@
 			dependencies = (
 			);
 			name = "LazyBearWatchOS Extension";
+			packageProductDependencies = (
+				95BEA1AB268778E500BF18AB /* Alamofire */,
+			);
 			productName = "LazyBearWatchOS Extension";
 			productReference = 952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
@@ -1025,8 +1034,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */,
+				95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */,
+				95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */,
+				95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */,
 				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
 				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
+				95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */,
 				9595DC342682849E00DC8104 /* HomeView.swift in Sources */,
 				9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
@@ -1743,6 +1756,11 @@
 			productName = Introspect;
 		};
 		95BEA1A526876DE100BF18AB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		95BEA1AB268778E500BF18AB /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
