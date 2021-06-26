@@ -96,24 +96,16 @@ struct ProfileView: View {
      Get symbols in watchlists (Core Data) -> Prepare url -> Request
      */
     private func prepareUrl(_ requestType: RequestType) {
-        let symbols = watchlistCompanies.map { $0.symbol }
-        
-        var symbolString = ""
-        for (index, symbol) in symbols.enumerated() {
-            if index == 0 {
-                symbolString += symbol
-            } else {
-                symbolString += ",\(symbol)"
-            }
-        }
+        let symbols = Set(watchlistCompanies.map { $0.symbol })
+        let symbolsString = symbols.joined(separator:",")
         
         switch requestType {
         case .initial:
-            let url = "https://api.lazybear.app/profile/type=initial/symbols=\(symbolString)"
+            let url = "https://api.lazybear.app/profile/type=initial/symbols=\(symbolsString)"
             profile.request(url, .initial)
             
         default:
-            let url = "https://api.lazybear.app/profile/type=streaming/symbols=\(symbolString)"
+            let url = "https://api.lazybear.app/profile/type=streaming/symbols=\(symbolsString)"
             profile.request(url, .streaming)
         }
     }

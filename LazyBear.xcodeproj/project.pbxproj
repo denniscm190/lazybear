@@ -105,6 +105,8 @@
 		95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
 		95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8BAA22656D86E0016AE72 /* RequestType.swift */; };
+		95BEA1B326877BAC00BF18AB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
+		95BEA1B426877BBA00BF18AB /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
 		95C22F3F26776F010014C98A /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
 		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
@@ -443,10 +445,10 @@
 				952457E7267E339C00D5BBCB /* NotificationController.swift */,
 				952457E9267E339C00D5BBCB /* NotificationView.swift */,
 				952457EB267E339C00D5BBCB /* ComplicationController.swift */,
-				9595DC2E2682840C00DC8104 /* Views */,
 				952457ED267E339C00D5BBCB /* Assets.xcassets */,
 				952457F2267E339C00D5BBCB /* Info.plist */,
 				952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */,
+				9595DC2E2682840C00DC8104 /* Views */,
 				952457EF267E339C00D5BBCB /* Preview Content */,
 			);
 			path = "LazyBearWatchOS Extension";
@@ -628,7 +630,6 @@
 			children = (
 				9595DC332682849E00DC8104 /* HomeView.swift */,
 				9595DC322682848B00DC8104 /* Helpers */,
-				9595DC392682858D00DC8104 /* Networking */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -639,13 +640,6 @@
 				9595DC35268284B100DC8104 /* CompanyRow.swift */,
 			);
 			path = Helpers;
-			sourceTree = "<group>";
-		};
-		9595DC392682858D00DC8104 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Networking;
 			sourceTree = "<group>";
 		};
 		95A7C06126163943003E2EC1 /* Search */ = {
@@ -1036,11 +1030,13 @@
 				952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */,
 				95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */,
 				95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */,
+				95BEA1B326877BAC00BF18AB /* Persistence.swift in Sources */,
 				95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */,
 				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
 				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
 				95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */,
 				9595DC342682849E00DC8104 /* HomeView.swift in Sources */,
+				95BEA1B426877BBA00BF18AB /* LazyBear.xcdatamodeld in Sources */,
 				9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
 				9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */,

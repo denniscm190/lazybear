@@ -6,14 +6,16 @@
 //
 
 import SwiftUI
+import CoreData
 
 @main
 struct LazyBearApp: App {
+    let persistenceController = PersistenceController.shared  // Core Data init
+    
     @SceneBuilder var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView()
-            }
+            ContentView()
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
 
         WKNotificationScene(controller: NotificationController.self, category: "myCategory")
