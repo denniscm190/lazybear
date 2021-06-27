@@ -22,7 +22,11 @@ struct HomeView: View {
                     VStack {
                         if let companies = profile.data.quotes {
                             ForEach(companies, id: \.self) { company in
-                                CompanyRow(company: company)
+                                NavigationLink(destination: CompanyView(symbol: company.symbol, name: company.companyName)
+                                                .navigationTitle(company.companyName.capitalized)
+                                ) {
+                                    CompanyRow(company: company)
+                                }
                             }
                         }
                     }

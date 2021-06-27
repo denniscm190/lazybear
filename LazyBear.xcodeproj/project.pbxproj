@@ -56,7 +56,6 @@
 		9547482026821F7700D6A966 /* InsiderTransactionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547481F26821F7700D6A966 /* InsiderTransactionsHelper.swift */; };
 		9547482226821F8800D6A966 /* InsiderTransactionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547482126821F8800D6A966 /* InsiderTransactionsRow.swift */; };
 		9547482426821F9400D6A966 /* InsiderTransactionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547482326821F9400D6A966 /* InsiderTransactionsList.swift */; };
-		9547482A26822F0700D6A966 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 9547482926822F0700D6A966 /* StockCharts */; };
 		954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 954D7EC1260BE70C00A13C50 /* SwiftlySearch */; };
 		9550443A26111B2B000E0BCB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550443926111B2B000E0BCB /* HomeView.swift */; };
 		9550444326111E7A000E0BCB /* SectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444226111E7A000E0BCB /* SectorRow.swift */; };
@@ -113,6 +112,22 @@
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
 		95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5D266E855800C384A1 /* GetDateComponents.swift */; };
 		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
+		95CF46A32688BC0B0028C5A2 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46A22688BC0B0028C5A2 /* CompanyView.swift */; };
+		95CF46A82688C60D0028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46A72688C60D0028C5A2 /* StockCharts */; };
+		95CF46A92688C74C0028C5A2 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF8267F59A0003B0A59 /* Company.swift */; };
+		95CF46AA2688C7590028C5A2 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF6267F5974003B0A59 /* CompanyResponse.swift */; };
+		95CF46AB2688C7770028C5A2 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
+		95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
+		95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */; };
+		95CF46AE2688C7990028C5A2 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
+		95CF46AF2688C7A60028C5A2 /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
+		95CF46B02688C7B00028C5A2 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
+		95CF46B22688C9370028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46B12688C9370028C5A2 /* StockCharts */; };
+		95CF46B72688F89B0028C5A2 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B62688F89B0028C5A2 /* StockView.swift */; };
+		95CF46B92688F8A60028C5A2 /* LatestNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B82688F8A60028C5A2 /* LatestNewsView.swift */; };
+		95CF46BD2688F8C10028C5A2 /* KeyStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46BC2688F8C10028C5A2 /* KeyStatsView.swift */; };
+		95CF46BF2688F8CF0028C5A2 /* TopInsidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46BE2688F8CF0028C5A2 /* TopInsidersView.swift */; };
+		95CF46C12688F8DC0028C5A2 /* InsiderTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46C02688F8DC0028C5A2 /* InsiderTransactionsView.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */; };
@@ -302,6 +317,12 @@
 		95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionModel.swift; sourceTree = "<group>"; };
 		95CCFB5D266E855800C384A1 /* GetDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateComponents.swift; sourceTree = "<group>"; };
 		95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertStringToDate.swift; sourceTree = "<group>"; };
+		95CF46A22688BC0B0028C5A2 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		95CF46B62688F89B0028C5A2 /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
+		95CF46B82688F8A60028C5A2 /* LatestNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsView.swift; sourceTree = "<group>"; };
+		95CF46BC2688F8C10028C5A2 /* KeyStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsView.swift; sourceTree = "<group>"; };
+		95CF46BE2688F8CF0028C5A2 /* TopInsidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInsidersView.swift; sourceTree = "<group>"; };
+		95CF46C02688F8DC0028C5A2 /* InsiderTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionsView.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
 		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHelper.swift; sourceTree = "<group>"; };
@@ -331,6 +352,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CF46B22688C9370028C5A2 /* StockCharts in Frameworks */,
 				95BEA1AC268778E500BF18AB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,7 +378,7 @@
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				95BEA1A626876DE100BF18AB /* Alamofire in Frameworks */,
 				950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */,
-				9547482A26822F0700D6A966 /* StockCharts in Frameworks */,
+				95CF46A82688C60D0028C5A2 /* StockCharts in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				950B6F3D267643460029E447 /* Purchases in Frameworks */,
 				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
@@ -632,6 +654,12 @@
 			isa = PBXGroup;
 			children = (
 				9595DC332682849E00DC8104 /* HomeView.swift */,
+				95CF46A22688BC0B0028C5A2 /* CompanyView.swift */,
+				95CF46B62688F89B0028C5A2 /* StockView.swift */,
+				95CF46B82688F8A60028C5A2 /* LatestNewsView.swift */,
+				95CF46BC2688F8C10028C5A2 /* KeyStatsView.swift */,
+				95CF46BE2688F8CF0028C5A2 /* TopInsidersView.swift */,
+				95CF46C02688F8DC0028C5A2 /* InsiderTransactionsView.swift */,
 				9595DC322682848B00DC8104 /* Helpers */,
 			);
 			path = Home;
@@ -815,6 +843,7 @@
 			name = "LazyBearWatchOS Extension";
 			packageProductDependencies = (
 				95BEA1AB268778E500BF18AB /* Alamofire */,
+				95CF46B12688C9370028C5A2 /* StockCharts */,
 			);
 			productName = "LazyBearWatchOS Extension";
 			productReference = 952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */;
@@ -875,8 +904,8 @@
 				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
 				95A4B932263E9F810056F036 /* Introspect */,
 				950B6F3C267643460029E447 /* Purchases */,
-				9547482926822F0700D6A966 /* StockCharts */,
 				95BEA1A526876DE100BF18AB /* Alamofire */,
+				95CF46A72688C60D0028C5A2 /* StockCharts */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -931,8 +960,8 @@
 				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */,
-				9547482826822F0700D6A966 /* XCRemoteSwiftPackageReference "StockCharts" */,
 				95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -1030,20 +1059,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CF46B92688F8A60028C5A2 /* LatestNewsView.swift in Sources */,
+				95CF46B72688F89B0028C5A2 /* StockView.swift in Sources */,
+				95CF46BD2688F8C10028C5A2 /* KeyStatsView.swift in Sources */,
 				952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */,
+				95CF46C12688F8DC0028C5A2 /* InsiderTransactionsView.swift in Sources */,
 				95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */,
+				95CF46AA2688C7590028C5A2 /* CompanyResponse.swift in Sources */,
 				95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */,
+				95CF46AB2688C7770028C5A2 /* HistoricalPricesModel.swift in Sources */,
+				95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */,
 				95BEA1B326877BAC00BF18AB /* Persistence.swift in Sources */,
 				95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */,
+				95CF46AF2688C7A60028C5A2 /* InsiderRosterModel.swift in Sources */,
 				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
+				95CF46AE2688C7990028C5A2 /* KeyStatsModel.swift in Sources */,
 				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
 				95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */,
+				95CF46B02688C7B00028C5A2 /* InsiderTransactionModel.swift in Sources */,
+				95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */,
 				9595DC342682849E00DC8104 /* HomeView.swift in Sources */,
+				95CF46BF2688F8CF0028C5A2 /* TopInsidersView.swift in Sources */,
 				95BEA1B426877BBA00BF18AB /* LazyBear.xcdatamodeld in Sources */,
 				9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
+				95CF46A92688C74C0028C5A2 /* Company.swift in Sources */,
 				9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */,
+				95CF46A32688BC0B0028C5A2 /* CompanyView.swift in Sources */,
 				9595DC36268284B100DC8104 /* CompanyRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1700,14 +1743,6 @@
 				minimumVersion = 3.11.1;
 			};
 		};
-		9547482826822F0700D6A966 /* XCRemoteSwiftPackageReference "StockCharts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.5;
-			};
-		};
 		954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
@@ -1732,6 +1767,14 @@
 				minimumVersion = 5.4.3;
 			};
 		};
+		95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1739,11 +1782,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */;
 			productName = Purchases;
-		};
-		9547482926822F0700D6A966 /* StockCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 9547482826822F0700D6A966 /* XCRemoteSwiftPackageReference "StockCharts" */;
-			productName = StockCharts;
 		};
 		954D7EC1260BE70C00A13C50 /* SwiftlySearch */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -1764,6 +1802,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		95CF46A72688C60D0028C5A2 /* StockCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
+			productName = StockCharts;
+		};
+		95CF46B12688C9370028C5A2 /* StockCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
+			productName = StockCharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 

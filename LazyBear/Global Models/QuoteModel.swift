@@ -11,4 +11,5 @@ struct QuoteModel: Codable {
     var companyName: String
     var latestPrice: Double?
     var changePercent: Double?
+    var intradayPrices: [Double]?
 }
