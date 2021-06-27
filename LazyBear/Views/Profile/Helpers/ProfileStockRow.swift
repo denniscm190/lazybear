@@ -12,9 +12,6 @@ struct ProfileStockRow: View {
     var companies: [CompanyModel]
 
     @State private var showWatchlistSheet = false
-    @State private var willRenameWatchlist = false
-    @State private var showRenameWatchlistSheet = false
-    @Environment(\.managedObjectContext) private var moc
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -32,9 +29,15 @@ struct ProfileStockRow: View {
                 }
                 
                 Spacer()
-                Button("See all", action: { showWatchlistSheet = true })
-                    .buttonStyle(BorderlessButtonStyle())
-                    .padding(.horizontal)
+                NavigationLink(destination: WatchlistSheet(listName: watchlistName, apiCompanies: companies)
+                                .navigationTitle(watchlistName)
+                ) {
+                    HStack {
+                        Text("See all")
+                        Image(systemName: "chevron.right")
+                    }
+                }
+                .padding(.horizontal)
             }
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -48,23 +51,6 @@ struct ProfileStockRow: View {
             .frame(height: 250)
         }
         .padding(.bottom)
-        .sheet(isPresented: $showWatchlistSheet, onDismiss: didDismissWatchlistSheet) {
-            WatchlistSheet(listName: watchlistName, apiCompanies: companies, willRenameWatchlist: $willRenameWatchlist)
-                .environment(\.managedObjectContext, self.moc)
-        }
-        .sheet(isPresented: $showRenameWatchlistSheet) {
-            RenameListSheet(oldWatchlistName: watchlistName)
-                .environment(\.managedObjectContext, self.moc)
-        }
-    }
-    
-    /*
-     If user wants to rename watchlist -> when WatchlistSheet is dismissed, show RenameListSheet
-     */
-    private func didDismissWatchlistSheet() {
-        if willRenameWatchlist {
-            showRenameWatchlistSheet = true
-        }
     }
 }
 

@@ -9,8 +9,9 @@ import SwiftUI
 import Alamofire
 
 class Home: ObservableObject {
-    @Published var showView = false
     @Published var data = HomeResponse()
+    @Published var showView = false
+    @Published var triggerHaptic = false
     
     func request(_ url: String, _ requestType: RequestType) {
         AF.request(url).responseDecodable(of: HomeResponse.self) { response in
@@ -23,6 +24,7 @@ class Home: ObservableObject {
                     self.data.sectorPerformance = value.sectorPerformance
                 }
                 
+                self.triggerHaptic = true
                 self.showView = true
             }
         }

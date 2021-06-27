@@ -11,8 +11,7 @@ import CoreData
 struct HomeView: View {
     @ObservedObject var profile = Profile()
 
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var watchlistCompanies: FetchedResults<WatchlistCompany>
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: []) var watchlistCompanies: FetchedResults<WatchlistCompany>
     
     @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  /// Set recurrent price request
     
@@ -49,6 +48,7 @@ struct HomeView: View {
         switch requestType {
         case .initial:
             let url = "https://api.lazybear.app/profile/type=initial/symbols=\(symbolsString)"
+            print(watchlistCompanies)
             profile.request(url, .initial)
             
         default:

@@ -2,7 +2,7 @@
 //  HapticsManager.swift
 //  LazyBear
 //
-//  Created by Dennis Concepción Martín on 27/3/21.
+//  Created by Dennis Concepción Martín on 27/06/2021.
 //
 
 import SwiftUI

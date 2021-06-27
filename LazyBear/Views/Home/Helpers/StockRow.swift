@@ -11,9 +11,6 @@ import SwiftUI
 struct StockRow: View {
     var listName: String
     var companies: [CompanyModel]
-
-    @State private var showList = false
-    @Environment(\.managedObjectContext) private var moc
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -31,9 +28,15 @@ struct StockRow: View {
                 }
                 
                 Spacer()
-                Button("See all", action: { showList = true })
-                    .buttonStyle(BorderlessButtonStyle())
-                    .padding(.horizontal)
+                NavigationLink(destination: StockSheet(listName: adaptListTitle(listName), companies: companies)
+                                .navigationTitle(adaptListTitle(listName))
+                ) {
+                    HStack {
+                        Text("See all")
+                        Image(systemName: "chevron.right")
+                    }
+                }
+                .padding(.horizontal)
             }
             
             ScrollView(.horizontal, showsIndicators: false) {
@@ -50,10 +53,6 @@ struct StockRow: View {
                 .padding()
             }
             .frame(height: 250)
-        }
-        .padding(.bottom)
-        .sheet(isPresented: $showList) {
-            StockSheet(listName: adaptListTitle(listName), companies: companies)
         }
     }
     

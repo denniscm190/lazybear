@@ -9,8 +9,6 @@ import SwiftUI
 
 struct CurrencyRow: View {
     var latestCurrencies: [CurrencyModel]
-
-    @State private var showExtensiveList = false
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -28,8 +26,14 @@ struct CurrencyRow: View {
                 }
                 
                 Spacer()
-                Button("See all", action: { self.showExtensiveList = true })
-                    .buttonStyle(BorderlessButtonStyle())
+                NavigationLink(destination: CurrencySheet(latestCurrencies: latestCurrencies)
+                                .navigationTitle("Currencies")
+                ) {
+                    HStack {
+                        Text("See all")
+                        Image(systemName: "chevron.right")
+                    }
+                }
                     .padding(.horizontal)
             }
             
@@ -41,9 +45,6 @@ struct CurrencyRow: View {
                 }
                 .padding()
             }
-        }
-        .sheet(isPresented: $showExtensiveList) {
-            CurrencySheet(latestCurrencies: latestCurrencies)
         }
     }
 }

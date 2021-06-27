@@ -1,0 +1,47 @@
+[
+    {
+        "symbol": "AAPL",
+        "name": "Apple Inc"
+    },
+    {
+        "symbol": "AMZN",
+        "name": "Amazon.com Inc."
+    },
+    {
+        "symbol": "WMT",
+        "name": "Walmart Inc"
+    },
+    {
+        "symbol": "CVS",
+        "name": "CVS Health Corp"
+    },
+    {
+        "symbol": "UNH",
+        "name": "Unitedhealth Group Inc"
+    },
+    {
+        "symbol": "BRK.B",
+        "name": "Berkshire Hathaway Inc."
+    },
+    {
+        "symbol": "MCK",
+        "name": "Mckesson Corporation"
+    },
+    {
+        "symbol": "ABC",
+        "name": "Amerisource Bergen Corp."
+    },
+    {
+        "symbol": "GOOG",
+        "name": "Alphabet Inc"
+    },
+    {
+        "symbol": "XOM",
+        "name": "Exxon Mobil Corp."
+    },
+    {
+        "symbol": "COST",
+        "name": "Costco Wholesale Corp"
+    }
+]
+

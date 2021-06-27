@@ -6,15 +6,14 @@
 //
 
 import SwiftUI
+import CoreHaptics
 
 struct ContentView: View {
     @State private var showWelcome = false
     @State var selectedTab: Tab = .home
-    @StateObject var hapticsManager = HapticsManager()
     
     @Environment(\.managedObjectContext) private var moc
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: [])
-    var watchlistCompanies: FetchedResults<WatchlistCompany>
+    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: []) var watchlistCompanies: FetchedResults<WatchlistCompany>
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -37,40 +36,28 @@ struct ContentView: View {
                 }
                 .tag(Tab.profile)
         }
-        .onAppear {
-//            isAppAlreadyLaunchedOnce()
-            hapticsManager.prepareHaptics()
-            createDefaultWatchlist()
-        }
+        .onAppear(perform: onAppear)
         .sheet(isPresented: $showWelcome) {
             
         }
     }
     
     /*
-     Check if app is already launched one -> If not show welcome
+     1) Create default watchlist if it doesn't exits
+     2) Show WelcomeView if is the first time that the app is opened
+     3) Prepare haptics
      */
-//    private func isAppAlreadyLaunchedOnce() {
-//        let defaults = UserDefaults.standard
-//
-//        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "IsAppAlreadyLaunchedOnce") {
-//            print("App already launched : \(isAppAlreadyLaunchedOnce)")
-//            self.showWelcome = true
-//        }
-//    }
-    
-    /*
-     Check if exist default watchlist (Core Data) -> if not, create it
-     */
-    private func createDefaultWatchlist() {
-        let defaultCompanies = [("TSLA", "Tesla Inc"), ("AAPL", "Apple Inc"), ("MSFT", "Microsoft Corporation"), ("GS", "Goldman Sachs Group, Inc.")]
+    private func onAppear() {
+        // Create watchlist
         if watchlistCompanies.isEmpty {
-            for tupleCompany in defaultCompanies {
+            let defaultCompanies: [DefaultCompanyModel] = parseJSON("DefaultCompanies.json")
+            for defaultCompany in defaultCompanies {
                 let watchlistCompany = WatchlistCompany(context: moc)
-                watchlistCompany.symbol = tupleCompany.0
-                watchlistCompany.name = tupleCompany.1
+                watchlistCompany.name = defaultCompany.name
+                watchlistCompany.symbol = defaultCompany.symbol
                 watchlistCompany.watchlistName = "Default watchlist"
             }
+            
             do {
                 try moc.save()
                 print("Default watchlist created")
@@ -78,6 +65,17 @@ struct ContentView: View {
                 print(error.localizedDescription)
             }
         }
+        
+        // Show WelcomeView if is the first time that the app is opened
+//        let defaults = UserDefaults.standard
+//
+//        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "IsAppAlreadyLaunchedOnce") {
+//            print("App already launched : \(isAppAlreadyLaunchedOnce)")
+//            self.showWelcome = true
+//        }
+        
+        // Prepare haptics
+//        hapticsManager.prepareHaptics()
     }
 }
 extension ContentView {

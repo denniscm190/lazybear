@@ -11,26 +11,14 @@ struct StockSheet: View {
     var listName: String
     var companies: [CompanyModel]
     
-    @Environment(\.presentationMode) private var stockSheetPresentation
-    
     var body: some View {
-        NavigationView {
-            VStack {
-                List(companies, id: \.self) { company in
-                    NavigationLink(destination:
-                        CompanyView(symbol: company.symbol, name: company.companyName)
-                            .navigationTitle(company.symbol.uppercased())
-                    ) {
-                        StockSheetRow(company: company)
-                    }
-                }
-            }
-            .navigationTitle(listName)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {stockSheetPresentation.wrappedValue.dismiss()}) {
-                        Image(systemName: "multiply")
-                    }
+        VStack {
+            List(companies, id: \.self) { company in
+                NavigationLink(destination:
+                    CompanyView(symbol: company.symbol, name: company.companyName)
+                        .navigationTitle(company.symbol.uppercased())
+                ) {
+                    StockSheetRow(company: company)
                 }
             }
         }

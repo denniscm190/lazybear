@@ -51,7 +51,7 @@ struct HomeView: View {
                     .toolbar {
                         ToolbarItem(placement: .navigationBarTrailing) {
                             Button(action: { showTradingDates = true }) {
-                                Image(systemName: "calendar.badge.clock")
+                                Image(systemName: "clock")
                             }
                         }
                     }
@@ -66,11 +66,7 @@ struct HomeView: View {
             }
         } else {
             ProgressView()
-                .onAppear {
-                    home.request("https://api.lazybear.app/home/type=initial", .initial)
-                        
-                }
-
+                .onAppear { home.request("https://api.lazybear.app/home/type=initial", .initial) }
         }
     }
 }
