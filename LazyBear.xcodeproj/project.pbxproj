@@ -129,6 +129,7 @@
 		95CF46DB2689C78D0028C5A2 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
 		95CF46DC2689C7930028C5A2 /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
 		95CF46DD2689C7960028C5A2 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
+		95CF46DF2689D72E0028C5A2 /* ComplicationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */; };
@@ -323,6 +324,7 @@
 		95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsList.swift; sourceTree = "<group>"; };
 		95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsRow.swift; sourceTree = "<group>"; };
 		95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsDetail.swift; sourceTree = "<group>"; };
+		95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationViews.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
 		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHelper.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 				952457E7267E339C00D5BBCB /* NotificationController.swift */,
 				952457E9267E339C00D5BBCB /* NotificationView.swift */,
 				952457EB267E339C00D5BBCB /* ComplicationController.swift */,
+				95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */,
 				952457ED267E339C00D5BBCB /* Assets.xcassets */,
 				952457F2267E339C00D5BBCB /* Info.plist */,
 				952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */,
@@ -1073,6 +1076,7 @@
 				95CF46C32689165F0028C5A2 /* WatchOSNewsRow.swift in Sources */,
 				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
 				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
+				95CF46DF2689D72E0028C5A2 /* ComplicationViews.swift in Sources */,
 				95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */,
 				95CF46C4268916960028C5A2 /* ConvertEpoch.swift in Sources */,
 				95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */,
