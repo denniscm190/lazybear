@@ -20,7 +20,7 @@ struct InsiderTransactionsRow: View {
                 Text(getDateComponents(.day, date))
                     .font(.title)
                     .fontWeight(.semibold)
-                    .foregroundColor(Color(.systemBlue))
+                    .foregroundColor(Color.blue)
                 
                 Text(getDateComponents(.year, date))
                     .font(.caption)
@@ -42,7 +42,7 @@ struct InsiderTransactionsRow: View {
             if let transactionShares = insiderTransaction.transactionShares {
                 VStack(alignment: .trailing) {
                     Text("\(transactionShares)")
-                        .foregroundColor(transactionShares < 0 ? Color(.systemRed): Color(.systemGreen))
+                        .foregroundColor(transactionShares < 0 ? Color.red: Color.green)
                 }
                 .padding(.leading)
             }

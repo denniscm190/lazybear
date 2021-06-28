@@ -20,7 +20,7 @@ struct CurrencyItem: View {
             .frame(width: 330, height: 50)
             .overlay(
                 HStack {
-                    Color(.systemBlue)
+                    Color.blue
                         .frame(width: 40)
                         .overlay(
                             Text(currency.flag)

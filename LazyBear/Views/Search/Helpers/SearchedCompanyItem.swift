@@ -22,11 +22,11 @@ struct SearchedCompanyItem: View {
                 let watchlistSymbols = watchlistCompanies.map { $0.symbol }
                 if watchlistSymbols.contains(company.symbol!) {
                     Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
+                        .foregroundColor(Color.yellow)
                         .imageScale(.large)
                 } else {
                     Image(systemName: "star")
-                        .foregroundColor(.yellow)
+                        .foregroundColor(Color.yellow)
                         .imageScale(.large)
                 }
             }

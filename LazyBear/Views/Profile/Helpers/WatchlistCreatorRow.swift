@@ -29,7 +29,7 @@ struct WatchlistCreatorRow: View {
                 Spacer()
                 Image(systemName: "plus.circle")
                     .imageScale(.large)
-                    .foregroundColor(Color(.systemBlue))
+                    .foregroundColor(Color.blue)
             }
             .contentShape(Rectangle())
         }

@@ -10,7 +10,7 @@ import SwiftUI
 /*
  Convert Epoch time (in miliseconds) to human readable date
  */
-func convertEpoch(_ miliseconds: Int, _ interval: Bool) -> String {
+func convertEpoch(_ miliseconds: Int64, _ interval: Bool) -> String {
     let now = Date() // Current date
     
     // TimeInterval() function must be in seconds, not in miliseconds

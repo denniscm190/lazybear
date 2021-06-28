@@ -9,39 +9,39 @@ import SwiftUI
 
 struct KeyStatsModel: Codable {
     var companyName: String?
-    var employees: Int?
-    var marketcap: Int?
-    var float: Int?
-    var sharesOutstanding: Int?
+    var employees: Float?
+    var marketcap: Float?
+    var float: Float?
+    var sharesOutstanding: Float?
     
-    var beta: Double?
-    var peRatio: Double?
-    var dividendYield: Double?
-    var ttmDividendRate: Double?
-    var ttmEPS: Double?
+    var beta: Float?
+    var peRatio: Float?
+    var dividendYield: Float?
+    var ttmDividendRate: Float?
+    var ttmEPS: Float?
     
-    var avg10Volume: Int?
-    var avg30Volume: Int?
+    var avg10Volume: Float?
+    var avg30Volume: Float?
 
-    var day50MovingAvg: Double?
-    var day200MovingAvg: Double?
+    var day50MovingAvg: Float?
+    var day200MovingAvg: Float?
     
-    var week52Change: Double?
-    var week52High: Double?
-    var week52Low: Double?
-    var week52HighSplitAdjustOnly: Double?
-    var week52LowSplitAdjustOnly: Double?
+    var week52Change: Float?
+    var week52High: Float?
+    var week52Low: Float?
+    var week52HighSplitAdjustOnly: Float?
+    var week52LowSplitAdjustOnly: Float?
     
-    var maxChangePercent: Double?
-    var ytdChangePercent: Double?
-    var day5ChangePercent: Double?
-    var day30ChangePercent: Double?
-    var month1ChangePercent: Double?
-    var month3ChangePercent: Double?
-    var month6ChangePercent: Double?
-    var year1ChangePercent: Double?
-    var year2ChangePercent: Double?
-    var year5ChangePercent: Double?
+    var maxChangePercent: Float?
+    var ytdChangePercent: Float?
+    var day5ChangePercent: Float?
+    var day30ChangePercent: Float?
+    var month1ChangePercent: Float?
+    var month3ChangePercent: Float?
+    var month6ChangePercent: Float?
+    var year1ChangePercent: Float?
+    var year2ChangePercent: Float?
+    var year5ChangePercent: Float?
     
     var exDividendDate: String?
     var nextDividendDate: String?

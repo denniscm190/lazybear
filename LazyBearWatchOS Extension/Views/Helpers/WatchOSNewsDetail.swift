@@ -32,7 +32,7 @@ struct WatchOSNewsDetail_Previews: PreviewProvider {
     static var previews: some View {
         WatchOSNewsDetail(
             new: LatestNewsModel(
-                    datetime: 1621037430000,
+                    datetime: 16210374,
                     headline: "Chaos Monkeys' author calls Apple's statement on his departure defamatory",
                     image: "https://cloud.iexapis.com/v1/news/image/99abeb99-6d9e-47c8-ae7b-53404eacccec",
                     source: "Investing.com",

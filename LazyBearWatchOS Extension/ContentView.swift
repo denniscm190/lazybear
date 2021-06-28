@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            WatchOSProfileView()
+        NavigationView {
+            VStack {
+                WatchOSProfileView()
+            }
+            .navigationTitle("Lazybear")
         }
-        .navigationTitle("Lazybear")
     }
 }
 

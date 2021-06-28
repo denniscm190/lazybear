@@ -48,25 +48,25 @@ struct ContentView: View {
      3) Prepare haptics
      */
     private func onAppear() {
-        // Create watchlist
-        if watchlistCompanies.isEmpty {
-            let defaultCompanies: [DefaultCompanyModel] = parseJSON("DefaultCompanies.json")
-            for defaultCompany in defaultCompanies {
-                let watchlistCompany = WatchlistCompany(context: moc)
-                watchlistCompany.name = defaultCompany.name
-                watchlistCompany.symbol = defaultCompany.symbol
-                watchlistCompany.watchlistName = "Default watchlist"
-            }
-            
-            do {
-                try moc.save()
-                print("Default watchlist created")
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
+        // MARK: - Create Watchlist
+//        if watchlistCompanies.isEmpty {
+//            let defaultCompanies: [DefaultCompanyModel] = parseJSON("DefaultCompanies.json")
+//            for defaultCompany in defaultCompanies {
+//                let watchlistCompany = WatchlistCompany(context: moc)
+//                watchlistCompany.name = defaultCompany.name
+//                watchlistCompany.symbol = defaultCompany.symbol
+//                watchlistCompany.watchlistName = "Default watchlist"
+//            }
+//
+//            do {
+//                try moc.save()
+//                print("Default watchlist created")
+//            } catch {
+//                print(error.localizedDescription)
+//            }
+//        }
         
-        // Show WelcomeView if is the first time that the app is opened
+        // MARK: - Show WelcomeView if is the first time that the app is opened
 //        let defaults = UserDefaults.standard
 //
 //        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "IsAppAlreadyLaunchedOnce") {
@@ -74,7 +74,7 @@ struct ContentView: View {
 //            self.showWelcome = true
 //        }
         
-        // Prepare haptics
+        // MARK: - Prepare Haptics
 //        hapticsManager.prepareHaptics()
     }
 }

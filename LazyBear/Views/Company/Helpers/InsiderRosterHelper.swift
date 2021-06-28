@@ -22,7 +22,7 @@ struct InsiderRosterHelper: View {
                                 .navigationTitle("Top Insiders")
                 ) {
                     Text("See all")
-                        .accentColor(Color(.systemBlue))
+                        .accentColor(Color.blue)
                 }
             }
             .padding(.bottom)

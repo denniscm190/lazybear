@@ -14,6 +14,6 @@ struct InsiderTransactionModel: Codable, Hashable {
     var reportedTitle: String?
     var transactionCode: String
     var transactionPrice: Float?
-    var transactionShares: Int?
+    var transactionShares: Float?
     var transactionValue: Float?
 }

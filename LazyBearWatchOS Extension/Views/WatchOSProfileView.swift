@@ -15,17 +15,16 @@ struct WatchOSProfileView: View {
     
     var body: some View {
         if profile.showView {
-            NavigationView {
-                ScrollView {
-                    VStack {
-                        if let companies = profile.data.quotes {
-                            ForEach(companies, id: \.self) { company in
-                                NavigationLink(destination: WatchOSCompanyView(symbol: company.symbol)
-                                                .navigationTitle(company.companyName.capitalized)
-                                ) {
-                                    WatchOSCompanyRow(company: company)
-                                }
+            ScrollView {
+                VStack {
+                    if let companies = profile.data.quotes {
+                        ForEach(companies, id: \.self) { company in
+                            NavigationLink(destination: WatchOSCompanyView(symbol: company.symbol)
+                                            .navigationTitle(company.companyName.capitalized)
+                            ) {
+                                WatchOSCompanyRow(company: company)
                             }
+                            .buttonStyle(PlainButtonStyle())
                         }
                     }
                 }
@@ -50,7 +49,6 @@ struct WatchOSProfileView: View {
         switch requestType {
         case .initial:
             let url = "https://api.lazybear.app/profile/type=initial/symbols=\(symbolsString)"
-            print(watchlistCompanies)
             profile.request(url, .initial)
             
         default:

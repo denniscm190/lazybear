@@ -113,11 +113,9 @@
 		95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5D266E855800C384A1 /* GetDateComponents.swift */; };
 		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
 		95CF46A32688BC0B0028C5A2 /* WatchOSCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46A22688BC0B0028C5A2 /* WatchOSCompanyView.swift */; };
-		95CF46A82688C60D0028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46A72688C60D0028C5A2 /* StockCharts */; };
 		95CF46A92688C74C0028C5A2 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF8267F59A0003B0A59 /* Company.swift */; };
 		95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
 		95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */; };
-		95CF46B22688C9370028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46B12688C9370028C5A2 /* StockCharts */; };
 		95CF46B72688F89B0028C5A2 /* WatchOSChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B62688F89B0028C5A2 /* WatchOSChartHelper.swift */; };
 		95CF46B92688F8A60028C5A2 /* WatchOSNewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */; };
 		95CF46C32689165F0028C5A2 /* WatchOSNewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */; };
@@ -130,6 +128,9 @@
 		95CF46DC2689C7930028C5A2 /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
 		95CF46DD2689C7960028C5A2 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
 		95CF46DF2689D72E0028C5A2 /* ComplicationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */; };
+		95CF46E22689E1790028C5A2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CF46E12689E1790028C5A2 /* CloudKit.framework */; };
+		95CF46EC2689F1B70028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46EB2689F1B70028C5A2 /* StockCharts */; };
+		95CF46EE2689F1C00028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46ED2689F1C00028C5A2 /* StockCharts */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */; };
@@ -325,6 +326,8 @@
 		95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsRow.swift; sourceTree = "<group>"; };
 		95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsDetail.swift; sourceTree = "<group>"; };
 		95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationViews.swift; sourceTree = "<group>"; };
+		95CF46E02689E1540028C5A2 /* LazyBearWatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LazyBearWatchOS Extension.entitlements"; sourceTree = "<group>"; };
+		95CF46E12689E1790028C5A2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
 		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHelper.swift; sourceTree = "<group>"; };
@@ -354,8 +357,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CF46B22688C9370028C5A2 /* StockCharts in Frameworks */,
+				95CF46E22689E1790028C5A2 /* CloudKit.framework in Frameworks */,
 				95BEA1AC268778E500BF18AB /* Alamofire in Frameworks */,
+				95CF46EE2689F1C00028C5A2 /* StockCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +384,7 @@
 				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
 				95BEA1A626876DE100BF18AB /* Alamofire in Frameworks */,
 				950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */,
-				95CF46A82688C60D0028C5A2 /* StockCharts in Frameworks */,
+				95CF46EC2689F1B70028C5A2 /* StockCharts in Frameworks */,
 				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
 				950B6F3D267643460029E447 /* Purchases in Frameworks */,
 				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
@@ -466,6 +470,7 @@
 		952457E2267E339C00D5BBCB /* LazyBearWatchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
+				95CF46E02689E1540028C5A2 /* LazyBearWatchOS Extension.entitlements */,
 				952457E3267E339C00D5BBCB /* LazyBearApp.swift */,
 				952457E5267E339C00D5BBCB /* ContentView.swift */,
 				952457E7267E339C00D5BBCB /* NotificationController.swift */,
@@ -640,6 +645,7 @@
 		958A735025E0170900FD7ECA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				95CF46E12689E1790028C5A2 /* CloudKit.framework */,
 				950B6F3E267643640029E447 /* StoreKit.framework */,
 				958A735125E0170900FD7ECA /* CloudKit.framework */,
 			);
@@ -845,7 +851,7 @@
 			name = "LazyBearWatchOS Extension";
 			packageProductDependencies = (
 				95BEA1AB268778E500BF18AB /* Alamofire */,
-				95CF46B12688C9370028C5A2 /* StockCharts */,
+				95CF46ED2689F1C00028C5A2 /* StockCharts */,
 			);
 			productName = "LazyBearWatchOS Extension";
 			productReference = 952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */;
@@ -907,7 +913,7 @@
 				95A4B932263E9F810056F036 /* Introspect */,
 				950B6F3C267643460029E447 /* Purchases */,
 				95BEA1A526876DE100BF18AB /* Alamofire */,
-				95CF46A72688C60D0028C5A2 /* StockCharts */,
+				95CF46EB2689F1B70028C5A2 /* StockCharts */,
 			);
 			productName = LazyBear;
 			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
@@ -963,7 +969,7 @@
 				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
 				950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 				95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */,
-				95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */,
+				95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */,
 			);
 			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
 			projectDirPath = "";
@@ -1357,6 +1363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "LazyBearWatchOS Extension/LazyBearWatchOS Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
@@ -1383,6 +1390,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "LazyBearWatchOS Extension/LazyBearWatchOS Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
@@ -1771,12 +1779,12 @@
 				minimumVersion = 5.4.3;
 			};
 		};
-		95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */ = {
+		95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.6;
+				minimumVersion = 1.2.7;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1807,14 +1815,14 @@
 			package = 95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		95CF46A72688C60D0028C5A2 /* StockCharts */ = {
+		95CF46EB2689F1B70028C5A2 /* StockCharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
+			package = 95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
 			productName = StockCharts;
 		};
-		95CF46B12688C9370028C5A2 /* StockCharts */ = {
+		95CF46ED2689F1C00028C5A2 /* StockCharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 95CF46A62688C60D0028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
+			package = 95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
 			productName = StockCharts;
 		};
 /* End XCSwiftPackageProductDependency section */

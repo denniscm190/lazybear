@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LatestNewsModel: Codable, Hashable {
-    var datetime: Int
+    var datetime: Int64
     var headline: String
     var image: String
     var source: String

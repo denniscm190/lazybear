@@ -24,7 +24,7 @@ struct InsiderTransactionsHelper: View {
                                 .navigationBarTitleDisplayMode(.large)
                 ) {
                     Text("See all")
-                        .accentColor(Color(.systemBlue))
+                        .accentColor(Color.blue)
                 }
             }
             .padding(.bottom)

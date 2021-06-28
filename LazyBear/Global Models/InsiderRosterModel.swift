@@ -9,6 +9,6 @@ import SwiftUI
 
 struct InsiderRosterModel: Codable, Hashable {
     var entityName: String
-    var position: Int?
-    var reportDate: Int
+    var position: Float?
+    var reportDate: Int64
 }

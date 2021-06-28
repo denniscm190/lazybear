@@ -23,7 +23,7 @@ struct NewsHelper: View {
                                 .navigationTitle("Latest news")
                 ) {
                     Text("See all")
-                        .accentColor(Color(.systemBlue))
+                        .accentColor(Color.blue)
                 }
             }
             .padding(.bottom)
