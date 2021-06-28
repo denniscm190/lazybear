@@ -79,8 +79,8 @@
 		9576BFEF26810719002BCAC6 /* InsiderRosterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */; };
 		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
 		9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
-		9595DC342682849E00DC8104 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC332682849E00DC8104 /* HomeView.swift */; };
-		9595DC36268284B100DC8104 /* CompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC35268284B100DC8104 /* CompanyRow.swift */; };
+		9595DC342682849E00DC8104 /* WatchOSProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC332682849E00DC8104 /* WatchOSProfileView.swift */; };
+		9595DC36268284B100DC8104 /* WatchOSCompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC35268284B100DC8104 /* WatchOSCompanyRow.swift */; };
 		9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D44267A02FC0055C6DE /* WatchlistCompany+CoreDataClass.swift */; };
 		9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D45267A02FC0055C6DE /* WatchlistCompany+CoreDataProperties.swift */; };
 		95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
@@ -112,22 +112,23 @@
 		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
 		95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5D266E855800C384A1 /* GetDateComponents.swift */; };
 		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
-		95CF46A32688BC0B0028C5A2 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46A22688BC0B0028C5A2 /* CompanyView.swift */; };
+		95CF46A32688BC0B0028C5A2 /* WatchOSCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46A22688BC0B0028C5A2 /* WatchOSCompanyView.swift */; };
 		95CF46A82688C60D0028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46A72688C60D0028C5A2 /* StockCharts */; };
 		95CF46A92688C74C0028C5A2 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF8267F59A0003B0A59 /* Company.swift */; };
-		95CF46AA2688C7590028C5A2 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF6267F5974003B0A59 /* CompanyResponse.swift */; };
-		95CF46AB2688C7770028C5A2 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
 		95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
 		95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */; };
-		95CF46AE2688C7990028C5A2 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
-		95CF46AF2688C7A60028C5A2 /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
-		95CF46B02688C7B00028C5A2 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
 		95CF46B22688C9370028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46B12688C9370028C5A2 /* StockCharts */; };
-		95CF46B72688F89B0028C5A2 /* StockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B62688F89B0028C5A2 /* StockView.swift */; };
-		95CF46B92688F8A60028C5A2 /* LatestNewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B82688F8A60028C5A2 /* LatestNewsView.swift */; };
-		95CF46BD2688F8C10028C5A2 /* KeyStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46BC2688F8C10028C5A2 /* KeyStatsView.swift */; };
-		95CF46BF2688F8CF0028C5A2 /* TopInsidersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46BE2688F8CF0028C5A2 /* TopInsidersView.swift */; };
-		95CF46C12688F8DC0028C5A2 /* InsiderTransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46C02688F8DC0028C5A2 /* InsiderTransactionsView.swift */; };
+		95CF46B72688F89B0028C5A2 /* WatchOSChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B62688F89B0028C5A2 /* WatchOSChartHelper.swift */; };
+		95CF46B92688F8A60028C5A2 /* WatchOSNewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */; };
+		95CF46C32689165F0028C5A2 /* WatchOSNewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */; };
+		95CF46C4268916960028C5A2 /* ConvertEpoch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952045142610C7C600A76362 /* ConvertEpoch.swift */; };
+		95CF46C6268919E40028C5A2 /* WatchOSNewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */; };
+		95CF46CD26891E180028C5A2 /* DisplayWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AF0FF62671320F0049C4AB /* DisplayWords.json */; };
+		95CF46D92689C7540028C5A2 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF6267F5974003B0A59 /* CompanyResponse.swift */; };
+		95CF46DA2689C77C0028C5A2 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
+		95CF46DB2689C78D0028C5A2 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
+		95CF46DC2689C7930028C5A2 /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
+		95CF46DD2689C7960028C5A2 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
 		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
 		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
 		95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */; };
@@ -295,8 +296,8 @@
 		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
 		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPricesModel.swift; sourceTree = "<group>"; };
-		9595DC332682849E00DC8104 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		9595DC35268284B100DC8104 /* CompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyRow.swift; sourceTree = "<group>"; };
+		9595DC332682849E00DC8104 /* WatchOSProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSProfileView.swift; sourceTree = "<group>"; };
+		9595DC35268284B100DC8104 /* WatchOSCompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSCompanyRow.swift; sourceTree = "<group>"; };
 		95A07F6126305A9B009865AA /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
 		95A07F6B26305AC6009865AA /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
 		95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
@@ -317,12 +318,11 @@
 		95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionModel.swift; sourceTree = "<group>"; };
 		95CCFB5D266E855800C384A1 /* GetDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateComponents.swift; sourceTree = "<group>"; };
 		95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertStringToDate.swift; sourceTree = "<group>"; };
-		95CF46A22688BC0B0028C5A2 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
-		95CF46B62688F89B0028C5A2 /* StockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockView.swift; sourceTree = "<group>"; };
-		95CF46B82688F8A60028C5A2 /* LatestNewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsView.swift; sourceTree = "<group>"; };
-		95CF46BC2688F8C10028C5A2 /* KeyStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsView.swift; sourceTree = "<group>"; };
-		95CF46BE2688F8CF0028C5A2 /* TopInsidersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopInsidersView.swift; sourceTree = "<group>"; };
-		95CF46C02688F8DC0028C5A2 /* InsiderTransactionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionsView.swift; sourceTree = "<group>"; };
+		95CF46A22688BC0B0028C5A2 /* WatchOSCompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSCompanyView.swift; sourceTree = "<group>"; };
+		95CF46B62688F89B0028C5A2 /* WatchOSChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSChartHelper.swift; sourceTree = "<group>"; };
+		95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsList.swift; sourceTree = "<group>"; };
+		95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsRow.swift; sourceTree = "<group>"; };
+		95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsDetail.swift; sourceTree = "<group>"; };
 		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
 		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHelper.swift; sourceTree = "<group>"; };
@@ -474,6 +474,7 @@
 				952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */,
 				9595DC2E2682840C00DC8104 /* Views */,
 				952457EF267E339C00D5BBCB /* Preview Content */,
+				95CF46C726891B760028C5A2 /* Tests */,
 			);
 			path = "LazyBearWatchOS Extension";
 			sourceTree = "<group>";
@@ -645,30 +646,21 @@
 		9595DC2E2682840C00DC8104 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				9595DC312682845500DC8104 /* Home */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9595DC312682845500DC8104 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				9595DC332682849E00DC8104 /* HomeView.swift */,
-				95CF46A22688BC0B0028C5A2 /* CompanyView.swift */,
-				95CF46B62688F89B0028C5A2 /* StockView.swift */,
-				95CF46B82688F8A60028C5A2 /* LatestNewsView.swift */,
-				95CF46BC2688F8C10028C5A2 /* KeyStatsView.swift */,
-				95CF46BE2688F8CF0028C5A2 /* TopInsidersView.swift */,
-				95CF46C02688F8DC0028C5A2 /* InsiderTransactionsView.swift */,
+				9595DC332682849E00DC8104 /* WatchOSProfileView.swift */,
+				95CF46A22688BC0B0028C5A2 /* WatchOSCompanyView.swift */,
 				9595DC322682848B00DC8104 /* Helpers */,
 			);
-			path = Home;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9595DC322682848B00DC8104 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				9595DC35268284B100DC8104 /* CompanyRow.swift */,
+				9595DC35268284B100DC8104 /* WatchOSCompanyRow.swift */,
+				95CF46B62688F89B0028C5A2 /* WatchOSChartHelper.swift */,
+				95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */,
+				95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */,
+				95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -719,6 +711,13 @@
 				95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		95CF46C726891B760028C5A2 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		95E31C0B26472C8500106B98 /* Company */ = {
@@ -1006,6 +1005,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				952457F1267E339C00D5BBCB /* Preview Assets.xcassets in Resources */,
+				95CF46CD26891E180028C5A2 /* DisplayWords.json in Resources */,
 				952457EE267E339C00D5BBCB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1059,35 +1059,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CF46B92688F8A60028C5A2 /* LatestNewsView.swift in Sources */,
-				95CF46B72688F89B0028C5A2 /* StockView.swift in Sources */,
-				95CF46BD2688F8C10028C5A2 /* KeyStatsView.swift in Sources */,
+				95CF46B92688F8A60028C5A2 /* WatchOSNewsList.swift in Sources */,
+				95CF46DD2689C7960028C5A2 /* InsiderTransactionModel.swift in Sources */,
+				95CF46DB2689C78D0028C5A2 /* KeyStatsModel.swift in Sources */,
+				95CF46B72688F89B0028C5A2 /* WatchOSChartHelper.swift in Sources */,
 				952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */,
-				95CF46C12688F8DC0028C5A2 /* InsiderTransactionsView.swift in Sources */,
 				95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */,
-				95CF46AA2688C7590028C5A2 /* CompanyResponse.swift in Sources */,
 				95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */,
-				95CF46AB2688C7770028C5A2 /* HistoricalPricesModel.swift in Sources */,
+				95CF46DA2689C77C0028C5A2 /* HistoricalPricesModel.swift in Sources */,
 				95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */,
 				95BEA1B326877BAC00BF18AB /* Persistence.swift in Sources */,
 				95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */,
-				95CF46AF2688C7A60028C5A2 /* InsiderRosterModel.swift in Sources */,
+				95CF46C32689165F0028C5A2 /* WatchOSNewsRow.swift in Sources */,
 				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
-				95CF46AE2688C7990028C5A2 /* KeyStatsModel.swift in Sources */,
 				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
 				95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */,
-				95CF46B02688C7B00028C5A2 /* InsiderTransactionModel.swift in Sources */,
+				95CF46C4268916960028C5A2 /* ConvertEpoch.swift in Sources */,
 				95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */,
-				9595DC342682849E00DC8104 /* HomeView.swift in Sources */,
-				95CF46BF2688F8CF0028C5A2 /* TopInsidersView.swift in Sources */,
+				9595DC342682849E00DC8104 /* WatchOSProfileView.swift in Sources */,
 				95BEA1B426877BBA00BF18AB /* LazyBear.xcdatamodeld in Sources */,
 				9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
 				95CF46A92688C74C0028C5A2 /* Company.swift in Sources */,
+				95CF46C6268919E40028C5A2 /* WatchOSNewsDetail.swift in Sources */,
 				9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */,
-				95CF46A32688BC0B0028C5A2 /* CompanyView.swift in Sources */,
-				9595DC36268284B100DC8104 /* CompanyRow.swift in Sources */,
+				95CF46A32688BC0B0028C5A2 /* WatchOSCompanyView.swift in Sources */,
+				95CF46DC2689C7930028C5A2 /* InsiderRosterModel.swift in Sources */,
+				95CF46D92689C7540028C5A2 /* CompanyResponse.swift in Sources */,
+				9595DC36268284B100DC8104 /* WatchOSCompanyRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

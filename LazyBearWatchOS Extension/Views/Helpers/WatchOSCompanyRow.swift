@@ -1,5 +1,5 @@
 //
-//  CompanyRow.swift
+//  WatchOSCompanyRow.swift
 //  LazyBearWatchOS Extension
 //
 //  Created by Dennis Concepción Martín on 22/6/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CompanyRow: View {
+struct WatchOSCompanyRow: View {
     var company: CompanyModel
     
     var body: some View {
@@ -41,9 +41,9 @@ struct CompanyRow: View {
     }
 }
 
-struct CompanyRow_Previews: PreviewProvider {
+struct WatchOSCompanyRow_Previews: PreviewProvider {
     static var previews: some View {
-        CompanyRow(company:
+        WatchOSCompanyRow(company:
             CompanyModel(
                 symbol: "aapl",
                 companyName: "Apple Inc",

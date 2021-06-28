@@ -17,7 +17,7 @@ func convertEpoch(_ miliseconds: Int, _ interval: Bool) -> String {
     let convertedDate = Date(timeIntervalSince1970: TimeInterval(miliseconds/1000))
     
     let formatter = DateComponentsFormatter()
-    formatter.unitsStyle = .short
+    formatter.unitsStyle = .abbreviated
     
     let dateFormatter = DateFormatter()
     dateFormatter.dateStyle = .medium

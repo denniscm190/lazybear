@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  WatchOSProfileView.swift
 //  LazyBearWatchOS Extension
 //
 //  Created by Dennis Concepción Martín on 22/6/21.
@@ -8,11 +8,9 @@
 import SwiftUI
 import CoreData
 
-struct HomeView: View {
+struct WatchOSProfileView: View {
     @ObservedObject var profile = Profile()
-
     @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: []) var watchlistCompanies: FetchedResults<WatchlistCompany>
-    
     @State private var timer = Timer.publish(every: 10, on: .main, in: .common).autoconnect()  /// Set recurrent price request
     
     var body: some View {
@@ -22,10 +20,10 @@ struct HomeView: View {
                     VStack {
                         if let companies = profile.data.quotes {
                             ForEach(companies, id: \.self) { company in
-                                NavigationLink(destination: CompanyView(symbol: company.symbol, name: company.companyName)
+                                NavigationLink(destination: WatchOSCompanyView(symbol: company.symbol)
                                                 .navigationTitle(company.companyName.capitalized)
                                 ) {
-                                    CompanyRow(company: company)
+                                    WatchOSCompanyRow(company: company)
                                 }
                             }
                         }
@@ -62,8 +60,8 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
+struct WatchOSProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        WatchOSProfileView()
     }
 }
