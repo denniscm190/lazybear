@@ -36,7 +36,7 @@ struct WatchOSCompanyView: View {
         } else {
             ProgressView()
                 .onAppear {
-                    company.request("https://api.lazybear.app/company/symbol=\(symbol)/type=initial/range=5d", .initial)
+                    company.request("https://api.lazybear.app/company/symbol=\(symbol)/type=initial/range=5d/watch=true", .initial)
                 }
         }
     }

@@ -8,9 +8,10 @@
 import SwiftUI
 import ClockKit
 
-// CIRCULAR SMALL COMPLICATIONS
-// MARK: - Graphic
-struct ComplicationGraphicCircular: View {
+// MARK: - Graphic Rectangular Full View Chart
+struct ComplicationGraphicRectangularFullViewChart: View {
+    @State var home: HomeResponse
+    
     var body: some View {
         Text("Hello")
     }
@@ -21,9 +22,8 @@ struct ComplicationGraphicCircular: View {
 struct ComplicationViews_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CLKComplicationTemplateGraphicCircularView(ComplicationGraphicCircular())
-            .previewContext()
-            
+            CLKComplicationTemplateGraphicRectangularFullView(ComplicationGraphicRectangularFullViewChart())
+                .previewContext()
         }
     }
 }

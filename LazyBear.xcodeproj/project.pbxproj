@@ -57,6 +57,9 @@
 		9547482226821F8800D6A966 /* InsiderTransactionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547482126821F8800D6A966 /* InsiderTransactionsRow.swift */; };
 		9547482426821F9400D6A966 /* InsiderTransactionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547482326821F9400D6A966 /* InsiderTransactionsList.swift */; };
 		954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 954D7EC1260BE70C00A13C50 /* SwiftlySearch */; };
+		954F9C5F268C79EA0022ED60 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
+		954F9C60268C7A000022ED60 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
+		954F9C61268C7A1C0022ED60 /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */; };
 		9550443A26111B2B000E0BCB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550443926111B2B000E0BCB /* HomeView.swift */; };
 		9550444326111E7A000E0BCB /* SectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444226111E7A000E0BCB /* SectorRow.swift */; };
 		9550444626111EE5000E0BCB /* SectorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444526111EE5000E0BCB /* SectorItem.swift */; };
@@ -482,7 +485,6 @@
 				952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */,
 				9595DC2E2682840C00DC8104 /* Views */,
 				952457EF267E339C00D5BBCB /* Preview Content */,
-				95CF46C726891B760028C5A2 /* Tests */,
 			);
 			path = "LazyBearWatchOS Extension";
 			sourceTree = "<group>";
@@ -616,6 +618,7 @@
 				95672B9725DDA54700DCBE4A /* Persistence.swift */,
 				953C96DD2688925E0096734C /* HapticsManager.swift */,
 				95B1874925DDAC4D0068A364 /* Views */,
+				957B6726268D055C005DFBF6 /* NEW VIEWS */,
 				952045132610C7A200A76362 /* Global functions */,
 				954D7E9D260BBA5200A13C50 /* Global Models */,
 				9523ED402615BD93006D3D6F /* Resources */,
@@ -631,6 +634,13 @@
 				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		957B6726268D055C005DFBF6 /* NEW VIEWS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "NEW VIEWS";
 			sourceTree = "<group>";
 		};
 		95893DC72613C410003698C5 /* Networking */ = {
@@ -720,13 +730,6 @@
 				95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		95CF46C726891B760028C5A2 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		95E31C0B26472C8500106B98 /* Company */ = {
@@ -1078,6 +1081,7 @@
 				95CF46DA2689C77C0028C5A2 /* HistoricalPricesModel.swift in Sources */,
 				95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */,
 				95BEA1B326877BAC00BF18AB /* Persistence.swift in Sources */,
+				954F9C60268C7A000022ED60 /* CurrencyModel.swift in Sources */,
 				95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */,
 				95CF46C32689165F0028C5A2 /* WatchOSNewsRow.swift in Sources */,
 				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
@@ -1090,7 +1094,9 @@
 				95BEA1B426877BBA00BF18AB /* LazyBear.xcdatamodeld in Sources */,
 				9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
 				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
+				954F9C61268C7A1C0022ED60 /* SectorPerformanceModel.swift in Sources */,
 				95CF46A92688C74C0028C5A2 /* Company.swift in Sources */,
+				954F9C5F268C79EA0022ED60 /* HomeResponse.swift in Sources */,
 				95CF46C6268919E40028C5A2 /* WatchOSNewsDetail.swift in Sources */,
 				9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */,
 				952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */,
