@@ -3,10 +3,31 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		956CAF8426A2D3940071A75D /* CompanyQuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAF8326A2D3940071A75D /* CompanyQuoteModel.swift */; };
+		956CAF8726A2D43D0071A75D /* WatchlistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAF8626A2D43D0071A75D /* WatchlistRow.swift */; };
+		956CAF8A26A2D7500071A75D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 956CAF8926A2D7500071A75D /* Alamofire */; };
+		956CAF9926A2DD090071A75D /* Watchlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAF9826A2DD080071A75D /* Watchlist.swift */; };
+		956CAF9F26A2DFD30071A75D /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAF9E26A2DFD30071A75D /* Search.swift */; };
+		956CAFA126A2E0690071A75D /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFA026A2E0690071A75D /* SearchBar.swift */; };
+		956CAFA326A2E1A60071A75D /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFA226A2E1A60071A75D /* SearchModel.swift */; };
+		956CAFA526A2E6EC0071A75D /* SearchRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFA426A2E6EC0071A75D /* SearchRow.swift */; };
+		956CAFA726A2F43A0071A75D /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFA626A2F43A0071A75D /* CompanyView.swift */; };
+		956CAFB026A2F7490071A75D /* CompanyInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFAF26A2F7490071A75D /* CompanyInfoModel.swift */; };
+		956CAFB226A2FCF70071A75D /* StockSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFB126A2FCF70071A75D /* StockSection.swift */; };
+		956CAFB426A3004A0071A75D /* AboutSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFB326A3004A0071A75D /* AboutSection.swift */; };
+		956CAFB726A320100071A75D /* Company+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFB526A320100071A75D /* Company+CoreDataClass.swift */; };
+		956CAFB826A320100071A75D /* Company+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFB626A320100071A75D /* Company+CoreDataProperties.swift */; };
+		956CAFBA26A321D40071A75D /* ConditionallyWrapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFB926A321D40071A75D /* ConditionallyWrapView.swift */; };
+		956CAFBC26A322250071A75D /* ContentViewPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFBB26A322250071A75D /* ContentViewPad.swift */; };
+		956CAFBE26A3226B0071A75D /* Sidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFBD26A3226B0071A75D /* Sidebar.swift */; };
+		956CAFC626A33BC40071A75D /* UsStatesCoordinates.json in Resources */ = {isa = PBXBuildFile; fileRef = 956CAFC526A33BC40071A75D /* UsStatesCoordinates.json */; };
+		956CAFC826A33C520071A75D /* UsStatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFC726A33C520071A75D /* UsStatesModel.swift */; };
+		956CAFCA26A33E660071A75D /* MapSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956CAFC926A33E660071A75D /* MapSection.swift */; };
+		956CAFCE26A340C60071A75D /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 956CAFCD26A340C60071A75D /* CloudKit.framework */; };
 		95F7C16126A2CCA2002F08DB /* lazybearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C16026A2CCA2002F08DB /* lazybearApp.swift */; };
 		95F7C16326A2CCA2002F08DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C16226A2CCA2002F08DB /* ContentView.swift */; };
 		95F7C16526A2CCA2002F08DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F7C16426A2CCA2002F08DB /* Assets.xcassets */; };
@@ -35,6 +56,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		956CAF8326A2D3940071A75D /* CompanyQuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyQuoteModel.swift; sourceTree = "<group>"; };
+		956CAF8626A2D43D0071A75D /* WatchlistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistRow.swift; sourceTree = "<group>"; };
+		956CAF9826A2DD080071A75D /* Watchlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Watchlist.swift; sourceTree = "<group>"; };
+		956CAF9E26A2DFD30071A75D /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		956CAFA026A2E0690071A75D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		956CAFA226A2E1A60071A75D /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		956CAFA426A2E6EC0071A75D /* SearchRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRow.swift; sourceTree = "<group>"; };
+		956CAFA626A2F43A0071A75D /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
+		956CAFAF26A2F7490071A75D /* CompanyInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyInfoModel.swift; sourceTree = "<group>"; };
+		956CAFB126A2FCF70071A75D /* StockSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSection.swift; sourceTree = "<group>"; };
+		956CAFB326A3004A0071A75D /* AboutSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSection.swift; sourceTree = "<group>"; };
+		956CAFB526A320100071A75D /* Company+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataClass.swift"; sourceTree = "<group>"; };
+		956CAFB626A320100071A75D /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		956CAFB926A321D40071A75D /* ConditionallyWrapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionallyWrapView.swift; sourceTree = "<group>"; };
+		956CAFBB26A322250071A75D /* ContentViewPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewPad.swift; sourceTree = "<group>"; };
+		956CAFBD26A3226B0071A75D /* Sidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sidebar.swift; sourceTree = "<group>"; };
+		956CAFC526A33BC40071A75D /* UsStatesCoordinates.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = UsStatesCoordinates.json; sourceTree = "<group>"; };
+		956CAFC726A33C520071A75D /* UsStatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsStatesModel.swift; sourceTree = "<group>"; };
+		956CAFC926A33E660071A75D /* MapSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapSection.swift; sourceTree = "<group>"; };
+		956CAFCB26A340B10071A75D /* lazybear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lazybear.entitlements; sourceTree = "<group>"; };
+		956CAFCD26A340C60071A75D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		95F7C15D26A2CCA2002F08DB /* lazybear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazybear.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95F7C16026A2CCA2002F08DB /* lazybearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazybearApp.swift; sourceTree = "<group>"; };
 		95F7C16226A2CCA2002F08DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +98,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956CAFCE26A340C60071A75D /* CloudKit.framework in Frameworks */,
+				956CAF8A26A2D7500071A75D /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +120,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		956CAF8226A2D3870071A75D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				956CAFB526A320100071A75D /* Company+CoreDataClass.swift */,
+				956CAFB626A320100071A75D /* Company+CoreDataProperties.swift */,
+				956CAF8326A2D3940071A75D /* CompanyQuoteModel.swift */,
+				956CAFA226A2E1A60071A75D /* SearchModel.swift */,
+				956CAFAF26A2F7490071A75D /* CompanyInfoModel.swift */,
+				956CAFC726A33C520071A75D /* UsStatesModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		956CAF8526A2D4300071A75D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				956CAF8626A2D43D0071A75D /* WatchlistRow.swift */,
+				956CAFA026A2E0690071A75D /* SearchBar.swift */,
+				956CAFA426A2E6EC0071A75D /* SearchRow.swift */,
+				956CAFC926A33E660071A75D /* MapSection.swift */,
+				956CAFB126A2FCF70071A75D /* StockSection.swift */,
+				956CAFB326A3004A0071A75D /* AboutSection.swift */,
+				956CAFB926A321D40071A75D /* ConditionallyWrapView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		956CAFBF26A32D9E0071A75D /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		956CAFC426A33BA10071A75D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				956CAFC526A33BC40071A75D /* UsStatesCoordinates.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		956CAFCC26A340C60071A75D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				956CAFCD26A340C60071A75D /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		95F7C15426A2CCA2002F08DB = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +177,7 @@
 				95F7C17626A2CCA3002F08DB /* lazybearTests */,
 				95F7C18126A2CCA3002F08DB /* lazybearUITests */,
 				95F7C15E26A2CCA2002F08DB /* Products */,
+				956CAFCC26A340C60071A75D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +194,22 @@
 		95F7C15F26A2CCA2002F08DB /* lazybear */ = {
 			isa = PBXGroup;
 			children = (
+				956CAFCB26A340B10071A75D /* lazybear.entitlements */,
 				95F7C16026A2CCA2002F08DB /* lazybearApp.swift */,
 				95F7C16226A2CCA2002F08DB /* ContentView.swift */,
+				956CAFBB26A322250071A75D /* ContentViewPad.swift */,
+				956CAFBD26A3226B0071A75D /* Sidebar.swift */,
+				956CAF9826A2DD080071A75D /* Watchlist.swift */,
+				956CAF9E26A2DFD30071A75D /* Search.swift */,
+				956CAFA626A2F43A0071A75D /* CompanyView.swift */,
 				95F7C16426A2CCA2002F08DB /* Assets.xcassets */,
 				95F7C16926A2CCA2002F08DB /* Persistence.swift */,
 				95F7C16E26A2CCA2002F08DB /* Info.plist */,
 				95F7C16B26A2CCA2002F08DB /* lazybear.xcdatamodeld */,
+				956CAF8526A2D4300071A75D /* Helpers */,
+				956CAFBF26A32D9E0071A75D /* Functions */,
+				956CAF8226A2D3870071A75D /* Models */,
+				956CAFC426A33BA10071A75D /* Resources */,
 				95F7C16626A2CCA2002F08DB /* Preview Content */,
 			);
 			path = lazybear;
@@ -152,6 +257,9 @@
 			dependencies = (
 			);
 			name = lazybear;
+			packageProductDependencies = (
+				956CAF8926A2D7500071A75D /* Alamofire */,
+			);
 			productName = lazybear;
 			productReference = 95F7C15D26A2CCA2002F08DB /* lazybear.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 95F7C15426A2CCA2002F08DB;
+			packageReferences = (
+				956CAF8826A2D7500071A75D /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 95F7C15E26A2CCA2002F08DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -239,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956CAFC626A33BC40071A75D /* UsStatesCoordinates.json in Resources */,
 				95F7C16826A2CCA2002F08DB /* Preview Assets.xcassets in Resources */,
 				95F7C16526A2CCA2002F08DB /* Assets.xcassets in Resources */,
 			);
@@ -265,10 +377,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				956CAFB026A2F7490071A75D /* CompanyInfoModel.swift in Sources */,
+				956CAFB726A320100071A75D /* Company+CoreDataClass.swift in Sources */,
+				956CAFC826A33C520071A75D /* UsStatesModel.swift in Sources */,
+				956CAF8726A2D43D0071A75D /* WatchlistRow.swift in Sources */,
 				95F7C16A26A2CCA2002F08DB /* Persistence.swift in Sources */,
+				956CAFBC26A322250071A75D /* ContentViewPad.swift in Sources */,
+				956CAFA326A2E1A60071A75D /* SearchModel.swift in Sources */,
+				956CAFB826A320100071A75D /* Company+CoreDataProperties.swift in Sources */,
+				956CAF8426A2D3940071A75D /* CompanyQuoteModel.swift in Sources */,
 				95F7C16326A2CCA2002F08DB /* ContentView.swift in Sources */,
+				956CAFBA26A321D40071A75D /* ConditionallyWrapView.swift in Sources */,
+				956CAFBE26A3226B0071A75D /* Sidebar.swift in Sources */,
+				956CAFCA26A33E660071A75D /* MapSection.swift in Sources */,
+				956CAFA526A2E6EC0071A75D /* SearchRow.swift in Sources */,
 				95F7C16126A2CCA2002F08DB /* lazybearApp.swift in Sources */,
+				956CAFB226A2FCF70071A75D /* StockSection.swift in Sources */,
+				956CAF9F26A2DFD30071A75D /* Search.swift in Sources */,
 				95F7C16D26A2CCA2002F08DB /* lazybear.xcdatamodeld in Sources */,
+				956CAFA726A2F43A0071A75D /* CompanyView.swift in Sources */,
+				956CAFA126A2E0690071A75D /* SearchBar.swift in Sources */,
+				956CAFB426A3004A0071A75D /* AboutSection.swift in Sources */,
+				956CAF9926A2DD090071A75D /* Watchlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lazybear/lazybear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"lazybear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
@@ -447,6 +578,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = lazybear/lazybear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"lazybear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
@@ -588,6 +720,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		956CAF8826A2D7500071A75D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		956CAF8926A2D7500071A75D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 956CAF8826A2D7500071A75D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		95F7C16B26A2CCA2002F08DB /* lazybear.xcdatamodeld */ = {

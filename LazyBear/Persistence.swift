@@ -17,6 +17,12 @@ struct PersistenceController {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
         }
+        
+        for _ in 0..<10 {
+            let company = Company(context: viewContext)
+            company.symbol = "AAPL"
+            company.companyName = "Apple Inc"
+        }
         do {
             try viewContext.save()
         } catch {

@@ -13,8 +13,13 @@ struct lazybearApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            if UIDevice.current.userInterfaceIdiom == .pad {
+                ContentViewPad()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            } else {
+                ContentView()
+                    .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            }
         }
     }
 }
