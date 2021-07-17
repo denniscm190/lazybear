@@ -1,8 +1,8 @@
 //
 //  Persistence.swift
-//  LazyBear
+//  lazybear
 //
-//  Created by Dennis Concepción Martín on 17/2/21.
+//  Created by Dennis Concepción Martín on 17/07/2021.
 //
 
 import CoreData
@@ -14,15 +14,8 @@ struct PersistenceController {
         let result = PersistenceController(inMemory: true)
         let viewContext = result.container.viewContext
         for _ in 0..<10 {
-            let entity = Entity(context: viewContext)
-            entity.attribute = 1
-        }
-        
-        for _ in 0..<10 {
-            let watchlistCompany = WatchlistCompany(context: viewContext)
-            watchlistCompany.name = "Apple Inc"
-            watchlistCompany.symbol = "AAPL"
-            watchlistCompany.watchlistName = "Technologies"
+            let newItem = Item(context: viewContext)
+            newItem.timestamp = Date()
         }
         do {
             try viewContext.save()
@@ -38,8 +31,7 @@ struct PersistenceController {
     let container: NSPersistentCloudKitContainer
 
     init(inMemory: Bool = false) {
-        container = NSPersistentCloudKitContainer(name: "LazyBear")
-        container.viewContext.automaticallyMergesChangesFromParent = true  // Not sure about this
+        container = NSPersistentCloudKitContainer(name: "lazybear")
         if inMemory {
             container.persistentStoreDescriptions.first!.url = URL(fileURLWithPath: "/dev/null")
         }

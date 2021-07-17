@@ -1,93 +1,80 @@
 //
 //  ContentView.swift
-//  LazyBear
+//  lazybear
 //
-//  Created by Dennis Concepción Martín on 21/3/21.
+//  Created by Dennis Concepción Martín on 17/07/2021.
 //
 
 import SwiftUI
-import CoreHaptics
+import CoreData
 
 struct ContentView: View {
-    @State private var showWelcome = false
-    @State var selectedTab: Tab = .home
-    
-    @Environment(\.managedObjectContext) private var moc
-    @FetchRequest(entity: WatchlistCompany.entity(), sortDescriptors: []) var watchlistCompanies: FetchedResults<WatchlistCompany>
-    
+    @Environment(\.managedObjectContext) private var viewContext
+
+    @FetchRequest(
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
+        animation: .default)
+    private var items: FetchedResults<Item>
+
     var body: some View {
-        TabView(selection: $selectedTab) {
-            HomeView()
-                .tabItem {
-                    Image(systemName: "house")
-                    Text("Home")
-                }
-                .tag(Tab.home)  /// Do not remove tags. It causes an odd behaviour when showView is activated
-            SearchView()
-                .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    Text("Search")
-                }
-                .tag(Tab.search)
-            ProfileView()
-                .tabItem {
-                    Image(systemName: "person")
-                    Text("Profile")
-                }
-                .tag(Tab.profile)
+        List {
+            ForEach(items) { item in
+                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+            }
+            .onDelete(perform: deleteItems)
         }
-        .onAppear(perform: onAppear)
-        .sheet(isPresented: $showWelcome) {
-            
+        .toolbar {
+            #if os(iOS)
+            EditButton()
+            #endif
+
+            Button(action: addItem) {
+                Label("Add Item", systemImage: "plus")
+            }
         }
     }
-    
-    /*
-     1) Create default watchlist if it doesn't exits
-     2) Show WelcomeView if is the first time that the app is opened
-     3) Prepare haptics
-     */
-    private func onAppear() {
-        // MARK: - Create Watchlist
-//        if watchlistCompanies.isEmpty {
-//            let defaultCompanies: [DefaultCompanyModel] = parseJSON("DefaultCompanies.json")
-//            for defaultCompany in defaultCompanies {
-//                let watchlistCompany = WatchlistCompany(context: moc)
-//                watchlistCompany.name = defaultCompany.name
-//                watchlistCompany.symbol = defaultCompany.symbol
-//                watchlistCompany.watchlistName = "Default watchlist"
-//            }
-//
-//            do {
-//                try moc.save()
-//                print("Default watchlist created")
-//            } catch {
-//                print(error.localizedDescription)
-//            }
-//        }
-        
-        // MARK: - Show WelcomeView if is the first time that the app is opened
-//        let defaults = UserDefaults.standard
-//
-//        if let isAppAlreadyLaunchedOnce = defaults.string(forKey: "IsAppAlreadyLaunchedOnce") {
-//            print("App already launched : \(isAppAlreadyLaunchedOnce)")
-//            self.showWelcome = true
-//        }
-        
-        // MARK: - Prepare Haptics
-//        hapticsManager.prepareHaptics()
+
+    private func addItem() {
+        withAnimation {
+            let newItem = Item(context: viewContext)
+            newItem.timestamp = Date()
+
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
+    }
+
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            offsets.map { items[$0] }.forEach(viewContext.delete)
+
+            do {
+                try viewContext.save()
+            } catch {
+                // Replace this implementation with code to handle the error appropriately.
+                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+                let nsError = error as NSError
+                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+            }
+        }
     }
 }
-extension ContentView {
-    enum Tab: Hashable {
-        case home
-        case search
-        case profile
-    }
-}
+
+private let itemFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateStyle = .short
+    formatter.timeStyle = .medium
+    return formatter
+}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

@@ -3,962 +3,218 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9502BBF5267F5194003B0A59 /* CompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF4267F5194003B0A59 /* CompanyView.swift */; };
-		9502BBF7267F5974003B0A59 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF6267F5974003B0A59 /* CompanyResponse.swift */; };
-		9502BBF9267F59A0003B0A59 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF8267F59A0003B0A59 /* Company.swift */; };
-		9502BBFB267F5EE8003B0A59 /* ChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */; };
-		9502BBFD267F63F3003B0A59 /* CustomRectangleBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */; };
-		9502BBFF267F6454003B0A59 /* KeyStatsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */; };
-		9502BC01267F8771003B0A59 /* KeyStatsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BC00267F8771003B0A59 /* KeyStatsList.swift */; };
-		950B6F3D267643460029E447 /* Purchases in Frameworks */ = {isa = PBXBuildFile; productRef = 950B6F3C267643460029E447 /* Purchases */; };
-		950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 950B6F3E267643640029E447 /* StoreKit.framework */; };
-		950B6F422676454A0029E447 /* RevenueCatTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950B6F412676454A0029E447 /* RevenueCatTest.swift */; };
-		950C57132629EF9100F234FE /* LazyBearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57122629EF9100F234FE /* LazyBearTests.swift */; };
-		950C57232629EFC200F234FE /* LazyBearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950C57222629EFC200F234FE /* LazyBearUITests.swift */; };
-		950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E182618AA4900D17AD7 /* CompanyList.swift */; };
-		950D0E292618AEC800D17AD7 /* SearchedCompanyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */; };
-		95123AB826766497001BFAF3 /* CurrencySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95123AB726766497001BFAF3 /* CurrencySheet.swift */; };
-		95123ABA2676658E001BFAF3 /* StockSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95123AB92676658E001BFAF3 /* StockSheet.swift */; };
-		95123ABC2676676B001BFAF3 /* CurrencySheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95123ABB2676676B001BFAF3 /* CurrencySheetRow.swift */; };
-		95123ABE267669C6001BFAF3 /* StockSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95123ABD267669C6001BFAF3 /* StockSheetRow.swift */; };
-		95123AC026767370001BFAF3 /* StockItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95123ABF26767370001BFAF3 /* StockItem.swift */; };
-		95131D46267A03020055C6DE /* WatchlistCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D45267A02FC0055C6DE /* WatchlistCompany+CoreDataProperties.swift */; };
-		95131D47267A03020055C6DE /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D44267A02FC0055C6DE /* WatchlistCompany+CoreDataClass.swift */; };
-		95131D4B267A15490055C6DE /* WatchlistSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D4A267A15490055C6DE /* WatchlistSheet.swift */; };
-		951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951490542610BD2B00BDEEB5 /* WelcomeView.swift */; };
-		951566E72613A2B6007C0F36 /* TradingDatesSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E62613A2B6007C0F36 /* TradingDatesSheet.swift */; };
-		951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951566E92613A37C007C0F36 /* TradingDatesItem.swift */; };
-		9519BE06267E5EC3009C6015 /* ProfileStockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */; };
-		952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952045142610C7C600A76362 /* ConvertEpoch.swift */; };
-		952457D8267E339C00D5BBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952457D7267E339C00D5BBCB /* Assets.xcassets */; };
-		952457DF267E339C00D5BBCB /* LazyBearWatchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E3267E339C00D5BBCB /* LazyBearApp.swift */; };
-		952457E6267E339C00D5BBCB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E5267E339C00D5BBCB /* ContentView.swift */; };
-		952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E7267E339C00D5BBCB /* NotificationController.swift */; };
-		952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457E9267E339C00D5BBCB /* NotificationView.swift */; };
-		952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457EB267E339C00D5BBCB /* ComplicationController.swift */; };
-		952457EE267E339C00D5BBCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952457ED267E339C00D5BBCB /* Assets.xcassets */; };
-		952457F1267E339C00D5BBCB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952457F0267E339C00D5BBCB /* Preview Assets.xcassets */; };
-		952457FD267E339C00D5BBCB /* LazyBearWatchOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952457FC267E339C00D5BBCB /* LazyBearWatchOSTests.swift */; };
-		95245808267E339D00D5BBCB /* LazyBearWatchOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95245807267E339D00D5BBCB /* LazyBearWatchOSUITests.swift */; };
-		9524580C267E339D00D5BBCB /* LazyBearWatchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		9529947E2629CA3E005F0AB0 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9529947D2629CA3E005F0AB0 /* Search.swift */; };
-		952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952994812629CA46005F0AB0 /* SearchResponse.swift */; };
-		952FC0B8267C97BA001406B1 /* WatchlistSheetRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FC0B7267C97BA001406B1 /* WatchlistSheetRow.swift */; };
-		952FC0BA267C9A24001406B1 /* RenameListSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FC0B9267C9A24001406B1 /* RenameListSheet.swift */; };
-		953C96DE2688925E0096734C /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C96DD2688925E0096734C /* HapticsManager.swift */; };
-		953C96E0268898430096734C /* DefaultCompanies.json in Resources */ = {isa = PBXBuildFile; fileRef = 953C96DF268898430096734C /* DefaultCompanies.json */; };
-		953C96E2268898DC0096734C /* DefaultCompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953C96E1268898DC0096734C /* DefaultCompanyModel.swift */; };
-		9547482026821F7700D6A966 /* InsiderTransactionsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547481F26821F7700D6A966 /* InsiderTransactionsHelper.swift */; };
-		9547482226821F8800D6A966 /* InsiderTransactionsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547482126821F8800D6A966 /* InsiderTransactionsRow.swift */; };
-		9547482426821F9400D6A966 /* InsiderTransactionsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9547482326821F9400D6A966 /* InsiderTransactionsList.swift */; };
-		954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */ = {isa = PBXBuildFile; productRef = 954D7EC1260BE70C00A13C50 /* SwiftlySearch */; };
-		954F9C5F268C79EA0022ED60 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
-		954F9C60268C7A000022ED60 /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
-		954F9C61268C7A1C0022ED60 /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */; };
-		9550443A26111B2B000E0BCB /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550443926111B2B000E0BCB /* HomeView.swift */; };
-		9550444326111E7A000E0BCB /* SectorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444226111E7A000E0BCB /* SectorRow.swift */; };
-		9550444626111EE5000E0BCB /* SectorItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444526111EE5000E0BCB /* SectorItem.swift */; };
-		9550444926111FC9000E0BCB /* StockRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9550444826111FC9000E0BCB /* StockRow.swift */; };
-		955E73392623568F005652FF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E73382623568F005652FF /* Home.swift */; };
-		955E733C262356F3005652FF /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955E733B262356F3005652FF /* HomeResponse.swift */; };
-		95602704265ABB990046F97E /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
-		95613ADF264FC6FD00D4CE8F /* LatestNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */; };
-		9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404B263C766D00C6C511 /* WatchlistCreator.swift */; };
-		9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */; };
-		95629DA02645298E007AF020 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95629D9F2645298E007AF020 /* Profile.swift */; };
-		95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */; };
-		95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9225DDA54700DCBE4A /* Assets.xcassets */; };
-		95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */; };
-		95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
-		95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
-		95721DA6262761E700EC527B /* CurrencyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95721DA5262761E700EC527B /* CurrencyRow.swift */; };
-		9576BFEB26810661002BCAC6 /* InsiderRosterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEA26810661002BCAC6 /* InsiderRosterHelper.swift */; };
-		9576BFED26810713002BCAC6 /* InsiderRosterList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEC26810713002BCAC6 /* InsiderRosterList.swift */; };
-		9576BFEF26810719002BCAC6 /* InsiderRosterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */; };
-		958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958A735125E0170900FD7ECA /* CloudKit.framework */; };
-		9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
-		9595DC342682849E00DC8104 /* WatchOSProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC332682849E00DC8104 /* WatchOSProfileView.swift */; };
-		9595DC36268284B100DC8104 /* WatchOSCompanyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595DC35268284B100DC8104 /* WatchOSCompanyRow.swift */; };
-		9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D44267A02FC0055C6DE /* WatchlistCompany+CoreDataClass.swift */; };
-		9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95131D45267A02FC0055C6DE /* WatchlistCompany+CoreDataProperties.swift */; };
-		95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6126305A9B009865AA /* CurrencyModel.swift */; };
-		95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
-		95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */; };
-		95A4B930263E9F530056F036 /* WatchlistCreatorList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */; };
-		95A4B933263E9F810056F036 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = 95A4B932263E9F810056F036 /* Introspect */; };
-		95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */; };
-		95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */; };
-		95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7C065261639DF003E2EC1 /* SearchView.swift */; };
-		95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A7C0732616409D003E2EC1 /* ParseJSON.swift */; };
-		95AD4A2D26078C1400498079 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AD4A2C26078C1400498079 /* ContentView.swift */; };
-		95AF0FF72671320F0049C4AB /* DisplayWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AF0FF62671320F0049C4AB /* DisplayWords.json */; };
-		95AF0FF92671342E0049C4AB /* DisplayWordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */; };
-		95B85AB6267FAE7A0080CF39 /* ConditionalModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B85AB5267FAE7A0080CF39 /* ConditionalModifier.swift */; };
-		95BB05B22670B8C3005A2029 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
-		95BC1C642683326C00F94373 /* KeyStatsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C632683326C00F94373 /* KeyStatsRow.swift */; };
-		95BC1C66268336A200F94373 /* UnwrapAnyOptional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */; };
-		95BEA1A626876DE100BF18AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95BEA1A526876DE100BF18AB /* Alamofire */; };
-		95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95629D9F2645298E007AF020 /* Profile.swift */; };
-		95BEA1AC268778E500BF18AB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 95BEA1AB268778E500BF18AB /* Alamofire */; };
-		95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
-		95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
-		95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8BAA22656D86E0016AE72 /* RequestType.swift */; };
-		95BEA1B326877BAC00BF18AB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9725DDA54700DCBE4A /* Persistence.swift */; };
-		95BEA1B426877BBA00BF18AB /* LazyBear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */; };
-		95C22F3F26776F010014C98A /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C22F3E26776F010014C98A /* CompanyModel.swift */; };
-		95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */; };
-		95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
-		95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5D266E855800C384A1 /* GetDateComponents.swift */; };
-		95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */; };
-		95CF46A32688BC0B0028C5A2 /* WatchOSCompanyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46A22688BC0B0028C5A2 /* WatchOSCompanyView.swift */; };
-		95CF46A92688C74C0028C5A2 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF8267F59A0003B0A59 /* Company.swift */; };
-		95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95A07F6B26305AC6009865AA /* QuoteModel.swift */; };
-		95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */; };
-		95CF46B72688F89B0028C5A2 /* WatchOSChartHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B62688F89B0028C5A2 /* WatchOSChartHelper.swift */; };
-		95CF46B92688F8A60028C5A2 /* WatchOSNewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */; };
-		95CF46C32689165F0028C5A2 /* WatchOSNewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */; };
-		95CF46C4268916960028C5A2 /* ConvertEpoch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952045142610C7C600A76362 /* ConvertEpoch.swift */; };
-		95CF46C6268919E40028C5A2 /* WatchOSNewsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */; };
-		95CF46CD26891E180028C5A2 /* DisplayWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 95AF0FF62671320F0049C4AB /* DisplayWords.json */; };
-		95CF46D92689C7540028C5A2 /* CompanyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9502BBF6267F5974003B0A59 /* CompanyResponse.swift */; };
-		95CF46DA2689C77C0028C5A2 /* HistoricalPricesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */; };
-		95CF46DB2689C78D0028C5A2 /* KeyStatsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */; };
-		95CF46DC2689C7930028C5A2 /* InsiderRosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95602703265ABB990046F97E /* InsiderRosterModel.swift */; };
-		95CF46DD2689C7960028C5A2 /* InsiderTransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */; };
-		95CF46DF2689D72E0028C5A2 /* ComplicationViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */; };
-		95CF46E22689E1790028C5A2 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CF46E12689E1790028C5A2 /* CloudKit.framework */; };
-		95CF46EC2689F1B70028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46EB2689F1B70028C5A2 /* StockCharts */; };
-		95CF46EE2689F1C00028C5A2 /* StockCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 95CF46ED2689F1C00028C5A2 /* StockCharts */; };
-		95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D308F72624B3A400A39F77 /* CurrencyItem.swift */; };
-		95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */; };
-		95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */; };
-		95E4A2D92680931300A6FEB9 /* NewsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2D82680931300A6FEB9 /* NewsRow.swift */; };
-		95E4A2E02680A70000A6FEB9 /* NewsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2DF2680A70000A6FEB9 /* NewsList.swift */; };
-		95E4A2E22680AD7C00A6FEB9 /* SFSafariViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */; };
-		95E8BAA32656D86E0016AE72 /* RequestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E8BAA22656D86E0016AE72 /* RequestType.swift */; };
-		95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FBE0DB2619CA7200440386 /* ProfileView.swift */; };
+		95F7C16126A2CCA2002F08DB /* lazybearApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C16026A2CCA2002F08DB /* lazybearApp.swift */; };
+		95F7C16326A2CCA2002F08DB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C16226A2CCA2002F08DB /* ContentView.swift */; };
+		95F7C16526A2CCA2002F08DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F7C16426A2CCA2002F08DB /* Assets.xcassets */; };
+		95F7C16826A2CCA2002F08DB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95F7C16726A2CCA2002F08DB /* Preview Assets.xcassets */; };
+		95F7C16A26A2CCA2002F08DB /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C16926A2CCA2002F08DB /* Persistence.swift */; };
+		95F7C16D26A2CCA2002F08DB /* lazybear.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C16B26A2CCA2002F08DB /* lazybear.xcdatamodeld */; };
+		95F7C17826A2CCA3002F08DB /* lazybearTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C17726A2CCA3002F08DB /* lazybearTests.swift */; };
+		95F7C18326A2CCA3002F08DB /* lazybearUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F7C18226A2CCA3002F08DB /* lazybearUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		950C57152629EF9100F234FE /* PBXContainerItemProxy */ = {
+		95F7C17426A2CCA3002F08DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			containerPortal = 95F7C15526A2CCA2002F08DB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 95672B8A25DDA54700DCBE4A;
-			remoteInfo = LazyBear;
+			remoteGlobalIDString = 95F7C15C26A2CCA2002F08DB;
+			remoteInfo = lazybear;
 		};
-		950C57252629EFC200F234FE /* PBXContainerItemProxy */ = {
+		95F7C17F26A2CCA3002F08DB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
+			containerPortal = 95F7C15526A2CCA2002F08DB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 95672B8A25DDA54700DCBE4A;
-			remoteInfo = LazyBear;
-		};
-		952457E0267E339C00D5BBCB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 952457DD267E339C00D5BBCB;
-			remoteInfo = "LazyBearWatchOS Extension";
-		};
-		952457F9267E339C00D5BBCB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 952457DD267E339C00D5BBCB;
-			remoteInfo = "LazyBearWatchOS Extension";
-		};
-		95245804267E339D00D5BBCB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 952457D4267E339B00D5BBCB;
-			remoteInfo = LazyBearWatchOS;
-		};
-		9524580A267E339D00D5BBCB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 95672B8325DDA54700DCBE4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 952457D4267E339B00D5BBCB;
-			remoteInfo = LazyBearWatchOS;
+			remoteGlobalIDString = 95F7C15C26A2CCA2002F08DB;
+			remoteInfo = lazybear;
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		9524580D267E339D00D5BBCB /* Embed Watch Content */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
-			dstSubfolderSpec = 16;
-			files = (
-				9524580C267E339D00D5BBCB /* LazyBearWatchOS.app in Embed Watch Content */,
-			);
-			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95245810267E339D00D5BBCB /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				952457DF267E339C00D5BBCB /* LazyBearWatchOS Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		9502BBF4267F5194003B0A59 /* CompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyView.swift; sourceTree = "<group>"; };
-		9502BBF6267F5974003B0A59 /* CompanyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyResponse.swift; sourceTree = "<group>"; };
-		9502BBF8267F59A0003B0A59 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
-		9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartHelper.swift; sourceTree = "<group>"; };
-		9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRectangleBox.swift; sourceTree = "<group>"; };
-		9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsHelper.swift; sourceTree = "<group>"; };
-		9502BC00267F8771003B0A59 /* KeyStatsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsList.swift; sourceTree = "<group>"; };
-		950B6F3E267643640029E447 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		950B6F412676454A0029E447 /* RevenueCatTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevenueCatTest.swift; sourceTree = "<group>"; };
-		950C57102629EF9100F234FE /* LazyBearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		950C57122629EF9100F234FE /* LazyBearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearTests.swift; sourceTree = "<group>"; };
-		950C57142629EF9100F234FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		950C57202629EFC200F234FE /* LazyBearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		950C57222629EFC200F234FE /* LazyBearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearUITests.swift; sourceTree = "<group>"; };
-		950C57242629EFC200F234FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		950C572D2629F03A00F234FE /* LazyBear.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = LazyBear.xctestplan; path = LazyBear.xcodeproj/LazyBear.xctestplan; sourceTree = "<group>"; };
-		950D0E182618AA4900D17AD7 /* CompanyList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyList.swift; sourceTree = "<group>"; };
-		950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedCompanyItem.swift; sourceTree = "<group>"; };
-		95123AB726766497001BFAF3 /* CurrencySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySheet.swift; sourceTree = "<group>"; };
-		95123AB92676658E001BFAF3 /* StockSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSheet.swift; sourceTree = "<group>"; };
-		95123ABB2676676B001BFAF3 /* CurrencySheetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencySheetRow.swift; sourceTree = "<group>"; };
-		95123ABD267669C6001BFAF3 /* StockSheetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockSheetRow.swift; sourceTree = "<group>"; };
-		95123ABF26767370001BFAF3 /* StockItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockItem.swift; sourceTree = "<group>"; };
-		95131D44267A02FC0055C6DE /* WatchlistCompany+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataClass.swift"; sourceTree = "<group>"; };
-		95131D45267A02FC0055C6DE /* WatchlistCompany+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WatchlistCompany+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		95131D4A267A15490055C6DE /* WatchlistSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistSheet.swift; sourceTree = "<group>"; };
-		951490542610BD2B00BDEEB5 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		951566E62613A2B6007C0F36 /* TradingDatesSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesSheet.swift; sourceTree = "<group>"; };
-		951566E92613A37C007C0F36 /* TradingDatesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradingDatesItem.swift; sourceTree = "<group>"; };
-		9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileStockRow.swift; sourceTree = "<group>"; };
-		952045142610C7C600A76362 /* ConvertEpoch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertEpoch.swift; sourceTree = "<group>"; };
-		952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBearWatchOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		952457D7267E339C00D5BBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		952457D9267E339C00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LazyBearWatchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		952457E3267E339C00D5BBCB /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
-		952457E5267E339C00D5BBCB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		952457E7267E339C00D5BBCB /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		952457E9267E339C00D5BBCB /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
-		952457EB267E339C00D5BBCB /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
-		952457ED267E339C00D5BBCB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		952457F0267E339C00D5BBCB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		952457F2267E339C00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		952457F8267E339C00D5BBCB /* LazyBearWatchOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearWatchOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		952457FC267E339C00D5BBCB /* LazyBearWatchOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearWatchOSTests.swift; sourceTree = "<group>"; };
-		952457FE267E339C00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95245803267E339D00D5BBCB /* LazyBearWatchOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyBearWatchOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		95245807267E339D00D5BBCB /* LazyBearWatchOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearWatchOSUITests.swift; sourceTree = "<group>"; };
-		95245809267E339D00D5BBCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9529947D2629CA3E005F0AB0 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		952994812629CA46005F0AB0 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
-		952FC0B7267C97BA001406B1 /* WatchlistSheetRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistSheetRow.swift; sourceTree = "<group>"; };
-		952FC0B9267C9A24001406B1 /* RenameListSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenameListSheet.swift; sourceTree = "<group>"; };
-		953C96DD2688925E0096734C /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
-		953C96DF268898430096734C /* DefaultCompanies.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DefaultCompanies.json; sourceTree = "<group>"; };
-		953C96E1268898DC0096734C /* DefaultCompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCompanyModel.swift; sourceTree = "<group>"; };
-		9547481F26821F7700D6A966 /* InsiderTransactionsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionsHelper.swift; sourceTree = "<group>"; };
-		9547482126821F8800D6A966 /* InsiderTransactionsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionsRow.swift; sourceTree = "<group>"; };
-		9547482326821F9400D6A966 /* InsiderTransactionsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionsList.swift; sourceTree = "<group>"; };
-		9550443926111B2B000E0BCB /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		9550444226111E7A000E0BCB /* SectorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorRow.swift; sourceTree = "<group>"; };
-		9550444526111EE5000E0BCB /* SectorItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorItem.swift; sourceTree = "<group>"; };
-		9550444826111FC9000E0BCB /* StockRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRow.swift; sourceTree = "<group>"; };
-		955E73382623568F005652FF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
-		955E733B262356F3005652FF /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
-		95602703265ABB990046F97E /* InsiderRosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRosterModel.swift; sourceTree = "<group>"; };
-		95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LatestNewsModel.swift; sourceTree = "<group>"; };
-		9562404A263C72E800C6C511 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9562404B263C766D00C6C511 /* WatchlistCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreator.swift; sourceTree = "<group>"; };
-		9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorClass.swift; sourceTree = "<group>"; };
-		95629D9F2645298E007AF020 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		95672B8B25DDA54700DCBE4A /* LazyBear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyBear.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyBearApp.swift; sourceTree = "<group>"; };
-		95672B9225DDA54700DCBE4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		95672B9725DDA54700DCBE4A /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LazyBear.xcdatamodel; sourceTree = "<group>"; };
-		95672B9C25DDA54800DCBE4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		95721DA5262761E700EC527B /* CurrencyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRow.swift; sourceTree = "<group>"; };
-		9576BFEA26810661002BCAC6 /* InsiderRosterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRosterHelper.swift; sourceTree = "<group>"; };
-		9576BFEC26810713002BCAC6 /* InsiderRosterList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRosterList.swift; sourceTree = "<group>"; };
-		9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderRosterRow.swift; sourceTree = "<group>"; };
-		958A734E25E016FD00FD7ECA /* LazyBear.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyBear.entitlements; sourceTree = "<group>"; };
-		958A735125E0170900FD7ECA /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalPricesModel.swift; sourceTree = "<group>"; };
-		9595DC332682849E00DC8104 /* WatchOSProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSProfileView.swift; sourceTree = "<group>"; };
-		9595DC35268284B100DC8104 /* WatchOSCompanyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSCompanyRow.swift; sourceTree = "<group>"; };
-		95A07F6126305A9B009865AA /* CurrencyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyModel.swift; sourceTree = "<group>"; };
-		95A07F6B26305AC6009865AA /* QuoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteModel.swift; sourceTree = "<group>"; };
-		95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorPerformanceModel.swift; sourceTree = "<group>"; };
-		95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorList.swift; sourceTree = "<group>"; };
-		95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorSearchBar.swift; sourceTree = "<group>"; };
-		95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchlistCreatorRow.swift; sourceTree = "<group>"; };
-		95A7C065261639DF003E2EC1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
-		95A7C0732616409D003E2EC1 /* ParseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseJSON.swift; sourceTree = "<group>"; };
-		95AD4A2C26078C1400498079 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		95AF0FF62671320F0049C4AB /* DisplayWords.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = DisplayWords.json; sourceTree = "<group>"; };
-		95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayWordsModel.swift; sourceTree = "<group>"; };
-		95B85AB5267FAE7A0080CF39 /* ConditionalModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionalModifier.swift; sourceTree = "<group>"; };
-		95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsModel.swift; sourceTree = "<group>"; };
-		95BC1C632683326C00F94373 /* KeyStatsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyStatsRow.swift; sourceTree = "<group>"; };
-		95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnwrapAnyOptional.swift; sourceTree = "<group>"; };
-		95C22F3E26776F010014C98A /* CompanyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
-		95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
-		95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsiderTransactionModel.swift; sourceTree = "<group>"; };
-		95CCFB5D266E855800C384A1 /* GetDateComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDateComponents.swift; sourceTree = "<group>"; };
-		95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertStringToDate.swift; sourceTree = "<group>"; };
-		95CF46A22688BC0B0028C5A2 /* WatchOSCompanyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSCompanyView.swift; sourceTree = "<group>"; };
-		95CF46B62688F89B0028C5A2 /* WatchOSChartHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSChartHelper.swift; sourceTree = "<group>"; };
-		95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsList.swift; sourceTree = "<group>"; };
-		95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsRow.swift; sourceTree = "<group>"; };
-		95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchOSNewsDetail.swift; sourceTree = "<group>"; };
-		95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationViews.swift; sourceTree = "<group>"; };
-		95CF46E02689E1540028C5A2 /* LazyBearWatchOS Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "LazyBearWatchOS Extension.entitlements"; sourceTree = "<group>"; };
-		95CF46E12689E1790028C5A2 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS7.4.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
-		95D308F72624B3A400A39F77 /* CurrencyItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyItem.swift; sourceTree = "<group>"; };
-		95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHelper.swift; sourceTree = "<group>"; };
-		95E4A2D82680931300A6FEB9 /* NewsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRow.swift; sourceTree = "<group>"; };
-		95E4A2DF2680A70000A6FEB9 /* NewsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsList.swift; sourceTree = "<group>"; };
-		95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSafariViewWrapper.swift; sourceTree = "<group>"; };
-		95E8BAA22656D86E0016AE72 /* RequestType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestType.swift; sourceTree = "<group>"; };
-		95FBE0DB2619CA7200440386 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		95F7C15D26A2CCA2002F08DB /* lazybear.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lazybear.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F7C16026A2CCA2002F08DB /* lazybearApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazybearApp.swift; sourceTree = "<group>"; };
+		95F7C16226A2CCA2002F08DB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		95F7C16426A2CCA2002F08DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95F7C16726A2CCA2002F08DB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		95F7C16926A2CCA2002F08DB /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		95F7C16C26A2CCA2002F08DB /* lazybear.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = lazybear.xcdatamodel; sourceTree = "<group>"; };
+		95F7C16E26A2CCA2002F08DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F7C17326A2CCA3002F08DB /* lazybearTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lazybearTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F7C17726A2CCA3002F08DB /* lazybearTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazybearTests.swift; sourceTree = "<group>"; };
+		95F7C17926A2CCA3002F08DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95F7C17E26A2CCA3002F08DB /* lazybearUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = lazybearUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95F7C18226A2CCA3002F08DB /* lazybearUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lazybearUITests.swift; sourceTree = "<group>"; };
+		95F7C18426A2CCA3002F08DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		950C570D2629EF9100F234FE /* Frameworks */ = {
+		95F7C15A26A2CCA2002F08DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		950C571D2629EFC200F234FE /* Frameworks */ = {
+		95F7C17026A2CCA3002F08DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		952457DB267E339C00D5BBCB /* Frameworks */ = {
+		95F7C17B26A2CCA3002F08DB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CF46E22689E1790028C5A2 /* CloudKit.framework in Frameworks */,
-				95BEA1AC268778E500BF18AB /* Alamofire in Frameworks */,
-				95CF46EE2689F1C00028C5A2 /* StockCharts in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		952457F5267E339C00D5BBCB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95245800267E339D00D5BBCB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95672B8825DDA54700DCBE4A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				958A735225E0170900FD7ECA /* CloudKit.framework in Frameworks */,
-				95BEA1A626876DE100BF18AB /* Alamofire in Frameworks */,
-				950B6F3F267643640029E447 /* StoreKit.framework in Frameworks */,
-				95CF46EC2689F1B70028C5A2 /* StockCharts in Frameworks */,
-				95A4B933263E9F810056F036 /* Introspect in Frameworks */,
-				950B6F3D267643460029E447 /* Purchases in Frameworks */,
-				954D7EC2260BE70C00A13C50 /* SwiftlySearch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		950B6F402676452E0029E447 /* Tests */ = {
+		95F7C15426A2CCA2002F08DB = {
 			isa = PBXGroup;
 			children = (
-				950B6F412676454A0029E447 /* RevenueCatTest.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		950C57112629EF9100F234FE /* LazyBearTests */ = {
-			isa = PBXGroup;
-			children = (
-				950C57122629EF9100F234FE /* LazyBearTests.swift */,
-				950C57142629EF9100F234FE /* Info.plist */,
-			);
-			path = LazyBearTests;
-			sourceTree = "<group>";
-		};
-		950C57212629EFC200F234FE /* LazyBearUITests */ = {
-			isa = PBXGroup;
-			children = (
-				950C57222629EFC200F234FE /* LazyBearUITests.swift */,
-				950C57242629EFC200F234FE /* Info.plist */,
-			);
-			path = LazyBearUITests;
-			sourceTree = "<group>";
-		};
-		950D0E272618AEBB00D17AD7 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				950D0E282618AEC800D17AD7 /* SearchedCompanyItem.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		951490572610BD3000BDEEB5 /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				951490542610BD2B00BDEEB5 /* WelcomeView.swift */,
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
-		952045132610C7A200A76362 /* Global functions */ = {
-			isa = PBXGroup;
-			children = (
-				952045142610C7C600A76362 /* ConvertEpoch.swift */,
-				95A7C0732616409D003E2EC1 /* ParseJSON.swift */,
-				95CCFB5D266E855800C384A1 /* GetDateComponents.swift */,
-				95CCFB5F266E864C00C384A1 /* ConvertStringToDate.swift */,
-				95B85AB5267FAE7A0080CF39 /* ConditionalModifier.swift */,
-				95BC1C65268336A200F94373 /* UnwrapAnyOptional.swift */,
-			);
-			path = "Global functions";
-			sourceTree = "<group>";
-		};
-		9523ED402615BD93006D3D6F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				95AF0FF62671320F0049C4AB /* DisplayWords.json */,
-				953C96DF268898430096734C /* DefaultCompanies.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		952457D6267E339B00D5BBCB /* LazyBearWatchOS */ = {
-			isa = PBXGroup;
-			children = (
-				952457D7267E339C00D5BBCB /* Assets.xcassets */,
-				952457D9267E339C00D5BBCB /* Info.plist */,
-			);
-			path = LazyBearWatchOS;
-			sourceTree = "<group>";
-		};
-		952457E2267E339C00D5BBCB /* LazyBearWatchOS Extension */ = {
-			isa = PBXGroup;
-			children = (
-				95CF46E02689E1540028C5A2 /* LazyBearWatchOS Extension.entitlements */,
-				952457E3267E339C00D5BBCB /* LazyBearApp.swift */,
-				952457E5267E339C00D5BBCB /* ContentView.swift */,
-				952457E7267E339C00D5BBCB /* NotificationController.swift */,
-				952457E9267E339C00D5BBCB /* NotificationView.swift */,
-				952457EB267E339C00D5BBCB /* ComplicationController.swift */,
-				95CF46DE2689D72E0028C5A2 /* ComplicationViews.swift */,
-				952457ED267E339C00D5BBCB /* Assets.xcassets */,
-				952457F2267E339C00D5BBCB /* Info.plist */,
-				952457F3267E339C00D5BBCB /* PushNotificationPayload.apns */,
-				9595DC2E2682840C00DC8104 /* Views */,
-				952457EF267E339C00D5BBCB /* Preview Content */,
-			);
-			path = "LazyBearWatchOS Extension";
-			sourceTree = "<group>";
-		};
-		952457EF267E339C00D5BBCB /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				952457F0267E339C00D5BBCB /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		952457FB267E339C00D5BBCB /* LazyBearWatchOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				952457FC267E339C00D5BBCB /* LazyBearWatchOSTests.swift */,
-				952457FE267E339C00D5BBCB /* Info.plist */,
-			);
-			path = LazyBearWatchOSTests;
-			sourceTree = "<group>";
-		};
-		95245806267E339D00D5BBCB /* LazyBearWatchOSUITests */ = {
-			isa = PBXGroup;
-			children = (
-				95245807267E339D00D5BBCB /* LazyBearWatchOSUITests.swift */,
-				95245809267E339D00D5BBCB /* Info.plist */,
-			);
-			path = LazyBearWatchOSUITests;
-			sourceTree = "<group>";
-		};
-		9529947C2629CA2F005F0AB0 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				9529947D2629CA3E005F0AB0 /* Search.swift */,
-				952994812629CA46005F0AB0 /* SearchResponse.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		954D7E9D260BBA5200A13C50 /* Global Models */ = {
-			isa = PBXGroup;
-			children = (
-				95131D44267A02FC0055C6DE /* WatchlistCompany+CoreDataClass.swift */,
-				95131D45267A02FC0055C6DE /* WatchlistCompany+CoreDataProperties.swift */,
-				95A07F6126305A9B009865AA /* CurrencyModel.swift */,
-				95A07F6B26305AC6009865AA /* QuoteModel.swift */,
-				95A07F7026305AD5009865AA /* SectorPerformanceModel.swift */,
-				95613ADE264FC6FD00D4CE8F /* LatestNewsModel.swift */,
-				9594F03F2651355B00CFA8D4 /* HistoricalPricesModel.swift */,
-				95602703265ABB990046F97E /* InsiderRosterModel.swift */,
-				95CCFB55266E7A0F00C384A1 /* InsiderTransactionModel.swift */,
-				95BB05B12670B8C3005A2029 /* KeyStatsModel.swift */,
-				95AF0FF82671342E0049C4AB /* DisplayWordsModel.swift */,
-				95E8BAA22656D86E0016AE72 /* RequestType.swift */,
-				95C22F3E26776F010014C98A /* CompanyModel.swift */,
-				953C96E1268898DC0096734C /* DefaultCompanyModel.swift */,
-			);
-			path = "Global Models";
-			sourceTree = "<group>";
-		};
-		954D7EAA260BBB0E00A13C50 /* Home */ = {
-			isa = PBXGroup;
-			children = (
-				9550443926111B2B000E0BCB /* HomeView.swift */,
-				954D7EAF260BBBD500A13C50 /* Helpers */,
-				95893DC72613C410003698C5 /* Networking */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		954D7EAF260BBBD500A13C50 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				951566E92613A37C007C0F36 /* TradingDatesItem.swift */,
-				951566E62613A2B6007C0F36 /* TradingDatesSheet.swift */,
-				9550444226111E7A000E0BCB /* SectorRow.swift */,
-				9550444526111EE5000E0BCB /* SectorItem.swift */,
-				9550444826111FC9000E0BCB /* StockRow.swift */,
-				95123ABF26767370001BFAF3 /* StockItem.swift */,
-				95721DA5262761E700EC527B /* CurrencyRow.swift */,
-				95D308F72624B3A400A39F77 /* CurrencyItem.swift */,
-				95123AB726766497001BFAF3 /* CurrencySheet.swift */,
-				95123ABB2676676B001BFAF3 /* CurrencySheetRow.swift */,
-				95123AB92676658E001BFAF3 /* StockSheet.swift */,
-				95123ABD267669C6001BFAF3 /* StockSheetRow.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		95672B8225DDA54700DCBE4A = {
-			isa = PBXGroup;
-			children = (
-				9562404A263C72E800C6C511 /* README.md */,
-				950C572D2629F03A00F234FE /* LazyBear.xctestplan */,
-				95672B8D25DDA54700DCBE4A /* LazyBear */,
-				950C57112629EF9100F234FE /* LazyBearTests */,
-				950C57212629EFC200F234FE /* LazyBearUITests */,
-				952457D6267E339B00D5BBCB /* LazyBearWatchOS */,
-				952457E2267E339C00D5BBCB /* LazyBearWatchOS Extension */,
-				952457FB267E339C00D5BBCB /* LazyBearWatchOSTests */,
-				95245806267E339D00D5BBCB /* LazyBearWatchOSUITests */,
-				95672B8C25DDA54700DCBE4A /* Products */,
-				958A735025E0170900FD7ECA /* Frameworks */,
+				95F7C15F26A2CCA2002F08DB /* lazybear */,
+				95F7C17626A2CCA3002F08DB /* lazybearTests */,
+				95F7C18126A2CCA3002F08DB /* lazybearUITests */,
+				95F7C15E26A2CCA2002F08DB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		95672B8C25DDA54700DCBE4A /* Products */ = {
+		95F7C15E26A2CCA2002F08DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				95672B8B25DDA54700DCBE4A /* LazyBear.app */,
-				950C57102629EF9100F234FE /* LazyBearTests.xctest */,
-				950C57202629EFC200F234FE /* LazyBearUITests.xctest */,
-				952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */,
-				952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */,
-				952457F8267E339C00D5BBCB /* LazyBearWatchOSTests.xctest */,
-				95245803267E339D00D5BBCB /* LazyBearWatchOSUITests.xctest */,
+				95F7C15D26A2CCA2002F08DB /* lazybear.app */,
+				95F7C17326A2CCA3002F08DB /* lazybearTests.xctest */,
+				95F7C17E26A2CCA3002F08DB /* lazybearUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		95672B8D25DDA54700DCBE4A /* LazyBear */ = {
+		95F7C15F26A2CCA2002F08DB /* lazybear */ = {
 			isa = PBXGroup;
 			children = (
-				958A734E25E016FD00FD7ECA /* LazyBear.entitlements */,
-				95672B9C25DDA54800DCBE4A /* Info.plist */,
-				95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */,
-				95672B9225DDA54700DCBE4A /* Assets.xcassets */,
-				95E2DBF72673752F007FCCB4 /* LaunchScreen.storyboard */,
-				95672B8E25DDA54700DCBE4A /* LazyBearApp.swift */,
-				95AD4A2C26078C1400498079 /* ContentView.swift */,
-				95672B9725DDA54700DCBE4A /* Persistence.swift */,
-				953C96DD2688925E0096734C /* HapticsManager.swift */,
-				95B1874925DDAC4D0068A364 /* Views */,
-				957B6726268D055C005DFBF6 /* NEW VIEWS */,
-				952045132610C7A200A76362 /* Global functions */,
-				954D7E9D260BBA5200A13C50 /* Global Models */,
-				9523ED402615BD93006D3D6F /* Resources */,
-				95672B9425DDA54700DCBE4A /* Preview Content */,
-				950B6F402676452E0029E447 /* Tests */,
+				95F7C16026A2CCA2002F08DB /* lazybearApp.swift */,
+				95F7C16226A2CCA2002F08DB /* ContentView.swift */,
+				95F7C16426A2CCA2002F08DB /* Assets.xcassets */,
+				95F7C16926A2CCA2002F08DB /* Persistence.swift */,
+				95F7C16E26A2CCA2002F08DB /* Info.plist */,
+				95F7C16B26A2CCA2002F08DB /* lazybear.xcdatamodeld */,
+				95F7C16626A2CCA2002F08DB /* Preview Content */,
 			);
-			path = LazyBear;
+			path = lazybear;
 			sourceTree = "<group>";
 		};
-		95672B9425DDA54700DCBE4A /* Preview Content */ = {
+		95F7C16626A2CCA2002F08DB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				95672B9525DDA54700DCBE4A /* Preview Assets.xcassets */,
+				95F7C16726A2CCA2002F08DB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		957B6726268D055C005DFBF6 /* NEW VIEWS */ = {
+		95F7C17626A2CCA3002F08DB /* lazybearTests */ = {
 			isa = PBXGroup;
 			children = (
+				95F7C17726A2CCA3002F08DB /* lazybearTests.swift */,
+				95F7C17926A2CCA3002F08DB /* Info.plist */,
 			);
-			path = "NEW VIEWS";
+			path = lazybearTests;
 			sourceTree = "<group>";
 		};
-		95893DC72613C410003698C5 /* Networking */ = {
+		95F7C18126A2CCA3002F08DB /* lazybearUITests */ = {
 			isa = PBXGroup;
 			children = (
-				955E73382623568F005652FF /* Home.swift */,
-				955E733B262356F3005652FF /* HomeResponse.swift */,
+				95F7C18226A2CCA3002F08DB /* lazybearUITests.swift */,
+				95F7C18426A2CCA3002F08DB /* Info.plist */,
 			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		958A735025E0170900FD7ECA /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				95CF46E12689E1790028C5A2 /* CloudKit.framework */,
-				950B6F3E267643640029E447 /* StoreKit.framework */,
-				958A735125E0170900FD7ECA /* CloudKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9595DC2E2682840C00DC8104 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				9595DC332682849E00DC8104 /* WatchOSProfileView.swift */,
-				95CF46A22688BC0B0028C5A2 /* WatchOSCompanyView.swift */,
-				9595DC322682848B00DC8104 /* Helpers */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		9595DC322682848B00DC8104 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				9595DC35268284B100DC8104 /* WatchOSCompanyRow.swift */,
-				95CF46B62688F89B0028C5A2 /* WatchOSChartHelper.swift */,
-				95CF46B82688F8A60028C5A2 /* WatchOSNewsList.swift */,
-				95CF46C22689165F0028C5A2 /* WatchOSNewsRow.swift */,
-				95CF46C5268919E40028C5A2 /* WatchOSNewsDetail.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		95A7C06126163943003E2EC1 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				95A7C065261639DF003E2EC1 /* SearchView.swift */,
-				950D0E182618AA4900D17AD7 /* CompanyList.swift */,
-				950D0E272618AEBB00D17AD7 /* Helpers */,
-				9529947C2629CA2F005F0AB0 /* Networking */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		95B1874925DDAC4D0068A364 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				951490572610BD3000BDEEB5 /* Welcome */,
-				954D7EAA260BBB0E00A13C50 /* Home */,
-				95A7C06126163943003E2EC1 /* Search */,
-				95FBE0DA2619CA6000440386 /* Profile */,
-				95E31C0B26472C8500106B98 /* Company */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		95BD2F91263418F7008B6752 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				9519BE05267E5EC3009C6015 /* ProfileStockRow.swift */,
-				95131D4A267A15490055C6DE /* WatchlistSheet.swift */,
-				952FC0B7267C97BA001406B1 /* WatchlistSheetRow.swift */,
-				9562404B263C766D00C6C511 /* WatchlistCreator.swift */,
-				9562404D263C7D8800C6C511 /* WatchlistCreatorClass.swift */,
-				95A4B92F263E9F530056F036 /* WatchlistCreatorList.swift */,
-				95A4B934263EA31C0056F036 /* WatchlistCreatorSearchBar.swift */,
-				95A4B936263EA5C20056F036 /* WatchlistCreatorRow.swift */,
-				952FC0B9267C9A24001406B1 /* RenameListSheet.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		95C8C0D9262A31DA0082D1D9 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				95629D9F2645298E007AF020 /* Profile.swift */,
-				95C8C0DF262A369F0082D1D9 /* ProfileResponse.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		95E31C0B26472C8500106B98 /* Company */ = {
-			isa = PBXGroup;
-			children = (
-				9502BBF4267F5194003B0A59 /* CompanyView.swift */,
-				95E31C0E26472CB600106B98 /* Helpers */,
-				95E31C0F26472CC000106B98 /* Networking */,
-			);
-			path = Company;
-			sourceTree = "<group>";
-		};
-		95E31C0E26472CB600106B98 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				9502BBFC267F63F3003B0A59 /* CustomRectangleBox.swift */,
-				9502BBFA267F5EE8003B0A59 /* ChartHelper.swift */,
-				9502BBFE267F6454003B0A59 /* KeyStatsHelper.swift */,
-				95BC1C632683326C00F94373 /* KeyStatsRow.swift */,
-				9502BC00267F8771003B0A59 /* KeyStatsList.swift */,
-				95E4A2D6268091F900A6FEB9 /* NewsHelper.swift */,
-				95E4A2D82680931300A6FEB9 /* NewsRow.swift */,
-				95E4A2DF2680A70000A6FEB9 /* NewsList.swift */,
-				95E4A2E12680AD7C00A6FEB9 /* SFSafariViewWrapper.swift */,
-				9576BFEA26810661002BCAC6 /* InsiderRosterHelper.swift */,
-				9576BFEE26810719002BCAC6 /* InsiderRosterRow.swift */,
-				9576BFEC26810713002BCAC6 /* InsiderRosterList.swift */,
-				9547481F26821F7700D6A966 /* InsiderTransactionsHelper.swift */,
-				9547482126821F8800D6A966 /* InsiderTransactionsRow.swift */,
-				9547482326821F9400D6A966 /* InsiderTransactionsList.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		95E31C0F26472CC000106B98 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				9502BBF8267F59A0003B0A59 /* Company.swift */,
-				9502BBF6267F5974003B0A59 /* CompanyResponse.swift */,
-			);
-			path = Networking;
-			sourceTree = "<group>";
-		};
-		95FBE0DA2619CA6000440386 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				95FBE0DB2619CA7200440386 /* ProfileView.swift */,
-				95BD2F91263418F7008B6752 /* Helpers */,
-				95C8C0D9262A31DA0082D1D9 /* Networking */,
-			);
-			path = Profile;
+			path = lazybearUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		950C570F2629EF9100F234FE /* LazyBearTests */ = {
+		95F7C15C26A2CCA2002F08DB /* lazybear */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 950C57172629EF9100F234FE /* Build configuration list for PBXNativeTarget "LazyBearTests" */;
+			buildConfigurationList = 95F7C18726A2CCA3002F08DB /* Build configuration list for PBXNativeTarget "lazybear" */;
 			buildPhases = (
-				950C570C2629EF9100F234FE /* Sources */,
-				950C570D2629EF9100F234FE /* Frameworks */,
-				950C570E2629EF9100F234FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				950C57162629EF9100F234FE /* PBXTargetDependency */,
-			);
-			name = LazyBearTests;
-			productName = LazyBearTests;
-			productReference = 950C57102629EF9100F234FE /* LazyBearTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		950C571F2629EFC200F234FE /* LazyBearUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 950C57272629EFC200F234FE /* Build configuration list for PBXNativeTarget "LazyBearUITests" */;
-			buildPhases = (
-				950C571C2629EFC200F234FE /* Sources */,
-				950C571D2629EFC200F234FE /* Frameworks */,
-				950C571E2629EFC200F234FE /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				950C57262629EFC200F234FE /* PBXTargetDependency */,
-			);
-			name = LazyBearUITests;
-			productName = LazyBearUITests;
-			productReference = 950C57202629EFC200F234FE /* LazyBearUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		952457D4267E339B00D5BBCB /* LazyBearWatchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95245818267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS" */;
-			buildPhases = (
-				952457D3267E339B00D5BBCB /* Resources */,
-				95245810267E339D00D5BBCB /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				952457E1267E339C00D5BBCB /* PBXTargetDependency */,
-			);
-			name = LazyBearWatchOS;
-			productName = LazyBearWatchOS;
-			productReference = 952457D5267E339B00D5BBCB /* LazyBearWatchOS.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95245817267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS Extension" */;
-			buildPhases = (
-				952457DA267E339C00D5BBCB /* Sources */,
-				952457DB267E339C00D5BBCB /* Frameworks */,
-				952457DC267E339C00D5BBCB /* Resources */,
+				95F7C15926A2CCA2002F08DB /* Sources */,
+				95F7C15A26A2CCA2002F08DB /* Frameworks */,
+				95F7C15B26A2CCA2002F08DB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "LazyBearWatchOS Extension";
-			packageProductDependencies = (
-				95BEA1AB268778E500BF18AB /* Alamofire */,
-				95CF46ED2689F1C00028C5A2 /* StockCharts */,
-			);
-			productName = "LazyBearWatchOS Extension";
-			productReference = 952457DE267E339C00D5BBCB /* LazyBearWatchOS Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
-		952457F7267E339C00D5BBCB /* LazyBearWatchOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95245819267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSTests" */;
-			buildPhases = (
-				952457F4267E339C00D5BBCB /* Sources */,
-				952457F5267E339C00D5BBCB /* Frameworks */,
-				952457F6267E339C00D5BBCB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				952457FA267E339C00D5BBCB /* PBXTargetDependency */,
-			);
-			name = LazyBearWatchOSTests;
-			productName = LazyBearWatchOSTests;
-			productReference = 952457F8267E339C00D5BBCB /* LazyBearWatchOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		95245802267E339D00D5BBCB /* LazyBearWatchOSUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9524581A267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSUITests" */;
-			buildPhases = (
-				952457FF267E339D00D5BBCB /* Sources */,
-				95245800267E339D00D5BBCB /* Frameworks */,
-				95245801267E339D00D5BBCB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				95245805267E339D00D5BBCB /* PBXTargetDependency */,
-			);
-			name = LazyBearWatchOSUITests;
-			productName = LazyBearWatchOSUITests;
-			productReference = 95245803267E339D00D5BBCB /* LazyBearWatchOSUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		95672B8A25DDA54700DCBE4A /* LazyBear */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 95672B9F25DDA54800DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */;
-			buildPhases = (
-				95672B8725DDA54700DCBE4A /* Sources */,
-				95672B8825DDA54700DCBE4A /* Frameworks */,
-				95672B8925DDA54700DCBE4A /* Resources */,
-				9524580D267E339D00D5BBCB /* Embed Watch Content */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9524580B267E339D00D5BBCB /* PBXTargetDependency */,
-			);
-			name = LazyBear;
-			packageProductDependencies = (
-				954D7EC1260BE70C00A13C50 /* SwiftlySearch */,
-				95A4B932263E9F810056F036 /* Introspect */,
-				950B6F3C267643460029E447 /* Purchases */,
-				95BEA1A526876DE100BF18AB /* Alamofire */,
-				95CF46EB2689F1B70028C5A2 /* StockCharts */,
-			);
-			productName = LazyBear;
-			productReference = 95672B8B25DDA54700DCBE4A /* LazyBear.app */;
+			name = lazybear;
+			productName = lazybear;
+			productReference = 95F7C15D26A2CCA2002F08DB /* lazybear.app */;
 			productType = "com.apple.product-type.application";
+		};
+		95F7C17226A2CCA3002F08DB /* lazybearTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F7C18A26A2CCA3002F08DB /* Build configuration list for PBXNativeTarget "lazybearTests" */;
+			buildPhases = (
+				95F7C16F26A2CCA3002F08DB /* Sources */,
+				95F7C17026A2CCA3002F08DB /* Frameworks */,
+				95F7C17126A2CCA3002F08DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95F7C17526A2CCA3002F08DB /* PBXTargetDependency */,
+			);
+			name = lazybearTests;
+			productName = lazybearTests;
+			productReference = 95F7C17326A2CCA3002F08DB /* lazybearTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95F7C17D26A2CCA3002F08DB /* lazybearUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95F7C18D26A2CCA3002F08DB /* Build configuration list for PBXNativeTarget "lazybearUITests" */;
+			buildPhases = (
+				95F7C17A26A2CCA3002F08DB /* Sources */,
+				95F7C17B26A2CCA3002F08DB /* Frameworks */,
+				95F7C17C26A2CCA3002F08DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95F7C18026A2CCA3002F08DB /* PBXTargetDependency */,
+			);
+			name = lazybearUITests;
+			productName = lazybearUITests;
+			productReference = 95F7C17E26A2CCA3002F08DB /* lazybearUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		95672B8325DDA54700DCBE4A /* Project object */ = {
+		95F7C15526A2CCA2002F08DB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					950C570F2629EF9100F234FE = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 95672B8A25DDA54700DCBE4A;
+					95F7C15C26A2CCA2002F08DB = {
+						CreatedOnToolsVersion = 12.5.1;
 					};
-					950C571F2629EFC200F234FE = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = 95672B8A25DDA54700DCBE4A;
+					95F7C17226A2CCA3002F08DB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 95F7C15C26A2CCA2002F08DB;
 					};
-					952457D4267E339B00D5BBCB = {
-						CreatedOnToolsVersion = 12.5;
-					};
-					952457DD267E339C00D5BBCB = {
-						CreatedOnToolsVersion = 12.5;
-					};
-					952457F7267E339C00D5BBCB = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 952457DD267E339C00D5BBCB;
-					};
-					95245802267E339D00D5BBCB = {
-						CreatedOnToolsVersion = 12.5;
-						TestTargetID = 952457D4267E339B00D5BBCB;
-					};
-					95672B8A25DDA54700DCBE4A = {
-						CreatedOnToolsVersion = 12.4;
+					95F7C17D26A2CCA3002F08DB = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 95F7C15C26A2CCA2002F08DB;
 					};
 				};
 			};
-			buildConfigurationList = 95672B8625DDA54700DCBE4A /* Build configuration list for PBXProject "LazyBear" */;
+			buildConfigurationList = 95F7C15826A2CCA2002F08DB /* Build configuration list for PBXProject "lazybear" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -966,548 +222,89 @@
 				en,
 				Base,
 			);
-			mainGroup = 95672B8225DDA54700DCBE4A;
-			packageReferences = (
-				954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */,
-				95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
-				950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */,
-				95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */,
-				95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */,
-			);
-			productRefGroup = 95672B8C25DDA54700DCBE4A /* Products */;
+			mainGroup = 95F7C15426A2CCA2002F08DB;
+			productRefGroup = 95F7C15E26A2CCA2002F08DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				95672B8A25DDA54700DCBE4A /* LazyBear */,
-				950C570F2629EF9100F234FE /* LazyBearTests */,
-				950C571F2629EFC200F234FE /* LazyBearUITests */,
-				952457D4267E339B00D5BBCB /* LazyBearWatchOS */,
-				952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */,
-				952457F7267E339C00D5BBCB /* LazyBearWatchOSTests */,
-				95245802267E339D00D5BBCB /* LazyBearWatchOSUITests */,
+				95F7C15C26A2CCA2002F08DB /* lazybear */,
+				95F7C17226A2CCA3002F08DB /* lazybearTests */,
+				95F7C17D26A2CCA3002F08DB /* lazybearUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		950C570E2629EF9100F234FE /* Resources */ = {
+		95F7C15B26A2CCA2002F08DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F7C16826A2CCA2002F08DB /* Preview Assets.xcassets in Resources */,
+				95F7C16526A2CCA2002F08DB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95F7C17126A2CCA3002F08DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		950C571E2629EFC200F234FE /* Resources */ = {
+		95F7C17C26A2CCA3002F08DB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		952457D3267E339B00D5BBCB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				952457D8267E339C00D5BBCB /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		952457DC267E339C00D5BBCB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				952457F1267E339C00D5BBCB /* Preview Assets.xcassets in Resources */,
-				95CF46CD26891E180028C5A2 /* DisplayWords.json in Resources */,
-				952457EE267E339C00D5BBCB /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		952457F6267E339C00D5BBCB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95245801267E339D00D5BBCB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95672B8925DDA54700DCBE4A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95672B9625DDA54700DCBE4A /* Preview Assets.xcassets in Resources */,
-				95AF0FF72671320F0049C4AB /* DisplayWords.json in Resources */,
-				95E2DBF82673752F007FCCB4 /* LaunchScreen.storyboard in Resources */,
-				95672B9325DDA54700DCBE4A /* Assets.xcassets in Resources */,
-				953C96E0268898430096734C /* DefaultCompanies.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		950C570C2629EF9100F234FE /* Sources */ = {
+		95F7C15926A2CCA2002F08DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950C57132629EF9100F234FE /* LazyBearTests.swift in Sources */,
+				95F7C16A26A2CCA2002F08DB /* Persistence.swift in Sources */,
+				95F7C16326A2CCA2002F08DB /* ContentView.swift in Sources */,
+				95F7C16126A2CCA2002F08DB /* lazybearApp.swift in Sources */,
+				95F7C16D26A2CCA2002F08DB /* lazybear.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		950C571C2629EFC200F234FE /* Sources */ = {
+		95F7C16F26A2CCA3002F08DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				950C57232629EFC200F234FE /* LazyBearUITests.swift in Sources */,
+				95F7C17826A2CCA3002F08DB /* lazybearTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		952457DA267E339C00D5BBCB /* Sources */ = {
+		95F7C17A26A2CCA3002F08DB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95CF46B92688F8A60028C5A2 /* WatchOSNewsList.swift in Sources */,
-				95CF46DD2689C7960028C5A2 /* InsiderTransactionModel.swift in Sources */,
-				95CF46DB2689C78D0028C5A2 /* KeyStatsModel.swift in Sources */,
-				95CF46B72688F89B0028C5A2 /* WatchOSChartHelper.swift in Sources */,
-				952457E8267E339C00D5BBCB /* NotificationController.swift in Sources */,
-				95BEA1AD2687791000BF18AB /* ProfileResponse.swift in Sources */,
-				95BEA1AF2687794A00BF18AB /* RequestType.swift in Sources */,
-				95CF46DA2689C77C0028C5A2 /* HistoricalPricesModel.swift in Sources */,
-				95CF46AD2688C78C0028C5A2 /* LatestNewsModel.swift in Sources */,
-				95BEA1B326877BAC00BF18AB /* Persistence.swift in Sources */,
-				954F9C60268C7A000022ED60 /* CurrencyModel.swift in Sources */,
-				95BEA1AA268777CC00BF18AB /* Profile.swift in Sources */,
-				95CF46C32689165F0028C5A2 /* WatchOSNewsRow.swift in Sources */,
-				952457E6267E339C00D5BBCB /* ContentView.swift in Sources */,
-				952457EC267E339C00D5BBCB /* ComplicationController.swift in Sources */,
-				95CF46DF2689D72E0028C5A2 /* ComplicationViews.swift in Sources */,
-				95BEA1AE2687791800BF18AB /* CompanyModel.swift in Sources */,
-				95CF46C4268916960028C5A2 /* ConvertEpoch.swift in Sources */,
-				95CF46AC2688C7810028C5A2 /* QuoteModel.swift in Sources */,
-				9595DC342682849E00DC8104 /* WatchOSProfileView.swift in Sources */,
-				95BEA1B426877BBA00BF18AB /* LazyBear.xcdatamodeld in Sources */,
-				9595DC382682850000DC8104 /* WatchlistCompany+CoreDataProperties.swift in Sources */,
-				952457E4267E339C00D5BBCB /* LazyBearApp.swift in Sources */,
-				954F9C61268C7A1C0022ED60 /* SectorPerformanceModel.swift in Sources */,
-				95CF46A92688C74C0028C5A2 /* Company.swift in Sources */,
-				954F9C5F268C79EA0022ED60 /* HomeResponse.swift in Sources */,
-				95CF46C6268919E40028C5A2 /* WatchOSNewsDetail.swift in Sources */,
-				9595DC37268284FA00DC8104 /* WatchlistCompany+CoreDataClass.swift in Sources */,
-				952457EA267E339C00D5BBCB /* NotificationView.swift in Sources */,
-				95CF46A32688BC0B0028C5A2 /* WatchOSCompanyView.swift in Sources */,
-				95CF46DC2689C7930028C5A2 /* InsiderRosterModel.swift in Sources */,
-				95CF46D92689C7540028C5A2 /* CompanyResponse.swift in Sources */,
-				9595DC36268284B100DC8104 /* WatchOSCompanyRow.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		952457F4267E339C00D5BBCB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				952457FD267E339C00D5BBCB /* LazyBearWatchOSTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		952457FF267E339D00D5BBCB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95245808267E339D00D5BBCB /* LazyBearWatchOSUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		95672B8725DDA54700DCBE4A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				95602704265ABB990046F97E /* InsiderRosterModel.swift in Sources */,
-				95E4A2D92680931300A6FEB9 /* NewsRow.swift in Sources */,
-				95131D46267A03020055C6DE /* WatchlistCompany+CoreDataProperties.swift in Sources */,
-				9576BFEF26810719002BCAC6 /* InsiderRosterRow.swift in Sources */,
-				95FBE0DC2619CA7200440386 /* ProfileView.swift in Sources */,
-				95131D4B267A15490055C6DE /* WatchlistSheet.swift in Sources */,
-				9550444926111FC9000E0BCB /* StockRow.swift in Sources */,
-				952FC0B8267C97BA001406B1 /* WatchlistSheetRow.swift in Sources */,
-				9550444326111E7A000E0BCB /* SectorRow.swift in Sources */,
-				95123ABE267669C6001BFAF3 /* StockSheetRow.swift in Sources */,
-				9550443A26111B2B000E0BCB /* HomeView.swift in Sources */,
-				95672B9825DDA54700DCBE4A /* Persistence.swift in Sources */,
-				95BC1C66268336A200F94373 /* UnwrapAnyOptional.swift in Sources */,
-				95123ABC2676676B001BFAF3 /* CurrencySheetRow.swift in Sources */,
-				95A7C0742616409D003E2EC1 /* ParseJSON.swift in Sources */,
-				95E4A2D7268091F900A6FEB9 /* NewsHelper.swift in Sources */,
-				9576BFED26810713002BCAC6 /* InsiderRosterList.swift in Sources */,
-				9547482426821F9400D6A966 /* InsiderTransactionsList.swift in Sources */,
-				95E8BAA32656D86E0016AE72 /* RequestType.swift in Sources */,
-				95CCFB56266E7A0F00C384A1 /* InsiderTransactionModel.swift in Sources */,
-				951566E72613A2B6007C0F36 /* TradingDatesSheet.swift in Sources */,
-				9502BBF5267F5194003B0A59 /* CompanyView.swift in Sources */,
-				955E73392623568F005652FF /* Home.swift in Sources */,
-				95721DA6262761E700EC527B /* CurrencyRow.swift in Sources */,
-				9562404C263C766D00C6C511 /* WatchlistCreator.swift in Sources */,
-				95BB05B22670B8C3005A2029 /* KeyStatsModel.swift in Sources */,
-				950B6F422676454A0029E447 /* RevenueCatTest.swift in Sources */,
-				95672B8F25DDA54700DCBE4A /* LazyBearApp.swift in Sources */,
-				95B85AB6267FAE7A0080CF39 /* ConditionalModifier.swift in Sources */,
-				95A7C066261639E0003E2EC1 /* SearchView.swift in Sources */,
-				9502BBFD267F63F3003B0A59 /* CustomRectangleBox.swift in Sources */,
-				95A4B937263EA5C20056F036 /* WatchlistCreatorRow.swift in Sources */,
-				950D0E192618AA4900D17AD7 /* CompanyList.swift in Sources */,
-				9502BBFB267F5EE8003B0A59 /* ChartHelper.swift in Sources */,
-				95BC1C642683326C00F94373 /* KeyStatsRow.swift in Sources */,
-				952994822629CA46005F0AB0 /* SearchResponse.swift in Sources */,
-				95A07F6C26305AC6009865AA /* QuoteModel.swift in Sources */,
-				95A07F6226305A9B009865AA /* CurrencyModel.swift in Sources */,
-				9529947E2629CA3E005F0AB0 /* Search.swift in Sources */,
-				95613ADF264FC6FD00D4CE8F /* LatestNewsModel.swift in Sources */,
-				950D0E292618AEC800D17AD7 /* SearchedCompanyItem.swift in Sources */,
-				955E733C262356F3005652FF /* HomeResponse.swift in Sources */,
-				951566EA2613A37C007C0F36 /* TradingDatesItem.swift in Sources */,
-				9547482026821F7700D6A966 /* InsiderTransactionsHelper.swift in Sources */,
-				951490552610BD2B00BDEEB5 /* WelcomeView.swift in Sources */,
-				95D308F82624B3A400A39F77 /* CurrencyItem.swift in Sources */,
-				953C96E2268898DC0096734C /* DefaultCompanyModel.swift in Sources */,
-				95131D47267A03020055C6DE /* WatchlistCompany+CoreDataClass.swift in Sources */,
-				9502BBF7267F5974003B0A59 /* CompanyResponse.swift in Sources */,
-				95A07F7126305AD5009865AA /* SectorPerformanceModel.swift in Sources */,
-				9594F0402651355B00CFA8D4 /* HistoricalPricesModel.swift in Sources */,
-				95123AC026767370001BFAF3 /* StockItem.swift in Sources */,
-				9576BFEB26810661002BCAC6 /* InsiderRosterHelper.swift in Sources */,
-				9502BBFF267F6454003B0A59 /* KeyStatsHelper.swift in Sources */,
-				9519BE06267E5EC3009C6015 /* ProfileStockRow.swift in Sources */,
-				9550444626111EE5000E0BCB /* SectorItem.swift in Sources */,
-				95672B9B25DDA54800DCBE4A /* LazyBear.xcdatamodeld in Sources */,
-				95C8C0E0262A369F0082D1D9 /* ProfileResponse.swift in Sources */,
-				95A4B935263EA31C0056F036 /* WatchlistCreatorSearchBar.swift in Sources */,
-				9502BC01267F8771003B0A59 /* KeyStatsList.swift in Sources */,
-				95123AB826766497001BFAF3 /* CurrencySheet.swift in Sources */,
-				95AF0FF92671342E0049C4AB /* DisplayWordsModel.swift in Sources */,
-				95E4A2E22680AD7C00A6FEB9 /* SFSafariViewWrapper.swift in Sources */,
-				95AD4A2D26078C1400498079 /* ContentView.swift in Sources */,
-				95629DA02645298E007AF020 /* Profile.swift in Sources */,
-				95CCFB5E266E855800C384A1 /* GetDateComponents.swift in Sources */,
-				95C22F3F26776F010014C98A /* CompanyModel.swift in Sources */,
-				95A4B930263E9F530056F036 /* WatchlistCreatorList.swift in Sources */,
-				95123ABA2676658E001BFAF3 /* StockSheet.swift in Sources */,
-				9562404E263C7D8800C6C511 /* WatchlistCreatorClass.swift in Sources */,
-				9547482226821F8800D6A966 /* InsiderTransactionsRow.swift in Sources */,
-				952045152610C7C600A76362 /* ConvertEpoch.swift in Sources */,
-				952FC0BA267C9A24001406B1 /* RenameListSheet.swift in Sources */,
-				95E4A2E02680A70000A6FEB9 /* NewsList.swift in Sources */,
-				95CCFB60266E864C00C384A1 /* ConvertStringToDate.swift in Sources */,
-				953C96DE2688925E0096734C /* HapticsManager.swift in Sources */,
-				9502BBF9267F59A0003B0A59 /* Company.swift in Sources */,
+				95F7C18326A2CCA3002F08DB /* lazybearUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		950C57162629EF9100F234FE /* PBXTargetDependency */ = {
+		95F7C17526A2CCA3002F08DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95672B8A25DDA54700DCBE4A /* LazyBear */;
-			targetProxy = 950C57152629EF9100F234FE /* PBXContainerItemProxy */;
+			target = 95F7C15C26A2CCA2002F08DB /* lazybear */;
+			targetProxy = 95F7C17426A2CCA3002F08DB /* PBXContainerItemProxy */;
 		};
-		950C57262629EFC200F234FE /* PBXTargetDependency */ = {
+		95F7C18026A2CCA3002F08DB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 95672B8A25DDA54700DCBE4A /* LazyBear */;
-			targetProxy = 950C57252629EFC200F234FE /* PBXContainerItemProxy */;
-		};
-		952457E1267E339C00D5BBCB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */;
-			targetProxy = 952457E0267E339C00D5BBCB /* PBXContainerItemProxy */;
-		};
-		952457FA267E339C00D5BBCB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 952457DD267E339C00D5BBCB /* LazyBearWatchOS Extension */;
-			targetProxy = 952457F9267E339C00D5BBCB /* PBXContainerItemProxy */;
-		};
-		95245805267E339D00D5BBCB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 952457D4267E339B00D5BBCB /* LazyBearWatchOS */;
-			targetProxy = 95245804267E339D00D5BBCB /* PBXContainerItemProxy */;
-		};
-		9524580B267E339D00D5BBCB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 952457D4267E339B00D5BBCB /* LazyBearWatchOS */;
-			targetProxy = 9524580A267E339D00D5BBCB /* PBXContainerItemProxy */;
+			target = 95F7C15C26A2CCA2002F08DB /* lazybear */;
+			targetProxy = 95F7C17F26A2CCA3002F08DB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		950C57182629EF9100F234FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBear.app/LazyBear";
-			};
-			name = Debug;
-		};
-		950C57192629EF9100F234FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBear.app/LazyBear";
-			};
-			name = Release;
-		};
-		950C57282629EFC200F234FE /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LazyBear;
-			};
-			name = Debug;
-		};
-		950C57292629EFC200F234FE /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.LazyBearUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = LazyBear;
-			};
-			name = Release;
-		};
-		9524580E267E339D00D5BBCB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				IBSC_MODULE = LazyBearWatchOS_Extension;
-				INFOPLIST_FILE = LazyBearWatchOS/Info.plist;
-				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Debug;
-		};
-		9524580F267E339D00D5BBCB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				IBSC_MODULE = LazyBearWatchOS_Extension;
-				INFOPLIST_FILE = LazyBearWatchOS/Info.plist;
-				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Release;
-		};
-		95245811267E339D00D5BBCB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "LazyBearWatchOS Extension/LazyBearWatchOS Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "LazyBearWatchOS Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Debug;
-		};
-		95245812267E339D00D5BBCB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_ENTITLEMENTS = "LazyBearWatchOS Extension/LazyBearWatchOS Extension.entitlements";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"LazyBearWatchOS Extension/Preview Content\"";
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "LazyBearWatchOS Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 7.2;
-			};
-			name = Release;
-		};
-		95245813267E339D00D5BBCB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearWatchOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBearWatchOS Extension.appex/LazyBearWatchOS Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
-			};
-			name = Debug;
-		};
-		95245814267E339D00D5BBCB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearWatchOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyBearWatchOS Extension.appex/LazyBearWatchOS Extension";
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
-			};
-			name = Release;
-		};
-		95245815267E339D00D5BBCB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearWatchOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = LazyBearWatchOS;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
-			};
-			name = Debug;
-		};
-		95245816267E339D00D5BBCB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MTX83R5H8X;
-				INFOPLIST_FILE = LazyBearWatchOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear.LazyBearWatchOSUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = LazyBearWatchOS;
-				WATCHOS_DEPLOYMENT_TARGET = 7.4;
-			};
-			name = Release;
-		};
-		95672B9D25DDA54800DCBE4A /* Debug */ = {
+		95F7C18526A2CCA3002F08DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1558,18 +355,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		95672B9E25DDA54800DCBE4A /* Release */ = {
+		95F7C18626A2CCA3002F08DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1614,237 +410,197 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		95672BA025DDA54800DCBE4A /* Debug */ = {
+		95F7C18826A2CCA3002F08DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"lazybear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = LazyBear/Info.plist;
+				INFOPLIST_FILE = lazybear/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.lazybear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		95672BA125DDA54800DCBE4A /* Release */ = {
+		95F7C18926A2CCA3002F08DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = LazyBear/LazyBear.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
-				DEVELOPMENT_ASSET_PATHS = "\"LazyBear/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"lazybear/Preview Content\"";
 				DEVELOPMENT_TEAM = MTX83R5H8X;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = LazyBear/Info.plist;
+				INFOPLIST_FILE = lazybear/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0;
-				PRODUCT_BUNDLE_IDENTIFIER = dennis.LazyBear;
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.lazybear;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
+		95F7C18B26A2CCA3002F08DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = lazybearTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.lazybearTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lazybear.app/lazybear";
+			};
+			name = Debug;
+		};
+		95F7C18C26A2CCA3002F08DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = lazybearTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.lazybearTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lazybear.app/lazybear";
+			};
+			name = Release;
+		};
+		95F7C18E26A2CCA3002F08DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = lazybearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.lazybearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lazybear;
+			};
+			name = Debug;
+		};
+		95F7C18F26A2CCA3002F08DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MTX83R5H8X;
+				INFOPLIST_FILE = lazybearUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.dennistech.lazybearUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = lazybear;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		950C57172629EF9100F234FE /* Build configuration list for PBXNativeTarget "LazyBearTests" */ = {
+		95F7C15826A2CCA2002F08DB /* Build configuration list for PBXProject "lazybear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				950C57182629EF9100F234FE /* Debug */,
-				950C57192629EF9100F234FE /* Release */,
+				95F7C18526A2CCA3002F08DB /* Debug */,
+				95F7C18626A2CCA3002F08DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		950C57272629EFC200F234FE /* Build configuration list for PBXNativeTarget "LazyBearUITests" */ = {
+		95F7C18726A2CCA3002F08DB /* Build configuration list for PBXNativeTarget "lazybear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				950C57282629EFC200F234FE /* Debug */,
-				950C57292629EFC200F234FE /* Release */,
+				95F7C18826A2CCA3002F08DB /* Debug */,
+				95F7C18926A2CCA3002F08DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95245817267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS Extension" */ = {
+		95F7C18A26A2CCA3002F08DB /* Build configuration list for PBXNativeTarget "lazybearTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95245811267E339D00D5BBCB /* Debug */,
-				95245812267E339D00D5BBCB /* Release */,
+				95F7C18B26A2CCA3002F08DB /* Debug */,
+				95F7C18C26A2CCA3002F08DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		95245818267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOS" */ = {
+		95F7C18D26A2CCA3002F08DB /* Build configuration list for PBXNativeTarget "lazybearUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9524580E267E339D00D5BBCB /* Debug */,
-				9524580F267E339D00D5BBCB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		95245819267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				95245813267E339D00D5BBCB /* Debug */,
-				95245814267E339D00D5BBCB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9524581A267E339D00D5BBCB /* Build configuration list for PBXNativeTarget "LazyBearWatchOSUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				95245815267E339D00D5BBCB /* Debug */,
-				95245816267E339D00D5BBCB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		95672B8625DDA54700DCBE4A /* Build configuration list for PBXProject "LazyBear" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				95672B9D25DDA54800DCBE4A /* Debug */,
-				95672B9E25DDA54800DCBE4A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		95672B9F25DDA54800DCBE4A /* Build configuration list for PBXNativeTarget "LazyBear" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				95672BA025DDA54800DCBE4A /* Debug */,
-				95672BA125DDA54800DCBE4A /* Release */,
+				95F7C18E26A2CCA3002F08DB /* Debug */,
+				95F7C18F26A2CCA3002F08DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.11.1;
-			};
-		};
-		954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/thislooksfun/SwiftlySearch.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.4;
-			};
-		};
-		95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.3;
-			};
-		};
-		95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.4.3;
-			};
-		};
-		95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/denniscm190/StockCharts.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.7;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		950B6F3C267643460029E447 /* Purchases */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 950B6F3B267643460029E447 /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = Purchases;
-		};
-		954D7EC1260BE70C00A13C50 /* SwiftlySearch */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 954D7EC0260BE70C00A13C50 /* XCRemoteSwiftPackageReference "SwiftlySearch" */;
-			productName = SwiftlySearch;
-		};
-		95A4B932263E9F810056F036 /* Introspect */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95A4B931263E9F810056F036 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
-			productName = Introspect;
-		};
-		95BEA1A526876DE100BF18AB /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		95BEA1AB268778E500BF18AB /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95BEA1A426876DE100BF18AB /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		95CF46EB2689F1B70028C5A2 /* StockCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
-			productName = StockCharts;
-		};
-		95CF46ED2689F1C00028C5A2 /* StockCharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 95CF46EA2689F1B70028C5A2 /* XCRemoteSwiftPackageReference "StockCharts" */;
-			productName = StockCharts;
-		};
-/* End XCSwiftPackageProductDependency section */
-
 /* Begin XCVersionGroup section */
-		95672B9925DDA54800DCBE4A /* LazyBear.xcdatamodeld */ = {
+		95F7C16B26A2CCA2002F08DB /* lazybear.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */,
+				95F7C16C26A2CCA2002F08DB /* lazybear.xcdatamodel */,
 			);
-			currentVersion = 95672B9A25DDA54800DCBE4A /* LazyBear.xcdatamodel */;
-			path = LazyBear.xcdatamodeld;
+			currentVersion = 95F7C16C26A2CCA2002F08DB /* lazybear.xcdatamodel */;
+			path = lazybear.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 95672B8325DDA54700DCBE4A /* Project object */;
+	rootObject = 95F7C15526A2CCA2002F08DB /* Project object */;
 }

@@ -1,19 +1,15 @@
 //
-//  LazyBearApp.swift
-//  LazyBear
+//  lazybearApp.swift
+//  lazybear
 //
-//  Created by Dennis Concepción Martín on 17/2/21.
+//  Created by Dennis Concepción Martín on 17/07/2021.
 //
 
 import SwiftUI
-import Purchases
 
 @main
-struct LazyBearApp: App {
-    let persistenceController = PersistenceController.shared  // Core Data init
-//    init() {  /// Revenue Cat configuration
-//            Purchases.configure(withAPIKey: "ZnlVFgEqTmhLagtzgFawvlhAROXQjyFi")
-//        }
+struct lazybearApp: App {
+    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {

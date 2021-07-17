@@ -1,13 +1,13 @@
 //
-//  LazyBearUITests.swift
-//  LazyBearUITests
+//  lazybearUITests.swift
+//  lazybearUITests
 //
-//  Created by Dennis Concepción Martín on 16/4/21.
+//  Created by Dennis Concepción Martín on 17/07/2021.
 //
 
 import XCTest
 
-class LazyBearUITests: XCTestCase {
+class lazybearUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -24,7 +24,6 @@ class LazyBearUITests: XCTestCase {
 
     func testExample() throws {
         // UI tests must launch the application that they test.
-        
         let app = XCUIApplication()
         app.launch()
 
@@ -33,7 +32,7 @@ class LazyBearUITests: XCTestCase {
     }
 
     func testLaunchPerformance() throws {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
+        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
