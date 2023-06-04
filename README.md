@@ -1,2 +1,1 @@
-# lazybear
-Lazybear iOS app
+# lazybear [ARCHIVED]
